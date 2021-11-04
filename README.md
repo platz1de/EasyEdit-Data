@@ -11,6 +11,9 @@ Conversion table to convert numeric java block ids to bedrock ids
 The priority of listed types is in reverse order ("complex" > "translate" > "replace"),
 "translate" and "complex" should never contain the same block id and meta values though.
 
+Additionally, blocks listed under "invalid-java" do not have a corresponding bedrock block and will be ignored and
+blocks listed under "invalid-bedrock" do not have a corresponding java block
+
 Primary data source:
 
 - [Minecraft Wiki](https://minecraft.fandom.com/)
