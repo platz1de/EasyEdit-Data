@@ -9,5 +9,6 @@ Conversion table to convert numeric java block ids to bedrock ids
 - Blocks listed under "complex" need to change their block id and meta values according to given java meta values
 
 Primary data source:
+
 - [Minecraft Wiki](https://minecraft.fandom.com/)
-  - [Minecraft Java Data Values](https://minecraft.fandom.com/wiki/Java_Edition_data_values/Pre-flattening)
+    - [Minecraft Java Data Values](https://minecraft.fandom.com/wiki/Java_Edition_data_values/Pre-flattening)
