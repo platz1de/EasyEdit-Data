@@ -8,6 +8,9 @@ Conversion table to convert numeric java block ids to bedrock ids
 - Blocks listed under "translate" need to only change their meta values
 - Blocks listed under "complex" need to change their block id and meta values according to given java meta values
 
+The priority of listed types is in reverse order ("complex" > "translate" > "replace"),
+"translate" and "complex" should never contain the same block id and meta values though.
+
 Primary data source:
 
 - [Minecraft Wiki](https://minecraft.fandom.com/)
