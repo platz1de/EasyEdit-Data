@@ -15,6 +15,9 @@ Primary data source:
 - [Minecraft Wiki](https://minecraft.fandom.com/)
     - [Minecraft Java Data Values](https://minecraft.fandom.com/wiki/Java_Edition_data_values/Pre-flattening)
 
+Special blocks:
+- Item frames (bedrock 199) are represented as block entities in java
+
 Resulting maps:
 
 #### bedrock-conversion-map.json
