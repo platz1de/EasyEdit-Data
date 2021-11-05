@@ -44,10 +44,8 @@ file_put_contents("java-conversion-map.json", json_encode($toJava, JSON_THROW_ON
 $invalid = array_diff(array_keys($toBedrock), array_keys($toJava));
 foreach ($invalid as $id) {
 	if (isset($toBedrock[$id])) {
-		if (!isset($toJavaData[$id])) {
-			echo "Warning: No other use of java $id found" . PHP_EOL;
-		}
-	} else if (!isset($toBedrockData[$id])) {
-		echo "Warning: No other use of bedrock $id found" . PHP_EOL;
+		echo "Warning: No use for bedrock $id found" . PHP_EOL;
+	} else {
+		echo "Warning: No use for java $id found" . PHP_EOL;
 	}
 }
