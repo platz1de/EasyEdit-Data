@@ -51,9 +51,18 @@ foreach ($toJavaData as $bedrockId => $javaId) {
 		$bedrockKnownIds[] = $bedrockId;
 	}
 }
-
-file_put_contents("bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("java-conversion-map.json", json_encode($toJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+$sort = static function ($a, $b) {
+    $idA = explode(":", $a)[0];
+    $idB = explode(":", $b)[0];
+    if($idA !== $idB) {
+        return $idA - $idB;
+    }
+	return explode(":", $a)[1] - explode(":", $b)[1];
+};
+uksort($toBedrock, $sort);
+uksort($toJava, $sort);
+file_put_contents("bedrock-conversion-map.json", json_encode(array_unique($toBedrock), JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("java-conversion-map.json", json_encode(array_unique($toJava), JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $invalid = array_diff(array_unique($bedrockKnownIds), array_unique($javaKnownIds));
 foreach ($invalid as $id) {
