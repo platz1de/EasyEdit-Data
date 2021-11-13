@@ -42,8 +42,18 @@ $javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/Prismari
 $bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.17.10/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
 $missingBedrock = [];
 $missingJava = [];
+
+$rewrites = [
+	"true" => 1, "false" => 0, //Bedrock uses integers for booleans
+	"wall_post_bit=1" => "wall_post_bit=0", //walls are handled really weirdly
+	"wall_connection_type_east=short" => "wall_connection_type_east=none", "wall_connection_type_east=tall" => "wall_connection_type_east=none",
+	"wall_connection_type_north=short" => "wall_connection_type_north=none", "wall_connection_type_north=tall" => "wall_connection_type_north=none",
+	"wall_connection_type_south=short" => "wall_connection_type_south=none", "wall_connection_type_south=tall" => "wall_connection_type_south=none",
+	"wall_connection_type_west=short" => "wall_connection_type_west=none", "wall_connection_type_west=tall" => "wall_connection_type_west=none"
+];
+
 foreach ($javaToBedrock as $java => $bedrock) {
-	$bedrock = str_replace(["true", "false"], [1, 0], $bedrock); //Bedrock uses ints for booleans
+	$bedrock = str_replace(array_keys($rewrites), array_values($rewrites), $bedrock);
 	if (isset($bedrockData[$bedrock])) {
 		if (str_ends_with($java, "[]")) {
 			$bedrockMapping[substr($java, 0, -2)] = $bedrockData[$bedrock];
@@ -54,6 +64,7 @@ foreach ($javaToBedrock as $java => $bedrock) {
 	}
 }
 foreach ($bedrockToJava as $bedrock => $java) {
+	$bedrock = str_replace(array_keys($rewrites), array_values($rewrites), $bedrock);
 	if (isset($bedrockData[$bedrock])) {
 		$javaMapping[$bedrockData[$bedrock]] = $java;
 	} else {
