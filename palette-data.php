@@ -64,10 +64,23 @@ $rewrites = [
 	"wall_connection_type_west=short" => "wall_connection_type_west=none", "wall_connection_type_west=tall" => "wall_connection_type_west=none"
 ];
 
+$legacyRewrites = [
+	"/(minecraft:note_block)\[instrument=harp,note=0,powered=true]/" => "$1[]",
+	"/minecraft:dirt_path(.*)/" => "minecraft:grass_path$1",
+	"/minecraft:oak_sign(.*)/" => "minecraft:sign$1",
+	"/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
+	"/(.*)waterlogged=false(.*)/" => "$1$2",
+	"/(.*)axis=y]/" => "$1]",
+	"/(minecraft:iron_trapdoor)\[(.*)powered=false(.*)]/" => "$1[$2$3]"
+];
+
 //Waterlogging is weird
 foreach ($javaToBedrock as $java => $bedrock) {
-	$new = str_replace(["[waterlogged=false", ",waterlogged=false"], ["[", ""], $java);
-	$javaToBedrock[$new] = $bedrock;
+	foreach ($legacyRewrites as $search => $replace) {
+		$java = preg_replace($search, $replace, $java);
+	}
+	$java = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $java);
+	$javaToBedrock[$java] = $bedrock;
 }
 
 foreach ($javaToBedrock as $java => $bedrock) {
