@@ -11,6 +11,9 @@ use pocketmine\network\mcpe\protocol\serializer\PacketSerializerContext;
 
 require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
 
+$pmmpRewrites = [
+	"door_hinge_bit=1" => "door_hinge_bit=0"
+];
 $bedrockData = [];
 $ids = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/block_id_map.json"), true, 512, JSON_THROW_ON_ERROR);
 $reader = PacketSerializer::decoder(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r12_to_current_block_map.bin"), 0, new PacketSerializerContext(GlobalItemTypeDictionary::getInstance()->getDictionary()));
@@ -18,6 +21,11 @@ $nbt = new NetworkNbtSerializer();
 while (!$reader->feof()) {
 	$id = $reader->getString();
 	$meta = $reader->getLShort();
+
+	//don't ask me what is happening here
+	if (str_ends_with($id, "_door")) {
+		$meta -= 16;
+	}
 
 	$offset = $reader->getOffset();
 	$state = $nbt->read($reader->getBuffer(), $offset)->mustGetCompoundTag();
@@ -32,8 +40,11 @@ while (!$reader->feof()) {
 		}
 		$fullName .= implode(",", $stateData);
 	}
+	$fullName .= "]";
 
-	$bedrockData[$fullName . "]"] = $ids[$id] . ":" . $meta;
+	$fullName = str_replace(array_keys($pmmpRewrites), array_values($pmmpRewrites), $fullName);
+
+	$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
 }
 
 $bedrockMapping = [];
@@ -45,6 +56,7 @@ $missingJava = [];
 
 $rewrites = [
 	"true" => 1, "false" => 0, //Bedrock uses integers for booleans
+	"door_hinge_bit=1" => "door_hinge_bit=0", //Doors are the weirdest thing ever
 	"wall_post_bit=1" => "wall_post_bit=0", //walls are handled really weirdly
 	"wall_connection_type_east=short" => "wall_connection_type_east=none", "wall_connection_type_east=tall" => "wall_connection_type_east=none",
 	"wall_connection_type_north=short" => "wall_connection_type_north=none", "wall_connection_type_north=tall" => "wall_connection_type_north=none",
