@@ -64,6 +64,12 @@ $rewrites = [
 	"wall_connection_type_west=short" => "wall_connection_type_west=none", "wall_connection_type_west=tall" => "wall_connection_type_west=none"
 ];
 
+//Waterlogging is weird
+foreach ($javaToBedrock as $java => $bedrock) {
+	$new = str_replace(["[waterlogged=false", ",waterlogged=false"], ["[", ""], $java);
+	$javaToBedrock[$new] = $bedrock;
+}
+
 foreach ($javaToBedrock as $java => $bedrock) {
 	$bedrock = str_replace(array_keys($rewrites), array_values($rewrites), $bedrock);
 	if (isset($bedrockData[$bedrock])) {
