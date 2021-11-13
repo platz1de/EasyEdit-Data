@@ -40,18 +40,24 @@ $bedrockMapping = [];
 $javaMapping = [];
 $javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.17.10/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
 $bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.17.10/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
+$missingBedrock = [];
+$missingJava = [];
 foreach ($javaToBedrock as $java => $bedrock) {
+	$bedrock = str_replace(["true", "false"], [1, 0], $bedrock); //Bedrock uses ints for booleans
 	if (isset($bedrockData[$bedrock])) {
+		if (str_ends_with($java, "[]")) {
+			$bedrockMapping[substr($java, 0, -2)] = $bedrockData[$bedrock];
+		}
 		$bedrockMapping[$java] = $bedrockData[$bedrock];
 	} else {
-		echo "Missing bedrock data for $bedrock\n";
+		$missingJava[$java] = $bedrock;
 	}
 }
 foreach ($bedrockToJava as $bedrock => $java) {
 	if (isset($bedrockData[$bedrock])) {
 		$javaMapping[$bedrockData[$bedrock]] = $java;
 	} else {
-		echo "Missing bedrock data for $bedrock\n";
+		$missingBedrock[$bedrock] = $java;
 	}
 }
 $sort = static function ($a, $b) {
@@ -62,10 +68,13 @@ $sort = static function ($a, $b) {
 	}
 	return explode(":", $a)[1] - explode(":", $b)[1];
 };
+echo "Matched " . count($bedrockMapping) . " java to bedrock (sources provide " . count($javaToBedrock) . " pairs and " . count($bedrockData) . " translations)" . PHP_EOL;
+echo "Matched " . count($javaMapping) . " bedrock to java (sources provide " . count($bedrockToJava) . " pairs and " . count($bedrockData) . " translations)" . PHP_EOL;
 uasort($bedrockMapping, $sort);
 uksort($javaMapping, $sort);
 file_put_contents("bedrock_palette.json", json_encode($bedrockMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("java_palette.json", json_encode($javaMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("debugData.json", json_encode([$missingJava, $missingBedrock, $bedrockData], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function getData(string $url)
 {
