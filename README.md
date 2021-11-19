@@ -34,3 +34,7 @@ Preprocessed java block state to bedrock block id map
 #### java_palette.json
 
 Preprocessed bedrock block id to java block state map
+
+#### rotation-data.json
+
+Table to rotate bedrock block ids clockwise by 90 degrees on y-axis

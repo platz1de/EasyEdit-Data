@@ -164,6 +164,36 @@ file_put_contents("bedrock_palette.json", json_encode($bedrockMapping, JSON_THRO
 file_put_contents("java_palette.json", json_encode($javaMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debugData.json", json_encode([$missingJava, $missingBedrock, $bedrockData], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
+$rotationData = [
+	"north=true" => "east=true", "east=true" => "south=true", "south=true" => "west=true", "west=true" => "north=true", "north=false" => "east=false", "east=false" => "south=false", "south=false" => "west=false", "west=false" => "north=false",
+	"facing=north" => "facing=east", "facing=east" => "facing=south", "facing=south" => "facing=west", "facing=west" => "facing=north",
+	"axis=z" => "axis=x", "axis=x" => "axis=z",
+	"rotation=0" => "rotation=4", "rotation=1" => "rotation=5", "rotation=2" => "rotation=6", "rotation=3" => "rotation=7", "rotation=4" => "rotation=8", "rotation=5" => "rotation=9", "rotation=6" => "rotation=10", "rotation=7" => "rotation=11", "rotation=8" => "rotation=12", "rotation=9" => "rotation=13", "rotation=10" => "rotation=14", "rotation=11" => "rotation=15", "rotation=12" => "rotation=0", "rotation=13" => "rotation=1", "rotation=14" => "rotation=2", "rotation=15" => "rotation=3"
+];
+$rotations = [];
+foreach ($bedrockMapping as $state => $id) {
+	if (!str_ends_with($state, "]")) {
+		continue; //no properties
+	}
+	preg_match("/(.*)\[(.*?)]/", $state, $matches);
+	$properties = explode(",", $matches[2]);
+	foreach ($properties as $i => $property) {
+		$properties[$i] = $rotationData[$property] ?? $property;
+	}
+	sort($properties);
+	$rotatedState = $matches[1] . "[" . implode(",", $properties) . "]";
+	if ($rotatedState === $state) {
+		continue;
+	}
+	if (isset($bedrockMapping[$rotatedState])) {
+		$rotations[$id] = $bedrockMapping[$rotatedState];
+	} else {
+		echo "Missing rotation for $id ($state) -> $rotatedState" . PHP_EOL;
+	}
+}
+
+file_put_contents("rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
 function getData(string $url)
 {
 	$ch = curl_init();
