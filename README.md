@@ -1,6 +1,6 @@
 Data files used by [EasyEdit](https://github.com/platz1de/EasyEdit)
 
-### Conversion maps
+## Conversion maps
 
 Conversion tables to convert numeric 1.12 java block ids to current bedrock ids (and in reverse)
 
@@ -18,7 +18,7 @@ Special blocks:
 
 Preprocessed java block to bedrock block conversion map
 
-### Palette Maps
+## Palette Maps
 
 Conversion tables to convert java block states to legacy bedrock ids (and in reverse)
 
@@ -31,6 +31,6 @@ Primary data source:
 
 Preprocessed java block state to bedrock block id map
 
-#### java-conversion-map.json
+#### java_palette.json
 
 Preprocessed bedrock block id to java block state map
