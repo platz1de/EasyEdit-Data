@@ -103,12 +103,11 @@ $missingJava = [];
 $rewrites = [
 	"/true/" => "1", "/false/" => "0", //Bedrock uses integers for booleans
 	"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/" => "$1door_hinge_bit=0$2", "/(.*)open_bit=1(.*upper_block_bit=1.*)/" => "$1open_bit=0$2", "/(.*)direction=.(.*upper_block_bit=1.*)/" => "$1direction=0$2", //Doors only save these in one part
-	//"door_hinge_bit=1" => "door_hinge_bit=0", //Doors are the weirdest thing ever
-	//"wall_post_bit=1" => "wall_post_bit=0", //walls are handled really weirdly
-	//"wall_connection_type_east=short" => "wall_connection_type_east=none", "wall_connection_type_east=tall" => "wall_connection_type_east=none",
-	//"wall_connection_type_north=short" => "wall_connection_type_north=none", "wall_connection_type_north=tall" => "wall_connection_type_north=none",
-	//"wall_connection_type_south=short" => "wall_connection_type_south=none", "wall_connection_type_south=tall" => "wall_connection_type_south=none",
-	//"wall_connection_type_west=short" => "wall_connection_type_west=none", "wall_connection_type_west=tall" => "wall_connection_type_west=none"
+	"/wall_post_bit=1/" => "wall_post_bit=0", //walls are handled really weirdly
+	"/wall_connection_type_east=short/" => "wall_connection_type_east=none", "/wall_connection_type_east=tall/" => "wall_connection_type_east=none",
+	"/wall_connection_type_north=short/" => "wall_connection_type_north=none", "/wall_connection_type_north=tall/" => "wall_connection_type_north=none",
+	"/wall_connection_type_south=short/" => "wall_connection_type_south=none", "/wall_connection_type_south=tall/" => "wall_connection_type_south=none",
+	"/wall_connection_type_west=short/" => "wall_connection_type_west=none", "/wall_connection_type_west=tall/" => "wall_connection_type_west=none"
 ];
 
 $legacyRewrites = [
