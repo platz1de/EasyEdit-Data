@@ -12,7 +12,7 @@ use pocketmine\network\mcpe\protocol\serializer\PacketSerializerContext;
 require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
 
 $pmmpRewrites = [
-	"door_hinge_bit=1" => "door_hinge_bit=0"
+	"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/" => "$1door_hinge_bit=0$2", "/(.*)open_bit=1(.*upper_block_bit=1.*)/" => "$1open_bit=0$2", "/(.*)direction=.(.*upper_block_bit=1.*)/" => "$1direction=0$2"
 ];
 $bedrockData = [];
 $ids = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/block_id_map.json"), true, 512, JSON_THROW_ON_ERROR);
@@ -21,11 +21,6 @@ $nbt = new NetworkNbtSerializer();
 while (!$reader->feof()) {
 	$id = $reader->getString();
 	$meta = $reader->getLShort();
-
-	//don't ask me what is happening here
-	if (str_ends_with($id, "_door")) {
-		$meta -= 16;
-	}
 
 	$offset = $reader->getOffset();
 	$state = $nbt->read($reader->getBuffer(), $offset)->mustGetCompoundTag();
@@ -42,9 +37,14 @@ while (!$reader->feof()) {
 	}
 	$fullName .= "]";
 
-	$fullName = str_replace(array_keys($pmmpRewrites), array_values($pmmpRewrites), $fullName);
+	foreach ($pmmpRewrites as $search => $replace) {
+		$fullName = preg_replace($search, $replace, $fullName);
+	}
+	$fullName = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $fullName);
 
-	$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
+	if (!isset($bedrockData[$fullName])) {
+		$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
+	}
 }
 
 //some meta values are in the following order for some reason:
@@ -101,13 +101,14 @@ $missingBedrock = [];
 $missingJava = [];
 
 $rewrites = [
-	"true" => 1, "false" => 0, //Bedrock uses integers for booleans
-	"door_hinge_bit=1" => "door_hinge_bit=0", //Doors are the weirdest thing ever
-	"wall_post_bit=1" => "wall_post_bit=0", //walls are handled really weirdly
-	"wall_connection_type_east=short" => "wall_connection_type_east=none", "wall_connection_type_east=tall" => "wall_connection_type_east=none",
-	"wall_connection_type_north=short" => "wall_connection_type_north=none", "wall_connection_type_north=tall" => "wall_connection_type_north=none",
-	"wall_connection_type_south=short" => "wall_connection_type_south=none", "wall_connection_type_south=tall" => "wall_connection_type_south=none",
-	"wall_connection_type_west=short" => "wall_connection_type_west=none", "wall_connection_type_west=tall" => "wall_connection_type_west=none"
+	"/true/" => "1", "/false/" => "0", //Bedrock uses integers for booleans
+	"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/" => "$1door_hinge_bit=0$2", "/(.*)open_bit=1(.*upper_block_bit=1.*)/" => "$1open_bit=0$2", "/(.*)direction=.(.*upper_block_bit=1.*)/" => "$1direction=0$2", //Doors only save these in one part
+	//"door_hinge_bit=1" => "door_hinge_bit=0", //Doors are the weirdest thing ever
+	//"wall_post_bit=1" => "wall_post_bit=0", //walls are handled really weirdly
+	//"wall_connection_type_east=short" => "wall_connection_type_east=none", "wall_connection_type_east=tall" => "wall_connection_type_east=none",
+	//"wall_connection_type_north=short" => "wall_connection_type_north=none", "wall_connection_type_north=tall" => "wall_connection_type_north=none",
+	//"wall_connection_type_south=short" => "wall_connection_type_south=none", "wall_connection_type_south=tall" => "wall_connection_type_south=none",
+	//"wall_connection_type_west=short" => "wall_connection_type_west=none", "wall_connection_type_west=tall" => "wall_connection_type_west=none"
 ];
 
 $legacyRewrites = [
@@ -130,7 +131,10 @@ foreach ($javaToBedrock as $java => $bedrock) {
 }
 
 foreach ($javaToBedrock as $java => $bedrock) {
-	$bedrock = str_replace(array_keys($rewrites), array_values($rewrites), $bedrock);
+	foreach ($rewrites as $search => $replace) {
+		$bedrock = preg_replace($search, $replace, $bedrock);
+	}
+	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
 	if (isset($bedrockData[$bedrock])) {
 		if (str_ends_with($java, "[]")) {
 			$bedrockMapping[substr($java, 0, -2)] = $bedrockData[$bedrock];
@@ -141,7 +145,10 @@ foreach ($javaToBedrock as $java => $bedrock) {
 	}
 }
 foreach ($bedrockToJava as $bedrock => $java) {
-	$bedrock = str_replace(array_keys($rewrites), array_values($rewrites), $bedrock);
+	foreach ($rewrites as $search => $replace) {
+		$bedrock = preg_replace($search, $replace, $bedrock);
+	}
+	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
 	if (isset($bedrockData[$bedrock])) {
 		$javaMapping[$bedrockData[$bedrock]] = $java;
 	} else {
