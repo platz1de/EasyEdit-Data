@@ -42,7 +42,7 @@ while (!$reader->feof()) {
 	}
 	$fullName = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $fullName);
 
-	if (!isset($bedrockData[$fullName])) {
+	if (!isset($bedrockData[$fullName])) { //use the first one
 		$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
 	}
 }
@@ -135,10 +135,12 @@ foreach ($javaToBedrock as $java => $bedrock) {
 	}
 	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
 	if (isset($bedrockData[$bedrock])) {
-		if (str_ends_with($java, "[]")) {
-			$bedrockMapping[substr($java, 0, -2)] = $bedrockData[$bedrock];
+		if (!isset($bedrockMapping[$java])) { //use first one
+			if (str_ends_with($java, "[]")) {
+				$bedrockMapping[substr($java, 0, -2)] = $bedrockData[$bedrock];
+			}
+			$bedrockMapping[$java] = $bedrockData[$bedrock];
 		}
-		$bedrockMapping[$java] = $bedrockData[$bedrock];
 	} else {
 		$missingJava[$java] = $bedrock;
 	}
@@ -149,7 +151,9 @@ foreach ($bedrockToJava as $bedrock => $java) {
 	}
 	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
 	if (isset($bedrockData[$bedrock])) {
-		$javaMapping[$bedrockData[$bedrock]] = $java;
+		if (!isset($javaMapping[$bedrockData[$bedrock]])) { //use first one
+			$javaMapping[$bedrockData[$bedrock]] = $java;
+		}
 	} else {
 		$missingBedrock[$bedrock] = $java;
 	}
