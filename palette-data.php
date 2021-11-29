@@ -217,6 +217,9 @@ file_put_contents("flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $
 
 function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save)
 {
+	if (isset($save[$id])) {
+		return;
+	}
 	preg_match("/(.*)\[(.*?)]/", $state, $matches);
 	$properties = explode(",", $matches[2]);
 	foreach ($properties as $i => $property) {
