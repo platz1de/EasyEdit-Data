@@ -194,7 +194,8 @@ $flipData = [
 	"y" => [
 		"up=true" => "down=true", "down=true" => "up=true", "up=false" => "down=false", "down=false" => "up=false",
 		"facing=up" => "facing=down", "facing=down" => "facing=up",
-		"half=upper" => "half=lower", "half=lower" => "half=upper",
+		"half=upper" => "half=lower", "half=lower" => "half=upper", //slabs
+		"half=bottom" => "half=top", "half=top" => "half=bottom", //stairs, why 2 different names mojang???
 	],
 ];
 $rotations = [];
