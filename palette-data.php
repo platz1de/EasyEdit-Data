@@ -47,52 +47,6 @@ while (!$reader->feof()) {
 	}
 }
 
-//some meta values are in the following order for some reason:
-//7, 1, 2, 3, 4, 5 / 15, 9, 10, 11, 12, 13
-$current = "";
-$savedKey = "";
-$followsPattern = false;
-$last = -1;
-foreach ($bedrockData as $key => $value) {
-	preg_match("/(.*)\[/", $key, $matches);
-	$id = explode(":", $value);
-	if ($current !== $matches[1]) {
-		$current = $matches[1];
-		if ((int) $id[1] !== 7) {
-			$followsPattern = false;
-			continue;
-		}
-		$followsPattern = true;
-		$last = 6;
-	} elseif (!$followsPattern) {
-		continue;
-	}
-
-	if ((int) $id[1] !== ++$last) {
-		$followsPattern = false;
-		continue;
-	}
-
-	switch ((int) $id[1]) {
-		case 7:
-			$savedKey = $key;
-			$last = 0;
-			break;
-		case 5:
-			$bedrockData[$savedKey] = $id[0] . ":0";
-			$last = 14;
-			break;
-		case 15:
-			$savedKey = $key;
-			$last = 8;
-			break;
-		case 13:
-			$bedrockData[$savedKey] = $id[0] . ":8";
-			$followsPattern = false;
-			break;
-	}
-}
-
 $bedrockMapping = [];
 $javaMapping = [];
 $javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.17.10/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
