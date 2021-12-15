@@ -180,8 +180,13 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 		$properties[$i] = $remaps[$property] ?? $property;
 	}
 	//These are really weird
-	if ((str_ends_with($matches[1], "wall") || str_ends_with($matches[1], "fire") || str_ends_with($matches[1], "vine")) && in_array("down=true", $properties, true)) {
-		$properties[array_search("down=true", $properties)] = "up=false";
+	if (str_ends_with($matches[1], "wall") || str_ends_with($matches[1], "fire") || str_ends_with($matches[1], "vine")) {
+		if (in_array("down=true", $properties, true)) {
+			$properties[array_search("down=true", $properties)] = "up=false";
+		}
+		if (in_array("down=false", $properties, true)) {
+			$properties[array_search("down=false", $properties)] = "up=true";
+		}
 	}
 	sort($properties);
 	$newState = $matches[1] . "[" . implode(",", $properties) . "]";
@@ -189,7 +194,9 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 		return null;
 	}
 	if (isset($bedrockMapping[$newState])) {
-		$save[$id] = $bedrockMapping[$newState];
+		if ($id !== $bedrockMapping[$newState]) {
+			$save[$id] = $bedrockMapping[$newState];
+		}
 	} else {
 		echo "Missing rotation for $id ($state) -> $newState" . PHP_EOL;
 	}
