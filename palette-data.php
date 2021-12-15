@@ -146,6 +146,7 @@ $flipData = [
 		"rotation=0" => "rotation=8", "rotation=1" => "rotation=7", "rotation=2" => "rotation=6", "rotation=3" => "rotation=5", "rotation=5" => "rotation=3", "rotation=6" => "rotation=2", "rotation=7" => "rotation=1", "rotation=8" => "rotation=0", "rotation=9" => "rotation=15", "rotation=10" => "rotation=14", "rotation=11" => "rotation=13", "rotation=13" => "rotation=11", "rotation=14" => "rotation=10", "rotation=15" => "rotation=9"
 	],
 	"y" => [
+		//this is not true for walls...
 		"up=true" => "down=true", "down=true" => "up=true", "up=false" => "down=false", "down=false" => "up=false",
 		"facing=up" => "facing=down", "facing=down" => "facing=up",
 		"half=upper" => "half=lower", "half=lower" => "half=upper", //slabs
