@@ -4,6 +4,8 @@
  * Welcome to the properly worst script in history
  */
 
+use pocketmine\math\Axis;
+use pocketmine\math\Facing;
 use pocketmine\network\mcpe\convert\GlobalItemTypeDictionary;
 use pocketmine\network\mcpe\protocol\serializer\NetworkNbtSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
@@ -166,8 +168,36 @@ foreach ($bedrockMapping as $state => $id) {
 	remapProperties($state, $id, $flipData["y"], $bedrockMapping, $flipY);
 }
 
+/**
+ * Some properties of blocks are defined with tiles in bedrock while the blockstate is used in java,
+ * they need to be remapped in a special way, allowing full conversion
+ */
+$tileStates = [];
+foreach ($bedrockMapping as $state => $id) {
+	preg_match("/(.*)\[(.*?)]/", $state, $matches);
+	$properties = explode(",", $matches[2]);
+	if (str_ends_with($matches[1], "chest")) {
+		$facing = null;
+		$type = null;
+		foreach ($properties as $property) {
+			if (str_starts_with($property, "type=")) {
+				$type = str_replace("type=", "", $property);
+			}
+			if (str_starts_with($property, "facing=")) {
+				$facing = str_replace("facing=", "", $property);
+			}
+		}
+		if ($facing === null || $type === null || $type === "single") {
+			continue;
+		}
+		$facing = ["north" => Facing::NORTH, "east" => Facing::EAST, "south" => Facing::SOUTH, "west" => Facing::WEST][$facing];
+		$tileStates["chest_relation"][$state] = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "left"));
+	}
+}
+
 file_put_contents("rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $flipZ, "yAxis" => $flipY], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("tile-data-states.json", json_encode($tileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save)
 {
