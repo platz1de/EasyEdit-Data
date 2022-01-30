@@ -43,7 +43,7 @@ Table to rotate bedrock block ids clockwise by 90 degrees on y-axis
 
 Table to flip bedrock block ids on a given axis
 
-### tile-data-states.json
+#### tile-data-states.json
 
 Map of special block states to tile data values, magic keys:
 
