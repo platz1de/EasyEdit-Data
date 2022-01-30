@@ -191,7 +191,7 @@ foreach ($bedrockMapping as $state => $id) {
 			continue;
 		}
 		$facing = ["north" => Facing::NORTH, "east" => Facing::EAST, "south" => Facing::SOUTH, "west" => Facing::WEST][$facing];
-		$tileStates["chest_relation"][$state] = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "right"));
+		$tileStates["chest_relation"][$state] = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "left"));
 	}
 }
 
