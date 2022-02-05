@@ -6,9 +6,10 @@ Conversion tables to convert numeric 1.12 java block ids to current bedrock ids 
 
 Primary data source:
 
-- [WorldEdit](https://github.com/EngineHub/WorldEdit/tree/master/worldedit-core/src/main/resources/com/sk89q/worldedit/world/registry)
 - [Minecraft Wiki](https://minecraft.fandom.com/)
     - [Minecraft Java Data Values](https://minecraft.fandom.com/wiki/Java_Edition_data_values/Pre-flattening)
+- [BedrockData](https://github.com/pmmp/BedrockData/)
+- [PrismarineJS](https://github.com/PrismarineJS/minecraft-data/)
 
 Special blocks:
 
@@ -17,15 +18,6 @@ Special blocks:
 #### bedrock-conversion-map.json
 
 Preprocessed java block to bedrock block conversion map
-
-## Palette Maps
-
-Conversion tables to convert java block states to legacy bedrock ids (and in reverse)
-
-Primary data source:
-
-- [BedrockData](https://github.com/pmmp/BedrockData/)
-- [PrismarineJS](https://github.com/PrismarineJS/minecraft-data/)
 
 #### bedrock-palette.json
 

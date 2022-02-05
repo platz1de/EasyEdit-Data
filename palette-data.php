@@ -232,8 +232,7 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 	}
 }
 
-#Constructing data from java WorldEdit data files
-$blockData = json_decode(getData("https://raw.githubusercontent.com/EngineHub/WorldEdit/master/worldedit-core/src/main/resources/com/sk89q/worldedit/world/registry/legacy.json"), true)["blocks"];
+$blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/common/legacy.json"), true)["blocks"];
 $bedrockData = json_decode(file_get_contents("bedrock_palette.json"), true, 512, JSON_THROW_ON_ERROR);
 
 $toBedrock = [];
