@@ -192,6 +192,12 @@ foreach ($bedrockMapping as $state => $id) {
 		}
 		$facing = ["north" => Facing::NORTH, "east" => Facing::EAST, "south" => Facing::SOUTH, "west" => Facing::WEST][$facing];
 		$tileStates["chest_relation"][$state] = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "left"));
+	} elseif (str_ends_with($matches[1], "shulker_box")) {
+		foreach ($properties as $property){
+			if (str_starts_with($property, "facing=")) {
+                $tileStates["shulker_box_facing"][$state] = str_replace("facing=", "", $property);;
+            }
+		}
 	}
 }
 
