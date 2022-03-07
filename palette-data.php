@@ -173,6 +173,7 @@ foreach ($bedrockMapping as $state => $id) {
  * they need to be remapped in a special way, allowing full conversion
  */
 $tileStates = [];
+$javaTileStates = [];
 foreach ($bedrockMapping as $state => $id) {
 	preg_match("/(.*)\[(.*?)]/", $state, $matches);
 	$properties = explode(",", $matches[2]);
@@ -191,12 +192,15 @@ foreach ($bedrockMapping as $state => $id) {
 			continue;
 		}
 		$facing = ["north" => Facing::NORTH, "east" => Facing::EAST, "south" => Facing::SOUTH, "west" => Facing::WEST][$facing];
-		$tileStates["chest_relation"][$state] = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "left"));
+		$identifier = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "left"));
+		$tileStates["chest_relation"][$state] = $identifier;
+		$javaTileStates["chest_relation"][$javaMapping[$id]][$identifier] = $state;
 	} elseif (str_ends_with($matches[1], "shulker_box")) {
-		foreach ($properties as $property){
+		foreach ($properties as $property) {
 			if (str_starts_with($property, "facing=")) {
-                $tileStates["shulker_box_facing"][$state] = str_replace("facing=", "", $property);;
-            }
+				$tileStates["shulker_box_facing"][$state] = str_replace("facing=", "", $property);
+				$javaTileStates["shulker_box_facing"][$javaMapping[$id]][str_replace("facing=", "", $property)] = $state;
+			}
 		}
 	}
 }
@@ -204,6 +208,7 @@ foreach ($bedrockMapping as $state => $id) {
 file_put_contents("rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $flipZ, "yAxis" => $flipY], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("tile-data-states.json", json_encode($tileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("java-tile-states.json", json_encode($javaTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save)
 {

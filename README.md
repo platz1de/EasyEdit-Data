@@ -40,3 +40,8 @@ Table to flip bedrock block ids on a given axis
 Map of special block states to tile data values, magic keys:
 
 - chest_relation: direction of connected chest
+- shulker_box_facing: shulkerbox opening direction
+
+#### java-tile-states.json
+
+Reversed map of tile-data-states.json
