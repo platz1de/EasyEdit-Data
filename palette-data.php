@@ -176,6 +176,9 @@ $tileStates = [];
 $javaTileStates = [];
 foreach ($bedrockMapping as $state => $id) {
 	preg_match("/(.*)\[(.*?)]/", $state, $matches);
+	if(!isset($matches[2])) {
+        continue;
+    }
 	$properties = explode(",", $matches[2]);
 	if (str_ends_with($matches[1], "chest")) {
 		$facing = null;
