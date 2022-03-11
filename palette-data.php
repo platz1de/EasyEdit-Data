@@ -102,6 +102,9 @@ foreach ($javaToBedrock as $java => $bedrock) {
 	}
 }
 foreach ($bedrockToJava as $bedrock => $java) {
+	if (str_ends_with($java, "[]")) {
+		$java = substr($java, 0, -2);
+	}
 	foreach ($rewrites as $search => $replace) {
 		$bedrock = preg_replace($search, $replace, $bedrock);
 	}
