@@ -76,6 +76,12 @@ $legacyRewrites = [
 	"/(minecraft:iron_trapdoor)\[(.*)powered=false(.*)]/" => "$1[$2$3]"
 ];
 
+//these rules are really important to make everything work
+$reliabilityOverwrites = [
+	"/(.*)\[]/" => "$1",
+	"/(.*chest)(\[.*type=)(?:left|right)(.*])/" => "$1$2single$3"
+];
+
 //Waterlogging is weird
 foreach ($javaToBedrock as $java => $bedrock) {
 	foreach ($legacyRewrites as $search => $replace) {
@@ -102,11 +108,11 @@ foreach ($javaToBedrock as $java => $bedrock) {
 	}
 }
 foreach ($bedrockToJava as $bedrock => $java) {
-	if (str_ends_with($java, "[]")) {
-		$java = substr($java, 0, -2);
-	}
 	foreach ($rewrites as $search => $replace) {
 		$bedrock = preg_replace($search, $replace, $bedrock);
+	}
+	foreach ($reliabilityOverwrites as $search => $replace) {
+		$java = preg_replace($search, $replace, $java);
 	}
 	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
 	if (isset($bedrockData[$bedrock])) {
@@ -179,9 +185,9 @@ $tileStates = [];
 $javaTileStates = [];
 foreach ($bedrockMapping as $state => $id) {
 	preg_match("/(.*)\[(.*?)]/", $state, $matches);
-	if(!isset($matches[2])) {
-        continue;
-    }
+	if (!isset($matches[2])) {
+		continue;
+	}
 	$properties = explode(",", $matches[2]);
 	if (str_ends_with($matches[1], "chest")) {
 		$facing = null;

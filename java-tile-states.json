@@ -1,34 +1,34 @@
 {
     "chest_relation": {
-        "minecraft:chest[facing=north,type=right,waterlogged=false]": {
+        "minecraft:chest[facing=north,type=single,waterlogged=false]": {
             "east": "minecraft:chest[facing=north,type=left]",
             "west": "minecraft:chest[facing=north,type=right]"
         },
-        "minecraft:chest[facing=south,type=right,waterlogged=false]": {
+        "minecraft:chest[facing=south,type=single,waterlogged=false]": {
             "west": "minecraft:chest[facing=south,type=left]",
             "east": "minecraft:chest[facing=south,type=right]"
         },
-        "minecraft:chest[facing=west,type=right,waterlogged=false]": {
+        "minecraft:chest[facing=west,type=single,waterlogged=false]": {
             "north": "minecraft:chest[facing=west,type=left]",
             "south": "minecraft:chest[facing=west,type=right]"
         },
-        "minecraft:chest[facing=east,type=right,waterlogged=false]": {
+        "minecraft:chest[facing=east,type=single,waterlogged=false]": {
             "south": "minecraft:chest[facing=east,type=left]",
             "north": "minecraft:chest[facing=east,type=right]"
         },
-        "minecraft:trapped_chest[facing=north,type=right,waterlogged=false]": {
+        "minecraft:trapped_chest[facing=north,type=single,waterlogged=false]": {
             "east": "minecraft:trapped_chest[facing=north,type=left]",
             "west": "minecraft:trapped_chest[facing=north,type=right]"
         },
-        "minecraft:trapped_chest[facing=south,type=right,waterlogged=false]": {
+        "minecraft:trapped_chest[facing=south,type=single,waterlogged=false]": {
             "west": "minecraft:trapped_chest[facing=south,type=left]",
             "east": "minecraft:trapped_chest[facing=south,type=right]"
         },
-        "minecraft:trapped_chest[facing=west,type=right,waterlogged=false]": {
+        "minecraft:trapped_chest[facing=west,type=single,waterlogged=false]": {
             "north": "minecraft:trapped_chest[facing=west,type=left]",
             "south": "minecraft:trapped_chest[facing=west,type=right]"
         },
-        "minecraft:trapped_chest[facing=east,type=right,waterlogged=false]": {
+        "minecraft:trapped_chest[facing=east,type=single,waterlogged=false]": {
             "south": "minecraft:trapped_chest[facing=east,type=left]",
             "north": "minecraft:trapped_chest[facing=east,type=right]"
         }
