@@ -33,6 +33,158 @@
             "north": "minecraft:trapped_chest[facing=east,type=right]"
         }
     },
+    "skull_type": {
+        "minecraft:dragon_head[rotation=15]": {
+            "skeleton": "minecraft:skeleton_skull[rotation=15]",
+            "wither_skeleton": "minecraft:wither_skeleton_skull[rotation=15]",
+            "zombie": "minecraft:zombie_head[rotation=15]",
+            "player": "minecraft:player_head[rotation=15]",
+            "creeper": "minecraft:creeper_head[rotation=15]",
+            "dragon": "minecraft:dragon_head[rotation=15]"
+        },
+        "minecraft:dragon_wall_head[facing=north]": {
+            "skeleton": "minecraft:skeleton_wall_skull[facing=north]",
+            "wither_skeleton": "minecraft:wither_skeleton_wall_skull[facing=north]",
+            "zombie": "minecraft:zombie_wall_head[facing=north]",
+            "player": "minecraft:player_wall_head[facing=north]",
+            "creeper": "minecraft:creeper_wall_head[facing=north]",
+            "dragon": "minecraft:dragon_wall_head[facing=north]"
+        },
+        "minecraft:dragon_wall_head[facing=south]": {
+            "skeleton": "minecraft:skeleton_wall_skull[facing=south]",
+            "wither_skeleton": "minecraft:wither_skeleton_wall_skull[facing=south]",
+            "zombie": "minecraft:zombie_wall_head[facing=south]",
+            "player": "minecraft:player_wall_head[facing=south]",
+            "creeper": "minecraft:creeper_wall_head[facing=south]",
+            "dragon": "minecraft:dragon_wall_head[facing=south]"
+        },
+        "minecraft:dragon_wall_head[facing=west]": {
+            "skeleton": "minecraft:skeleton_wall_skull[facing=west]",
+            "wither_skeleton": "minecraft:wither_skeleton_wall_skull[facing=west]",
+            "zombie": "minecraft:zombie_wall_head[facing=west]",
+            "player": "minecraft:player_wall_head[facing=west]",
+            "creeper": "minecraft:creeper_wall_head[facing=west]",
+            "dragon": "minecraft:dragon_wall_head[facing=west]"
+        },
+        "minecraft:dragon_wall_head[facing=east]": {
+            "skeleton": "minecraft:skeleton_wall_skull[facing=east]",
+            "wither_skeleton": "minecraft:wither_skeleton_wall_skull[facing=east]",
+            "zombie": "minecraft:zombie_wall_head[facing=east]",
+            "player": "minecraft:player_wall_head[facing=east]",
+            "creeper": "minecraft:creeper_wall_head[facing=east]",
+            "dragon": "minecraft:dragon_wall_head[facing=east]"
+        }
+    },
+    "skull_rotation": {
+        "minecraft:dragon_head[rotation=15]": [
+            "minecraft:dragon_head[rotation=0]",
+            "minecraft:dragon_head[rotation=1]",
+            "minecraft:dragon_head[rotation=2]",
+            "minecraft:dragon_head[rotation=3]",
+            "minecraft:dragon_head[rotation=4]",
+            "minecraft:dragon_head[rotation=5]",
+            "minecraft:dragon_head[rotation=6]",
+            "minecraft:dragon_head[rotation=7]",
+            "minecraft:dragon_head[rotation=8]",
+            "minecraft:dragon_head[rotation=9]",
+            "minecraft:dragon_head[rotation=10]",
+            "minecraft:dragon_head[rotation=11]",
+            "minecraft:dragon_head[rotation=12]",
+            "minecraft:dragon_head[rotation=13]",
+            "minecraft:dragon_head[rotation=14]",
+            "minecraft:dragon_head[rotation=15]"
+        ],
+        "minecraft:skeleton_skull[rotation=15]": [
+            "minecraft:skeleton_skull[rotation=0]",
+            "minecraft:skeleton_skull[rotation=1]",
+            "minecraft:skeleton_skull[rotation=2]",
+            "minecraft:skeleton_skull[rotation=3]",
+            "minecraft:skeleton_skull[rotation=4]",
+            "minecraft:skeleton_skull[rotation=5]",
+            "minecraft:skeleton_skull[rotation=6]",
+            "minecraft:skeleton_skull[rotation=7]",
+            "minecraft:skeleton_skull[rotation=8]",
+            "minecraft:skeleton_skull[rotation=9]",
+            "minecraft:skeleton_skull[rotation=10]",
+            "minecraft:skeleton_skull[rotation=11]",
+            "minecraft:skeleton_skull[rotation=12]",
+            "minecraft:skeleton_skull[rotation=13]",
+            "minecraft:skeleton_skull[rotation=14]",
+            "minecraft:skeleton_skull[rotation=15]"
+        ],
+        "minecraft:wither_skeleton_skull[rotation=15]": [
+            "minecraft:wither_skeleton_skull[rotation=0]",
+            "minecraft:wither_skeleton_skull[rotation=1]",
+            "minecraft:wither_skeleton_skull[rotation=2]",
+            "minecraft:wither_skeleton_skull[rotation=3]",
+            "minecraft:wither_skeleton_skull[rotation=4]",
+            "minecraft:wither_skeleton_skull[rotation=5]",
+            "minecraft:wither_skeleton_skull[rotation=6]",
+            "minecraft:wither_skeleton_skull[rotation=7]",
+            "minecraft:wither_skeleton_skull[rotation=8]",
+            "minecraft:wither_skeleton_skull[rotation=9]",
+            "minecraft:wither_skeleton_skull[rotation=10]",
+            "minecraft:wither_skeleton_skull[rotation=11]",
+            "minecraft:wither_skeleton_skull[rotation=12]",
+            "minecraft:wither_skeleton_skull[rotation=13]",
+            "minecraft:wither_skeleton_skull[rotation=14]",
+            "minecraft:wither_skeleton_skull[rotation=15]"
+        ],
+        "minecraft:zombie_head[rotation=15]": [
+            "minecraft:zombie_head[rotation=0]",
+            "minecraft:zombie_head[rotation=1]",
+            "minecraft:zombie_head[rotation=2]",
+            "minecraft:zombie_head[rotation=3]",
+            "minecraft:zombie_head[rotation=4]",
+            "minecraft:zombie_head[rotation=5]",
+            "minecraft:zombie_head[rotation=6]",
+            "minecraft:zombie_head[rotation=7]",
+            "minecraft:zombie_head[rotation=8]",
+            "minecraft:zombie_head[rotation=9]",
+            "minecraft:zombie_head[rotation=10]",
+            "minecraft:zombie_head[rotation=11]",
+            "minecraft:zombie_head[rotation=12]",
+            "minecraft:zombie_head[rotation=13]",
+            "minecraft:zombie_head[rotation=14]",
+            "minecraft:zombie_head[rotation=15]"
+        ],
+        "minecraft:player_head[rotation=15]": [
+            "minecraft:player_head[rotation=0]",
+            "minecraft:player_head[rotation=1]",
+            "minecraft:player_head[rotation=2]",
+            "minecraft:player_head[rotation=3]",
+            "minecraft:player_head[rotation=4]",
+            "minecraft:player_head[rotation=5]",
+            "minecraft:player_head[rotation=6]",
+            "minecraft:player_head[rotation=7]",
+            "minecraft:player_head[rotation=8]",
+            "minecraft:player_head[rotation=9]",
+            "minecraft:player_head[rotation=10]",
+            "minecraft:player_head[rotation=11]",
+            "minecraft:player_head[rotation=12]",
+            "minecraft:player_head[rotation=13]",
+            "minecraft:player_head[rotation=14]",
+            "minecraft:player_head[rotation=15]"
+        ],
+        "minecraft:creeper_head[rotation=15]": [
+            "minecraft:creeper_head[rotation=0]",
+            "minecraft:creeper_head[rotation=1]",
+            "minecraft:creeper_head[rotation=2]",
+            "minecraft:creeper_head[rotation=3]",
+            "minecraft:creeper_head[rotation=4]",
+            "minecraft:creeper_head[rotation=5]",
+            "minecraft:creeper_head[rotation=6]",
+            "minecraft:creeper_head[rotation=7]",
+            "minecraft:creeper_head[rotation=8]",
+            "minecraft:creeper_head[rotation=9]",
+            "minecraft:creeper_head[rotation=10]",
+            "minecraft:creeper_head[rotation=11]",
+            "minecraft:creeper_head[rotation=12]",
+            "minecraft:creeper_head[rotation=13]",
+            "minecraft:creeper_head[rotation=14]",
+            "minecraft:creeper_head[rotation=15]"
+        ]
+    },
     "shulker_box_facing": {
         "minecraft:shulker_box[facing=down]": {
             "north": "minecraft:shulker_box[facing=north]",

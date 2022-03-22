@@ -214,7 +214,22 @@ foreach ($bedrockMapping as $state => $id) {
 				$javaTileStates["shulker_box_facing"][$javaMapping[$id]][str_replace("facing=", "", $property)] = $state;
 			}
 		}
+	} elseif (!str_ends_with($matches[1], "piston_head") && (str_ends_with($matches[1], "head") || str_ends_with($matches[1], "skull"))) {
+		$tileStates["skull_type"][$state] = preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1]);
+		$javaTileStates["skull_type"][$javaMapping[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])] = $state;
+		foreach ($properties as $property) {
+			if (str_starts_with($property, "rotation=")) {
+				$tileStates["skull_rotation"][$state] = str_replace("rotation=", "", $property);
+				$javaTileStates["skull_rotation"][$javaMapping[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])][str_replace("rotation=", "", $property)] = $state;
+			}
+		}
 	}
+}
+
+foreach ($javaTileStates["skull_rotation"] as $placeholder1 => $data) {
+    foreach ($data as $placeholder2 => $value) {
+        $javaTileStates["skull_rotation"][$javaTileStates["skull_type"][$placeholder1][$placeholder2]] = $value;
+    }
 }
 
 file_put_contents("rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
