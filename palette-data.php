@@ -51,8 +51,8 @@ while (!$reader->feof()) {
 
 $bedrockMapping = [];
 $javaMapping = [];
-$javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.0/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
-$bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.0/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
+$javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.11/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
+$bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.11/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
 $missingBedrock = [];
 $missingJava = [];
 
