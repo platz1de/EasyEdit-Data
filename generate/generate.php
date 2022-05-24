@@ -11,88 +11,36 @@ use pocketmine\network\mcpe\protocol\serializer\NetworkNbtSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializerContext;
 
-require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
-
-$pmmpRewrites = [
-	"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/" => "$1door_hinge_bit=0$2", "/(.*)open_bit=1(.*upper_block_bit=1.*)/" => "$1open_bit=0$2", "/(.*)direction=.(.*upper_block_bit=1.*)/" => "$1direction=0$2"
-];
-$bedrockData = [];
-$ids = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/block_id_map.json"), true, 512, JSON_THROW_ON_ERROR);
-$reader = PacketSerializer::decoder(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r12_to_current_block_map.bin"), 0, new PacketSerializerContext(GlobalItemTypeDictionary::getInstance()->getDictionary()));
-$nbt = new NetworkNbtSerializer();
-while (!$reader->feof()) {
-	$id = $reader->getString();
-	$meta = $reader->getLShort();
-
-	$offset = $reader->getOffset();
-	$state = $nbt->read($reader->getBuffer(), $offset)->mustGetCompoundTag();
-	$reader->setOffset($offset);
-
-	$fullName = $state->getString("name") . "[";
-	$states = $state->getCompoundTag("states");
-	if (count($states->getValue()) > 0) {
-		$stateData = [];
-		foreach ($states->getValue() as $name => $data) {
-			$stateData[] = $name . "=" . $data->getValue();
-		}
-		$fullName .= implode(",", $stateData);
-	}
-	$fullName .= "]";
-
-	foreach ($pmmpRewrites as $search => $replace) {
-		$fullName = preg_replace($search, $replace, $fullName);
-	}
-	$fullName = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $fullName);
-
-	if (!isset($bedrockData[$fullName])) { //use the first one
-		$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
-	}
+try {
+	require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
+} catch (Throwable) {
+	echo "Drop a valid PocketMine Phar into the generation folder";
+	return;
 }
+
+$bedrockData = getBedrockData();
+file_put_contents("debug/source-data.json", json_encode($bedrockData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $bedrockMapping = [];
 $javaMapping = [];
 $javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.11/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
 $bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.11/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
+$javaToBedrockNonLegacy = $javaToBedrock;
 $missingBedrock = [];
 $missingJava = [];
 
-$rewrites = [
-	"/true/" => "1", "/false/" => "0", //Bedrock uses integers for booleans
-	"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/" => "$1door_hinge_bit=0$2", "/(.*)open_bit=1(.*upper_block_bit=1.*)/" => "$1open_bit=0$2", "/(.*)direction=.(.*upper_block_bit=1.*)/" => "$1direction=0$2", //Doors only save these in one part
-	"/wall_post_bit=1/" => "wall_post_bit=0", //walls are handled really weirdly
-	"/wall_connection_type_east=short/" => "wall_connection_type_east=none", "/wall_connection_type_east=tall/" => "wall_connection_type_east=none",
-	"/wall_connection_type_north=short/" => "wall_connection_type_north=none", "/wall_connection_type_north=tall/" => "wall_connection_type_north=none",
-	"/wall_connection_type_south=short/" => "wall_connection_type_south=none", "/wall_connection_type_south=tall/" => "wall_connection_type_south=none",
-	"/wall_connection_type_west=short/" => "wall_connection_type_west=none", "/wall_connection_type_west=tall/" => "wall_connection_type_west=none"
-];
+$rewrites = yaml_parse_file("manual-rewrites.yml");
 
-$legacyRewrites = [
-	"/(minecraft:note_block)\[instrument=harp,note=0,powered=true]/" => "$1[]",
-	"/minecraft:dirt_path(.*)/" => "minecraft:grass_path$1",
-	"/minecraft:oak_sign(.*)/" => "minecraft:sign$1",
-	"/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
-	"/(.*)waterlogged=false(.*)/" => "$1$2",
-	"/(.*)axis=y]/" => "$1]",
-	"/(minecraft:iron_trapdoor)\[(.*)powered=false(.*)]/" => "$1[$2$3]"
-];
-
-//these rules are really important to make everything work
-$reliabilityOverwrites = [
-	"/(.*)\[]/" => "$1",
-	"/(.*chest)(\[.*type=)(?:left|right)(.*])/" => "$1$2single$3"
-];
-
-//Waterlogging is weird
-foreach ($javaToBedrock as $java => $bedrock) {
-	foreach ($legacyRewrites as $search => $replace) {
+foreach ($rewrites["java"] as $search => $replace) {
+	foreach ($javaToBedrock as $java => $bedrock) {
 		$java = preg_replace($search, $replace, $java);
+		$java = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $java);
+		$javaToBedrock[$java] = $bedrock;
 	}
-	$java = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $java);
-	$javaToBedrock[$java] = $bedrock;
 }
 
 foreach ($javaToBedrock as $java => $bedrock) {
-	foreach ($rewrites as $search => $replace) {
+	foreach ($rewrites["bedrock"] as $search => $replace) {
 		$bedrock = preg_replace($search, $replace, $bedrock);
 	}
 	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
@@ -107,12 +55,16 @@ foreach ($javaToBedrock as $java => $bedrock) {
 		$missingJava[$java] = $bedrock;
 	}
 }
+
+//these rules are really important to make everything work
+$reliabilityOverwrites = [
+	"/(.*)\[]/" => "$1",
+	"/(.*chest)(\[.*type=)(?:left|right)(.*])/" => "$1$2single$3"
+];
+
 foreach ($bedrockToJava as $bedrock => $java) {
-	foreach ($rewrites as $search => $replace) {
+	foreach ($rewrites["bedrock"] as $search => $replace) {
 		$bedrock = preg_replace($search, $replace, $bedrock);
-	}
-	foreach ($reliabilityOverwrites as $search => $replace) {
-		$java = preg_replace($search, $replace, $java);
 	}
 	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
 	if (isset($bedrockData[$bedrock])) {
@@ -123,6 +75,7 @@ foreach ($bedrockToJava as $bedrock => $java) {
 		$missingBedrock[$bedrock] = $java;
 	}
 }
+
 $sort = static function ($a, $b) {
 	$idA = explode(":", $a)[0];
 	$idB = explode(":", $b)[0];
@@ -131,13 +84,28 @@ $sort = static function ($a, $b) {
 	}
 	return explode(":", $a)[1] - explode(":", $b)[1];
 };
-echo "Matched " . count($bedrockMapping) . " java to bedrock (sources provide " . count($javaToBedrock) . " pairs and " . count($bedrockData) . " translations)" . PHP_EOL;
-echo "Matched " . count($javaMapping) . " bedrock to java (sources provide " . count($bedrockToJava) . " pairs and " . count($bedrockData) . " translations)" . PHP_EOL;
 uasort($bedrockMapping, $sort);
 uksort($javaMapping, $sort);
-file_put_contents("bedrock_palette.json", json_encode($bedrockMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("java_palette.json", json_encode($javaMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("debugData.json", json_encode([$missingJava, $missingBedrock, $bedrockData], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+$current = "";
+foreach ($bedrockMapping as $java => $bedrock) {
+	preg_match("/(.*)\[.*?]/", $java, $matches);
+	if ($matches === []) {
+		$current = $java;
+	} elseif ($current !== $matches[1]) {
+		$current = $matches[1];
+		$bedrockMapping[$matches[1]] = $bedrock;
+		var_dump($matches[1] . " " . $bedrock);
+	}
+}
+
+file_put_contents("debug/missingBedrock.json", json_encode($missingBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("debug/missingJava.json", json_encode($missingJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+echo "Matched " . count($bedrockMapping) . " java blocks to bedrock (sources provide " . count($javaToBedrockNonLegacy) . " pairs and " . count($bedrockData) . " translations), " . count($missingBedrock) . " not found" . PHP_EOL;
+echo "Matched " . count($javaMapping) . " bedrock blocks to java (sources provide " . count($bedrockToJava) . " pairs and " . count($bedrockData) . " translations), " . count($missingJava) . " not found" . PHP_EOL;
+file_put_contents("../bedrock_palette.json", json_encode($bedrockMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../java_palette.json", json_encode($javaMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $rotationData = [
 	"north=true" => "east=true", "east=true" => "south=true", "south=true" => "west=true", "west=true" => "north=true", "north=false" => "east=false", "east=false" => "south=false", "south=false" => "west=false", "west=false" => "north=false",
@@ -176,6 +144,8 @@ foreach ($bedrockMapping as $state => $id) {
 	remapProperties($state, $id, $flipData["z"], $bedrockMapping, $flipZ);
 	remapProperties($state, $id, $flipData["y"], $bedrockMapping, $flipY);
 }
+file_put_contents("../rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $flipZ, "yAxis" => $flipY], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 /**
  * Some properties of blocks are defined with tiles in bedrock while the blockstate is used in java,
@@ -227,15 +197,13 @@ foreach ($bedrockMapping as $state => $id) {
 }
 
 foreach ($javaTileStates["skull_rotation"] as $placeholder1 => $data) {
-    foreach ($data as $placeholder2 => $value) {
-        $javaTileStates["skull_rotation"][$javaTileStates["skull_type"][$placeholder1][$placeholder2]] = $value;
-    }
+	foreach ($data as $placeholder2 => $value) {
+		$javaTileStates["skull_rotation"][$javaTileStates["skull_type"][$placeholder1][$placeholder2]] = $value;
+	}
 }
 
-file_put_contents("rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $flipZ, "yAxis" => $flipY], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("tile-data-states.json", json_encode($tileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("java-tile-states.json", json_encode($javaTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../tile-data-states.json", json_encode($tileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../java-tile-states.json", json_encode($javaTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save)
 {
@@ -271,14 +239,13 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 }
 
 $blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/common/legacy.json"), true)["blocks"];
-$bedrockData = json_decode(file_get_contents("bedrock_palette.json"), true, 512, JSON_THROW_ON_ERROR);
 
 $toBedrock = [];
 foreach ($blockData as $legacyId => $state) {
 	getReadableBlockState($state); //WorldEdit doesn't have a proper order in state properties, so we need to sort them
-	if (isset($bedrockData[$state])) {
-		if ($bedrockData[$state] !== $legacyId) {
-			$toBedrock[$legacyId] = $bedrockData[$state];
+	if (isset($bedrockMapping[$state])) {
+		if ($bedrockMapping[$state] !== $legacyId) {
+			$toBedrock[$legacyId] = $bedrockMapping[$state];
 		}
 	} else {
 		echo "Missing bedrock data for $state" . PHP_EOL;
@@ -294,7 +261,7 @@ $sort = static function ($a, $b) {
 	return explode(":", $a)[1] - explode(":", $b)[1];
 };
 uksort($toBedrock, $sort);
-file_put_contents("bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function getReadableBlockState(string &$state)
 {
@@ -305,6 +272,50 @@ function getReadableBlockState(string &$state)
 	$properties = explode(",", $matches[2]);
 	sort($properties);
 	$state = $matches[1] . "[" . implode(",", $properties) . "]";
+}
+
+/**
+ * @return array
+ * @throws JsonException
+ */
+function getBedrockData(): array
+{
+	$pmmpRewrites = [
+		"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/" => "$1door_hinge_bit=0$2", "/(.*)open_bit=1(.*upper_block_bit=1.*)/" => "$1open_bit=0$2", "/(.*)direction=.(.*upper_block_bit=1.*)/" => "$1direction=0$2"
+	];
+	$bedrockData = [];
+	$ids = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/block_id_map.json"), true, 512, JSON_THROW_ON_ERROR);
+	$reader = PacketSerializer::decoder(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r12_to_current_block_map.bin"), 0, new PacketSerializerContext(GlobalItemTypeDictionary::getInstance()->getDictionary()));
+	$nbt = new NetworkNbtSerializer();
+	while (!$reader->feof()) {
+		$id = $reader->getString();
+		$meta = $reader->getLShort();
+
+		$offset = $reader->getOffset();
+		$state = $nbt->read($reader->getBuffer(), $offset)->mustGetCompoundTag();
+		$reader->setOffset($offset);
+
+		$fullName = $state->getString("name") . "[";
+		$states = $state->getCompoundTag("states");
+		if (count($states->getValue()) > 0) {
+			$stateData = [];
+			foreach ($states->getValue() as $name => $data) {
+				$stateData[] = $name . "=" . $data->getValue();
+			}
+			$fullName .= implode(",", $stateData);
+		}
+		$fullName .= "]";
+
+		foreach ($pmmpRewrites as $search => $replace) {
+			$fullName = preg_replace($search, $replace, $fullName);
+		}
+		$fullName = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $fullName);
+
+		if (!isset($bedrockData[$fullName])) { //use the first one
+			$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
+		}
+	}
+	return $bedrockData;
 }
 
 function getData(string $url)
