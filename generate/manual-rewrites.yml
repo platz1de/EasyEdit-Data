@@ -22,16 +22,20 @@ bedrock:
 
   #Some wrong mapped ones
   "/concretePowder/": "concrete_powder"
+  "/tripWire/": "trip_wire"
 
 #Rewrites on java side (mostly for compatibility reasons)
 java:
-  #Waterlogging is not supported, so none is always non-waterlogged
+  #These are not properly supported, so we expect them to default to false
   "/(.*)waterlogged=false(.*)/": "$1$2"
-  #Powering is not supported, so none is always non-waterlogged
   "/(.*)powered=false(.*)/": "$1$2"
+  "/(.*)snowy=false(.*)/": "$1$2"
+  "/(.*)lit=false(.*)/": "$1$2"
 
-  #No idea why these are needed (TODO: check)
+  #Default to y-axis
+  "/(.*)axis=y]/": "$1]"
+
+  #These were changed in recent minecraft versions, so we attempt to accept both
   "/minecraft:dirt_path(.*)/": "minecraft:grass_path$1"
   "/minecraft:oak_sign(.*)/": "minecraft:sign$1"
   "/minecraft:oak_wall_sign(.*)/": "minecraft:wall_sign$1"
-  #"/(.*)axis=y]/": "$1]"

@@ -11,6 +11,8 @@ use pocketmine\network\mcpe\protocol\serializer\NetworkNbtSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializerContext;
 
+error_reporting(E_ALL);
+
 try {
 	require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
 } catch (Throwable) {
@@ -19,6 +21,7 @@ try {
 }
 
 $bedrockData = getBedrockData();
+array_multisort(array_values($bedrockData), SORT_NATURAL, array_keys($bedrockData), SORT_NATURAL, $bedrockData);
 file_put_contents("debug/source-data.json", json_encode($bedrockData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $bedrockMapping = [];
@@ -63,41 +66,21 @@ $reliabilityOverwrites = [
 ];
 
 foreach ($bedrockToJava as $bedrock => $java) {
-	foreach ($rewrites["bedrock"] as $search => $replace) {
-		$bedrock = preg_replace($search, $replace, $bedrock);
+	foreach ($reliabilityOverwrites as $search => $replace) {
+		$java = preg_replace($search, $replace, $java);
 	}
-	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
-	if (isset($bedrockData[$bedrock])) {
-		if (!isset($javaMapping[$bedrockData[$bedrock]])) { //use first one
-			$javaMapping[$bedrockData[$bedrock]] = $java;
+	$java = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $java);
+	if (isset($bedrockMapping[$java])) {
+		if (!isset($javaMapping[$bedrockMapping[$java]])) { //use first one
+			$javaMapping[$bedrockMapping[$java]] = $java;
 		}
 	} else {
 		$missingBedrock[$bedrock] = $java;
 	}
 }
 
-$sort = static function ($a, $b) {
-	$idA = explode(":", $a)[0];
-	$idB = explode(":", $b)[0];
-	if ($idA !== $idB) {
-		return $idA - $idB;
-	}
-	return explode(":", $a)[1] - explode(":", $b)[1];
-};
-uasort($bedrockMapping, $sort);
-uksort($javaMapping, $sort);
-
-$current = "";
-foreach ($bedrockMapping as $java => $bedrock) {
-	preg_match("/(.*)\[.*?]/", $java, $matches);
-	if ($matches === []) {
-		$current = $java;
-	} elseif ($current !== $matches[1]) {
-		$current = $matches[1];
-		$bedrockMapping[$matches[1]] = $bedrock;
-		var_dump($matches[1] . " " . $bedrock);
-	}
-}
+array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
+array_multisort(array_keys($javaMapping), SORT_NATURAL, array_values($javaMapping), SORT_NATURAL, $javaMapping);
 
 file_put_contents("debug/missingBedrock.json", json_encode($missingBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/missingJava.json", json_encode($missingJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
@@ -252,15 +235,7 @@ foreach ($blockData as $legacyId => $state) {
 	}
 }
 
-$sort = static function ($a, $b) {
-	$idA = explode(":", $a)[0];
-	$idB = explode(":", $b)[0];
-	if ($idA !== $idB) {
-		return $idA - $idB;
-	}
-	return explode(":", $a)[1] - explode(":", $b)[1];
-};
-uksort($toBedrock, $sort);
+array_multisort(array_keys($toBedrock), SORT_NATURAL, array_values($toBedrock), SORT_NATURAL, $toBedrock);
 file_put_contents("../bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function getReadableBlockState(string &$state)
