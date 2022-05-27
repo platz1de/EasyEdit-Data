@@ -13,6 +13,9 @@ use pocketmine\network\mcpe\protocol\serializer\PacketSerializerContext;
 
 error_reporting(E_ALL);
 
+const BEDROCK_VERSION = "1.18.11";
+const JAVA_VERSION = "1.18";
+
 try {
 	require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
 } catch (Throwable) {
@@ -26,8 +29,8 @@ file_put_contents("debug/source-data.json", json_encode($bedrockData, JSON_THROW
 
 $bedrockMapping = [];
 $javaMapping = [];
-$javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.11/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
-$bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/1.18.11/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
+$javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
+$bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
 $javaToBedrockNonLegacy = $javaToBedrock;
 $missingBedrock = [];
 $missingJava = [];
@@ -239,6 +242,42 @@ foreach ($blockData as $legacyId => $state) {
 
 array_multisort(array_keys($toBedrock), SORT_NATURAL, array_values($toBedrock), SORT_NATURAL, $toBedrock);
 file_put_contents("../bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+$bedrockItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/items.json"), true);
+$javaItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/" . JAVA_VERSION . "/items.json"), true);
+$javaItems = [];
+$itemMapping = [];
+$missingItems = [];
+
+foreach ($javaItemData as $item) {
+	$javaItems[$item["id"]] = $item["name"];
+}
+
+foreach ($bedrockItemData as $item) {
+	if (isset($javaItems[$item["id"]])) {
+		$itemMapping[$item["name"]] = $javaItems[$item["id"]];
+	} else {
+		$missingItems[$item["id"]] = $item["name"];
+	}
+	if (isset($item["variations"])) {
+		foreach ($item["variations"] as $variation) {
+			if (isset($javaItems[$item["id"]])) {
+				$itemMapping[$variation["name"]] = $javaItems[$variation["id"]];
+			} else {
+				$missingItems[$variation["id"]] = $variation["name"];
+			}
+		}
+	}
+}
+
+foreach ($itemMapping as $bedrockName => $javaName) {
+	if($bedrockName === $javaName) {
+		unset($itemMapping[$bedrockName]);
+	}
+}
+
+file_put_contents("../bedrock-item-map.json", json_encode($itemMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("debug/missingItems.json", json_encode($missingItems, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function getReadableBlockState(string &$state)
 {

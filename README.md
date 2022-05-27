@@ -17,7 +17,8 @@ Most mappings do NOT contain values where java and bedrock are the same
 | bedrock-conversion-map.json | Legacy java to bedrock numeric ID     | javaID -> bedrockID                   |
 | bedrock_palette.json        | Current java to bedrock numeric ID    | javaState -> bedrockID                |
 | java_palette.json           | Bedrock numeric ID to java current    | bedrockID -> javaState                |
-| rotation-data.json          | Clockwise bedrock numeric ID rotation | bedrockID -> rotatedID                |   
+| bedrock-item-map.json       | java to bedrock ItemID                | javaItem -> bedrockItem               |
+| rotation-data.json          | Clockwise bedrock numeric ID rotation | bedrockID -> rotatedID                |
 | flip-data.json              | Flip bedrock numeric ID on axis       | axi: bedrockID -> flippedID           |
 | tile-data-states.json       | Java block state to tile property     | type: javaState -> property           |
 | java-tile-states.json       | Tile property to java block state     | type: rawState: property -> javaState |
