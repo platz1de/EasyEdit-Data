@@ -1,47 +1,31 @@
 Data files used by [EasyEdit](https://github.com/platz1de/EasyEdit)
 
-## Conversion maps
+## Mappings to convert between minecraft bedrock and java
 
-Conversion tables to convert numeric 1.12 java block ids to current bedrock ids (and in reverse)
-
-Primary data source:
+Data sources:
 
 - [Minecraft Wiki](https://minecraft.fandom.com/)
     - [Minecraft Java Data Values](https://minecraft.fandom.com/wiki/Java_Edition_data_values/Pre-flattening)
 - [BedrockData](https://github.com/pmmp/BedrockData/)
 - [PrismarineJS](https://github.com/PrismarineJS/minecraft-data/)
 
-Special blocks:
+Note: "ID" refers to numeric blockIDs, while "State" refers to the block's stringy state.
 
-- Item frames (bedrock 199) are represented as block entities in java
+| Mapping                     | Usage                                 | Format                                |
+|-----------------------------|---------------------------------------|---------------------------------------|
+| bedrock-conversion-map.json | Legacy java to bedrock numeric ID     | javaID -> bedrockID                   |
+| bedrock_palette.json        | Current java to bedrock numeric ID    | javaState -> bedrockID                |
+| java_palette.json           | Bedrock numeric ID to java current    | bedrockID -> javaState                |
+| rotation-data.json          | Clockwise bedrock numeric ID rotation | bedrockID -> rotatedID                |   
+| flip-data.json              | Flip bedrock numeric ID on axis       | axi: bedrockID -> flippedID           |
+| tile-data-states.json       | Java block state to tile property     | type: javaState -> property           |
+| java-tile-states.json       | Tile property to java block state     | type: rawState: property -> javaState |
 
-#### bedrock-conversion-map.json
+#### Tile properties
 
-Preprocessed java block to bedrock block conversion map
-
-#### bedrock-palette.json
-
-Preprocessed java block state to bedrock block id map
-
-#### java_palette.json
-
-Preprocessed bedrock block id to java block state map
-
-#### rotation-data.json
-
-Table to rotate bedrock block ids clockwise by 90 degrees on y-axis
-
-#### flip-data.json
-
-Table to flip bedrock block ids on a given axis
-
-#### tile-data-states.json
-
-Map of special block states to tile data values, magic keys:
-
-- chest_relation: direction of connected chest
-- shulker_box_facing: shulkerbox opening direction
-
-#### java-tile-states.json
-
-Reversed map of tile-data-states.json
+| key                | usage                        |
+|--------------------|------------------------------|
+| chest_relation     | direction of connected chest |
+| shulker_box_facing | shulker opening direction    |
+| skull_type         | type of skull                |
+| skull_rotation     | rotation of skull            |
