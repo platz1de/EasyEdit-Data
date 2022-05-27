@@ -517,6 +517,7 @@
     "94:13": "minecraft:repeater[delay=4,facing=west,locked=false,powered=true]",
     "94:14": "minecraft:repeater[delay=4,facing=north,locked=false,powered=true]",
     "94:15": "minecraft:repeater[delay=4,facing=east,locked=false,powered=true]",
+    "95:0": "minecraft::barrier",
     "96:0": "minecraft:oak_trapdoor[facing=east,half=bottom,open=false,powered=false,waterlogged=false]",
     "96:1": "minecraft:oak_trapdoor[facing=west,half=bottom,open=false,powered=false,waterlogged=false]",
     "96:2": "minecraft:oak_trapdoor[facing=south,half=bottom,open=false,powered=false,waterlogged=false]",

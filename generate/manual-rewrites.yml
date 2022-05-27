@@ -23,7 +23,6 @@ bedrock:
   #Some wrong mapped ones
   "/concretePowder/": "concrete_powder"
   "/tripWire/": "trip_wire"
-  "/invisibleBedrock/": "invisible_bedrock"
   "/movingBlock/": "moving_block"
   "/pistonArmCollision/": "piston_arm_collision"
   "/stickyPistonArmCollision/": "sticky_piston_arm_collision"
