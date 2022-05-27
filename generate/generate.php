@@ -10,6 +10,7 @@ use pocketmine\network\mcpe\convert\GlobalItemTypeDictionary;
 use pocketmine\network\mcpe\protocol\serializer\NetworkNbtSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializerContext;
+use Ramsey\Uuid\Uuid;
 
 error_reporting(E_ALL);
 
@@ -23,7 +24,10 @@ try {
 	return;
 }
 
-file_put_contents("../dataVersion", file_get_contents("../dataVersion") + 1);
+$repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW_ON_ERROR);
+var_dump($repo);
+$repo["version"] = BEDROCK_VERSION . "-" . Uuid::uuid4();
+file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $bedrockData = getBedrockData();
 array_multisort(array_values($bedrockData), SORT_NATURAL, array_keys($bedrockData), SORT_NATURAL, $bedrockData);
