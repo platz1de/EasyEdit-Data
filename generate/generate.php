@@ -23,6 +23,8 @@ try {
 	return;
 }
 
+file_put_contents("../dataVersion", file_get_contents("../dataVersion") + 1);
+
 $bedrockData = getBedrockData();
 array_multisort(array_values($bedrockData), SORT_NATURAL, array_keys($bedrockData), SORT_NATURAL, $bedrockData);
 file_put_contents("debug/source-data.json", json_encode($bedrockData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
@@ -271,7 +273,7 @@ foreach ($bedrockItemData as $item) {
 }
 
 foreach ($itemMapping as $bedrockName => $javaName) {
-	if($bedrockName === $javaName) {
+	if ($bedrockName === $javaName) {
 		unset($itemMapping[$bedrockName]);
 	}
 }
