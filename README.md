@@ -9,7 +9,8 @@ Data sources:
 - [BedrockData](https://github.com/pmmp/BedrockData/)
 - [PrismarineJS](https://github.com/PrismarineJS/minecraft-data/)
 
-Note: "ID" refers to numeric blockIDs, while "State" refers to the block's stringy state.
+Note: "ID" refers to numeric blockIDs, while "State" refers to the block's stringy state. <br>
+Most mappings do NOT contain values where java and bedrock are the same
 
 | Mapping                     | Usage                                 | Format                                |
 |-----------------------------|---------------------------------------|---------------------------------------|
