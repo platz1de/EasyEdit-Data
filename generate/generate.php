@@ -25,7 +25,6 @@ try {
 }
 
 $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW_ON_ERROR);
-var_dump($repo);
 $repo["version"] = BEDROCK_VERSION . "-" . Uuid::uuid4();
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
