@@ -6,6 +6,7 @@
 
 use pocketmine\math\Axis;
 use pocketmine\math\Facing;
+use pocketmine\nbt\BigEndianNbtSerializer;
 use pocketmine\network\mcpe\convert\GlobalItemTypeDictionary;
 use pocketmine\network\mcpe\protocol\serializer\NetworkNbtSerializer;
 use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
@@ -340,6 +341,44 @@ function getBedrockData(): array
 			$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
 		}
 	}
+
+	//Generate potential mappings from CloudBurst data
+	$potentialMappings = [];
+	$serializer = new BigEndianNbtSerializer();
+	$statesMap = $serializer->read(gzdecode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/block_palette.nbt")));
+	$idMap = json_decode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/legacy_block_ids.json"), true, 512, JSON_THROW_ON_ERROR);
+	$meta = 0;
+	$current = "";
+	foreach ($statesMap->mustGetCompoundTag()->getListTag("blocks") as $tag) {
+		$name = $tag->getString("name");
+		if ($current !== $name) {
+			$current = $name;
+			$meta = 0;
+		}
+
+		$states = [];
+		foreach ($tag->getTag("states") as $property => $state) {
+			$states[] = $property . "=" . $state->getValue();
+		}
+		$state = $name . "[" . implode(",", $states) . "]";
+		if (!isset($bedrockData[$state]) && $meta <= 15) {
+			$potentialMappings[$state] = $idMap[$name] . ":" . $meta;
+		}
+		$meta++;
+	}
+
+	$pastR16 = json_decode(file_get_contents("past-1.16-mappings.json"), true, 512, JSON_THROW_ON_ERROR);
+	foreach ($pastR16 as $state => $id) {
+		if (isset($bedrockData[$state])) {
+			echo "WARNING: $state is already mapped to $bedrockData[$state]\n";
+		} elseif (!isset($potentialMappings[$state])) {
+			echo "WARNING: $state is not in potential state data\n";
+		} else {
+			$bedrockData[$state] = $id;
+		}
+	}
+
+	file_put_contents("debug/potentialMappings.json", json_encode($potentialMappings, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 	return $bedrockData;
 }
 
