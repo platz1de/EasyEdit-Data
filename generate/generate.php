@@ -128,15 +128,17 @@ $rotations = [];
 $flipX = [];
 $flipZ = [];
 $flipY = [];
+$missingRotations = [];
 foreach ($bedrockMapping as $state => $id) {
 	if (!str_ends_with($state, "]")) {
 		continue; //no properties
 	}
-	remapProperties($state, $id, $rotationData, $bedrockMapping, $rotations);
-	remapProperties($state, $id, $flipData["x"], $bedrockMapping, $flipX);
-	remapProperties($state, $id, $flipData["z"], $bedrockMapping, $flipZ);
-	remapProperties($state, $id, $flipData["y"], $bedrockMapping, $flipY);
+	remapProperties($state, $id, $rotationData, $bedrockMapping, $rotations, $missingRotations);
+	remapProperties($state, $id, $flipData["x"], $bedrockMapping, $flipX, $missingRotations);
+	remapProperties($state, $id, $flipData["z"], $bedrockMapping, $flipZ, $missingRotations);
+	remapProperties($state, $id, $flipData["y"], $bedrockMapping, $flipY, $missingRotations);
 }
+file_put_contents("debug/missingRotations.json", json_encode($missingRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $flipZ, "yAxis" => $flipY], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
@@ -198,7 +200,7 @@ foreach ($javaTileStates["skull_rotation"] as $placeholder1 => $data) {
 file_put_contents("../tile-data-states.json", json_encode($tileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../java-tile-states.json", json_encode($javaTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
-function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save)
+function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save, array &$missing)
 {
 	if (isset($save[$id])) {
 		return;
@@ -227,13 +229,14 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 			$save[$id] = $bedrockMapping[$newState];
 		}
 	} else {
-		echo "Missing rotation for $id ($state) -> $newState" . PHP_EOL;
+		$missing["$id ($state)"] = $newState;
 	}
 }
 
 $blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/common/legacy.json"), true)["blocks"];
 
 $toBedrock = [];
+$missingData = [];
 foreach ($blockData as $legacyId => $state) {
 	getReadableBlockState($state); //WorldEdit doesn't have a proper order in state properties, so we need to sort them
 	if (isset($bedrockMapping[$state])) {
@@ -241,12 +244,13 @@ foreach ($blockData as $legacyId => $state) {
 			$toBedrock[$legacyId] = $bedrockMapping[$state];
 		}
 	} else {
-		echo "Missing bedrock data for $state" . PHP_EOL;
+		$missingData[$legacyId] = $state;
 	}
 }
 
 array_multisort(array_keys($toBedrock), SORT_NATURAL, array_values($toBedrock), SORT_NATURAL, $toBedrock);
 file_put_contents("../bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("debug/missingData.json", json_encode($missingData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $bedrockItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/items.json"), true);
 $javaItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/" . JAVA_VERSION . "/items.json"), true);
