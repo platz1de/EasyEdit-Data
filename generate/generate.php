@@ -334,6 +334,8 @@ function getBedrockData(): array
 		}
 	}
 
+	$pastR16 = json_decode(file_get_contents("past-1.16-mappings.json"), true, 512, JSON_THROW_ON_ERROR);
+
 	//Generate potential mappings from CloudBurst data
 	$potentialMappings = [];
 	$serializer = new BigEndianNbtSerializer();
@@ -341,11 +343,13 @@ function getBedrockData(): array
 	$idMap = json_decode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/legacy_block_ids.json"), true, 512, JSON_THROW_ON_ERROR);
 	$meta = 0;
 	$current = "";
+	$skipped = false;
 	foreach ($statesMap->mustGetCompoundTag()->getListTag("blocks") as $tag) {
 		$name = $tag->getString("name");
 		if ($current !== $name) {
 			$current = $name;
 			$meta = 0;
+			$skipped = false;
 		}
 
 		$states = [];
@@ -353,14 +357,23 @@ function getBedrockData(): array
 			$states[] = $property . "=" . $state->getValue();
 		}
 		$state = $name . "[" . implode(",", $states) . "]";
+
+		if (!$skipped) {
+			foreach ($pastR16["__skip"] as $skip => $goal) {
+				if (preg_match($skip, $state)) {
+					$skipped = true;
+					$meta = $goal;
+				}
+			}
+		}
+
 		if (!isset($bedrockData[$state]) && $meta <= 15) {
 			$potentialMappings[$state] = $idMap[$name] . ":" . $meta;
 		}
 		$meta++;
 	}
 
-	$pastR16 = json_decode(file_get_contents("past-1.16-mappings.json"), true, 512, JSON_THROW_ON_ERROR);
-	foreach ($pastR16["__auto"] as $find){
+	foreach ($pastR16["__auto"] as $find) {
 		foreach ($potentialMappings as $state => $replace) {
 			if (preg_match($find, $state)) {
 				$bedrockData[$state] = $replace;
@@ -368,7 +381,7 @@ function getBedrockData(): array
 			}
 		}
 	}
-	unset($pastR16["__comment"], $pastR16["__auto"]);
+	unset($pastR16["__comment"], $pastR16["__auto"], $pastR16["__skip"]);
 	foreach ($pastR16 as $state => $id) {
 		if (isset($bedrockData[$state])) {
 			echo "WARNING: $state is already mapped to $bedrockData[$state]\n";
