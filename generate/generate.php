@@ -306,9 +306,6 @@ function getReadableBlockState(string &$state)
  */
 function getBedrockData(): array
 {
-	$pmmpRewrites = [
-		"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/" => "$1door_hinge_bit=0$2", "/(.*)open_bit=1(.*upper_block_bit=1.*)/" => "$1open_bit=0$2", "/(.*)direction=.(.*upper_block_bit=1.*)/" => "$1direction=0$2"
-	];
 	$bedrockData = [];
 	$ids = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/block_id_map.json"), true, 512, JSON_THROW_ON_ERROR);
 	$reader = PacketSerializer::decoder(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r12_to_current_block_map.bin"), 0, new PacketSerializerContext(GlobalItemTypeDictionary::getInstance()->getDictionary()));
@@ -331,11 +328,6 @@ function getBedrockData(): array
 			$fullName .= implode(",", $stateData);
 		}
 		$fullName .= "]";
-
-		foreach ($pmmpRewrites as $search => $replace) {
-			$fullName = preg_replace($search, $replace, $fullName);
-		}
-		$fullName = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $fullName);
 
 		if (!isset($bedrockData[$fullName])) { //use the first one
 			$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
@@ -368,12 +360,22 @@ function getBedrockData(): array
 	}
 
 	$pastR16 = json_decode(file_get_contents("past-1.16-mappings.json"), true, 512, JSON_THROW_ON_ERROR);
+	foreach ($pastR16["__auto"] as $find){
+		foreach ($potentialMappings as $state => $replace) {
+			if (preg_match($find, $state)) {
+				$bedrockData[$state] = $replace;
+				unset($potentialMappings[$state]);
+			}
+		}
+	}
+	unset($pastR16["__comment"], $pastR16["__auto"]);
 	foreach ($pastR16 as $state => $id) {
 		if (isset($bedrockData[$state])) {
 			echo "WARNING: $state is already mapped to $bedrockData[$state]\n";
 		} elseif (!isset($potentialMappings[$state])) {
 			echo "WARNING: $state is not in potential state data\n";
 		} else {
+			unset($potentialMappings[$state]);
 			$bedrockData[$state] = $id;
 		}
 	}
