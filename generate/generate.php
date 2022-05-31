@@ -374,11 +374,16 @@ function getBedrockData(): array
 	}
 
 	foreach ($pastR16["__auto"] as $find) {
+		$set = 0;
 		foreach ($potentialMappings as $state => $replace) {
-			if (preg_match($find, $state)) {
+			if (!isset($bedrockData[$state]) && preg_match($find, $state)) {
 				$bedrockData[$state] = $replace;
 				unset($potentialMappings[$state]);
+				$set++;
 			}
+		}
+		if($set === 0) {
+			echo "NOTICE: $find is not needed\n";
 		}
 	}
 	unset($pastR16["__comment"], $pastR16["__auto"], $pastR16["__skip"]);
