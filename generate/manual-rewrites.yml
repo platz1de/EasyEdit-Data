@@ -36,8 +36,9 @@ java:
   "/(.*)snowy=false(.*)/": "$1$2"
   "/(.*)lit=false(.*)/": "$1$2"
 
-  #Default to y-axis
+  #Some default assumptions
   "/(.*)axis=y]/": "$1]"
+  "/(.*)level=0(.*)/": "$1$2"
 
   #These were changed in recent minecraft versions, so we attempt to accept both
   "/minecraft:dirt_path(.*)/": "minecraft:grass_path$1"
