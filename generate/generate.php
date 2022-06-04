@@ -267,39 +267,70 @@ array_multisort(array_keys($toBedrock), SORT_NATURAL, array_values($toBedrock), 
 file_put_contents("../bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/missingData.json", json_encode($missingData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
+$rawItems = json_decode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/runtime_item_states.json"), true);
+$itemData = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/item_id_map.json"), true);
 $bedrockItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/items.json"), true);
 $javaItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/" . JAVA_VERSION . "/items.json"), true);
-$javaItems = [];
+$rewrites = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r16_to_current_item_map.json"), true);
+$bedrockItems = [];
 $itemMapping = [];
 $missingItems = [];
 
-foreach ($javaItemData as $item) {
-	$javaItems[$item["id"]] = $item["name"];
+foreach ($rawItems as $data) {
+	if (!isset($itemData[$data["name"]])) {
+		$itemData[$data["name"]] = $data["id"];
+	}
+}
+
+foreach ($itemData as $name => $id) {
+	if(($itemData[$name] ?? null) !== $id) {
+		continue;
+	}
+	if (isset($rewrites["simple"][$name])) {
+		unset($itemData[$name]);
+		$itemData[$rewrites["simple"][$name]] = $id . ":0";
+	} elseif (isset($rewrites["complex"][$name])) {
+		foreach ($rewrites["complex"][$name] as $i => $variation) {
+			$itemData[$variation] = $id . ":" . $i;
+		}
+		$itemData[$name] = $id . ":0";
+	} else {
+		$itemData[$name] .= ":0";
+	}
 }
 
 foreach ($bedrockItemData as $item) {
-	if (isset($javaItems[$item["id"]])) {
-		$itemMapping[$item["name"]] = $javaItems[$item["id"]];
-	} else {
-		$missingItems[$item["id"]] = $item["name"];
+	if (isset($bedrockItems[$item["id"]])) {
+		continue;
 	}
+	$bedrockItems[$item["id"]] = $item["name"];
 	if (isset($item["variations"])) {
 		foreach ($item["variations"] as $variation) {
-			if (isset($javaItems[$item["id"]])) {
-				$itemMapping[$variation["name"]] = $javaItems[$variation["id"]];
-			} else {
-				$missingItems[$variation["id"]] = $variation["name"];
-			}
+			$bedrockItems[$variation["id"]] = $variation["name"];
+			$itemData["minecraft:" . $variation["name"]] = substr($itemData["minecraft:" . $item["name"]], 0, -2) . ":" . $variation["metadata"];
 		}
 	}
 }
 
-foreach ($itemMapping as $bedrockName => $javaName) {
-	if ($bedrockName === $javaName) {
-		unset($itemMapping[$bedrockName]);
+foreach ($javaItemData as $item) {
+	$name = "minecraft:" . $item["name"];
+	if (!isset($bedrockItems[$item["id"]])) {
+		$missingItems[$name] = $item["id"];
+		continue;
+	}
+	$bedrockState = "minecraft:" . $bedrockItems[$item["id"]];
+
+	if (isset($itemData[$bedrockState])) {
+		$itemMapping[$name] = $itemData[$bedrockState];
+	} else if (isset($bedrockMapping[$name])) {
+		$id = explode(":", $bedrockMapping[$name]);
+		$itemMapping[$name] = ($id[0] > 255 ? 255 - $id[0] : $id[0]) . ":" . $id[1];
+	} else {
+		$missingItems[$name] = $bedrockState;
 	}
 }
 
+array_multisort(array_values($itemMapping), SORT_NATURAL, array_keys($itemMapping), SORT_NATURAL, $itemMapping);
 file_put_contents("../bedrock-item-map.json", json_encode($itemMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/missingItems.json", json_encode($missingItems, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
