@@ -93,6 +93,20 @@ $javaMapping[$bedrockData["minecraft:invisible_bedrock[]"]] = "minecraft::barrie
 array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
 array_multisort(array_keys($javaMapping), SORT_NATURAL, array_values($javaMapping), SORT_NATURAL, $javaMapping);
 
+$currentState = "";
+foreach ($bedrockMapping as $java => $id) {
+	preg_match("/(.*)\[(.*?)]/", $java, $matches);
+	if (!isset($matches[1])) {
+		continue;
+	}
+	if ($matches[1] !== $currentState && !isset($bedrockMapping[$matches[1]])) {
+		$currentState = $matches[1];
+		$bedrockMapping[$matches[1]] = $id;
+	}
+}
+
+array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
+
 file_put_contents("debug/missingBedrock.json", json_encode($missingBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/missingJava.json", json_encode($missingJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
@@ -382,7 +396,7 @@ function getBedrockData(): array
 				$set++;
 			}
 		}
-		if($set === 0) {
+		if ($set === 0) {
 			echo "NOTICE: $find is not needed\n";
 		}
 	}
