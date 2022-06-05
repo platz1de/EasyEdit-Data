@@ -89,6 +89,8 @@ foreach ($bedrockToJava as $bedrock => $java) {
 }
 
 $javaMapping[$bedrockData["minecraft:invisible_bedrock[]"]] = "minecraft::barrier";
+$javaMapping["8:0"] = "minecraft:water";
+$javaMapping["10:0"] = "minecraft:lava";
 
 array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
 array_multisort(array_keys($javaMapping), SORT_NATURAL, array_values($javaMapping), SORT_NATURAL, $javaMapping);
