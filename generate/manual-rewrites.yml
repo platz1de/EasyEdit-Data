@@ -28,6 +28,9 @@ bedrock:
   "/stickyPistonArmCollision/": "sticky_piston_arm_collision"
   "/seaLantern/": "sea_lantern"
 
+  #Leaves are handles weirdly in PMMP
+  "/persistent_bit=(.),update_bit=(.)/": "persistent_bit=$2,update_bit=$1"
+
 #Rewrites on java side (mostly for compatibility reasons)
 java:
   #These are not properly supported, so we expect them to default to false
