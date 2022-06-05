@@ -4,10 +4,14 @@ bedrock:
   "/true/": "1"
   "/false/": "0"
 
-  #Doors (TODO: check this logic)
-  #"/(.*)door_hinge_bit=1(.*upper_block_bit=0.*)/": "$1door_hinge_bit=0$2"
-  #"/(.*)open_bit=1(.*upper_block_bit=1.*)/": "$1open_bit=0$2"
-  #"/(.*)direction=.(.*upper_block_bit=1.*)/": "$1direction=0$2"
+  #Doors
+  "/(.*direction=0.*)door_hinge_bit=1(.*upper_block_bit=0.*)/": "$1door_hinge_bit=0$2"
+  "/(.*direction=1.*)door_hinge_bit=1(.*upper_block_bit=0.*)/": "$1door_hinge_bit=1$2"
+  "/(.*direction=2.*)door_hinge_bit=1(.*upper_block_bit=0.*)/": "$1door_hinge_bit=0$2"
+  "/(.*direction=3.*)door_hinge_bit=1(.*upper_block_bit=0.*)/": "$1door_hinge_bit=1$2"
+  "/(.*)open_bit=1(.*upper_block_bit=1.*)/": "$1open_bit=0$2"
+  "/(.*)direction=.(door_hinge_bit=0.*upper_block_bit=1.*)/": "$1direction=0$2"
+  "/(.*)direction=.(door_hinge_bit=1.*upper_block_bit=1.*)/": "$1direction=1$2"
 
   #Walls currently are not supported due to the limited world format (-> all get no connections at all)
   "/wall_post_bit=1/": "wall_post_bit=0"
@@ -42,6 +46,7 @@ java:
   #Some default assumptions
   "/(.*)axis=y]/": "$1]"
   "/(.*)level=0(.*)/": "$1$2"
+  "/(half=lower.*)hinge=right/": "$1hinge=left"
 
   #These were changed in recent minecraft versions, so we attempt to accept both
   "/minecraft:dirt_path(.*)/": "minecraft:grass_path$1"

@@ -54,10 +54,6 @@
   "minecraft:warped_door[direction=1,door_hinge_bit=1,open_bit=0,upper_block_bit=1]": "500:9",
   "minecraft:warped_door[direction=2,door_hinge_bit=0,open_bit=0,upper_block_bit=1]": "500:10",
   "minecraft:warped_door[direction=3,door_hinge_bit=1,open_bit=0,upper_block_bit=1]": "500:11",
-  "minecraft:warped_door[direction=0,door_hinge_bit=0,open_bit=1,upper_block_bit=1]": "500:12",
-  "minecraft:warped_door[direction=1,door_hinge_bit=1,open_bit=1,upper_block_bit=1]": "500:13",
-  "minecraft:warped_door[direction=2,door_hinge_bit=0,open_bit=1,upper_block_bit=1]": "500:14",
-  "minecraft:warped_door[direction=3,door_hinge_bit=1,open_bit=1,upper_block_bit=1]": "500:15",
   "minecraft:mangrove_door[direction=0,door_hinge_bit=0,open_bit=0,upper_block_bit=0]": "748:0",
   "minecraft:mangrove_door[direction=1,door_hinge_bit=1,open_bit=0,upper_block_bit=0]": "748:1",
   "minecraft:mangrove_door[direction=2,door_hinge_bit=0,open_bit=0,upper_block_bit=0]": "748:2",
@@ -69,9 +65,5 @@
   "minecraft:mangrove_door[direction=0,door_hinge_bit=0,open_bit=0,upper_block_bit=1]": "748:8",
   "minecraft:mangrove_door[direction=1,door_hinge_bit=1,open_bit=0,upper_block_bit=1]": "748:9",
   "minecraft:mangrove_door[direction=2,door_hinge_bit=0,open_bit=0,upper_block_bit=1]": "748:10",
-  "minecraft:mangrove_door[direction=3,door_hinge_bit=1,open_bit=0,upper_block_bit=1]": "748:11",
-  "minecraft:mangrove_door[direction=0,door_hinge_bit=0,open_bit=1,upper_block_bit=1]": "748:12",
-  "minecraft:mangrove_door[direction=1,door_hinge_bit=1,open_bit=1,upper_block_bit=1]": "748:13",
-  "minecraft:mangrove_door[direction=2,door_hinge_bit=0,open_bit=1,upper_block_bit=1]": "748:14",
-  "minecraft:mangrove_door[direction=3,door_hinge_bit=1,open_bit=1,upper_block_bit=1]": "748:15"
+  "minecraft:mangrove_door[direction=3,door_hinge_bit=1,open_bit=0,upper_block_bit=1]": "748:11"
 }
