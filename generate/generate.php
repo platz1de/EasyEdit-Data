@@ -288,12 +288,9 @@ file_put_contents("debug/missingData.json", json_encode($missingData, JSON_THROW
 
 $rawItems = json_decode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/runtime_item_states.json"), true);
 $itemData = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/item_id_map.json"), true);
-$bedrockItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/items.json"), true);
-$javaItemData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/" . JAVA_VERSION . "/items.json"), true);
+$geyserItemData = json_decode(getData("https://raw.githubusercontent.com/GeyserMC/mappings/master/items.json"), true);
 $rewrites = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r16_to_current_item_map.json"), true);
-$bedrockItems = [];
 $itemMapping = [];
-$missingItems = [];
 
 foreach ($rawItems as $data) {
 	if (!isset($itemData[$data["name"]])) {
@@ -302,7 +299,7 @@ foreach ($rawItems as $data) {
 }
 
 foreach ($itemData as $name => $id) {
-	if(($itemData[$name] ?? null) !== $id) {
+	if (($itemData[$name] ?? null) !== $id) {
 		continue;
 	}
 	if (isset($rewrites["simple"][$name])) {
@@ -310,6 +307,9 @@ foreach ($itemData as $name => $id) {
 		$itemData[$rewrites["simple"][$name]] = $id . ":0";
 	} elseif (isset($rewrites["complex"][$name])) {
 		foreach ($rewrites["complex"][$name] as $i => $variation) {
+			if ($name === "minecraft:spawn_egg" && $variation === "minecraft:axolotl_bucket") {
+				$variation = "minecraft:axolotl_spawn_egg";
+			}
 			$itemData[$variation] = $id . ":" . $i;
 		}
 		$itemData[$name] = $id . ":0";
@@ -318,40 +318,29 @@ foreach ($itemData as $name => $id) {
 	}
 }
 
-foreach ($bedrockItemData as $item) {
-	if (isset($bedrockItems[$item["id"]])) {
-		continue;
-	}
-	$bedrockItems[$item["id"]] = $item["name"];
-	if (isset($item["variations"])) {
-		foreach ($item["variations"] as $variation) {
-			$bedrockItems[$variation["id"]] = $variation["name"];
-			$itemData["minecraft:" . $variation["name"]] = substr($itemData["minecraft:" . $item["name"]], 0, -2) . ":" . $variation["metadata"];
-		}
+foreach ($geyserItemData as $java => $item) {
+	$itemMapping[$java] = $itemData[$item["bedrock_identifier"]];
+	if (str_ends_with($itemData[$item["bedrock_identifier"]], ":0")) {
+		$itemMapping[$java] = substr($itemMapping[$java], 0, -2) . ":" . $item["bedrock_data"];
+	} elseif ($item["bedrock_data"] !== 0) {
+		echo "Couldn't combine item data for " . $java . "\n";
 	}
 }
 
-foreach ($javaItemData as $item) {
-	$name = "minecraft:" . $item["name"];
-	if (!isset($bedrockItems[$item["id"]])) {
-		$missingItems[$name] = $item["id"];
-		continue;
-	}
-	$bedrockState = "minecraft:" . $bedrockItems[$item["id"]];
-
-	if (isset($itemData[$bedrockState])) {
-		$itemMapping[$name] = $itemData[$bedrockState];
-	} else if (isset($bedrockMapping[$name])) {
-		$id = explode(":", $bedrockMapping[$name]);
-		$itemMapping[$name] = ($id[0] > 255 ? 255 - $id[0] : $id[0]) . ":" . $id[1];
-	} else {
-		$missingItems[$name] = $bedrockState;
-	}
+//Wrongly mapped meta data
+$wronglyMapped = [
+	"minecraft:polished_granite" => 2,
+	"minecraft:dispenser" => 0,
+	"minecraft:dropper" => 0,
+	"minecraft:piston" => 0,
+	"minecraft:sticky_piston" => 0,
+];
+foreach ($wronglyMapped as $java => $meta) {
+	$itemMapping[$java] = substr($itemMapping[$java], 0, -2) . ":" . $meta;
 }
 
 array_multisort(array_values($itemMapping), SORT_NATURAL, array_keys($itemMapping), SORT_NATURAL, $itemMapping);
 file_put_contents("../bedrock-item-map.json", json_encode($itemMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("debug/missingItems.json", json_encode($missingItems, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function getReadableBlockState(string &$state)
 {
