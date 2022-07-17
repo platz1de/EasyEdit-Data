@@ -374,6 +374,7 @@ function getBedrockData(): array
 	$ids = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/block_id_map.json"), true, 512, JSON_THROW_ON_ERROR);
 	$reader = PacketSerializer::decoder(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r12_to_current_block_map.bin"), 0, new PacketSerializerContext(GlobalItemTypeDictionary::getInstance()->getDictionary()));
 	$nbt = new NetworkNbtSerializer();
+	$ignore = yaml_parse_file("ignore-pmmp.yml");
 	while (!$reader->feof()) {
 		$id = $reader->getString();
 		$meta = $reader->getLShort();
@@ -381,6 +382,12 @@ function getBedrockData(): array
 		$offset = $reader->getOffset();
 		$state = $nbt->read($reader->getBuffer(), $offset)->mustGetCompoundTag();
 		$reader->setOffset($offset);
+
+		foreach ($ignore as $find => $rule) {
+			if (preg_match($find, $id) && in_array($meta, $rule, true)) {
+				continue 2;
+			}
+		}
 
 		$fullName = $state->getString("name") . "[";
 		$states = $state->getCompoundTag("states");
@@ -393,8 +400,14 @@ function getBedrockData(): array
 		}
 		$fullName .= "]";
 
+		if (str_contains($fullName, "light_block")) {
+			continue; //completely wrongly mapped (as end rods?? and only level 14)
+		}
+
 		if (!isset($bedrockData[$fullName])) { //use the first one
 			$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
+		} else {
+			echo "Duplicate block: " . $fullName . " (" . $id . " " . $ids[$id] . ":" . $meta . " " . $bedrockData[$fullName] . ")\n";
 		}
 	}
 

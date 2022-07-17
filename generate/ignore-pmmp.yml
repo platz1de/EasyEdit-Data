@@ -1,0 +1,71 @@
+#These only have 6 facing directions?
+"/button/": [ 6, 7, 14, 15 ]
+"/barrel/": [ 6, 7, 14, 15 ]
+"/dispenser/": [ 6, 7, 14, 15 ]
+"/dropper/": [ 6, 7, 14, 15 ]
+"/observer/": [ 6, 7, 14, 15 ]
+"/command_block/": [ 6, 7, 14, 15 ]
+"/torch/": [ 6, 7, 14, 15 ]
+"/jigsaw/": [ 6, 7, 14, 15 ]
+"/piston/": [ 6, 7, 14, 15 ]
+"/planks/": [ 6, 7, 14, 15 ]
+"/wood/": [ 6, 7, 14, 15 ]
+"/structure_block/": [ 6, 7, 14, 15 ]
+"/hopper/": [ 6, 7, 14, 15 ] #technically only 5
+
+#These only have 3 facing axi?
+"/bone_block/": [ 12, 13, 14, 15 ]
+"/hay_block/": [ 12, 13, 14, 15 ]
+"/log/": [ 12, 13, 14, 15 ]
+"/purpur_block/": [ 12, 13, 14, 15 ]
+"/quartz_block/": [ 12, 13, 14, 15 ]
+"/stripped/": [ 3 ]
+"/portal/": [ 3 ]
+"/prismarine/": [ 3 ]
+
+#These only have 4 facing directions?
+"/wall_sign/": [ 0, 1, 6, 7 ]
+"/glazed_terracotta/": [ 0, 1, 6, 7 ]
+"/furnace/": [ 0, 1, 6, 7 ]
+"/smoker/": [ 0, 1, 6, 7 ]
+"/lit_furnace/": [ 0, 1, 6, 7 ]
+"/lit_smoker/": [ 0, 1, 6, 7 ]
+"/ladder/": [ 0, 1, 6, 7 ]
+"/chest/": [ 0, 1, 6, 7 ]
+"/wall_banner/": [ 0, 1, 6, 7 ]
+"/stonebrick/": [ 0, 1, 6, 7 ]
+"/stonecutter_block/": [ 0, 1, 6, 7 ]
+
+#Rails (non-normal types can't be curved)
+"/rail/": [ 10, 11, 12, 13, 14, 15 ]
+"/activator_rail/": [ 6, 7, 14, 15 ]
+"/detector_rail/": [ 6, 7, 14, 15 ]
+
+"/golden_rail/": [ 6, 7, 14, 15 ]
+#Mojang seems not to know how doors work
+
+"/door/": [ 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+#Bamboo (who doesn't love oak bamboo saplings, thanks mojang)
+"/bamboo$/": [ 6, 7, 14, 15 ]
+
+"/bamboo_sapling/": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+#Unused states
+"/chorus_flower/": [ 6, 7 ]
+"/turtle_egg/": [ 12, 13, 14, 15 ]
+"/composter/": [ 9, 10, 11, 12, 13, 14, 15 ]
+"/coral/": [ 5, 6, 7, 13, 14, 15 ]
+"/cauldron/": [ 7, 15 ]
+"/cake/": [ 7 ] #What exactly is a cake without slices?
+"/log2/": [ 2, 3, 6, 7, 10, 11, 12, 13, 14, 15 ]
+"/leaves2/": [ 2, 3, 6, 7, 10, 11, 12, 13, 14, 15 ]
+"/wooden_slab/": [ 6, 7, 14, 15 ]
+"/stone_slab4/": [ 5, 6, 7, 13, 14, 15 ]
+"/skull/": [ 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 ]
+"/red_flower/": [ 11, 12, 13, 14, 15 ]
+"/sapling/": [ 6, 7, 14, 15 ]
+"/double_plant/": [ 6, 7, 14, 15 ]
+"/stone/": [ 7 ]
+"/seagrass/": [ 3 ]
+"/fence/": [ 6, 7 ]
+"/monster_egg/": [ 6, 7 ] #Infested stone (no idea why this is names like that)
+"/cobblestone_wall/": [ 14, 15 ] #No idea
