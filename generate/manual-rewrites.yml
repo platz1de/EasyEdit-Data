@@ -21,14 +21,14 @@ bedrock:
   "/wall_connection_type_west=tall/": "wall_connection_type_west=none"
 
   #Some wrong mapped ones
-  "/concretePowder/": "concrete_powder"
-  "/tripWire/": "trip_wire"
-  "/movingBlock/": "moving_block"
-  "/pistonArmCollision/": "piston_arm_collision"
-  "/stickyPistonArmCollision/": "sticky_piston_arm_collision"
-  "/seaLantern/": "sea_lantern"
+  #"/concretePowder/": "concrete_powder"
+  #"/tripWire/": "trip_wire"
+  #"/movingBlock/": "moving_block"
+  #"/pistonArmCollision/": "piston_arm_collision"
+  #"/stickyPistonArmCollision/": "sticky_piston_arm_collision"
+  #"/seaLantern/": "sea_lantern"
 
-  #Leaves are handles weirdly in PMMP
+  #Leaves are handled weirdly in PMMP
   "/persistent_bit=(.),update_bit=(.)/": "persistent_bit=$2,update_bit=$1"
 
 #Rewrites on java side (mostly for compatibility reasons)

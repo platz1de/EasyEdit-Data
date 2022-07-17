@@ -16,7 +16,6 @@ use Ramsey\Uuid\Uuid;
 error_reporting(E_ALL);
 
 const BEDROCK_VERSION = "1.19.1";
-const JAVA_VERSION = "1.19";
 
 try {
 	require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
@@ -84,9 +83,9 @@ foreach ($geyserMapping as $javaId => $data) {
 	$javaId = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $javaId);
 
 	if (isset($bedrockMapping[$javaId])) {
-		if (!isset($javaMapping[$bedrockMapping[$javaId]])) { //use first one
+		//if (!isset($javaMapping[$bedrockMapping[$javaId]])) { //use first one
 			$javaMapping[$bedrockMapping[$javaId]] = $javaId;
-		}
+		//}
 	} else {
 		$missingBedrock[$bedrockState] = $javaId;
 	}
@@ -106,6 +105,7 @@ foreach ($rewrites["java"] as $search => $replace) {
 $javaMapping[$bedrockData["minecraft:invisible_bedrock[]"]] = "minecraft::barrier";
 $javaMapping["8:0"] = "minecraft:water";
 $javaMapping["10:0"] = "minecraft:lava";
+$javaMapping["0:0"] = "minecraft:air";
 
 array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
 array_multisort(array_keys($javaMapping), SORT_NATURAL, array_values($javaMapping), SORT_NATURAL, $javaMapping);
@@ -456,12 +456,12 @@ function getBedrockData(): array
 	foreach ($pastR16 as $state => $id) {
 		if (isset($bedrockData[$state])) {
 			echo "WARNING: $state is already mapped to $bedrockData[$state]\n";
-		} elseif (!isset($potentialMappings[$state])) {
-			echo "WARNING: $state is not in potential state data\n";
-		} else {
-			unset($potentialMappings[$state]);
-			$bedrockData[$state] = $id;
 		}
+		if (!isset($potentialMappings[$state])) {
+			echo "WARNING: $state is not in potential state data\n";
+		}
+		unset($potentialMappings[$state]);
+		$bedrockData[$state] = $id;
 	}
 
 	file_put_contents("debug/potentialMappings.json", json_encode($potentialMappings, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
