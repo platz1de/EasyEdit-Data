@@ -15,8 +15,8 @@ use Ramsey\Uuid\Uuid;
 
 error_reporting(E_ALL);
 
-const BEDROCK_VERSION = "1.18.11";
-const JAVA_VERSION = "1.18";
+const BEDROCK_VERSION = "1.19.1";
+const JAVA_VERSION = "1.19";
 
 try {
 	require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
@@ -35,56 +35,71 @@ file_put_contents("debug/source-data.json", json_encode($bedrockData, JSON_THROW
 
 $bedrockMapping = [];
 $javaMapping = [];
-$javaToBedrock = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/blocksJ2B.json"), true, 512, JSON_THROW_ON_ERROR);
-$bedrockToJava = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/bedrock/" . BEDROCK_VERSION . "/blocksB2J.json"), true, 512, JSON_THROW_ON_ERROR);
-$javaToBedrockNonLegacy = $javaToBedrock;
+$geyserMapping = json_decode(getData("https://raw.githubusercontent.com/GeyserMC/mappings/master/blocks.json"), true, 512, JSON_THROW_ON_ERROR);
 $missingBedrock = [];
 $missingJava = [];
 
 $rewrites = yaml_parse_file("manual-rewrites.yml");
 
+$bedrockSourceCount = 0;
+foreach ($geyserMapping as $javaId => $data) {
+	if (!str_ends_with($javaId, "]")) {
+		$javaId .= "[]";
+	}
+
+	$stateData = [];
+	foreach ($data["bedrock_states"] ?? [] as $type => $value) {
+		$stateData[] = $type . "=" . match ($value) {
+				true => "1",
+				false => "0",
+				default => $value
+			};
+	}
+	sort($stateData);
+	$bedrockState = $data["bedrock_identifier"] . "[" . implode(",", $stateData) . "]";
+	$bedrockSourceCount++;
+
+	foreach ($rewrites["bedrock"] as $search => $replace) {
+		$bedrockState = preg_replace($search, $replace, $bedrockState);
+	}
+	$bedrockState = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrockState);
+	if (isset($bedrockData[$bedrockState])) {
+		if (!isset($bedrockMapping[$javaId])) { //use first one
+			if (str_ends_with($javaId, "[]")) {
+				$bedrockMapping[substr($javaId, 0, -2)] = $bedrockData[$bedrockState];
+			}
+			$bedrockMapping[$javaId] = $bedrockData[$bedrockState];
+		}
+	} else {
+		$missingJava[$javaId] = $bedrockState;
+	}
+
+	$reliabilityOverwrites = [
+		"/(.*)\[]/" => "$1", //java chokes on empty state data
+		"/(.*chest)(\[.*type=)(?:left|right)(.*])/" => "$1$2single$3" //part of tiles in bedrock (converted separately)
+	];
+	foreach ($reliabilityOverwrites as $search => $replace) {
+		$javaId = preg_replace($search, $replace, $javaId);
+	}
+	$javaId = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $javaId);
+
+	if (isset($bedrockMapping[$javaId])) {
+		if (!isset($javaMapping[$bedrockMapping[$javaId]])) { //use first one
+			$javaMapping[$bedrockMapping[$javaId]] = $javaId;
+		}
+	} else {
+		$missingBedrock[$bedrockState] = $javaId;
+	}
+}
+
 foreach ($rewrites["java"] as $search => $replace) {
-	foreach ($javaToBedrock as $java => $bedrock) {
+	foreach ($bedrockMapping as $java => $bedrock) {
 		$java = preg_replace($search, $replace, $java);
 		$java = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $java);
-		$javaToBedrock[$java] = $bedrock;
-	}
-}
-
-foreach ($javaToBedrock as $java => $bedrock) {
-	foreach ($rewrites["bedrock"] as $search => $replace) {
-		$bedrock = preg_replace($search, $replace, $bedrock);
-	}
-	$bedrock = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrock);
-	if (isset($bedrockData[$bedrock])) {
-		if (!isset($bedrockMapping[$java])) { //use first one
-			if (str_ends_with($java, "[]")) {
-				$bedrockMapping[substr($java, 0, -2)] = $bedrockData[$bedrock];
-			}
-			$bedrockMapping[$java] = $bedrockData[$bedrock];
+		if (str_ends_with($java, "[]")) {
+			$bedrockMapping[substr($java, 0, -2)] = $bedrock;
 		}
-	} else {
-		$missingJava[$java] = $bedrock;
-	}
-}
-
-//these rules are really important to make everything work
-$reliabilityOverwrites = [
-	"/(.*)\[]/" => "$1",
-	"/(.*chest)(\[.*type=)(?:left|right)(.*])/" => "$1$2single$3"
-];
-
-foreach ($bedrockToJava as $bedrock => $java) {
-	foreach ($reliabilityOverwrites as $search => $replace) {
-		$java = preg_replace($search, $replace, $java);
-	}
-	$java = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $java);
-	if (isset($bedrockMapping[$java])) {
-		if (!isset($javaMapping[$bedrockMapping[$java]])) { //use first one
-			$javaMapping[$bedrockMapping[$java]] = $java;
-		}
-	} else {
-		$missingBedrock[$bedrock] = $java;
+		$bedrockMapping[$java] = $bedrock;
 	}
 }
 
@@ -104,16 +119,18 @@ foreach ($bedrockMapping as $java => $id) {
 	if ($matches[1] !== $currentState && !isset($bedrockMapping[$matches[1]])) {
 		$currentState = $matches[1];
 		$bedrockMapping[$matches[1]] = $id;
+		$defaultStates[$matches[1]] = $java;
 	}
 }
 
 array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
 
+file_put_contents("debug/defaultStates.json", json_encode($defaultStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/missingBedrock.json", json_encode($missingBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/missingJava.json", json_encode($missingJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
-echo "Matched " . count($bedrockMapping) . " java blocks to bedrock (sources provide " . count($javaToBedrockNonLegacy) . " pairs and " . count($bedrockData) . " translations), " . count($missingBedrock) . " not found" . PHP_EOL;
-echo "Matched " . count($javaMapping) . " bedrock blocks to java (sources provide " . count($bedrockToJava) . " pairs and " . count($bedrockData) . " translations), " . count($missingJava) . " not found" . PHP_EOL;
+echo "Matched " . count($bedrockMapping) . " java blocks to bedrock (sources provide " . $bedrockSourceCount . " pairs and " . count($bedrockData) . " translations), " . count($missingBedrock) . " not found" . PHP_EOL;
+echo "Matched " . count($javaMapping) . " bedrock blocks to java (sources provide " . $bedrockSourceCount . " pairs and " . count($bedrockData) . " translations), " . count($missingJava) . " not found" . PHP_EOL;
 file_put_contents("../bedrock_palette.json", json_encode($bedrockMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../java_palette.json", json_encode($javaMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 

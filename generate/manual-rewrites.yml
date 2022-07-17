@@ -1,9 +1,5 @@
 #Rewrites on bedrock side
 bedrock:
-  #PMMP uses bytes for booleans
-  "/true/": "1"
-  "/false/": "0"
-
   #Doors
   "/(.*direction=0.*)door_hinge_bit=1(.*upper_block_bit=0.*)/": "$1door_hinge_bit=0$2"
   "/(.*direction=1.*)door_hinge_bit=1(.*upper_block_bit=0.*)/": "$1door_hinge_bit=1$2"

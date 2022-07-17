@@ -8,6 +8,7 @@ Data sources:
     - [Minecraft Java Data Values](https://minecraft.fandom.com/wiki/Java_Edition_data_values/Pre-flattening)
 - [BedrockData](https://github.com/pmmp/BedrockData/)
 - [PrismarineJS](https://github.com/PrismarineJS/minecraft-data/)
+- [GeyserMC](https://github.com/GeyserMC/mappings/)
 - [Cloudburst Data](https://github.com/CloudburstMC/Data/)
 
 Note: "ID" refers to numeric blockIDs, while "State" refers to the block's stringy state. <br>
