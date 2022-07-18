@@ -84,7 +84,7 @@ foreach ($geyserMapping as $javaId => $data) {
 
 	if (isset($bedrockMapping[$javaId])) {
 		//if (!isset($javaMapping[$bedrockMapping[$javaId]])) { //use first one
-			$javaMapping[$bedrockMapping[$javaId]] = $javaId;
+		$javaMapping[$bedrockMapping[$javaId]] = $javaId;
 		//}
 	} else {
 		$missingBedrock[$bedrockState] = $javaId;
@@ -272,6 +272,7 @@ $blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS
 $toBedrock = [];
 $missingData = [];
 foreach ($blockData as $legacyId => $state) {
+	$state = str_replace("persistent=false", "persistent=true", $state);
 	getReadableBlockState($state); //WorldEdit doesn't have a proper order in state properties, so we need to sort them
 	if (isset($bedrockMapping[$state])) {
 		if ($bedrockMapping[$state] !== $legacyId) {
