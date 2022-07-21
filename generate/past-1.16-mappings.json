@@ -46,10 +46,5 @@
 	"/pointed_dripstone\\[(.)*hanging=1/": 8,
 	"/mangrove_propagule\\[(.)*hanging=1/": 8,
 	"/rail\\[(.)*rail_data_bit=1/": 8
-  },
-  "minecraft:stonebrick[stone_brick_type=chiseled]": "98:0",
-  "minecraft:stonebrick[stone_brick_type=cracked]": "98:1",
-  "minecraft:stonebrick[stone_brick_type=default]": "98:2",
-  "minecraft:stonebrick[stone_brick_type=mossy]": "98:3",
-  "minecraft:stonebrick[stone_brick_type=smooth]": "98:4"
+  }
 }
