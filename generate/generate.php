@@ -6,11 +6,6 @@
 
 use pocketmine\math\Axis;
 use pocketmine\math\Facing;
-use pocketmine\nbt\BigEndianNbtSerializer;
-use pocketmine\network\mcpe\convert\GlobalItemTypeDictionary;
-use pocketmine\network\mcpe\protocol\serializer\NetworkNbtSerializer;
-use pocketmine\network\mcpe\protocol\serializer\PacketSerializer;
-use pocketmine\network\mcpe\protocol\serializer\PacketSerializerContext;
 use Ramsey\Uuid\Uuid;
 
 error_reporting(E_ALL);
@@ -28,111 +23,165 @@ $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW
 $repo["version"] = BEDROCK_VERSION . "-" . Uuid::uuid4();
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
-$bedrockData = getBedrockData();
-array_multisort(array_values($bedrockData), SORT_NATURAL, array_keys($bedrockData), SORT_NATURAL, $bedrockData);
-file_put_contents("debug/source-data.json", json_encode($bedrockData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+$suppress = json_decode(file_get_contents("suppress.json"), true, 512, JSON_THROW_ON_ERROR);
 
-$bedrockMapping = [];
-$javaMapping = [];
+$javaToBedrock = [];
 $geyserMapping = json_decode(getData("https://raw.githubusercontent.com/GeyserMC/mappings/master/blocks.json"), true, 512, JSON_THROW_ON_ERROR);
-$missingBedrock = [];
-$missingJava = [];
-
-$rewrites = yaml_parse_file("manual-rewrites.yml");
 
 $bedrockSourceCount = 0;
-foreach ($geyserMapping as $javaId => $data) {
-	if (!str_ends_with($javaId, "]")) {
-		$javaId .= "[]";
-	}
-
-	$stateData = [];
-	foreach ($data["bedrock_states"] ?? [] as $type => $value) {
-		$stateData[] = $type . "=" . match ($value) {
-				true => "1",
-				false => "0",
-				default => $value
-			};
-	}
-	sort($stateData);
-	$bedrockState = $data["bedrock_identifier"] . "[" . implode(",", $stateData) . "]";
-	$bedrockSourceCount++;
-
-	foreach ($rewrites["bedrock"] as $search => $replace) {
-		$bedrockState = preg_replace($search, $replace, $bedrockState);
-	}
-	$bedrockState = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $bedrockState);
-	if (isset($bedrockData[$bedrockState])) {
-		if (!isset($bedrockMapping[$javaId])) { //use first one
-			if (str_ends_with($javaId, "[]")) {
-				$bedrockMapping[substr($javaId, 0, -2)] = $bedrockData[$bedrockState];
+foreach ($geyserMapping as $java => $bedrockData) {
+	$bedrock = $bedrockData["bedrock_identifier"];
+	$states = [];
+	if (isset($bedrockData["bedrock_states"])) {
+		foreach ($bedrockData["bedrock_states"] as $state => $value) {
+			if (is_bool($value)) {
+				$states[] = $state . "=" . ($value ? "true" : "false");
+			} else {
+				$states[] = $state . "=" . $value;
 			}
-			$bedrockMapping[$javaId] = $bedrockData[$bedrockState];
 		}
-	} else {
-		$missingJava[$javaId] = $bedrockState;
+		$bedrock .= "[" . implode(",", $states) . "]";
 	}
+	$javaToBedrock[$java] = $bedrock;
+}
 
-	$reliabilityOverwrites = [
-		"/(.*)\[]/" => "$1", //java chokes on empty state data
-		"/(.*chest)(\[.*type=)(?:left|right)(.*])/" => "$1$2single$3" //part of tiles in bedrock (converted separately)
-	];
-	foreach ($reliabilityOverwrites as $search => $replace) {
-		$javaId = preg_replace($search, $replace, $javaId);
-	}
-	$javaId = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $javaId);
+file_put_contents("debug/all.json", json_encode($javaToBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
-	if (isset($bedrockMapping[$javaId])) {
-		//if (!isset($javaMapping[$bedrockMapping[$javaId]])) { //use first one
-		$javaMapping[$bedrockMapping[$javaId]] = $javaId;
-		//}
-	} else {
-		$missingBedrock[$bedrockState] = $javaId;
+foreach ($javaToBedrock as $java => $bedrock) {
+	foreach ($suppress["source"] as $suppressData) {
+		if (preg_match($suppressData, $java)) {
+			unset($javaToBedrock[$java]);
+			continue 2;
+		}
 	}
 }
 
-foreach ($rewrites["java"] as $search => $replace) {
-	foreach ($bedrockMapping as $java => $bedrock) {
-		$java = preg_replace($search, $replace, $java);
-		$java = preg_replace("/(\[),+|,+(])|(,),+/", "$1$2$3", $java);
-		if (str_ends_with($java, "[]")) {
-			$bedrockMapping[substr($java, 0, -2)] = $bedrock;
+$pre = $javaToBedrock;
+$javaToBedrock["minecraft:bamboo[age=0,leaves=none,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=no_leaves,age_bit=true]";
+$javaToBedrock["minecraft:bamboo[age=0,leaves=small,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=small_leaves,age_bit=true]";
+$javaToBedrock["minecraft:bamboo[age=0,leaves=large,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=large_leaves,age_bit=true]";
+$javaToBedrock["minecraft:bamboo[age=1,leaves=none,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=no_leaves,age_bit=true]";
+$javaToBedrock["minecraft:bamboo[age=1,leaves=small,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=small_leaves,age_bit=true]";
+$javaToBedrock["minecraft:bamboo[age=1,leaves=large,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=large_leaves,age_bit=true]";
+if ($pre === $javaToBedrock) {
+	echo "Bamboo fix failed" . PHP_EOL;
+}
+
+$bedrockToJava = [];
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (isset($bedrockToJava[$bedrock])) {
+		$ratingNew = 0;
+		$ratingOld = 0;
+		foreach (["powered=false", "waterlogged=false", "snowy=false"] as $pos) {
+			if (str_contains($java, $pos)) {
+				$ratingNew++;
+			}
+			if (str_contains($bedrockToJava[$bedrock], $pos)) {
+				$ratingOld++;
+			}
 		}
-		$bedrockMapping[$java] = $bedrock;
+		if ($ratingNew > $ratingOld) {
+			$bedrockToJava[$bedrock] = $java;
+		}
+		if ($ratingNew !== 0) {
+			continue;
+		}
+		foreach ($suppress["java_ignore"] as $suppressData => $_) {
+			if (preg_match($suppressData, $java)) {
+				continue 2;
+			}
+		}
+		echo "Duplicate java block: $java ($bedrock, " . $bedrockToJava[$bedrock] . ")" . PHP_EOL;
+	} else {
+		$bedrockToJava[$bedrock] = $java;
+	}
+}
+$bedrockToJava["minecraft:invisible_bedrock[]"] = "minecraft:barrier";
+
+//Compatibility with old versions
+foreach ($javaToBedrock as $java => $bedrock) {
+	foreach ([
+		         "/minecraft:dirt_path(.*)/" => "minecraft:grass_path$1",
+		         "/minecraft:oak_sign(.*)/" => "minecraft:sign$1",
+		         "/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
+		         "/minecraft:water_cauldron\\[level=(.)]/" => "minecraft:cauldron[level=$1]",
+		         "/minecraft:cauldron/" => "minecraft:cauldron[level=0]",
+	         ] as $search => $replace) {
+		if (preg_match($search, $java)) {
+			$javaToBedrock[preg_replace($search, $replace, $java)] = $bedrock;
+		}
 	}
 }
 
-$javaMapping[$bedrockData["minecraft:invisible_bedrock[]"]] = "minecraft::barrier";
-$javaMapping["8:0"] = "minecraft:water";
-$javaMapping["10:0"] = "minecraft:lava";
-$javaMapping["0:0"] = "minecraft:air";
+//Alternative walls
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (preg_match("/^minecraft:(.*)_wall\[east=(.*),north=(.*),south=(.*),up=(.*),west=(.*)]$/", $java, $matches)) {
+		foreach ([2, 3, 4, 6] as $i) {
+			$matches[$i] = $matches[$i] === "none" ? "false" : $matches[$i];
+		}
+		$new = "minecraft:" . $matches[1] . "_wall[east=" . $matches[2] . ",north=" . $matches[3] . ",south=" . $matches[4] . ",up=" . $matches[5] . ",west=" . $matches[6] . "]";
+		if (!isset($javaToBedrock[$new])) {
+			$javaToBedrock[$new] = $bedrock;
+		}
+	}
+}
 
-array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
-array_multisort(array_keys($javaMapping), SORT_NATURAL, array_values($javaMapping), SORT_NATURAL, $javaMapping);
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (str_contains($java, "waterlogged=false")) {
+		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
+		if (count($matches) === 0) {
+			continue;
+		}
+		$states = explode(",", $matches[2]);
+		$states = array_filter($states, static function (string $state) {
+			return !str_contains($state, "waterlogged");
+		});
+		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
+	}
+}
 
-$currentState = "";
-foreach ($bedrockMapping as $java => $id) {
-	preg_match("/(.*)\[(.*?)]/", $java, $matches);
-	if (!isset($matches[1])) {
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (str_contains($java, "powered=false")) {
+		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
+		if (count($matches) === 0) {
+			continue;
+		}
+		$states = explode(",", $matches[2]);
+		$states = array_filter($states, static function (string $state) {
+			return !str_contains($state, "powered");
+		});
+		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
+	}
+}
+
+$current = "";
+foreach ($javaToBedrock as $java => $bedrock) {
+	preg_match("/^minecraft:(.+)\[.+\]$/", $java, $matches);
+	if (count($matches) === 0) {
+		$current = $java;
 		continue;
 	}
-	if ($matches[1] !== $currentState && !isset($bedrockMapping[$matches[1]])) {
-		$currentState = $matches[1];
-		$bedrockMapping[$matches[1]] = $id;
-		$defaultStates[$matches[1]] = $java;
+	if ($current !== "minecraft:" . $matches[1]) {
+		$current = "minecraft:" . $matches[1];
+		if (!isset($javaToBedrock[$current])) {
+			$javaToBedrock[$current] = $bedrock;
+		}
 	}
 }
 
-array_multisort(array_values($bedrockMapping), SORT_NATURAL, array_keys($bedrockMapping), SORT_NATURAL, $bedrockMapping);
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (!isset($javaToBedrock[$java . "[]"]) && preg_match("/^minecraft:([a-z_]+)$/", $java, $matches)) {
+		$javaToBedrock[$java . "[]"] = $bedrock;
+	}
+}
 
-file_put_contents("debug/defaultStates.json", json_encode($defaultStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("debug/missingBedrock.json", json_encode($missingBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("debug/missingJava.json", json_encode($missingJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+ksort($javaToBedrock);
+ksort($bedrockToJava);
 
-echo "Matched " . count($bedrockMapping) . " java blocks to bedrock (sources provide " . $bedrockSourceCount . " pairs and " . count($bedrockData) . " translations), " . count($missingBedrock) . " not found" . PHP_EOL;
-echo "Matched " . count($javaMapping) . " bedrock blocks to java (sources provide " . $bedrockSourceCount . " pairs and " . count($bedrockData) . " translations), " . count($missingJava) . " not found" . PHP_EOL;
-file_put_contents("../bedrock_palette.json", json_encode($bedrockMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("../java_palette.json", json_encode($javaMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+echo "Found " . count($javaToBedrock) . " translations to bedrock" . PHP_EOL;
+echo "Found " . count($bedrockToJava) . " translations to java" . PHP_EOL;
+file_put_contents("../java-to-bedrock.json", json_encode($javaToBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../bedrock-to-java.json", json_encode($bedrockToJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $rotationData = [
 	"north=true" => "east=true", "east=true" => "south=true", "south=true" => "west=true", "west=true" => "north=true", "north=false" => "east=false", "east=false" => "south=false", "south=false" => "west=false", "west=false" => "north=false",
@@ -163,26 +212,28 @@ $flipX = [];
 $flipZ = [];
 $flipY = [];
 $missingRotations = [];
-foreach ($bedrockMapping as $state => $id) {
+foreach ($javaToBedrock as $state => $id) {
 	if (!str_ends_with($state, "]")) {
 		continue; //no properties
 	}
-	remapProperties($state, $id, $rotationData, $bedrockMapping, $rotations, $missingRotations);
-	remapProperties($state, $id, $flipData["x"], $bedrockMapping, $flipX, $missingRotations);
-	remapProperties($state, $id, $flipData["z"], $bedrockMapping, $flipZ, $missingRotations);
-	remapProperties($state, $id, $flipData["y"], $bedrockMapping, $flipY, $missingRotations);
+	remapProperties($state, $id, $rotationData, $javaToBedrock, $rotations, $missingRotations);
+	remapProperties($state, $id, $flipData["x"], $javaToBedrock, $flipX, $missingRotations);
+	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $flipZ, $missingRotations);
+	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $flipY, $missingRotations);
 }
-file_put_contents("debug/missingRotations.json", json_encode($missingRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("debug/missing-rotations.json", json_encode($missingRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $flipZ, "yAxis" => $flipY], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+echo "Rotated " . count($rotations) . " blocks" . PHP_EOL;
+echo "Flipped " . count($flipX) + count($flipZ) + count($flipY) . " blocks" . PHP_EOL;
 
 /**
  * Some properties of blocks are defined with tiles in bedrock while the blockstate is used in java,
  * they need to be remapped in a special way, allowing full conversion
  */
-$tileStates = [];
-$javaTileStates = [];
-foreach ($bedrockMapping as $state => $id) {
+$jtbTileStates = [];
+$btjTileStates = [];
+foreach ($javaToBedrock as $state => $id) {
 	preg_match("/(.*)\[(.*?)]/", $state, $matches);
 	if (!isset($matches[2])) {
 		continue;
@@ -204,35 +255,80 @@ foreach ($bedrockMapping as $state => $id) {
 		}
 		$facing = ["north" => Facing::NORTH, "east" => Facing::EAST, "south" => Facing::SOUTH, "west" => Facing::WEST][$facing];
 		$identifier = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "left"));
-		$tileStates["chest_relation"][$state] = $identifier;
-		$javaTileStates["chest_relation"][$javaMapping[$id]][$identifier] = $state;
+		$jtbTileStates["chest_relation"][$state] = $identifier;
+		$btjTileStates["chest_relation"][$bedrockToJava[$id]][$identifier] = $state;
 	} elseif (str_ends_with($matches[1], "shulker_box")) {
 		foreach ($properties as $property) {
 			if (str_starts_with($property, "facing=")) {
-				$tileStates["shulker_box_facing"][$state] = str_replace("facing=", "", $property);
-				$javaTileStates["shulker_box_facing"][$javaMapping[$id]][str_replace("facing=", "", $property)] = $state;
+				$jtbTileStates["shulker_box_facing"][$state] = str_replace("facing=", "", $property);
+				$btjTileStates["shulker_box_facing"][$bedrockToJava[$id]][str_replace("facing=", "", $property)] = $state;
 			}
 		}
 	} elseif (!str_ends_with($matches[1], "piston_head") && (str_ends_with($matches[1], "head") || str_ends_with($matches[1], "skull"))) {
-		$tileStates["skull_type"][$state] = preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1]);
-		$javaTileStates["skull_type"][$javaMapping[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])] = $state;
+		$jtbTileStates["skull_type"][$state] = preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1]);
+		$btjTileStates["skull_type"][$bedrockToJava[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])] = $state;
 		foreach ($properties as $property) {
 			if (str_starts_with($property, "rotation=")) {
-				$tileStates["skull_rotation"][$state] = str_replace("rotation=", "", $property);
-				$javaTileStates["skull_rotation"][$javaMapping[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])][str_replace("rotation=", "", $property)] = $state;
+				$jtbTileStates["skull_rotation"][$state] = str_replace("rotation=", "", $property);
+				$btjTileStates["skull_rotation"][$bedrockToJava[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])][str_replace("rotation=", "", $property)] = $state;
 			}
 		}
 	}
 }
 
-foreach ($javaTileStates["skull_rotation"] as $placeholder1 => $data) {
+$tmp = $btjTileStates["skull_rotation"];
+$btjTileStates["skull_rotation"] = [];
+foreach ($tmp as $placeholder1 => $data) {
 	foreach ($data as $placeholder2 => $value) {
-		$javaTileStates["skull_rotation"][$javaTileStates["skull_type"][$placeholder1][$placeholder2]] = $value;
+		$btjTileStates["skull_rotation"][$btjTileStates["skull_type"][$placeholder1][$placeholder2]] = $value;
 	}
 }
 
-file_put_contents("../tile-data-states.json", json_encode($tileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("../java-tile-states.json", json_encode($javaTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../tile-states-btj.json", json_encode($btjTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../tile-states-jtb.json", json_encode($jtbTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+echo "Converted " . count($btjTileStates) . " tile states" . PHP_EOL;
+
+$blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/common/legacy.json"), true)["blocks"];
+
+$toBedrock = [];
+$missingData = [];
+foreach ($blockData as $legacyId => $state) {
+	$state = str_replace("persistent=false", "persistent=true", $state);
+
+	//sort
+	preg_match("/(.*)\[(.*?)]/", $state, $matches);
+	if (isset($matches[2])) {
+		$properties = explode(",", $matches[2]);
+		sort($properties);
+		$state = $matches[1] . "[" . implode(",", $properties) . "]";
+	}
+
+	if (isset($javaToBedrock[$state])) {
+		if ($javaToBedrock[$state] !== $legacyId) {
+			$toBedrock[$legacyId] = $javaToBedrock[$state];
+		}
+	} else {
+		$missingData[$legacyId] = $state;
+	}
+}
+
+array_multisort(array_keys($toBedrock), SORT_NATURAL, array_values($toBedrock), SORT_NATURAL, $toBedrock);
+file_put_contents("../legacy-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("debug/missing-legacy.json", json_encode($missingData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+echo "Converted " . count($toBedrock) . " legacy blocks" . PHP_EOL;
+
+function getData(string $url)
+{
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_AUTOREFERER, true);
+	curl_setopt($ch, CURLOPT_HEADER, 0);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+	curl_setopt($ch, CURLOPT_URL, $url);
+	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+	$data = curl_exec($ch);
+	curl_close($ch);
+	return $data;
+}
 
 function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save, array &$missing)
 {
@@ -265,219 +361,4 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 	} else {
 		$missing["$id ($state)"] = $newState;
 	}
-}
-
-$blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/common/legacy.json"), true)["blocks"];
-
-$toBedrock = [];
-$missingData = [];
-foreach ($blockData as $legacyId => $state) {
-	$state = str_replace("persistent=false", "persistent=true", $state);
-	getReadableBlockState($state); //WorldEdit doesn't have a proper order in state properties, so we need to sort them
-	if (isset($bedrockMapping[$state])) {
-		if ($bedrockMapping[$state] !== $legacyId) {
-			$toBedrock[$legacyId] = $bedrockMapping[$state];
-		}
-	} else {
-		$missingData[$legacyId] = $state;
-	}
-}
-
-array_multisort(array_keys($toBedrock), SORT_NATURAL, array_values($toBedrock), SORT_NATURAL, $toBedrock);
-file_put_contents("../bedrock-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("debug/missingData.json", json_encode($missingData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-
-$rawItems = json_decode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/runtime_item_states.json"), true);
-$itemData = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/item_id_map.json"), true);
-$geyserItemData = json_decode(getData("https://raw.githubusercontent.com/GeyserMC/mappings/master/items.json"), true);
-$rewrites = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r16_to_current_item_map.json"), true);
-$itemMapping = [];
-
-foreach ($rawItems as $data) {
-	if (!isset($itemData[$data["name"]])) {
-		$itemData[$data["name"]] = $data["id"];
-	}
-}
-
-foreach ($itemData as $name => $id) {
-	if (($itemData[$name] ?? null) !== $id) {
-		continue;
-	}
-	if (isset($rewrites["simple"][$name])) {
-		unset($itemData[$name]);
-		$itemData[$rewrites["simple"][$name]] = $id . ":0";
-	} elseif (isset($rewrites["complex"][$name])) {
-		foreach ($rewrites["complex"][$name] as $i => $variation) {
-			if ($name === "minecraft:spawn_egg" && $variation === "minecraft:axolotl_bucket") {
-				$variation = "minecraft:axolotl_spawn_egg";
-			}
-			$itemData[$variation] = $id . ":" . $i;
-		}
-		$itemData[$name] = $id . ":0";
-	} else {
-		$itemData[$name] .= ":0";
-	}
-}
-
-foreach ($geyserItemData as $java => $item) {
-	$itemMapping[$java] = $itemData[$item["bedrock_identifier"]];
-	if (str_ends_with($itemData[$item["bedrock_identifier"]], ":0")) {
-		$itemMapping[$java] = substr($itemMapping[$java], 0, -2) . ":" . $item["bedrock_data"];
-	} elseif ($item["bedrock_data"] !== 0) {
-		echo "Couldn't combine item data for " . $java . "\n";
-	}
-}
-
-//Wrongly mapped meta data
-$wronglyMapped = [
-	"minecraft:polished_granite" => 2,
-	"minecraft:dispenser" => 0,
-	"minecraft:dropper" => 0,
-	"minecraft:piston" => 0,
-	"minecraft:sticky_piston" => 0,
-];
-foreach ($wronglyMapped as $java => $meta) {
-	$itemMapping[$java] = substr($itemMapping[$java], 0, -2) . ":" . $meta;
-}
-
-array_multisort(array_values($itemMapping), SORT_NATURAL, array_keys($itemMapping), SORT_NATURAL, $itemMapping);
-file_put_contents("../bedrock-item-map.json", json_encode($itemMapping, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-
-function getReadableBlockState(string &$state)
-{
-	if (!str_ends_with($state, "]")) {
-		return; //no properties
-	}
-	preg_match("/(.*)\[(.*?)]/", $state, $matches);
-	$properties = explode(",", $matches[2]);
-	sort($properties);
-	$state = $matches[1] . "[" . implode(",", $properties) . "]";
-}
-
-/**
- * @return array
- * @throws JsonException
- */
-function getBedrockData(): array
-{
-	$bedrockData = [];
-	$ids = json_decode(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/block_id_map.json"), true, 512, JSON_THROW_ON_ERROR);
-	$reader = PacketSerializer::decoder(getData("https://raw.githubusercontent.com/pmmp/BedrockData/master/r12_to_current_block_map.bin"), 0, new PacketSerializerContext(GlobalItemTypeDictionary::getInstance()->getDictionary()));
-	$nbt = new NetworkNbtSerializer();
-	$ignore = yaml_parse_file("ignore-pmmp.yml");
-	while (!$reader->feof()) {
-		$id = $reader->getString();
-		$meta = $reader->getLShort();
-
-		$offset = $reader->getOffset();
-		$state = $nbt->read($reader->getBuffer(), $offset)->mustGetCompoundTag();
-		$reader->setOffset($offset);
-
-		foreach ($ignore as $find => $rule) {
-			if (preg_match($find, $id) && in_array($meta, $rule, true)) {
-				continue 2;
-			}
-		}
-
-		$fullName = $state->getString("name") . "[";
-		$states = $state->getCompoundTag("states");
-		if (count($states->getValue()) > 0) {
-			$stateData = [];
-			foreach ($states->getValue() as $name => $data) {
-				$stateData[] = $name . "=" . $data->getValue();
-			}
-			$fullName .= implode(",", $stateData);
-		}
-		$fullName .= "]";
-
-		if (str_contains($fullName, "light_block")) {
-			continue; //completely wrongly mapped (as end rods?? and only level 14)
-		}
-
-		if (!isset($bedrockData[$fullName])) { //use the first one
-			$bedrockData[$fullName] = $ids[$id] . ":" . $meta;
-		} else {
-			echo "Duplicate block: " . $fullName . " (" . $id . " " . $ids[$id] . ":" . $meta . " " . $bedrockData[$fullName] . ")\n";
-		}
-	}
-
-	$pastR16 = json_decode(file_get_contents("past-1.16-mappings.json"), true, 512, JSON_THROW_ON_ERROR);
-
-	//Generate potential mappings from CloudBurst data
-	$potentialMappings = [];
-	$serializer = new BigEndianNbtSerializer();
-	$statesMap = $serializer->read(gzdecode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/block_palette.nbt")));
-	$idMap = json_decode(getData("https://raw.githubusercontent.com/CloudburstMC/Data/master/legacy_block_ids.json"), true, 512, JSON_THROW_ON_ERROR);
-	$meta = 0;
-	$current = "";
-	$skipped = false;
-	foreach ($statesMap->mustGetCompoundTag()->getListTag("blocks") as $tag) {
-		$name = $tag->getString("name");
-		if ($current !== $name) {
-			$current = $name;
-			$meta = 0;
-			$skipped = false;
-		}
-
-		$states = [];
-		foreach ($tag->getTag("states") as $property => $state) {
-			$states[] = $property . "=" . $state->getValue();
-		}
-		$state = $name . "[" . implode(",", $states) . "]";
-
-		if (!$skipped) {
-			foreach ($pastR16["__skip"] as $skip => $goal) {
-				if (preg_match($skip, $state)) {
-					$skipped = true;
-					$meta = $goal;
-				}
-			}
-		}
-
-		if (!isset($bedrockData[$state]) && $meta <= 15) {
-			$potentialMappings[$state] = $idMap[$name] . ":" . $meta;
-		}
-		$meta++;
-	}
-
-	foreach ($pastR16["__auto"] as $find) {
-		$set = 0;
-		foreach ($potentialMappings as $state => $replace) {
-			if (!isset($bedrockData[$state]) && preg_match($find, $state)) {
-				$bedrockData[$state] = $replace;
-				unset($potentialMappings[$state]);
-				$set++;
-			}
-		}
-		if ($set === 0) {
-			echo "NOTICE: $find is not needed\n";
-		}
-	}
-	unset($pastR16["__comment"], $pastR16["__auto"], $pastR16["__skip"]);
-	foreach ($pastR16 as $state => $id) {
-		if (isset($bedrockData[$state])) {
-			echo "WARNING: $state is already mapped to $bedrockData[$state]\n";
-		}
-		if (!isset($potentialMappings[$state])) {
-			echo "WARNING: $state is not in potential state data\n";
-		}
-		unset($potentialMappings[$state]);
-		$bedrockData[$state] = $id;
-	}
-
-	file_put_contents("debug/potentialMappings.json", json_encode($potentialMappings, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-	return $bedrockData;
-}
-
-function getData(string $url)
-{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_AUTOREFERER, true);
-	curl_setopt($ch, CURLOPT_HEADER, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_URL, $url);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-	$data = curl_exec($ch);
-	curl_close($ch);
-	return $data;
 }

@@ -1,0 +1,77 @@
+{
+  "source": [
+	"/minecraft:.+_hanging_sign\\[.*/",
+	"/minecraft:chiseled_bookshelf/",
+	"/minecraft:bamboo_sign/",
+	"/minecraft:bamboo_wall_sign/",
+	"/minecraft:bamboo_button/",
+	"/minecraft:bamboo_slab/",
+	"/minecraft:bamboo_mosaic_slab/",
+	"/minecraft:bamboo_planks/",
+	"/minecraft:bamboo_block/",
+	"/minecraft:bamboo_mosaic/",
+	"/minecraft:bamboo_pressure_plate/",
+	"/minecraft:stripped_bamboo_block/"
+  ],
+  "java_ignore": {
+	"/minecraft:void_air/": "does not exist in bedrock",
+	"/minecraft:cave_air/": "does not exist in bedrock",
+
+	"/face=(floor|ceiling),facing=(north|south|east|west)/": "weird buttons",
+
+	"/minecraft:chorus_plant/": "no connection data for chorus plant",
+	"/minecraft:.*_fence\\[east=/": "no connection data for fence",
+	"/minecraft:.*glass_pane\\[east=/": "no connection data for glass pane",
+	"/minecraft:tripwire\\[.*east=/": "no connection data for tripwire",
+	"/minecraft:redstone_wire\\[east=/": "no connection data for redstone wire",
+	"/minecraft:iron_bars\\[east=/": "no connection data for iron bars",
+
+	"/minecraft:vine\\[.*up=/": "no top connection data for vines",
+
+	"/minecraft:cave_vines_plant\\[berries=/": "no plant differentiation",
+	"/minecraft:twisting_vines_plant/": "no plant differentiation",
+	"/minecraft:weeping_vines_plant/": "no plant differentiation",
+	"/minecraft:kelp_plant/": "no plant differentiation",
+
+	"/half=(top|bottom),shape=(straight|outer_left|outer_right|inner_left|inner_right)/": "no shape data for stairs",
+
+	"/minecraft:mangrove_propagule\\[age=/": "no age data for mangrove propagule",
+
+	"/minecraft:lightning_rod\\[.*powered=/": "no power data for lightning rod",
+	"/minecraft:target\\[power=/": "no power data for target",
+
+	"/minecraft:.*_leaves\\[distance=/": "no distance data for leaves",
+
+	"/minecraft:fire\\[.*east=/": "no direction data for fire",
+
+	"/minecraft:(soul_)?campfire\\[.*signal_fire=/": "no signal fire data for campfire",
+
+	"/minecraft:(red|brown)_mushroom_block\\[down=/": "only limited mushroom block data is saved",
+	"/minecraft:mushroom_stem\\[down=/": "only limited mushroom block data is saved",
+
+	"/minecraft:jigsaw\\[orientation=/": "marked as unsupported",
+
+	"/sculk_sensor_phase=(cooldown|active|inactive)/": "sculk sensor data is saved as a tile",
+
+	"/minecraft:note_block/": "noteblock data is saved as a tile",
+	"/minecraft:jukebox/": "jukebox data is saved as a tile",
+
+	"/minecraft:.*_banner/": "banner color is saved as a tile",
+	"/minecraft:.*_bed/": "bed color is saved as a tile",
+
+	"/minecraft:.*shulker_box\\[facing=/": "shulker box direction is saved as a tile",
+
+	"/minecraft:(trapped_)?chest\\[.*type=/": "chest connection is saved as a tile",
+
+	"/minecraft:moving_piston/": "piston state is saved as a tile",
+	"/minecraft:(sticky_)?piston\\[extended=/": "piston state is saved as a tile",
+
+	"/minecraft:repeater\\[.*locked=/": "repeater locking is saved as a tile",
+
+	"/minecraft:lectern\\[.*has_book=/": "lectern book is saved as a tile",
+
+	"/minecraft:.*_(head|skull)/": "skull data is saved as a tile",
+
+	"/minecraft:potted_.*/": "flower pot plant is saved as a tile"
+  }
+}
