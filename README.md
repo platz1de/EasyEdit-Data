@@ -5,25 +5,18 @@ Data files used by [EasyEdit](https://github.com/platz1de/EasyEdit)
 Data sources:
 
 - [Minecraft Wiki](https://minecraft.fandom.com/)
-    - [Minecraft Java Data Values](https://minecraft.fandom.com/wiki/Java_Edition_data_values/Pre-flattening)
-- [BedrockData](https://github.com/pmmp/BedrockData/)
 - [PrismarineJS](https://github.com/PrismarineJS/minecraft-data/)
 - [GeyserMC](https://github.com/GeyserMC/mappings/)
-- [Cloudburst Data](https://github.com/CloudburstMC/Data/)
 
-Note: "ID" refers to numeric blockIDs, while "State" refers to the block's stringy state. <br>
-Most mappings do NOT contain values where java and bedrock are the same
-
-| Mapping                     | Usage                                 | Format                                |
-|-----------------------------|---------------------------------------|---------------------------------------|
-| bedrock-conversion-map.json | Legacy java to bedrock numeric ID     | javaID -> bedrockID                   |
-| bedrock_palette.json        | Current java to bedrock numeric ID    | javaState -> bedrockID                |
-| java_palette.json           | Bedrock numeric ID to java current    | bedrockID -> javaState                |
-| bedrock-item-map.json       | java to bedrock ItemID                | javaItem -> bedrockItem               |
-| rotation-data.json          | Clockwise bedrock numeric ID rotation | bedrockID -> rotatedID                |
-| flip-data.json              | Flip bedrock numeric ID on axis       | axi: bedrockID -> flippedID           |
-| tile-data-states.json       | Java block state to tile property     | type: javaState -> property           |
-| java-tile-states.json       | Tile property to java block state     | type: rawState: property -> javaState |
+| Mapping                    | Usage                                          | Format                                |
+|----------------------------|------------------------------------------------|---------------------------------------|
+| legacy-conversion-map.json | Legacy java numeric ID to bedrock state        | javaID -> bedrockSTate                |
+| java-to-bedrock.json       | Current java to bedrock states                 | javaState -> bedrockState             |
+| bedrock-to-java.json       | Bedrock state to java state                    | bedrockState -> javaState             |
+| rotation-data.json         | Clockwise bedrock state rotation               | bedrockState -> rotatedState          |
+| flip-data.json             | Flip bedrock state on axis                     | axi: bedrockState -> flippedState     |
+| tile-states-jtb.json       | Java block state to bedrock tile property data | type: javaState -> property           |
+| tile-states-btj.json       | Bedrock tile property to java block state data | type: rawState: property -> javaState |
 
 #### Tile properties
 

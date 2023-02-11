@@ -1,11 +1,10 @@
 {
-    "version": "1.19.1-029dacf9-7ee5-4131-8e05-71092b112b75",
-    "bedrock-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/bedrock-conversion-map.json",
-    "bedrock_palette": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/bedrock_palette.json",
-    "java_palette": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/java_palette.json",
-    "bedrock-item-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/bedrock-item-map.json",
-    "rotation-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/rotation-data.json",
-    "flip-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/flip-data.json",
-    "tile-data-states": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/tile-data-states.json",
-    "java-tile-states": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v2.0/java-tile-states.json"
+    "version": "1.19.1-394f88b0-cb90-4f27-a3cd-c8ca1af89912",
+    "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/legacy-conversion-map.json",
+    "java-to-bedrock": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/java-to-bedrock.json",
+    "bedrock-to-java": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/bedrock-to-java.json",
+    "rotation-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/rotation-data.json",
+    "flip-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/flip-data.json",
+    "tile-states-jtb": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/tile-states-jtb.json",
+    "tile-states-btj": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/tile-states-btj.json"
 }
