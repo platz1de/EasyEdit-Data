@@ -310,13 +310,74 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 
+	if (str_ends_with($group["name"], "_slab")) {
+		$fail = false;
+		$types = ["top" => [], "bottom" => [], "double" => []];
+		foreach ($group["states"] as $state => $bedrock) {
+			preg_match('/type=(top|bottom|double)/', $state, $matches);
+			if (!isset($matches[1])) {
+				echo "Unknown type $state" . PHP_EOL;
+				$fail = true;
+				break;
+			}
+			$types[$matches[1]][$state] = $bedrock;
+		}
+		if (!$fail) {
+			$normalName = null;
+			$doubleState = null;
+			foreach ($types as $type => $states) {
+				foreach ($states as $state) {
+					preg_match("/^([a-z\d:_]+)\[(.*)]$/", $state, $matches);
+					if ($type === "double") {
+						if ($doubleState !== null && $doubleState !== $matches[1]) {
+							echo "Double state mismatch" . PHP_EOL;
+							$fail = true;
+							break 2;
+						}
+						$doubleState = $matches[1];
+					} else {
+						if ($normalName !== null && $normalName !== $matches[1]) {
+							echo "Normal name mismatch" . PHP_EOL;
+							$fail = true;
+							break 2;
+						}
+						$normalName = $matches[1];
+					}
+				}
+			}
+		}
+		if (!$fail) {
+			$obj["type"] = "multi";
+			$obj["multi_name"] = "type";
+			$obj["multi_states"] = [
+				"top" => [
+					"name" => $normalName,
+					"state_addition" => [
+						"top_slot_bit" => "true"
+					]
+				],
+				"bottom" => [
+					"name" => $normalName,
+					"state_addition" => [
+						"top_slot_bit" => "false"
+					]
+				],
+				"double" => [
+					"name" => $doubleState,
+					"state_addition" => [
+						"top_slot_bit" => "false"
+					]
+				]
+			];
+			unset($values["type"], $bedrockValues["top_slot_bit"]);
+		}
+	}
+
 	$failed = false;
 	if ($values !== []) {
-		$obj["missing_java"] = $values;
 		$failed = true;
 	}
 	if ($bedrockValues !== []) {
-		$obj["missing_bedrock"] = $bedrockValues;
 		$failed = true;
 	}
 	if ($obj["type"] === "unknown") {
@@ -324,6 +385,8 @@ foreach ($groupsJtb as $group) {
 	}
 	if ($failed) {
 		$obj["all"] = $group["states"];
+		$obj["missing_java"] = $values;
+		$obj["missing_bedrock"] = $bedrockValues;
 	}
 	$failed ? $failedJTB[$group["name"]] = $obj : $jtb[$group["name"]] = $obj;
 }

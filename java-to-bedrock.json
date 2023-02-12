@@ -131,6 +131,36 @@
             "waterlogged"
         ]
     },
+    "minecraft:acacia_slab": {
+        "type": "multi",
+        "state_addition": {
+            "wood_type": "acacia"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:acacia_stairs": {
         "type": "singular",
         "name": "minecraft:acacia_stairs",
@@ -845,6 +875,36 @@
             "waterlogged"
         ]
     },
+    "minecraft:birch_slab": {
+        "type": "multi",
+        "state_addition": {
+            "wood_type": "birch"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:birch_stairs": {
         "type": "singular",
         "name": "minecraft:birch_stairs",
@@ -1068,6 +1128,33 @@
     },
     "minecraft:blackstone": {
         "type": "none"
+    },
+    "minecraft:blackstone_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:blackstone_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:blackstone_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:blackstone_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:blackstone_stairs": {
         "type": "singular",
@@ -1882,6 +1969,33 @@
     "minecraft:cobbled_deepslate": {
         "type": "none"
     },
+    "minecraft:cobbled_deepslate_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:cobbled_deepslate_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:cobbled_deepslate_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:cobbled_deepslate_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:cobbled_deepslate_stairs": {
         "type": "singular",
         "name": "minecraft:cobbled_deepslate_stairs",
@@ -2244,6 +2358,33 @@
             "waterlogged"
         ]
     },
+    "minecraft:crimson_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:crimson_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:crimson_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:crimson_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:crimson_stairs": {
         "type": "singular",
         "name": "minecraft:crimson_stairs",
@@ -2321,6 +2462,33 @@
     },
     "minecraft:cut_copper": {
         "type": "none"
+    },
+    "minecraft:cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:cut_copper_stairs": {
         "type": "singular",
@@ -2657,6 +2825,36 @@
         "state_removals": [
             "waterlogged"
         ]
+    },
+    "minecraft:dark_oak_slab": {
+        "type": "multi",
+        "state_addition": {
+            "wood_type": "dark_oak"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:dark_oak_stairs": {
         "type": "singular",
@@ -3035,6 +3233,33 @@
             "axis": "pillar_axis"
         }
     },
+    "minecraft:deepslate_brick_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:deepslate_brick_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:deepslate_brick_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:deepslate_brick_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:deepslate_brick_stairs": {
         "type": "singular",
         "name": "minecraft:deepslate_brick_stairs",
@@ -3121,6 +3346,33 @@
     },
     "minecraft:deepslate_lapis_ore": {
         "type": "none"
+    },
+    "minecraft:deepslate_tile_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:deepslate_tile_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:deepslate_tile_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:deepslate_tile_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:deepslate_tile_stairs": {
         "type": "singular",
@@ -3530,6 +3782,33 @@
     },
     "minecraft:exposed_cut_copper": {
         "type": "none"
+    },
+    "minecraft:exposed_cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:exposed_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:exposed_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:exposed_double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:exposed_cut_copper_stairs": {
         "type": "singular",
@@ -4469,6 +4748,36 @@
         "state_removals": [
             "waterlogged"
         ]
+    },
+    "minecraft:jungle_slab": {
+        "type": "multi",
+        "state_addition": {
+            "wood_type": "jungle"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:jungle_stairs": {
         "type": "singular",
@@ -5446,6 +5755,33 @@
             "waterlogged"
         ]
     },
+    "minecraft:mangrove_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:mangrove_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:mangrove_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:mangrove_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:mangrove_stairs": {
         "type": "singular",
         "name": "minecraft:mangrove_stairs",
@@ -5713,6 +6049,33 @@
     },
     "minecraft:mud": {
         "type": "none"
+    },
+    "minecraft:mud_brick_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:mud_brick_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:mud_brick_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:mud_brick_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:mud_brick_stairs": {
         "type": "singular",
@@ -6044,6 +6407,36 @@
             "waterlogged"
         ]
     },
+    "minecraft:oak_slab": {
+        "type": "multi",
+        "state_addition": {
+            "wood_type": "oak"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:oak_stairs": {
         "type": "singular",
         "name": "minecraft:oak_stairs",
@@ -6312,6 +6705,33 @@
     },
     "minecraft:oxidized_cut_copper": {
         "type": "none"
+    },
+    "minecraft:oxidized_cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:oxidized_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:oxidized_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:oxidized_double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:oxidized_cut_copper_stairs": {
         "type": "singular",
@@ -6692,6 +7112,33 @@
     "minecraft:polished_blackstone": {
         "type": "none"
     },
+    "minecraft:polished_blackstone_brick_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:polished_blackstone_brick_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:polished_blackstone_brick_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:polished_blackstone_brick_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:polished_blackstone_brick_stairs": {
         "type": "singular",
         "name": "minecraft:polished_blackstone_brick_stairs",
@@ -6771,6 +7218,33 @@
             }
         }
     },
+    "minecraft:polished_blackstone_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:polished_blackstone_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:polished_blackstone_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:polished_blackstone_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:polished_blackstone_stairs": {
         "type": "singular",
         "name": "minecraft:polished_blackstone_stairs",
@@ -6836,6 +7310,33 @@
     },
     "minecraft:polished_deepslate": {
         "type": "none"
+    },
+    "minecraft:polished_deepslate_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:polished_deepslate_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:polished_deepslate_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:polished_deepslate_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:polished_deepslate_stairs": {
         "type": "singular",
@@ -8614,6 +9115,36 @@
             "waterlogged"
         ]
     },
+    "minecraft:spruce_slab": {
+        "type": "multi",
+        "state_addition": {
+            "wood_type": "spruce"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_wooden_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:spruce_stairs": {
         "type": "singular",
         "name": "minecraft:spruce_stairs",
@@ -9383,6 +9914,33 @@
             "waterlogged"
         ]
     },
+    "minecraft:warped_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:warped_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:warped_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:warped_double_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:warped_stairs": {
         "type": "singular",
         "name": "minecraft:warped_stairs",
@@ -9482,6 +10040,33 @@
     "minecraft:waxed_cut_copper": {
         "type": "none"
     },
+    "minecraft:waxed_cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:waxed_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:waxed_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:waxed_double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:waxed_cut_copper_stairs": {
         "type": "singular",
         "name": "minecraft:waxed_cut_copper_stairs",
@@ -9510,6 +10095,33 @@
     },
     "minecraft:waxed_exposed_cut_copper": {
         "type": "none"
+    },
+    "minecraft:waxed_exposed_cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:waxed_exposed_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:waxed_exposed_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:waxed_exposed_double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:waxed_exposed_cut_copper_stairs": {
         "type": "singular",
@@ -9540,6 +10152,33 @@
     "minecraft:waxed_oxidized_cut_copper": {
         "type": "none"
     },
+    "minecraft:waxed_oxidized_cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:waxed_oxidized_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:waxed_oxidized_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:waxed_oxidized_double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:waxed_oxidized_cut_copper_stairs": {
         "type": "singular",
         "name": "minecraft:waxed_oxidized_cut_copper_stairs",
@@ -9569,6 +10208,33 @@
     "minecraft:waxed_weathered_cut_copper": {
         "type": "none"
     },
+    "minecraft:waxed_weathered_cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:waxed_weathered_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:waxed_weathered_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:waxed_weathered_double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:waxed_weathered_cut_copper_stairs": {
         "type": "singular",
         "name": "minecraft:waxed_weathered_cut_copper_stairs",
@@ -9597,6 +10263,33 @@
     },
     "minecraft:weathered_cut_copper": {
         "type": "none"
+    },
+    "minecraft:weathered_cut_copper_slab": {
+        "type": "multi",
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:weathered_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:weathered_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:weathered_double_cut_copper_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:weathered_cut_copper_stairs": {
         "type": "singular",
