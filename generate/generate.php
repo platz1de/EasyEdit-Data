@@ -141,6 +141,10 @@ foreach ($javaToBedrock as $java => $bedrock) {
 		$states = array_filter($states, static function (string $state) {
 			return !str_contains($state, "waterlogged");
 		});
+		if (count($states) === 0) {
+			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
+			continue;
+		}
 		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
 	}
 }
@@ -155,9 +159,196 @@ foreach ($javaToBedrock as $java => $bedrock) {
 		$states = array_filter($states, static function (string $state) {
 			return !str_contains($state, "powered");
 		});
+		if (count($states) === 0) {
+			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
+			continue;
+		}
 		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
 	}
 }
+
+ksort($javaToBedrock);
+ksort($bedrockToJava);
+
+echo "Found " . count($javaToBedrock) . " translations to bedrock" . PHP_EOL;
+echo "Found " . count($bedrockToJava) . " translations to java" . PHP_EOL;
+file_put_contents("debug/java-to-bedrock-full.json", json_encode($javaToBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("debug/bedrock-to-java-full.json", json_encode($bedrockToJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+$customData = json_decode(file_get_contents("data.json"), true, 512, JSON_THROW_ON_ERROR);
+$jtb = [];
+$failedJTB = [];
+
+$groupsJtb = [];
+foreach ($javaToBedrock as $java => $bedrock) {
+	preg_match("/^([a-z\d:_]+)(?:\[(.*)])?$/", $java, $matches);
+	if (count($matches) === 0) {
+		continue;
+	}
+	if (!isset($groupsJtb[$matches[1]])) {
+		$groupsJtb[$matches[1]] = ["states" => [], "name" => $matches[1]];
+	}
+	$groupsJtb[$matches[1]]["states"][$java] = $bedrock;
+}
+
+foreach ($groupsJtb as $group) {
+	$hasChanges = false;
+	foreach ($group["states"] as $java => $bedrock) {
+		if ($java !== $bedrock) {
+			$hasChanges = true;
+			break;
+		}
+	}
+	if (!$hasChanges) {
+		$jtb[$group["name"]] = ["type" => "none"];
+		continue;
+	}
+
+	$javaStates = [];
+	$bedrockStates = [];
+	foreach ($group["states"] as $java => $bedrock) {
+		preg_match("/^([a-z\d:_]+)(?:\[(.*)])?$/", $java, $matches);
+		if (count($matches) === 0) {
+			throw new RuntimeException("Invalid java block: $java");
+		}
+		$states = [];
+		if (isset($matches[2])) {
+			foreach (explode(",", $matches[2]) as $state) {
+				$d = explode("=", $state);
+				$states[$d[0]] = $d[1];
+			}
+		}
+		$javaStates[] = $states;
+		preg_match("/^([a-z\d:_]+)(?:\[(.*)])?$/", $bedrock, $matches);
+		if (count($matches) === 0) {
+			throw new RuntimeException("Invalid bedrock block: $bedrock");
+		}
+		$states = [];
+		if (isset($matches[2])) {
+			foreach (explode(",", $matches[2]) as $state) {
+				$d = explode("=", $state);
+				$states[$d[0]] = $d[1];
+			}
+		}
+		$bedrockStates[$matches[1]][] = $states;
+	}
+	$bedrockStatesFlattened = [];
+	foreach ($bedrockStates as $states) {
+		foreach ($states as $state) {
+			$bedrockStatesFlattened[] = $state;
+		}
+	}
+
+	$obj = ["type" => "unknown"];
+
+	//apply state renames and search for value changes
+	if (count($bedrockStates) === 1) {
+		$obj["type"] = "singular";
+		$obj["name"] = array_key_first($bedrockStates);
+	}
+	$values = [];
+	foreach ($javaStates as $states) {
+		foreach ($states as $key => $value) {
+			if (!isset($values[$key])) {
+				$values[$key] = [];
+			}
+			$values[$key][] = $value;
+		}
+	}
+	$bedrockValues = [];
+	foreach ($bedrockStatesFlattened as $states) {
+		foreach ($states as $key => $value) {
+			if (!isset($bedrockValues[$key])) {
+				$bedrockValues[$key] = [];
+			}
+			$bedrockValues[$key][] = $value;
+		}
+	}
+	foreach ($values as $key => $value) {
+		$checkValues = function ($prev, $past) use (&$values, &$bedrockValues, &$obj) {
+			if (!isset($values[$prev], $bedrockValues[$past])) return false;
+			$hasChanges = false;
+			foreach ($values[$prev] as $i => $v) {
+				if ($v !== $bedrockValues[$past][$i]) {
+					$hasChanges = true;
+					break;
+				}
+			}
+			if (!$hasChanges) {
+				unset($values[$prev], $bedrockValues[$past]);
+				$obj["state_renames"][$prev] = $past;
+				return true;
+			}
+			$map = [];
+			foreach ($values[$prev] as $i => $v) {
+				if (isset($map[$v]) && $map[$v] !== $bedrockValues[$past][$i]) {
+					return false;
+				}
+				$map[$v] = $bedrockValues[$past][$i];
+			}
+			$obj["state_renames"][$prev] = $past;
+			$obj["state_values"][$past] = $map;
+			unset($values[$prev], $bedrockValues[$past]);
+			return true;
+		};
+		if (!($checkValues($key, $key) || $checkValues($key, $key . "_bit") || (isset($customData["jtb_states"]["global"][$key]) && $checkValues($key, $customData["jtb_states"]["global"][$key])) || (isset($customData["jtb_states"][$group["name"]][$key]) && $checkValues($key, $customData["jtb_states"][$group["name"]][$key])))) {
+			foreach ($customData["jtb_states"]["regex"] as $regex => $replacements) {
+				if (isset($replacements[$key]) && preg_match($regex, $group["name"]) && $checkValues($key, $replacements[$key])) {
+					break;
+				}
+			}
+		}
+	}
+	foreach ($bedrockValues as $key => $value) {
+		if (in_array($key, $customData["jtb_additions"]["global"], true)) {
+			$value = array_unique($value);
+			if (count($value) !== 1) {
+				throw new RuntimeException("Added state $key with multiple values");
+			}
+			$obj["state_addition"][$key] = $value[0];
+			unset($bedrockValues[$key]);
+		}
+		if (in_array($key, $customData["jtb_additions"][$group["name"]] ?? [], true)) {
+			$value = array_unique($value);
+			if (count($value) !== 1) {
+				throw new RuntimeException("Added state $key with multiple values");
+			}
+			$obj["state_addition"][$key] = $value[0];
+			unset($bedrockValues[$key]);
+		}
+	}
+	if ($values !== [] || $bedrockValues !== []) {
+		if ($values === []) {
+			foreach ($bedrockValues as $key => $value) {
+				$value = array_unique($value);
+				if (count($value) !== 1) {
+					throw new RuntimeException("Added state $key with multiple values");
+				}
+				$obj["state_addition"][$key] = $value[0];
+				unset($bedrockValues[$key]);
+			}
+		} elseif ($bedrockValues === []) {
+			$obj["state_drop"] = array_keys($values);
+			$values = [];
+		}
+	}
+
+	$failed = false;
+	if ($values !== []) {
+		$obj["missing_java"] = $values;
+		$failed = true;
+	}
+	if ($bedrockValues !== []) {
+		$obj["missing_bedrock"] = $bedrockValues;
+		$failed = true;
+	}
+	$failed ? $failedJTB[$group["name"]] = $obj : $jtb[$group["name"]] = $obj;
+}
+
+if ($failedJTB !== []) echo "Failed to convert " . count($failedJTB) . " blocks" . PHP_EOL;
+echo "Converted " . count($jtb) . " blocks" . PHP_EOL;
+file_put_contents("debug/java-to-bedrock-fail.json", json_encode($failedJTB, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+file_put_contents("../java-to-bedrock.json", json_encode($jtb, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $current = "";
 foreach ($javaToBedrock as $java => $bedrock) {
@@ -182,11 +373,6 @@ foreach ($javaToBedrock as $java => $bedrock) {
 
 ksort($javaToBedrock);
 ksort($bedrockToJava);
-
-echo "Found " . count($javaToBedrock) . " translations to bedrock" . PHP_EOL;
-echo "Found " . count($bedrockToJava) . " translations to java" . PHP_EOL;
-file_put_contents("../java-to-bedrock.json", json_encode($javaToBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("../bedrock-to-java.json", json_encode($bedrockToJava, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $rotationData = [
 	"north=true" => "east=true", "east=true" => "south=true", "south=true" => "west=true", "west=true" => "north=true", "north=false" => "east=false", "east=false" => "south=false", "south=false" => "west=false", "west=false" => "north=false",

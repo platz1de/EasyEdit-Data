@@ -181,15 +181,6 @@
             "wither_skeleton": "minecraft:wither_skeleton_skull[rotation=9]",
             "zombie": "minecraft:zombie_head[rotation=9]"
         },
-        "minecraft:skeleton_wall_skull[facing=north]": {
-            "creeper": "minecraft:creeper_wall_head[facing=north]",
-            "dragon": "minecraft:dragon_wall_head[facing=north]",
-            "piglin": "minecraft:piglin_wall_head[facing=north]",
-            "player": "minecraft:player_wall_head[facing=north]",
-            "skeleton": "minecraft:skeleton_wall_skull[facing=north]",
-            "wither_skeleton": "minecraft:wither_skeleton_wall_skull[facing=north]",
-            "zombie": "minecraft:zombie_wall_head[facing=north]"
-        },
         "minecraft:skeleton_wall_skull[facing=east]": {
             "creeper": "minecraft:creeper_wall_head[facing=east]",
             "dragon": "minecraft:dragon_wall_head[facing=east]",
@@ -198,6 +189,15 @@
             "skeleton": "minecraft:skeleton_wall_skull[facing=east]",
             "wither_skeleton": "minecraft:wither_skeleton_wall_skull[facing=east]",
             "zombie": "minecraft:zombie_wall_head[facing=east]"
+        },
+        "minecraft:skeleton_wall_skull[facing=north]": {
+            "creeper": "minecraft:creeper_wall_head[facing=north]",
+            "dragon": "minecraft:dragon_wall_head[facing=north]",
+            "piglin": "minecraft:piglin_wall_head[facing=north]",
+            "player": "minecraft:player_wall_head[facing=north]",
+            "skeleton": "minecraft:skeleton_wall_skull[facing=north]",
+            "wither_skeleton": "minecraft:wither_skeleton_wall_skull[facing=north]",
+            "zombie": "minecraft:zombie_wall_head[facing=north]"
         },
         "minecraft:skeleton_wall_skull[facing=south]": {
             "creeper": "minecraft:creeper_wall_head[facing=south]",

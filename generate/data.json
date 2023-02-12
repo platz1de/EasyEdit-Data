@@ -1,0 +1,29 @@
+{
+  "jtb_states": {
+	"global": {
+	  "facing": "direction"
+	},
+	"regex": {
+	  "/_wall$/": {
+		"east": "wall_connection_type_east",
+		"north": "wall_connection_type_north",
+		"south": "wall_connection_type_south",
+		"west": "wall_connection_type_west",
+		"up": "wall_post_bit"
+	  },
+	  "/_door$/": {
+		"half": "upper_block_bit",
+		"hinge": "door_hinge_bit"
+	  }
+	}
+  },
+  "jtb_additions": {
+	"global": [
+	  "wood_type",
+	  "new_leaf_type",
+	  "new_log_type",
+	  "sapling_type",
+	  "wall_block_type"
+	]
+  }
+}
