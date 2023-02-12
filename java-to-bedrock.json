@@ -5369,6 +5369,108 @@
             "double_plant_type": "fern"
         }
     },
+    "minecraft:lava": {
+        "type": "multi",
+        "multi_name": "level",
+        "multi_states": [
+            {
+                "name": "minecraft:lava",
+                "state_addition": {
+                    "liquid_depth": "0"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "1"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "2"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "3"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "4"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "5"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "6"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "7"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "8"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "9"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "10"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "11"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "12"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "13"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "14"
+                }
+            },
+            {
+                "name": "minecraft:flowing_lava",
+                "state_addition": {
+                    "liquid_depth": "15"
+                }
+            }
+        ]
+    },
     "minecraft:lava_cauldron": {
         "type": "singular",
         "name": "minecraft:cauldron",
@@ -11237,6 +11339,108 @@
     },
     "minecraft:warped_wart_block": {
         "type": "none"
+    },
+    "minecraft:water": {
+        "type": "multi",
+        "multi_name": "level",
+        "multi_states": [
+            {
+                "name": "minecraft:water",
+                "state_addition": {
+                    "liquid_depth": "0"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "1"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "2"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "3"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "4"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "5"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "6"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "7"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "8"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "9"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "10"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "11"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "12"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "13"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "14"
+                }
+            },
+            {
+                "name": "minecraft:flowing_water",
+                "state_addition": {
+                    "liquid_depth": "15"
+                }
+            }
+        ]
     },
     "minecraft:water_cauldron": {
         "type": "singular",
