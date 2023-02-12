@@ -63,7 +63,7 @@
     "minecraft:acacia_fence": {
         "type": "singular",
         "name": "minecraft:fence",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "acacia"
         },
         "state_removals": [
@@ -99,7 +99,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false",
             "new_leaf_type": "acacia"
         },
@@ -113,14 +113,14 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "new_log_type": "acacia"
         }
     },
     "minecraft:acacia_planks": {
         "type": "singular",
         "name": "minecraft:planks",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "acacia"
         }
     },
@@ -149,7 +149,7 @@
                 "true"
             ]
         },
-        "state_addition": {
+        "state_additions": {
             "sapling_type": "acacia"
         }
     },
@@ -165,7 +165,7 @@
     },
     "minecraft:acacia_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "acacia"
         },
         "state_removals": [
@@ -175,19 +175,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -264,7 +264,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "acacia",
             "stripped_bit": "false"
         }
@@ -296,7 +296,7 @@
     "minecraft:allium": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "allium"
         }
     },
@@ -329,13 +329,13 @@
     "minecraft:andesite": {
         "type": "singular",
         "name": "minecraft:stone",
-        "state_addition": {
+        "state_additions": {
             "stone_type": "andesite"
         }
     },
     "minecraft:andesite_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "andesite"
         },
         "state_removals": [
@@ -345,19 +345,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -422,7 +422,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "andesite"
         },
         "state_removals": [
@@ -443,7 +443,7 @@
                 "west": "1"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "damage": "undamaged"
         }
     },
@@ -461,7 +461,7 @@
                 "west": "4"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "growth": "7"
         }
     },
@@ -479,7 +479,7 @@
                 "west": "4"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "growth": "7"
         }
     },
@@ -492,7 +492,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         },
         "state_removals": [
@@ -502,7 +502,7 @@
     "minecraft:azure_bluet": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "houstonia"
         }
     },
@@ -562,7 +562,7 @@
     "minecraft:bamboo_fence": {
         "type": "singular",
         "name": "minecraft:fence",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "oak"
         },
         "state_removals": [
@@ -595,7 +595,7 @@
     "minecraft:bamboo_sapling": {
         "type": "singular",
         "name": "minecraft:bamboo_sapling",
-        "state_addition": {
+        "state_additions": {
             "sapling_type": "oak",
             "age_bit": "false"
         }
@@ -681,7 +681,7 @@
     "minecraft:bedrock": {
         "type": "singular",
         "name": "minecraft:bedrock",
-        "state_addition": {
+        "state_additions": {
             "infiniburn_bit": "false"
         }
     },
@@ -779,7 +779,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "big_dripleaf_head": "true"
         }
     },
@@ -800,7 +800,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "big_dripleaf_head": "false",
             "big_dripleaf_tilt": "none"
         }
@@ -869,7 +869,7 @@
     "minecraft:birch_fence": {
         "type": "singular",
         "name": "minecraft:fence",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "birch"
         },
         "state_removals": [
@@ -905,7 +905,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false",
             "old_leaf_type": "birch"
         },
@@ -919,14 +919,14 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "old_log_type": "birch"
         }
     },
     "minecraft:birch_planks": {
         "type": "singular",
         "name": "minecraft:planks",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "birch"
         }
     },
@@ -955,7 +955,7 @@
                 "true"
             ]
         },
-        "state_addition": {
+        "state_additions": {
             "sapling_type": "birch"
         }
     },
@@ -971,7 +971,7 @@
     },
     "minecraft:birch_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "birch"
         },
         "state_removals": [
@@ -981,19 +981,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -1070,7 +1070,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "birch",
             "stripped_bit": "false"
         }
@@ -1128,21 +1128,21 @@
     "minecraft:black_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         }
     },
     "minecraft:black_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         }
     },
     "minecraft:black_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         }
     },
@@ -1164,7 +1164,7 @@
     "minecraft:black_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         },
         "state_removals": [
@@ -1174,14 +1174,14 @@
     "minecraft:black_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         }
     },
     "minecraft:black_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         },
         "state_removals": [
@@ -1194,7 +1194,7 @@
     "minecraft:black_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         }
     },
@@ -1216,7 +1216,7 @@
     "minecraft:black_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "black"
         }
     },
@@ -1232,19 +1232,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:blackstone_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:blackstone_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:blackstone_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -1389,21 +1389,21 @@
     "minecraft:blue_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         }
     },
     "minecraft:blue_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         }
     },
     "minecraft:blue_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         }
     },
@@ -1428,14 +1428,14 @@
     "minecraft:blue_orchid": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "orchid"
         }
     },
     "minecraft:blue_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         },
         "state_removals": [
@@ -1445,14 +1445,14 @@
     "minecraft:blue_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         }
     },
     "minecraft:blue_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         },
         "state_removals": [
@@ -1465,7 +1465,7 @@
     "minecraft:blue_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         }
     },
@@ -1487,7 +1487,7 @@
     "minecraft:blue_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "blue"
         }
     },
@@ -1497,7 +1497,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "deprecated": "0"
         }
     },
@@ -1510,7 +1510,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "pink",
             "dead_bit": "false"
         }
@@ -1518,7 +1518,7 @@
     "minecraft:brain_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "pink",
             "dead_bit": "false"
         }
@@ -1529,7 +1529,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "pink",
             "coral_fan_direction": "0"
         }
@@ -1551,7 +1551,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "true",
             "dead_bit": "false"
         }
@@ -1567,7 +1567,7 @@
     },
     "minecraft:brick_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "brick"
         },
         "state_removals": [
@@ -1577,19 +1577,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -1654,7 +1654,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "brick"
         },
         "state_removals": [
@@ -1718,21 +1718,21 @@
     "minecraft:brown_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         }
     },
     "minecraft:brown_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         }
     },
     "minecraft:brown_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         }
     },
@@ -1757,7 +1757,7 @@
     "minecraft:brown_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         },
         "state_removals": [
@@ -1767,14 +1767,14 @@
     "minecraft:brown_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         }
     },
     "minecraft:brown_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         },
         "state_removals": [
@@ -1787,7 +1787,7 @@
     "minecraft:brown_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         }
     },
@@ -1809,7 +1809,7 @@
     "minecraft:brown_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "brown"
         }
     },
@@ -1826,7 +1826,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "purple",
             "dead_bit": "false"
         }
@@ -1834,7 +1834,7 @@
     "minecraft:bubble_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "purple",
             "dead_bit": "false"
         }
@@ -1845,7 +1845,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "purple",
             "coral_fan_direction": "0"
         }
@@ -1867,7 +1867,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "false",
             "dead_bit": "false"
         }
@@ -1972,7 +1972,7 @@
                 "4"
             ]
         },
-        "state_addition": {
+        "state_additions": {
             "cauldron_liquid": "water"
         }
     },
@@ -1997,7 +1997,7 @@
     },
     "minecraft:cave_vines_plant": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "growing_plant_age": "0"
         },
         "multi_name": "berries",
@@ -2070,7 +2070,7 @@
                 "west": "1"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "damage": "slightly_damaged"
         }
     },
@@ -2086,7 +2086,7 @@
     "minecraft:chiseled_quartz_block": {
         "type": "singular",
         "name": "minecraft:quartz_block",
-        "state_addition": {
+        "state_additions": {
             "chisel_type": "chiseled",
             "pillar_axis": "y"
         }
@@ -2094,21 +2094,21 @@
     "minecraft:chiseled_red_sandstone": {
         "type": "singular",
         "name": "minecraft:red_sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "heiroglyphs"
         }
     },
     "minecraft:chiseled_sandstone": {
         "type": "singular",
         "name": "minecraft:sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "heiroglyphs"
         }
     },
     "minecraft:chiseled_stone_bricks": {
         "type": "singular",
         "name": "minecraft:stonebrick",
-        "state_addition": {
+        "state_additions": {
             "stone_brick_type": "chiseled"
         }
     },
@@ -2139,7 +2139,7 @@
     "minecraft:coarse_dirt": {
         "type": "singular",
         "name": "minecraft:dirt",
-        "state_addition": {
+        "state_additions": {
             "dirt_type": "coarse"
         }
     },
@@ -2155,19 +2155,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:cobbled_deepslate_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:cobbled_deepslate_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:cobbled_deepslate_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -2241,7 +2241,7 @@
     },
     "minecraft:cobblestone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "cobblestone"
         },
         "state_removals": [
@@ -2251,19 +2251,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -2328,7 +2328,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "cobblestone"
         },
         "state_removals": [
@@ -2395,13 +2395,13 @@
         "multi_states": {
             "true": {
                 "name": "minecraft:powered_comparator",
-                "state_addition": {
+                "state_additions": {
                     "output_lit_bit": "true"
                 }
             },
             "false": {
                 "name": "minecraft:unpowered_comparator",
-                "state_addition": {
+                "state_additions": {
                     "output_lit_bit": "false"
                 }
             }
@@ -2430,7 +2430,7 @@
     "minecraft:cornflower": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "cornflower"
         }
     },
@@ -2449,7 +2449,7 @@
     "minecraft:cracked_stone_bricks": {
         "type": "singular",
         "name": "minecraft:stonebrick",
-        "state_addition": {
+        "state_additions": {
             "stone_brick_type": "cracked"
         }
     },
@@ -2640,19 +2640,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:crimson_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:crimson_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:crimson_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -2745,19 +2745,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -2789,13 +2789,13 @@
     "minecraft:cut_red_sandstone": {
         "type": "singular",
         "name": "minecraft:red_sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "cut"
         }
     },
     "minecraft:cut_red_sandstone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_4": "cut_red_sandstone"
         },
         "state_removals": [
@@ -2805,19 +2805,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -2826,13 +2826,13 @@
     "minecraft:cut_sandstone": {
         "type": "singular",
         "name": "minecraft:sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "cut"
         }
     },
     "minecraft:cut_sandstone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_4": "cut_sandstone"
         },
         "state_removals": [
@@ -2842,19 +2842,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -2913,21 +2913,21 @@
     "minecraft:cyan_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         }
     },
     "minecraft:cyan_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         }
     },
     "minecraft:cyan_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         }
     },
@@ -2949,7 +2949,7 @@
     "minecraft:cyan_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         },
         "state_removals": [
@@ -2959,14 +2959,14 @@
     "minecraft:cyan_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         }
     },
     "minecraft:cyan_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         },
         "state_removals": [
@@ -2979,7 +2979,7 @@
     "minecraft:cyan_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         }
     },
@@ -3001,7 +3001,7 @@
     "minecraft:cyan_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "cyan"
         }
     },
@@ -3019,7 +3019,7 @@
                 "west": "1"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "damage": "very_damaged"
         }
     },
@@ -3091,7 +3091,7 @@
     "minecraft:dark_oak_fence": {
         "type": "singular",
         "name": "minecraft:fence",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "dark_oak"
         },
         "state_removals": [
@@ -3127,7 +3127,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false",
             "new_leaf_type": "dark_oak"
         },
@@ -3141,14 +3141,14 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "new_log_type": "dark_oak"
         }
     },
     "minecraft:dark_oak_planks": {
         "type": "singular",
         "name": "minecraft:planks",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "dark_oak"
         }
     },
@@ -3177,7 +3177,7 @@
                 "true"
             ]
         },
-        "state_addition": {
+        "state_additions": {
             "sapling_type": "dark_oak"
         }
     },
@@ -3193,7 +3193,7 @@
     },
     "minecraft:dark_oak_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "dark_oak"
         },
         "state_removals": [
@@ -3203,19 +3203,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -3292,7 +3292,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "dark_oak",
             "stripped_bit": "false"
         }
@@ -3300,13 +3300,13 @@
     "minecraft:dark_prismarine": {
         "type": "singular",
         "name": "minecraft:prismarine",
-        "state_addition": {
+        "state_additions": {
             "prismarine_block_type": "dark"
         }
     },
     "minecraft:dark_prismarine_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "prismarine_dark"
         },
         "state_removals": [
@@ -3316,19 +3316,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -3378,7 +3378,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "pink",
             "dead_bit": "true"
         }
@@ -3386,7 +3386,7 @@
     "minecraft:dead_brain_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "pink",
             "dead_bit": "true"
         }
@@ -3397,7 +3397,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "pink",
             "coral_fan_direction": "0"
         }
@@ -3419,7 +3419,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "true",
             "dead_bit": "true"
         }
@@ -3430,7 +3430,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "purple",
             "dead_bit": "true"
         }
@@ -3438,7 +3438,7 @@
     "minecraft:dead_bubble_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "purple",
             "dead_bit": "true"
         }
@@ -3449,7 +3449,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "purple",
             "coral_fan_direction": "0"
         }
@@ -3471,7 +3471,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "false",
             "dead_bit": "true"
         }
@@ -3486,7 +3486,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "red",
             "dead_bit": "true"
         }
@@ -3494,7 +3494,7 @@
     "minecraft:dead_fire_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "red",
             "dead_bit": "true"
         }
@@ -3505,7 +3505,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "red",
             "coral_fan_direction": "0"
         }
@@ -3527,7 +3527,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "true",
             "dead_bit": "true"
         }
@@ -3538,7 +3538,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "yellow",
             "dead_bit": "true"
         }
@@ -3546,7 +3546,7 @@
     "minecraft:dead_horn_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "yellow",
             "dead_bit": "true"
         }
@@ -3557,7 +3557,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "yellow",
             "coral_fan_direction": "0"
         }
@@ -3579,7 +3579,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "false",
             "dead_bit": "true"
         }
@@ -3590,7 +3590,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "blue",
             "dead_bit": "true"
         }
@@ -3598,7 +3598,7 @@
     "minecraft:dead_tube_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "blue",
             "dead_bit": "true"
         }
@@ -3609,7 +3609,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "blue",
             "coral_fan_direction": "0"
         }
@@ -3631,7 +3631,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "false",
             "dead_bit": "true"
         }
@@ -3652,19 +3652,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:deepslate_brick_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:deepslate_brick_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:deepslate_brick_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -3778,19 +3778,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:deepslate_tile_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:deepslate_tile_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:deepslate_tile_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -3892,13 +3892,13 @@
     "minecraft:diorite": {
         "type": "singular",
         "name": "minecraft:stone",
-        "state_addition": {
+        "state_additions": {
             "stone_type": "diorite"
         }
     },
     "minecraft:diorite_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "diorite"
         },
         "state_removals": [
@@ -3908,19 +3908,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -3985,7 +3985,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "diorite"
         },
         "state_removals": [
@@ -3995,7 +3995,7 @@
     "minecraft:dirt": {
         "type": "singular",
         "name": "minecraft:dirt",
-        "state_addition": {
+        "state_additions": {
             "dirt_type": "normal"
         }
     },
@@ -4143,7 +4143,7 @@
     },
     "minecraft:end_stone_brick_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "end_stone_brick"
         },
         "state_removals": [
@@ -4153,19 +4153,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -4230,7 +4230,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "end_brick"
         },
         "state_removals": [
@@ -4274,19 +4274,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:exposed_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:exposed_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:exposed_double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -4325,7 +4325,7 @@
     "minecraft:fern": {
         "type": "singular",
         "name": "minecraft:tallgrass",
-        "state_addition": {
+        "state_additions": {
             "tall_grass_type": "fern"
         }
     },
@@ -4349,7 +4349,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "red",
             "dead_bit": "false"
         }
@@ -4357,7 +4357,7 @@
     "minecraft:fire_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "red",
             "dead_bit": "false"
         }
@@ -4368,7 +4368,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "red",
             "coral_fan_direction": "0"
         }
@@ -4390,7 +4390,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "true",
             "dead_bit": "false"
         }
@@ -4401,7 +4401,7 @@
     "minecraft:flower_pot": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
@@ -4414,7 +4414,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         },
         "state_removals": [
@@ -4479,13 +4479,13 @@
     "minecraft:granite": {
         "type": "singular",
         "name": "minecraft:stone",
-        "state_addition": {
+        "state_additions": {
             "stone_type": "granite"
         }
     },
     "minecraft:granite_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "granite"
         },
         "state_removals": [
@@ -4495,19 +4495,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -4572,7 +4572,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "granite"
         },
         "state_removals": [
@@ -4582,7 +4582,7 @@
     "minecraft:grass": {
         "type": "singular",
         "name": "minecraft:tallgrass",
-        "state_addition": {
+        "state_additions": {
             "tall_grass_type": "tall"
         }
     },
@@ -4652,21 +4652,21 @@
     "minecraft:gray_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         }
     },
     "minecraft:gray_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         }
     },
     "minecraft:gray_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         }
     },
@@ -4688,7 +4688,7 @@
     "minecraft:gray_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         },
         "state_removals": [
@@ -4698,14 +4698,14 @@
     "minecraft:gray_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         }
     },
     "minecraft:gray_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         },
         "state_removals": [
@@ -4718,7 +4718,7 @@
     "minecraft:gray_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         }
     },
@@ -4740,7 +4740,7 @@
     "minecraft:gray_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "gray"
         }
     },
@@ -4797,21 +4797,21 @@
     "minecraft:green_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         }
     },
     "minecraft:green_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         }
     },
     "minecraft:green_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         }
     },
@@ -4833,7 +4833,7 @@
     "minecraft:green_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         },
         "state_removals": [
@@ -4843,14 +4843,14 @@
     "minecraft:green_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         }
     },
     "minecraft:green_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         },
         "state_removals": [
@@ -4863,7 +4863,7 @@
     "minecraft:green_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         }
     },
@@ -4885,7 +4885,7 @@
     "minecraft:green_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "green"
         }
     },
@@ -4923,7 +4923,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "deprecated": "0"
         }
     },
@@ -4963,7 +4963,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "yellow",
             "dead_bit": "false"
         }
@@ -4971,7 +4971,7 @@
     "minecraft:horn_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "yellow",
             "dead_bit": "false"
         }
@@ -4982,7 +4982,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "yellow",
             "coral_fan_direction": "0"
         }
@@ -5004,7 +5004,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "false",
             "dead_bit": "false"
         }
@@ -5015,21 +5015,21 @@
     "minecraft:infested_chiseled_stone_bricks": {
         "type": "singular",
         "name": "minecraft:monster_egg",
-        "state_addition": {
+        "state_additions": {
             "monster_egg_stone_type": "chiseled_stone_brick"
         }
     },
     "minecraft:infested_cobblestone": {
         "type": "singular",
         "name": "minecraft:monster_egg",
-        "state_addition": {
+        "state_additions": {
             "monster_egg_stone_type": "cobblestone"
         }
     },
     "minecraft:infested_cracked_stone_bricks": {
         "type": "singular",
         "name": "minecraft:monster_egg",
-        "state_addition": {
+        "state_additions": {
             "monster_egg_stone_type": "cracked_stone_brick"
         }
     },
@@ -5043,21 +5043,21 @@
     "minecraft:infested_mossy_stone_bricks": {
         "type": "singular",
         "name": "minecraft:monster_egg",
-        "state_addition": {
+        "state_additions": {
             "monster_egg_stone_type": "mossy_stone_brick"
         }
     },
     "minecraft:infested_stone": {
         "type": "singular",
         "name": "minecraft:monster_egg",
-        "state_addition": {
+        "state_additions": {
             "monster_egg_stone_type": "stone"
         }
     },
     "minecraft:infested_stone_bricks": {
         "type": "singular",
         "name": "minecraft:monster_egg",
-        "state_addition": {
+        "state_additions": {
             "monster_egg_stone_type": "stone_brick"
         }
     },
@@ -5216,7 +5216,7 @@
     "minecraft:jungle_fence": {
         "type": "singular",
         "name": "minecraft:fence",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "jungle"
         },
         "state_removals": [
@@ -5252,7 +5252,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false",
             "old_leaf_type": "jungle"
         },
@@ -5266,14 +5266,14 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "old_log_type": "jungle"
         }
     },
     "minecraft:jungle_planks": {
         "type": "singular",
         "name": "minecraft:planks",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "jungle"
         }
     },
@@ -5302,7 +5302,7 @@
                 "true"
             ]
         },
-        "state_addition": {
+        "state_additions": {
             "sapling_type": "jungle"
         }
     },
@@ -5318,7 +5318,7 @@
     },
     "minecraft:jungle_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "jungle"
         },
         "state_removals": [
@@ -5328,19 +5328,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -5417,7 +5417,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "jungle",
             "stripped_bit": "false"
         }
@@ -5432,7 +5432,7 @@
     "minecraft:kelp_plant": {
         "type": "singular",
         "name": "minecraft:kelp",
-        "state_addition": {
+        "state_additions": {
             "kelp_age": "0"
         }
     },
@@ -5502,7 +5502,7 @@
                 "upper": "true"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "double_plant_type": "fern"
         }
     },
@@ -5512,97 +5512,97 @@
         "multi_states": [
             {
                 "name": "minecraft:lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "0"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "1"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "2"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "3"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "4"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "5"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "6"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "7"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "8"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "9"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "10"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "11"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "12"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "13"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "14"
                 }
             },
             {
                 "name": "minecraft:flowing_lava",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "15"
                 }
             }
@@ -5611,7 +5611,7 @@
     "minecraft:lava_cauldron": {
         "type": "singular",
         "name": "minecraft:cauldron",
-        "state_addition": {
+        "state_additions": {
             "cauldron_liquid": "lava",
             "fill_level": "6"
         }
@@ -5640,7 +5640,8 @@
         "name": "minecraft:lever",
         "combined_names": [
             "face",
-            "facing"
+            "facing",
+            "powered"
         ],
         "combined_states": {
             "ceiling": {
@@ -5834,21 +5835,21 @@
     "minecraft:light_blue_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         }
     },
     "minecraft:light_blue_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         }
     },
     "minecraft:light_blue_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         }
     },
@@ -5870,7 +5871,7 @@
     "minecraft:light_blue_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         },
         "state_removals": [
@@ -5880,14 +5881,14 @@
     "minecraft:light_blue_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         }
     },
     "minecraft:light_blue_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         },
         "state_removals": [
@@ -5900,7 +5901,7 @@
     "minecraft:light_blue_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         }
     },
@@ -5922,7 +5923,7 @@
     "minecraft:light_blue_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "light_blue"
         }
     },
@@ -5979,21 +5980,21 @@
     "minecraft:light_gray_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         }
     },
     "minecraft:light_gray_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         }
     },
     "minecraft:light_gray_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         }
     },
@@ -6015,7 +6016,7 @@
     "minecraft:light_gray_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         },
         "state_removals": [
@@ -6025,14 +6026,14 @@
     "minecraft:light_gray_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         }
     },
     "minecraft:light_gray_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         },
         "state_removals": [
@@ -6045,7 +6046,7 @@
     "minecraft:light_gray_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         }
     },
@@ -6067,7 +6068,7 @@
     "minecraft:light_gray_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "silver"
         }
     },
@@ -6110,14 +6111,14 @@
                 "upper": "true"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "double_plant_type": "syringa"
         }
     },
     "minecraft:lily_of_the_valley": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "lily_of_the_valley"
         }
     },
@@ -6178,21 +6179,21 @@
     "minecraft:lime_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         }
     },
     "minecraft:lime_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         }
     },
     "minecraft:lime_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         }
     },
@@ -6214,7 +6215,7 @@
     "minecraft:lime_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         },
         "state_removals": [
@@ -6224,14 +6225,14 @@
     "minecraft:lime_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         }
     },
     "minecraft:lime_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         },
         "state_removals": [
@@ -6244,7 +6245,7 @@
     "minecraft:lime_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         }
     },
@@ -6266,7 +6267,7 @@
     "minecraft:lime_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "lime"
         }
     },
@@ -6341,21 +6342,21 @@
     "minecraft:magenta_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         }
     },
     "minecraft:magenta_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         }
     },
     "minecraft:magenta_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         }
     },
@@ -6377,7 +6378,7 @@
     "minecraft:magenta_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         },
         "state_removals": [
@@ -6387,14 +6388,14 @@
     "minecraft:magenta_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         }
     },
     "minecraft:magenta_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         },
         "state_removals": [
@@ -6407,7 +6408,7 @@
     "minecraft:magenta_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         }
     },
@@ -6429,7 +6430,7 @@
     "minecraft:magenta_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "magenta"
         }
     },
@@ -6534,7 +6535,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         },
         "state_removals": [
@@ -6601,19 +6602,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:mangrove_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:mangrove_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:mangrove_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -6690,7 +6691,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "stripped_bit": "false"
         }
     },
@@ -6724,7 +6725,7 @@
         "state_renames": {
             "age": "growth"
         },
-        "state_addition": {
+        "state_additions": {
             "facing_direction": "0"
         }
     },
@@ -6739,7 +6740,7 @@
     },
     "minecraft:mossy_cobblestone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "mossy_cobblestone"
         },
         "state_removals": [
@@ -6749,19 +6750,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -6826,7 +6827,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "mossy_cobblestone"
         },
         "state_removals": [
@@ -6835,7 +6836,7 @@
     },
     "minecraft:mossy_stone_brick_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_4": "mossy_stone_brick"
         },
         "state_removals": [
@@ -6845,19 +6846,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -6922,7 +6923,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "mossy_stone_brick"
         },
         "state_removals": [
@@ -6932,7 +6933,7 @@
     "minecraft:mossy_stone_bricks": {
         "type": "singular",
         "name": "minecraft:stonebrick",
-        "state_addition": {
+        "state_additions": {
             "stone_brick_type": "mossy"
         }
     },
@@ -6956,19 +6957,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:mud_brick_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:mud_brick_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:mud_brick_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -7066,7 +7067,7 @@
     },
     "minecraft:nether_brick_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "nether_brick"
         },
         "state_removals": [
@@ -7076,19 +7077,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -7153,7 +7154,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "nether_brick"
         },
         "state_removals": [
@@ -7266,7 +7267,7 @@
     "minecraft:oak_fence": {
         "type": "singular",
         "name": "minecraft:fence",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "oak"
         },
         "state_removals": [
@@ -7302,7 +7303,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false",
             "old_leaf_type": "oak"
         },
@@ -7316,14 +7317,14 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "old_log_type": "oak"
         }
     },
     "minecraft:oak_planks": {
         "type": "singular",
         "name": "minecraft:planks",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "oak"
         }
     },
@@ -7352,7 +7353,7 @@
                 "true"
             ]
         },
-        "state_addition": {
+        "state_additions": {
             "sapling_type": "oak"
         }
     },
@@ -7368,7 +7369,7 @@
     },
     "minecraft:oak_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "oak"
         },
         "state_removals": [
@@ -7378,19 +7379,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -7467,7 +7468,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "oak",
             "stripped_bit": "false"
         }
@@ -7553,21 +7554,21 @@
     "minecraft:orange_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         }
     },
     "minecraft:orange_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         }
     },
     "minecraft:orange_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         }
     },
@@ -7589,7 +7590,7 @@
     "minecraft:orange_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         },
         "state_removals": [
@@ -7599,14 +7600,14 @@
     "minecraft:orange_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         }
     },
     "minecraft:orange_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         },
         "state_removals": [
@@ -7619,14 +7620,14 @@
     "minecraft:orange_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         }
     },
     "minecraft:orange_tulip": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "tulip_orange"
         }
     },
@@ -7648,14 +7649,14 @@
     "minecraft:orange_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "orange"
         }
     },
     "minecraft:oxeye_daisy": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "oxeye"
         }
     },
@@ -7674,19 +7675,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:oxidized_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:oxidized_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:oxidized_double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -7740,13 +7741,13 @@
                 "upper": "true"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "double_plant_type": "paeonia"
         }
     },
     "minecraft:petrified_oak_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "wood"
         },
         "state_removals": [
@@ -7756,19 +7757,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -7869,21 +7870,21 @@
     "minecraft:pink_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         }
     },
     "minecraft:pink_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         }
     },
     "minecraft:pink_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         }
     },
@@ -7905,7 +7906,7 @@
     "minecraft:pink_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         },
         "state_removals": [
@@ -7915,14 +7916,14 @@
     "minecraft:pink_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         }
     },
     "minecraft:pink_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         },
         "state_removals": [
@@ -7935,14 +7936,14 @@
     "minecraft:pink_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         }
     },
     "minecraft:pink_tulip": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "tulip_pink"
         }
     },
@@ -7964,7 +7965,7 @@
     "minecraft:pink_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "pink"
         }
     },
@@ -8092,13 +8093,13 @@
     "minecraft:polished_andesite": {
         "type": "singular",
         "name": "minecraft:stone",
-        "state_addition": {
+        "state_additions": {
             "stone_type": "andesite_smooth"
         }
     },
     "minecraft:polished_andesite_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "polished_andesite"
         },
         "state_removals": [
@@ -8108,19 +8109,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -8168,19 +8169,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:polished_blackstone_brick_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:polished_blackstone_brick_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:polished_blackstone_brick_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -8306,19 +8307,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:polished_blackstone_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:polished_blackstone_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:polished_blackstone_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -8399,19 +8400,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:polished_deepslate_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:polished_deepslate_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:polished_deepslate_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -8483,13 +8484,13 @@
     "minecraft:polished_diorite": {
         "type": "singular",
         "name": "minecraft:stone",
-        "state_addition": {
+        "state_additions": {
             "stone_type": "diorite_smooth"
         }
     },
     "minecraft:polished_diorite_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "polished_diorite"
         },
         "state_removals": [
@@ -8499,19 +8500,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -8543,13 +8544,13 @@
     "minecraft:polished_granite": {
         "type": "singular",
         "name": "minecraft:stone",
-        "state_addition": {
+        "state_additions": {
             "stone_type": "granite_smooth"
         }
     },
     "minecraft:polished_granite_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "polished_granite"
         },
         "state_removals": [
@@ -8559,19 +8560,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -8603,7 +8604,7 @@
     "minecraft:poppy": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "poppy"
         }
     },
@@ -8617,224 +8618,224 @@
     "minecraft:potted_acacia_sapling": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_allium": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_azalea_bush": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_azure_bluet": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_bamboo": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_birch_sapling": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_blue_orchid": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_brown_mushroom": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_cactus": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_cornflower": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_crimson_fungus": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_crimson_roots": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_dandelion": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_dark_oak_sapling": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_dead_bush": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_fern": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_flowering_azalea_bush": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_jungle_sapling": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_lily_of_the_valley": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_mangrove_propagule": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_oak_sapling": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_orange_tulip": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_oxeye_daisy": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_pink_tulip": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_poppy": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_red_mushroom": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_red_tulip": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_spruce_sapling": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_warped_fungus": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_warped_roots": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_white_tulip": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
     "minecraft:potted_wither_rose": {
         "type": "singular",
         "name": "minecraft:flower_pot",
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false"
         }
     },
@@ -8854,7 +8855,7 @@
                 "3": "6"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "cauldron_liquid": "powder_snow"
         }
     },
@@ -8882,13 +8883,13 @@
     "minecraft:prismarine": {
         "type": "singular",
         "name": "minecraft:prismarine",
-        "state_addition": {
+        "state_additions": {
             "prismarine_block_type": "default"
         }
     },
     "minecraft:prismarine_brick_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "prismarine_brick"
         },
         "state_removals": [
@@ -8898,19 +8899,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -8942,13 +8943,13 @@
     "minecraft:prismarine_bricks": {
         "type": "singular",
         "name": "minecraft:prismarine",
-        "state_addition": {
+        "state_additions": {
             "prismarine_block_type": "bricks"
         }
     },
     "minecraft:prismarine_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "prismarine_rough"
         },
         "state_removals": [
@@ -8958,19 +8959,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -9035,7 +9036,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "prismarine"
         },
         "state_removals": [
@@ -9045,7 +9046,7 @@
     "minecraft:pumpkin": {
         "type": "singular",
         "name": "minecraft:pumpkin",
-        "state_addition": {
+        "state_additions": {
             "direction": "0"
         }
     },
@@ -9055,7 +9056,7 @@
         "state_renames": {
             "age": "growth"
         },
-        "state_addition": {
+        "state_additions": {
             "facing_direction": "0"
         }
     },
@@ -9112,21 +9113,21 @@
     "minecraft:purple_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         }
     },
     "minecraft:purple_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         }
     },
     "minecraft:purple_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         }
     },
@@ -9148,7 +9149,7 @@
     "minecraft:purple_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         },
         "state_removals": [
@@ -9158,14 +9159,14 @@
     "minecraft:purple_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         }
     },
     "minecraft:purple_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         },
         "state_removals": [
@@ -9178,7 +9179,7 @@
     "minecraft:purple_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         }
     },
@@ -9200,14 +9201,14 @@
     "minecraft:purple_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "purple"
         }
     },
     "minecraft:purpur_block": {
         "type": "singular",
         "name": "minecraft:purpur_block",
-        "state_addition": {
+        "state_additions": {
             "chisel_type": "default",
             "pillar_axis": "y"
         }
@@ -9218,13 +9219,13 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "chisel_type": "lines"
         }
     },
     "minecraft:purpur_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "purpur"
         },
         "state_removals": [
@@ -9234,19 +9235,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -9278,7 +9279,7 @@
     "minecraft:quartz_block": {
         "type": "singular",
         "name": "minecraft:quartz_block",
-        "state_addition": {
+        "state_additions": {
             "chisel_type": "default",
             "pillar_axis": "y"
         }
@@ -9292,13 +9293,13 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "chisel_type": "lines"
         }
     },
     "minecraft:quartz_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "quartz"
         },
         "state_removals": [
@@ -9308,19 +9309,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -9435,21 +9436,21 @@
     "minecraft:red_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         }
     },
     "minecraft:red_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         }
     },
     "minecraft:red_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         }
     },
@@ -9473,7 +9474,7 @@
     },
     "minecraft:red_nether_brick_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "red_nether_brick"
         },
         "state_removals": [
@@ -9483,19 +9484,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -9560,7 +9561,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "red_nether_brick"
         },
         "state_removals": [
@@ -9574,20 +9575,20 @@
     "minecraft:red_sand": {
         "type": "singular",
         "name": "minecraft:sand",
-        "state_addition": {
+        "state_additions": {
             "sand_type": "red"
         }
     },
     "minecraft:red_sandstone": {
         "type": "singular",
         "name": "minecraft:red_sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "default"
         }
     },
     "minecraft:red_sandstone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "red_sandstone"
         },
         "state_removals": [
@@ -9597,19 +9598,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -9674,7 +9675,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "red_sandstone"
         },
         "state_removals": [
@@ -9684,7 +9685,7 @@
     "minecraft:red_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         },
         "state_removals": [
@@ -9694,14 +9695,14 @@
     "minecraft:red_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         }
     },
     "minecraft:red_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         },
         "state_removals": [
@@ -9714,14 +9715,14 @@
     "minecraft:red_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         }
     },
     "minecraft:red_tulip": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "tulip_red"
         }
     },
@@ -9743,7 +9744,7 @@
     "minecraft:red_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "red"
         }
     },
@@ -9776,7 +9777,7 @@
     },
     "minecraft:redstone_torch": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "torch_facing_direction": "top"
         },
         "multi_name": "lit",
@@ -9902,27 +9903,27 @@
                 "upper": "true"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "double_plant_type": "rose"
         }
     },
     "minecraft:sand": {
         "type": "singular",
         "name": "minecraft:sand",
-        "state_addition": {
+        "state_additions": {
             "sand_type": "normal"
         }
     },
     "minecraft:sandstone": {
         "type": "singular",
         "name": "minecraft:sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "default"
         }
     },
     "minecraft:sandstone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "sandstone"
         },
         "state_removals": [
@@ -9932,19 +9933,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -10009,7 +10010,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "sandstone"
         },
         "state_removals": [
@@ -10106,7 +10107,7 @@
     "minecraft:seagrass": {
         "type": "singular",
         "name": "minecraft:seagrass",
-        "state_addition": {
+        "state_additions": {
             "sea_grass_type": "default"
         }
     },
@@ -10251,14 +10252,14 @@
     "minecraft:smooth_quartz": {
         "type": "singular",
         "name": "minecraft:quartz_block",
-        "state_addition": {
+        "state_additions": {
             "chisel_type": "smooth",
             "pillar_axis": "y"
         }
     },
     "minecraft:smooth_quartz_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_4": "smooth_quartz"
         },
         "state_removals": [
@@ -10268,19 +10269,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -10312,13 +10313,13 @@
     "minecraft:smooth_red_sandstone": {
         "type": "singular",
         "name": "minecraft:red_sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "smooth"
         }
     },
     "minecraft:smooth_red_sandstone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_3": "smooth_red_sandstone"
         },
         "state_removals": [
@@ -10328,19 +10329,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab3",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -10372,13 +10373,13 @@
     "minecraft:smooth_sandstone": {
         "type": "singular",
         "name": "minecraft:sandstone",
-        "state_addition": {
+        "state_additions": {
             "sand_stone_type": "smooth"
         }
     },
     "minecraft:smooth_sandstone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_2": "smooth_sandstone"
         },
         "state_removals": [
@@ -10388,19 +10389,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab2",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -10434,7 +10435,7 @@
     },
     "minecraft:smooth_stone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "smooth_stone"
         },
         "state_removals": [
@@ -10444,19 +10445,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -10480,7 +10481,7 @@
                 "8": "7"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "covered_bit": "false"
         }
     },
@@ -10514,7 +10515,7 @@
     "minecraft:soul_fire": {
         "type": "singular",
         "name": "minecraft:soul_fire",
-        "state_addition": {
+        "state_additions": {
             "age": "0"
         }
     },
@@ -10537,7 +10538,7 @@
     "minecraft:soul_torch": {
         "type": "singular",
         "name": "minecraft:soul_torch",
-        "state_addition": {
+        "state_additions": {
             "torch_facing_direction": "top"
         }
     },
@@ -10563,7 +10564,7 @@
     "minecraft:sponge": {
         "type": "singular",
         "name": "minecraft:sponge",
-        "state_addition": {
+        "state_additions": {
             "sponge_type": "dry"
         }
     },
@@ -10634,7 +10635,7 @@
     "minecraft:spruce_fence": {
         "type": "singular",
         "name": "minecraft:fence",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "spruce"
         },
         "state_removals": [
@@ -10670,7 +10671,7 @@
         "state_renames": {
             "persistent": "persistent_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "update_bit": "false",
             "old_leaf_type": "spruce"
         },
@@ -10684,14 +10685,14 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "old_log_type": "spruce"
         }
     },
     "minecraft:spruce_planks": {
         "type": "singular",
         "name": "minecraft:planks",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "spruce"
         }
     },
@@ -10720,7 +10721,7 @@
                 "true"
             ]
         },
-        "state_addition": {
+        "state_additions": {
             "sapling_type": "spruce"
         }
     },
@@ -10736,7 +10737,7 @@
     },
     "minecraft:spruce_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "wood_type": "spruce"
         },
         "state_removals": [
@@ -10746,19 +10747,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_wooden_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -10835,7 +10836,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "spruce",
             "stripped_bit": "false"
         }
@@ -10863,13 +10864,13 @@
     "minecraft:stone": {
         "type": "singular",
         "name": "minecraft:stone",
-        "state_addition": {
+        "state_additions": {
             "stone_type": "stone"
         }
     },
     "minecraft:stone_brick_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type": "stone_brick"
         },
         "state_removals": [
@@ -10879,19 +10880,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -10956,7 +10957,7 @@
                 "none": "none"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "wall_block_type": "stone_brick"
         },
         "state_removals": [
@@ -10966,7 +10967,7 @@
     "minecraft:stone_bricks": {
         "type": "singular",
         "name": "minecraft:stonebrick",
-        "state_addition": {
+        "state_additions": {
             "stone_brick_type": "default"
         }
     },
@@ -11017,7 +11018,7 @@
     },
     "minecraft:stone_slab": {
         "type": "multi",
-        "state_addition": {
+        "state_additions": {
             "stone_slab_type_4": "stone"
         },
         "state_removals": [
@@ -11027,19 +11028,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:double_stone_block_slab4",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -11096,7 +11097,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "acacia",
             "stripped_bit": "true"
         }
@@ -11114,7 +11115,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "birch",
             "stripped_bit": "true"
         }
@@ -11146,7 +11147,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "dark_oak",
             "stripped_bit": "true"
         }
@@ -11164,7 +11165,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "jungle",
             "stripped_bit": "true"
         }
@@ -11196,7 +11197,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "oak",
             "stripped_bit": "true"
         }
@@ -11214,7 +11215,7 @@
         "state_renames": {
             "axis": "pillar_axis"
         },
-        "state_addition": {
+        "state_additions": {
             "wood_type": "spruce",
             "stripped_bit": "true"
         }
@@ -11243,7 +11244,7 @@
     "minecraft:structure_void": {
         "type": "singular",
         "name": "minecraft:structure_void",
-        "state_addition": {
+        "state_additions": {
             "structure_void_type": "air"
         }
     },
@@ -11266,7 +11267,7 @@
                 "upper": "true"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "double_plant_type": "sunflower"
         }
     },
@@ -11289,7 +11290,7 @@
                 "upper": "true"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "double_plant_type": "grass"
         }
     },
@@ -11326,14 +11327,14 @@
         "state_renames": {
             "unstable": "explode_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "allow_underwater_bit": "false"
         }
     },
     "minecraft:torch": {
         "type": "singular",
         "name": "minecraft:torch",
-        "state_addition": {
+        "state_additions": {
             "torch_facing_direction": "top"
         }
     },
@@ -11363,7 +11364,7 @@
             "disarmed": "disarmed_bit",
             "powered": "powered_bit"
         },
-        "state_addition": {
+        "state_additions": {
             "suspended_bit": "true"
         },
         "state_removals": [
@@ -11396,7 +11397,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "blue",
             "dead_bit": "false"
         }
@@ -11404,7 +11405,7 @@
     "minecraft:tube_coral_block": {
         "type": "singular",
         "name": "minecraft:coral_block",
-        "state_addition": {
+        "state_additions": {
             "coral_color": "blue",
             "dead_bit": "false"
         }
@@ -11415,7 +11416,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_color": "blue",
             "coral_fan_direction": "0"
         }
@@ -11437,7 +11438,7 @@
         "state_removals": [
             "waterlogged"
         ],
-        "state_addition": {
+        "state_additions": {
             "coral_hang_type_bit": "false",
             "dead_bit": "false"
         }
@@ -11476,7 +11477,7 @@
     "minecraft:twisting_vines_plant": {
         "type": "singular",
         "name": "minecraft:twisting_vines",
-        "state_addition": {
+        "state_additions": {
             "twisting_vines_age": "0"
         }
     },
@@ -11666,19 +11667,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:warped_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:warped_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:warped_double_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -11765,97 +11766,97 @@
         "multi_states": [
             {
                 "name": "minecraft:water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "0"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "1"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "2"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "3"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "4"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "5"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "6"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "7"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "8"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "9"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "10"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "11"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "12"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "13"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "14"
                 }
             },
             {
                 "name": "minecraft:flowing_water",
-                "state_addition": {
+                "state_additions": {
                     "liquid_depth": "15"
                 }
             }
@@ -11874,7 +11875,7 @@
                 "3": "6"
             }
         },
-        "state_addition": {
+        "state_additions": {
             "cauldron_liquid": "water"
         }
     },
@@ -11894,19 +11895,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:waxed_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:waxed_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:waxed_double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -11950,19 +11951,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:waxed_exposed_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:waxed_exposed_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:waxed_exposed_double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -12006,19 +12007,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:waxed_oxidized_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:waxed_oxidized_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:waxed_oxidized_double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -12062,19 +12063,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:waxed_weathered_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:waxed_weathered_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:waxed_weathered_double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -12118,19 +12119,19 @@
         "multi_states": {
             "top": {
                 "name": "minecraft:weathered_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "true"
                 }
             },
             "bottom": {
                 "name": "minecraft:weathered_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             },
             "double": {
                 "name": "minecraft:weathered_double_cut_copper_slab",
-                "state_addition": {
+                "state_additions": {
                     "top_slot_bit": "false"
                 }
             }
@@ -12169,14 +12170,14 @@
     "minecraft:weeping_vines_plant": {
         "type": "singular",
         "name": "minecraft:weeping_vines",
-        "state_addition": {
+        "state_additions": {
             "weeping_vines_age": "0"
         }
     },
     "minecraft:wet_sponge": {
         "type": "singular",
         "name": "minecraft:sponge",
-        "state_addition": {
+        "state_additions": {
             "sponge_type": "wet"
         }
     },
@@ -12240,21 +12241,21 @@
     "minecraft:white_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         }
     },
     "minecraft:white_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         }
     },
     "minecraft:white_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         }
     },
@@ -12276,7 +12277,7 @@
     "minecraft:white_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         },
         "state_removals": [
@@ -12286,14 +12287,14 @@
     "minecraft:white_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         }
     },
     "minecraft:white_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         },
         "state_removals": [
@@ -12306,14 +12307,14 @@
     "minecraft:white_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         }
     },
     "minecraft:white_tulip": {
         "type": "singular",
         "name": "minecraft:red_flower",
-        "state_addition": {
+        "state_additions": {
             "flower_type": "tulip_white"
         }
     },
@@ -12335,7 +12336,7 @@
     "minecraft:white_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "white"
         }
     },
@@ -12437,21 +12438,21 @@
     "minecraft:yellow_carpet": {
         "type": "singular",
         "name": "minecraft:carpet",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         }
     },
     "minecraft:yellow_concrete": {
         "type": "singular",
         "name": "minecraft:concrete",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         }
     },
     "minecraft:yellow_concrete_powder": {
         "type": "singular",
         "name": "minecraft:concrete_powder",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         }
     },
@@ -12473,7 +12474,7 @@
     "minecraft:yellow_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         },
         "state_removals": [
@@ -12483,14 +12484,14 @@
     "minecraft:yellow_stained_glass": {
         "type": "singular",
         "name": "minecraft:stained_glass",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         }
     },
     "minecraft:yellow_stained_glass_pane": {
         "type": "singular",
         "name": "minecraft:stained_glass_pane",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         },
         "state_removals": [
@@ -12503,7 +12504,7 @@
     "minecraft:yellow_terracotta": {
         "type": "singular",
         "name": "minecraft:stained_hardened_clay",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         }
     },
@@ -12525,7 +12526,7 @@
     "minecraft:yellow_wool": {
         "type": "singular",
         "name": "minecraft:wool",
-        "state_addition": {
+        "state_additions": {
             "color": "yellow"
         }
     },
