@@ -333,6 +333,36 @@
             "stone_type": "andesite"
         }
     },
+    "minecraft:andesite_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "andesite"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:andesite_stairs": {
         "type": "singular",
         "name": "minecraft:andesite_stairs",
@@ -1512,6 +1542,36 @@
             "has_bottle_2": "brewing_stand_slot_c_bit"
         }
     },
+    "minecraft:brick_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "brick"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:brick_stairs": {
         "type": "singular",
         "name": "minecraft:brick_stairs",
@@ -2126,6 +2186,36 @@
     "minecraft:cobblestone": {
         "type": "none"
     },
+    "minecraft:cobblestone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "cobblestone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:cobblestone_stairs": {
         "type": "singular",
         "name": "minecraft:stone_stairs",
@@ -2616,11 +2706,71 @@
             "sand_stone_type": "cut"
         }
     },
+    "minecraft:cut_red_sandstone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_4": "cut_red_sandstone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:cut_sandstone": {
         "type": "singular",
         "name": "minecraft:sandstone",
         "state_addition": {
             "sand_stone_type": "cut"
+        }
+    },
+    "minecraft:cut_sandstone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_4": "cut_sandstone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:cyan_banner": {
@@ -3065,6 +3215,36 @@
         "name": "minecraft:prismarine",
         "state_addition": {
             "prismarine_block_type": "dark"
+        }
+    },
+    "minecraft:dark_prismarine_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "prismarine_dark"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:dark_prismarine_stairs": {
@@ -3602,6 +3782,36 @@
             "stone_type": "diorite"
         }
     },
+    "minecraft:diorite_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "diorite"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:diorite_stairs": {
         "type": "singular",
         "name": "minecraft:diorite_stairs",
@@ -3816,6 +4026,36 @@
     },
     "minecraft:end_stone": {
         "type": "none"
+    },
+    "minecraft:end_stone_brick_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "end_stone_brick"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:end_stone_brick_stairs": {
         "type": "singular",
@@ -4104,6 +4344,36 @@
         "name": "minecraft:stone",
         "state_addition": {
             "stone_type": "granite"
+        }
+    },
+    "minecraft:granite_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "granite"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:granite_stairs": {
@@ -6092,6 +6362,36 @@
     "minecraft:mossy_cobblestone": {
         "type": "none"
     },
+    "minecraft:mossy_cobblestone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "mossy_cobblestone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:mossy_cobblestone_stairs": {
         "type": "singular",
         "name": "minecraft:mossy_cobblestone_stairs",
@@ -6157,6 +6457,36 @@
         "state_removals": [
             "waterlogged"
         ]
+    },
+    "minecraft:mossy_stone_brick_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_4": "mossy_stone_brick"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:mossy_stone_brick_stairs": {
         "type": "singular",
@@ -6358,6 +6688,36 @@
             "south",
             "west"
         ]
+    },
+    "minecraft:nether_brick_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "nether_brick"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:nether_brick_stairs": {
         "type": "singular",
@@ -7009,6 +7369,36 @@
             "double_plant_type": "paeonia"
         }
     },
+    "minecraft:petrified_oak_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "wood"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:piglin_head": {
         "type": "singular",
         "name": "minecraft:skull",
@@ -7301,6 +7691,36 @@
         "name": "minecraft:stone",
         "state_addition": {
             "stone_type": "andesite_smooth"
+        }
+    },
+    "minecraft:polished_andesite_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "polished_andesite"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:polished_andesite_stairs": {
@@ -7664,6 +8084,36 @@
             "stone_type": "diorite_smooth"
         }
     },
+    "minecraft:polished_diorite_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "polished_diorite"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:polished_diorite_stairs": {
         "type": "singular",
         "name": "minecraft:polished_diorite_stairs",
@@ -7692,6 +8142,36 @@
         "name": "minecraft:stone",
         "state_addition": {
             "stone_type": "granite_smooth"
+        }
+    },
+    "minecraft:polished_granite_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "polished_granite"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:polished_granite_stairs": {
@@ -8003,6 +8483,36 @@
             "prismarine_block_type": "default"
         }
     },
+    "minecraft:prismarine_brick_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "prismarine_brick"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:prismarine_brick_stairs": {
         "type": "singular",
         "name": "minecraft:prismarine_bricks_stairs",
@@ -8031,6 +8541,36 @@
         "name": "minecraft:prismarine",
         "state_addition": {
             "prismarine_block_type": "bricks"
+        }
+    },
+    "minecraft:prismarine_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "prismarine_rough"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:prismarine_stairs": {
@@ -8279,6 +8819,36 @@
             "chisel_type": "lines"
         }
     },
+    "minecraft:purpur_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "purpur"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:purpur_stairs": {
         "type": "singular",
         "name": "minecraft:purpur_stairs",
@@ -8321,6 +8891,36 @@
         },
         "state_addition": {
             "chisel_type": "lines"
+        }
+    },
+    "minecraft:quartz_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "quartz"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:quartz_stairs": {
@@ -8468,6 +9068,36 @@
     "minecraft:red_mushroom": {
         "type": "none"
     },
+    "minecraft:red_nether_brick_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "red_nether_brick"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:red_nether_brick_stairs": {
         "type": "singular",
         "name": "minecraft:red_nether_brick_stairs",
@@ -8550,6 +9180,36 @@
         "name": "minecraft:red_sandstone",
         "state_addition": {
             "sand_stone_type": "default"
+        }
+    },
+    "minecraft:red_sandstone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "red_sandstone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:red_sandstone_stairs": {
@@ -8760,6 +9420,36 @@
         "name": "minecraft:sandstone",
         "state_addition": {
             "sand_stone_type": "default"
+        }
+    },
+    "minecraft:sandstone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "sandstone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:sandstone_stairs": {
@@ -9045,6 +9735,36 @@
             "pillar_axis": "y"
         }
     },
+    "minecraft:smooth_quartz_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_4": "smooth_quartz"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:smooth_quartz_stairs": {
         "type": "singular",
         "name": "minecraft:smooth_quartz_stairs",
@@ -9073,6 +9793,36 @@
         "name": "minecraft:red_sandstone",
         "state_addition": {
             "sand_stone_type": "smooth"
+        }
+    },
+    "minecraft:smooth_red_sandstone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_3": "smooth_red_sandstone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab3",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
         }
     },
     "minecraft:smooth_red_sandstone_stairs": {
@@ -9105,6 +9855,36 @@
             "sand_stone_type": "smooth"
         }
     },
+    "minecraft:smooth_sandstone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_2": "smooth_sandstone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab2",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:smooth_sandstone_stairs": {
         "type": "singular",
         "name": "minecraft:smooth_sandstone_stairs",
@@ -9130,6 +9910,36 @@
     },
     "minecraft:smooth_stone": {
         "type": "none"
+    },
+    "minecraft:smooth_stone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "smooth_stone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
     },
     "minecraft:snow": {
         "type": "singular",
@@ -9536,6 +10346,36 @@
             "stone_type": "stone"
         }
     },
+    "minecraft:stone_brick_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type": "stone_brick"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            }
+        }
+    },
     "minecraft:stone_brick_stairs": {
         "type": "singular",
         "name": "minecraft:stone_brick_stairs",
@@ -9651,6 +10491,36 @@
             "redstone_signal": {
                 "false": "0",
                 "true": "15"
+            }
+        }
+    },
+    "minecraft:stone_slab": {
+        "type": "multi",
+        "state_addition": {
+            "stone_slab_type_4": "stone"
+        },
+        "state_removals": [
+            "waterlogged"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "top": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:double_stone_block_slab4",
+                "state_addition": {
+                    "top_slot_bit": "false"
+                }
             }
         }
     },

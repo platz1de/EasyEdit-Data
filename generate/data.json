@@ -166,7 +166,11 @@
 	  "sapling_type",
 	  "wall_block_type",
 	  "color",
-	  "update_bit"
+	  "update_bit",
+	  "stone_slab_type",
+	  "stone_slab_type_2",
+	  "stone_slab_type_3",
+	  "stone_slab_type_4"
 	],
 	"minecraft:tripwire": [
 	  "suspended_bit"
