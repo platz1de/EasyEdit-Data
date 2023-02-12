@@ -406,103 +406,24 @@ foreach ($groupsJtb as $group) {
 	if ($group["name"] === "minecraft:water" || $group["name"] === "minecraft:lava") {
 		$obj["type"] = "multi";
 		$obj["multi_name"] = "level";
+		$flowingName = "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava");
 		$obj["multi_states"] = [
-			"0" => [
-				"name" => $group["name"],
-				"state_addition" => [
-					"liquid_depth" => "0"
-				]
-			],
-			"1" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "1"
-				]
-			],
-			"2" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "2"
-				]
-			],
-			"3" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "3"
-				]
-			],
-			"4" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "4"
-				]
-			],
-			"5" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "5"
-				]
-			],
-			"6" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "6"
-				]
-			],
-			"7" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "7"
-				]
-			],
-			"8" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "8"
-				]
-			],
-			"9" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "9"
-				]
-			],
-			"10" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "10"
-				]
-			],
-			"11" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "11"
-				]
-			],
-			"12" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "12"
-				]
-			],
-			"13" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "13"
-				]
-			],
-			"14" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "14"
-				]
-			],
-			"15" => [
-				"name" => "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava"),
-				"state_addition" => [
-					"liquid_depth" => "15"
-				]
-			]
+			"0" => ["name" => $group["name"], "state_addition" => ["liquid_depth" => "0"]],
+			"1" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "1"]],
+			"2" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "2"]],
+			"3" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "3"]],
+			"4" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "4"]],
+			"5" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "5"]],
+			"6" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "6"]],
+			"7" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "7"]],
+			"8" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "8"]],
+			"9" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "9"]],
+			"10" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "10"]],
+			"11" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "11"]],
+			"12" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "12"]],
+			"13" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "13"]],
+			"14" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "14"]],
+			"15" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "15"]]
 		];
 		unset($values["level"], $bedrockValues["liquid_depth"]);
 	}
