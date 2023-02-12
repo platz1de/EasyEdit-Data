@@ -140,7 +140,7 @@
 	"minecraft:structure_block": {
 	  "mode": "structure_block_type"
 	},
-	"minecraft:tall_seagrass":{
+	"minecraft:tall_seagrass": {
 	  "half": "sea_grass_type"
 	},
 	"minecraft:tnt": {
@@ -155,6 +155,18 @@
 	},
 	"minecraft:weeping_vines": {
 	  "age": "weeping_vines_age"
+	},
+	"minecraft:cave_vines": {
+	  "age": "growing_plant_age"
+	},
+	"minecraft:comparator": {
+	  "mode": "output_subtract_bit"
+	},
+	"minecraft:redstone_wall_torch": {
+	  "facing": "torch_facing_direction"
+	},
+	"minecraft:repeater": {
+	  "delay": "repeater_delay"
 	}
   },
   "jtb_additions": {
@@ -174,11 +186,23 @@
 	],
 	"minecraft:tripwire": [
 	  "suspended_bit"
+	],
+	"minecraft:cave_vines_plant": [
+	  "growing_plant_age"
+	],
+	"minecraft:redstone_torch": [
+	  "torch_facing_direction"
 	]
   },
   "jtb_removals": {
 	"global": [
 	  "waterlogged"
+	],
+	"minecraft:piston_head": [
+	  "short"
+	],
+	"minecraft:repeater": [
+	  "locked"
 	]
   }
 }

@@ -424,7 +424,7 @@ foreach ($groupsJtb as $group) {
 		unset($values["level"], $bedrockValues["liquid_depth"]);
 	}
 
-	if ($group["name"] === "minecraft:blast_furnace" || $group["name"] === "minecraft:smoker" || $group["name"] === "minecraft:furnace") {
+	if (in_array($group["name"], ["minecraft:furnace", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:redstone_ore", "minecraft:deepslate_redstone_ore", "minecraft:redstone_lamp"], true)) {
 		$obj["type"] = "multi";
 		$obj["multi_name"] = "lit";
 		$obj["multi_states"] = [
@@ -432,6 +432,131 @@ foreach ($groupsJtb as $group) {
 			"false" => ["name" => $group["name"]]
 		];
 		unset($values["lit"]);
+	}
+
+	if ($group["name"] === "minecraft:cave_vines" || $group["name"] === "minecraft:cave_vines_plant") {
+		$obj["type"] = "multi";
+		$obj["multi_name"] = "berries";
+		$obj["multi_states"] = [
+			"true" => ["name" => $group["name"] === "minecraft:cave_vines" ? "minecraft:cave_vines_head_with_berries" : "minecraft:cave_vines_body_with_berries"],
+			"false" => ["name" => $group["name"]]
+		];
+		unset($values["berries"]);
+	}
+
+	if ($group["name"] === "minecraft:comparator") {
+		$obj["type"] = "multi";
+		$obj["multi_name"] = "powered";
+		$obj["multi_states"] = [
+			"true" => ["name" => "minecraft:powered_comparator", "state_addition" => ["output_lit_bit" => "true"]],
+			"false" => ["name" => "minecraft:unpowered_comparator", "state_addition" => ["output_lit_bit" => "false"]]
+		];
+		unset($values["powered"], $bedrockValues["output_lit_bit"]);
+	}
+
+	if ($group["name"] === "minecraft:daylight_detector") {
+		$obj["type"] = "multi";
+		$obj["multi_name"] = "inverted";
+		$obj["multi_states"] = [
+			"true" => ["name" => "minecraft:daylight_detector_inverted"],
+			"false" => ["name" => "minecraft:daylight_detector"]
+		];
+		unset($values["inverted"]);
+	}
+
+	if ($group["name"] === "minecraft:lever") {
+		$obj["type"] = "combined_multi";
+		$obj["combined_names"] = [
+			"face",
+			"facing"
+		];
+		$obj["combined_states"] = [
+			"ceiling" => [
+				"east" => [
+					"false" => ["lever_direction" => "down_east_west", "open_bit" => "true"],
+					"true" => ["lever_direction" => "down_east_west", "open_bit" => "false"]
+				],
+				"north" => [
+					"false" => ["lever_direction" => "down_north_south", "open_bit" => "false"],
+					"true" => ["lever_direction" => "down_north_south", "open_bit" => "true"]
+				],
+				"south" => [
+					"false" => ["lever_direction" => "down_north_south", "open_bit" => "true"],
+					"true" => ["lever_direction" => "down_north_south", "open_bit" => "false"]
+				],
+				"west" => [
+					"false" => ["lever_direction" => "down_east_west", "open_bit" => "false"],
+					"true" => ["lever_direction" => "down_east_west", "open_bit" => "true"]
+				]
+			],
+			"floor" => [
+				"east" => [
+					"false" => ["lever_direction" => "up_east_west", "open_bit" => "true"],
+					"true" => ["lever_direction" => "up_east_west", "open_bit" => "false"]
+				],
+				"north" => [
+					"false" => ["lever_direction" => "up_north_south", "open_bit" => "false"],
+					"true" => ["lever_direction" => "up_north_south", "open_bit" => "true"]
+				],
+				"south" => [
+					"false" => ["lever_direction" => "up_north_south", "open_bit" => "true"],
+					"true" => ["lever_direction" => "up_north_south", "open_bit" => "false"]
+				],
+				"west" => [
+					"false" => ["lever_direction" => "up_east_west", "open_bit" => "false"],
+					"true" => ["lever_direction" => "up_east_west", "open_bit" => "true"]
+				]
+			],
+			"wall" => [
+				"east" => [
+					"false" => ["lever_direction" => "east", "open_bit" => "false"],
+					"true" => ["lever_direction" => "east", "open_bit" => "true"]
+				],
+				"north" => [
+					"false" => ["lever_direction" => "north", "open_bit" => "false"],
+					"true" => ["lever_direction" => "north", "open_bit" => "true"]
+				],
+				"south" => [
+					"false" => ["lever_direction" => "south", "open_bit" => "false"],
+					"true" => ["lever_direction" => "south", "open_bit" => "true"]
+				],
+				"west" => [
+					"false" => ["lever_direction" => "west", "open_bit" => "false"],
+					"true" => ["lever_direction" => "west", "open_bit" => "true"]
+				]
+			]
+		];
+		unset($values["face"], $values["facing"], $values["powered"], $bedrockValues["lever_direction"], $bedrockValues["open_bit"]);
+	}
+
+	if ($group["name"] === "minecraft:piston_head") {
+		$obj["type"] = "multi";
+		$obj["multi_name"] = "type";
+		$obj["multi_states"] = [
+			"normal" => ["name" => "minecraft:piston_arm_collision"],
+			"sticky" => ["name" => "minecraft:sticky_piston_arm_collision"]
+		];
+		unset($values["type"]);
+	}
+
+	if($group["name"] === "minecraft:redstone_torch" || $group["name"] === "minecraft:redstone_wall_torch") {
+		$obj["type"] = "multi";
+		$obj["multi_name"] = "lit";
+		$obj["multi_states"] = [
+			"true" => ["name" => "minecraft:redstone_torch"],
+			"false" => ["name" => "minecraft:unlit_redstone_torch"]
+		];
+		unset($values["lit"]);
+	}
+
+	if ($group["name"] === "minecraft:repeater") {
+		$obj["type"] = "multi";
+		$obj["multi_name"] = "powered";
+		$obj["multi_states"] = [
+			"true" => ["name" => "minecraft:powered_repeater"],
+			"false" => ["name" => "minecraft:unpowered_repeater"]
+		];
+		unset($values["powered"]);
 	}
 
 	$failed = false;

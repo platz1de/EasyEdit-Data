@@ -1980,6 +1980,36 @@
         "type": "singular",
         "name": "minecraft:air"
     },
+    "minecraft:cave_vines": {
+        "type": "multi",
+        "state_renames": {
+            "age": "growing_plant_age"
+        },
+        "multi_name": "berries",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:cave_vines_head_with_berries"
+            },
+            "false": {
+                "name": "minecraft:cave_vines"
+            }
+        }
+    },
+    "minecraft:cave_vines_plant": {
+        "type": "multi",
+        "state_addition": {
+            "growing_plant_age": "0"
+        },
+        "multi_name": "berries",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:cave_vines_body_with_berries"
+            },
+            "false": {
+                "name": "minecraft:cave_vines_plant"
+            }
+        }
+    },
     "minecraft:chain": {
         "type": "singular",
         "name": "minecraft:chain",
@@ -2340,6 +2370,40 @@
                 "south": "3",
                 "up": "1",
                 "west": "4"
+            }
+        }
+    },
+    "minecraft:comparator": {
+        "type": "multi",
+        "state_renames": {
+            "facing": "direction",
+            "mode": "output_subtract_bit"
+        },
+        "state_values": {
+            "direction": {
+                "east": "3",
+                "north": "2",
+                "south": "0",
+                "west": "1"
+            },
+            "output_subtract_bit": {
+                "compare": "false",
+                "subtract": "true"
+            }
+        },
+        "multi_name": "powered",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:powered_comparator",
+                "state_addition": {
+                    "output_lit_bit": "true"
+                }
+            },
+            "false": {
+                "name": "minecraft:unpowered_comparator",
+                "state_addition": {
+                    "output_lit_bit": "false"
+                }
             }
         }
     },
@@ -3293,6 +3357,21 @@
             "shape"
         ]
     },
+    "minecraft:daylight_detector": {
+        "type": "multi",
+        "state_renames": {
+            "power": "redstone_signal"
+        },
+        "multi_name": "inverted",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:daylight_detector_inverted"
+            },
+            "false": {
+                "name": "minecraft:daylight_detector"
+            }
+        }
+    },
     "minecraft:dead_brain_coral": {
         "type": "singular",
         "name": "minecraft:coral",
@@ -3677,6 +3756,18 @@
     },
     "minecraft:deepslate_lapis_ore": {
         "type": "none"
+    },
+    "minecraft:deepslate_redstone_ore": {
+        "type": "multi",
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:lit_deepslate_redstone_ore"
+            },
+            "false": {
+                "name": "minecraft:deepslate_redstone_ore"
+            }
+        }
     },
     "minecraft:deepslate_tile_slab": {
         "type": "multi",
@@ -5543,6 +5634,142 @@
         "state_removals": [
             "has_book"
         ]
+    },
+    "minecraft:lever": {
+        "type": "combined_multi",
+        "name": "minecraft:lever",
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "combined_states": {
+            "ceiling": {
+                "east": {
+                    "false": {
+                        "lever_direction": "down_east_west",
+                        "open_bit": "true"
+                    },
+                    "true": {
+                        "lever_direction": "down_east_west",
+                        "open_bit": "false"
+                    }
+                },
+                "north": {
+                    "false": {
+                        "lever_direction": "down_north_south",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "down_north_south",
+                        "open_bit": "true"
+                    }
+                },
+                "south": {
+                    "false": {
+                        "lever_direction": "down_north_south",
+                        "open_bit": "true"
+                    },
+                    "true": {
+                        "lever_direction": "down_north_south",
+                        "open_bit": "false"
+                    }
+                },
+                "west": {
+                    "false": {
+                        "lever_direction": "down_east_west",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "down_east_west",
+                        "open_bit": "true"
+                    }
+                }
+            },
+            "floor": {
+                "east": {
+                    "false": {
+                        "lever_direction": "up_east_west",
+                        "open_bit": "true"
+                    },
+                    "true": {
+                        "lever_direction": "up_east_west",
+                        "open_bit": "false"
+                    }
+                },
+                "north": {
+                    "false": {
+                        "lever_direction": "up_north_south",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "up_north_south",
+                        "open_bit": "true"
+                    }
+                },
+                "south": {
+                    "false": {
+                        "lever_direction": "up_north_south",
+                        "open_bit": "true"
+                    },
+                    "true": {
+                        "lever_direction": "up_north_south",
+                        "open_bit": "false"
+                    }
+                },
+                "west": {
+                    "false": {
+                        "lever_direction": "up_east_west",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "up_east_west",
+                        "open_bit": "true"
+                    }
+                }
+            },
+            "wall": {
+                "east": {
+                    "false": {
+                        "lever_direction": "east",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "east",
+                        "open_bit": "true"
+                    }
+                },
+                "north": {
+                    "false": {
+                        "lever_direction": "north",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "north",
+                        "open_bit": "true"
+                    }
+                },
+                "south": {
+                    "false": {
+                        "lever_direction": "south",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "south",
+                        "open_bit": "true"
+                    }
+                },
+                "west": {
+                    "false": {
+                        "lever_direction": "west",
+                        "open_bit": "false"
+                    },
+                    "true": {
+                        "lever_direction": "west",
+                        "open_bit": "true"
+                    }
+                }
+            }
+        }
     },
     "minecraft:light": {
         "type": "singular",
@@ -7761,6 +7988,34 @@
             "extended"
         ]
     },
+    "minecraft:piston_head": {
+        "type": "multi",
+        "state_renames": {
+            "facing": "facing_direction"
+        },
+        "state_values": {
+            "facing_direction": {
+                "down": "0",
+                "east": "4",
+                "north": "3",
+                "south": "2",
+                "up": "1",
+                "west": "5"
+            }
+        },
+        "state_removals": [
+            "short"
+        ],
+        "multi_name": "type",
+        "multi_states": {
+            "normal": {
+                "name": "minecraft:piston_arm_collision"
+            },
+            "sticky": {
+                "name": "minecraft:sticky_piston_arm_collision"
+            }
+        }
+    },
     "minecraft:player_head": {
         "type": "singular",
         "name": "minecraft:skull",
@@ -9495,6 +9750,68 @@
     "minecraft:redstone_block": {
         "type": "none"
     },
+    "minecraft:redstone_lamp": {
+        "type": "multi",
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:lit_redstone_lamp"
+            },
+            "false": {
+                "name": "minecraft:redstone_lamp"
+            }
+        }
+    },
+    "minecraft:redstone_ore": {
+        "type": "multi",
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:lit_redstone_ore"
+            },
+            "false": {
+                "name": "minecraft:redstone_ore"
+            }
+        }
+    },
+    "minecraft:redstone_torch": {
+        "type": "multi",
+        "state_addition": {
+            "torch_facing_direction": "top"
+        },
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:redstone_torch"
+            },
+            "false": {
+                "name": "minecraft:unlit_redstone_torch"
+            }
+        }
+    },
+    "minecraft:redstone_wall_torch": {
+        "type": "multi",
+        "state_renames": {
+            "facing": "torch_facing_direction"
+        },
+        "state_values": {
+            "torch_facing_direction": {
+                "east": "west",
+                "north": "south",
+                "south": "north",
+                "west": "east"
+            }
+        },
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:redstone_torch"
+            },
+            "false": {
+                "name": "minecraft:unlit_redstone_torch"
+            }
+        }
+    },
     "minecraft:redstone_wire": {
         "type": "singular",
         "name": "minecraft:redstone_wire",
@@ -9510,6 +9827,39 @@
     },
     "minecraft:reinforced_deepslate": {
         "type": "none"
+    },
+    "minecraft:repeater": {
+        "type": "multi",
+        "state_renames": {
+            "delay": "repeater_delay",
+            "facing": "direction"
+        },
+        "state_values": {
+            "repeater_delay": {
+                "1": "0",
+                "2": "1",
+                "3": "2",
+                "4": "3"
+            },
+            "direction": {
+                "east": "3",
+                "north": "2",
+                "south": "0",
+                "west": "1"
+            }
+        },
+        "state_removals": [
+            "locked"
+        ],
+        "multi_name": "powered",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:powered_repeater"
+            },
+            "false": {
+                "name": "minecraft:unpowered_repeater"
+            }
+        }
     },
     "minecraft:repeating_command_block": {
         "type": "singular",
