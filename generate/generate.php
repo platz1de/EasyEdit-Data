@@ -173,6 +173,7 @@ foreach ($groupsJtb as $group) {
 
 	$javaStates = [];
 	$bedrockStates = [];
+	$bedrockStatesFlattened = [];
 	foreach ($group["states"] as $java => $bedrock) {
 		preg_match("/^([a-z\d:_]+)(?:\[(.*)])?$/", $java, $matches);
 		if (count($matches) === 0) {
@@ -198,12 +199,7 @@ foreach ($groupsJtb as $group) {
 			}
 		}
 		$bedrockStates[$matches[1]][] = $states;
-	}
-	$bedrockStatesFlattened = [];
-	foreach ($bedrockStates as $states) {
-		foreach ($states as $state) {
-			$bedrockStatesFlattened[] = $state;
-		}
+		$bedrockStatesFlattened[] = $states;
 	}
 
 	$obj = ["type" => "unknown"];
@@ -294,7 +290,7 @@ foreach ($groupsJtb as $group) {
 			unset($values[$key]);
 		}
 	}
-	if ($values !== [] || $bedrockValues !== []) {
+	if ($obj["type"] === "singular" && ($values !== [] || $bedrockValues !== [])) {
 		if ($values === []) {
 			foreach ($bedrockValues as $key => $value) {
 				$value = array_unique($value);
@@ -426,6 +422,16 @@ foreach ($groupsJtb as $group) {
 			"15" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "15"]]
 		];
 		unset($values["level"], $bedrockValues["liquid_depth"]);
+	}
+
+	if ($group["name"] === "minecraft:blast_furnace" || $group["name"] === "minecraft:smoker" || $group["name"] === "minecraft:furnace") {
+		$obj["type"] = "multi";
+		$obj["multi_name"] = "lit";
+		$obj["multi_states"] = [
+			"true" => ["name" => "minecraft:lit_" . substr($group["name"], 10)],
+			"false" => ["name" => $group["name"]]
+		];
+		unset($values["lit"]);
 	}
 
 	$failed = false;

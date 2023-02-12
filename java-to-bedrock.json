@@ -1313,6 +1313,29 @@
             "waterlogged"
         ]
     },
+    "minecraft:blast_furnace": {
+        "type": "multi",
+        "state_renames": {
+            "facing": "facing_direction"
+        },
+        "state_values": {
+            "facing_direction": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        },
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:lit_blast_furnace"
+            },
+            "false": {
+                "name": "minecraft:blast_furnace"
+            }
+        }
+    },
     "minecraft:blue_banner": {
         "type": "singular",
         "name": "minecraft:standing_banner",
@@ -4313,6 +4336,29 @@
     },
     "minecraft:frosted_ice": {
         "type": "none"
+    },
+    "minecraft:furnace": {
+        "type": "multi",
+        "state_renames": {
+            "facing": "facing_direction"
+        },
+        "state_values": {
+            "facing_direction": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        },
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:lit_furnace"
+            },
+            "false": {
+                "name": "minecraft:furnace"
+            }
+        }
     },
     "minecraft:gilded_blackstone": {
         "type": "none"
@@ -9825,6 +9871,29 @@
     },
     "minecraft:smithing_table": {
         "type": "none"
+    },
+    "minecraft:smoker": {
+        "type": "multi",
+        "state_renames": {
+            "facing": "facing_direction"
+        },
+        "state_values": {
+            "facing_direction": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        },
+        "multi_name": "lit",
+        "multi_states": {
+            "true": {
+                "name": "minecraft:lit_smoker"
+            },
+            "false": {
+                "name": "minecraft:smoker"
+            }
+        }
     },
     "minecraft:smooth_basalt": {
         "type": "none"
