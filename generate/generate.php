@@ -171,6 +171,41 @@ foreach ($groupsJtb as $group) {
 		continue;
 	}
 
+	$pre = $group["states"];
+	$defaults = [];
+	foreach ($group["states"] as $java => $bedrock) {
+		preg_match("/^([a-z\d:_]+)\[(.*)]$/", $java, $matches);
+		if (count($matches) === 0) {
+			continue;
+		}
+		foreach (explode(",", $matches[2]) as $state) {
+			$d = explode("=", $state);
+			if (isset($defaults[$d[0]])) continue;
+			$defaults[$d[0]] = $d[1];
+		}
+	}
+
+	foreach ($group["states"] as $java => $bedrock) {
+		preg_match("/^([a-z\d:_]+)(?:\[(.*)])?$/", $java, $matches);
+		$states = [];
+		if (isset($matches[2])) {
+			foreach (explode(",", $matches[2]) as $state) {
+				$d = explode("=", $state);
+				$states[$d[0]] = $d[1];
+			}
+		}
+		foreach ($defaults as $key => $value) {
+			if (!isset($states[$key])) {
+				$states[$key] = $value;
+			}
+		}
+		unset($group["states"][$java]);
+		$java = $matches[1] . "[" . implode(",", array_map(function ($key, $value) {
+				return "$key=$value";
+			}, array_keys($states), $states)) . "]";
+		$group["states"][$java] = $bedrock;
+	}
+
 	$javaStates = [];
 	$bedrockStates = [];
 	$bedrockStatesFlattened = [];
@@ -180,7 +215,7 @@ foreach ($groupsJtb as $group) {
 			throw new RuntimeException("Invalid java block: $java");
 		}
 		$states = [];
-		if (isset($matches[2])) {
+		if ($matches[2] !== "") {
 			foreach (explode(",", $matches[2]) as $state) {
 				$d = explode("=", $state);
 				$states[$d[0]] = $d[1];
@@ -228,7 +263,7 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 	foreach ($values as $key => $value) {
-		$checkValues = function ($prev, $past) use (&$values, &$bedrockValues, &$obj) {
+		$checkValues = function ($prev, $past) use (&$values, &$bedrockValues, &$obj, $group) {
 			if (!isset($values[$prev], $bedrockValues[$past])) return false;
 			$hasChanges = false;
 			foreach ($values[$prev] as $i => $v) {
@@ -268,7 +303,7 @@ foreach ($groupsJtb as $group) {
 			if (count($value) !== 1) {
 				throw new RuntimeException("Added state $key with multiple values");
 			}
-			$obj["state_addition"][$key] = $value[0];
+			$obj["state_additions"][$key] = $value[0];
 			unset($bedrockValues[$key]);
 		}
 		if (in_array($key, $customData["jtb_additions"][$group["name"]] ?? [], true)) {
@@ -276,7 +311,7 @@ foreach ($groupsJtb as $group) {
 			if (count($value) !== 1) {
 				throw new RuntimeException("Added state $key with multiple values");
 			}
-			$obj["state_addition"][$key] = $value[0];
+			$obj["state_additions"][$key] = $value[0];
 			unset($bedrockValues[$key]);
 		}
 	}
@@ -297,12 +332,14 @@ foreach ($groupsJtb as $group) {
 				if (count($value) !== 1) {
 					throw new RuntimeException("Added state $key with multiple values");
 				}
-				$obj["state_addition"][$key] = $value[0];
+				$obj["state_additions"][$key] = $value[0];
 				unset($bedrockValues[$key]);
 			}
 		} elseif ($bedrockValues === []) {
-			$obj["state_removals"] = array_keys($values);
-			$values = [];
+			foreach ($values as $key => $value) {
+				$obj["state_removals"][] = $key;
+				unset($values[$key]);
+			}
 		}
 	}
 
@@ -348,19 +385,19 @@ foreach ($groupsJtb as $group) {
 			$obj["multi_states"] = [
 				"top" => [
 					"name" => $normalName,
-					"state_addition" => [
+					"state_additions" => [
 						"top_slot_bit" => "true"
 					]
 				],
 				"bottom" => [
 					"name" => $normalName,
-					"state_addition" => [
+					"state_additions" => [
 						"top_slot_bit" => "false"
 					]
 				],
 				"double" => [
 					"name" => $doubleState,
-					"state_addition" => [
+					"state_additions" => [
 						"top_slot_bit" => "false"
 					]
 				]
@@ -404,22 +441,22 @@ foreach ($groupsJtb as $group) {
 		$obj["multi_name"] = "level";
 		$flowingName = "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava");
 		$obj["multi_states"] = [
-			"0" => ["name" => $group["name"], "state_addition" => ["liquid_depth" => "0"]],
-			"1" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "1"]],
-			"2" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "2"]],
-			"3" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "3"]],
-			"4" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "4"]],
-			"5" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "5"]],
-			"6" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "6"]],
-			"7" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "7"]],
-			"8" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "8"]],
-			"9" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "9"]],
-			"10" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "10"]],
-			"11" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "11"]],
-			"12" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "12"]],
-			"13" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "13"]],
-			"14" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "14"]],
-			"15" => ["name" => $flowingName, "state_addition" => ["liquid_depth" => "15"]]
+			"0" => ["name" => $group["name"], "state_additions" => ["liquid_depth" => "0"]],
+			"1" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "1"]],
+			"2" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "2"]],
+			"3" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "3"]],
+			"4" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "4"]],
+			"5" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "5"]],
+			"6" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "6"]],
+			"7" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "7"]],
+			"8" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "8"]],
+			"9" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "9"]],
+			"10" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "10"]],
+			"11" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "11"]],
+			"12" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "12"]],
+			"13" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "13"]],
+			"14" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "14"]],
+			"15" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "15"]]
 		];
 		unset($values["level"], $bedrockValues["liquid_depth"]);
 	}
@@ -439,7 +476,7 @@ foreach ($groupsJtb as $group) {
 		$obj["multi_name"] = "berries";
 		$obj["multi_states"] = [
 			"true" => ["name" => $group["name"] === "minecraft:cave_vines" ? "minecraft:cave_vines_head_with_berries" : "minecraft:cave_vines_body_with_berries"],
-			"false" => ["name" => $group["name"]]
+			"false" => ["name" => "minecraft:cave_vines"]
 		];
 		unset($values["berries"]);
 	}
@@ -448,8 +485,8 @@ foreach ($groupsJtb as $group) {
 		$obj["type"] = "multi";
 		$obj["multi_name"] = "powered";
 		$obj["multi_states"] = [
-			"true" => ["name" => "minecraft:powered_comparator", "state_addition" => ["output_lit_bit" => "true"]],
-			"false" => ["name" => "minecraft:unpowered_comparator", "state_addition" => ["output_lit_bit" => "false"]]
+			"true" => ["name" => "minecraft:powered_comparator", "state_additions" => ["output_lit_bit" => "true"]],
+			"false" => ["name" => "minecraft:unpowered_comparator", "state_additions" => ["output_lit_bit" => "false"]]
 		];
 		unset($values["powered"], $bedrockValues["output_lit_bit"]);
 	}
@@ -468,7 +505,8 @@ foreach ($groupsJtb as $group) {
 		$obj["type"] = "combined_multi";
 		$obj["combined_names"] = [
 			"face",
-			"facing"
+			"facing",
+			"powered"
 		];
 		$obj["combined_states"] = [
 			"ceiling" => [
@@ -539,7 +577,7 @@ foreach ($groupsJtb as $group) {
 		unset($values["type"]);
 	}
 
-	if($group["name"] === "minecraft:redstone_torch" || $group["name"] === "minecraft:redstone_wall_torch") {
+	if ($group["name"] === "minecraft:redstone_torch" || $group["name"] === "minecraft:redstone_wall_torch") {
 		$obj["type"] = "multi";
 		$obj["multi_name"] = "lit";
 		$obj["multi_states"] = [
@@ -574,6 +612,9 @@ foreach ($groupsJtb as $group) {
 		$obj["missing_java"] = $values;
 		$obj["missing_bedrock"] = $bedrockValues;
 	}
+	if ($defaults !== []) {
+		$obj["defaults"] = $defaults;
+	}
 	$failed ? $failedJTB[$group["name"]] = $obj : $jtb[$group["name"]] = $obj;
 }
 
@@ -582,9 +623,162 @@ echo "Converted " . count($jtb) . " blocks" . PHP_EOL;
 file_put_contents("debug/java-to-bedrock-fail.json", json_encode($failedJTB, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../java-to-bedrock.json", json_encode($jtb, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
+echo "Testing mappings..." . PHP_EOL;
+$succeeded = 0;
+$failedTests = [];
 foreach ($javaToBedrock as $java => $bedrock) {
-	if (str_contains($java, "waterlogged=false")) {
-		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
+	$pre = $java;
+	$java = toBedrock($java, $jtb);
+	if ($java === null) {
+		continue;
+	}
+	$bedrock = sortState($bedrock);
+	if ($java === $bedrock) {
+		$succeeded++;
+	} else {
+		$failedTests[] = ["pre" => $pre, "java" => $java, "bedrock" => $bedrock];
+	}
+}
+echo "Successfully tested $succeeded mappings, " . (count($failedTests)) . " failed" . PHP_EOL;
+file_put_contents("debug/java-to-bedrock-tests.json", json_encode($failedTests, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+function toBedrock(string $java, $jtb): string|null
+{
+	preg_match("/^([a-z\d:_]+)(?:\[(.+)])?$/", $java, $matches);
+	if (count($matches) === 0) {
+		throw new RuntimeException("Invalid java block: $java");
+	}
+	$javaName = $matches[1];
+	$data = $jtb[$javaName] ?? null;
+	if ($data === null) {
+		return null;
+	}
+	if (isset($matches[2])) {
+		$states = [];
+		foreach (explode(",", $matches[2]) as $state) {
+			$state = explode("=", $state);
+			if (count($state) !== 2) {
+				throw new RuntimeException("Invalid java block state: $java");
+			}
+			$states[$state[0]] = $state[1];
+		}
+	} else {
+		$states = [];
+	}
+	foreach ($data["defaults"] ?? [] as $key => $value) {
+		if (!isset($states[$key])) {
+			$states[$key] = $value;
+		}
+	}
+	switch ($data["type"]) {
+		case "none":
+			break;
+		case "singular":
+			$java = $data["name"];
+			processStates($states, $data);
+			$java .= (count($states) === 0 ? "" : "[" . implode(",", array_map(static function (string $key, string $value) {
+					return "$key=$value";
+				}, array_keys($states), $states)) . "]");
+			break;
+		case "multi":
+			$d = $data["multi_states"][$states[$data["multi_name"]]];
+			unset($states[$data["multi_name"]]);
+			processStates($states, $data);
+			processStates($states, $d);
+			$java = $d["name"] . (count($states) === 0 ? "" : "[" . implode(",", array_map(static function (string $key, string $value) {
+						return "$key=$value";
+					}, array_keys($states), $states)) . "]");
+			break;
+		case "combined":
+			$keys = [];
+			foreach ($data["combined_names"] as $key) {
+				$keys[] = $states[$key];
+				unset($states[$key]);
+			}
+			$r = function ($data, array $keys) use (&$r) {
+				if (!is_array($data)) {
+					return $data;
+				}
+				$key = array_shift($keys);
+				return $r($data[$key], $keys);
+			};
+			$value = $r($data["combined_states"], $keys);
+			processStates($states, $data);
+			$states[$data["target_name"]] = $value;
+			$java = $data["name"] . (count($states) === 0 ? "" : "[" . implode(",", array_map(static function (string $key, string $value) {
+						return "$key=$value";
+					}, array_keys($states), $states)) . "]");
+			break;
+		case "combined_multi":
+			$keys = [];
+			foreach ($data["combined_names"] as $key) {
+				$keys[] = $states[$key];
+				unset($states[$key]);
+			}
+			$r = function (array $data, array $keys) use (&$r) {
+				if (count($keys) === 0) {
+					return $data;
+				}
+				$key = array_shift($keys);
+				return $r($data[$key], $keys);
+			};
+			$d = $r($data["combined_states"], $keys);
+			processStates($states, $data);
+			foreach ($d as $key => $value) {
+				$states[$key] = $value;
+			}
+			$java = $data["name"] . (count($states) === 0 ? "" : "[" . implode(",", array_map(static function (string $key, string $value) {
+						return "$key=$value";
+					}, array_keys($states), $states)) . "]");
+			break;
+	}
+	return sortState($java);
+}
+
+function processStates(&$states, $data)
+{
+	foreach ($data["state_removals"] ?? [] as $state) {
+		unset($states[$state]);
+	}
+	/**
+	 * @var string $old
+	 * @var string $new
+	 */
+	foreach ($data["state_renames"] ?? [] as $old => $new) {
+		if (isset($states[$old])) {
+			$value = $states[$old];
+			unset($states[$old]);
+			$states[$new] = $value;
+		}
+	}
+	/**
+	 * @var string   $state
+	 * @var string[] $values
+	 */
+	foreach ($data["state_values"] ?? [] as $state => $values) {
+		if (isset($states[$state])) {
+			$states[$state] = $values[$states[$state]];
+		}
+	}
+	foreach ($data["state_additions"] ?? [] as $state => $value) {
+		$states[$state] = $value;
+	}
+}
+
+function sortState(string $state): string
+{
+	preg_match("/^(.+)\[(.+)\]$/", $state, $matches);
+	if (count($matches) === 0) {
+		return $state;
+	}
+	$states = explode(",", $matches[2]);
+	sort($states);
+	return $matches[1] . "[" . implode(",", $states) . "]";
+}
+
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (str_contains($java, "waterlogged = false")) {
+		preg_match(" /^minecraft:(.+)\[(.+)\]$/", $java, $matches);
 		if (count($matches) === 0) {
 			continue;
 		}
@@ -596,13 +790,13 @@ foreach ($javaToBedrock as $java => $bedrock) {
 			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
 			continue;
 		}
-		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
+		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(", ", $states) . "]"] = $bedrock;
 	}
 }
 
 foreach ($javaToBedrock as $java => $bedrock) {
-	if (str_contains($java, "powered=false")) {
-		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
+	if (str_contains($java, "powered = false")) {
+		preg_match(" /^minecraft:(.+)\[(.+)\]$/", $java, $matches);
 		if (count($matches) === 0) {
 			continue;
 		}
@@ -614,22 +808,7 @@ foreach ($javaToBedrock as $java => $bedrock) {
 			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
 			continue;
 		}
-		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
-	}
-}
-
-$current = "";
-foreach ($javaToBedrock as $java => $bedrock) {
-	preg_match("/^minecraft:(.+)\[.+\]$/", $java, $matches);
-	if (count($matches) === 0) {
-		$current = $java;
-		continue;
-	}
-	if ($current !== "minecraft:" . $matches[1]) {
-		$current = "minecraft:" . $matches[1];
-		if (!isset($javaToBedrock[$current])) {
-			$javaToBedrock[$current] = $bedrock;
-		}
+		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(", ", $states) . "]"] = $bedrock;
 	}
 }
 
@@ -686,67 +865,6 @@ file_put_contents("../flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" =
 echo "Rotated " . count($rotations) . " blocks" . PHP_EOL;
 echo "Flipped " . count($flipX) + count($flipZ) + count($flipY) . " blocks" . PHP_EOL;
 
-/**
- * Some properties of blocks are defined with tiles in bedrock while the blockstate is used in java,
- * they need to be remapped in a special way, allowing full conversion
- */
-$jtbTileStates = [];
-$btjTileStates = [];
-foreach ($javaToBedrock as $state => $id) {
-	preg_match("/(.*)\[(.*?)]/", $state, $matches);
-	if (!isset($matches[2])) {
-		continue;
-	}
-	$properties = explode(",", $matches[2]);
-	if (str_ends_with($matches[1], "chest")) {
-		$facing = null;
-		$type = null;
-		foreach ($properties as $property) {
-			if (str_starts_with($property, "type=")) {
-				$type = str_replace("type=", "", $property);
-			}
-			if (str_starts_with($property, "facing=")) {
-				$facing = str_replace("facing=", "", $property);
-			}
-		}
-		if ($facing === null || $type === null || $type === "single") {
-			continue;
-		}
-		$facing = ["north" => Facing::NORTH, "east" => Facing::EAST, "south" => Facing::SOUTH, "west" => Facing::WEST][$facing];
-		$identifier = Facing::toString(Facing::rotate($facing, Axis::Y, $type === "left"));
-		$jtbTileStates["chest_relation"][$state] = $identifier;
-		$btjTileStates["chest_relation"][$bedrockToJava[$id]][$identifier] = $state;
-	} elseif (str_ends_with($matches[1], "shulker_box")) {
-		foreach ($properties as $property) {
-			if (str_starts_with($property, "facing=")) {
-				$jtbTileStates["shulker_box_facing"][$state] = str_replace("facing=", "", $property);
-				$btjTileStates["shulker_box_facing"][$bedrockToJava[$id]][str_replace("facing=", "", $property)] = $state;
-			}
-		}
-	} elseif (!str_ends_with($matches[1], "piston_head") && (str_ends_with($matches[1], "head") || str_ends_with($matches[1], "skull"))) {
-		$jtbTileStates["skull_type"][$state] = preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1]);
-		$btjTileStates["skull_type"][$bedrockToJava[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])] = $state;
-		foreach ($properties as $property) {
-			if (str_starts_with($property, "rotation=")) {
-				$jtbTileStates["skull_rotation"][$state] = str_replace("rotation=", "", $property);
-				$btjTileStates["skull_rotation"][$bedrockToJava[$id]][preg_replace("/(_wall)?(_head|_skull|minecraft:)/", "", $matches[1])][str_replace("rotation=", "", $property)] = $state;
-			}
-		}
-	}
-}
-
-$tmp = $btjTileStates["skull_rotation"];
-$btjTileStates["skull_rotation"] = [];
-foreach ($tmp as $placeholder1 => $data) {
-	foreach ($data as $placeholder2 => $value) {
-		$btjTileStates["skull_rotation"][$btjTileStates["skull_type"][$placeholder1][$placeholder2]] = $value;
-	}
-}
-
-file_put_contents("../tile-states-btj.json", json_encode($btjTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("../tile-states-jtb.json", json_encode($jtbTileStates, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-echo "Converted " . count($btjTileStates) . " tile states" . PHP_EOL;
-
 $blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/common/legacy.json"), true)["blocks"];
 
 $toBedrock = [];
@@ -762,10 +880,9 @@ foreach ($blockData as $legacyId => $state) {
 		$state = $matches[1] . "[" . implode(",", $properties) . "]";
 	}
 
-	if (isset($javaToBedrock[$state])) {
-		if ($javaToBedrock[$state] !== $legacyId) {
-			$toBedrock[$legacyId] = $javaToBedrock[$state];
-		}
+	$d = toBedrock($state, $jtb);
+	if ($d !== null) {
+		$toBedrock[$legacyId] = $d;
 	} else {
 		$missingData[$legacyId] = $state;
 	}
