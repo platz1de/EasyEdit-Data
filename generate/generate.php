@@ -21,6 +21,11 @@ try {
 
 $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW_ON_ERROR);
 $repo["version"] = BEDROCK_VERSION . "-" . Uuid::uuid4();
+$repo["state-version"] =
+	(1 << 24) | //major
+	(18 << 16) | //minor
+	(10 << 8) | //patch
+	(1); //revision
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $suppress = json_decode(file_get_contents("suppress.json"), true, 512, JSON_THROW_ON_ERROR);
