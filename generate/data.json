@@ -1,7 +1,15 @@
 {
   "jtb_states": {
 	"global": {
-	  "facing": "direction"
+	  "facing": "direction",
+	  "facing_": "facing_direction",
+	  "axis": "pillar_axis",
+	  "rotation": "ground_sign_direction",
+	  "rotation_": "facing_direction",
+	  "age": "growth",
+	  "power": "redstone_signal",
+	  "level": "fill_level",
+	  "half": "upper_block_bit"
 	},
 	"regex": {
 	  "/_wall$/": {
@@ -12,18 +20,161 @@
 		"up": "wall_post_bit"
 	  },
 	  "/_door$/": {
-		"half": "upper_block_bit",
 		"hinge": "door_hinge_bit"
+	  },
+	  "/_pressure_plate$/": {
+		"powered": "redstone_signal"
+	  },
+	  "/_sapling$/": {
+		"stage": "age_bit"
+	  },
+	  "/_trapdoor$/": {
+		"half": "upside_down_bit"
+	  },
+	  "/_button$/": {
+		"powered": "button_pressed_bit"
+	  },
+	  "/_stairs$/": {
+		"half": "upside_down_bit",
+		"facing": "weirdo_direction"
+	  },
+	  "/_bed$/": {
+		"part": "head_piece_bit"
+	  },
+	  "/_coral_wall_fan$/": {
+		"facing": "coral_direction"
+	  },
+	  "/rail$/": {
+		"powered": "rail_data_bit",
+		"shape": "rail_direction"
 	  }
+	},
+	"minecraft:nether_portal": {
+	  "axis": "portal_axis"
+	},
+	"minecraft:pointed_dripstone": {
+	  "thickness": "dripstone_thickness",
+	  "vertical_direction": "hanging"
+	},
+	"minecraft:bamboo": {
+	  "leaves": "bamboo_leaf_size",
+	  "stage": "age_bit",
+	  "age": "bamboo_stalk_thickness"
+	},
+	"minecraft:bell": {
+	  "powered": "toggle_bit"
+	},
+	"minecraft:big_dripleaf": {
+	  "tilt": "big_dripleaf_tilt"
+	},
+	"minecraft:brewing_stand": {
+	  "has_bottle_0": "brewing_stand_slot_a_bit",
+	  "has_bottle_1": "brewing_stand_slot_b_bit",
+	  "has_bottle_2": "brewing_stand_slot_c_bit"
+	},
+	"minecraft:bubble_column": {
+	  "drag": "drag_down"
+	},
+	"minecraft:cake": {
+	  "bites": "bite_counter"
+	},
+	"minecraft:campfire": {
+	  "lit": "extinguished"
+	},
+	"minecraft:soul_campfire": {
+	  "lit": "extinguished"
+	},
+	"minecraft:composter": {
+	  "level": "composter_fill_level"
+	},
+	"minecraft:end_portal_frame": {
+	  "eye": "end_portal_eye_bit"
+	},
+	"minecraft:farmland": {
+	  "moisture": "moisturized_amount"
+	},
+	"minecraft:grindstone": {
+	  "face": "attachment"
+	},
+	"minecraft:hopper": {
+	  "enabled": "toggle_bit"
+	},
+	"minecraft:jigsaw": {
+	  "orientation": "jigsaw_orientation"
+	},
+	"minecraft:kelp": {
+	  "age": "kelp_age"
+	},
+	"minecraft:light": {
+	  "level": "block_light_level"
+	},
+	"minecraft:mangrove_propagule": {
+	  "stage": "propagule_stage"
+	},
+	"minecraft:respawn_anchor": {
+	  "charges": "respawn_anchor_charge"
+	},
+	"minecraft:scaffolding": {
+	  "distance": "stability",
+	  "bottom": "stability_check"
+	},
+	"minecraft:sculk_sensor": {
+	  "power": "powered_bit"
+	},
+	"minecraft:sculk_shrieker": {
+	  "shrieking": "active"
+	},
+	"minecraft:sea_pickle": {
+	  "pickles": "cluster_count",
+	  "waterlogged": "dead_bit"
+	},
+	"minecraft:snow": {
+	  "layers": "height"
+	},
+	"minecraft:wall_torch": {
+	  "facing": "torch_facing_direction"
+	},
+	"minecraft:soul_wall_torch": {
+	  "facing": "torch_facing_direction"
+	},
+	"minecraft:structure_block": {
+	  "mode": "structure_block_type"
+	},
+	"minecraft:tall_seagrass":{
+	  "half": "sea_grass_type"
+	},
+	"minecraft:tnt": {
+	  "unstable": "explode_bit"
+	},
+	"minecraft:turtle_egg": {
+	  "eggs": "turtle_egg_count",
+	  "hatch": "cracked_state"
+	},
+	"minecraft:twisting_vines": {
+	  "age": "twisting_vines_age"
+	},
+	"minecraft:weeping_vines": {
+	  "age": "weeping_vines_age"
 	}
   },
   "jtb_additions": {
 	"global": [
 	  "wood_type",
 	  "new_leaf_type",
+	  "old_leaf_type",
 	  "new_log_type",
 	  "sapling_type",
-	  "wall_block_type"
+	  "wall_block_type",
+	  "color",
+	  "update_bit"
+	],
+	"minecraft:tripwire": [
+	  "suspended_bit"
+	]
+  },
+  "jtb_removals": {
+	"global": [
+	  "waterlogged"
 	]
   }
 }

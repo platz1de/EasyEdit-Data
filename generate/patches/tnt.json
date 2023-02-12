@@ -1,0 +1,4 @@
+{
+  "minecraft:tnt[unstable=false]": "minecraft:tnt[explode_bit=false,allow_underwater_bit=false]",
+  "minecraft:tnt[unstable=true]": "minecraft:tnt[explode_bit=true,allow_underwater_bit=false]"
+}

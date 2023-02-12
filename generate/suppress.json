@@ -49,8 +49,6 @@
 	"/minecraft:(red|brown)_mushroom_block\\[down=/": "only limited mushroom block data is saved",
 	"/minecraft:mushroom_stem\\[down=/": "only limited mushroom block data is saved",
 
-	"/minecraft:jigsaw\\[orientation=/": "marked as unsupported",
-
 	"/sculk_sensor_phase=(cooldown|active|inactive)/": "sculk sensor data is saved as a tile",
 
 	"/minecraft:note_block/": "noteblock data is saved as a tile",

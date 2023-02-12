@@ -1,0 +1,8 @@
+{
+  "minecraft:bamboo[age=0,leaves=none,stage=1]": "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=no_leaves,age_bit=true]",
+  "minecraft:bamboo[age=0,leaves=small,stage=1]": "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=small_leaves,age_bit=true]",
+  "minecraft:bamboo[age=0,leaves=large,stage=1]": "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=large_leaves,age_bit=true]",
+  "minecraft:bamboo[age=1,leaves=none,stage=1]": "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=no_leaves,age_bit=true]",
+  "minecraft:bamboo[age=1,leaves=small,stage=1]": "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=small_leaves,age_bit=true]",
+  "minecraft:bamboo[age=1,leaves=large,stage=1]": "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=large_leaves,age_bit=true]"
+}

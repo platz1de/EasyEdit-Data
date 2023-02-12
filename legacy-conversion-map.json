@@ -311,7 +311,7 @@
     "44:15": "minecraft:stone_block_slab[stone_slab_type=quartz,top_slot_bit=true]",
     "45:0": "minecraft:brick_block",
     "46:0": "minecraft:tnt[explode_bit=false,allow_underwater_bit=false]",
-    "46:1": "minecraft:tnt[explode_bit=false,allow_underwater_bit=true]",
+    "46:1": "minecraft:tnt[explode_bit=true,allow_underwater_bit=false]",
     "47:0": "minecraft:bookshelf",
     "48:0": "minecraft:mossy_cobblestone",
     "49:0": "minecraft:obsidian",

@@ -61,15 +61,18 @@ foreach ($javaToBedrock as $java => $bedrock) {
 	}
 }
 
-$pre = $javaToBedrock;
-$javaToBedrock["minecraft:bamboo[age=0,leaves=none,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=no_leaves,age_bit=true]";
-$javaToBedrock["minecraft:bamboo[age=0,leaves=small,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=small_leaves,age_bit=true]";
-$javaToBedrock["minecraft:bamboo[age=0,leaves=large,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thin,bamboo_leaf_size=large_leaves,age_bit=true]";
-$javaToBedrock["minecraft:bamboo[age=1,leaves=none,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=no_leaves,age_bit=true]";
-$javaToBedrock["minecraft:bamboo[age=1,leaves=small,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=small_leaves,age_bit=true]";
-$javaToBedrock["minecraft:bamboo[age=1,leaves=large,stage=1]"] = "minecraft:bamboo[bamboo_stalk_thickness=thick,bamboo_leaf_size=large_leaves,age_bit=true]";
-if ($pre === $javaToBedrock) {
-	echo "Bamboo fix failed" . PHP_EOL;
+foreach (scandir("patches") as $patch) {
+	if ($patch === "." || $patch === "..") {
+		continue;
+	}
+	$patchData = json_decode(file_get_contents("patches/$patch"), true, 512, JSON_THROW_ON_ERROR);
+	foreach ($patchData as $java => $bedrock) {
+		$pre = $javaToBedrock;
+		$javaToBedrock[$java] = $bedrock;
+		if ($pre === $javaToBedrock) {
+			echo "\e[31mFailed to apply patch $patch ($java -> $bedrock)\e[39m" . PHP_EOL;
+		}
+	}
 }
 
 $bedrockToJava = [];
@@ -128,42 +131,6 @@ foreach ($javaToBedrock as $java => $bedrock) {
 		if (!isset($javaToBedrock[$new])) {
 			$javaToBedrock[$new] = $bedrock;
 		}
-	}
-}
-
-foreach ($javaToBedrock as $java => $bedrock) {
-	if (str_contains($java, "waterlogged=false")) {
-		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
-		if (count($matches) === 0) {
-			continue;
-		}
-		$states = explode(",", $matches[2]);
-		$states = array_filter($states, static function (string $state) {
-			return !str_contains($state, "waterlogged");
-		});
-		if (count($states) === 0) {
-			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
-			continue;
-		}
-		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
-	}
-}
-
-foreach ($javaToBedrock as $java => $bedrock) {
-	if (str_contains($java, "powered=false")) {
-		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
-		if (count($matches) === 0) {
-			continue;
-		}
-		$states = explode(",", $matches[2]);
-		$states = array_filter($states, static function (string $state) {
-			return !str_contains($state, "powered");
-		});
-		if (count($states) === 0) {
-			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
-			continue;
-		}
-		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
 	}
 }
 
@@ -291,7 +258,7 @@ foreach ($groupsJtb as $group) {
 			unset($values[$prev], $bedrockValues[$past]);
 			return true;
 		};
-		if (!($checkValues($key, $key) || $checkValues($key, $key . "_bit") || (isset($customData["jtb_states"]["global"][$key]) && $checkValues($key, $customData["jtb_states"]["global"][$key])) || (isset($customData["jtb_states"][$group["name"]][$key]) && $checkValues($key, $customData["jtb_states"][$group["name"]][$key])))) {
+		if (!($checkValues($key, $key) || $checkValues($key, $key . "_bit") || (isset($customData["jtb_states"]["global"][$key]) && $checkValues($key, $customData["jtb_states"]["global"][$key])) || (isset($customData["jtb_states"]["global"][$key . "_"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "_"])) || (isset($customData["jtb_states"][$group["name"]][$key]) && $checkValues($key, $customData["jtb_states"][$group["name"]][$key])))) {
 			foreach ($customData["jtb_states"]["regex"] as $regex => $replacements) {
 				if (isset($replacements[$key]) && preg_match($regex, $group["name"]) && $checkValues($key, $replacements[$key])) {
 					break;
@@ -317,6 +284,16 @@ foreach ($groupsJtb as $group) {
 			unset($bedrockValues[$key]);
 		}
 	}
+	foreach ($values as $key => $value) {
+		if (in_array($key, $customData["jtb_removals"]["global"], true)) {
+			$obj["state_removals"][] = $key;
+			unset($values[$key]);
+		}
+		if (in_array($key, $customData["jtb_removals"][$group["name"]] ?? [], true)) {
+			$obj["state_removals"][] = $key;
+			unset($values[$key]);
+		}
+	}
 	if ($values !== [] || $bedrockValues !== []) {
 		if ($values === []) {
 			foreach ($bedrockValues as $key => $value) {
@@ -328,7 +305,7 @@ foreach ($groupsJtb as $group) {
 				unset($bedrockValues[$key]);
 			}
 		} elseif ($bedrockValues === []) {
-			$obj["state_drop"] = array_keys($values);
+			$obj["state_removals"] = array_keys($values);
 			$values = [];
 		}
 	}
@@ -342,13 +319,55 @@ foreach ($groupsJtb as $group) {
 		$obj["missing_bedrock"] = $bedrockValues;
 		$failed = true;
 	}
+	if ($obj["type"] === "unknown") {
+		$failed = true;
+	}
+	if ($failed) {
+		$obj["all"] = $group["states"];
+	}
 	$failed ? $failedJTB[$group["name"]] = $obj : $jtb[$group["name"]] = $obj;
 }
 
-if ($failedJTB !== []) echo "Failed to convert " . count($failedJTB) . " blocks" . PHP_EOL;
+if ($failedJTB !== []) echo "\e[31mFailed to convert " . count($failedJTB) . " blocks\e[39m" . PHP_EOL;
 echo "Converted " . count($jtb) . " blocks" . PHP_EOL;
 file_put_contents("debug/java-to-bedrock-fail.json", json_encode($failedJTB, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../java-to-bedrock.json", json_encode($jtb, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (str_contains($java, "waterlogged=false")) {
+		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
+		if (count($matches) === 0) {
+			continue;
+		}
+		$states = explode(",", $matches[2]);
+		$states = array_filter($states, static function (string $state) {
+			return !str_contains($state, "waterlogged");
+		});
+		if (count($states) === 0) {
+			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
+			continue;
+		}
+		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
+	}
+}
+
+foreach ($javaToBedrock as $java => $bedrock) {
+	if (str_contains($java, "powered=false")) {
+		preg_match("/^minecraft:(.+)\[(.+)\]$/", $java, $matches);
+		if (count($matches) === 0) {
+			continue;
+		}
+		$states = explode(",", $matches[2]);
+		$states = array_filter($states, static function (string $state) {
+			return !str_contains($state, "powered");
+		});
+		if (count($states) === 0) {
+			$javaToBedrock["minecraft:" . $matches[1]] = $bedrock;
+			continue;
+		}
+		$javaToBedrock["minecraft:" . $matches[1] . "[" . implode(",", $states) . "]"] = $bedrock;
+	}
+}
 
 $current = "";
 foreach ($javaToBedrock as $java => $bedrock) {
