@@ -310,7 +310,7 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 
-	if (str_ends_with($group["name"], "_slab")) {
+	if ($obj["type"] === "unknown" && str_ends_with($group["name"], "_slab")) {
 		$fail = false;
 		$types = ["top" => [], "bottom" => [], "double" => []];
 		foreach ($group["states"] as $state => $bedrock) {
@@ -371,6 +371,36 @@ foreach ($groupsJtb as $group) {
 			];
 			unset($values["type"], $bedrockValues["top_slot_bit"]);
 		}
+	}
+
+	if ($obj["type"] === "singular" && str_ends_with($group["name"], "_button")) {
+		$obj["type"] = "combined";
+		$obj["combined_names"] = [
+			"face",
+			"facing"
+		];
+		$obj["target_name"] = "facing_direction";
+		$obj["combined_states"] = [
+			"ceiling" => [
+				"east" => "0",
+				"north" => "0",
+				"south" => "0",
+				"west" => "0"
+			],
+			"floor" => [
+				"east" => "1",
+				"north" => "1",
+				"south" => "1",
+				"west" => "1"
+			],
+			"wall" => [
+				"east" => "5",
+				"north" => "2",
+				"south" => "3",
+				"west" => "4"
+			]
+		];
+		unset($values["face"], $values["facing"], $bedrockValues["facing_direction"]);
 	}
 
 	$failed = false;

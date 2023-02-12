@@ -1,4 +1,36 @@
 {
+    "minecraft:acacia_button": {
+        "type": "combined",
+        "name": "minecraft:acacia_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
+    },
     "minecraft:acacia_door": {
         "type": "singular",
         "name": "minecraft:acacia_door",
@@ -741,6 +773,38 @@
         "state_addition": {
             "big_dripleaf_head": "false",
             "big_dripleaf_tilt": "none"
+        }
+    },
+    "minecraft:birch_button": {
+        "type": "combined",
+        "name": "minecraft:birch_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
         }
     },
     "minecraft:birch_door": {
@@ -2257,6 +2321,38 @@
             }
         }
     },
+    "minecraft:crimson_button": {
+        "type": "combined",
+        "name": "minecraft:crimson_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
+    },
     "minecraft:crimson_door": {
         "type": "singular",
         "name": "minecraft:crimson_door",
@@ -2693,6 +2789,38 @@
     "minecraft:dandelion": {
         "type": "singular",
         "name": "minecraft:yellow_flower"
+    },
+    "minecraft:dark_oak_button": {
+        "type": "combined",
+        "name": "minecraft:dark_oak_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
     },
     "minecraft:dark_oak_door": {
         "type": "singular",
@@ -4617,6 +4745,38 @@
             "has_record"
         ]
     },
+    "minecraft:jungle_button": {
+        "type": "combined",
+        "name": "minecraft:jungle_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
+    },
     "minecraft:jungle_door": {
         "type": "singular",
         "name": "minecraft:jungle_door",
@@ -5632,6 +5792,38 @@
         "type": "singular",
         "name": "minecraft:magma"
     },
+    "minecraft:mangrove_button": {
+        "type": "combined",
+        "name": "minecraft:mangrove_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
+    },
     "minecraft:mangrove_door": {
         "type": "singular",
         "name": "minecraft:mangrove_door",
@@ -6274,6 +6466,38 @@
             "note",
             "powered"
         ]
+    },
+    "minecraft:oak_button": {
+        "type": "combined",
+        "name": "minecraft:wooden_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
     },
     "minecraft:oak_door": {
         "type": "singular",
@@ -7204,6 +7428,38 @@
     },
     "minecraft:polished_blackstone_bricks": {
         "type": "none"
+    },
+    "minecraft:polished_blackstone_button": {
+        "type": "combined",
+        "name": "minecraft:polished_blackstone_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
     },
     "minecraft:polished_blackstone_pressure_plate": {
         "type": "singular",
@@ -8983,6 +9239,38 @@
     "minecraft:spore_blossom": {
         "type": "none"
     },
+    "minecraft:spruce_button": {
+        "type": "combined",
+        "name": "minecraft:spruce_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        }
+    },
     "minecraft:spruce_door": {
         "type": "singular",
         "name": "minecraft:spruce_door",
@@ -9319,6 +9607,38 @@
         "name": "minecraft:stonebrick",
         "state_addition": {
             "stone_brick_type": "default"
+        }
+    },
+    "minecraft:stone_button": {
+        "type": "combined",
+        "name": "minecraft:stone_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
         }
     },
     "minecraft:stone_pressure_plate": {
@@ -9810,6 +10130,38 @@
                 "north": "south",
                 "south": "north",
                 "west": "east"
+            }
+        }
+    },
+    "minecraft:warped_button": {
+        "type": "combined",
+        "name": "minecraft:warped_button",
+        "state_renames": {
+            "powered": "button_pressed_bit"
+        },
+        "combined_names": [
+            "face",
+            "facing"
+        ],
+        "target_name": "facing_direction",
+        "combined_states": {
+            "ceiling": {
+                "east": "0",
+                "north": "0",
+                "south": "0",
+                "west": "0"
+            },
+            "floor": {
+                "east": "1",
+                "north": "1",
+                "south": "1",
+                "west": "1"
+            },
+            "wall": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
             }
         }
     },
