@@ -169,7 +169,7 @@ foreach ($groupsJtb as $group) {
 				$defaults[$key] = $value[0];
 			}
 		}
-		if(!in_array($defaults[$key], $value)) {
+		if (!in_array($defaults[$key], $value)) {
 			echo "Default for " . $group["name"] . " " . $key . " is not valid (" . $defaults[$key] . ") - " . implode(", ", $value) . PHP_EOL;
 		}
 	}
@@ -1008,9 +1008,21 @@ foreach ($btj as $key => &$value) {
 	if (isset($value["state_removals"])) {
 		$value["state_removals"] = array_keys($value["state_removals"]);
 	}
+	if (isset($value["state_additions"]) && $value["state_additions"] === []) {
+		unset($value["state_additions"]);
+	}
+	if (isset($value["state_removals"]) && $value["state_removals"] === []) {
+		unset($value["state_removals"]);
+	}
 	foreach ($value["multi_states"] ?? [] as $k => $v) {
 		if (isset($v["state_removals"])) {
 			$value["multi_states"][$k]["state_removals"] = array_keys($v["state_removals"]);
+		}
+		if (isset($v["state_additions"]) && $v["state_additions"] === []) {
+			unset($value["multi_states"][$k]["state_additions"]);
+		}
+		if (isset($v["state_removals"]) && $v["state_removals"] === []) {
+			unset($value["multi_states"][$k]["state_removals"]);
 		}
 	}
 }
