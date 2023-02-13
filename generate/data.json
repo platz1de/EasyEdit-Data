@@ -204,5 +204,378 @@
 	"minecraft:repeater": [
 	  "locked"
 	]
+  },
+  "btj_multi": {
+	"minecraft:wood": "wood_type",
+	"minecraft:coral_block": "coral_color",
+	"minecraft:coral": "coral_color",
+	"minecraft:coral_fan": "coral_color",
+	"minecraft:coral_fan_hang": "coral_hang_type_bit",
+	"minecraft:coral_fan_hang2": "coral_hang_type_bit",
+	"minecraft:coral_fan_hang3": "coral_hang_type_bit",
+	"minecraft:coral_fan_dead": "coral_color",
+	"minecraft:leaves": "old_leaf_type",
+	"minecraft:leaves2": "new_leaf_type",
+	"minecraft:melon_stem": "facing_direction",
+	"minecraft:pumpkin_stem": "facing_direction",
+	"minecraft:quartz_block": "chisel_type",
+	"minecraft:redstone_torch": "torch_facing_direction",
+	"minecraft:unlit_redstone_torch": "torch_facing_direction",
+	"minecraft:soul_torch": "torch_facing_direction",
+	"minecraft:torch": "torch_facing_direction",
+	"minecraft:standing_sign": "facing_direction",
+	"minecraft:seagrass": "sea_grass_type"
+  },
+  "btj_ignore": {
+	"minecraft:cave_vines": [
+	  "minecraft:cave_vines_plant"
+	],
+	"minecraft:kelp": [
+	  "minecraft:kelp_plant"
+	],
+	"minecraft:wooden_door": [
+	  "minecraft:bamboo_door"
+	],
+	"minecraft:fence_gate": [
+	  "minecraft:bamboo_fence_gate"
+	],
+	"minecraft:oak_stairs": [
+	  "minecraft:bamboo_stairs"
+	],
+	"minecraft:trapdoor": [
+	  "minecraft:bamboo_trapdoor"
+	],
+	"minecraft:standing_sign": [
+	  "minecraft:sign"
+	],
+	"minecraft:wall_sign": [
+	  "minecraft:wall_sign"
+	],
+	"minecraft:twisting_vines": [
+	  "minecraft:twisting_vines_plant"
+	],
+	"minecraft:weeping_vines": [
+	  "minecraft:weeping_vines_plant"
+	]
+  },
+  "defaults": {
+	"global": {
+	  "facing": "north",
+	  "east": "false",
+	  "west": "false",
+	  "north": "false",
+	  "south": "false",
+	  "up": "false",
+	  "down": "false",
+	  "axis": "y",
+	  "waterlogged": "false",
+	  "powered": "false",
+	  "stage": "0",
+	  "rotation": "0",
+	  "age": "0",
+	  "power": "0"
+	},
+	"regex": {
+	  "/_slab$/": {
+		"type": "bottom"
+	  },
+	  "/candle$/": {
+		"lit": "false",
+		"candles": "1"
+	  },
+	  "/_stairs$/": {
+		"half": "bottom",
+		"shape": "straight"
+	  },
+	  "/_button$/": {
+		"face": "wall"
+	  },
+	  "/_door$/": {
+		"half": "lower",
+		"hinge": "left",
+		"open": "false"
+	  },
+	  "/_trapdoor$/": {
+		"half": "bottom",
+		"open": "false"
+	  },
+	  "/_fence_gate$/": {
+		"in_wall": "false",
+		"open": "false"
+	  },
+	  "/_leaves$/": {
+		"distance": "7",
+		"persistent": "false"
+	  },
+	  "/rail$/": {
+		"shape": "north_south"
+	  },
+	  "/_bed$/": {
+		"part": "foot",
+		"occupied": "false"
+	  },
+	  "/command_block$/": {
+		"conditional": "false"
+	  },
+	  "/_coral$/": {
+		"waterlogged": "true"
+	  },
+	  "/_coral_fan$/": {
+		"waterlogged": "true"
+	  }
+	},
+	"minecraft:bamboo": {
+	  "leaves": "none"
+	},
+	"minecraft:bell": {
+	  "attachment": "floor"
+	},
+	"minecraft:brewing_stand": {
+	  "has_bottle_0": "false",
+	  "has_bottle_1": "false",
+	  "has_bottle_2": "false"
+	},
+	"minecraft:cake": {
+	  "bites": "0"
+	},
+	"minecraft:barrel": {
+	  "open": "false"
+	},
+	"minecraft:bee_nest": {
+	  "honey_level": "0"
+	},
+	"minecraft:beehive": {
+	  "honey_level": "0"
+	},
+	"minecraft:campfire": {
+	  "lit": "true",
+	  "signal_fire": "false"
+	},
+	"minecraft:composter": {
+	  "level": "0"
+	},
+	"minecraft:big_dripleaf": {
+	  "tilt": "none"
+	},
+	"minecraft:blast_furnace": {
+	  "lit": "false"
+	},
+	"minecraft:bubble_column": {
+	  "drag": "true"
+	},
+	"minecraft:cauldron": {
+	  "level": "0"
+	},
+	"minecraft:cave_vines": {
+	  "berries": "false"
+	},
+	"minecraft:cave_vines_plant": {
+	  "berries": "false"
+	},
+	"minecraft:chest": {
+	  "type": "single"
+	},
+	"minecraft:comparator": {
+	  "mode": "compare"
+	},
+	"minecraft:daylight_detector": {
+	  "inverted": "false"
+	},
+	"minecraft:dispenser": {
+	  "triggered": "false"
+	},
+	"minecraft:dropper": {
+	  "triggered": "false"
+	},
+	"minecraft:deepslate_redstone_ore": {
+	  "lit": "false"
+	},
+	"minecraft:redstone_ore": {
+	  "lit": "false"
+	},
+	"minecraft:end_portal_frame": {
+	  "eye": "false"
+	},
+	"minecraft:farmland": {
+	  "moisture": "0"
+	},
+	"minecraft:furnace": {
+	  "lit": "false"
+	},
+	"minecraft:grass_block": {
+	  "snowy": "false"
+	},
+	"minecraft:grindstone": {
+	  "face": "wall"
+	},
+	"minecraft:hopper": {
+	  "enabled": "true"
+	},
+	"minecraft:jigsaw": {
+	  "orientation": "north_up"
+	},
+	"minecraft:jukebox": {
+	  "has_record": "false"
+	},
+	"minecraft:lantern": {
+	  "hanging": "false"
+	},
+	"minecraft:large_fern": {
+	  "half": "lower"
+	},
+	"minecraft:lever": {
+	  "face": "wall"
+	},
+	"minecraft:lectern": {
+	  "has_book": "false"
+	},
+	"minecraft:moving_piston": {
+	  "type": "normal"
+	},
+	"minecraft:pointed_dripstone": {
+	  "thickness": "tip",
+	  "vertical_direction": "up"
+	},
+	"minecraft:piston_head": {
+	  "short": "false",
+	  "type": "normal"
+	},
+	"minecraft:powder_snow_cauldron": {
+	  "level": "1"
+	},
+	"minecraft:repeater": {
+	  "locked": "false",
+	  "delay": "1"
+	},
+	"minecraft:respawn_anchor": {
+	  "charges": "0"
+	},
+	"minecraft:shulker_box": {
+	  "facing": "up"
+	},
+	"minecraft:lava": {
+	  "level": "0"
+	},
+	"minecraft:water": {
+	  "level": "0"
+	},
+	"minecraft:water_cauldron": {
+	  "level": "1"
+	},
+	"minecraft:smoker": {
+	  "lit": "false"
+	},
+	"minecraft:small_dripleaf": {
+	  "half": "lower"
+	},
+	"minecraft:sunflower": {
+	  "half": "lower"
+	},
+	"minecraft:lilac": {
+	  "half": "lower"
+	},
+	"minecraft:rose_bush": {
+	  "half": "lower"
+	},
+	"minecraft:peony": {
+	  "half": "lower"
+	},
+	"minecraft:light": {
+	  "level": "15"
+	},
+	"minecraft:mangrove_propagule": {
+	  "hanging": "false"
+	},
+	"minecraft:mycelium": {
+	  "snowy": "false"
+	},
+	"minecraft:podzol": {
+	  "snowy": "false"
+	},
+	"minecraft:nether_portal": {
+	  "axis": "x"
+	},
+	"minecraft:note_block": {
+	  "note": "0",
+	  "instrument": "harp"
+	},
+	"minecraft:piston": {
+	  "extended": "false"
+	},
+	"minecraft:sticky_piston": {
+	  "extended": "false"
+	},
+	"minecraft:sea_pickle": {
+	  "pickles": "1",
+	  "waterlogged": "true"
+	},
+	"minecraft:sea_grass": {
+	  "waterlogged": "false"
+	},
+	"minecraft:conduit": {
+	  "waterlogged": "true"
+	},
+	"minecraft:redstone_wire": {
+	  "east": "none",
+	  "north": "none",
+	  "south": "none",
+	  "west": "none"
+	},
+	"minecraft:redstone_lamp": {
+	  "lit": "false"
+	},
+	"minecraft:redstone_torch": {
+	  "lit": "true"
+	},
+	"minecraft:redstone_wall_torch": {
+	  "lit": "true"
+	},
+	"minecraft:scaffolding": {
+	  "bottom": "false",
+	  "distance": "7"
+	},
+	"minecraft:sculk_sensor": {
+	  "sculk_sensor_phase": "cooldown"
+	},
+	"minecraft:sculk_shrieker": {
+	  "can_summon": "false",
+	  "shrieking": "false"
+	},
+	"minecraft:snow": {
+	  "layers": "1"
+	},
+	"minecraft:soul_campfire": {
+	  "lit": "true",
+	  "signal_fire": "false"
+	},
+	"minecraft:soul_lantern": {
+	  "hanging": "false"
+	},
+	"minecraft:structure_block": {
+	  "mode": "data"
+	},
+	"minecraft:tall_grass": {
+	  "half": "lower"
+	},
+	"minecraft:tall_seagrass": {
+	  "half": "lower"
+	},
+	"minecraft:tnt": {
+	  "unstable": "false"
+	},
+	"minecraft:trapped_chest": {
+	  "type": "single"
+	},
+	"minecraft:tripwire": {
+	  "attached": "false",
+	  "disarmed": "false"
+	},
+	"minecraft:tripwire_hook": {
+	  "attached": "false"
+	},
+	"minecraft:turtle_egg": {
+	  "eggs": "1",
+	  "hatch": "0"
+	}
   }
 }
