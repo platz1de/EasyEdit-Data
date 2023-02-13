@@ -1028,6 +1028,8 @@ foreach ($btj as $key => &$value) {
 }
 unset($value);
 
+$btj["minecraft:invisible_bedrock"] = ["type" => "singular", "name" => "minecraft:barrier"];
+
 function flipStateTranslation(&$state, $bedrockData)
 {
 	if (isset($bedrockData["state_additions"])) {

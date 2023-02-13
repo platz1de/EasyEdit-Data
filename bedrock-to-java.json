@@ -11750,5 +11750,9 @@
         "defaults": {
             "facing": "north"
         }
+    },
+    "minecraft:invisible_bedrock": {
+        "type": "singular",
+        "name": "minecraft:barrier"
     }
 }
