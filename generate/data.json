@@ -322,6 +322,9 @@
 	  },
 	  "/_coral_fan$/": {
 		"waterlogged": "true"
+	  },
+	  "/candle_cake$/": {
+		"lit": "false"
 	  }
 	},
 	"minecraft:bamboo": {
@@ -576,6 +579,9 @@
 	"minecraft:turtle_egg": {
 	  "eggs": "1",
 	  "hatch": "0"
+	},
+	"minecraft:sculk_catalyst": {
+	  "bloom": "false"
 	}
   }
 }

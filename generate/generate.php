@@ -132,13 +132,10 @@ foreach ($groupsJtb as $group) {
 			break;
 		}
 	}
-	if (!$hasChanges) {
-		$jtb[$group["name"]] = ["type" => "none"];
-		continue;
-	}
 
 	$pre = $group["states"];
 	$defaults = [];
+	$possible = [];
 	foreach ($group["states"] as $java => $bedrock) {
 		preg_match("/^([a-z\d:_]+)\[(.*)]$/", $java, $matches);
 		if (count($matches) === 0) {
@@ -147,7 +144,11 @@ foreach ($groupsJtb as $group) {
 		foreach (explode(",", $matches[2]) as $state) {
 			$d = explode("=", $state);
 			$defaults[$d[0]][] = $d[1];
+			$possible[$d[0]][] = $d[1];
 		}
+	}
+	foreach ($possible as $key => $value) {
+		$possible[$key] = array_values(array_unique($value));
 	}
 
 	foreach ($defaults as $key => $value) {
@@ -172,6 +173,18 @@ foreach ($groupsJtb as $group) {
 		if (!in_array($defaults[$key], $value)) {
 			echo "Default for " . $group["name"] . " " . $key . " is not valid (" . $defaults[$key] . ") - " . implode(", ", $value) . PHP_EOL;
 		}
+	}
+
+	if (!$hasChanges) {
+		$obj = ["type" => "none"];
+		if (count($possible) > 0) {
+			$obj["values"] = $possible;
+		}
+		if (count($defaults) > 0) {
+			$obj["defaults"] = $defaults;
+		}
+		$jtb[$group["name"]] = $obj;
+		continue;
 	}
 
 	foreach ($group["states"] as $java => $bedrock) {
@@ -636,6 +649,9 @@ foreach ($groupsJtb as $group) {
 	}
 	if ($defaults !== []) {
 		$obj["defaults"] = $defaults;
+	}
+	if ($possible !== []) {
+		$obj["values"] = $possible;
 	}
 	$failed ? $failedJTB[$group["name"]] = $obj : $jtb[$group["name"]] = $obj;
 }
