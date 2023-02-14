@@ -2819,7 +2819,7 @@
     "minecraft:wall_banner": {
         "type": "multi",
         "internal_tile": {
-            "color": "black_wall"
+            "color": "black"
         },
         "state_renames": {
             "facing_direction": "facing"
@@ -2837,91 +2837,91 @@
         },
         "multi_name": "color",
         "multi_states": {
-            "black_wall": {
+            "black": {
                 "name": "minecraft:black_wall_banner"
             },
-            "blue_wall": {
+            "blue": {
                 "name": "minecraft:blue_wall_banner"
             },
-            "brown_wall": {
+            "brown": {
                 "name": "minecraft:brown_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "cyan_wall": {
+            "cyan": {
                 "name": "minecraft:cyan_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "gray_wall": {
+            "gray": {
                 "name": "minecraft:gray_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "green_wall": {
+            "green": {
                 "name": "minecraft:green_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "light_blue_wall": {
+            "light_blue": {
                 "name": "minecraft:light_blue_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "light_gray_wall": {
+            "light_gray": {
                 "name": "minecraft:light_gray_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "lime_wall": {
+            "lime": {
                 "name": "minecraft:lime_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "magenta_wall": {
+            "magenta": {
                 "name": "minecraft:magenta_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "orange_wall": {
+            "orange": {
                 "name": "minecraft:orange_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "pink_wall": {
+            "pink": {
                 "name": "minecraft:pink_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "purple_wall": {
+            "purple": {
                 "name": "minecraft:purple_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "red_wall": {
+            "red": {
                 "name": "minecraft:red_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "white_wall": {
+            "white": {
                 "name": "minecraft:white_wall_banner",
                 "state_removals": [
                     "color"
                 ]
             },
-            "yellow_wall": {
+            "yellow": {
                 "name": "minecraft:yellow_wall_banner",
                 "state_removals": [
                     "color"

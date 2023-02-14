@@ -588,8 +588,11 @@ foreach ($groupsJtb as $group) {
 
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
-		preg_match("/minecraft:([a-z_]*)(?:_wall)?_banner/", $group["name"], $matches);
+		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);
 		$obj["internal_tile"] = ["color" => $matches[1] ?? throw new \Exception("Invalid banner name: " . $group["name"])];
+		if (str_ends_with($obj["internal_tile"]["color"], "_wall")) {
+			$obj["internal_tile"]["color"] = substr($obj["internal_tile"]["color"], 0, -5);
+		}
 	}
 
 	if (str_ends_with($group["name"], "bed")) {

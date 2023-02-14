@@ -1504,7 +1504,7 @@
             }
         },
         "internal_tile": {
-            "color": "black_wall"
+            "color": "black"
         },
         "defaults": {
             "facing": "north"
@@ -1837,7 +1837,7 @@
             }
         },
         "internal_tile": {
-            "color": "blue_wall"
+            "color": "blue"
         },
         "defaults": {
             "facing": "north"
@@ -2235,7 +2235,7 @@
             }
         },
         "internal_tile": {
-            "color": "brown_wall"
+            "color": "brown"
         },
         "defaults": {
             "facing": "north"
@@ -3685,7 +3685,7 @@
             }
         },
         "internal_tile": {
-            "color": "cyan_wall"
+            "color": "cyan"
         },
         "defaults": {
             "facing": "north"
@@ -5792,7 +5792,7 @@
             }
         },
         "internal_tile": {
-            "color": "gray_wall"
+            "color": "gray"
         },
         "defaults": {
             "facing": "north"
@@ -5976,7 +5976,7 @@
             }
         },
         "internal_tile": {
-            "color": "green_wall"
+            "color": "green"
         },
         "defaults": {
             "facing": "north"
@@ -7218,7 +7218,7 @@
             }
         },
         "internal_tile": {
-            "color": "light_blue_wall"
+            "color": "light_blue"
         },
         "defaults": {
             "facing": "north"
@@ -7402,7 +7402,7 @@
             }
         },
         "internal_tile": {
-            "color": "light_gray_wall"
+            "color": "light_gray"
         },
         "defaults": {
             "facing": "north"
@@ -7652,7 +7652,7 @@
             }
         },
         "internal_tile": {
-            "color": "lime_wall"
+            "color": "lime"
         },
         "defaults": {
             "facing": "north"
@@ -7857,7 +7857,7 @@
             }
         },
         "internal_tile": {
-            "color": "magenta_wall"
+            "color": "magenta"
         },
         "defaults": {
             "facing": "north"
@@ -9380,7 +9380,7 @@
             }
         },
         "internal_tile": {
-            "color": "orange_wall"
+            "color": "orange"
         },
         "defaults": {
             "facing": "north"
@@ -9768,7 +9768,7 @@
             }
         },
         "internal_tile": {
-            "color": "pink_wall"
+            "color": "pink"
         },
         "defaults": {
             "facing": "north"
@@ -11217,7 +11217,7 @@
             }
         },
         "internal_tile": {
-            "color": "purple_wall"
+            "color": "purple"
         },
         "defaults": {
             "facing": "north"
@@ -11869,7 +11869,7 @@
             }
         },
         "internal_tile": {
-            "color": "red_wall"
+            "color": "red"
         },
         "defaults": {
             "facing": "north"
@@ -15031,7 +15031,7 @@
             }
         },
         "internal_tile": {
-            "color": "white_wall"
+            "color": "white"
         },
         "defaults": {
             "facing": "north"
@@ -15272,7 +15272,7 @@
             }
         },
         "internal_tile": {
-            "color": "yellow_wall"
+            "color": "yellow"
         },
         "defaults": {
             "facing": "north"
