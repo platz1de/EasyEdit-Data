@@ -1134,25 +1134,24 @@ $flipData = [
 		"half=bottom" => "half=top", "half=top" => "half=bottom", //stairs, why 2 different names mojang???
 	],
 ];
-$rotations = [];
-$flipX = [];
-$flipZ = [];
-$flipY = [];
+
+$rotations = ["rotate" => [], "xFlip" => [], "yFlip" => [], "zFlip" => []];
+$stateRotations = [];
 $missingRotations = [];
+
 foreach ($javaToBedrock as $state => $id) {
 	if (!str_ends_with($state, "]")) {
 		continue; //no properties
 	}
-	remapProperties($state, $id, $rotationData, $javaToBedrock, $rotations, $missingRotations);
-	remapProperties($state, $id, $flipData["x"], $javaToBedrock, $flipX, $missingRotations);
-	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $flipZ, $missingRotations);
-	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $flipY, $missingRotations);
+	remapProperties($state, $id, $rotationData, $javaToBedrock, $rotations["rotate"], $missingRotations, $stateRotations, "rotate");
+	remapProperties($state, $id, $flipData["x"], $javaToBedrock, $rotations["xFlip"], $missingRotations, $stateRotations, "flip-x");
+	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $rotations["yFlip"], $missingRotations, $stateRotations, "flip-y");
+	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $rotations["zFlip"], $missingRotations, $stateRotations, "flip-z");
 }
 file_put_contents("debug/missing-rotations.json", json_encode($missingRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("../rotation-data.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("../flip-data.json", json_encode(["xAxis" => $flipX, "zAxis" => $flipZ, "yAxis" => $flipY], JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-echo "Rotated " . count($rotations) . " blocks" . PHP_EOL;
-echo "Flipped " . count($flipX) + count($flipZ) + count($flipY) . " blocks" . PHP_EOL;
+file_put_contents("debug/rotation-data-all.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+echo "Rotated " . array_sum(array_map(static fn($e) => count($e), $rotations)) . " blocks" . PHP_EOL;
+file_put_contents("../manipulation-data.json", json_encode($stateRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 $blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS/minecraft-data/master/data/pc/common/legacy.json"), true)["blocks"];
 
@@ -1195,7 +1194,7 @@ function getData(string $url)
 	return $data;
 }
 
-function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save, array &$missing)
+function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save, array &$missing, array &$stateSave, string $key)
 {
 	if (isset($save[$id])) {
 		return;
@@ -1221,7 +1220,24 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 	}
 	if (isset($bedrockMapping[$newState])) {
 		if ($id !== $bedrockMapping[$newState]) {
-			$save[$id] = $bedrockMapping[$newState];
+			$save[$id] = $newID = $bedrockMapping[$newState];
+
+			preg_match("/(.*)\[(.*?)]/", $id, $matches);
+			preg_match("/(.*)\[(.*?)]/", $newID, $matches2);
+			$pre = [];
+			foreach (explode(",", $matches[2]) as $property) {
+				$data = explode("=", $property);
+				$pre[$data[0]] = $data[1];
+			}
+			$post = [];
+			foreach (explode(",", $matches2[2]) as $property) {
+				$data = explode("=", $property);
+				$post[$data[0]] = $data[1];
+			}
+			$diff = array_diff_assoc($post, $pre);
+			foreach ($diff as $k => $v) {
+				$stateSave[$matches[1]][$key][$k][$pre[$k]] = $post[$k];
+			}
 		}
 	} else {
 		$missing["$id ($state)"] = $newState;
