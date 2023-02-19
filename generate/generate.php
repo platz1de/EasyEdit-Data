@@ -990,6 +990,7 @@ foreach ($jtb as $java => $bedrockData) {
 									$value[$k] = [];
 								}
 								$writeState($value[$k], $keys, $values);
+								return;
 							}
 							if ($value !== []) {
 								foreach ($values as $i => $j) {

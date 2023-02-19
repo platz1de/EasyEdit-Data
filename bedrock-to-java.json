@@ -7015,36 +7015,30 @@
                     "facing": "east",
                     "powered": "false"
                 },
-                "powered": "false",
                 "false": {
                     "face": "ceiling",
                     "facing": "east",
                     "powered": "false"
                 }
             },
-            "powered": "false",
             "down_north_south": {
                 "false": {
                     "face": "ceiling",
                     "facing": "north",
                     "powered": "false"
                 },
-                "facing": "north",
-                "powered": "false",
                 "true": {
                     "face": "ceiling",
                     "facing": "north",
                     "powered": "false"
                 }
             },
-            "facing": "north",
             "up_east_west": {
                 "true": {
                     "face": "floor",
                     "facing": "east",
                     "powered": "false"
                 },
-                "powered": "false",
                 "false": {
                     "face": "floor",
                     "facing": "east",
@@ -7057,8 +7051,6 @@
                     "facing": "north",
                     "powered": "false"
                 },
-                "facing": "north",
-                "powered": "false",
                 "true": {
                     "face": "floor",
                     "facing": "north",
@@ -7071,24 +7063,18 @@
                     "facing": "east",
                     "powered": "false"
                 },
-                "face": "wall",
-                "powered": "false",
                 "true": {
                     "face": "wall",
                     "facing": "east",
                     "powered": "true"
                 }
             },
-            "face": "wall",
             "north": {
                 "false": {
                     "face": "wall",
                     "facing": "north",
                     "powered": "false"
                 },
-                "face": "wall",
-                "facing": "north",
-                "powered": "false",
                 "true": {
                     "face": "wall",
                     "facing": "north",
@@ -7101,8 +7087,6 @@
                     "facing": "south",
                     "powered": "false"
                 },
-                "face": "wall",
-                "powered": "false",
                 "true": {
                     "face": "wall",
                     "facing": "south",
@@ -7115,8 +7099,6 @@
                     "facing": "west",
                     "powered": "false"
                 },
-                "face": "wall",
-                "powered": "false",
                 "true": {
                     "face": "wall",
                     "facing": "west",
