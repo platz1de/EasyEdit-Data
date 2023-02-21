@@ -1197,6 +1197,16 @@ file_put_contents("../legacy-conversion-map.json", json_encode($toBedrock, JSON_
 file_put_contents("debug/missing-legacy.json", json_encode($missingData, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 echo "Converted " . count($toBedrock) . " legacy blocks" . PHP_EOL;
 
+$itemData = json_decode(getData("https://raw.githubusercontent.com/GeyserMC/mappings/master/items.json"), true);
+$items = [];
+
+foreach ($itemData as $java => $item) {
+	$items[$java] = ["name" => $item["bedrock_identifier"], "damage" => $item["bedrock_data"]];
+}
+
+echo "Converted " . count($items) . " items" . PHP_EOL;
+file_put_contents("../item-conversion-map.json", json_encode($items, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
 function getData(string $url)
 {
 	$ch = curl_init();

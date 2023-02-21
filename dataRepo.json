@@ -1,8 +1,9 @@
 {
-    "version": "1.19.1-2713cea8-57ab-45a0-86b3-9bed43e7b664",
+    "version": "1.19.1-99dd58f9-f385-4625-bb5c-f89b30d85424",
     "state-version": 17959425,
     "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/legacy-conversion-map.json",
     "java-to-bedrock": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/java-to-bedrock.json",
     "bedrock-to-java": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/bedrock-to-java.json",
-    "manipulation-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/manipulation-data.json"
+    "manipulation-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/manipulation-data.json",
+    "item-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/item-conversion-map.json"
 }
