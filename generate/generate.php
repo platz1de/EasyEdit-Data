@@ -755,6 +755,210 @@ foreach ($groupsJtb as $group) {
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $bedrockValues["vine_direction_bits"]);
 	}
 
+	if ($group["name"] === "minecraft:sculk_vein" || $group["name"] === "minecraft:glow_lichen") {
+		$obj["type"] = "combined";
+		$obj["combined_names"] = [
+			"east",
+			"north",
+			"west",
+			"south",
+			"up",
+			"down"
+		];
+		$obj["target_name"] = "multi_face_direction_bits";
+		$obj["combined_states"] = [ //copilot go brrrrrrrrrrrrrrrr
+			"false" => [
+				"false" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => "0", //none
+								"true" => "1" //down
+							],
+							"true" => [
+								"false" => "2", //up
+								"true" => "3" //up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "4", //north
+								"true" => "5" //north, down
+							],
+							"true" => [
+								"false" => "6", //north, up
+								"true" => "7" //north, up, down
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => "8", //south
+								"true" => "9" //south, down
+							],
+							"true" => [
+								"false" => "10", //south, up
+								"true" => "11" //south, up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "12", //north, south
+								"true" => "13" //north, south, down
+							],
+							"true" => [
+								"false" => "14", //north, south, up
+								"true" => "15" //north, south, up, down
+							]
+						]
+					]
+				],
+				"true" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => "16", //west
+								"true" => "17" //west, down
+							],
+							"true" => [
+								"false" => "18", //west, up
+								"true" => "19" //west, up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "20", //north, west
+								"true" => "21" //north, west, down
+							],
+							"true" => [
+								"false" => "22", //north, west, up
+								"true" => "23" //north, west, up, down
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => "24", //south, west
+								"true" => "25" //south, west, down
+							],
+							"true" => [
+								"false" => "26", //south, west, up
+								"true" => "27" //south, west, up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "28", //north, south, west
+								"true" => "29" //north, south, west, down
+							],
+							"true" => [
+								"false" => "30", //north, south, west, up
+								"true" => "31" //north, south, west, up, down
+							]
+						]
+					]
+				]
+			],
+			"true" => [
+				"false" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => "32", //east
+								"true" => "33" //east, down
+							],
+							"true" => [
+								"false" => "34", //east, up
+								"true" => "35" //east, up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "36", //north, east
+								"true" => "37" //north, east, down
+							],
+							"true" => [
+								"false" => "38", //north, east, up
+								"true" => "39" //north, east, up, down
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => "40", //south, east
+								"true" => "41" //south, east, down
+							],
+							"true" => [
+								"false" => "42", //south, east, up
+								"true" => "43" //south, east, up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "44", //north, south, east
+								"true" => "45" //north, south, east, down
+							],
+							"true" => [
+								"false" => "46", //north, south, east, up
+								"true" => "47" //north, south, east, up, down
+							]
+						]
+					]
+				],
+				"true" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => "48", //west, east
+								"true" => "49" //west, east, down
+							],
+							"true" => [
+								"false" => "50", //west, east, up
+								"true" => "51" //west, east, up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "52", //north, west, east
+								"true" => "53" //north, west, east, down
+							],
+							"true" => [
+								"false" => "54", //north, west, east, up
+								"true" => "55" //north, west, east, up, down
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => "56", //south, west, east
+								"true" => "57" //south, west, east, down
+							],
+							"true" => [
+								"false" => "58", //south, west, east, up
+								"true" => "59" //south, west, east, up, down
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => "60", //north, south, west, east
+								"true" => "61" //north, south, west, east, down
+							],
+							"true" => [
+								"false" => "62", //north, south, west, east, up
+								"true" => "63" //north, south, west, east, up, down
+							]
+						]
+					]
+				]
+			]
+		];
+		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["multi_face_direction_bits"]);
+	}
+
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
 		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);
