@@ -599,6 +599,103 @@ foreach ($groupsJtb as $group) {
 		unset($values["powered"]);
 	}
 
+	if ($group["name"] === "minecraft:brown_mushroom_block" || $group["name"] === "minecraft:red_mushroom_block") {
+		$obj["type"] = "combined";
+		$obj["combined_names"] = [
+			"down",
+			"up",
+			"north",
+			"south",
+			"west",
+			"east"
+		];
+		$obj["target_name"] = "huge_mushroom_bits";
+		$obj["combined_states"] = [
+			"false" => [
+				"false" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => "0" //none
+							]
+						]
+					]
+				],
+				"true" => [
+					"true" => [
+						"false" => [
+							"true" => [
+								"false" => "1" //up, north, west
+							],
+							"false" => [
+								"false" => "2", //up, north
+								"true" => "3" //up, north, east
+							]
+						]
+					],
+					"false" => [
+						"false" => [
+							"true" => [
+								"false" => "4" //up, west
+							],
+							"false" => [
+								"false" => "5", //up
+								"true" => "6" //up, east
+							]
+						],
+						"true" => [
+							"true" => [
+								"false" => "7" //up, south, west
+							],
+							"false" => [
+								"false" => "8", //up, south
+								"true" => "9" //up, south, east
+							]
+						]
+					]
+				]
+			],
+			"default" => "14" //all sides
+		];
+		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
+	}
+
+	if ($group["name"] === "minecraft:mushroom_stem") {
+		$obj["type"] = "combined";
+		$obj["name"] = "minecraft:brown_mushroom_block";
+		$obj["combined_names"] = [
+			"down",
+			"up",
+			"north",
+			"south",
+			"west",
+			"east"
+		];
+		$obj["target_name"] = "huge_mushroom_bits";
+		$obj["combined_states"] = [
+			"false" => [
+				"false" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => "0" //none
+							]
+						]
+					],
+					"true" => [
+						"true" => [
+							"true" => [
+								"true" => "10" //default stem (all horizontal sides)
+							]
+						]
+					]
+				],
+			],
+			"default" => "15" //all stem sides
+		];
+		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
+	}
+
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
 		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);
@@ -750,9 +847,12 @@ function processState(mixed $data, mixed $java, array $states): string
 					return $data;
 				}
 				$key = array_shift($keys);
+				if (!isset($data[$key])) {
+					return null;
+				}
 				return $r($data[$key], $keys);
 			};
-			$value = $r($data["combined_states"], $keys);
+			$value = $r($data["combined_states"], $keys) ?? $data["combined_states"]["default"];
 			processStates($states, $data);
 			$states[$data["target_name"]] = $value;
 			$java = $data["name"] . (count($states) === 0 ? "" : "[" . implode(",", array_map(static function (string $key, string $value) {
@@ -826,9 +926,19 @@ function sortState(string $state): string
 	return $matches[1] . "[" . implode(",", $states) . "]";
 }
 
+unset($jtb["minecraft:mushroom_stem"]["combined_states"]["false"]["false"]["false"]); //this will falsely override the normal mushroom blocks
+
 $btj = [];
-$failedBTJ = [];
 foreach ($jtb as $java => $bedrockData) {
+	revertJavaToBedrock($java, $bedrockData, $btj, $customData);
+}
+
+$stem = $jtb["minecraft:mushroom_stem"];
+$stem["name"] = "minecraft:red_mushroom_block";
+revertJavaToBedrock("minecraft:mushroom_stem", $stem, $btj, $customData);
+
+function revertJavaToBedrock($java, $bedrockData, &$btj, $customData)
+{
 	$mergeStates = function (&$a, $b, $bedrock) use ($customData) {
 		if ($a["type"] === "singular" && $b["type"] === "singular") {
 			if (in_array($b["name"], $customData["btj_ignore"][$bedrock] ?? [])) {
@@ -896,13 +1006,28 @@ foreach ($jtb as $java => $bedrockData) {
 			$a["multi_states"] = $multi;
 			return;
 		}
+		if ($a["type"] === "combined_multi" && $b["type"] === "combined_multi" && count($a["combined_names"]) === 1 && count($b["combined_names"]) === 1 && $a["combined_names"][0] === $b["combined_names"][0]) {
+			$a["type"] = "multi";
+			$a["multi_name"] = $a["combined_names"][0];
+			unset($a["combined_names"]);
+			$multi = [];
+			foreach ($a["combined_states"] as $key => $value) {
+				$multi[$key] = ["name" => $a["name"], "state_additions" => $value];
+			}
+			foreach ($b["combined_states"] as $key => $value) {
+				$multi[$key] = ["name" => $b["name"], "state_additions" => $value];
+			}
+			$a["multi_states"] = $multi;
+			unset($a["combined_states"], $a["name"]);
+			return;
+		}
 		echo "Failed to merge states: " . json_encode($a) . " and " . json_encode($b) . PHP_EOL;
 	};
 	switch ($bedrockData["type"]) {
 		case "none":
 			if (isset($btj[$java])) {
 				$mergeStates($btj[$java], $bedrockData, $java);
-				continue 2;
+				return;
 			}
 			$btj[$java] = ["type" => "none"];
 			break;
@@ -914,7 +1039,7 @@ foreach ($jtb as $java => $bedrockData) {
 			}
 			if (isset($btj[$bedrockData["name"]])) {
 				$mergeStates($btj[$bedrockData["name"]], $state, $bedrockData["name"]);
-				continue 2;
+				return;
 			}
 			$btj[$bedrockData["name"]] = $state;
 			break;
@@ -938,7 +1063,7 @@ foreach ($jtb as $java => $bedrockData) {
 			$state = ["type" => "combined_multi", "name" => $java, "combined_names" => [$bedrockData["target_name"]]];
 			flipStateTranslation($state, $bedrockData);
 			$map = [];
-			$mapReader = function ($data, $keys) use ($java, &$mapReader, &$map, $bedrockData) {
+			$mapReader = function ($data, $keys) use (&$mapReader, &$map, $bedrockData) {
 				foreach ($data as $key => $value) {
 					$new = $keys;
 					$new[] = $key;
@@ -960,14 +1085,24 @@ foreach ($jtb as $java => $bedrockData) {
 					}
 				}
 			};
+			$default = $bedrockData["combined_states"]["default"] ?? null;
+			unset($bedrockData["combined_states"]["default"]);
 			$mapReader($bedrockData["combined_states"], []);
+			if ($default !== null) {
+				$map[$default] = [];
+				foreach ($bedrockData["defaults"] ?? [] as $key => $value) {
+					if (in_array($key, $bedrockData["combined_names"], true)) {
+						$map[$default][$key] = $value;
+					}
+				}
+			}
 			$state["combined_states"] = $map;
 			if (isset($bedrockData["defaults"])) {
 				$state["defaults"] = $bedrockData["defaults"];
 			}
 			if (isset($btj[$bedrockData["name"]])) {
 				$mergeStates($btj[$bedrockData["name"]], $state, $bedrockData["name"]);
-				continue 2;
+				return;
 			}
 			$btj[$bedrockData["name"]] = $state;
 			break;
@@ -1017,7 +1152,7 @@ foreach ($jtb as $java => $bedrockData) {
 			}
 			if (isset($btj[$bedrockData["name"]])) {
 				$mergeStates($btj[$bedrockData["name"]], $state, $bedrockData["name"]);
-				continue 2;
+				return;
 			}
 			$btj[$bedrockData["name"]] = $state;
 			break;
@@ -1078,9 +1213,7 @@ function flipStateTranslation(&$state, $bedrockData)
 	}
 }
 
-if ($failedBTJ !== []) echo "\e[31mFailed to convert " . count($failedBTJ) . " blocks\e[39m" . PHP_EOL;
 echo "Converted " . count($btj) . " blocks" . PHP_EOL;
-file_put_contents("debug/bedrock-to-java-fail.json", json_encode($failedBTJ, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("../bedrock-to-java.json", json_encode($btj, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 foreach ($javaToBedrock as $java => $bedrock) {

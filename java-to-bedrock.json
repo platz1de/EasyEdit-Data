@@ -3476,6 +3476,100 @@
     "minecraft:brown_mushroom": {
         "type": "none"
     },
+    "minecraft:brown_mushroom_block": {
+        "type": "combined",
+        "name": "minecraft:brown_mushroom_block",
+        "combined_names": [
+            "down",
+            "up",
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "target_name": "huge_mushroom_bits",
+        "combined_states": {
+            "false": {
+                "false": {
+                    "false": {
+                        "false": {
+                            "false": {
+                                "false": "0"
+                            }
+                        }
+                    }
+                },
+                "true": {
+                    "true": {
+                        "false": {
+                            "true": {
+                                "false": "1"
+                            },
+                            "false": {
+                                "false": "2",
+                                "true": "3"
+                            }
+                        }
+                    },
+                    "false": {
+                        "false": {
+                            "true": {
+                                "false": "4"
+                            },
+                            "false": {
+                                "false": "5",
+                                "true": "6"
+                            }
+                        },
+                        "true": {
+                            "true": {
+                                "false": "7"
+                            },
+                            "false": {
+                                "false": "8",
+                                "true": "9"
+                            }
+                        }
+                    }
+                }
+            },
+            "default": "14"
+        },
+        "defaults": {
+            "down": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "west": "false"
+        },
+        "values": {
+            "down": [
+                "false",
+                "true"
+            ],
+            "east": [
+                "false",
+                "true"
+            ],
+            "north": [
+                "false",
+                "true"
+            ],
+            "south": [
+                "false",
+                "true"
+            ],
+            "up": [
+                "false",
+                "true"
+            ],
+            "west": [
+                "false",
+                "true"
+            ]
+        }
+    },
     "minecraft:brown_shulker_box": {
         "type": "singular",
         "name": "minecraft:shulker_box",
@@ -13625,6 +13719,74 @@
             ]
         }
     },
+    "minecraft:mushroom_stem": {
+        "type": "combined",
+        "name": "minecraft:brown_mushroom_block",
+        "combined_names": [
+            "down",
+            "up",
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "target_name": "huge_mushroom_bits",
+        "combined_states": {
+            "false": {
+                "false": {
+                    "false": {
+                        "false": {
+                            "false": {
+                                "false": "0"
+                            }
+                        }
+                    },
+                    "true": {
+                        "true": {
+                            "true": {
+                                "true": "10"
+                            }
+                        }
+                    }
+                }
+            },
+            "default": "15"
+        },
+        "defaults": {
+            "down": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "west": "false"
+        },
+        "values": {
+            "down": [
+                "false",
+                "true"
+            ],
+            "east": [
+                "false",
+                "true"
+            ],
+            "north": [
+                "false",
+                "true"
+            ],
+            "south": [
+                "false",
+                "true"
+            ],
+            "up": [
+                "false",
+                "true"
+            ],
+            "west": [
+                "false",
+                "true"
+            ]
+        }
+    },
     "minecraft:mycelium": {
         "type": "singular",
         "name": "minecraft:mycelium",
@@ -18108,6 +18270,100 @@
     },
     "minecraft:red_mushroom": {
         "type": "none"
+    },
+    "minecraft:red_mushroom_block": {
+        "type": "combined",
+        "name": "minecraft:red_mushroom_block",
+        "combined_names": [
+            "down",
+            "up",
+            "north",
+            "south",
+            "west",
+            "east"
+        ],
+        "target_name": "huge_mushroom_bits",
+        "combined_states": {
+            "false": {
+                "false": {
+                    "false": {
+                        "false": {
+                            "false": {
+                                "false": "0"
+                            }
+                        }
+                    }
+                },
+                "true": {
+                    "true": {
+                        "false": {
+                            "true": {
+                                "false": "1"
+                            },
+                            "false": {
+                                "false": "2",
+                                "true": "3"
+                            }
+                        }
+                    },
+                    "false": {
+                        "false": {
+                            "true": {
+                                "false": "4"
+                            },
+                            "false": {
+                                "false": "5",
+                                "true": "6"
+                            }
+                        },
+                        "true": {
+                            "true": {
+                                "false": "7"
+                            },
+                            "false": {
+                                "false": "8",
+                                "true": "9"
+                            }
+                        }
+                    }
+                }
+            },
+            "default": "14"
+        },
+        "defaults": {
+            "down": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "west": "false"
+        },
+        "values": {
+            "down": [
+                "false",
+                "true"
+            ],
+            "east": [
+                "false",
+                "true"
+            ],
+            "north": [
+                "false",
+                "true"
+            ],
+            "south": [
+                "false",
+                "true"
+            ],
+            "up": [
+                "false",
+                "true"
+            ],
+            "west": [
+                "false",
+                "true"
+            ]
+        }
     },
     "minecraft:red_nether_brick_slab": {
         "type": "multi",

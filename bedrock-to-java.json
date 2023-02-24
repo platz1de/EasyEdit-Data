@@ -3607,6 +3607,163 @@
     "minecraft:brown_mushroom": {
         "type": "none"
     },
+    "minecraft:brown_mushroom_block": {
+        "type": "multi",
+        "defaults": {
+            "down": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "west": "false"
+        },
+        "multi_name": "huge_mushroom_bits",
+        "multi_states": {
+            "0": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "1": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "true",
+                    "south": "false",
+                    "west": "true",
+                    "east": "false"
+                }
+            },
+            "2": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "true",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "3": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "true",
+                    "south": "false",
+                    "west": "false",
+                    "east": "true"
+                }
+            },
+            "4": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "false",
+                    "west": "true",
+                    "east": "false"
+                }
+            },
+            "5": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "6": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "true"
+                }
+            },
+            "7": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "true",
+                    "west": "true",
+                    "east": "false"
+                }
+            },
+            "8": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "true",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "9": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "true",
+                    "west": "false",
+                    "east": "true"
+                }
+            },
+            "14": {
+                "name": "minecraft:brown_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "east": "false",
+                    "north": "false",
+                    "south": "false",
+                    "up": "false",
+                    "west": "false"
+                }
+            },
+            "10": {
+                "name": "minecraft:mushroom_stem",
+                "state_additions": {
+                    "down": "false",
+                    "up": "false",
+                    "north": "true",
+                    "south": "true",
+                    "west": "true",
+                    "east": "true"
+                }
+            },
+            "15": {
+                "name": "minecraft:mushroom_stem",
+                "state_additions": {
+                    "down": "false",
+                    "east": "false",
+                    "north": "false",
+                    "south": "false",
+                    "up": "false",
+                    "west": "false"
+                }
+            }
+        }
+    },
     "minecraft:bubble_column": {
         "type": "singular",
         "name": "minecraft:bubble_column",
@@ -9319,6 +9476,163 @@
     },
     "minecraft:red_mushroom": {
         "type": "none"
+    },
+    "minecraft:red_mushroom_block": {
+        "type": "multi",
+        "defaults": {
+            "down": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "west": "false"
+        },
+        "multi_name": "huge_mushroom_bits",
+        "multi_states": {
+            "0": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "false",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "1": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "true",
+                    "south": "false",
+                    "west": "true",
+                    "east": "false"
+                }
+            },
+            "2": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "true",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "3": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "true",
+                    "south": "false",
+                    "west": "false",
+                    "east": "true"
+                }
+            },
+            "4": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "false",
+                    "west": "true",
+                    "east": "false"
+                }
+            },
+            "5": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "6": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "false",
+                    "west": "false",
+                    "east": "true"
+                }
+            },
+            "7": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "true",
+                    "west": "true",
+                    "east": "false"
+                }
+            },
+            "8": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "true",
+                    "west": "false",
+                    "east": "false"
+                }
+            },
+            "9": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "up": "true",
+                    "north": "false",
+                    "south": "true",
+                    "west": "false",
+                    "east": "true"
+                }
+            },
+            "14": {
+                "name": "minecraft:red_mushroom_block",
+                "state_additions": {
+                    "down": "false",
+                    "east": "false",
+                    "north": "false",
+                    "south": "false",
+                    "up": "false",
+                    "west": "false"
+                }
+            },
+            "10": {
+                "name": "minecraft:mushroom_stem",
+                "state_additions": {
+                    "down": "false",
+                    "up": "false",
+                    "north": "true",
+                    "south": "true",
+                    "west": "true",
+                    "east": "true"
+                }
+            },
+            "15": {
+                "name": "minecraft:mushroom_stem",
+                "state_additions": {
+                    "down": "false",
+                    "east": "false",
+                    "north": "false",
+                    "south": "false",
+                    "up": "false",
+                    "west": "false"
+                }
+            }
+        }
     },
     "minecraft:red_nether_brick_stairs": {
         "type": "singular",
