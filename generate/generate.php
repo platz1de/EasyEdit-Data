@@ -696,6 +696,65 @@ foreach ($groupsJtb as $group) {
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
 	}
 
+	if ($group["name"] === "minecraft:vine") {
+		$obj["type"] = "combined";
+		$obj["state_removals"] = ["up"]; //up is automatically added in bedrock
+		$obj["combined_names"] = [
+			"east",
+			"north",
+			"west",
+			"south",
+		];
+		$obj["target_name"] = "vine_direction_bits";
+		$obj["combined_states"] = [
+			"false" => [
+				"false" => [
+					"false" => [
+						"false" => "0", //none
+						"true" => "1", //south
+					],
+					"true" => [
+						"false" => "2", //west
+						"true" => "3", //south, west
+					]
+				],
+				"true" => [
+					"false" => [
+						"false" => "4", //north
+						"true" => "5", //south, north
+					],
+					"true" => [
+						"false" => "6", //north, west
+						"true" => "7", //south, north, west
+					]
+				]
+			],
+			"true" => [
+				"false" => [
+					"false" => [
+						"false" => "8", //east
+						"true" => "9", //south, east
+					],
+					"true" => [
+						"false" => "10", //east, west
+						"true" => "11", //south, east, west
+					]
+				],
+				"true" => [
+					"false" => [
+						"false" => "12", //north, east
+						"true" => "13", //south, north, east
+					],
+					"true" => [
+						"false" => "14", //north, east, west
+						"true" => "15", //south, north, east, west
+					]
+				]
+			]
+		];
+		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $bedrockValues["vine_direction_bits"]);
+	}
+
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
 		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);

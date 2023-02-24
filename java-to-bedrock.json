@@ -22259,6 +22259,95 @@
             ]
         }
     },
+    "minecraft:vine": {
+        "type": "combined",
+        "name": "minecraft:vine",
+        "state_removals": [
+            "up"
+        ],
+        "combined_names": [
+            "east",
+            "north",
+            "west",
+            "south"
+        ],
+        "target_name": "vine_direction_bits",
+        "combined_states": {
+            "false": {
+                "false": {
+                    "false": {
+                        "false": "0",
+                        "true": "1"
+                    },
+                    "true": {
+                        "false": "2",
+                        "true": "3"
+                    }
+                },
+                "true": {
+                    "false": {
+                        "false": "4",
+                        "true": "5"
+                    },
+                    "true": {
+                        "false": "6",
+                        "true": "7"
+                    }
+                }
+            },
+            "true": {
+                "false": {
+                    "false": {
+                        "false": "8",
+                        "true": "9"
+                    },
+                    "true": {
+                        "false": "10",
+                        "true": "11"
+                    }
+                },
+                "true": {
+                    "false": {
+                        "false": "12",
+                        "true": "13"
+                    },
+                    "true": {
+                        "false": "14",
+                        "true": "15"
+                    }
+                }
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "west": "false"
+        },
+        "values": {
+            "east": [
+                "false",
+                "true"
+            ],
+            "north": [
+                "false",
+                "true"
+            ],
+            "south": [
+                "false",
+                "true"
+            ],
+            "up": [
+                "false",
+                "true"
+            ],
+            "west": [
+                "false",
+                "true"
+            ]
+        }
+    },
     "minecraft:void_air": {
         "type": "singular",
         "name": "minecraft:air"

@@ -11092,6 +11092,121 @@
             "axis": "y"
         }
     },
+    "minecraft:vine": {
+        "type": "combined_multi",
+        "name": "minecraft:vine",
+        "combined_names": [
+            "vine_direction_bits"
+        ],
+        "state_additions": {
+            "up": "false"
+        },
+        "combined_states": [
+            {
+                "east": "false",
+                "north": "false",
+                "west": "false",
+                "south": "false"
+            },
+            {
+                "east": "false",
+                "north": "false",
+                "west": "false",
+                "south": "true"
+            },
+            {
+                "east": "false",
+                "north": "false",
+                "west": "true",
+                "south": "false"
+            },
+            {
+                "east": "false",
+                "north": "false",
+                "west": "true",
+                "south": "true"
+            },
+            {
+                "east": "false",
+                "north": "true",
+                "west": "false",
+                "south": "false"
+            },
+            {
+                "east": "false",
+                "north": "true",
+                "west": "false",
+                "south": "true"
+            },
+            {
+                "east": "false",
+                "north": "true",
+                "west": "true",
+                "south": "false"
+            },
+            {
+                "east": "false",
+                "north": "true",
+                "west": "true",
+                "south": "true"
+            },
+            {
+                "east": "true",
+                "north": "false",
+                "west": "false",
+                "south": "false"
+            },
+            {
+                "east": "true",
+                "north": "false",
+                "west": "false",
+                "south": "true"
+            },
+            {
+                "east": "true",
+                "north": "false",
+                "west": "true",
+                "south": "false"
+            },
+            {
+                "east": "true",
+                "north": "false",
+                "west": "true",
+                "south": "true"
+            },
+            {
+                "east": "true",
+                "north": "true",
+                "west": "false",
+                "south": "false"
+            },
+            {
+                "east": "true",
+                "north": "true",
+                "west": "false",
+                "south": "true"
+            },
+            {
+                "east": "true",
+                "north": "true",
+                "west": "true",
+                "south": "false"
+            },
+            {
+                "east": "true",
+                "north": "true",
+                "west": "true",
+                "south": "true"
+            }
+        ],
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "west": "false"
+        }
+    },
     "minecraft:warped_button": {
         "type": "combined_multi",
         "name": "minecraft:warped_button",
