@@ -1266,7 +1266,17 @@ function revertJavaToBedrock($java, $bedrockData, &$btj, $customData)
 		}
 		if ($a["type"] === "multi" && $b["type"] === "singular") {
 			$multi = $a["multi_states"];
-			$multi[$b["state_removals"][$a["multi_name"]] ?? "default"] = ["name" => $b["name"], "state_additions" => $b["state_additions"] ?? [], "state_removals" => $b["state_removals"] ?? []];
+			foreach ($a["state_additions"] ?? [] as $key => $value) {
+				if ($b["state_additions"][$key] === $value) {
+					unset($b["state_additions"][$key]);
+				}
+			}
+			foreach ($a["state_removals"] ?? [] as $key => $value) {
+				unset($b["state_removals"][$key]);
+			}
+			$remove = $b["state_removals"] ?? [];
+			unset($remove[$a["multi_name"]]);
+			$multi[$b["state_removals"][$a["multi_name"]] ?? "default"] = ["name" => $b["name"], "state_additions" => $b["state_additions"] ?? [], "state_removals" => $remove];
 			$a["multi_states"] = $multi;
 			return;
 		}

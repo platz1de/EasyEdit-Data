@@ -98,69 +98,19 @@
                 "name": "minecraft:acacia_fence"
             },
             "oak": {
-                "name": "minecraft:oak_fence",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:oak_fence"
             },
             "birch": {
-                "name": "minecraft:birch_fence",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:birch_fence"
             },
             "dark_oak": {
-                "name": "minecraft:dark_oak_fence",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:dark_oak_fence"
             },
             "jungle": {
-                "name": "minecraft:jungle_fence",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:jungle_fence"
             },
             "spruce": {
-                "name": "minecraft:spruce_fence",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:spruce_fence"
             }
         }
     },
@@ -246,28 +196,16 @@
                 "name": "minecraft:birch_planks"
             },
             "dark_oak": {
-                "name": "minecraft:dark_oak_planks",
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:dark_oak_planks"
             },
             "jungle": {
-                "name": "minecraft:jungle_planks",
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:jungle_planks"
             },
             "oak": {
-                "name": "minecraft:oak_planks",
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:oak_planks"
             },
             "spruce": {
-                "name": "minecraft:spruce_planks",
-                "state_removals": [
-                    "wood_type"
-                ]
+                "name": "minecraft:spruce_planks"
             }
         }
     },
@@ -310,28 +248,16 @@
                 "name": "minecraft:birch_sapling"
             },
             "dark_oak": {
-                "name": "minecraft:dark_oak_sapling",
-                "state_removals": [
-                    "sapling_type"
-                ]
+                "name": "minecraft:dark_oak_sapling"
             },
             "jungle": {
-                "name": "minecraft:jungle_sapling",
-                "state_removals": [
-                    "sapling_type"
-                ]
+                "name": "minecraft:jungle_sapling"
             },
             "oak": {
-                "name": "minecraft:oak_sapling",
-                "state_removals": [
-                    "sapling_type"
-                ]
+                "name": "minecraft:oak_sapling"
             },
             "spruce": {
-                "name": "minecraft:spruce_sapling",
-                "state_removals": [
-                    "sapling_type"
-                ]
+                "name": "minecraft:spruce_sapling"
             }
         }
     },
@@ -363,22 +289,14 @@
             "true": {
                 "name": "minecraft:spruce_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "top"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             },
             "false": {
                 "name": "minecraft:spruce_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "bottom"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             }
         }
     },
@@ -395,14 +313,7 @@
         "multi_name": "top_slot_bit",
         "multi_states": {
             "false": {
-                "name": "minecraft:spruce_slab",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "type": "double"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                "name": "minecraft:spruce_slab"
             }
         }
     },
@@ -504,46 +415,22 @@
         "multi_name": "wood_type",
         "multi_states": {
             "acacia": {
-                "name": "minecraft:stripped_acacia_wood",
-                "state_removals": [
-                    "wood_type",
-                    "stripped_bit"
-                ]
+                "name": "minecraft:stripped_acacia_wood"
             },
             "birch": {
-                "name": "minecraft:stripped_birch_wood",
-                "state_removals": [
-                    "wood_type",
-                    "stripped_bit"
-                ]
+                "name": "minecraft:stripped_birch_wood"
             },
             "dark_oak": {
-                "name": "minecraft:stripped_dark_oak_wood",
-                "state_removals": [
-                    "wood_type",
-                    "stripped_bit"
-                ]
+                "name": "minecraft:stripped_dark_oak_wood"
             },
             "jungle": {
-                "name": "minecraft:stripped_jungle_wood",
-                "state_removals": [
-                    "wood_type",
-                    "stripped_bit"
-                ]
+                "name": "minecraft:stripped_jungle_wood"
             },
             "oak": {
-                "name": "minecraft:stripped_oak_wood",
-                "state_removals": [
-                    "wood_type",
-                    "stripped_bit"
-                ]
+                "name": "minecraft:stripped_oak_wood"
             },
             "spruce": {
-                "name": "minecraft:stripped_spruce_wood",
-                "state_removals": [
-                    "wood_type",
-                    "stripped_bit"
-                ]
+                "name": "minecraft:stripped_spruce_wood"
             }
         }
     },
@@ -587,58 +474,31 @@
                 "name": "minecraft:azure_bluet"
             },
             "orchid": {
-                "name": "minecraft:blue_orchid",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:blue_orchid"
             },
             "cornflower": {
-                "name": "minecraft:cornflower",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:cornflower"
             },
             "lily_of_the_valley": {
-                "name": "minecraft:lily_of_the_valley",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:lily_of_the_valley"
             },
             "tulip_orange": {
-                "name": "minecraft:orange_tulip",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:orange_tulip"
             },
             "oxeye": {
-                "name": "minecraft:oxeye_daisy",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:oxeye_daisy"
             },
             "tulip_pink": {
-                "name": "minecraft:pink_tulip",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:pink_tulip"
             },
             "poppy": {
-                "name": "minecraft:poppy",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:poppy"
             },
             "tulip_red": {
-                "name": "minecraft:red_tulip",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:red_tulip"
             },
             "tulip_white": {
-                "name": "minecraft:white_tulip",
-                "state_removals": [
-                    "flower_type"
-                ]
+                "name": "minecraft:white_tulip"
             }
         }
     },
@@ -683,34 +543,19 @@
                 "name": "minecraft:diorite"
             },
             "granite": {
-                "name": "minecraft:granite",
-                "state_removals": [
-                    "stone_type"
-                ]
+                "name": "minecraft:granite"
             },
             "andesite_smooth": {
-                "name": "minecraft:polished_andesite",
-                "state_removals": [
-                    "stone_type"
-                ]
+                "name": "minecraft:polished_andesite"
             },
             "diorite_smooth": {
-                "name": "minecraft:polished_diorite",
-                "state_removals": [
-                    "stone_type"
-                ]
+                "name": "minecraft:polished_diorite"
             },
             "granite_smooth": {
-                "name": "minecraft:polished_granite",
-                "state_removals": [
-                    "stone_type"
-                ]
+                "name": "minecraft:polished_granite"
             },
             "stone": {
-                "name": "minecraft:stone",
-                "state_removals": [
-                    "stone_type"
-                ]
+                "name": "minecraft:stone"
             }
         }
     },
@@ -728,22 +573,14 @@
             "true": {
                 "name": "minecraft:smooth_red_sandstone_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "top"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             },
             "false": {
                 "name": "minecraft:smooth_red_sandstone_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "bottom"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             }
         }
     },
@@ -760,14 +597,7 @@
         "multi_name": "top_slot_bit",
         "multi_states": {
             "false": {
-                "name": "minecraft:smooth_red_sandstone_slab",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "type": "double"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                "name": "minecraft:smooth_red_sandstone_slab"
             }
         }
     },
@@ -852,112 +682,40 @@
                 "name": "minecraft:brick_wall"
             },
             "cobblestone": {
-                "name": "minecraft:cobblestone_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:cobblestone_wall"
             },
             "diorite": {
-                "name": "minecraft:diorite_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:diorite_wall"
             },
             "end_brick": {
-                "name": "minecraft:end_stone_brick_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:end_stone_brick_wall"
             },
             "granite": {
-                "name": "minecraft:granite_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:granite_wall"
             },
             "mossy_cobblestone": {
-                "name": "minecraft:mossy_cobblestone_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:mossy_cobblestone_wall"
             },
             "mossy_stone_brick": {
-                "name": "minecraft:mossy_stone_brick_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:mossy_stone_brick_wall"
             },
             "nether_brick": {
-                "name": "minecraft:nether_brick_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:nether_brick_wall"
             },
             "prismarine": {
-                "name": "minecraft:prismarine_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:prismarine_wall"
             },
             "red_nether_brick": {
-                "name": "minecraft:red_nether_brick_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:red_nether_brick_wall"
             },
             "red_sandstone": {
-                "name": "minecraft:red_sandstone_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:red_sandstone_wall"
             },
             "sandstone": {
-                "name": "minecraft:sandstone_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:sandstone_wall"
             },
             "stone_brick": {
-                "name": "minecraft:stone_brick_wall",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "wall_block_type"
-                ]
+                "name": "minecraft:stone_brick_wall"
             }
         }
     },
@@ -986,10 +744,7 @@
                 "name": "minecraft:chipped_anvil"
             },
             "very_damaged": {
-                "name": "minecraft:damaged_anvil",
-                "state_removals": [
-                    "damage"
-                ]
+                "name": "minecraft:damaged_anvil"
             }
         }
     },
@@ -1543,26 +1298,10 @@
                 "name": "minecraft:jungle_leaves"
             },
             "oak": {
-                "name": "minecraft:oak_leaves",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "distance": "7"
-                },
-                "state_removals": [
-                    "update_bit",
-                    "old_leaf_type"
-                ]
+                "name": "minecraft:oak_leaves"
             },
             "spruce": {
-                "name": "minecraft:spruce_leaves",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "distance": "7"
-                },
-                "state_removals": [
-                    "update_bit",
-                    "old_leaf_type"
-                ]
+                "name": "minecraft:spruce_leaves"
             }
         }
     },
@@ -1583,16 +1322,10 @@
                 "name": "minecraft:jungle_log"
             },
             "oak": {
-                "name": "minecraft:oak_log",
-                "state_removals": [
-                    "old_log_type"
-                ]
+                "name": "minecraft:oak_log"
             },
             "spruce": {
-                "name": "minecraft:spruce_log",
-                "state_removals": [
-                    "old_log_type"
-                ]
+                "name": "minecraft:spruce_log"
             }
         }
     },
@@ -1730,88 +1463,46 @@
                 "name": "minecraft:blue_banner"
             },
             "brown": {
-                "name": "minecraft:brown_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_banner"
             },
             "cyan": {
-                "name": "minecraft:cyan_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_banner"
             },
             "gray": {
-                "name": "minecraft:gray_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_banner"
             },
             "green": {
-                "name": "minecraft:green_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_banner"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_banner"
             },
             "light_gray": {
-                "name": "minecraft:light_gray_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_banner"
             },
             "lime": {
-                "name": "minecraft:lime_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_banner"
             },
             "magenta": {
-                "name": "minecraft:magenta_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_banner"
             },
             "orange": {
-                "name": "minecraft:orange_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_banner"
             },
             "pink": {
-                "name": "minecraft:pink_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_banner"
             },
             "purple": {
-                "name": "minecraft:purple_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_banner"
             },
             "red": {
-                "name": "minecraft:red_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_banner"
             },
             "white": {
-                "name": "minecraft:white_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_banner"
             },
             "yellow": {
-                "name": "minecraft:yellow_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_banner"
             }
         }
     },
@@ -1851,88 +1542,46 @@
                 "name": "minecraft:blue_bed"
             },
             "brown": {
-                "name": "minecraft:brown_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_bed"
             },
             "cyan": {
-                "name": "minecraft:cyan_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_bed"
             },
             "gray": {
-                "name": "minecraft:gray_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_bed"
             },
             "green": {
-                "name": "minecraft:green_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_bed"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_bed"
             },
             "light_gray": {
-                "name": "minecraft:light_gray_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_bed"
             },
             "lime": {
-                "name": "minecraft:lime_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_bed"
             },
             "magenta": {
-                "name": "minecraft:magenta_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_bed"
             },
             "orange": {
-                "name": "minecraft:orange_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_bed"
             },
             "pink": {
-                "name": "minecraft:pink_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_bed"
             },
             "purple": {
-                "name": "minecraft:purple_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_bed"
             },
             "red": {
-                "name": "minecraft:red_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_bed"
             },
             "white": {
-                "name": "minecraft:white_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_bed"
             },
             "yellow": {
-                "name": "minecraft:yellow_bed",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_bed"
             }
         }
     },
@@ -1974,88 +1623,46 @@
                 "name": "minecraft:blue_carpet"
             },
             "brown": {
-                "name": "minecraft:brown_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_carpet"
             },
             "cyan": {
-                "name": "minecraft:cyan_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_carpet"
             },
             "gray": {
-                "name": "minecraft:gray_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_carpet"
             },
             "green": {
-                "name": "minecraft:green_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_carpet"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_carpet"
             },
             "silver": {
-                "name": "minecraft:light_gray_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_carpet"
             },
             "lime": {
-                "name": "minecraft:lime_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_carpet"
             },
             "magenta": {
-                "name": "minecraft:magenta_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_carpet"
             },
             "orange": {
-                "name": "minecraft:orange_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_carpet"
             },
             "pink": {
-                "name": "minecraft:pink_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_carpet"
             },
             "purple": {
-                "name": "minecraft:purple_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_carpet"
             },
             "red": {
-                "name": "minecraft:red_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_carpet"
             },
             "white": {
-                "name": "minecraft:white_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_carpet"
             },
             "yellow": {
-                "name": "minecraft:yellow_carpet",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_carpet"
             }
         }
     },
@@ -2070,88 +1677,46 @@
                 "name": "minecraft:blue_concrete"
             },
             "brown": {
-                "name": "minecraft:brown_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_concrete"
             },
             "cyan": {
-                "name": "minecraft:cyan_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_concrete"
             },
             "gray": {
-                "name": "minecraft:gray_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_concrete"
             },
             "green": {
-                "name": "minecraft:green_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_concrete"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_concrete"
             },
             "silver": {
-                "name": "minecraft:light_gray_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_concrete"
             },
             "lime": {
-                "name": "minecraft:lime_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_concrete"
             },
             "magenta": {
-                "name": "minecraft:magenta_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_concrete"
             },
             "orange": {
-                "name": "minecraft:orange_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_concrete"
             },
             "pink": {
-                "name": "minecraft:pink_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_concrete"
             },
             "purple": {
-                "name": "minecraft:purple_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_concrete"
             },
             "red": {
-                "name": "minecraft:red_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_concrete"
             },
             "white": {
-                "name": "minecraft:white_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_concrete"
             },
             "yellow": {
-                "name": "minecraft:yellow_concrete",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_concrete"
             }
         }
     },
@@ -2166,88 +1731,46 @@
                 "name": "minecraft:blue_concrete_powder"
             },
             "brown": {
-                "name": "minecraft:brown_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_concrete_powder"
             },
             "cyan": {
-                "name": "minecraft:cyan_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_concrete_powder"
             },
             "gray": {
-                "name": "minecraft:gray_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_concrete_powder"
             },
             "green": {
-                "name": "minecraft:green_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_concrete_powder"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_concrete_powder"
             },
             "silver": {
-                "name": "minecraft:light_gray_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_concrete_powder"
             },
             "lime": {
-                "name": "minecraft:lime_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_concrete_powder"
             },
             "magenta": {
-                "name": "minecraft:magenta_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_concrete_powder"
             },
             "orange": {
-                "name": "minecraft:orange_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_concrete_powder"
             },
             "pink": {
-                "name": "minecraft:pink_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_concrete_powder"
             },
             "purple": {
-                "name": "minecraft:purple_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_concrete_powder"
             },
             "red": {
-                "name": "minecraft:red_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_concrete_powder"
             },
             "white": {
-                "name": "minecraft:white_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_concrete_powder"
             },
             "yellow": {
-                "name": "minecraft:yellow_concrete_powder",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_concrete_powder"
             }
         }
     },
@@ -2286,130 +1809,46 @@
                 "name": "minecraft:blue_shulker_box"
             },
             "brown": {
-                "name": "minecraft:brown_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_shulker_box"
             },
             "cyan": {
-                "name": "minecraft:cyan_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_shulker_box"
             },
             "gray": {
-                "name": "minecraft:gray_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_shulker_box"
             },
             "green": {
-                "name": "minecraft:green_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_shulker_box"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_shulker_box"
             },
             "silver": {
-                "name": "minecraft:light_gray_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_shulker_box"
             },
             "lime": {
-                "name": "minecraft:lime_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_shulker_box"
             },
             "magenta": {
-                "name": "minecraft:magenta_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_shulker_box"
             },
             "orange": {
-                "name": "minecraft:orange_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_shulker_box"
             },
             "pink": {
-                "name": "minecraft:pink_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_shulker_box"
             },
             "purple": {
-                "name": "minecraft:purple_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_shulker_box"
             },
             "red": {
-                "name": "minecraft:red_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_shulker_box"
             },
             "white": {
-                "name": "minecraft:white_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_shulker_box"
             },
             "yellow": {
-                "name": "minecraft:yellow_shulker_box",
-                "state_additions": {
-                    "facing": "north"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_shulker_box"
             }
         }
     },
@@ -2424,88 +1863,46 @@
                 "name": "minecraft:blue_stained_glass"
             },
             "brown": {
-                "name": "minecraft:brown_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_stained_glass"
             },
             "cyan": {
-                "name": "minecraft:cyan_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_stained_glass"
             },
             "gray": {
-                "name": "minecraft:gray_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_stained_glass"
             },
             "green": {
-                "name": "minecraft:green_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_stained_glass"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_stained_glass"
             },
             "silver": {
-                "name": "minecraft:light_gray_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_stained_glass"
             },
             "lime": {
-                "name": "minecraft:lime_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_stained_glass"
             },
             "magenta": {
-                "name": "minecraft:magenta_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_stained_glass"
             },
             "orange": {
-                "name": "minecraft:orange_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_stained_glass"
             },
             "pink": {
-                "name": "minecraft:pink_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_stained_glass"
             },
             "purple": {
-                "name": "minecraft:purple_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_stained_glass"
             },
             "red": {
-                "name": "minecraft:red_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_stained_glass"
             },
             "white": {
-                "name": "minecraft:white_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_stained_glass"
             },
             "yellow": {
-                "name": "minecraft:yellow_stained_glass",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_stained_glass"
             }
         }
     },
@@ -2534,186 +1931,46 @@
                 "name": "minecraft:blue_stained_glass_pane"
             },
             "brown": {
-                "name": "minecraft:brown_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_stained_glass_pane"
             },
             "cyan": {
-                "name": "minecraft:cyan_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_stained_glass_pane"
             },
             "gray": {
-                "name": "minecraft:gray_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_stained_glass_pane"
             },
             "green": {
-                "name": "minecraft:green_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_stained_glass_pane"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_stained_glass_pane"
             },
             "silver": {
-                "name": "minecraft:light_gray_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_stained_glass_pane"
             },
             "lime": {
-                "name": "minecraft:lime_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_stained_glass_pane"
             },
             "magenta": {
-                "name": "minecraft:magenta_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_stained_glass_pane"
             },
             "orange": {
-                "name": "minecraft:orange_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_stained_glass_pane"
             },
             "pink": {
-                "name": "minecraft:pink_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_stained_glass_pane"
             },
             "purple": {
-                "name": "minecraft:purple_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_stained_glass_pane"
             },
             "red": {
-                "name": "minecraft:red_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_stained_glass_pane"
             },
             "white": {
-                "name": "minecraft:white_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_stained_glass_pane"
             },
             "yellow": {
-                "name": "minecraft:yellow_stained_glass_pane",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "west": "false"
-                },
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_stained_glass_pane"
             }
         }
     },
@@ -2728,88 +1985,46 @@
                 "name": "minecraft:blue_terracotta"
             },
             "brown": {
-                "name": "minecraft:brown_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_terracotta"
             },
             "cyan": {
-                "name": "minecraft:cyan_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_terracotta"
             },
             "gray": {
-                "name": "minecraft:gray_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_terracotta"
             },
             "green": {
-                "name": "minecraft:green_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_terracotta"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_terracotta"
             },
             "silver": {
-                "name": "minecraft:light_gray_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_terracotta"
             },
             "lime": {
-                "name": "minecraft:lime_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_terracotta"
             },
             "magenta": {
-                "name": "minecraft:magenta_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_terracotta"
             },
             "orange": {
-                "name": "minecraft:orange_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_terracotta"
             },
             "pink": {
-                "name": "minecraft:pink_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_terracotta"
             },
             "purple": {
-                "name": "minecraft:purple_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_terracotta"
             },
             "red": {
-                "name": "minecraft:red_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_terracotta"
             },
             "white": {
-                "name": "minecraft:white_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_terracotta"
             },
             "yellow": {
-                "name": "minecraft:yellow_terracotta",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_terracotta"
             }
         }
     },
@@ -2841,88 +2056,46 @@
                 "name": "minecraft:blue_wall_banner"
             },
             "brown": {
-                "name": "minecraft:brown_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_wall_banner"
             },
             "cyan": {
-                "name": "minecraft:cyan_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_wall_banner"
             },
             "gray": {
-                "name": "minecraft:gray_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_wall_banner"
             },
             "green": {
-                "name": "minecraft:green_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_wall_banner"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_wall_banner"
             },
             "light_gray": {
-                "name": "minecraft:light_gray_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_wall_banner"
             },
             "lime": {
-                "name": "minecraft:lime_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_wall_banner"
             },
             "magenta": {
-                "name": "minecraft:magenta_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_wall_banner"
             },
             "orange": {
-                "name": "minecraft:orange_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_wall_banner"
             },
             "pink": {
-                "name": "minecraft:pink_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_wall_banner"
             },
             "purple": {
-                "name": "minecraft:purple_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_wall_banner"
             },
             "red": {
-                "name": "minecraft:red_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_wall_banner"
             },
             "white": {
-                "name": "minecraft:white_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_wall_banner"
             },
             "yellow": {
-                "name": "minecraft:yellow_wall_banner",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_wall_banner"
             }
         }
     },
@@ -2937,88 +2110,46 @@
                 "name": "minecraft:blue_wool"
             },
             "brown": {
-                "name": "minecraft:brown_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:brown_wool"
             },
             "cyan": {
-                "name": "minecraft:cyan_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:cyan_wool"
             },
             "gray": {
-                "name": "minecraft:gray_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:gray_wool"
             },
             "green": {
-                "name": "minecraft:green_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:green_wool"
             },
             "light_blue": {
-                "name": "minecraft:light_blue_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_blue_wool"
             },
             "silver": {
-                "name": "minecraft:light_gray_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:light_gray_wool"
             },
             "lime": {
-                "name": "minecraft:lime_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:lime_wool"
             },
             "magenta": {
-                "name": "minecraft:magenta_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:magenta_wool"
             },
             "orange": {
-                "name": "minecraft:orange_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:orange_wool"
             },
             "pink": {
-                "name": "minecraft:pink_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:pink_wool"
             },
             "purple": {
-                "name": "minecraft:purple_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:purple_wool"
             },
             "red": {
-                "name": "minecraft:red_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:red_wool"
             },
             "white": {
-                "name": "minecraft:white_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:white_wool"
             },
             "yellow": {
-                "name": "minecraft:yellow_wool",
-                "state_removals": [
-                    "color"
-                ]
+                "name": "minecraft:yellow_wool"
             }
         }
     },
@@ -3261,54 +2392,19 @@
         "multi_name": "coral_color",
         "multi_states": {
             "pink": {
-                "name": "minecraft:dead_brain_coral",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:dead_brain_coral"
             },
             "purple": {
-                "name": "minecraft:dead_bubble_coral",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:dead_bubble_coral"
             },
             "red": {
-                "name": "minecraft:fire_coral",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:fire_coral"
             },
             "yellow": {
-                "name": "minecraft:horn_coral",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:horn_coral"
             },
             "blue": {
-                "name": "minecraft:tube_coral",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:tube_coral"
             }
         }
     },
@@ -3320,39 +2416,19 @@
         "multi_name": "coral_color",
         "multi_states": {
             "pink": {
-                "name": "minecraft:dead_brain_coral_block",
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:dead_brain_coral_block"
             },
             "purple": {
-                "name": "minecraft:dead_bubble_coral_block",
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:dead_bubble_coral_block"
             },
             "red": {
-                "name": "minecraft:fire_coral_block",
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:fire_coral_block"
             },
             "yellow": {
-                "name": "minecraft:horn_coral_block",
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:horn_coral_block"
             },
             "blue": {
-                "name": "minecraft:tube_coral_block",
-                "state_removals": [
-                    "coral_color",
-                    "dead_bit"
-                ]
+                "name": "minecraft:tube_coral_block"
             }
         }
     },
@@ -3376,34 +2452,13 @@
                 "name": "minecraft:bubble_coral_fan"
             },
             "red": {
-                "name": "minecraft:fire_coral_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "coral_fan_direction"
-                ]
+                "name": "minecraft:fire_coral_fan"
             },
             "yellow": {
-                "name": "minecraft:horn_coral_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "coral_fan_direction"
-                ]
+                "name": "minecraft:horn_coral_fan"
             },
             "blue": {
-                "name": "minecraft:tube_coral_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "coral_fan_direction"
-                ]
+                "name": "minecraft:tube_coral_fan"
             }
         }
     },
@@ -3436,14 +2491,7 @@
                 "name": "minecraft:dead_brain_coral_wall_fan"
             },
             "false": {
-                "name": "minecraft:tube_coral_wall_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_hang_type_bit",
-                    "dead_bit"
-                ]
+                "name": "minecraft:tube_coral_wall_fan"
             }
         }
     },
@@ -3475,22 +2523,14 @@
             "true": {
                 "name": "minecraft:stone_brick_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "top"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             },
             "false": {
                 "name": "minecraft:stone_brick_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "bottom"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             }
         }
     },
@@ -3507,14 +2547,7 @@
         "multi_name": "top_slot_bit",
         "multi_states": {
             "false": {
-                "name": "minecraft:stone_brick_slab",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "type": "double"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                "name": "minecraft:stone_brick_slab"
             }
         }
     },
@@ -3796,14 +2829,7 @@
                 "name": "minecraft:dead_bubble_coral_wall_fan"
             },
             "true": {
-                "name": "minecraft:fire_coral_wall_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_hang_type_bit",
-                    "dead_bit"
-                ]
+                "name": "minecraft:fire_coral_wall_fan"
             }
         }
     },
@@ -3933,10 +2959,7 @@
         "multi_name": "cauldron_liquid",
         "multi_states": {
             "water": {
-                "name": "minecraft:water_cauldron",
-                "state_removals": [
-                    "cauldron_liquid"
-                ]
+                "name": "minecraft:water_cauldron"
             },
             "lava": {
                 "name": "minecraft:lava_cauldron",
@@ -3945,10 +2968,7 @@
                 ]
             },
             "powder_snow": {
-                "name": "minecraft:powder_snow_cauldron",
-                "state_removals": [
-                    "cauldron_liquid"
-                ]
+                "name": "minecraft:powder_snow_cauldron"
             }
         }
     },
@@ -4076,17 +3096,10 @@
                 "name": "minecraft:quartz_block"
             },
             "lines": {
-                "name": "minecraft:quartz_pillar",
-                "state_removals": [
-                    "chisel_type"
-                ]
+                "name": "minecraft:quartz_pillar"
             },
             "smooth": {
-                "name": "minecraft:smooth_quartz",
-                "state_removals": [
-                    "chisel_type",
-                    "pillar_axis"
-                ]
+                "name": "minecraft:smooth_quartz"
             }
         }
     },
@@ -4101,16 +3114,10 @@
                 "name": "minecraft:cut_red_sandstone"
             },
             "default": {
-                "name": "minecraft:red_sandstone",
-                "state_removals": [
-                    "sand_stone_type"
-                ]
+                "name": "minecraft:red_sandstone"
             },
             "smooth": {
-                "name": "minecraft:smooth_red_sandstone",
-                "state_removals": [
-                    "sand_stone_type"
-                ]
+                "name": "minecraft:smooth_red_sandstone"
             }
         }
     },
@@ -4125,16 +3132,10 @@
                 "name": "minecraft:cut_sandstone"
             },
             "default": {
-                "name": "minecraft:sandstone",
-                "state_removals": [
-                    "sand_stone_type"
-                ]
+                "name": "minecraft:sandstone"
             },
             "smooth": {
-                "name": "minecraft:smooth_sandstone",
-                "state_removals": [
-                    "sand_stone_type"
-                ]
+                "name": "minecraft:smooth_sandstone"
             }
         }
     },
@@ -4149,16 +3150,10 @@
                 "name": "minecraft:cracked_stone_bricks"
             },
             "mossy": {
-                "name": "minecraft:mossy_stone_bricks",
-                "state_removals": [
-                    "stone_brick_type"
-                ]
+                "name": "minecraft:mossy_stone_bricks"
             },
             "default": {
-                "name": "minecraft:stone_bricks",
-                "state_removals": [
-                    "stone_brick_type"
-                ]
+                "name": "minecraft:stone_bricks"
             }
         }
     },
@@ -4528,40 +3523,22 @@
                 "name": "minecraft:creeper_wall_head"
             },
             "dragon": {
-                "name": "minecraft:dragon_wall_head",
-                "state_removals": [
-                    "type"
-                ]
+                "name": "minecraft:dragon_wall_head"
             },
             "piglin": {
-                "name": "minecraft:piglin_wall_head",
-                "state_removals": [
-                    "type"
-                ]
+                "name": "minecraft:piglin_wall_head"
             },
             "player": {
-                "name": "minecraft:player_wall_head",
-                "state_removals": [
-                    "type"
-                ]
+                "name": "minecraft:player_wall_head"
             },
             "skeleton": {
-                "name": "minecraft:skeleton_wall_skull",
-                "state_removals": [
-                    "type"
-                ]
+                "name": "minecraft:skeleton_wall_skull"
             },
             "wither_skeleton": {
-                "name": "minecraft:wither_skeleton_wall_skull",
-                "state_removals": [
-                    "type"
-                ]
+                "name": "minecraft:wither_skeleton_wall_skull"
             },
             "zombie": {
-                "name": "minecraft:zombie_wall_head",
-                "state_removals": [
-                    "type"
-                ]
+                "name": "minecraft:zombie_wall_head"
             }
         }
     },
@@ -4962,22 +3939,14 @@
             "true": {
                 "name": "minecraft:stone_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "top"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             },
             "false": {
                 "name": "minecraft:stone_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "bottom"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             }
         }
     },
@@ -4994,14 +3963,7 @@
         "multi_name": "top_slot_bit",
         "multi_states": {
             "false": {
-                "name": "minecraft:stone_slab",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "type": "double"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                "name": "minecraft:stone_slab"
             }
         }
     },
@@ -5282,10 +4244,7 @@
                 "name": "minecraft:prismarine"
             },
             "bricks": {
-                "name": "minecraft:prismarine_bricks",
-                "state_removals": [
-                    "prismarine_block_type"
-                ]
+                "name": "minecraft:prismarine_bricks"
             }
         }
     },
@@ -5303,22 +4262,14 @@
             "true": {
                 "name": "minecraft:smooth_sandstone_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "top"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             },
             "false": {
                 "name": "minecraft:smooth_sandstone_slab",
                 "state_additions": {
-                    "waterlogged": "false",
                     "type": "bottom"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                }
             }
         }
     },
@@ -5335,14 +4286,7 @@
         "multi_name": "top_slot_bit",
         "multi_states": {
             "false": {
-                "name": "minecraft:smooth_sandstone_slab",
-                "state_additions": {
-                    "waterlogged": "false",
-                    "type": "double"
-                },
-                "state_removals": [
-                    "top_slot_bit"
-                ]
+                "name": "minecraft:smooth_sandstone_slab"
             }
         }
     },
@@ -5424,34 +4368,13 @@
                 "name": "minecraft:dead_bubble_coral_fan"
             },
             "red": {
-                "name": "minecraft:dead_fire_coral_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "coral_fan_direction"
-                ]
+                "name": "minecraft:dead_fire_coral_fan"
             },
             "yellow": {
-                "name": "minecraft:dead_horn_coral_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "coral_fan_direction"
-                ]
+                "name": "minecraft:dead_horn_coral_fan"
             },
             "blue": {
-                "name": "minecraft:dead_tube_coral_fan",
-                "state_additions": {
-                    "waterlogged": "false"
-                },
-                "state_removals": [
-                    "coral_color",
-                    "coral_fan_direction"
-                ]
+                "name": "minecraft:dead_tube_coral_fan"
             }
         }
     },
@@ -6135,10 +5058,7 @@
         "multi_name": "update_bit",
         "multi_states": {
             "false": {
-                "name": "minecraft:potted_wither_rose",
-                "state_removals": [
-                    "update_bit"
-                ]
+                "name": "minecraft:potted_wither_rose"
             }
         }
     },
@@ -7013,28 +5933,16 @@
                 "name": "minecraft:infested_cobblestone"
             },
             "cracked_stone_brick": {
-                "name": "minecraft:infested_cracked_stone_bricks",
-                "state_removals": [
-                    "monster_egg_stone_type"
-                ]
+                "name": "minecraft:infested_cracked_stone_bricks"
             },
             "mossy_stone_brick": {
-                "name": "minecraft:infested_mossy_stone_bricks",
-                "state_removals": [
-                    "monster_egg_stone_type"
-                ]
+                "name": "minecraft:infested_mossy_stone_bricks"
             },
             "stone": {
-                "name": "minecraft:infested_stone",
-                "state_removals": [
-                    "monster_egg_stone_type"
-                ]
+                "name": "minecraft:infested_stone"
             },
             "stone_brick": {
-                "name": "minecraft:infested_stone_bricks",
-                "state_removals": [
-                    "monster_egg_stone_type"
-                ]
+                "name": "minecraft:infested_stone_bricks"
             }
         }
     },
@@ -7484,28 +6392,16 @@
                 "name": "minecraft:lilac"
             },
             "paeonia": {
-                "name": "minecraft:peony",
-                "state_removals": [
-                    "double_plant_type"
-                ]
+                "name": "minecraft:peony"
             },
             "rose": {
-                "name": "minecraft:rose_bush",
-                "state_removals": [
-                    "double_plant_type"
-                ]
+                "name": "minecraft:rose_bush"
             },
             "sunflower": {
-                "name": "minecraft:sunflower",
-                "state_removals": [
-                    "double_plant_type"
-                ]
+                "name": "minecraft:sunflower"
             },
             "grass": {
-                "name": "minecraft:tall_grass",
-                "state_removals": [
-                    "double_plant_type"
-                ]
+                "name": "minecraft:tall_grass"
             }
         }
     },
@@ -7545,118 +6441,79 @@
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 3
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "4": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 4
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "5": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 5
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "6": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 6
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "7": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 7
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "8": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 8
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "9": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 9
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "10": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 10
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "11": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 11
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "12": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 12
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "13": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 13
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "14": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 14
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "15": {
                 "name": "minecraft:lava",
                 "state_additions": {
                     "level": 15
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             }
         }
     },
@@ -12608,118 +11465,79 @@
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 3
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "4": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 4
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "5": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 5
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "6": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 6
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "7": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 7
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "8": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 8
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "9": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 9
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "10": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 10
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "11": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 11
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "12": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 12
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "13": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 13
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "14": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 14
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             },
             "15": {
                 "name": "minecraft:water",
                 "state_additions": {
                     "level": 15
-                },
-                "state_removals": [
-                    "liquid_depth"
-                ]
+                }
             }
         }
     },
