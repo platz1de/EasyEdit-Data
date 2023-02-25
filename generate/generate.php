@@ -1244,12 +1244,12 @@ function revertJavaToBedrock($java, $bedrockData, &$btj, $customData)
 					unset($removeA[$key], $removeB[$key]);
 				}
 			}
-			if (count($a["state_removals"]) === 1) {
+			if (count($a["state_removals"]) === 1 && array_keys($a["state_removals"]) === array_keys($b["state_removals"])) {
 				$a["multi_name"] = array_key_first($a["state_removals"]);
-				unset($a["state_removals"]);
+				unset($a["state_removals"], $b["state_removals"]);
 			} else if (isset($customData["btj_multi"][$bedrock])) {
 				$a["multi_name"] = $customData["btj_multi"][$bedrock];
-				unset($a["state_removals"][$a["multi_name"]]);
+				unset($a["state_removals"][$a["multi_name"]], $b["state_removals"][$a["multi_name"]]);
 			} else {
 				throw new \Exception("Failed to find multi name for $bedrock ($nameA, $nameB)" . json_encode($a) . json_encode($b));
 			}

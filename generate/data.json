@@ -224,7 +224,9 @@
 	"minecraft:soul_torch": "torch_facing_direction",
 	"minecraft:torch": "torch_facing_direction",
 	"minecraft:standing_sign": "facing_direction",
-	"minecraft:seagrass": "sea_grass_type"
+	"minecraft:seagrass": "sea_grass_type",
+	"minecraft:big_dripleaf": "big_dripleaf_head",
+	"minecraft:cauldron": "cauldron_liquid"
   },
   "btj_ignore": {
 	"minecraft:cave_vines": [
