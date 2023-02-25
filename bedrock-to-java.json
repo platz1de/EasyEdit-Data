@@ -193,8 +193,7 @@
     "minecraft:leaves2": {
         "type": "multi",
         "state_removals": [
-            "update_bit",
-            "new_leaf_type"
+            "update_bit"
         ],
         "state_renames": {
             "persistent_bit": "persistent"
@@ -494,7 +493,6 @@
     "minecraft:wood": {
         "type": "multi",
         "state_removals": [
-            "wood_type",
             "stripped_bit"
         ],
         "state_renames": {
@@ -1522,8 +1520,7 @@
     "minecraft:leaves": {
         "type": "multi",
         "state_removals": [
-            "update_bit",
-            "old_leaf_type"
+            "update_bit"
         ],
         "state_renames": {
             "persistent_bit": "persistent"
@@ -3253,7 +3250,6 @@
     "minecraft:coral": {
         "type": "multi",
         "state_removals": [
-            "coral_color",
             "dead_bit"
         ],
         "state_additions": {
@@ -3319,7 +3315,6 @@
     "minecraft:coral_block": {
         "type": "multi",
         "state_removals": [
-            "coral_color",
             "dead_bit"
         ],
         "multi_name": "coral_color",
@@ -3364,7 +3359,6 @@
     "minecraft:coral_fan": {
         "type": "multi",
         "state_removals": [
-            "coral_color",
             "coral_fan_direction"
         ],
         "state_additions": {
@@ -3416,7 +3410,6 @@
     "minecraft:coral_fan_hang": {
         "type": "multi",
         "state_removals": [
-            "coral_hang_type_bit",
             "dead_bit"
         ],
         "state_renames": {
@@ -3777,7 +3770,6 @@
     "minecraft:coral_fan_hang2": {
         "type": "multi",
         "state_removals": [
-            "coral_hang_type_bit",
             "dead_bit"
         ],
         "state_renames": {
@@ -4073,7 +4065,6 @@
     "minecraft:quartz_block": {
         "type": "multi",
         "state_removals": [
-            "chisel_type",
             "pillar_axis"
         ],
         "multi_name": "chisel_type",
@@ -5416,7 +5407,6 @@
     "minecraft:coral_fan_dead": {
         "type": "multi",
         "state_removals": [
-            "coral_color",
             "coral_fan_direction"
         ],
         "state_additions": {
@@ -5472,7 +5462,6 @@
     "minecraft:coral_fan_hang3": {
         "type": "multi",
         "state_removals": [
-            "coral_hang_type_bit",
             "dead_bit"
         ],
         "state_renames": {
