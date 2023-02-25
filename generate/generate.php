@@ -657,6 +657,14 @@ foreach ($groupsJtb as $group) {
 			],
 			"default" => "14" //all sides
 		];
+		$obj["combined_defaults"] = [
+			"down" => "true",
+			"up" => "true",
+			"north" => "true",
+			"south" => "true",
+			"west" => "true",
+			"east" => "true"
+		];
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
 	}
 
@@ -692,6 +700,14 @@ foreach ($groupsJtb as $group) {
 				],
 			],
 			"default" => "15" //all stem sides
+		];
+		$obj["combined_defaults"] = [
+			"down" => "true",
+			"up" => "true",
+			"north" => "true",
+			"south" => "true",
+			"west" => "true",
+			"east" => "true"
 		];
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
 	}
@@ -1019,7 +1035,12 @@ foreach ($groupsJtb as $group) {
 if ($failedJTB !== []) echo "\e[31mFailed to convert " . count($failedJTB) . " blocks\e[39m" . PHP_EOL;
 echo "Converted " . count($jtb) . " blocks" . PHP_EOL;
 file_put_contents("debug/java-to-bedrock-fail.json", json_encode($failedJTB, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
-file_put_contents("../java-to-bedrock.json", json_encode($jtb, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+$write = $jtb;
+foreach ($write as $name => $block) {
+	unset($write[$name]["combined_defaults"]);
+}
+file_put_contents("../java-to-bedrock.json", json_encode($write, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 echo "Testing mappings..." . PHP_EOL;
 $succeeded = 0;
@@ -1363,12 +1384,7 @@ function revertJavaToBedrock($java, $bedrockData, &$btj, $customData)
 			unset($bedrockData["combined_states"]["default"]);
 			$mapReader($bedrockData["combined_states"], []);
 			if ($default !== null) {
-				$map[$default] = [];
-				foreach ($bedrockData["defaults"] ?? [] as $key => $value) {
-					if (in_array($key, $bedrockData["combined_names"], true)) {
-						$map[$default][$key] = $value;
-					}
-				}
+				$map[$default] = $bedrockData["combined_defaults"];
 			}
 			$state["combined_states"] = $map;
 			if (isset($bedrockData["defaults"])) {

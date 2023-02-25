@@ -2758,12 +2758,12 @@
             "14": {
                 "name": "minecraft:brown_mushroom_block",
                 "state_additions": {
-                    "down": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "up": "false",
-                    "west": "false"
+                    "down": "true",
+                    "up": "true",
+                    "north": "true",
+                    "south": "true",
+                    "west": "true",
+                    "east": "true"
                 }
             },
             "10": {
@@ -2780,12 +2780,12 @@
             "15": {
                 "name": "minecraft:mushroom_stem",
                 "state_additions": {
-                    "down": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "up": "false",
-                    "west": "false"
+                    "down": "true",
+                    "up": "true",
+                    "north": "true",
+                    "south": "true",
+                    "west": "true",
+                    "east": "true"
                 }
             }
         }
@@ -8981,12 +8981,12 @@
             "14": {
                 "name": "minecraft:red_mushroom_block",
                 "state_additions": {
-                    "down": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "up": "false",
-                    "west": "false"
+                    "down": "true",
+                    "up": "true",
+                    "north": "true",
+                    "south": "true",
+                    "west": "true",
+                    "east": "true"
                 }
             },
             "10": {
@@ -9003,12 +9003,12 @@
             "15": {
                 "name": "minecraft:mushroom_stem",
                 "state_additions": {
-                    "down": "false",
-                    "east": "false",
-                    "north": "false",
-                    "south": "false",
-                    "up": "false",
-                    "west": "false"
+                    "down": "true",
+                    "up": "true",
+                    "north": "true",
+                    "south": "true",
+                    "west": "true",
+                    "east": "true"
                 }
             }
         }
