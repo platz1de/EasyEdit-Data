@@ -111,6 +111,10 @@
         "name": "minecraft:planks",
         "damage": 4
     },
+    "minecraft:cherry_planks": {
+        "name": "minecraft:planks",
+        "damage": 0
+    },
     "minecraft:dark_oak_planks": {
         "name": "minecraft:planks",
         "damage": 5
@@ -155,6 +159,10 @@
         "name": "minecraft:sapling",
         "damage": 4
     },
+    "minecraft:cherry_sapling": {
+        "name": "minecraft:sapling",
+        "damage": 0
+    },
     "minecraft:dark_oak_sapling": {
         "name": "minecraft:sapling",
         "damage": 5
@@ -168,6 +176,10 @@
         "damage": 0
     },
     "minecraft:sand": {
+        "name": "minecraft:sand",
+        "damage": 0
+    },
+    "minecraft:suspicious_sand": {
         "name": "minecraft:sand",
         "damage": 0
     },
@@ -443,6 +455,10 @@
         "name": "minecraft:log2",
         "damage": 0
     },
+    "minecraft:cherry_log": {
+        "name": "minecraft:log",
+        "damage": 0
+    },
     "minecraft:dark_oak_log": {
         "name": "minecraft:log2",
         "damage": 1
@@ -491,6 +507,10 @@
         "name": "minecraft:stripped_acacia_log",
         "damage": 0
     },
+    "minecraft:stripped_cherry_log": {
+        "name": "minecraft:stripped_oak_log",
+        "damage": 0
+    },
     "minecraft:stripped_dark_oak_log": {
         "name": "minecraft:stripped_dark_oak_log",
         "damage": 0
@@ -526,6 +546,10 @@
     "minecraft:stripped_acacia_wood": {
         "name": "minecraft:wood",
         "damage": 12
+    },
+    "minecraft:stripped_cherry_wood": {
+        "name": "minecraft:wood",
+        "damage": 0
     },
     "minecraft:stripped_dark_oak_wood": {
         "name": "minecraft:wood",
@@ -567,6 +591,10 @@
         "name": "minecraft:wood",
         "damage": 4
     },
+    "minecraft:cherry_wood": {
+        "name": "minecraft:wood",
+        "damage": 0
+    },
     "minecraft:dark_oak_wood": {
         "name": "minecraft:wood",
         "damage": 5
@@ -601,6 +629,10 @@
     },
     "minecraft:acacia_leaves": {
         "name": "minecraft:leaves2",
+        "damage": 0
+    },
+    "minecraft:cherry_leaves": {
+        "name": "minecraft:leaves",
         "damage": 0
     },
     "minecraft:dark_oak_leaves": {
@@ -799,6 +831,10 @@
         "name": "minecraft:wither_rose",
         "damage": 0
     },
+    "minecraft:torchflower": {
+        "name": "minecraft:red_flower",
+        "damage": 0
+    },
     "minecraft:spore_blossom": {
         "name": "minecraft:spore_blossom",
         "damage": 0
@@ -851,6 +887,10 @@
         "name": "minecraft:moss_carpet",
         "damage": 0
     },
+    "minecraft:pink_petals": {
+        "name": "minecraft:red_flower",
+        "damage": 0
+    },
     "minecraft:moss_block": {
         "name": "minecraft:moss_block",
         "damage": 0
@@ -890,6 +930,10 @@
     "minecraft:acacia_slab": {
         "name": "minecraft:wooden_slab",
         "damage": 4
+    },
+    "minecraft:cherry_slab": {
+        "name": "minecraft:wooden_slab",
+        "damage": 0
     },
     "minecraft:dark_oak_slab": {
         "name": "minecraft:wooden_slab",
@@ -1011,6 +1055,10 @@
         "name": "minecraft:bookshelf",
         "damage": 0
     },
+    "minecraft:decorated_pot": {
+        "name": "minecraft:flower_pot",
+        "damage": 0
+    },
     "minecraft:mossy_cobblestone": {
         "name": "minecraft:mossy_cobblestone",
         "damage": 0
@@ -1118,6 +1166,10 @@
     "minecraft:acacia_fence": {
         "name": "minecraft:fence",
         "damage": 4
+    },
+    "minecraft:cherry_fence": {
+        "name": "minecraft:fence",
+        "damage": 0
     },
     "minecraft:dark_oak_fence": {
         "name": "minecraft:fence",
@@ -1401,6 +1453,10 @@
     },
     "minecraft:acacia_stairs": {
         "name": "minecraft:acacia_stairs",
+        "damage": 0
+    },
+    "minecraft:cherry_stairs": {
+        "name": "minecraft:oak_stairs",
         "damage": 0
     },
     "minecraft:dark_oak_stairs": {
@@ -2595,6 +2651,10 @@
         "name": "minecraft:acacia_button",
         "damage": 0
     },
+    "minecraft:cherry_button": {
+        "name": "minecraft:wooden_button",
+        "damage": 0
+    },
     "minecraft:dark_oak_button": {
         "name": "minecraft:dark_oak_button",
         "damage": 0
@@ -2651,6 +2711,10 @@
         "name": "minecraft:acacia_pressure_plate",
         "damage": 0
     },
+    "minecraft:cherry_pressure_plate": {
+        "name": "minecraft:wooden_pressure_plate",
+        "damage": 0
+    },
     "minecraft:dark_oak_pressure_plate": {
         "name": "minecraft:dark_oak_pressure_plate",
         "damage": 0
@@ -2693,6 +2757,10 @@
     },
     "minecraft:acacia_door": {
         "name": "minecraft:acacia_door",
+        "damage": 0
+    },
+    "minecraft:cherry_door": {
+        "name": "minecraft:wooden_door",
         "damage": 0
     },
     "minecraft:dark_oak_door": {
@@ -2739,6 +2807,10 @@
         "name": "minecraft:acacia_trapdoor",
         "damage": 0
     },
+    "minecraft:cherry_trapdoor": {
+        "name": "minecraft:trapdoor",
+        "damage": 0
+    },
     "minecraft:dark_oak_trapdoor": {
         "name": "minecraft:dark_oak_trapdoor",
         "damage": 0
@@ -2777,6 +2849,10 @@
     },
     "minecraft:acacia_fence_gate": {
         "name": "minecraft:acacia_fence_gate",
+        "damage": 0
+    },
+    "minecraft:cherry_fence_gate": {
+        "name": "minecraft:fence_gate",
         "damage": 0
     },
     "minecraft:dark_oak_fence_gate": {
@@ -2889,6 +2965,14 @@
     },
     "minecraft:acacia_chest_boat": {
         "name": "minecraft:acacia_chest_boat",
+        "damage": 0
+    },
+    "minecraft:cherry_boat": {
+        "name": "minecraft:oak_boat",
+        "damage": 0
+    },
+    "minecraft:cherry_chest_boat": {
+        "name": "minecraft:oak_chest_boat",
         "damage": 0
     },
     "minecraft:dark_oak_boat": {
@@ -3303,6 +3387,10 @@
         "name": "minecraft:acacia_sign",
         "damage": 0
     },
+    "minecraft:cherry_sign": {
+        "name": "minecraft:oak_sign",
+        "damage": 0
+    },
     "minecraft:dark_oak_sign": {
         "name": "minecraft:dark_oak_sign",
         "damage": 0
@@ -3341,6 +3429,10 @@
     },
     "minecraft:acacia_hanging_sign": {
         "name": "minecraft:acacia_sign",
+        "damage": 0
+    },
+    "minecraft:cherry_hanging_sign": {
+        "name": "minecraft:oak_sign",
         "damage": 0
     },
     "minecraft:dark_oak_hanging_sign": {
@@ -3971,6 +4063,10 @@
         "name": "minecraft:slime_spawn_egg",
         "damage": 0
     },
+    "minecraft:sniffer_spawn_egg": {
+        "name": "minecraft:sheep_spawn_egg",
+        "damage": 0
+    },
     "minecraft:snow_golem_spawn_egg": {
         "name": "minecraft:polar_bear_spawn_egg",
         "damage": 0
@@ -4309,6 +4405,10 @@
     },
     "minecraft:popped_chorus_fruit": {
         "name": "minecraft:popped_chorus_fruit",
+        "damage": 0
+    },
+    "minecraft:torchflower_seeds": {
+        "name": "minecraft:melon_seeds",
         "damage": 0
     },
     "minecraft:beetroot": {
@@ -4741,6 +4841,74 @@
     },
     "minecraft:echo_shard": {
         "name": "minecraft:echo_shard",
+        "damage": 0
+    },
+    "minecraft:brush": {
+        "name": "minecraft:shears",
+        "damage": 0
+    },
+    "minecraft:netherite_upgrade_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:sentry_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:dune_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:coast_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:wild_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:ward_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:eye_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:vex_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:tide_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:snout_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:rib_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:spire_armor_trim_smithing_template": {
+        "name": "minecraft:blackstone_slab",
+        "damage": 0
+    },
+    "minecraft:pottery_shard_archer": {
+        "name": "minecraft:prismarine_shard",
+        "damage": 0
+    },
+    "minecraft:pottery_shard_prize": {
+        "name": "minecraft:prismarine_shard",
+        "damage": 0
+    },
+    "minecraft:pottery_shard_arms_up": {
+        "name": "minecraft:prismarine_shard",
+        "damage": 0
+    },
+    "minecraft:pottery_shard_skull": {
+        "name": "minecraft:prismarine_shard",
         "damage": 0
     }
 }
