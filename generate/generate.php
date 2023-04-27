@@ -276,7 +276,7 @@ foreach ($groupsJtb as $group) {
 			}
 			if (!$hasChanges) {
 				unset($values[$prev], $bedrockValues[$past]);
-				$obj["state_renames"][$prev] = $past;
+				if ($prev !== $past) $obj["state_renames"][$prev] = $past;
 				return true;
 			}
 			$map = [];
@@ -286,7 +286,7 @@ foreach ($groupsJtb as $group) {
 				}
 				$map[$v] = $bedrockValues[$past][$i];
 			}
-			$obj["state_renames"][$prev] = $past;
+			if ($prev !== $past) $obj["state_renames"][$prev] = $past;
 			$obj["state_values"][$past] = $map;
 			unset($values[$prev], $bedrockValues[$past]);
 			return true;

@@ -1365,8 +1365,7 @@
         "type": "singular",
         "name": "minecraft:bee_nest",
         "state_renames": {
-            "facing": "direction",
-            "honey_level": "honey_level"
+            "facing": "direction"
         },
         "state_values": {
             "direction": {
@@ -1401,8 +1400,7 @@
         "type": "singular",
         "name": "minecraft:beehive",
         "state_renames": {
-            "facing": "direction",
-            "honey_level": "honey_level"
+            "facing": "direction"
         },
         "state_values": {
             "direction": {
@@ -1462,11 +1460,6 @@
     "minecraft:bell": {
         "type": "singular",
         "name": "minecraft:bell",
-        "state_renames": {
-            "attachment": "attachment",
-            "facing": "direction",
-            "powered": "toggle_bit"
-        },
         "state_values": {
             "attachment": {
                 "ceiling": "hanging",
@@ -1480,6 +1473,10 @@
                 "south": "2",
                 "west": "3"
             }
+        },
+        "state_renames": {
+            "facing": "direction",
+            "powered": "toggle_bit"
         },
         "defaults": {
             "attachment": "floor",
@@ -2238,10 +2235,6 @@
     "minecraft:black_candle": {
         "type": "singular",
         "name": "minecraft:black_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -2750,10 +2743,6 @@
     "minecraft:blue_candle": {
         "type": "singular",
         "name": "minecraft:blue_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -3377,10 +3366,6 @@
     "minecraft:brown_candle": {
         "type": "singular",
         "name": "minecraft:brown_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -3894,10 +3879,6 @@
     "minecraft:candle": {
         "type": "singular",
         "name": "minecraft:candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -4725,7 +4706,6 @@
         "type": "singular",
         "name": "minecraft:cocoa",
         "state_renames": {
-            "age": "age",
             "facing": "direction"
         },
         "state_values": {
@@ -5778,10 +5758,6 @@
     "minecraft:cyan_candle": {
         "type": "singular",
         "name": "minecraft:cyan_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -8435,9 +8411,6 @@
     "minecraft:fire": {
         "type": "singular",
         "name": "minecraft:fire",
-        "state_renames": {
-            "age": "age"
-        },
         "state_removals": [
             "east",
             "north",
@@ -9288,10 +9261,6 @@
     "minecraft:gray_candle": {
         "type": "singular",
         "name": "minecraft:gray_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -9581,10 +9550,6 @@
     "minecraft:green_candle": {
         "type": "singular",
         "name": "minecraft:green_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -10936,9 +10901,6 @@
     "minecraft:lantern": {
         "type": "singular",
         "name": "minecraft:lantern",
-        "state_renames": {
-            "hanging": "hanging"
-        },
         "state_removals": [
             "waterlogged"
         ],
@@ -11477,10 +11439,6 @@
     "minecraft:light_blue_candle": {
         "type": "singular",
         "name": "minecraft:light_blue_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -11770,10 +11728,6 @@
     "minecraft:light_gray_candle": {
         "type": "singular",
         "name": "minecraft:light_gray_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -12173,10 +12127,6 @@
     "minecraft:lime_candle": {
         "type": "singular",
         "name": "minecraft:lime_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -12495,10 +12445,6 @@
     "minecraft:magenta_candle": {
         "type": "singular",
         "name": "minecraft:magenta_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -12995,7 +12941,6 @@
         "type": "singular",
         "name": "minecraft:mangrove_propagule",
         "state_renames": {
-            "hanging": "hanging",
             "stage": "propagule_stage"
         },
         "state_removals": [
@@ -15096,10 +15041,6 @@
     "minecraft:orange_candle": {
         "type": "singular",
         "name": "minecraft:orange_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -15679,10 +15620,6 @@
     "minecraft:pink_candle": {
         "type": "singular",
         "name": "minecraft:pink_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -17814,10 +17751,6 @@
     "minecraft:purple_candle": {
         "type": "singular",
         "name": "minecraft:purple_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -18417,10 +18350,6 @@
     "minecraft:red_candle": {
         "type": "singular",
         "name": "minecraft:red_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -19756,7 +19685,6 @@
         "type": "singular",
         "name": "minecraft:sculk_shrieker",
         "state_renames": {
-            "can_summon": "can_summon",
             "shrieking": "active"
         },
         "state_removals": [
@@ -20812,9 +20740,6 @@
     "minecraft:soul_lantern": {
         "type": "singular",
         "name": "minecraft:soul_lantern",
-        "state_renames": {
-            "hanging": "hanging"
-        },
         "state_removals": [
             "waterlogged"
         ],
@@ -22242,9 +22167,6 @@
     "minecraft:sugar_cane": {
         "type": "singular",
         "name": "minecraft:reeds",
-        "state_renames": {
-            "age": "age"
-        },
         "defaults": {
             "age": "0"
         },
@@ -24211,10 +24133,6 @@
     "minecraft:white_candle": {
         "type": "singular",
         "name": "minecraft:white_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
@@ -24596,10 +24514,6 @@
     "minecraft:yellow_candle": {
         "type": "singular",
         "name": "minecraft:yellow_candle",
-        "state_renames": {
-            "candles": "candles",
-            "lit": "lit"
-        },
         "state_values": {
             "candles": {
                 "1": "0",
