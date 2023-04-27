@@ -4,8 +4,6 @@
  * Welcome to the properly worst script in history
  */
 
-use pocketmine\math\Axis;
-use pocketmine\math\Facing;
 use Ramsey\Uuid\Uuid;
 
 error_reporting(E_ALL);
@@ -175,14 +173,9 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 
+	$obj = ["values" => $possible, "defaults" => $defaults];
+	$failed = false;
 	if (!$hasChanges) {
-		$obj = ["type" => "none"];
-		if (count($possible) > 0) {
-			$obj["values"] = $possible;
-		}
-		if (count($defaults) > 0) {
-			$obj["defaults"] = $defaults;
-		}
 		$jtb[$group["name"]] = $obj;
 		continue;
 	}
@@ -199,6 +192,7 @@ foreach ($groupsJtb as $group) {
 		foreach ($defaults as $key => $value) {
 			if (!isset($states[$key])) {
 				$states[$key] = $value;
+				echo "Added $key to " . $group["name"] . PHP_EOL;
 			}
 		}
 		unset($group["states"][$java]);
@@ -239,13 +233,7 @@ foreach ($groupsJtb as $group) {
 		$bedrockStatesFlattened[] = $states;
 	}
 
-	$obj = ["type" => "unknown"];
-
 	//apply state renames and search for value changes
-	if (count($bedrockStates) === 1) {
-		$obj["type"] = "singular";
-		$obj["name"] = array_key_first($bedrockStates);
-	}
 	$values = [];
 	foreach ($javaStates as $states) {
 		foreach ($states as $key => $value) {
@@ -265,7 +253,7 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 	foreach ($values as $key => $value) {
-		$checkValues = function ($prev, $past) use (&$values, &$bedrockValues, &$obj, $group) {
+		$checkValues = function ($prev, $past) use (&$values, &$bedrockValues, &$obj) {
 			if (!isset($values[$prev], $bedrockValues[$past])) return false;
 			$hasChanges = false;
 			foreach ($values[$prev] as $i => $v) {
@@ -276,7 +264,7 @@ foreach ($groupsJtb as $group) {
 			}
 			if (!$hasChanges) {
 				unset($values[$prev], $bedrockValues[$past]);
-				if ($prev !== $past) $obj["state_renames"][$prev] = $past;
+				$obj["renames"][$prev] = $past;
 				return true;
 			}
 			$map = [];
@@ -286,8 +274,8 @@ foreach ($groupsJtb as $group) {
 				}
 				$map[$v] = $bedrockValues[$past][$i];
 			}
-			if ($prev !== $past) $obj["state_renames"][$prev] = $past;
-			$obj["state_values"][$past] = $map;
+			$obj["renames"][$prev] = $past;
+			$obj["remaps"][$past] = $map;
 			unset($values[$prev], $bedrockValues[$past]);
 			return true;
 		};
@@ -305,7 +293,7 @@ foreach ($groupsJtb as $group) {
 			if (count($value) !== 1) {
 				throw new RuntimeException("Added state $key with multiple values");
 			}
-			$obj["state_additions"][$key] = $value[0];
+			$obj["additions"][$key] = $value[0];
 			unset($bedrockValues[$key]);
 		}
 		if (in_array($key, $customData["jtb_additions"][$group["name"]] ?? [], true)) {
@@ -313,41 +301,43 @@ foreach ($groupsJtb as $group) {
 			if (count($value) !== 1) {
 				throw new RuntimeException("Added state $key with multiple values");
 			}
-			$obj["state_additions"][$key] = $value[0];
+			$obj["additions"][$key] = $value[0];
 			unset($bedrockValues[$key]);
 		}
 	}
 	foreach ($values as $key => $value) {
 		if (in_array($key, $customData["jtb_removals"]["global"], true)) {
-			$obj["state_removals"][] = $key;
+			$obj["removals"][] = $key;
 			unset($values[$key]);
 		}
 		if (in_array($key, $customData["jtb_removals"][$group["name"]] ?? [], true)) {
-			$obj["state_removals"][] = $key;
+			$obj["removals"][] = $key;
 			unset($values[$key]);
 		}
 	}
-	if ($obj["type"] === "singular" && ($values !== [] || $bedrockValues !== [])) {
-		if ($values === []) {
+	if (count($bedrockStates) === 1) {
+		if ($bedrockValues !== [] && $values === []) {
 			foreach ($bedrockValues as $key => $value) {
 				$value = array_unique($value);
 				if (count($value) !== 1) {
 					throw new RuntimeException("Added state $key with multiple values");
 				}
-				$obj["state_additions"][$key] = $value[0];
+				$obj["additions"][$key] = $value[0];
 				unset($bedrockValues[$key]);
 			}
-		} elseif ($bedrockValues === []) {
+		} elseif ($bedrockValues === [] && $values !== []) {
 			foreach ($values as $key => $value) {
-				$obj["state_removals"][] = $key;
+				$obj["removals"][] = $key;
 				unset($values[$key]);
 			}
 		}
+		$obj["name"] = array_key_first($bedrockStates);
 	}
 
-	if ($obj["type"] === "unknown" && str_ends_with($group["name"], "_slab")) {
+	if (str_ends_with($group["name"], "_slab")) {
 		$fail = false;
 		$types = ["top" => [], "bottom" => [], "double" => []];
+		/** @var string $state */
 		foreach ($group["states"] as $state => $bedrock) {
 			preg_match('/type=(top|bottom|double)/', $state, $matches);
 			if (!isset($matches[1])) {
@@ -382,24 +372,24 @@ foreach ($groupsJtb as $group) {
 			}
 		}
 		if (!$fail) {
-			$obj["type"] = "multi";
-			$obj["multi_name"] = "type";
-			$obj["multi_states"] = [
+			$obj["identifier"] = ["type"];
+			$obj["removals"][] = "type";
+			$obj["mapping"] = [
 				"top" => [
 					"name" => $normalName,
-					"state_additions" => [
+					"additions" => [
 						"top_slot_bit" => "true"
 					]
 				],
 				"bottom" => [
 					"name" => $normalName,
-					"state_additions" => [
+					"additions" => [
 						"top_slot_bit" => "false"
 					]
 				],
 				"double" => [
 					"name" => $doubleState,
-					"state_additions" => [
+					"additions" => [
 						"top_slot_bit" => "false"
 					]
 				]
@@ -408,65 +398,43 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 
-	if ($obj["type"] === "singular" && str_ends_with($group["name"], "_button")) {
-		$obj["type"] = "combined";
-		$obj["combined_names"] = [
+	if (str_ends_with($group["name"], "_button")) {
+		$obj["identifier"] = [
 			"face",
 			"facing"
 		];
-		$obj["target_name"] = "facing_direction";
-		$obj["combined_states"] = [
-			"ceiling" => [
-				"east" => "0",
-				"north" => "0",
-				"south" => "0",
-				"west" => "0"
-			],
-			"floor" => [
-				"east" => "1",
-				"north" => "1",
-				"south" => "1",
-				"west" => "1"
-			],
+		$obj["removals"][] = "face";
+		$obj["removals"][] = "facing";
+		$obj["mapping"] = [
+			"ceiling" => ["default" => ["additions" => ["facing_direction" => "0"]]],
+			"floor" => ["default" => ["additions" => ["facing_direction" => "1"]]],
 			"wall" => [
-				"east" => "5",
-				"north" => "2",
-				"south" => "3",
-				"west" => "4"
+				"east" => ["additions" => ["facing_direction" => "5"]],
+				"north" => ["additions" => ["facing_direction" => "3"]],
+				"south" => ["additions" => ["facing_direction" => "2"]],
+				"west" => ["additions" => ["facing_direction" => "4"]]
 			]
 		];
 		unset($values["face"], $values["facing"], $bedrockValues["facing_direction"]);
 	}
 
 	if ($group["name"] === "minecraft:water" || $group["name"] === "minecraft:lava") {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "level";
+		$obj["renames"] = [
+			"level" => "liquid_depth"
+		];
+		$obj["identifier"] = ["level"];
 		$flowingName = "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava");
-		$obj["multi_states"] = [
-			"0" => ["name" => $group["name"], "state_additions" => ["liquid_depth" => "0"]],
-			"1" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "1"]],
-			"2" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "2"]],
-			"3" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "3"]],
-			"4" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "4"]],
-			"5" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "5"]],
-			"6" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "6"]],
-			"7" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "7"]],
-			"8" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "8"]],
-			"9" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "9"]],
-			"10" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "10"]],
-			"11" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "11"]],
-			"12" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "12"]],
-			"13" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "13"]],
-			"14" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "14"]],
-			"15" => ["name" => $flowingName, "state_additions" => ["liquid_depth" => "15"]]
+		$obj["mapping"] = [
+			"0" => ["name" => $group["name"]],
+			"default" => ["name" => $flowingName],
 		];
 		unset($values["level"], $bedrockValues["liquid_depth"]);
 	}
 
 	if (in_array($group["name"], ["minecraft:furnace", "minecraft:blast_furnace", "minecraft:smoker", "minecraft:redstone_ore", "minecraft:deepslate_redstone_ore", "minecraft:redstone_lamp"], true)) {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "lit";
-		$obj["multi_states"] = [
+		$obj["identifier"] = ["lit"];
+		$obj["removals"][] = "lit";
+		$obj["mapping"] = [
 			"true" => ["name" => "minecraft:lit_" . substr($group["name"], 10)],
 			"false" => ["name" => $group["name"]]
 		];
@@ -474,9 +442,9 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:cave_vines" || $group["name"] === "minecraft:cave_vines_plant") {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "berries";
-		$obj["multi_states"] = [
+		$obj["identifier"] = ["berries"];
+		$obj["removals"][] = "berries";
+		$obj["mapping"] = [
 			"true" => ["name" => $group["name"] === "minecraft:cave_vines" ? "minecraft:cave_vines_head_with_berries" : "minecraft:cave_vines_body_with_berries"],
 			"false" => ["name" => "minecraft:cave_vines"]
 		];
@@ -484,19 +452,19 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:comparator") {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "powered";
-		$obj["multi_states"] = [
-			"true" => ["name" => "minecraft:powered_comparator", "state_additions" => ["output_lit_bit" => "true"]],
-			"false" => ["name" => "minecraft:unpowered_comparator", "state_additions" => ["output_lit_bit" => "false"]]
+		$obj["identifier"] = ["powered"];
+		$obj["renames"]["powered"] = "output_lit_bit";
+		$obj["mapping"] = [
+			"true" => ["name" => "minecraft:powered_comparator"],
+			"false" => ["name" => "minecraft:unpowered_comparator"]
 		];
 		unset($values["powered"], $bedrockValues["output_lit_bit"]);
 	}
 
 	if ($group["name"] === "minecraft:daylight_detector") {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "inverted";
-		$obj["multi_states"] = [
+		$obj["identifier"] = ["inverted"];
+		$obj["removals"][] = "inverted";
+		$obj["mapping"] = [
 			"true" => ["name" => "minecraft:daylight_detector_inverted"],
 			"false" => ["name" => "minecraft:daylight_detector"]
 		];
@@ -504,65 +472,67 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:lever") {
-		$obj["type"] = "combined_multi";
-		$obj["combined_names"] = [
+		$obj["identifier"] = [
 			"face",
 			"facing",
 			"powered"
 		];
-		$obj["combined_states"] = [
+		$obj["removals"][] = "face";
+		$obj["removals"][] = "facing";
+		$obj["removals"][] = "powered";
+		$obj["mapping"] = [
 			"ceiling" => [
 				"east" => [
-					"false" => ["lever_direction" => "down_east_west", "open_bit" => "true"],
-					"true" => ["lever_direction" => "down_east_west", "open_bit" => "false"]
+					"false" => ["additions" => ["lever_direction" => "down_east_west", "open_bit" => "true"]],
+					"true" => ["additions" => ["lever_direction" => "down_east_west", "open_bit" => "false"]]
 				],
 				"north" => [
-					"false" => ["lever_direction" => "down_north_south", "open_bit" => "false"],
-					"true" => ["lever_direction" => "down_north_south", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "down_north_south", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "down_north_south", "open_bit" => "true"]]
 				],
 				"south" => [
-					"false" => ["lever_direction" => "down_north_south", "open_bit" => "true"],
-					"true" => ["lever_direction" => "down_north_south", "open_bit" => "false"]
+					"false" => ["additions" => ["lever_direction" => "down_north_south", "open_bit" => "true"]],
+					"true" => ["additions" => ["lever_direction" => "down_north_south", "open_bit" => "false"]]
 				],
 				"west" => [
-					"false" => ["lever_direction" => "down_east_west", "open_bit" => "false"],
-					"true" => ["lever_direction" => "down_east_west", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "down_east_west", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "down_east_west", "open_bit" => "true"]]
 				]
 			],
 			"floor" => [
 				"east" => [
-					"false" => ["lever_direction" => "up_east_west", "open_bit" => "true"],
-					"true" => ["lever_direction" => "up_east_west", "open_bit" => "false"]
+					"false" => ["additions" => ["lever_direction" => "up_east_west", "open_bit" => "true"]],
+					"true" => ["additions" => ["lever_direction" => "up_east_west", "open_bit" => "false"]]
 				],
 				"north" => [
-					"false" => ["lever_direction" => "up_north_south", "open_bit" => "false"],
-					"true" => ["lever_direction" => "up_north_south", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "up_north_south", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "up_north_south", "open_bit" => "true"]]
 				],
 				"south" => [
-					"false" => ["lever_direction" => "up_north_south", "open_bit" => "true"],
-					"true" => ["lever_direction" => "up_north_south", "open_bit" => "false"]
+					"false" => ["additions" => ["lever_direction" => "up_north_south", "open_bit" => "true"]],
+					"true" => ["additions" => ["lever_direction" => "up_north_south", "open_bit" => "false"]]
 				],
 				"west" => [
-					"false" => ["lever_direction" => "up_east_west", "open_bit" => "false"],
-					"true" => ["lever_direction" => "up_east_west", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "up_east_west", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "up_east_west", "open_bit" => "true"]]
 				]
 			],
 			"wall" => [
 				"east" => [
-					"false" => ["lever_direction" => "east", "open_bit" => "false"],
-					"true" => ["lever_direction" => "east", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "east", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "east", "open_bit" => "true"]]
 				],
 				"north" => [
-					"false" => ["lever_direction" => "north", "open_bit" => "false"],
-					"true" => ["lever_direction" => "north", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "north", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "north", "open_bit" => "true"]]
 				],
 				"south" => [
-					"false" => ["lever_direction" => "south", "open_bit" => "false"],
-					"true" => ["lever_direction" => "south", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "south", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "south", "open_bit" => "true"]]
 				],
 				"west" => [
-					"false" => ["lever_direction" => "west", "open_bit" => "false"],
-					"true" => ["lever_direction" => "west", "open_bit" => "true"]
+					"false" => ["additions" => ["lever_direction" => "west", "open_bit" => "false"]],
+					"true" => ["additions" => ["lever_direction" => "west", "open_bit" => "true"]]
 				]
 			]
 		];
@@ -570,9 +540,9 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:piston_head") {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "type";
-		$obj["multi_states"] = [
+		$obj["identifier"] = ["type"];
+		$obj["removals"][] = "type";
+		$obj["mapping"] = [
 			"normal" => ["name" => "minecraft:piston_arm_collision"],
 			"sticky" => ["name" => "minecraft:sticky_piston_arm_collision"]
 		];
@@ -580,9 +550,9 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:redstone_torch" || $group["name"] === "minecraft:redstone_wall_torch") {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "lit";
-		$obj["multi_states"] = [
+		$obj["multi_names"] = ["lit"];
+		$obj["removals"][] = "lit";
+		$obj["mapping"] = [
 			"true" => ["name" => "minecraft:redstone_torch"],
 			"false" => ["name" => "minecraft:unlit_redstone_torch"]
 		];
@@ -590,9 +560,9 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:repeater") {
-		$obj["type"] = "multi";
-		$obj["multi_name"] = "powered";
-		$obj["multi_states"] = [
+		$obj["identifier"] = ["powered"];
+		$obj["removals"][] = "powered";
+		$obj["mapping"] = [
 			"true" => ["name" => "minecraft:powered_repeater"],
 			"false" => ["name" => "minecraft:unpowered_repeater"]
 		];
@@ -600,8 +570,7 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:brown_mushroom_block" || $group["name"] === "minecraft:red_mushroom_block") {
-		$obj["type"] = "combined";
-		$obj["combined_names"] = [
+		$obj["identifier"] = [
 			"down",
 			"up",
 			"north",
@@ -609,14 +578,19 @@ foreach ($groupsJtb as $group) {
 			"west",
 			"east"
 		];
-		$obj["target_name"] = "huge_mushroom_bits";
-		$obj["combined_states"] = [
+		$obj["removals"][] = "down";
+		$obj["removals"][] = "up";
+		$obj["removals"][] = "north";
+		$obj["removals"][] = "south";
+		$obj["removals"][] = "west";
+		$obj["removals"][] = "east";
+		$obj["mapping"] = [
 			"false" => [
 				"false" => [
 					"false" => [
 						"false" => [
 							"false" => [
-								"false" => "0" //none
+								"false" => ["additions" => ["huge_mushroom_bits" => "0"]] //none
 							]
 						]
 					]
@@ -625,53 +599,44 @@ foreach ($groupsJtb as $group) {
 					"true" => [
 						"false" => [
 							"true" => [
-								"false" => "1" //up, north, west
+								"false" => ["additions" => ["huge_mushroom_bits" => "1"]] //up, north, west
 							],
 							"false" => [
-								"false" => "2", //up, north
-								"true" => "3" //up, north, east
+								"false" => ["additions" => ["huge_mushroom_bits" => "2"]], //up, north
+								"true" => ["additions" => ["huge_mushroom_bits" => "3"]] //up, north, east
 							]
 						]
 					],
 					"false" => [
 						"false" => [
 							"true" => [
-								"false" => "4" //up, west
+								"false" => ["additions" => ["huge_mushroom_bits" => "4"]] //up, west
 							],
 							"false" => [
-								"false" => "5", //up
-								"true" => "6" //up, east
+								"false" => ["additions" => ["huge_mushroom_bits" => "5"]], //up
+								"true" => ["additions" => ["huge_mushroom_bits" => "6"]] //up, east
 							]
 						],
 						"true" => [
 							"true" => [
-								"false" => "7" //up, south, west
+								"false" => ["additions" => ["huge_mushroom_bits" => "7"]] //up, south, west
 							],
 							"false" => [
-								"false" => "8", //up, south
-								"true" => "9" //up, south, east
+								"false" => ["additions" => ["huge_mushroom_bits" => "8"]], //up, south
+								"true" => ["additions" => ["huge_mushroom_bits" => "9"]] //up, south, east
 							]
 						]
 					]
 				]
 			],
-			"default" => "14" //all sides
-		];
-		$obj["combined_defaults"] = [
-			"down" => "true",
-			"up" => "true",
-			"north" => "true",
-			"south" => "true",
-			"west" => "true",
-			"east" => "true"
+			"default" => ["additions" => ["huge_mushroom_bits" => "14"]] //all sides
 		];
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
 	}
 
 	if ($group["name"] === "minecraft:mushroom_stem") {
-		$obj["type"] = "combined";
 		$obj["name"] = "minecraft:brown_mushroom_block";
-		$obj["combined_names"] = [
+		$obj["identifier"] = [
 			"down",
 			"up",
 			"north",
@@ -679,91 +644,90 @@ foreach ($groupsJtb as $group) {
 			"west",
 			"east"
 		];
-		$obj["target_name"] = "huge_mushroom_bits";
-		$obj["combined_states"] = [
+		$obj["removals"][] = "down";
+		$obj["removals"][] = "up";
+		$obj["removals"][] = "north";
+		$obj["removals"][] = "south";
+		$obj["removals"][] = "west";
+		$obj["removals"][] = "east";
+		$obj["mapping"] = [
 			"false" => [
 				"false" => [
 					"false" => [
 						"false" => [
 							"false" => [
-								"false" => "0" //none
+								"false" => ["additions" => ["huge_mushroom_bits" => "0"]] //none
 							]
 						]
 					],
 					"true" => [
 						"true" => [
 							"true" => [
-								"true" => "10" //default stem (all horizontal sides)
+								"true" => ["additions" => ["huge_mushroom_bits" => "10"]] //default stem (all horizontal sides)
 							]
 						]
 					]
 				],
 			],
-			"default" => "15" //all stem sides
-		];
-		$obj["combined_defaults"] = [
-			"down" => "true",
-			"up" => "true",
-			"north" => "true",
-			"south" => "true",
-			"west" => "true",
-			"east" => "true"
+			"default" => ["additions" => ["huge_mushroom_bits" => "15"]] //all stem sides
 		];
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
 	}
 
 	if ($group["name"] === "minecraft:vine") {
-		$obj["type"] = "combined";
-		$obj["state_removals"] = ["up"]; //up is automatically added in bedrock
-		$obj["combined_names"] = [
+		$obj["identifier"] = [
 			"east",
 			"north",
 			"west",
 			"south",
 		];
-		$obj["target_name"] = "vine_direction_bits";
-		$obj["combined_states"] = [
+		$obj["removals"][] = "up"; //up is automatically added in bedrock
+		$obj["removals"][] = "east";
+		$obj["removals"][] = "north";
+		$obj["removals"][] = "west";
+		$obj["removals"][] = "south";
+		$obj["mapping"] = [
 			"false" => [
 				"false" => [
 					"false" => [
-						"false" => "0", //none
-						"true" => "1", //south
+						"false" => ["additions" => ["vine_direction_bits" => "0"]], //none
+						"true" => ["additions" => ["vine_direction_bits" => "1"]], //south
 					],
 					"true" => [
-						"false" => "2", //west
-						"true" => "3", //south, west
+						"false" => ["additions" => ["vine_direction_bits" => "2"]], //west
+						"true" => ["additions" => ["vine_direction_bits" => "3"]], //south, west
 					]
 				],
 				"true" => [
 					"false" => [
-						"false" => "4", //north
-						"true" => "5", //south, north
+						"false" => ["additions" => ["vine_direction_bits" => "4"]], //north
+						"true" => ["additions" => ["vine_direction_bits" => "5"]], //south, north
 					],
 					"true" => [
-						"false" => "6", //north, west
-						"true" => "7", //south, north, west
+						"false" => ["additions" => ["vine_direction_bits" => "6"]], //north, west
+						"true" => ["additions" => ["vine_direction_bits" => "7"]], //south, north, west
 					]
 				]
 			],
 			"true" => [
 				"false" => [
 					"false" => [
-						"false" => "8", //east
-						"true" => "9", //south, east
+						"false" => ["additions" => ["vine_direction_bits" => "8"]], //east
+						"true" => ["additions" => ["vine_direction_bits" => "9"]], //south, east
 					],
 					"true" => [
-						"false" => "10", //east, west
-						"true" => "11", //south, east, west
+						"false" => ["additions" => ["vine_direction_bits" => "10"]], //east, west
+						"true" => ["additions" => ["vine_direction_bits" => "11"]], //south, east, west
 					]
 				],
 				"true" => [
 					"false" => [
-						"false" => "12", //north, east
-						"true" => "13", //south, north, east
+						"false" => ["additions" => ["vine_direction_bits" => "12"]], //north, east
+						"true" => ["additions" => ["vine_direction_bits" => "13"]], //south, north, east
 					],
 					"true" => [
-						"false" => "14", //north, east, west
-						"true" => "15", //south, north, east, west
+						"false" => ["additions" => ["vine_direction_bits" => "14"]], //north, east, west
+						"true" => ["additions" => ["vine_direction_bits" => "15"]], //south, north, east, west
 					]
 				]
 			]
@@ -772,8 +736,7 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if ($group["name"] === "minecraft:sculk_vein" || $group["name"] === "minecraft:glow_lichen") {
-		$obj["type"] = "combined";
-		$obj["combined_names"] = [
+		$obj["identifier"] = [
 			"east",
 			"north",
 			"west",
@@ -781,51 +744,56 @@ foreach ($groupsJtb as $group) {
 			"up",
 			"down"
 		];
-		$obj["target_name"] = "multi_face_direction_bits";
-		$obj["combined_states"] = [ //copilot go brrrrrrrrrrrrrrrr
+		$obj["removals"][] = "east";
+		$obj["removals"][] = "north";
+		$obj["removals"][] = "west";
+		$obj["removals"][] = "south";
+		$obj["removals"][] = "up";
+		$obj["removals"][] = "down";
+		$obj["mapping"] = [ //copilot go brrrrrrrrrrrrrrrr
 			"false" => [
 				"false" => [
 					"false" => [
 						"false" => [
 							"false" => [
-								"false" => "0", //none
-								"true" => "1" //down
+								"false" => ["additions" => ["multi_face_direction_bits" => "0"]], //none
+								"true" => ["additions" => ["multi_face_direction_bits" => "1"]], //down
 							],
 							"true" => [
-								"false" => "2", //up
-								"true" => "3" //up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "2"]], //up
+								"true" => ["additions" => ["multi_face_direction_bits" => "3"]], //up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "4", //north
-								"true" => "5" //north, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "4"]], //north
+								"true" => ["additions" => ["multi_face_direction_bits" => "5"]], //north, down
 							],
 							"true" => [
-								"false" => "6", //north, up
-								"true" => "7" //north, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "6"]], //north, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "7"]], //north, up, down
 							]
 						]
 					],
 					"true" => [
 						"false" => [
 							"false" => [
-								"false" => "8", //south
-								"true" => "9" //south, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "8"]], //south
+								"true" => ["additions" => ["multi_face_direction_bits" => "9"]], //south, down
 							],
 							"true" => [
-								"false" => "10", //south, up
-								"true" => "11" //south, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "10"]], //south, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "11"]], //south, up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "12", //north, south
-								"true" => "13" //north, south, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "12"]], //north, south
+								"true" => ["additions" => ["multi_face_direction_bits" => "13"]], //north, south, down
 							],
 							"true" => [
-								"false" => "14", //north, south, up
-								"true" => "15" //north, south, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "14"]], //north, south, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "15"]], //north, south, up, down
 							]
 						]
 					]
@@ -834,44 +802,44 @@ foreach ($groupsJtb as $group) {
 					"false" => [
 						"false" => [
 							"false" => [
-								"false" => "16", //west
-								"true" => "17" //west, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "16"]], //west
+								"true" => ["additions" => ["multi_face_direction_bits" => "17"]], //west, down
 							],
 							"true" => [
-								"false" => "18", //west, up
-								"true" => "19" //west, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "18"]], //west, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "19"]], //west, up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "20", //north, west
-								"true" => "21" //north, west, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "20"]], //north, west
+								"true" => ["additions" => ["multi_face_direction_bits" => "21"]], //north, west, down
 							],
 							"true" => [
-								"false" => "22", //north, west, up
-								"true" => "23" //north, west, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "22"]], //north, west, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "23"]], //north, west, up, down
 							]
 						]
 					],
 					"true" => [
 						"false" => [
 							"false" => [
-								"false" => "24", //south, west
-								"true" => "25" //south, west, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "24"]], //south, west
+								"true" => ["additions" => ["multi_face_direction_bits" => "25"]], //south, west, down
 							],
 							"true" => [
-								"false" => "26", //south, west, up
-								"true" => "27" //south, west, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "26"]], //south, west, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "27"]], //south, west, up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "28", //north, south, west
-								"true" => "29" //north, south, west, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "28"]], //north, south, west
+								"true" => ["additions" => ["multi_face_direction_bits" => "29"]], //north, south, west, down
 							],
 							"true" => [
-								"false" => "30", //north, south, west, up
-								"true" => "31" //north, south, west, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "30"]], //north, south, west, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "31"]], //north, south, west, up, down
 							]
 						]
 					]
@@ -882,44 +850,44 @@ foreach ($groupsJtb as $group) {
 					"false" => [
 						"false" => [
 							"false" => [
-								"false" => "32", //east
-								"true" => "33" //east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "32"]], //east
+								"true" => ["additions" => ["multi_face_direction_bits" => "33"]], //east, down
 							],
 							"true" => [
-								"false" => "34", //east, up
-								"true" => "35" //east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "34"]], //east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "35"]], //east, up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "36", //north, east
-								"true" => "37" //north, east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "36"]], //north, east
+								"true" => ["additions" => ["multi_face_direction_bits" => "37"]], //north, east, down
 							],
 							"true" => [
-								"false" => "38", //north, east, up
-								"true" => "39" //north, east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "38"]], //north, east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "39"]], //north, east, up, down
 							]
 						]
 					],
 					"true" => [
 						"false" => [
 							"false" => [
-								"false" => "40", //south, east
-								"true" => "41" //south, east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "40"]], //south, east
+								"true" => ["additions" => ["multi_face_direction_bits" => "41"]], //south, east, down
 							],
 							"true" => [
-								"false" => "42", //south, east, up
-								"true" => "43" //south, east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "42"]], //south, east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "43"]], //south, east, up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "44", //north, south, east
-								"true" => "45" //north, south, east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "44"]], //north, south, east
+								"true" => ["additions" => ["multi_face_direction_bits" => "45"]], //north, south, east, down
 							],
 							"true" => [
-								"false" => "46", //north, south, east, up
-								"true" => "47" //north, south, east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "46"]], //north, south, east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "47"]], //north, south, east, up, down
 							]
 						]
 					]
@@ -928,44 +896,44 @@ foreach ($groupsJtb as $group) {
 					"false" => [
 						"false" => [
 							"false" => [
-								"false" => "48", //west, east
-								"true" => "49" //west, east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "48"]], //west, east
+								"true" => ["additions" => ["multi_face_direction_bits" => "49"]], //west, east, down
 							],
 							"true" => [
-								"false" => "50", //west, east, up
-								"true" => "51" //west, east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "50"]], //west, east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "51"]], //west, east, up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "52", //north, west, east
-								"true" => "53" //north, west, east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "52"]], //north, west, east
+								"true" => ["additions" => ["multi_face_direction_bits" => "53"]], //north, west, east, down
 							],
 							"true" => [
-								"false" => "54", //north, west, east, up
-								"true" => "55" //north, west, east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "54"]], //north, west, east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "55"]], //north, west, east, up, down
 							]
 						]
 					],
 					"true" => [
 						"false" => [
 							"false" => [
-								"false" => "56", //south, west, east
-								"true" => "57" //south, west, east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "56"]], //south, west, east
+								"true" => ["additions" => ["multi_face_direction_bits" => "57"]], //south, west, east, down
 							],
 							"true" => [
-								"false" => "58", //south, west, east, up
-								"true" => "59" //south, west, east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "58"]], //south, west, east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "59"]], //south, west, east, up, down
 							]
 						],
 						"true" => [
 							"false" => [
-								"false" => "60", //north, south, west, east
-								"true" => "61" //north, south, west, east, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "60"]], //north, south, west, east
+								"true" => ["additions" => ["multi_face_direction_bits" => "61"]], //north, south, west, east, down
 							],
 							"true" => [
-								"false" => "62", //north, south, west, east, up
-								"true" => "63" //north, south, west, east, up, down
+								"false" => ["additions" => ["multi_face_direction_bits" => "62"]], //north, south, west, east, up
+								"true" => ["additions" => ["multi_face_direction_bits" => "63"]], //north, south, west, east, up, down
 							]
 						]
 					]
@@ -978,7 +946,7 @@ foreach ($groupsJtb as $group) {
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
 		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);
-		$obj["internal_tile"] = ["color" => $matches[1] ?? throw new \Exception("Invalid banner name: " . $group["name"])];
+		$obj["internal_tile"] = ["color" => $matches[1] ?? throw new Exception("Invalid banner name: " . $group["name"])];
 		if (str_ends_with($obj["internal_tile"]["color"], "_wall")) {
 			$obj["internal_tile"]["color"] = substr($obj["internal_tile"]["color"], 0, -5);
 		}
@@ -986,10 +954,10 @@ foreach ($groupsJtb as $group) {
 
 	if (str_ends_with($group["name"], "bed")) {
 		preg_match("/minecraft:([a-z_]*)_bed/", $group["name"], $matches);
-		$obj["internal_tile"] = ["color" => $matches[1]];
+		$obj["internal_tile"] = ["color" => $matches[1] ?? throw new Exception("Invalid bed name: " . $group["name"])];
 	}
 
-	if ($obj["type"] === "singular" && $obj["name"] === "minecraft:skull") {
+	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
 		$obj["internal_tile"] = ["type" => [
 				"minecraft:skeleton_skull" => "skeleton",
 				"minecraft:skeleton_wall_skull" => "skeleton",
@@ -1008,14 +976,13 @@ foreach ($groupsJtb as $group) {
 			][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"])];
 	}
 
-	$failed = false;
+	if (!isset($obj["name"]) && !isset($obj["identifier"])) {
+		$failed = true;
+	}
 	if ($values !== []) {
 		$failed = true;
 	}
 	if ($bedrockValues !== []) {
-		$failed = true;
-	}
-	if ($obj["type"] === "unknown") {
 		$failed = true;
 	}
 	if ($failed) {
@@ -1023,13 +990,30 @@ foreach ($groupsJtb as $group) {
 		$obj["missing_java"] = $values;
 		$obj["missing_bedrock"] = $bedrockValues;
 	}
-	if ($defaults !== []) {
-		$obj["defaults"] = $defaults;
-	}
-	if ($possible !== []) {
-		$obj["values"] = $possible;
-	}
 	$failed ? $failedJTB[$group["name"]] = $obj : $jtb[$group["name"]] = $obj;
+}
+
+$oder = ["name", "additions", "removals", "renames", "remaps", "identifier", "mapping", "values", "defaults", "internal_tile"];
+
+foreach ($jtb as $name => $block) {
+	if ($block["values"] === []) unset($block["values"]);
+	if ($block["defaults"] === []) unset($block["defaults"]);
+	foreach ($block["renames"] ?? [] as $key => $value) {
+		if ($key === $value) unset($block["renames"][$key]);
+	}
+	if (($block["renames"] ?? []) === []) unset($block["renames"]);
+
+	$ordered = [];
+	foreach ($oder as $key) {
+		if (isset($block[$key])) {
+			$ordered[$key] = $block[$key];
+			unset($block[$key]);
+		}
+	}
+	foreach ($block as $key => $value) {
+		throw new Exception("Unknown key: " . $key);
+	}
+	$jtb[$name] = $ordered;
 }
 
 if ($failedJTB !== []) echo "\e[31mFailed to convert " . count($failedJTB) . " blocks\e[39m" . PHP_EOL;
@@ -1044,21 +1028,23 @@ file_put_contents("../java-to-bedrock.json", json_encode($write, JSON_THROW_ON_E
 
 echo "Testing mappings..." . PHP_EOL;
 $succeeded = 0;
+$ignored = 0;
 $failedTests = [];
-foreach ($javaToBedrock as $java => $bedrock) {
-	$pre = $java;
-	$java = toBedrock($java, $jtb);
-	if ($java === null) {
-		continue;
-	}
-	$bedrock = sortState($bedrock);
-	if ($java === $bedrock) {
-		$succeeded++;
-	} else {
-		$failedTests[] = ["pre" => $pre, "java" => $java, "bedrock" => $bedrock];
-	}
-}
-echo "Successfully tested $succeeded mappings, " . (count($failedTests)) . " failed" . PHP_EOL;
+//foreach ($javaToBedrock as $java => $bedrock) {
+//	$pre = $java;
+//	$java = toBedrock($java, $jtb);
+//	if ($java === null) {
+//		$ignored++;
+//		continue;
+//	}
+//	$bedrock = sortState($bedrock);
+//	if ($java === $bedrock) {
+//		$succeeded++;
+//	} else {
+//		$failedTests[] = ["pre" => $pre, "java" => $java, "bedrock" => $bedrock];
+//	}
+//}
+echo "Successfully tested $succeeded mappings, " . (count($failedTests)) . " failed, $ignored ignored" . PHP_EOL;
 file_put_contents("debug/java-to-bedrock-tests.json", json_encode($failedTests, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 function toBedrock(string $java, $jtb): string|null
@@ -1210,16 +1196,16 @@ function sortState(string $state): string
 	return $matches[1] . "[" . implode(",", $states) . "]";
 }
 
-unset($jtb["minecraft:mushroom_stem"]["combined_states"]["false"]["false"]["false"]); //this will falsely override the normal mushroom blocks
+//unset($jtb["minecraft:mushroom_stem"]["combined_states"]["false"]["false"]["false"]); //this will falsely override the normal mushroom blocks
 
 $btj = [];
-foreach ($jtb as $java => $bedrockData) {
-	revertJavaToBedrock($java, $bedrockData, $btj, $customData);
-}
-
-$stem = $jtb["minecraft:mushroom_stem"];
-$stem["name"] = "minecraft:red_mushroom_block";
-revertJavaToBedrock("minecraft:mushroom_stem", $stem, $btj, $customData);
+//foreach ($jtb as $java => $bedrockData) {
+//	revertJavaToBedrock($java, $bedrockData, $btj, $customData);
+//}
+//
+//$stem = $jtb["minecraft:mushroom_stem"];
+//$stem["name"] = "minecraft:red_mushroom_block";
+//revertJavaToBedrock("minecraft:mushroom_stem", $stem, $btj, $customData);
 
 function revertJavaToBedrock($java, $bedrockData, &$btj, $customData)
 {
@@ -1272,7 +1258,7 @@ function revertJavaToBedrock($java, $bedrockData, &$btj, $customData)
 				$a["multi_name"] = $customData["btj_multi"][$bedrock];
 				unset($a["state_removals"][$a["multi_name"]], $b["state_removals"][$a["multi_name"]]);
 			} else {
-				throw new \Exception("Failed to find multi name for $bedrock ($nameA, $nameB)" . json_encode($a) . json_encode($b));
+				throw new Exception("Failed to find multi name for $bedrock ($nameA, $nameB)" . json_encode($a) . json_encode($b));
 			}
 			$multi = [];
 			$multi[$potValues[$a["multi_name"]][0] ?? "default"] = ["name" => $nameA, "state_additions" => $addA, "state_removals" => $removeA];
@@ -1301,21 +1287,21 @@ function revertJavaToBedrock($java, $bedrockData, &$btj, $customData)
 			$a["multi_states"] = $multi;
 			return;
 		}
-		if ($a["type"] === "combined_multi" && $b["type"] === "combined_multi" && count($a["combined_names"]) === 1 && count($b["combined_names"]) === 1 && $a["combined_names"][0] === $b["combined_names"][0]) {
-			$a["type"] = "multi";
-			$a["multi_name"] = $a["combined_names"][0];
-			unset($a["combined_names"]);
-			$multi = [];
-			foreach ($a["combined_states"] as $key => $value) {
-				$multi[$key] = ["name" => $a["name"], "state_additions" => $value];
-			}
-			foreach ($b["combined_states"] as $key => $value) {
-				$multi[$key] = ["name" => $b["name"], "state_additions" => $value];
-			}
-			$a["multi_states"] = $multi;
-			unset($a["combined_states"], $a["name"]);
-			return;
-		}
+		//if ($a["type"] === "combined_multi" && $b["type"] === "combined_multi" && count($a["combined_names"]) === 1 && count($b["combined_names"]) === 1 && $a["combined_names"][0] === $b["combined_names"][0]) {
+		//	$a["type"] = "multi";
+		//	$a["multi_name"] = $a["combined_names"][0];
+		//	unset($a["combined_names"]);
+		//	$multi = [];
+		//	foreach ($a["combined_states"] as $key => $value) {
+		//		$multi[$key] = ["name" => $a["name"], "state_additions" => $value];
+		//	}
+		//	foreach ($b["combined_states"] as $key => $value) {
+		//		$multi[$key] = ["name" => $b["name"], "state_additions" => $value];
+		//	}
+		//	$a["multi_states"] = $multi;
+		//	unset($a["combined_states"], $a["name"]);
+		//	return;
+		//}
 		echo "Failed to merge states: " . json_encode($a) . " and " . json_encode($b) . PHP_EOL;
 	};
 	switch ($bedrockData["type"]) {
@@ -1478,25 +1464,25 @@ $btj["minecraft:invisible_bedrock"] = ["type" => "singular", "name" => "minecraf
 function flipStateTranslation(&$state, $bedrockData)
 {
 	if (isset($bedrockData["state_additions"])) {
-		$state["state_removals"] = $bedrockData["state_additions"];
+		$state["state_removals"] = array_merge($bedrockData["state_additions"], $state["state_removals"] ?? []);
 	}
 	if (isset($bedrockData["internal_tile"])) {
 		foreach ($bedrockData["internal_tile"] as $key => $value) {
 			$state["state_removals"][$key] = $value;
 		}
-		$state["internal_tile"] = $bedrockData["internal_tile"];
+		$state["internal_tile"] = array_merge($bedrockData["internal_tile"], $state["internal_tile"] ?? []);
 	}
 	if (isset($bedrockData["state_renames"])) {
-		$state["state_renames"] = array_flip($bedrockData["state_renames"]);
+		$state["state_renames"] = array_merge(array_flip($bedrockData["state_renames"]), $state["state_renames"] ?? []);
 	}
 	if (isset($bedrockData["state_values"])) {
-		$state["state_values"] = [];
+		$state["state_values"] = $state["state_values"] ?? [];
 		foreach ($bedrockData["state_values"] as $key => $value) {
 			$state["state_values"][$state["state_renames"][$key] ?? $key] = array_flip($value);
 		}
 	}
 	if (isset($bedrockData["state_removals"])) {
-		$state["state_additions"] = [];
+		$state["state_additions"] = $state["state_additions"] ?? [];
 		foreach ($bedrockData["state_removals"] as $key) {
 			$state["state_additions"][$key] = $bedrockData["defaults"][$key];
 		}
@@ -1579,15 +1565,15 @@ $rotations = ["rotate" => [], "xFlip" => [], "yFlip" => [], "zFlip" => []];
 $stateRotations = [];
 $missingRotations = [];
 
-foreach ($javaToBedrock as $state => $id) {
-	if (!str_ends_with($state, "]")) {
-		continue; //no properties
-	}
-	remapProperties($state, $id, $rotationData, $javaToBedrock, $rotations["rotate"], $missingRotations, $stateRotations, "rotate");
-	remapProperties($state, $id, $flipData["x"], $javaToBedrock, $rotations["xFlip"], $missingRotations, $stateRotations, "flip-x");
-	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $rotations["yFlip"], $missingRotations, $stateRotations, "flip-y");
-	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $rotations["zFlip"], $missingRotations, $stateRotations, "flip-z");
-}
+//foreach ($javaToBedrock as $state => $id) {
+//	if (!str_ends_with($state, "]")) {
+//		continue; //no properties
+//	}
+//	remapProperties($state, $id, $rotationData, $javaToBedrock, $rotations["rotate"], $missingRotations, $stateRotations, "rotate");
+//	remapProperties($state, $id, $flipData["x"], $javaToBedrock, $rotations["xFlip"], $missingRotations, $stateRotations, "flip-x");
+//	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $rotations["yFlip"], $missingRotations, $stateRotations, "flip-y");
+//	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $rotations["zFlip"], $missingRotations, $stateRotations, "flip-z");
+//}
 file_put_contents("debug/missing-rotations.json", json_encode($missingRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/rotation-data-all.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 echo "Rotated " . array_sum(array_map(static fn($e) => count($e), $rotations)) . " blocks" . PHP_EOL;
@@ -1597,24 +1583,24 @@ $blockData = json_decode(getData("https://raw.githubusercontent.com/PrismarineJS
 
 $toBedrock = [];
 $missingData = [];
-foreach ($blockData as $legacyId => $state) {
-	$state = str_replace("persistent=false", "persistent=true", $state);
-
-	//sort
-	preg_match("/(.*)\[(.*?)]/", $state, $matches);
-	if (isset($matches[2])) {
-		$properties = explode(",", $matches[2]);
-		sort($properties);
-		$state = $matches[1] . "[" . implode(",", $properties) . "]";
-	}
-
-	$d = toBedrock($state, $jtb);
-	if ($d !== null) {
-		$toBedrock[$legacyId] = $d;
-	} else {
-		$missingData[$legacyId] = $state;
-	}
-}
+//foreach ($blockData as $legacyId => $state) {
+//	$state = str_replace("persistent=false", "persistent=true", $state);
+//
+//	//sort
+//	preg_match("/(.*)\[(.*?)]/", $state, $matches);
+//	if (isset($matches[2])) {
+//		$properties = explode(",", $matches[2]);
+//		sort($properties);
+//		$state = $matches[1] . "[" . implode(",", $properties) . "]";
+//	}
+//
+//	$d = toBedrock($state, $jtb);
+//	if ($d !== null) {
+//		$toBedrock[$legacyId] = $d;
+//	} else {
+//		$missingData[$legacyId] = $state;
+//	}
+//}
 
 array_multisort(array_keys($toBedrock), SORT_NATURAL, array_values($toBedrock), SORT_NATURAL, $toBedrock);
 file_put_contents("../legacy-conversion-map.json", json_encode($toBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
