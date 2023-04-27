@@ -35,12 +35,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -1599,12 +1599,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -4928,12 +4928,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -5933,12 +5933,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -10300,12 +10300,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -12600,12 +12600,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -14276,12 +14276,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -16265,12 +16265,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -18934,6 +18934,77 @@
             "lit": "false"
         }
     },
+    "minecraft:redstone_torch": {
+        "additions": {
+            "torch_facing_direction": "top"
+        },
+        "removals": [
+            "lit"
+        ],
+        "identifier": [
+            "lit"
+        ],
+        "mapping": {
+            "true": {
+                "name": "minecraft:redstone_torch"
+            },
+            "false": {
+                "name": "minecraft:unlit_redstone_torch"
+            }
+        },
+        "values": {
+            "lit": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "lit": "true"
+        }
+    },
+    "minecraft:redstone_wall_torch": {
+        "removals": [
+            "lit"
+        ],
+        "renames": {
+            "facing": "torch_facing_direction"
+        },
+        "remaps": {
+            "torch_facing_direction": {
+                "east": "west",
+                "north": "south",
+                "south": "north",
+                "west": "east"
+            }
+        },
+        "identifier": [
+            "lit"
+        ],
+        "mapping": {
+            "true": {
+                "name": "minecraft:redstone_torch"
+            },
+            "false": {
+                "name": "minecraft:unlit_redstone_torch"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "lit": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "lit": "true"
+        }
+    },
     "minecraft:redstone_wire": {
         "name": "minecraft:redstone_wire",
         "removals": [
@@ -20846,12 +20917,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -21650,12 +21721,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {
@@ -22903,12 +22974,12 @@
                 },
                 "north": {
                     "additions": {
-                        "facing_direction": "3"
+                        "facing_direction": "2"
                     }
                 },
                 "south": {
                     "additions": {
-                        "facing_direction": "2"
+                        "facing_direction": "3"
                     }
                 },
                 "west": {

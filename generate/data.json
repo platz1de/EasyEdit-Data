@@ -226,7 +226,19 @@
 	"minecraft:standing_sign": "facing_direction",
 	"minecraft:seagrass": "sea_grass_type",
 	"minecraft:big_dripleaf": "big_dripleaf_head",
-	"minecraft:cauldron": "cauldron_liquid"
+	"minecraft:cauldron": "cauldron_liquid",
+	"minecraft:wooden_slab": ["wood_type", "top_slot_bit"],
+	"minecraft:double_wooden_slab": ["wood_type", "top_slot_bit"],
+	"minecraft:stone_block_slab": ["stone_slab_type", "top_slot_bit"],
+	"minecraft:stone_block_slab2": ["stone_slab_type_2", "top_slot_bit"],
+	"minecraft:stone_block_slab3": ["stone_slab_type_3", "top_slot_bit"],
+	"minecraft:stone_block_slab4": ["stone_slab_type_4", "top_slot_bit"],
+	"minecraft:double_stone_block_slab": ["stone_slab_type", "top_slot_bit"],
+	"minecraft:double_stone_block_slab2": ["stone_slab_type_2", "top_slot_bit"],
+	"minecraft:double_stone_block_slab3": ["stone_slab_type_3", "top_slot_bit"],
+	"minecraft:double_stone_block_slab4": ["stone_slab_type_4", "top_slot_bit"],
+	"minecraft:lever": "lever_direction",
+	"minecraft:purpur_block": "chisel_type"
   },
   "btj_ignore": {
 	"minecraft:cave_vines": [
@@ -258,6 +270,13 @@
 	],
 	"minecraft:weeping_vines": [
 	  "minecraft:weeping_vines_plant"
+	],
+	"minecraft:air": [
+	  "minecraft:cave_air",
+	  "minecraft:void_air"
+	],
+	"minecraft:grass_path": [
+	  "minecraft:grass_path"
 	]
   },
   "defaults": {
@@ -585,5 +604,25 @@
 	"minecraft:sculk_catalyst": {
 	  "bloom": "false"
 	}
+  },
+  "overrides": {
+	"__allow": ["minecraft:brown_mushroom_block", "minecraft:red_mushroom_block"],
+	"__comment1": "buttons and leavers can only be placed in two orientations on floors and ceilings in bedrock, vs the 4 in java",
+	"minecraft:acacia_button": [0, 1],
+	"minecraft:birch_button": [0, 1],
+	"minecraft:crimson_button": [0, 1],
+	"minecraft:dark_oak_button": [0, 1],
+	"minecraft:jungle_button": [0, 1],
+	"minecraft:mangrove_button": [0, 1],
+	"minecraft:wooden_button": [0, 1],
+	"minecraft:polished_blackstone_button": [0, 1],
+	"minecraft:spruce_button": [0, 1],
+	"minecraft:stone_button": [0, 1],
+	"minecraft:warped_button": [0, 1],
+	"minecraft:lever": ["down_north_south", "down_east_west", "up_north_south", "up_east_west"],
+
+	"__comment2": "mushroom blocks are heavily restricted in bedrock",
+	"minecraft:brown_mushroom_block": [14, 15],
+	"minecraft:red_mushroom_block": [14, 15]
   }
 }
