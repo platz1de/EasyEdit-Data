@@ -1,6 +1,6 @@
 {
-    "version": "1.19.1-c49d93e4-1508-4f8a-9bec-b777f897dd2f",
-    "state-version": 17959425,
+    "version": "1.19.1-b0279345-a013-468a-8278-d0794521aac7",
+    "state-version": 18040335,
     "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/legacy-conversion-map.json",
     "java-to-bedrock": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/java-to-bedrock.json",
     "bedrock-to-java": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.0/bedrock-to-java.json",

@@ -21,9 +21,9 @@ $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW
 $repo["version"] = BEDROCK_VERSION . "-" . Uuid::uuid4();
 $repo["state-version"] =
 	(1 << 24) | //major
-	(18 << 16) | //minor
-	(10 << 8) | //patch
-	(1); //revision
+	(19 << 16) | //minor
+	(70 << 8) | //patch
+	(15); //revision
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $suppress = json_decode(file_get_contents("suppress.json"), true, 512, JSON_THROW_ON_ERROR);
@@ -1156,8 +1156,6 @@ function sortState(string $state): string
 	return $matches[1] . "[" . implode(",", $states) . "]";
 }
 
-//unset($jtb["minecraft:mushroom_stem"]["mapping"]["false"]["false"]["false"]); //this will falsely override the normal mushroom blocks
-
 $btj = [];
 foreach ($jtb as $java => $bedrockData) {
 	revertJavaToBedrock($java, $bedrockData, $btj, $customData);
@@ -1480,21 +1478,30 @@ function flipStateTranslation(&$state, $bedrockData): void
 	}
 }
 
-foreach ($btj as $key => &$value) {
-	if (isset($value["removals"])) {
-		$value["removals"] = array_keys($value["removals"]);
+$btj["minecraft:invisible_bedrock"] = ["name" => "minecraft:barrier"];
+
+foreach ($btj as $name => $block) {
+	if (isset($block["removals"])) {
+		$block["removals"] = array_keys($block["removals"]);
 	}
-	if (isset($value["additions"]) && $value["additions"] === []) {
-		unset($value["additions"]);
+	if (($block["defaults"] ?? []) === []) unset($block["defaults"]);
+	foreach ($block["renames"] ?? [] as $key => $value) {
+		if ($key === $value) unset($block["renames"][$key]);
 	}
-	if (isset($value["removals"]) && $value["removals"] === []) {
-		unset($value["removals"]);
+	if (($block["renames"] ?? []) === []) unset($block["renames"]);
+
+	$ordered = [];
+	foreach ($oder as $key) {
+		if (isset($block[$key])) {
+			$ordered[$key] = $block[$key];
+			unset($block[$key]);
+		}
 	}
+	foreach ($block as $key => $value) {
+		throw new Exception("Unknown key: " . $key);
+	}
+	$btj[$name] = $ordered;
 }
-
-unset($value);
-
-$btj["minecraft:invisible_bedrock"] = ["type" => "singular", "name" => "minecraft:barrier"];
 
 echo "Converted " . count($btj) . " blocks" . PHP_EOL;
 file_put_contents("../bedrock-to-java.json", json_encode($btj, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
