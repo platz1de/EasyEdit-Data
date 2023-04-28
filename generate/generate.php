@@ -979,21 +979,21 @@ foreach ($groupsJtb as $group) {
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
 		$obj["internal_tile"] = [
 			"type" => [
-				"minecraft:skeleton_skull" => "skeleton",
-				"minecraft:skeleton_wall_skull" => "skeleton",
-				"minecraft:wither_skeleton_skull" => "wither_skeleton",
-				"minecraft:wither_skeleton_wall_skull" => "wither_skeleton",
-				"minecraft:zombie_head" => "zombie",
-				"minecraft:zombie_wall_head" => "zombie",
-				"minecraft:player_head" => "player",
-				"minecraft:player_wall_head" => "player",
-				"minecraft:creeper_head" => "creeper",
-				"minecraft:creeper_wall_head" => "creeper",
-				"minecraft:dragon_head" => "dragon",
-				"minecraft:dragon_wall_head" => "dragon",
-				"minecraft:piglin_head" => "piglin",
-				"minecraft:piglin_wall_head" => "piglin"
-			][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"]),
+					"minecraft:skeleton_skull" => "skeleton",
+					"minecraft:skeleton_wall_skull" => "skeleton",
+					"minecraft:wither_skeleton_skull" => "wither_skeleton",
+					"minecraft:wither_skeleton_wall_skull" => "wither_skeleton",
+					"minecraft:zombie_head" => "zombie",
+					"minecraft:zombie_wall_head" => "zombie",
+					"minecraft:player_head" => "player",
+					"minecraft:player_wall_head" => "player",
+					"minecraft:creeper_head" => "creeper",
+					"minecraft:creeper_wall_head" => "creeper",
+					"minecraft:dragon_head" => "dragon",
+					"minecraft:dragon_wall_head" => "dragon",
+					"minecraft:piglin_head" => "piglin",
+					"minecraft:piglin_wall_head" => "piglin"
+				][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"]),
 			"attachment" => str_contains($group["name"], "wall") ? "wall" : "floor"
 		];
 	}
@@ -1108,6 +1108,74 @@ foreach ($javaToBedrock as $java => $bedrock) {
 }
 echo "Successfully tested $succeeded mappings, " . (count($failedTests)) . " failed, $ignored ignored" . PHP_EOL;
 file_put_contents("debug/java-to-bedrock-tests.json", json_encode($failedTests, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
+
+$bedrockDefaults = [];
+foreach ($jtb as $name => $block) {
+	$def = $block["defaults"] ?? [];
+	foreach ($block["removals"] ?? [] as $key) {
+		unset($def[$key]);
+	}
+	foreach ($block["renames"] ?? [] as $key => $value) {
+		if (isset($def[$key])) {
+			if (isset($def[$value])) {
+				throw new Exception("Duplicate default: " . $value);
+			}
+			$def[$value] = $def[$key];
+			unset($def[$key]);
+		} else {
+			throw new Exception("Unknown default: " . $key);
+		}
+	}
+	foreach ($block["additions"] ?? [] as $key => $value) {
+		if (isset($def[$key])) {
+			throw new Exception("Duplicate default: " . $key);
+		}
+		$def[$key] = $value;
+	}
+	foreach ($block["remaps"] ?? [] as $key => $value) {
+		if (isset($def[$key])) {
+			$def[$key] = $value[$def[$key]];
+		} else {
+			throw new Exception("Unknown default: " . $key);
+		}
+	}
+
+	$all = [];
+	if (isset($block["identifier"])) {
+		$find = static function ($data, $keys, $add) use (&$all, &$find, $block) {
+			if ($keys === []) {
+				if ($data === null) {
+					$data = $block["mapping"]["default"];
+				}
+				$all[] = $data;
+				return;
+			}
+			$key = array_shift($keys);
+			foreach ($block["values"][$key] as $value) {
+				$a = [];
+				foreach ($add as $k => $v) {
+					$a[$k] = $v;
+				}
+				$a[$key] = $value;
+				$find($data === null ? null : $data[$value] ?? $data["default"] ?? null, $keys, $a);
+			}
+		};
+		$find($block["mapping"], $block["identifier"], []);
+	} else {
+		$all = [[]];
+	}
+
+	foreach ($all as $a) {
+		$d = [];
+		foreach ($def as $key => $value) {
+			$d[$key] = $value;
+		}
+		$bedrockDefaults[$a["name"] ?? $block["name"] ?? $name] = $d;
+	}
+}
+file_put_contents("../bedrock-defaults.json", json_encode($bedrockDefaults, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
+
 
 function toBedrock(string $java, $jtb): string|null
 {
