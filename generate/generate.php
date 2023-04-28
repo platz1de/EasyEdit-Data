@@ -8,8 +8,6 @@ use Ramsey\Uuid\Uuid;
 
 error_reporting(E_ALL);
 
-const BEDROCK_VERSION = "1.19.1";
-
 try {
 	require_once("phar://PocketMine-MP.phar/vendor/autoload.php");
 } catch (Throwable) {
@@ -18,8 +16,8 @@ try {
 }
 
 $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW_ON_ERROR);
-$repo["version"] = BEDROCK_VERSION . "-" . Uuid::uuid4();
-$repo["state-version"] =
+$repo["version"] = Uuid::uuid4();
+$repo["latest"]["state-version"] =
 	(1 << 24) | //major
 	(19 << 16) | //minor
 	(70 << 8) | //patch
