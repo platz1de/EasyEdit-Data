@@ -238,7 +238,8 @@
 	"minecraft:double_stone_block_slab3": ["stone_slab_type_3", "top_slot_bit"],
 	"minecraft:double_stone_block_slab4": ["stone_slab_type_4", "top_slot_bit"],
 	"minecraft:lever": "lever_direction",
-	"minecraft:purpur_block": "chisel_type"
+	"minecraft:purpur_block": "chisel_type",
+	"minecraft:flower_pot": "type"
   },
   "btj_ignore": {
 	"minecraft:cave_vines": [

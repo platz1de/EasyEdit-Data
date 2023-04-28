@@ -8389,6 +8389,9 @@
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "none"
         }
     },
     "minecraft:flowering_azalea": [],
@@ -16920,192 +16923,288 @@
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:sapling[age_bit=false,sapling_type=acacia]"
         }
     },
     "minecraft:potted_allium": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=allium]"
         }
     },
     "minecraft:potted_azalea_bush": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:azalea"
         }
     },
     "minecraft:potted_azure_bluet": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=houstonia]"
         }
     },
     "minecraft:potted_bamboo": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:bamboo[age_bit=false,bamboo_leaf_size=no_leaves,bamboo_stalk_thickness=thin]"
         }
     },
     "minecraft:potted_birch_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:sapling[age_bit=false,sapling_type=birch]"
         }
     },
     "minecraft:potted_blue_orchid": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=orchid]"
         }
     },
     "minecraft:potted_brown_mushroom": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:brown_mushroom"
         }
     },
     "minecraft:potted_cactus": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:cactus[age=0]"
         }
     },
     "minecraft:potted_cornflower": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=cornflower]"
         }
     },
     "minecraft:potted_crimson_fungus": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:crimson_fungus"
         }
     },
     "minecraft:potted_crimson_roots": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:crimson_roots"
         }
     },
     "minecraft:potted_dandelion": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:yellow_flower"
         }
     },
     "minecraft:potted_dark_oak_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:sapling[age_bit=false,sapling_type=dark_oak]"
         }
     },
     "minecraft:potted_dead_bush": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:deadbush"
         }
     },
     "minecraft:potted_fern": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:tallgrass[tall_grass_type=fern]"
         }
     },
     "minecraft:potted_flowering_azalea_bush": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:flowering_azalea"
         }
     },
     "minecraft:potted_jungle_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:sapling[age_bit=false,sapling_type=jungle]"
         }
     },
     "minecraft:potted_lily_of_the_valley": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=lily_of_the_valley]"
         }
     },
     "minecraft:potted_mangrove_propagule": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:mangrove_propagule[hanging=false,propagule_stage=0]"
         }
     },
     "minecraft:potted_oak_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:sapling[age_bit=false,sapling_type=oak]"
         }
     },
     "minecraft:potted_orange_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=tulip_orange]"
         }
     },
     "minecraft:potted_oxeye_daisy": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=oxeye]"
         }
     },
     "minecraft:potted_pink_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=tulip_pink]"
         }
     },
     "minecraft:potted_poppy": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=poppy]"
         }
     },
     "minecraft:potted_red_mushroom": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_mushroom"
         }
     },
     "minecraft:potted_red_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=tulip_red]"
         }
     },
     "minecraft:potted_spruce_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:sapling[age_bit=false,sapling_type=spruce]"
         }
     },
     "minecraft:potted_warped_fungus": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:warped_fungus"
         }
     },
     "minecraft:potted_warped_roots": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:warped_roots"
         }
     },
     "minecraft:potted_white_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:red_flower[flower_type=tulip_white]"
         }
     },
     "minecraft:potted_wither_rose": {
         "name": "minecraft:flower_pot",
         "additions": {
             "update_bit": "false"
+        },
+        "internal_tile": {
+            "type": "minecraft:wither_rose"
         }
     },
     "minecraft:powder_snow": [],

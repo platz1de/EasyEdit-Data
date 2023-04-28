@@ -976,6 +976,62 @@ foreach ($groupsJtb as $group) {
 			][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"])];
 	}
 
+	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
+		$obj["internal_tile"] = ["type" => [
+				"minecraft:skeleton_skull" => "skeleton",
+				"minecraft:skeleton_wall_skull" => "skeleton",
+				"minecraft:wither_skeleton_skull" => "wither_skeleton",
+				"minecraft:wither_skeleton_wall_skull" => "wither_skeleton",
+				"minecraft:zombie_head" => "zombie",
+				"minecraft:zombie_wall_head" => "zombie",
+				"minecraft:player_head" => "player",
+				"minecraft:player_wall_head" => "player",
+				"minecraft:creeper_head" => "creeper",
+				"minecraft:creeper_wall_head" => "creeper",
+				"minecraft:dragon_head" => "dragon",
+				"minecraft:dragon_wall_head" => "dragon",
+				"minecraft:piglin_head" => "piglin",
+				"minecraft:piglin_wall_head" => "piglin"
+			][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"])];
+	}
+	if (isset($obj["name"]) && $obj["name"] === "minecraft:flower_pot") {
+		$obj["internal_tile"] = ["type" => [
+				"minecraft:flower_pot" => "none",
+				"minecraft:potted_acacia_sapling" => "minecraft:acacia_sapling",
+				"minecraft:potted_allium" => "minecraft:allium",
+				"minecraft:potted_azalea_bush" => "minecraft:azalea",
+				"minecraft:potted_azure_bluet" => "minecraft:azure_bluet",
+				"minecraft:potted_bamboo" => "minecraft:bamboo",
+				"minecraft:potted_birch_sapling" => "minecraft:birch_sapling",
+				"minecraft:potted_blue_orchid" => "minecraft:blue_orchid",
+				"minecraft:potted_brown_mushroom" => "minecraft:brown_mushroom",
+				"minecraft:potted_cactus" => "minecraft:cactus",
+				"minecraft:potted_cornflower" => "minecraft:cornflower",
+				"minecraft:potted_crimson_fungus" => "minecraft:crimson_fungus",
+				"minecraft:potted_crimson_roots" => "minecraft:crimson_roots",
+				"minecraft:potted_dandelion" => "minecraft:dandelion",
+				"minecraft:potted_dark_oak_sapling" => "minecraft:dark_oak_sapling",
+				"minecraft:potted_dead_bush" => "minecraft:dead_bush",
+				"minecraft:potted_fern" => "minecraft:fern",
+				"minecraft:potted_flowering_azalea_bush" => "minecraft:flowering_azalea",
+				"minecraft:potted_jungle_sapling" => "minecraft:jungle_sapling",
+				"minecraft:potted_lily_of_the_valley" => "minecraft:lily_of_the_valley",
+				"minecraft:potted_mangrove_propagule" => "minecraft:mangrove_propagule",
+				"minecraft:potted_oak_sapling" => "minecraft:oak_sapling",
+				"minecraft:potted_orange_tulip" => "minecraft:orange_tulip",
+				"minecraft:potted_oxeye_daisy" => "minecraft:oxeye_daisy",
+				"minecraft:potted_pink_tulip" => "minecraft:pink_tulip",
+				"minecraft:potted_poppy" => "minecraft:poppy",
+				"minecraft:potted_red_mushroom" => "minecraft:red_mushroom",
+				"minecraft:potted_red_tulip" => "minecraft:red_tulip",
+				"minecraft:potted_spruce_sapling" => "minecraft:spruce_sapling",
+				"minecraft:potted_warped_fungus" => "minecraft:warped_fungus",
+				"minecraft:potted_warped_roots" => "minecraft:warped_roots",
+				"minecraft:potted_white_tulip" => "minecraft:white_tulip",
+				"minecraft:potted_wither_rose" => "minecraft:wither_rose"
+			][$group["name"]] ?? throw new Exception("Unknown flower pot type: " . $group["name"])];
+	}
+
 	if (!isset($obj["name"]) && !isset($obj["identifier"])) {
 		$failed = true;
 	}
@@ -996,6 +1052,9 @@ foreach ($groupsJtb as $group) {
 $oder = ["name", "additions", "removals", "renames", "remaps", "identifier", "mapping", "values", "defaults", "internal_tile"];
 
 foreach ($jtb as $name => $block) {
+	if (isset($block["name"]) && $block["name"] === "minecraft:flower_pot" && $block["internal_tile"]["type"] !== "none") {
+		$block["internal_tile"]["type"] = toBedrock($block["internal_tile"]["type"], $jtb);
+	}
 	if ($block["values"] === []) unset($block["values"]);
 	if ($block["defaults"] === []) unset($block["defaults"]);
 	foreach ($block["renames"] ?? [] as $key => $value) {
@@ -1056,6 +1115,7 @@ function toBedrock(string $java, $jtb): string|null
 	$javaName = $matches[1];
 	$data = $jtb[$javaName] ?? null;
 	if ($data === null) {
+		echo "\e[33mUnknown java block: $java\e[39m" . PHP_EOL;
 		return null;
 	}
 	if (isset($matches[2])) {
