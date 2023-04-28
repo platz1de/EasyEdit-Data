@@ -11,6 +11,7 @@
 	"/minecraft:bamboo_block/",
 	"/minecraft:bamboo_mosaic/",
 	"/minecraft:bamboo_pressure_plate/",
+	"/minecraft:bamboo_fence.*/",
 	"/minecraft:stripped_bamboo_block/",
 	"/minecraft:pink_petals/",
 	"/minecraft:suspicious_sand/",

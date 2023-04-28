@@ -1216,6 +1216,9 @@ function sortState(string $state): string
 	return $matches[1] . "[" . implode(",", $states) . "]";
 }
 
+//Prepare custom data
+unset($jtb["minecraft:mushroom_stem"]["mapping"]["false"]["false"]["false"]); //0 side mushroom block should be converted to mushroom block, not stem
+
 $btj = [];
 foreach ($jtb as $java => $bedrockData) {
 	revertJavaToBedrock($java, $bedrockData, $btj, $customData);

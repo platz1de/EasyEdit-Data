@@ -111,9 +111,6 @@
             "acacia": {
                 "name": "minecraft:acacia_fence"
             },
-            "oak": {
-                "name": "minecraft:bamboo_fence"
-            },
             "birch": {
                 "name": "minecraft:birch_fence"
             },
@@ -122,6 +119,9 @@
             },
             "jungle": {
                 "name": "minecraft:jungle_fence"
+            },
+            "oak": {
+                "name": "minecraft:oak_fence"
             },
             "spruce": {
                 "name": "minecraft:spruce_fence"
@@ -559,26 +559,57 @@
         },
         "remaps": [],
         "identifier": [
-            "wood_type"
+            "wood_type",
+            "stripped_bit"
         ],
         "mapping": {
             "acacia": {
-                "name": "minecraft:acacia_wood"
+                "false": {
+                    "name": "minecraft:acacia_wood"
+                },
+                "true": {
+                    "name": "minecraft:stripped_acacia_wood"
+                }
             },
             "birch": {
-                "name": "minecraft:birch_wood"
+                "false": {
+                    "name": "minecraft:birch_wood"
+                },
+                "true": {
+                    "name": "minecraft:stripped_birch_wood"
+                }
             },
             "dark_oak": {
-                "name": "minecraft:dark_oak_wood"
+                "false": {
+                    "name": "minecraft:dark_oak_wood"
+                },
+                "true": {
+                    "name": "minecraft:stripped_dark_oak_wood"
+                }
             },
             "jungle": {
-                "name": "minecraft:jungle_wood"
+                "false": {
+                    "name": "minecraft:jungle_wood"
+                },
+                "true": {
+                    "name": "minecraft:stripped_jungle_wood"
+                }
             },
             "oak": {
-                "name": "minecraft:oak_wood"
+                "false": {
+                    "name": "minecraft:oak_wood"
+                },
+                "true": {
+                    "name": "minecraft:stripped_oak_wood"
+                }
             },
             "spruce": {
-                "name": "minecraft:spruce_wood"
+                "false": {
+                    "name": "minecraft:spruce_wood"
+                },
+                "true": {
+                    "name": "minecraft:stripped_spruce_wood"
+                }
             }
         },
         "defaults": {
@@ -1207,31 +1238,6 @@
             "facing": "north",
             "half": "lower",
             "hinge": "left",
-            "open": "false",
-            "powered": "false"
-        }
-    },
-    "minecraft:fence_gate": {
-        "name": "minecraft:oak_fence_gate",
-        "additions": {
-            "powered": "false"
-        },
-        "renames": {
-            "direction": "facing",
-            "in_wall_bit": "in_wall",
-            "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
-        },
-        "defaults": {
-            "facing": "north",
-            "in_wall": "false",
             "open": "false",
             "powered": "false"
         }
@@ -2752,23 +2758,49 @@
         ],
         "remaps": [],
         "identifier": [
-            "coral_color"
+            "coral_color",
+            "dead_bit"
         ],
         "mapping": {
             "pink": {
-                "name": "minecraft:brain_coral"
+                "false": {
+                    "name": "minecraft:brain_coral"
+                },
+                "true": {
+                    "name": "minecraft:dead_brain_coral"
+                }
             },
             "purple": {
-                "name": "minecraft:bubble_coral"
+                "false": {
+                    "name": "minecraft:bubble_coral"
+                },
+                "true": {
+                    "name": "minecraft:dead_bubble_coral"
+                }
             },
             "red": {
-                "name": "minecraft:dead_fire_coral"
+                "true": {
+                    "name": "minecraft:dead_fire_coral"
+                },
+                "false": {
+                    "name": "minecraft:fire_coral"
+                }
             },
             "yellow": {
-                "name": "minecraft:dead_horn_coral"
+                "true": {
+                    "name": "minecraft:dead_horn_coral"
+                },
+                "false": {
+                    "name": "minecraft:horn_coral"
+                }
             },
             "blue": {
-                "name": "minecraft:dead_tube_coral"
+                "true": {
+                    "name": "minecraft:dead_tube_coral"
+                },
+                "false": {
+                    "name": "minecraft:tube_coral"
+                }
             }
         },
         "defaults": {
@@ -2783,23 +2815,49 @@
         ],
         "remaps": [],
         "identifier": [
-            "coral_color"
+            "coral_color",
+            "dead_bit"
         ],
         "mapping": {
             "pink": {
-                "name": "minecraft:brain_coral_block"
+                "false": {
+                    "name": "minecraft:brain_coral_block"
+                },
+                "true": {
+                    "name": "minecraft:dead_brain_coral_block"
+                }
             },
             "purple": {
-                "name": "minecraft:bubble_coral_block"
+                "false": {
+                    "name": "minecraft:bubble_coral_block"
+                },
+                "true": {
+                    "name": "minecraft:dead_bubble_coral_block"
+                }
             },
             "red": {
-                "name": "minecraft:dead_fire_coral_block"
+                "true": {
+                    "name": "minecraft:dead_fire_coral_block"
+                },
+                "false": {
+                    "name": "minecraft:fire_coral_block"
+                }
             },
             "yellow": {
-                "name": "minecraft:dead_horn_coral_block"
+                "true": {
+                    "name": "minecraft:dead_horn_coral_block"
+                },
+                "false": {
+                    "name": "minecraft:horn_coral_block"
+                }
             },
             "blue": {
-                "name": "minecraft:dead_tube_coral_block"
+                "true": {
+                    "name": "minecraft:dead_tube_coral_block"
+                },
+                "false": {
+                    "name": "minecraft:tube_coral_block"
+                }
             }
         }
     },
@@ -2856,14 +2914,25 @@
             }
         },
         "identifier": [
-            "coral_hang_type_bit"
+            "coral_hang_type_bit",
+            "dead_bit"
         ],
         "mapping": {
             "true": {
-                "name": "minecraft:brain_coral_wall_fan"
+                "false": {
+                    "name": "minecraft:brain_coral_wall_fan"
+                },
+                "true": {
+                    "name": "minecraft:dead_brain_coral_wall_fan"
+                }
             },
             "false": {
-                "name": "minecraft:dead_tube_coral_wall_fan"
+                "true": {
+                    "name": "minecraft:dead_tube_coral_wall_fan"
+                },
+                "false": {
+                    "name": "minecraft:tube_coral_wall_fan"
+                }
             }
         },
         "defaults": {
@@ -3304,14 +3373,25 @@
             }
         },
         "identifier": [
-            "coral_hang_type_bit"
+            "coral_hang_type_bit",
+            "dead_bit"
         ],
         "mapping": {
             "false": {
-                "name": "minecraft:bubble_coral_wall_fan"
+                "false": {
+                    "name": "minecraft:bubble_coral_wall_fan"
+                },
+                "true": {
+                    "name": "minecraft:dead_bubble_coral_wall_fan"
+                }
             },
             "true": {
-                "name": "minecraft:dead_fire_coral_wall_fan"
+                "true": {
+                    "name": "minecraft:dead_fire_coral_wall_fan"
+                },
+                "false": {
+                    "name": "minecraft:fire_coral_wall_fan"
+                }
             }
         },
         "defaults": {
@@ -5177,11 +5257,17 @@
             }
         },
         "identifier": [
-            "coral_hang_type_bit"
+            "coral_hang_type_bit",
+            "dead_bit"
         ],
         "mapping": {
             "false": {
-                "name": "minecraft:dead_horn_coral_wall_fan"
+                "true": {
+                    "name": "minecraft:dead_horn_coral_wall_fan"
+                },
+                "false": {
+                    "name": "minecraft:horn_coral_wall_fan"
+                }
             }
         },
         "defaults": {
@@ -8253,6 +8339,31 @@
         "defaults": {
             "face": "wall",
             "facing": "north",
+            "powered": "false"
+        }
+    },
+    "minecraft:fence_gate": {
+        "name": "minecraft:oak_fence_gate",
+        "additions": {
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "in_wall_bit": "in_wall",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "3": "east",
+                "2": "north",
+                "0": "south",
+                "1": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "in_wall": "false",
+            "open": "false",
             "powered": "false"
         }
     },
