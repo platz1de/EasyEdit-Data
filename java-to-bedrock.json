@@ -4774,7 +4774,8 @@
             "rotation": "0"
         },
         "internal_tile": {
-            "type": "creeper"
+            "type": "creeper",
+            "attachment": "floor"
         }
     },
     "minecraft:creeper_wall_head": {
@@ -4802,7 +4803,8 @@
             "facing": "north"
         },
         "internal_tile": {
-            "type": "creeper"
+            "type": "creeper",
+            "attachment": "wall"
         }
     },
     "minecraft:crimson_button": {
@@ -7679,7 +7681,8 @@
             "rotation": "0"
         },
         "internal_tile": {
-            "type": "dragon"
+            "type": "dragon",
+            "attachment": "floor"
         }
     },
     "minecraft:dragon_wall_head": {
@@ -7707,7 +7710,8 @@
             "facing": "north"
         },
         "internal_tile": {
-            "type": "dragon"
+            "type": "dragon",
+            "attachment": "wall"
         }
     },
     "minecraft:dried_kelp_block": [],
@@ -15303,7 +15307,8 @@
             "rotation": "0"
         },
         "internal_tile": {
-            "type": "piglin"
+            "type": "piglin",
+            "attachment": "floor"
         }
     },
     "minecraft:piglin_wall_head": {
@@ -15331,7 +15336,8 @@
             "facing": "north"
         },
         "internal_tile": {
-            "type": "piglin"
+            "type": "piglin",
+            "attachment": "wall"
         }
     },
     "minecraft:pink_banner": {
@@ -15754,7 +15760,8 @@
             "rotation": "0"
         },
         "internal_tile": {
-            "type": "player"
+            "type": "player",
+            "attachment": "floor"
         }
     },
     "minecraft:player_wall_head": {
@@ -15782,7 +15789,8 @@
             "facing": "north"
         },
         "internal_tile": {
-            "type": "player"
+            "type": "player",
+            "attachment": "wall"
         }
     },
     "minecraft:podzol": {
@@ -20213,7 +20221,8 @@
             "rotation": "0"
         },
         "internal_tile": {
-            "type": "skeleton"
+            "type": "skeleton",
+            "attachment": "floor"
         }
     },
     "minecraft:skeleton_wall_skull": {
@@ -20241,7 +20250,8 @@
             "facing": "north"
         },
         "internal_tile": {
-            "type": "skeleton"
+            "type": "skeleton",
+            "attachment": "wall"
         }
     },
     "minecraft:slime_block": {
@@ -24406,7 +24416,8 @@
             "rotation": "0"
         },
         "internal_tile": {
-            "type": "wither_skeleton"
+            "type": "wither_skeleton",
+            "attachment": "floor"
         }
     },
     "minecraft:wither_skeleton_wall_skull": {
@@ -24434,7 +24445,8 @@
             "facing": "north"
         },
         "internal_tile": {
-            "type": "wither_skeleton"
+            "type": "wither_skeleton",
+            "attachment": "wall"
         }
     },
     "minecraft:yellow_banner": {
@@ -24761,7 +24773,8 @@
             "rotation": "0"
         },
         "internal_tile": {
-            "type": "zombie"
+            "type": "zombie",
+            "attachment": "floor"
         }
     },
     "minecraft:zombie_wall_head": {
@@ -24789,7 +24802,8 @@
             "facing": "north"
         },
         "internal_tile": {
-            "type": "zombie"
+            "type": "zombie",
+            "attachment": "wall"
         }
     }
 }

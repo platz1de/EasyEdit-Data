@@ -977,7 +977,8 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
-		$obj["internal_tile"] = ["type" => [
+		$obj["internal_tile"] = [
+			"type" => [
 				"minecraft:skeleton_skull" => "skeleton",
 				"minecraft:skeleton_wall_skull" => "skeleton",
 				"minecraft:wither_skeleton_skull" => "wither_skeleton",
@@ -992,7 +993,9 @@ foreach ($groupsJtb as $group) {
 				"minecraft:dragon_wall_head" => "dragon",
 				"minecraft:piglin_head" => "piglin",
 				"minecraft:piglin_wall_head" => "piglin"
-			][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"])];
+			][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"]),
+			"attachment" => str_contains($group["name"], "wall") ? "wall" : "floor"
+		];
 	}
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:flower_pot") {
 		$obj["internal_tile"] = ["type" => [

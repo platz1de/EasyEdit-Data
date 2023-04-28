@@ -4051,87 +4051,201 @@
     "minecraft:skull": {
         "additions": [],
         "removals": [
-            "type"
+            "type",
+            "attachment"
         ],
         "remaps": [],
         "identifier": [
-            "type"
+            "type",
+            "attachment"
         ],
         "mapping": {
             "creeper": {
-                "name": "minecraft:creeper_head",
-                "renames": {
-                    "facing_direction": "rotation"
+                "floor": {
+                    "name": "minecraft:creeper_head",
+                    "renames": {
+                        "facing_direction": "rotation"
+                    },
+                    "remaps": {
+                        "rotation": {
+                            "1": 9
+                        }
+                    }
                 },
-                "remaps": {
-                    "rotation": {
-                        "1": 9
+                "wall": {
+                    "name": "minecraft:creeper_wall_head",
+                    "renames": {
+                        "facing_direction": "facing"
+                    },
+                    "remaps": {
+                        "facing": {
+                            "5": "east",
+                            "2": "north",
+                            "3": "south",
+                            "4": "west"
+                        }
                     }
                 }
             },
             "dragon": {
-                "name": "minecraft:dragon_head",
-                "renames": {
-                    "facing_direction": "rotation"
+                "floor": {
+                    "name": "minecraft:dragon_head",
+                    "renames": {
+                        "facing_direction": "rotation"
+                    },
+                    "remaps": {
+                        "rotation": {
+                            "1": 9
+                        }
+                    }
                 },
-                "remaps": {
-                    "rotation": {
-                        "1": 9
+                "wall": {
+                    "name": "minecraft:dragon_wall_head",
+                    "renames": {
+                        "facing_direction": "facing"
+                    },
+                    "remaps": {
+                        "facing": {
+                            "5": "east",
+                            "2": "north",
+                            "3": "south",
+                            "4": "west"
+                        }
                     }
                 }
             },
             "piglin": {
-                "name": "minecraft:piglin_head",
-                "renames": {
-                    "facing_direction": "rotation"
+                "floor": {
+                    "name": "minecraft:piglin_head",
+                    "renames": {
+                        "facing_direction": "rotation"
+                    },
+                    "remaps": {
+                        "rotation": {
+                            "1": 9
+                        }
+                    }
                 },
-                "remaps": {
-                    "rotation": {
-                        "1": 9
+                "wall": {
+                    "name": "minecraft:piglin_wall_head",
+                    "renames": {
+                        "facing_direction": "facing"
+                    },
+                    "remaps": {
+                        "facing": {
+                            "5": "east",
+                            "2": "north",
+                            "3": "south",
+                            "4": "west"
+                        }
                     }
                 }
             },
             "player": {
-                "name": "minecraft:player_head",
-                "renames": {
-                    "facing_direction": "rotation"
+                "floor": {
+                    "name": "minecraft:player_head",
+                    "renames": {
+                        "facing_direction": "rotation"
+                    },
+                    "remaps": {
+                        "rotation": {
+                            "1": 9
+                        }
+                    }
                 },
-                "remaps": {
-                    "rotation": {
-                        "1": 9
+                "wall": {
+                    "name": "minecraft:player_wall_head",
+                    "renames": {
+                        "facing_direction": "facing"
+                    },
+                    "remaps": {
+                        "facing": {
+                            "5": "east",
+                            "2": "north",
+                            "3": "south",
+                            "4": "west"
+                        }
                     }
                 }
             },
             "skeleton": {
-                "name": "minecraft:skeleton_skull",
-                "renames": {
-                    "facing_direction": "rotation"
+                "floor": {
+                    "name": "minecraft:skeleton_skull",
+                    "renames": {
+                        "facing_direction": "rotation"
+                    },
+                    "remaps": {
+                        "rotation": {
+                            "1": 9
+                        }
+                    }
                 },
-                "remaps": {
-                    "rotation": {
-                        "1": 9
+                "wall": {
+                    "name": "minecraft:skeleton_wall_skull",
+                    "renames": {
+                        "facing_direction": "facing"
+                    },
+                    "remaps": {
+                        "facing": {
+                            "5": "east",
+                            "2": "north",
+                            "3": "south",
+                            "4": "west"
+                        }
                     }
                 }
             },
             "wither_skeleton": {
-                "name": "minecraft:wither_skeleton_skull",
-                "renames": {
-                    "facing_direction": "rotation"
+                "floor": {
+                    "name": "minecraft:wither_skeleton_skull",
+                    "renames": {
+                        "facing_direction": "rotation"
+                    },
+                    "remaps": {
+                        "rotation": {
+                            "1": 9
+                        }
+                    }
                 },
-                "remaps": {
-                    "rotation": {
-                        "1": 9
+                "wall": {
+                    "name": "minecraft:wither_skeleton_wall_skull",
+                    "renames": {
+                        "facing_direction": "facing"
+                    },
+                    "remaps": {
+                        "facing": {
+                            "5": "east",
+                            "2": "north",
+                            "3": "south",
+                            "4": "west"
+                        }
                     }
                 }
             },
             "zombie": {
-                "name": "minecraft:zombie_head",
-                "renames": {
-                    "facing_direction": "rotation"
+                "floor": {
+                    "name": "minecraft:zombie_head",
+                    "renames": {
+                        "facing_direction": "rotation"
+                    },
+                    "remaps": {
+                        "rotation": {
+                            "1": 9
+                        }
+                    }
                 },
-                "remaps": {
-                    "rotation": {
-                        "1": 9
+                "wall": {
+                    "name": "minecraft:zombie_wall_head",
+                    "renames": {
+                        "facing_direction": "facing"
+                    },
+                    "remaps": {
+                        "facing": {
+                            "5": "east",
+                            "2": "north",
+                            "3": "south",
+                            "4": "west"
+                        }
                     }
                 }
             }
@@ -4141,7 +4255,8 @@
             "rotation": "0"
         },
         "internal_tile": [
-            "type"
+            "type",
+            "attachment"
         ]
     },
     "minecraft:crimson_button": {
