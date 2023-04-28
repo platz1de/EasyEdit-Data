@@ -629,5 +629,93 @@
 
 	"__comment3": "in earlier versions plain cauldron blocks contained water as well, we use this one, as it will probably be converted by java to the correct one",
 	"minecraft:cauldron": ["water"]
+  },
+  "beDefaults": {
+	"wood_type": "oak",
+	"old_log_type": "oak",
+	"old_leaf_type": "oak",
+	"new_log_type": "acacia",
+	"new_leaf_type": "acacia",
+	"sapling_type": "oak",
+	"flower_type": "poppy",
+	"double_plant_type": "sunflower",
+	"top_slot_bit": "false",
+	"stripped_bit": "false",
+	"stone_type": "stone",
+	"stone_slab_type": "smooth_stone",
+	"stone_slab_type_2": "red_sandstone",
+	"stone_slab_type_3": "end_stone_brick",
+	"stone_slab_type_4": "mossy_stone_brick",
+	"wall_block_type": "cobblestone",
+	"damage": "undamaged",
+	"color": "white",
+	"coral_color": "blue",
+	"huge_mushroom_bits": "14",
+	"cauldron_liquid": "water",
+	"chisel_type": "default",
+	"sand_stone_type": "default",
+	"stone_brick_type": "default",
+	"dead_bit": "false",
+	"coral_hang_type_bit": "false",
+	"fill_level": "0",
+	"dirt_type": "normal",
+	"open_bit": "false",
+	"sand_type": "normal",
+	"torch_facing_direction": "top",
+	"sea_grass_type": "default",
+	"sponge_type": "dry",
+	"vine_direction_bits": "1",
+	"multi_face_direction_bits": "1",
+	"lever_direction": "up_north_south",
+	"monster_egg_stone_type": "stone",
+	"big_dripleaf_head": "true",
+	"prismarine_block_type": "default",
+	"tall_grass_type": "tall",
+
+	"__comment": "Buttons should preferably look up",
+	"minecraft:acacia_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:birch_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:crimson_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:dark_oak_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:jungle_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:mangrove_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:wooden_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:polished_blackstone_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:spruce_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:stone_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:warped_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:skull": {
+	  "facing_direction": "1"
+	},
+	"minecraft:melon_stem": {
+	  "growth": "0",
+	  "facing_direction": "0"
+	},
+	"minecraft:pumpkin_stem": {
+	  "growth": "0",
+	  "facing_direction": "0"
+	}
   }
 }

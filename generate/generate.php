@@ -1171,7 +1171,57 @@ foreach ($jtb as $name => $block) {
 		foreach ($def as $key => $value) {
 			$d[$key] = $value;
 		}
-		$bedrockDefaults[$a["name"] ?? $block["name"] ?? $name] = $d;
+		foreach ($a["additions"] ?? [] as $key => $value) {
+			if (isset($d[$key])) {
+				throw new Exception("Duplicate default: " . $key);
+			}
+			$d[$key] = $value;
+		}
+		foreach ($a["remaps"] ?? [] as $key => $value) {
+			if (isset($d[$key])) {
+				$d[$key] = $value[$d[$key]];
+			} else {
+				throw new Exception("Unknown default: " . $key);
+			}
+		}
+		foreach ($a["removals"] ?? [] as $key) {
+			unset($d[$key]);
+		}
+		foreach ($a["renames"] ?? [] as $key => $value) {
+			if (isset($d[$key])) {
+				if (isset($d[$value])) {
+					throw new Exception("Duplicate default: " . $value);
+				}
+				$d[$value] = $d[$key];
+				unset($d[$key]);
+			} else {
+				throw new Exception("Unknown default: " . $key);
+			}
+		}
+		foreach ($d as $key => $value) {
+			if (isset($bedrockDefaults[$a["name"] ?? $block["name"] ?? $name][$key])) {
+				if ($bedrockDefaults[$a["name"] ?? $block["name"] ?? $name][$key] !== $value) {
+					$bedrockDefaults[$a["name"] ?? $block["name"] ?? $name][$key] .= " | " . $value;
+					continue;
+				}
+			}
+			$bedrockDefaults[$a["name"] ?? $block["name"] ?? $name][$key] = $value;
+		}
+	}
+}
+foreach ($bedrockDefaults as $name => $block) {
+	foreach ($block as $key => $value) {
+		if (strpos($value, " | ") !== false) {
+			$possible = explode(" | ", $value);
+			if (isset($customData["beDefaults"][$key]) && in_array($customData["beDefaults"][$key], $possible)) {
+				$bedrockDefaults[$name][$key] = $customData["beDefaults"][$key];
+			} else if (isset($customData["beDefaults"][$name][$key]) && in_array($customData["beDefaults"][$name][$key], $possible)) {
+				$bedrockDefaults[$name][$key] = $customData["beDefaults"][$name][$key];
+			} else {
+				echo "\e[33mAmbiguous default for $name $key: $value\e[39m" . PHP_EOL;
+				$bedrockDefaults[$name][$key] = $possible[0];
+			}
+		}
 	}
 }
 file_put_contents("../bedrock-defaults.json", json_encode($bedrockDefaults, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));

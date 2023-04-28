@@ -1,6 +1,7 @@
 {
     "minecraft:acacia_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:acacia_door": {
         "direction": "3",
@@ -9,7 +10,7 @@
         "open_bit": "false"
     },
     "minecraft:fence": {
-        "wood_type": "spruce"
+        "wood_type": "oak"
     },
     "minecraft:acacia_fence_gate": {
         "direction": "2",
@@ -19,30 +20,32 @@
     "minecraft:leaves2": {
         "persistent_bit": "false",
         "update_bit": "false",
-        "new_leaf_type": "dark_oak"
+        "new_leaf_type": "acacia"
     },
     "minecraft:log2": {
         "pillar_axis": "y",
-        "new_log_type": "dark_oak"
+        "new_log_type": "acacia"
     },
     "minecraft:planks": {
-        "wood_type": "spruce"
+        "wood_type": "oak"
     },
     "minecraft:acacia_pressure_plate": {
         "redstone_signal": "0"
     },
     "minecraft:sapling": {
         "age_bit": "false",
-        "sapling_type": "spruce"
+        "sapling_type": "oak"
     },
     "minecraft:acacia_standing_sign": {
         "ground_sign_direction": "0"
     },
     "minecraft:wooden_slab": {
-        "wood_type": "spruce"
+        "wood_type": "oak",
+        "top_slot_bit": "false"
     },
     "minecraft:double_wooden_slab": {
-        "wood_type": "spruce"
+        "wood_type": "oak",
+        "top_slot_bit": "false"
     },
     "minecraft:acacia_stairs": {
         "weirdo_direction": "3",
@@ -58,30 +61,29 @@
     },
     "minecraft:wood": {
         "pillar_axis": "y",
-        "wood_type": "spruce",
-        "stripped_bit": "true"
+        "wood_type": "oak",
+        "stripped_bit": "false"
     },
     "minecraft:activator_rail": {
         "rail_data_bit": "false",
         "rail_direction": "0"
     },
-    "minecraft:air": [],
     "minecraft:red_flower": {
-        "flower_type": "tulip_white"
+        "flower_type": "poppy"
     },
-    "minecraft:amethyst_block": [],
     "minecraft:amethyst_cluster": {
         "facing_direction": "2"
     },
-    "minecraft:ancient_debris": [],
     "minecraft:stone": {
         "stone_type": "stone"
     },
     "minecraft:stone_block_slab3": {
-        "stone_slab_type_3": "smooth_red_sandstone"
+        "stone_slab_type_3": "end_stone_brick",
+        "top_slot_bit": "false"
     },
     "minecraft:double_stone_block_slab3": {
-        "stone_slab_type_3": "smooth_red_sandstone"
+        "stone_slab_type_3": "end_stone_brick",
+        "top_slot_bit": "false"
     },
     "minecraft:andesite_stairs": {
         "weirdo_direction": "3",
@@ -93,21 +95,20 @@
         "wall_connection_type_south": "none",
         "wall_post_bit": "false",
         "wall_connection_type_west": "none",
-        "wall_block_type": "stone_brick"
+        "wall_block_type": "cobblestone"
     },
     "minecraft:anvil": {
         "direction": "2",
-        "damage": "very_damaged"
+        "damage": "undamaged"
     },
     "minecraft:melon_stem": {
-        "growth": "0",
-        "facing_direction": "0"
+        "facing_direction": "0",
+        "growth": "0"
     },
     "minecraft:pumpkin_stem": {
-        "growth": "0",
-        "facing_direction": "0"
+        "facing_direction": "0",
+        "growth": "0"
     },
-    "minecraft:azalea": [],
     "minecraft:azalea_leaves": {
         "persistent_bit": "false",
         "update_bit": "false"
@@ -140,11 +141,9 @@
         "facing_direction": "2",
         "open_bit": "false"
     },
-    "minecraft:barrier": [],
     "minecraft:basalt": {
         "pillar_axis": "y"
     },
-    "minecraft:beacon": [],
     "minecraft:bedrock": {
         "infiniburn_bit": "false"
     },
@@ -166,11 +165,12 @@
     },
     "minecraft:big_dripleaf": {
         "direction": "2",
-        "big_dripleaf_head": "false",
-        "big_dripleaf_tilt": "none"
+        "big_dripleaf_tilt": "none",
+        "big_dripleaf_head": "true"
     },
     "minecraft:birch_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:birch_door": {
         "direction": "3",
@@ -186,11 +186,11 @@
     "minecraft:leaves": {
         "persistent_bit": "false",
         "update_bit": "false",
-        "old_leaf_type": "spruce"
+        "old_leaf_type": "oak"
     },
     "minecraft:log": {
         "pillar_axis": "y",
-        "old_log_type": "spruce"
+        "old_log_type": "oak"
     },
     "minecraft:birch_pressure_plate": {
         "redstone_signal": "0"
@@ -226,38 +226,41 @@
         "lit": "false"
     },
     "minecraft:carpet": {
-        "color": "yellow"
+        "color": "white"
     },
     "minecraft:concrete": {
-        "color": "yellow"
+        "color": "white"
     },
     "minecraft:concrete_powder": {
-        "color": "yellow"
+        "color": "white"
     },
     "minecraft:black_glazed_terracotta": {
         "facing_direction": "2"
     },
     "minecraft:shulker_box": {
-        "color": "yellow"
+        "color": "white"
     },
     "minecraft:stained_glass": {
-        "color": "yellow"
+        "color": "white"
     },
     "minecraft:stained_glass_pane": {
-        "color": "yellow"
+        "color": "white"
     },
     "minecraft:stained_hardened_clay": {
-        "color": "yellow"
+        "color": "white"
     },
     "minecraft:wall_banner": {
         "facing_direction": "2"
     },
     "minecraft:wool": {
-        "color": "yellow"
+        "color": "white"
     },
-    "minecraft:blackstone": [],
-    "minecraft:blackstone_slab": [],
-    "minecraft:blackstone_double_slab": [],
+    "minecraft:blackstone_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:blackstone_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:blackstone_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -285,12 +288,10 @@
     "minecraft:blue_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:blue_ice": [],
     "minecraft:bone_block": {
         "pillar_axis": "y",
         "deprecated": "0"
     },
-    "minecraft:bookshelf": [],
     "minecraft:coral": {
         "coral_color": "blue",
         "dead_bit": "false"
@@ -314,16 +315,17 @@
         "brewing_stand_slot_c_bit": "false"
     },
     "minecraft:stone_block_slab": {
-        "stone_slab_type": "stone_brick"
+        "stone_slab_type": "smooth_stone",
+        "top_slot_bit": "false"
     },
     "minecraft:double_stone_block_slab": {
-        "stone_slab_type": "stone_brick"
+        "stone_slab_type": "smooth_stone",
+        "top_slot_bit": "false"
     },
     "minecraft:brick_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:brick_block": [],
     "minecraft:brown_candle": {
         "candles": "0",
         "lit": "false"
@@ -334,24 +336,23 @@
     "minecraft:brown_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:brown_mushroom": [],
-    "minecraft:brown_mushroom_block": [],
+    "minecraft:brown_mushroom_block": {
+        "huge_mushroom_bits": "14"
+    },
     "minecraft:bubble_column": {
         "drag_down": "true"
     },
     "minecraft:coral_fan_hang2": {
         "coral_direction": "2",
-        "coral_hang_type_bit": "true",
+        "coral_hang_type_bit": "false",
         "dead_bit": "false"
     },
-    "minecraft:budding_amethyst": [],
     "minecraft:cactus": {
         "age": "0"
     },
     "minecraft:cake": {
         "bite_counter": "0"
     },
-    "minecraft:calcite": [],
     "minecraft:campfire": {
         "direction": "2",
         "extinguished": "false"
@@ -366,12 +367,11 @@
     "minecraft:carrots": {
         "growth": "0"
     },
-    "minecraft:cartography_table": [],
     "minecraft:carved_pumpkin": {
         "direction": "2"
     },
     "minecraft:cauldron": {
-        "fill_level": "3",
+        "fill_level": "0",
         "cauldron_liquid": "water"
     },
     "minecraft:cave_vines": {
@@ -393,18 +393,15 @@
     "minecraft:chest": {
         "facing_direction": "2"
     },
-    "minecraft:chiseled_deepslate": [],
-    "minecraft:chiseled_nether_bricks": [],
-    "minecraft:chiseled_polished_blackstone": [],
     "minecraft:quartz_block": {
-        "chisel_type": "smooth",
+        "chisel_type": "default",
         "pillar_axis": "y"
     },
     "minecraft:red_sandstone": {
-        "sand_stone_type": "smooth"
+        "sand_stone_type": "default"
     },
     "minecraft:sandstone": {
-        "sand_stone_type": "smooth"
+        "sand_stone_type": "default"
     },
     "minecraft:stonebrick": {
         "stone_brick_type": "default"
@@ -412,16 +409,15 @@
     "minecraft:chorus_flower": {
         "age": "0"
     },
-    "minecraft:chorus_plant": [],
-    "minecraft:clay": [],
-    "minecraft:coal_block": [],
-    "minecraft:coal_ore": [],
     "minecraft:dirt": {
         "dirt_type": "normal"
     },
-    "minecraft:cobbled_deepslate": [],
-    "minecraft:cobbled_deepslate_slab": [],
-    "minecraft:cobbled_deepslate_double_slab": [],
+    "minecraft:cobbled_deepslate_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:cobbled_deepslate_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:cobbled_deepslate_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -433,12 +429,10 @@
         "wall_post_bit": "false",
         "wall_connection_type_west": "none"
     },
-    "minecraft:cobblestone": [],
     "minecraft:stone_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:web": [],
     "minecraft:cocoa": {
         "age": "0",
         "direction": "2"
@@ -460,19 +454,12 @@
     "minecraft:composter": {
         "composter_fill_level": "0"
     },
-    "minecraft:conduit": [],
-    "minecraft:copper_block": [],
-    "minecraft:copper_ore": [],
-    "minecraft:cracked_deepslate_bricks": [],
-    "minecraft:cracked_deepslate_tiles": [],
-    "minecraft:cracked_nether_bricks": [],
-    "minecraft:cracked_polished_blackstone_bricks": [],
-    "minecraft:crafting_table": [],
     "minecraft:skull": {
-        "facing_direction": "2"
+        "facing_direction": "1"
     },
     "minecraft:crimson_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:crimson_door": {
         "direction": "3",
@@ -480,27 +467,26 @@
         "door_hinge_bit": "false",
         "open_bit": "false"
     },
-    "minecraft:crimson_fence": [],
     "minecraft:crimson_fence_gate": {
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
     },
-    "minecraft:crimson_fungus": [],
     "minecraft:crimson_hyphae": {
         "pillar_axis": "y"
     },
-    "minecraft:crimson_nylium": [],
-    "minecraft:crimson_planks": [],
     "minecraft:crimson_pressure_plate": {
         "redstone_signal": "0"
     },
-    "minecraft:crimson_roots": [],
     "minecraft:crimson_standing_sign": {
         "ground_sign_direction": "0"
     },
-    "minecraft:crimson_slab": [],
-    "minecraft:crimson_double_slab": [],
+    "minecraft:crimson_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:crimson_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:crimson_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -516,19 +502,23 @@
     "minecraft:crimson_wall_sign": {
         "facing_direction": "2"
     },
-    "minecraft:crying_obsidian": [],
-    "minecraft:cut_copper": [],
-    "minecraft:cut_copper_slab": [],
-    "minecraft:double_cut_copper_slab": [],
+    "minecraft:cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
     "minecraft:stone_block_slab4": {
-        "stone_slab_type_4": "stone"
+        "stone_slab_type_4": "mossy_stone_brick",
+        "top_slot_bit": "false"
     },
     "minecraft:double_stone_block_slab4": {
-        "stone_slab_type_4": "stone"
+        "stone_slab_type_4": "mossy_stone_brick",
+        "top_slot_bit": "false"
     },
     "minecraft:cyan_candle": {
         "candles": "0",
@@ -540,9 +530,9 @@
     "minecraft:cyan_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:yellow_flower": [],
     "minecraft:dark_oak_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:dark_oak_door": {
         "direction": "3",
@@ -574,13 +564,15 @@
         "facing_direction": "2"
     },
     "minecraft:prismarine": {
-        "prismarine_block_type": "bricks"
+        "prismarine_block_type": "default"
     },
     "minecraft:stone_block_slab2": {
-        "stone_slab_type_2": "smooth_sandstone"
+        "stone_slab_type_2": "red_sandstone",
+        "top_slot_bit": "false"
     },
     "minecraft:double_stone_block_slab2": {
-        "stone_slab_type_2": "smooth_sandstone"
+        "stone_slab_type_2": "red_sandstone",
+        "top_slot_bit": "false"
     },
     "minecraft:dark_prismarine_stairs": {
         "weirdo_direction": "3",
@@ -596,7 +588,6 @@
         "coral_color": "blue",
         "coral_fan_direction": "0"
     },
-    "minecraft:deadbush": [],
     "minecraft:coral_fan_hang3": {
         "coral_direction": "2",
         "coral_hang_type_bit": "false",
@@ -605,8 +596,12 @@
     "minecraft:deepslate": {
         "pillar_axis": "y"
     },
-    "minecraft:deepslate_brick_slab": [],
-    "minecraft:deepslate_brick_double_slab": [],
+    "minecraft:deepslate_brick_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:deepslate_brick_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:deepslate_brick_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -618,18 +613,12 @@
         "wall_post_bit": "false",
         "wall_connection_type_west": "none"
     },
-    "minecraft:deepslate_bricks": [],
-    "minecraft:deepslate_coal_ore": [],
-    "minecraft:deepslate_copper_ore": [],
-    "minecraft:deepslate_diamond_ore": [],
-    "minecraft:deepslate_emerald_ore": [],
-    "minecraft:deepslate_gold_ore": [],
-    "minecraft:deepslate_iron_ore": [],
-    "minecraft:deepslate_lapis_ore": [],
-    "minecraft:deepslate_redstone_ore": [],
-    "minecraft:lit_deepslate_redstone_ore": [],
-    "minecraft:deepslate_tile_slab": [],
-    "minecraft:deepslate_tile_double_slab": [],
+    "minecraft:deepslate_tile_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:deepslate_tile_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:deepslate_tile_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -641,34 +630,22 @@
         "wall_post_bit": "false",
         "wall_connection_type_west": "none"
     },
-    "minecraft:deepslate_tiles": [],
     "minecraft:detector_rail": {
         "rail_data_bit": "false",
         "rail_direction": "0"
     },
-    "minecraft:diamond_block": [],
-    "minecraft:diamond_ore": [],
     "minecraft:diorite_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:grass_path": [],
     "minecraft:dispenser": {
         "facing_direction": "2",
         "triggered_bit": "false"
     },
-    "minecraft:dragon_egg": [],
-    "minecraft:dried_kelp_block": [],
-    "minecraft:dripstone_block": [],
     "minecraft:dropper": {
         "facing_direction": "2",
         "triggered_bit": "false"
     },
-    "minecraft:emerald_block": [],
-    "minecraft:emerald_ore": [],
-    "minecraft:enchanting_table": [],
-    "minecraft:end_gateway": [],
-    "minecraft:end_portal": [],
     "minecraft:end_portal_frame": {
         "end_portal_eye_bit": "false",
         "direction": "2"
@@ -676,19 +653,19 @@
     "minecraft:end_rod": {
         "facing_direction": "3"
     },
-    "minecraft:end_stone": [],
     "minecraft:end_brick_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:end_bricks": [],
     "minecraft:ender_chest": {
         "facing_direction": "2"
     },
-    "minecraft:exposed_copper": [],
-    "minecraft:exposed_cut_copper": [],
-    "minecraft:exposed_cut_copper_slab": [],
-    "minecraft:exposed_double_cut_copper_slab": [],
+    "minecraft:exposed_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:exposed_double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:exposed_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -702,16 +679,13 @@
     "minecraft:fire": {
         "age": "0"
     },
-    "minecraft:fletching_table": [],
     "minecraft:flower_pot": {
         "update_bit": "false"
     },
-    "minecraft:flowering_azalea": [],
     "minecraft:azalea_leaves_flowered": {
         "persistent_bit": "false",
         "update_bit": "false"
     },
-    "minecraft:frog_spawn": [],
     "minecraft:frosted_ice": {
         "age": "0"
     },
@@ -721,19 +695,13 @@
     "minecraft:lit_furnace": {
         "facing_direction": "2"
     },
-    "minecraft:gilded_blackstone": [],
-    "minecraft:glass": [],
-    "minecraft:glass_pane": [],
-    "minecraft:glow_lichen": [],
-    "minecraft:glowstone": [],
-    "minecraft:gold_block": [],
-    "minecraft:gold_ore": [],
+    "minecraft:glow_lichen": {
+        "multi_face_direction_bits": "1"
+    },
     "minecraft:granite_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:grass": [],
-    "minecraft:gravel": [],
     "minecraft:gray_candle": {
         "candles": "0",
         "lit": "false"
@@ -758,7 +726,6 @@
         "attachment": "side",
         "direction": "2"
     },
-    "minecraft:hanging_roots": [],
     "minecraft:hay_block": {
         "pillar_axis": "y",
         "deprecated": "0"
@@ -766,28 +733,22 @@
     "minecraft:heavy_weighted_pressure_plate": {
         "redstone_signal": "0"
     },
-    "minecraft:honey_block": [],
-    "minecraft:honeycomb_block": [],
     "minecraft:hopper": {
         "toggle_bit": "true",
         "facing_direction": "2"
     },
-    "minecraft:ice": [],
     "minecraft:monster_egg": {
-        "monster_egg_stone_type": "stone_brick"
+        "monster_egg_stone_type": "stone"
     },
     "minecraft:infested_deepslate": {
         "pillar_axis": "y"
     },
-    "minecraft:iron_bars": [],
-    "minecraft:iron_block": [],
     "minecraft:iron_door": {
         "direction": "3",
         "upper_block_bit": "false",
         "door_hinge_bit": "false",
         "open_bit": "false"
     },
-    "minecraft:iron_ore": [],
     "minecraft:iron_trapdoor": {
         "direction": "3",
         "upside_down_bit": "false",
@@ -796,9 +757,9 @@
     "minecraft:lit_pumpkin": {
         "direction": "2"
     },
-    "minecraft:jukebox": [],
     "minecraft:jungle_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:jungle_door": {
         "direction": "3",
@@ -838,14 +799,12 @@
     "minecraft:lantern": {
         "hanging": "false"
     },
-    "minecraft:lapis_block": [],
-    "minecraft:lapis_ore": [],
     "minecraft:large_amethyst_bud": {
         "facing_direction": "2"
     },
     "minecraft:double_plant": {
         "upper_block_bit": "false",
-        "double_plant_type": "grass"
+        "double_plant_type": "sunflower"
     },
     "minecraft:lava": {
         "liquid_depth": "0"
@@ -857,7 +816,10 @@
         "direction": "2",
         "powered_bit": "false"
     },
-    "minecraft:lever": [],
+    "minecraft:lever": {
+        "lever_direction": "up_north_south",
+        "open_bit": "false"
+    },
     "minecraft:light_block": {
         "block_light_level": "15"
     },
@@ -887,7 +849,6 @@
     "minecraft:lightning_rod": {
         "facing_direction": "2"
     },
-    "minecraft:waterlily": [],
     "minecraft:lime_candle": {
         "candles": "0",
         "lit": "false"
@@ -898,7 +859,6 @@
     "minecraft:lime_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:lodestone": [],
     "minecraft:loom": {
         "direction": "2"
     },
@@ -912,9 +872,9 @@
     "minecraft:magenta_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:magma": [],
     "minecraft:mangrove_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:mangrove_door": {
         "direction": "3",
@@ -922,7 +882,6 @@
         "door_hinge_bit": "false",
         "open_bit": "false"
     },
-    "minecraft:mangrove_fence": [],
     "minecraft:mangrove_fence_gate": {
         "direction": "2",
         "in_wall_bit": "false",
@@ -935,7 +894,6 @@
     "minecraft:mangrove_log": {
         "pillar_axis": "y"
     },
-    "minecraft:mangrove_planks": [],
     "minecraft:mangrove_pressure_plate": {
         "redstone_signal": "0"
     },
@@ -943,12 +901,15 @@
         "hanging": "false",
         "propagule_stage": "0"
     },
-    "minecraft:mangrove_roots": [],
     "minecraft:mangrove_standing_sign": {
         "ground_sign_direction": "0"
     },
-    "minecraft:mangrove_slab": [],
-    "minecraft:mangrove_double_slab": [],
+    "minecraft:mangrove_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:mangrove_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:mangrove_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -968,10 +929,6 @@
     "minecraft:medium_amethyst_bud": {
         "facing_direction": "2"
     },
-    "minecraft:melon_block": [],
-    "minecraft:moss_block": [],
-    "minecraft:moss_carpet": [],
-    "minecraft:mossy_cobblestone": [],
     "minecraft:mossy_cobblestone_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -980,10 +937,12 @@
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:moving_block": [],
-    "minecraft:mud": [],
-    "minecraft:mud_brick_slab": [],
-    "minecraft:mud_brick_double_slab": [],
+    "minecraft:mud_brick_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:mud_brick_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:mud_brick_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -995,32 +954,22 @@
         "wall_post_bit": "false",
         "wall_connection_type_west": "none"
     },
-    "minecraft:mud_bricks": [],
     "minecraft:muddy_mangrove_roots": {
         "pillar_axis": "y"
     },
-    "minecraft:mycelium": [],
-    "minecraft:nether_brick_fence": [],
     "minecraft:nether_brick_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:nether_brick": [],
-    "minecraft:nether_gold_ore": [],
     "minecraft:portal": {
         "portal_axis": "x"
     },
-    "minecraft:quartz_ore": [],
-    "minecraft:nether_sprouts": [],
     "minecraft:nether_wart": {
         "age": "0"
     },
-    "minecraft:nether_wart_block": [],
-    "minecraft:netherite_block": [],
-    "minecraft:netherrack": [],
-    "minecraft:noteblock": [],
     "minecraft:wooden_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:fence_gate": {
         "direction": "2",
@@ -1040,7 +989,6 @@
         "facing_direction": "2",
         "powered_bit": "false"
     },
-    "minecraft:obsidian": [],
     "minecraft:ochre_froglight": {
         "pillar_axis": "y"
     },
@@ -1054,16 +1002,16 @@
     "minecraft:orange_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:oxidized_copper": [],
-    "minecraft:oxidized_cut_copper": [],
-    "minecraft:oxidized_cut_copper_slab": [],
-    "minecraft:oxidized_double_cut_copper_slab": [],
+    "minecraft:oxidized_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:oxidized_double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:oxidized_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:packed_ice": [],
-    "minecraft:packed_mud": [],
     "minecraft:pearlescent_froglight": {
         "pillar_axis": "y"
     },
@@ -1086,7 +1034,6 @@
     "minecraft:sticky_piston_arm_collision": {
         "facing_direction": "3"
     },
-    "minecraft:podzol": [],
     "minecraft:pointed_dripstone": {
         "dripstone_thickness": "tip",
         "hanging": "false"
@@ -1098,9 +1045,12 @@
     "minecraft:polished_basalt": {
         "pillar_axis": "y"
     },
-    "minecraft:polished_blackstone": [],
-    "minecraft:polished_blackstone_brick_slab": [],
-    "minecraft:polished_blackstone_brick_double_slab": [],
+    "minecraft:polished_blackstone_brick_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:polished_blackstone_brick_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:polished_blackstone_brick_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1112,15 +1062,19 @@
         "wall_post_bit": "false",
         "wall_connection_type_west": "none"
     },
-    "minecraft:polished_blackstone_bricks": [],
     "minecraft:polished_blackstone_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:polished_blackstone_pressure_plate": {
         "redstone_signal": "0"
     },
-    "minecraft:polished_blackstone_slab": [],
-    "minecraft:polished_blackstone_double_slab": [],
+    "minecraft:polished_blackstone_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:polished_blackstone_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:polished_blackstone_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1132,9 +1086,12 @@
         "wall_post_bit": "false",
         "wall_connection_type_west": "none"
     },
-    "minecraft:polished_deepslate": [],
-    "minecraft:polished_deepslate_slab": [],
-    "minecraft:polished_deepslate_double_slab": [],
+    "minecraft:polished_deepslate_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:polished_deepslate_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:polished_deepslate_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1157,7 +1114,6 @@
     "minecraft:potatoes": {
         "growth": "0"
     },
-    "minecraft:powder_snow": [],
     "minecraft:golden_rail": {
         "rail_data_bit": "false",
         "rail_direction": "0"
@@ -1184,14 +1140,13 @@
         "facing_direction": "2"
     },
     "minecraft:purpur_block": {
-        "pillar_axis": "y",
-        "chisel_type": "lines"
+        "chisel_type": "default",
+        "pillar_axis": "y"
     },
     "minecraft:purpur_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:quartz_bricks": [],
     "minecraft:quartz_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1199,9 +1154,6 @@
     "minecraft:rail": {
         "rail_direction": "0"
     },
-    "minecraft:raw_copper_block": [],
-    "minecraft:raw_gold_block": [],
-    "minecraft:raw_iron_block": [],
     "minecraft:red_candle": {
         "candles": "0",
         "lit": "false"
@@ -1212,13 +1164,13 @@
     "minecraft:red_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:red_mushroom": [],
-    "minecraft:red_mushroom_block": [],
+    "minecraft:red_mushroom_block": {
+        "huge_mushroom_bits": "14"
+    },
     "minecraft:red_nether_brick_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:red_nether_brick": [],
     "minecraft:sand": {
         "sand_type": "normal"
     },
@@ -1226,21 +1178,15 @@
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:redstone_block": [],
-    "minecraft:redstone_lamp": [],
-    "minecraft:lit_redstone_lamp": [],
-    "minecraft:redstone_ore": [],
-    "minecraft:lit_redstone_ore": [],
     "minecraft:unlit_redstone_torch": {
-        "torch_facing_direction": "south"
+        "torch_facing_direction": "top"
     },
     "minecraft:redstone_torch": {
-        "torch_facing_direction": "south"
+        "torch_facing_direction": "top"
     },
     "minecraft:redstone_wire": {
         "redstone_signal": "0"
     },
-    "minecraft:reinforced_deepslate": [],
     "minecraft:unpowered_repeater": {
         "repeater_delay": "0",
         "direction": "2"
@@ -1256,7 +1202,6 @@
     "minecraft:respawn_anchor": {
         "respawn_anchor_charge": "0"
     },
-    "minecraft:dirt_with_roots": [],
     "minecraft:sandstone_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1265,7 +1210,6 @@
         "stability_check": "true",
         "stability": "7"
     },
-    "minecraft:sculk": [],
     "minecraft:sculk_catalyst": {
         "bloom": "false"
     },
@@ -1276,18 +1220,16 @@
         "can_summon": "false",
         "active": "false"
     },
-    "minecraft:sculk_vein": [],
-    "minecraft:sea_lantern": [],
+    "minecraft:sculk_vein": {
+        "multi_face_direction_bits": "1"
+    },
     "minecraft:sea_pickle": {
         "cluster_count": "0",
         "dead_bit": "false"
     },
     "minecraft:seagrass": {
-        "sea_grass_type": "double_bot"
+        "sea_grass_type": "default"
     },
-    "minecraft:shroomlight": [],
-    "minecraft:undyed_shulker_box": [],
-    "minecraft:slime": [],
     "minecraft:small_amethyst_bud": {
         "facing_direction": "2"
     },
@@ -1295,14 +1237,12 @@
         "direction": "1",
         "upper_block_bit": "false"
     },
-    "minecraft:smithing_table": [],
     "minecraft:smoker": {
         "facing_direction": "2"
     },
     "minecraft:lit_smoker": {
         "facing_direction": "2"
     },
-    "minecraft:smooth_basalt": [],
     "minecraft:smooth_quartz_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1315,12 +1255,10 @@
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:smooth_stone": [],
     "minecraft:snow_layer": {
         "height": "0",
         "covered_bit": "false"
     },
-    "minecraft:snow": [],
     "minecraft:soul_campfire": {
         "direction": "2",
         "extinguished": "false"
@@ -1331,18 +1269,15 @@
     "minecraft:soul_lantern": {
         "hanging": "false"
     },
-    "minecraft:soul_sand": [],
-    "minecraft:soul_soil": [],
     "minecraft:soul_torch": {
-        "torch_facing_direction": "south"
+        "torch_facing_direction": "top"
     },
-    "minecraft:mob_spawner": [],
     "minecraft:sponge": {
-        "sponge_type": "wet"
+        "sponge_type": "dry"
     },
-    "minecraft:spore_blossom": [],
     "minecraft:spruce_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:spruce_door": {
         "direction": "3",
@@ -1381,7 +1316,8 @@
         "upside_down_bit": "false"
     },
     "minecraft:stone_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:stone_pressure_plate": {
         "redstone_signal": "0"
@@ -1441,15 +1377,12 @@
     "minecraft:sweet_berry_bush": {
         "growth": "0"
     },
-    "minecraft:target": [],
-    "minecraft:hardened_clay": [],
-    "minecraft:tinted_glass": [],
     "minecraft:tnt": {
         "explode_bit": "false",
         "allow_underwater_bit": "false"
     },
     "minecraft:torch": {
-        "torch_facing_direction": "south"
+        "torch_facing_direction": "top"
     },
     "minecraft:trapped_chest": {
         "facing_direction": "2"
@@ -1465,7 +1398,6 @@
         "direction": "2",
         "powered_bit": "false"
     },
-    "minecraft:tuff": [],
     "minecraft:turtle_egg": {
         "turtle_egg_count": "one_egg",
         "cracked_state": "no_cracks"
@@ -1476,9 +1408,12 @@
     "minecraft:verdant_froglight": {
         "pillar_axis": "y"
     },
-    "minecraft:vine": [],
+    "minecraft:vine": {
+        "vine_direction_bits": "1"
+    },
     "minecraft:warped_button": {
-        "button_pressed_bit": "false"
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
     },
     "minecraft:warped_door": {
         "direction": "3",
@@ -1486,27 +1421,26 @@
         "door_hinge_bit": "false",
         "open_bit": "false"
     },
-    "minecraft:warped_fence": [],
     "minecraft:warped_fence_gate": {
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
     },
-    "minecraft:warped_fungus": [],
     "minecraft:warped_hyphae": {
         "pillar_axis": "y"
     },
-    "minecraft:warped_nylium": [],
-    "minecraft:warped_planks": [],
     "minecraft:warped_pressure_plate": {
         "redstone_signal": "0"
     },
-    "minecraft:warped_roots": [],
     "minecraft:warped_standing_sign": {
         "ground_sign_direction": "0"
     },
-    "minecraft:warped_slab": [],
-    "minecraft:warped_double_slab": [],
+    "minecraft:warped_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:warped_double_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:warped_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1522,49 +1456,58 @@
     "minecraft:warped_wall_sign": {
         "facing_direction": "2"
     },
-    "minecraft:warped_wart_block": [],
     "minecraft:water": {
         "liquid_depth": "0"
     },
     "minecraft:flowing_water": {
         "liquid_depth": "0"
     },
-    "minecraft:waxed_copper": [],
-    "minecraft:waxed_cut_copper": [],
-    "minecraft:waxed_cut_copper_slab": [],
-    "minecraft:waxed_double_cut_copper_slab": [],
+    "minecraft:waxed_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:waxed_double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:waxed_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:waxed_exposed_copper": [],
-    "minecraft:waxed_exposed_cut_copper": [],
-    "minecraft:waxed_exposed_cut_copper_slab": [],
-    "minecraft:waxed_exposed_double_cut_copper_slab": [],
+    "minecraft:waxed_exposed_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:waxed_exposed_double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:waxed_exposed_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:waxed_oxidized_copper": [],
-    "minecraft:waxed_oxidized_cut_copper": [],
-    "minecraft:waxed_oxidized_cut_copper_slab": [],
-    "minecraft:waxed_oxidized_double_cut_copper_slab": [],
+    "minecraft:waxed_oxidized_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:waxed_oxidized_double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:waxed_oxidized_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:waxed_weathered_copper": [],
-    "minecraft:waxed_weathered_cut_copper": [],
-    "minecraft:waxed_weathered_cut_copper_slab": [],
-    "minecraft:waxed_weathered_double_cut_copper_slab": [],
+    "minecraft:waxed_weathered_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:waxed_weathered_double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:waxed_weathered_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:weathered_copper": [],
-    "minecraft:weathered_cut_copper": [],
-    "minecraft:weathered_cut_copper_slab": [],
-    "minecraft:weathered_double_cut_copper_slab": [],
+    "minecraft:weathered_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:weathered_double_cut_copper_slab": {
+        "top_slot_bit": "false"
+    },
     "minecraft:weathered_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
@@ -1585,7 +1528,6 @@
     "minecraft:white_glazed_terracotta": {
         "facing_direction": "2"
     },
-    "minecraft:wither_rose": [],
     "minecraft:yellow_candle": {
         "candles": "0",
         "lit": "false"
