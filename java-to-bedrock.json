@@ -14,14 +14,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -1491,14 +1491,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -3410,7 +3410,7 @@
                     }
                 }
             },
-            "default": {
+            "def": {
                 "additions": {
                     "huge_mushroom_bits": "14"
                 }
@@ -4822,14 +4822,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -5827,14 +5827,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -10199,14 +10199,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -10928,7 +10928,7 @@
             "0": {
                 "name": "minecraft:lava"
             },
-            "default": {
+            "def": {
                 "name": "minecraft:flowing_lava"
             }
         },
@@ -12499,14 +12499,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -13772,7 +13772,7 @@
                     }
                 }
             },
-            "default": {
+            "def": {
                 "additions": {
                     "huge_mushroom_bits": "15"
                 }
@@ -14175,14 +14175,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -16168,14 +16168,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -18365,7 +18365,7 @@
                     }
                 }
             },
-            "default": {
+            "def": {
                 "additions": {
                     "huge_mushroom_bits": "14"
                 }
@@ -20918,14 +20918,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -21722,14 +21722,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -22975,14 +22975,14 @@
         ],
         "mapping": {
             "ceiling": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "0"
                     }
                 }
             },
             "floor": {
-                "default": {
+                "def": {
                     "additions": {
                         "facing_direction": "1"
                     }
@@ -23467,7 +23467,7 @@
             "0": {
                 "name": "minecraft:water"
             },
-            "default": {
+            "def": {
                 "name": "minecraft:flowing_water"
             }
         },

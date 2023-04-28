@@ -1096,7 +1096,7 @@
             "facing_direction"
         ],
         "mapping": {
-            "": {
+            "def": {
                 "name": "minecraft:attached_melon_stem",
                 "removals": {
                     "growth": "7"
@@ -1132,7 +1132,7 @@
             "facing_direction"
         ],
         "mapping": {
-            "": {
+            "def": {
                 "name": "minecraft:attached_pumpkin_stem",
                 "removals": {
                     "growth": "7"
@@ -9908,7 +9908,7 @@
             "top": {
                 "name": "minecraft:redstone_torch"
             },
-            "": {
+            "def": {
                 "name": "minecraft:redstone_wall_torch",
                 "renames": {
                     "torch_facing_direction": "facing"
@@ -9941,7 +9941,7 @@
             "top": {
                 "name": "minecraft:redstone_torch"
             },
-            "": {
+            "def": {
                 "name": "minecraft:redstone_wall_torch",
                 "renames": {
                     "torch_facing_direction": "facing"
@@ -10711,7 +10711,7 @@
             "default": {
                 "name": "minecraft:seagrass"
             },
-            "": {
+            "def": {
                 "name": "minecraft:tall_seagrass",
                 "renames": {
                     "sea_grass_type": "half"
@@ -11008,7 +11008,7 @@
             "top": {
                 "name": "minecraft:soul_torch"
             },
-            "": {
+            "def": {
                 "name": "minecraft:soul_wall_torch",
                 "renames": {
                     "torch_facing_direction": "facing"
@@ -11621,7 +11621,7 @@
             "top": {
                 "name": "minecraft:torch"
             },
-            "": {
+            "def": {
                 "name": "minecraft:wall_torch",
                 "renames": {
                     "torch_facing_direction": "facing"

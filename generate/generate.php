@@ -404,8 +404,8 @@ foreach ($groupsJtb as $group) {
 		$obj["removals"][] = "face";
 		$obj["removals"][] = "facing";
 		$obj["mapping"] = [
-			"ceiling" => ["default" => ["additions" => ["facing_direction" => "0"]]],
-			"floor" => ["default" => ["additions" => ["facing_direction" => "1"]]],
+			"ceiling" => ["def" => ["additions" => ["facing_direction" => "0"]]],
+			"floor" => ["def" => ["additions" => ["facing_direction" => "1"]]],
 			"wall" => [
 				"east" => ["additions" => ["facing_direction" => "5"]],
 				"north" => ["additions" => ["facing_direction" => "2"]],
@@ -424,7 +424,7 @@ foreach ($groupsJtb as $group) {
 		$flowingName = "minecraft:flowing_" . ($group["name"] === "minecraft:water" ? "water" : "lava");
 		$obj["mapping"] = [
 			"0" => ["name" => $group["name"]],
-			"default" => ["name" => $flowingName],
+			"def" => ["name" => $flowingName],
 		];
 		unset($values["level"], $bedrockValues["liquid_depth"]);
 	}
@@ -627,7 +627,7 @@ foreach ($groupsJtb as $group) {
 					]
 				]
 			],
-			"default" => ["additions" => ["huge_mushroom_bits" => "14"]] //all sides
+			"def" => ["additions" => ["huge_mushroom_bits" => "14"]] //all sides
 		];
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
 	}
@@ -667,7 +667,7 @@ foreach ($groupsJtb as $group) {
 					]
 				],
 			],
-			"default" => ["additions" => ["huge_mushroom_bits" => "15"]] //all stem sides
+			"def" => ["additions" => ["huge_mushroom_bits" => "15"]] //all stem sides
 		];
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["huge_mushroom_bits"]);
 	}
@@ -1144,7 +1144,7 @@ foreach ($jtb as $name => $block) {
 		$find = static function ($data, $keys, $add) use (&$all, &$find, $block) {
 			if ($keys === []) {
 				if ($data === null) {
-					$data = $block["mapping"]["default"];
+					$data = $block["mapping"]["def"];
 				}
 				$all[] = $data;
 				return;
@@ -1156,7 +1156,7 @@ foreach ($jtb as $name => $block) {
 					$a[$k] = $v;
 				}
 				$a[$key] = $value;
-				$find($data === null ? null : $data[$value] ?? $data["default"] ?? null, $keys, $a);
+				$find($data === null ? null : $data[$value] ?? $data["def"] ?? null, $keys, $a);
 			}
 		};
 		$find($block["mapping"], $block["identifier"], []);
@@ -1278,12 +1278,12 @@ function processState(mixed $data, string $javaName, array $states): string
 				throw new RuntimeException("Invalid identifier");
 			}
 			$key = array_shift($keys);
-			if (!isset($data[$key]) && !isset($data["default"])) {
+			if (!isset($data[$key]) && !isset($data["def"])) {
 				return null;
 			}
-			return $r($data[$key] ?? $data["default"], $keys);
+			return $r($data[$key] ?? $data["def"], $keys);
 		};
-		$d = $r($data["mapping"], $keys) ?? $data["mapping"]["default"];
+		$d = $r($data["mapping"], $keys) ?? $data["mapping"]["def"];
 	} else {
 		$d = [];
 	}
@@ -1356,7 +1356,7 @@ function revertJavaToBedrock($java, $bedrockData, &$btj)
 		$find = function ($data, $keys, $add) use (&$all, &$find, $bedrockData) {
 			if ($keys === []) {
 				if ($data === null) {
-					$data = $bedrockData["mapping"]["default"];
+					$data = $bedrockData["mapping"]["def"];
 				}
 				$data["int_add"] = $add;
 				$all[] = $data;
@@ -1369,7 +1369,7 @@ function revertJavaToBedrock($java, $bedrockData, &$btj)
 					$a[$k] = $v;
 				}
 				$a[$key] = $value;
-				$find($data === null ? null : $data[$value] ?? $data["default"] ?? null, $keys, $a);
+				$find($data === null ? null : $data[$value] ?? $data["def"] ?? null, $keys, $a);
 			}
 		};
 		$find($bedrockData["mapping"], $bedrockData["identifier"], []);
@@ -1425,7 +1425,7 @@ function merge(mixed $a, mixed $b, string $bedrock): mixed
 
 	$write = function (&$current, $path, $value) use ($bedrock, &$write, $customData) {
 		if (count($path) === 1) {
-			if (isset($current[$path[0]])) {
+			if (isset($current[$path[0] ?? "def"])) {
 				if (!isset($customData["overrides"][$bedrock]) || !in_array($path[0], $customData["overrides"][$bedrock])) {
 					echo "Implicit override of $path[0] in $bedrock\n";
 					return;
@@ -1435,7 +1435,7 @@ function merge(mixed $a, mixed $b, string $bedrock): mixed
 					return;
 				}
 			}
-			$current[$path[0]] = $value;
+			$current[$path[0] ?? "def"] = $value;
 			return;
 		}
 		if (!isset($current[$path[0]])) {

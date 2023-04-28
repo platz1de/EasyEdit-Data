@@ -39,4 +39,4 @@ If no 1:1 mapping is possible, the java state will be split as follows:
 | mapping    | object              | mapping of the java states to the bedrock state           |
 
 The mapping always has the same depth as the count of identifiers, each identifiers value is used as key for the next mapping. The resulting value follows the same rules as the normal mapping (excluding values and defaults).
-Multiple mappings with the same values may be bundled with the key "default", if no other mapping matches, the default mapping will be used.
+Multiple mappings with the same values may be bundled with the key "def", if no other mapping matches, the default mapping will be used.
