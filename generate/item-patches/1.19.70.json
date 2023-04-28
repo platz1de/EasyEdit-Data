@@ -1,0 +1,66 @@
+{
+  "minecraft:white_wool": {
+	"name": "minecraft:white_wool",
+	"damage": 0
+  },
+  "minecraft:orange_wool": {
+	"name": "minecraft:orange_wool",
+	"damage": 0
+  },
+  "minecraft:magenta_wool": {
+	"name": "minecraft:magenta_wool",
+	"damage": 0
+  },
+  "minecraft:light_blue_wool": {
+	"name": "minecraft:light_blue_wool",
+	"damage": 0
+  },
+  "minecraft:yellow_wool": {
+	"name": "minecraft:yellow_wool",
+	"damage": 0
+  },
+  "minecraft:lime_wool": {
+	"name": "minecraft:lime_wool",
+	"damage": 0
+  },
+  "minecraft:pink_wool": {
+	"name": "minecraft:pink_wool",
+	"damage": 0
+  },
+  "minecraft:gray_wool": {
+	"name": "minecraft:gray_wool",
+	"damage": 0
+  },
+  "minecraft:light_gray_wool": {
+	"name": "minecraft:light_gray_wool",
+	"damage": 0
+  },
+  "minecraft:cyan_wool": {
+	"name": "minecraft:cyan_wool",
+	"damage": 0
+  },
+  "minecraft:purple_wool": {
+	"name": "minecraft:purple_wool",
+	"damage": 0
+  },
+  "minecraft:blue_wool": {
+	"name": "minecraft:blue_wool",
+	"damage": 0
+  },
+  "minecraft:brown_wool": {
+	"name": "minecraft:brown_wool",
+	"damage": 0
+  },
+  "minecraft:green_wool": {
+	"name": "minecraft:green_wool",
+	"damage": 0
+  },
+  "minecraft:red_wool": {
+	"name": "minecraft:red_wool",
+	"damage": 0
+  },
+  "minecraft:black_wool": {
+	"name": "minecraft:black_wool",
+	"damage": 0
+  }
+}

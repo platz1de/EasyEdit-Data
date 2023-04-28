@@ -2475,66 +2475,7 @@
             "color"
         ]
     },
-    "minecraft:wool": {
-        "additions": [],
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_wool"
-            },
-            "blue": {
-                "name": "minecraft:blue_wool"
-            },
-            "brown": {
-                "name": "minecraft:brown_wool"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_wool"
-            },
-            "gray": {
-                "name": "minecraft:gray_wool"
-            },
-            "green": {
-                "name": "minecraft:green_wool"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_wool"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_wool"
-            },
-            "lime": {
-                "name": "minecraft:lime_wool"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_wool"
-            },
-            "orange": {
-                "name": "minecraft:orange_wool"
-            },
-            "pink": {
-                "name": "minecraft:pink_wool"
-            },
-            "purple": {
-                "name": "minecraft:purple_wool"
-            },
-            "red": {
-                "name": "minecraft:red_wool"
-            },
-            "white": {
-                "name": "minecraft:white_wool"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_wool"
-            }
-        }
-    },
+    "minecraft:black_wool": [],
     "minecraft:blackstone": [],
     "minecraft:blackstone_slab": {
         "name": "minecraft:blackstone_slab",
@@ -2735,6 +2676,7 @@
         }
     },
     "minecraft:blue_ice": [],
+    "minecraft:blue_wool": [],
     "minecraft:bone_block": {
         "name": "minecraft:bone_block",
         "removals": [
@@ -3344,6 +3286,7 @@
             "west": "false"
         }
     },
+    "minecraft:brown_wool": [],
     "minecraft:bubble_column": {
         "name": "minecraft:bubble_column",
         "renames": {
@@ -4818,6 +4761,7 @@
             "facing": "north"
         }
     },
+    "minecraft:cyan_wool": [],
     "minecraft:yellow_flower": {
         "name": "minecraft:dandelion"
     },
@@ -6772,6 +6716,7 @@
             "facing": "north"
         }
     },
+    "minecraft:gray_wool": [],
     "minecraft:green_candle": {
         "name": "minecraft:green_candle",
         "additions": {
@@ -6813,6 +6758,7 @@
             "facing": "north"
         }
     },
+    "minecraft:green_wool": [],
     "minecraft:grindstone": {
         "name": "minecraft:grindstone",
         "renames": {
@@ -7544,6 +7490,7 @@
             "facing": "north"
         }
     },
+    "minecraft:light_blue_wool": [],
     "minecraft:light_gray_candle": {
         "name": "minecraft:light_gray_candle",
         "additions": {
@@ -7585,6 +7532,7 @@
             "facing": "north"
         }
     },
+    "minecraft:light_gray_wool": [],
     "minecraft:light_weighted_pressure_plate": {
         "name": "minecraft:light_weighted_pressure_plate",
         "renames": {
@@ -7663,6 +7611,7 @@
             "facing": "north"
         }
     },
+    "minecraft:lime_wool": [],
     "minecraft:lodestone": [],
     "minecraft:loom": {
         "name": "minecraft:loom",
@@ -7722,6 +7671,7 @@
             "facing": "north"
         }
     },
+    "minecraft:magenta_wool": [],
     "minecraft:magma": {
         "name": "minecraft:magma_block"
     },
@@ -8603,6 +8553,7 @@
             "facing": "north"
         }
     },
+    "minecraft:orange_wool": [],
     "minecraft:oxidized_copper": [],
     "minecraft:oxidized_cut_copper": [],
     "minecraft:oxidized_cut_copper_slab": {
@@ -8729,6 +8680,7 @@
             "facing": "north"
         }
     },
+    "minecraft:pink_wool": [],
     "minecraft:piston": {
         "name": "minecraft:piston",
         "additions": {
@@ -9496,6 +9448,7 @@
             "facing": "north"
         }
     },
+    "minecraft:purple_wool": [],
     "minecraft:purpur_block": {
         "additions": [],
         "removals": [
@@ -9858,6 +9811,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:red_wool": [],
     "minecraft:redstone_block": [],
     "minecraft:redstone_lamp": {
         "name": "minecraft:redstone_lamp",
@@ -12644,6 +12598,7 @@
             "facing": "north"
         }
     },
+    "minecraft:white_wool": [],
     "minecraft:wither_rose": [],
     "minecraft:yellow_candle": {
         "name": "minecraft:yellow_candle",
@@ -12686,6 +12641,7 @@
             "facing": "north"
         }
     },
+    "minecraft:yellow_wool": [],
     "minecraft:invisible_bedrock": {
         "name": "minecraft:barrier"
     }

@@ -1810,6 +1810,20 @@ foreach ($itemData as $java => $item) {
 	$items[$java] = ["name" => $item["bedrock_identifier"], "damage" => $item["bedrock_data"]];
 }
 
+foreach (scandir("item-patches") as $patch) {
+	if ($patch === "." || $patch === "..") {
+		continue;
+	}
+	$patchData = json_decode(file_get_contents("item-patches/$patch"), true, 512, JSON_THROW_ON_ERROR);
+	foreach ($patchData as $java => $bedrock) {
+		$pre = $items;
+		$items[$java] = $bedrock;
+		if ($pre === $items) {
+			echo "\e[31mFailed to apply item patch $patch ($java -> " . json_encode($bedrock) . ")\e[39m" . PHP_EOL;
+		}
+	}
+}
+
 echo "Converted " . count($items) . " items" . PHP_EOL;
 file_put_contents("../item-conversion-map.json", json_encode($items, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 

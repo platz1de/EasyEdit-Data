@@ -2317,12 +2317,7 @@
             "color": "black"
         }
     },
-    "minecraft:black_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "black"
-        }
-    },
+    "minecraft:black_wool": [],
     "minecraft:blackstone": [],
     "minecraft:blackstone_slab": {
         "removals": [
@@ -2820,12 +2815,7 @@
             "color": "blue"
         }
     },
-    "minecraft:blue_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "blue"
-        }
-    },
+    "minecraft:blue_wool": [],
     "minecraft:bone_block": {
         "name": "minecraft:bone_block",
         "additions": {
@@ -3555,12 +3545,7 @@
             "color": "brown"
         }
     },
-    "minecraft:brown_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "brown"
-        }
-    },
+    "minecraft:brown_wool": [],
     "minecraft:bubble_column": {
         "name": "minecraft:bubble_column",
         "renames": {
@@ -5775,12 +5760,7 @@
             "color": "cyan"
         }
     },
-    "minecraft:cyan_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "cyan"
-        }
-    },
+    "minecraft:cyan_wool": [],
     "minecraft:damaged_anvil": {
         "name": "minecraft:anvil",
         "additions": {
@@ -9438,12 +9418,7 @@
             "color": "gray"
         }
     },
-    "minecraft:gray_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "gray"
-        }
-    },
+    "minecraft:gray_wool": [],
     "minecraft:green_banner": {
         "name": "minecraft:standing_banner",
         "renames": {
@@ -9713,12 +9688,7 @@
             "color": "green"
         }
     },
-    "minecraft:green_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "green"
-        }
-    },
+    "minecraft:green_wool": [],
     "minecraft:grindstone": {
         "name": "minecraft:grindstone",
         "renames": {
@@ -11519,12 +11489,7 @@
             "color": "light_blue"
         }
     },
-    "minecraft:light_blue_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "light_blue"
-        }
-    },
+    "minecraft:light_blue_wool": [],
     "minecraft:light_gray_banner": {
         "name": "minecraft:standing_banner",
         "renames": {
@@ -11794,12 +11759,7 @@
             "color": "light_gray"
         }
     },
-    "minecraft:light_gray_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "silver"
-        }
-    },
+    "minecraft:light_gray_wool": [],
     "minecraft:light_weighted_pressure_plate": {
         "name": "minecraft:light_weighted_pressure_plate",
         "renames": {
@@ -12174,12 +12134,7 @@
             "color": "lime"
         }
     },
-    "minecraft:lime_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "lime"
-        }
-    },
+    "minecraft:lime_wool": [],
     "minecraft:lodestone": [],
     "minecraft:loom": {
         "name": "minecraft:loom",
@@ -12475,12 +12430,7 @@
             "color": "magenta"
         }
     },
-    "minecraft:magenta_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "magenta"
-        }
-    },
+    "minecraft:magenta_wool": [],
     "minecraft:magma_block": {
         "name": "minecraft:magma"
     },
@@ -15059,12 +15009,7 @@
             "color": "orange"
         }
     },
-    "minecraft:orange_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "orange"
-        }
-    },
+    "minecraft:orange_wool": [],
     "minecraft:oxeye_daisy": {
         "name": "minecraft:red_flower",
         "additions": {
@@ -15615,12 +15560,7 @@
             "color": "pink"
         }
     },
-    "minecraft:pink_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "pink"
-        }
-    },
+    "minecraft:pink_wool": [],
     "minecraft:piston": {
         "name": "minecraft:piston",
         "removals": [
@@ -17791,12 +17731,7 @@
             "color": "purple"
         }
     },
-    "minecraft:purple_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "purple"
-        }
-    },
+    "minecraft:purple_wool": [],
     "minecraft:purpur_block": {
         "name": "minecraft:purpur_block",
         "additions": {
@@ -18897,12 +18832,7 @@
             "color": "red"
         }
     },
-    "minecraft:red_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "red"
-        }
-    },
+    "minecraft:red_wool": [],
     "minecraft:redstone_block": [],
     "minecraft:redstone_lamp": {
         "removals": [
@@ -24360,12 +24290,7 @@
             "color": "white"
         }
     },
-    "minecraft:white_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "white"
-        }
-    },
+    "minecraft:white_wool": [],
     "minecraft:wither_rose": [],
     "minecraft:wither_skeleton_skull": {
         "name": "minecraft:skull",
@@ -24718,12 +24643,7 @@
             "color": "yellow"
         }
     },
-    "minecraft:yellow_wool": {
-        "name": "minecraft:wool",
-        "additions": {
-            "color": "yellow"
-        }
-    },
+    "minecraft:yellow_wool": [],
     "minecraft:zombie_head": {
         "name": "minecraft:skull",
         "renames": {

@@ -716,68 +716,68 @@
         "damage": 0
     },
     "minecraft:white_wool": {
-        "name": "minecraft:wool",
+        "name": "minecraft:white_wool",
         "damage": 0
     },
     "minecraft:orange_wool": {
-        "name": "minecraft:wool",
-        "damage": 1
+        "name": "minecraft:orange_wool",
+        "damage": 0
     },
     "minecraft:magenta_wool": {
-        "name": "minecraft:wool",
-        "damage": 2
+        "name": "minecraft:magenta_wool",
+        "damage": 0
     },
     "minecraft:light_blue_wool": {
-        "name": "minecraft:wool",
-        "damage": 3
+        "name": "minecraft:light_blue_wool",
+        "damage": 0
     },
     "minecraft:yellow_wool": {
-        "name": "minecraft:wool",
-        "damage": 4
+        "name": "minecraft:yellow_wool",
+        "damage": 0
     },
     "minecraft:lime_wool": {
-        "name": "minecraft:wool",
-        "damage": 5
+        "name": "minecraft:lime_wool",
+        "damage": 0
     },
     "minecraft:pink_wool": {
-        "name": "minecraft:wool",
-        "damage": 6
+        "name": "minecraft:pink_wool",
+        "damage": 0
     },
     "minecraft:gray_wool": {
-        "name": "minecraft:wool",
-        "damage": 7
+        "name": "minecraft:gray_wool",
+        "damage": 0
     },
     "minecraft:light_gray_wool": {
-        "name": "minecraft:wool",
-        "damage": 8
+        "name": "minecraft:light_gray_wool",
+        "damage": 0
     },
     "minecraft:cyan_wool": {
-        "name": "minecraft:wool",
-        "damage": 9
+        "name": "minecraft:cyan_wool",
+        "damage": 0
     },
     "minecraft:purple_wool": {
-        "name": "minecraft:wool",
-        "damage": 10
+        "name": "minecraft:purple_wool",
+        "damage": 0
     },
     "minecraft:blue_wool": {
-        "name": "minecraft:wool",
-        "damage": 11
+        "name": "minecraft:blue_wool",
+        "damage": 0
     },
     "minecraft:brown_wool": {
-        "name": "minecraft:wool",
-        "damage": 12
+        "name": "minecraft:brown_wool",
+        "damage": 0
     },
     "minecraft:green_wool": {
-        "name": "minecraft:wool",
-        "damage": 13
+        "name": "minecraft:green_wool",
+        "damage": 0
     },
     "minecraft:red_wool": {
-        "name": "minecraft:wool",
-        "damage": 14
+        "name": "minecraft:red_wool",
+        "damage": 0
     },
     "minecraft:black_wool": {
-        "name": "minecraft:wool",
-        "damage": 15
+        "name": "minecraft:black_wool",
+        "damage": 0
     },
     "minecraft:dandelion": {
         "name": "minecraft:yellow_flower",

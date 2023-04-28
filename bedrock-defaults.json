@@ -252,9 +252,6 @@
     "minecraft:wall_banner": {
         "facing_direction": "2"
     },
-    "minecraft:wool": {
-        "color": "white"
-    },
     "minecraft:blackstone_slab": {
         "top_slot_bit": "false"
     },
