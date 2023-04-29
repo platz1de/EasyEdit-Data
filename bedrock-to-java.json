@@ -92,40 +92,14 @@
             "powered": "false"
         }
     },
-    "minecraft:fence": {
+    "minecraft:acacia_fence": {
+        "name": "minecraft:acacia_fence",
         "additions": {
             "waterlogged": "false",
             "east": "false",
             "north": "false",
             "south": "false",
             "west": "false"
-        },
-        "removals": [
-            "wood_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "wood_type"
-        ],
-        "mapping": {
-            "acacia": {
-                "name": "minecraft:acacia_fence"
-            },
-            "birch": {
-                "name": "minecraft:birch_fence"
-            },
-            "dark_oak": {
-                "name": "minecraft:dark_oak_fence"
-            },
-            "jungle": {
-                "name": "minecraft:jungle_fence"
-            },
-            "oak": {
-                "name": "minecraft:oak_fence"
-            },
-            "spruce": {
-                "name": "minecraft:spruce_fence"
-            }
         },
         "defaults": {
             "east": "false",
@@ -190,25 +164,10 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:log2": {
-        "additions": [],
-        "removals": [
-            "new_log_type"
-        ],
+    "minecraft:acacia_log": {
+        "name": "minecraft:acacia_log",
         "renames": {
             "pillar_axis": "axis"
-        },
-        "remaps": [],
-        "identifier": [
-            "new_log_type"
-        ],
-        "mapping": {
-            "acacia": {
-                "name": "minecraft:acacia_log"
-            },
-            "dark_oak": {
-                "name": "minecraft:dark_oak_log"
-            }
         },
         "defaults": {
             "axis": "y"
@@ -1567,6 +1526,23 @@
             "powered": "false"
         }
     },
+    "minecraft:birch_fence": {
+        "name": "minecraft:birch_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:birch_fence_gate": {
         "name": "minecraft:birch_fence_gate",
         "additions": {
@@ -1628,31 +1604,10 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:log": {
-        "additions": [],
-        "removals": [
-            "old_log_type"
-        ],
+    "minecraft:birch_log": {
+        "name": "minecraft:birch_log",
         "renames": {
             "pillar_axis": "axis"
-        },
-        "remaps": [],
-        "identifier": [
-            "old_log_type"
-        ],
-        "mapping": {
-            "birch": {
-                "name": "minecraft:birch_log"
-            },
-            "jungle": {
-                "name": "minecraft:jungle_log"
-            },
-            "oak": {
-                "name": "minecraft:oak_log"
-            },
-            "spruce": {
-                "name": "minecraft:spruce_log"
-            }
         },
         "defaults": {
             "axis": "y"
@@ -4858,6 +4813,23 @@
             "powered": "false"
         }
     },
+    "minecraft:dark_oak_fence": {
+        "name": "minecraft:dark_oak_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:dark_oak_fence_gate": {
         "name": "minecraft:dark_oak_fence_gate",
         "additions": {
@@ -4881,6 +4853,15 @@
             "in_wall": "false",
             "open": "false",
             "powered": "false"
+        }
+    },
+    "minecraft:dark_oak_log": {
+        "name": "minecraft:dark_oak_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:dark_oak_pressure_plate": {
@@ -7079,6 +7060,23 @@
             "powered": "false"
         }
     },
+    "minecraft:jungle_fence": {
+        "name": "minecraft:jungle_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:jungle_fence_gate": {
         "name": "minecraft:jungle_fence_gate",
         "additions": {
@@ -7102,6 +7100,15 @@
             "in_wall": "false",
             "open": "false",
             "powered": "false"
+        }
+    },
+    "minecraft:jungle_log": {
+        "name": "minecraft:jungle_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:jungle_pressure_plate": {
@@ -8407,6 +8414,23 @@
             "powered": "false"
         }
     },
+    "minecraft:oak_fence": {
+        "name": "minecraft:oak_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:fence_gate": {
         "name": "minecraft:oak_fence_gate",
         "additions": {
@@ -8430,6 +8454,15 @@
             "in_wall": "false",
             "open": "false",
             "powered": "false"
+        }
+    },
+    "minecraft:oak_log": {
+        "name": "minecraft:oak_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:wooden_pressure_plate": {
@@ -11096,6 +11129,23 @@
             "powered": "false"
         }
     },
+    "minecraft:spruce_fence": {
+        "name": "minecraft:spruce_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:spruce_fence_gate": {
         "name": "minecraft:spruce_fence_gate",
         "additions": {
@@ -11119,6 +11169,15 @@
             "in_wall": "false",
             "open": "false",
             "powered": "false"
+        }
+    },
+    "minecraft:spruce_log": {
+        "name": "minecraft:spruce_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:spruce_pressure_plate": {

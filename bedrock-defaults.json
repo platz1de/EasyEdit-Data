@@ -9,9 +9,6 @@
         "door_hinge_bit": "false",
         "open_bit": "false"
     },
-    "minecraft:fence": {
-        "wood_type": "oak"
-    },
     "minecraft:acacia_fence_gate": {
         "direction": "2",
         "in_wall_bit": "false",
@@ -22,9 +19,8 @@
         "update_bit": "false",
         "new_leaf_type": "acacia"
     },
-    "minecraft:log2": {
-        "pillar_axis": "y",
-        "new_log_type": "acacia"
+    "minecraft:acacia_log": {
+        "pillar_axis": "y"
     },
     "minecraft:planks": {
         "wood_type": "oak"
@@ -188,9 +184,8 @@
         "update_bit": "false",
         "old_leaf_type": "oak"
     },
-    "minecraft:log": {
-        "pillar_axis": "y",
-        "old_log_type": "oak"
+    "minecraft:birch_log": {
+        "pillar_axis": "y"
     },
     "minecraft:birch_pressure_plate": {
         "redstone_signal": "0"
@@ -542,6 +537,9 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:dark_oak_log": {
+        "pillar_axis": "y"
+    },
     "minecraft:dark_oak_pressure_plate": {
         "redstone_signal": "0"
     },
@@ -769,6 +767,9 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:jungle_log": {
+        "pillar_axis": "y"
+    },
     "minecraft:jungle_pressure_plate": {
         "redstone_signal": "0"
     },
@@ -972,6 +973,9 @@
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
+    },
+    "minecraft:oak_log": {
+        "pillar_axis": "y"
     },
     "minecraft:wooden_pressure_plate": {
         "redstone_signal": "0"
@@ -1286,6 +1290,9 @@
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
+    },
+    "minecraft:spruce_log": {
+        "pillar_axis": "y"
     },
     "minecraft:spruce_pressure_plate": {
         "redstone_signal": "0"

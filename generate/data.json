@@ -174,7 +174,6 @@
 	  "wood_type",
 	  "new_leaf_type",
 	  "old_leaf_type",
-	  "new_log_type",
 	  "sapling_type",
 	  "wall_block_type",
 	  "color",
@@ -632,9 +631,7 @@
   },
   "beDefaults": {
 	"wood_type": "oak",
-	"old_log_type": "oak",
 	"old_leaf_type": "oak",
-	"new_log_type": "acacia",
 	"new_leaf_type": "acacia",
 	"sapling_type": "oak",
 	"flower_type": "poppy",

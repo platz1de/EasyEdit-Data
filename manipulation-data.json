@@ -71,7 +71,7 @@
             }
         }
     },
-    "minecraft:log2": {
+    "minecraft:acacia_log": {
         "rotate": {
             "pillar_axis": {
                 "x": "z",
@@ -633,7 +633,7 @@
             }
         }
     },
-    "minecraft:log": {
+    "minecraft:birch_log": {
         "rotate": {
             "pillar_axis": {
                 "x": "z",
@@ -1781,6 +1781,14 @@
             }
         }
     },
+    "minecraft:dark_oak_log": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
     "minecraft:darkoak_standing_sign": {
         "rotate": {
             "ground_sign_direction": {
@@ -2755,6 +2763,14 @@
             }
         }
     },
+    "minecraft:jungle_log": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
     "minecraft:jungle_standing_sign": {
         "rotate": {
             "ground_sign_direction": {
@@ -3576,6 +3592,14 @@
             "direction": {
                 "2": "0",
                 "0": "2"
+            }
+        }
+    },
+    "minecraft:oak_log": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
             }
         }
     },
@@ -4968,6 +4992,14 @@
             "direction": {
                 "2": "0",
                 "0": "2"
+            }
+        }
+    },
+    "minecraft:spruce_log": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
             }
         }
     },

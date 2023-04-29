@@ -1,0 +1,50 @@
+{
+    "minecraft:oak_fence": {
+        "name": "minecraft:oak_fence",
+        "damage": 0
+    },
+    "minecraft:spruce_fence": {
+        "name": "minecraft:spruce_fence",
+        "damage": 0
+    },
+    "minecraft:birch_fence": {
+        "name": "minecraft:birch_fence",
+        "damage": 0
+    },
+    "minecraft:jungle_fence": {
+        "name": "minecraft:jungle_fence",
+        "damage": 0
+    },
+    "minecraft:acacia_fence": {
+        "name": "minecraft:acacia_fence",
+        "damage": 0
+    },
+    "minecraft:dark_oak_fence": {
+        "name": "minecraft:dark_oak_fence",
+        "damage": 0
+    },
+    "minecraft:oak_log": {
+        "name": "minecraft:oak_log",
+        "damage": 0
+    },
+    "minecraft:spruce_log": {
+        "name": "minecraft:spruce_log",
+        "damage": 0
+    },
+    "minecraft:birch_log": {
+        "name": "minecraft:birch_log",
+        "damage": 0
+    },
+    "minecraft:jungle_log": {
+        "name": "minecraft:jungle_log",
+        "damage": 0
+    },
+    "minecraft:acacia_log": {
+        "name": "minecraft:acacia_log",
+        "damage": 0
+    },
+    "minecraft:dark_oak_log": {
+        "name": "minecraft:dark_oak_log",
+        "damage": 0
+    }
+}
