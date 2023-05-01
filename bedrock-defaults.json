@@ -810,6 +810,10 @@
     "minecraft:flowing_lava": {
         "liquid_depth": "0"
     },
+    "minecraft:lava_cauldron": {
+        "cauldron_liquid": "lava",
+        "fill_level": "6"
+    },
     "minecraft:lectern": {
         "direction": "2",
         "powered_bit": "false"

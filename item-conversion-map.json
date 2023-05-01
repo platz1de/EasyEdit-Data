@@ -3916,7 +3916,7 @@
         "damage": 0
     },
     "minecraft:ender_dragon_spawn_egg": {
-        "name": "minecraft:enderman_spawn_egg",
+        "name": "minecraft:ender_dragon_spawn_egg",
         "damage": 0
     },
     "minecraft:enderman_spawn_egg": {
@@ -3968,7 +3968,7 @@
         "damage": 0
     },
     "minecraft:iron_golem_spawn_egg": {
-        "name": "minecraft:wolf_spawn_egg",
+        "name": "minecraft:iron_golem_spawn_egg",
         "damage": 0
     },
     "minecraft:llama_spawn_egg": {
@@ -4068,7 +4068,7 @@
         "damage": 0
     },
     "minecraft:snow_golem_spawn_egg": {
-        "name": "minecraft:polar_bear_spawn_egg",
+        "name": "minecraft:snow_golem_spawn_egg",
         "damage": 0
     },
     "minecraft:spider_spawn_egg": {
@@ -4092,7 +4092,7 @@
         "damage": 0
     },
     "minecraft:trader_llama_spawn_egg": {
-        "name": "minecraft:llama_spawn_egg",
+        "name": "minecraft:trader_llama_spawn_egg",
         "damage": 0
     },
     "minecraft:tropical_fish_spawn_egg": {
@@ -4128,7 +4128,7 @@
         "damage": 0
     },
     "minecraft:wither_spawn_egg": {
-        "name": "minecraft:wither_skeleton_spawn_egg",
+        "name": "minecraft:wither_spawn_egg",
         "damage": 0
     },
     "minecraft:wither_skeleton_spawn_egg": {

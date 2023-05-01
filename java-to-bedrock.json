@@ -10903,7 +10903,7 @@
         }
     },
     "minecraft:lava_cauldron": {
-        "name": "minecraft:cauldron",
+        "name": "minecraft:lava_cauldron",
         "additions": {
             "cauldron_liquid": "lava",
             "fill_level": "6"

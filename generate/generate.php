@@ -956,25 +956,6 @@ foreach ($groupsJtb as $group) {
 	}
 
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
-		$obj["internal_tile"] = ["type" => [
-				"minecraft:skeleton_skull" => "skeleton",
-				"minecraft:skeleton_wall_skull" => "skeleton",
-				"minecraft:wither_skeleton_skull" => "wither_skeleton",
-				"minecraft:wither_skeleton_wall_skull" => "wither_skeleton",
-				"minecraft:zombie_head" => "zombie",
-				"minecraft:zombie_wall_head" => "zombie",
-				"minecraft:player_head" => "player",
-				"minecraft:player_wall_head" => "player",
-				"minecraft:creeper_head" => "creeper",
-				"minecraft:creeper_wall_head" => "creeper",
-				"minecraft:dragon_head" => "dragon",
-				"minecraft:dragon_wall_head" => "dragon",
-				"minecraft:piglin_head" => "piglin",
-				"minecraft:piglin_wall_head" => "piglin"
-			][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"])];
-	}
-
-	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
 		$obj["internal_tile"] = [
 			"type" => [
 					"minecraft:skeleton_skull" => "skeleton",
@@ -1337,6 +1318,9 @@ function sortState(string $state): string
 
 //Prepare custom data
 unset($jtb["minecraft:mushroom_stem"]["mapping"]["false"]["false"]["false"]); //0 side mushroom block should be converted to mushroom block, not stem
+
+$jtb["minecraft:powder_snow_cauldron"]["remaps"] = $jtb["minecraft:cauldron"]["remaps"]; //filled don't have the mapping for 0
+$jtb["minecraft:powder_snow_cauldron"]["defaults"] = $jtb["minecraft:water_cauldron"]["defaults"] = $jtb["minecraft:cauldron"]["defaults"]; //Fix conflicts
 
 $btj = [];
 foreach ($jtb as $java => $bedrockData) {

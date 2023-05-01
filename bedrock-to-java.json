@@ -3398,47 +3398,30 @@
         "removals": [
             "cauldron_liquid"
         ],
-        "remaps": [],
+        "renames": {
+            "fill_level": "level"
+        },
+        "remaps": {
+            "level": {
+                "0": 0,
+                "3": 1,
+                "4": 2,
+                "6": 3
+            }
+        },
         "identifier": [
             "cauldron_liquid"
         ],
         "mapping": {
             "water": {
-                "name": "minecraft:cauldron",
-                "renames": {
-                    "fill_level": "level"
-                },
-                "remaps": {
-                    "level": {
-                        "0": 0,
-                        "3": 1,
-                        "4": 2,
-                        "6": 3
-                    }
-                }
-            },
-            "lava": {
-                "name": "minecraft:lava_cauldron",
-                "removals": {
-                    "fill_level": "6"
-                }
+                "name": "minecraft:cauldron"
             },
             "powder_snow": {
-                "name": "minecraft:powder_snow_cauldron",
-                "renames": {
-                    "fill_level": "level"
-                },
-                "remaps": {
-                    "level": {
-                        "3": 1,
-                        "4": 2,
-                        "6": 3
-                    }
-                }
+                "name": "minecraft:powder_snow_cauldron"
             }
         },
         "defaults": {
-            "level": "1"
+            "level": "0"
         }
     },
     "minecraft:cave_vines": {
@@ -7346,6 +7329,13 @@
         "defaults": {
             "level": "0"
         }
+    },
+    "minecraft:lava_cauldron": {
+        "name": "minecraft:lava_cauldron",
+        "removals": [
+            "cauldron_liquid",
+            "fill_level"
+        ]
     },
     "minecraft:lectern": {
         "name": "minecraft:lectern",
