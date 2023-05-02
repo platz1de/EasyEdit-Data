@@ -1787,9 +1787,9 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
-            "color"
-        ]
+        "internal_tile": {
+            "color": "white"
+        }
     },
     "minecraft:bed": {
         "additions": [],
@@ -1871,9 +1871,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
-            "color"
-        ]
+        "internal_tile": {
+            "color": "white"
+        }
     },
     "minecraft:black_candle": {
         "name": "minecraft:black_candle",
@@ -2426,9 +2426,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
-            "color"
-        ]
+        "internal_tile": {
+            "color": "white"
+        }
     },
     "minecraft:black_wool": [],
     "minecraft:blackstone": [],
@@ -4135,10 +4135,10 @@
             "facing": "north",
             "rotation": "0"
         },
-        "internal_tile": [
-            "type",
-            "attachment"
-        ]
+        "internal_tile": {
+            "type": "player",
+            "attachment": "floor"
+        }
     },
     "minecraft:crimson_button": {
         "name": "minecraft:crimson_button",
@@ -5996,9 +5996,9 @@
                 "name": "minecraft:potted_wither_rose"
             }
         },
-        "internal_tile": [
-            "type"
-        ]
+        "internal_tile": {
+            "type": "empty"
+        }
     },
     "minecraft:flowering_azalea": [],
     "minecraft:azalea_leaves_flowered": {

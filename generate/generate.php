@@ -1611,7 +1611,9 @@ function merge(mixed $a, mixed $b, string $bedrock): mixed
 	$write($mapping, array_map(fn($a) => $potValues[$a][1], $res["identifier"]), $objB);
 	$res["mapping"] = $mapping;
 	if (isset($a["internal_tile"])) {
-		$res["internal_tile"] = array_keys($a["internal_tile"]);
+		foreach (array_keys($a["internal_tile"]) as $key) {
+			$res["internal_tile"][$key] = $customData["btj_tile_default"][$bedrock][$key];
+		}
 	}
 	return $res;
 }

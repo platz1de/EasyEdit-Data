@@ -714,5 +714,23 @@
 	  "growth": "0",
 	  "facing_direction": "0"
 	}
+  },
+  "btj_tile_default": {
+	"minecraft:standing_banner": {
+	  "color": "white"
+	},
+	"minecraft:wall_banner": {
+	  "color": "white"
+	},
+	"minecraft:bed": {
+	  "color": "white"
+	},
+	"minecraft:skull": {
+	  "type": "player",
+	  "attachment": "floor"
+	},
+	"minecraft:flower_pot": {
+	  "type": "empty"
+	}
   }
 }
