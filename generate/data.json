@@ -239,7 +239,8 @@
 	"minecraft:lever": "lever_direction",
 	"minecraft:purpur_block": "chisel_type",
 	"minecraft:flower_pot": "type",
-	"minecraft:skull": ["type", "attachment"]
+	"minecraft:skull": ["type", "attachment"],
+	"minecraft:standing_banner": "color"
   },
   "btj_ignore": {
 	"minecraft:cave_vines": [
@@ -704,7 +705,9 @@
 	  "facing_direction": "1"
 	},
 	"minecraft:skull": {
-	  "facing_direction": "1"
+	  "facing_direction": "1",
+	  "type": "skeleton",
+	  "attachment": "floor"
 	},
 	"minecraft:melon_stem": {
 	  "growth": "0",
@@ -713,6 +716,9 @@
 	"minecraft:pumpkin_stem": {
 	  "growth": "0",
 	  "facing_direction": "0"
+	},
+	"minecraft:flower_pot": {
+	  "type": "none"
 	}
   },
   "btj_tile_default": {
@@ -727,7 +733,8 @@
 	},
 	"minecraft:skull": {
 	  "type": "player",
-	  "attachment": "floor"
+	  "attachment": "floor",
+	  "rot": "0"
 	},
 	"minecraft:flower_pot": {
 	  "type": "empty"

@@ -1057,9 +1057,9 @@
         "mapping": {
             "def": {
                 "name": "minecraft:attached_melon_stem",
-                "removals": {
-                    "growth": "7"
-                },
+                "removals": [
+                    "growth"
+                ],
                 "renames": {
                     "facing_direction": "facing"
                 },
@@ -1093,9 +1093,9 @@
         "mapping": {
             "def": {
                 "name": "minecraft:attached_pumpkin_stem",
-                "removals": {
-                    "growth": "7"
-                },
+                "removals": [
+                    "growth"
+                ],
                 "renames": {
                     "facing_direction": "facing"
                 },
@@ -1423,9 +1423,9 @@
             },
             "false": {
                 "name": "minecraft:big_dripleaf_stem",
-                "removals": {
-                    "big_dripleaf_tilt": "none"
-                }
+                "removals": [
+                    "big_dripleaf_tilt"
+                ]
             }
         },
         "defaults": {
@@ -3944,13 +3944,11 @@
             "creeper": {
                 "floor": {
                     "name": "minecraft:creeper_head",
+                    "removals": [
+                        "facing_direction"
+                    ],
                     "renames": {
-                        "facing_direction": "rotation"
-                    },
-                    "remaps": {
-                        "rotation": {
-                            "1": 9
-                        }
+                        "rot": "rotation"
                     }
                 },
                 "wall": {
@@ -3972,13 +3970,11 @@
                 "floor": {
                     "name": "minecraft:dragon_head",
                     "renames": {
-                        "facing_direction": "rotation"
+                        "rot": "rotation"
                     },
-                    "remaps": {
-                        "rotation": {
-                            "1": 9
-                        }
-                    }
+                    "removals": [
+                        "facing_direction"
+                    ]
                 },
                 "wall": {
                     "name": "minecraft:dragon_wall_head",
@@ -3999,13 +3995,11 @@
                 "floor": {
                     "name": "minecraft:piglin_head",
                     "renames": {
-                        "facing_direction": "rotation"
+                        "rot": "rotation"
                     },
-                    "remaps": {
-                        "rotation": {
-                            "1": 9
-                        }
-                    }
+                    "removals": [
+                        "facing_direction"
+                    ]
                 },
                 "wall": {
                     "name": "minecraft:piglin_wall_head",
@@ -4026,13 +4020,11 @@
                 "floor": {
                     "name": "minecraft:player_head",
                     "renames": {
-                        "facing_direction": "rotation"
+                        "rot": "rotation"
                     },
-                    "remaps": {
-                        "rotation": {
-                            "1": 9
-                        }
-                    }
+                    "removals": [
+                        "facing_direction"
+                    ]
                 },
                 "wall": {
                     "name": "minecraft:player_wall_head",
@@ -4053,13 +4045,11 @@
                 "floor": {
                     "name": "minecraft:skeleton_skull",
                     "renames": {
-                        "facing_direction": "rotation"
+                        "rot": "rotation"
                     },
-                    "remaps": {
-                        "rotation": {
-                            "1": 9
-                        }
-                    }
+                    "removals": [
+                        "facing_direction"
+                    ]
                 },
                 "wall": {
                     "name": "minecraft:skeleton_wall_skull",
@@ -4080,13 +4070,11 @@
                 "floor": {
                     "name": "minecraft:wither_skeleton_skull",
                     "renames": {
-                        "facing_direction": "rotation"
+                        "rot": "rotation"
                     },
-                    "remaps": {
-                        "rotation": {
-                            "1": 9
-                        }
-                    }
+                    "removals": [
+                        "facing_direction"
+                    ]
                 },
                 "wall": {
                     "name": "minecraft:wither_skeleton_wall_skull",
@@ -4107,13 +4095,11 @@
                 "floor": {
                     "name": "minecraft:zombie_head",
                     "renames": {
-                        "facing_direction": "rotation"
+                        "rot": "rotation"
                     },
-                    "remaps": {
-                        "rotation": {
-                            "1": 9
-                        }
-                    }
+                    "removals": [
+                        "facing_direction"
+                    ]
                 },
                 "wall": {
                     "name": "minecraft:zombie_wall_head",
@@ -4137,7 +4123,8 @@
         },
         "internal_tile": {
             "type": "player",
-            "attachment": "floor"
+            "attachment": "floor",
+            "rot": "0"
         }
     },
     "minecraft:crimson_button": {
@@ -9484,9 +9471,9 @@
         "mapping": {
             "default": {
                 "name": "minecraft:purpur_block",
-                "removals": {
-                    "pillar_axis": "y"
-                }
+                "removals": [
+                    "pillar_axis"
+                ]
             },
             "lines": {
                 "name": "minecraft:purpur_pillar",

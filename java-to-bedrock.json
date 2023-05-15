@@ -2038,6 +2038,9 @@
     },
     "minecraft:black_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "black"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -2064,12 +2067,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "black"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:black_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "black"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -2108,9 +2114,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "black"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:black_candle": {
         "name": "minecraft:black_candle",
@@ -2279,6 +2285,9 @@
     },
     "minecraft:black_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "black"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -2301,9 +2310,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "black"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:black_wool": [],
     "minecraft:blackstone": [],
@@ -2529,6 +2538,9 @@
     },
     "minecraft:blue_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "blue"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -2555,12 +2567,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "blue"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:blue_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "blue"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -2599,9 +2614,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "blue"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:blue_candle": {
         "name": "minecraft:blue_candle",
@@ -2777,6 +2792,9 @@
     },
     "minecraft:blue_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "blue"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -2799,9 +2817,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "blue"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:blue_wool": [],
     "minecraft:bone_block": {
@@ -3121,6 +3139,9 @@
     },
     "minecraft:brown_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "brown"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -3147,12 +3168,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "brown"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:brown_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "brown"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -3191,9 +3215,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "brown"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:brown_candle": {
         "name": "minecraft:brown_candle",
@@ -3507,6 +3531,9 @@
     },
     "minecraft:brown_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "brown"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -3529,9 +3556,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "brown"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:brown_wool": [],
     "minecraft:bubble_column": {
@@ -4700,28 +4727,13 @@
     "minecraft:crafting_table": [],
     "minecraft:creeper_head": {
         "name": "minecraft:skull",
-        "renames": {
-            "rotation": "facing_direction"
+        "additions": {
+            "type": "creeper",
+            "attachment": "floor",
+            "facing_direction": "1"
         },
-        "remaps": {
-            "facing_direction": {
-                "0": "1",
-                "10": "1",
-                "11": "1",
-                "12": "1",
-                "13": "1",
-                "14": "1",
-                "15": "1",
-                "1": "1",
-                "2": "1",
-                "3": "1",
-                "4": "1",
-                "5": "1",
-                "6": "1",
-                "7": "1",
-                "8": "1",
-                "9": "1"
-            }
+        "renames": {
+            "rotation": "rot"
         },
         "values": {
             "rotation": [
@@ -4746,13 +4758,18 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "type": "creeper",
-            "attachment": "floor"
-        }
+        "internal_tile": [
+            "type",
+            "attachment",
+            "rot"
+        ]
     },
     "minecraft:creeper_wall_head": {
         "name": "minecraft:skull",
+        "additions": {
+            "type": "creeper",
+            "attachment": "wall"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -4775,10 +4792,10 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "type": "creeper",
-            "attachment": "wall"
-        }
+        "internal_tile": [
+            "type",
+            "attachment"
+        ]
     },
     "minecraft:crimson_button": {
         "name": "minecraft:crimson_button",
@@ -5481,6 +5498,9 @@
     },
     "minecraft:cyan_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "cyan"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -5507,12 +5527,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "cyan"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:cyan_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "cyan"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -5551,9 +5574,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "cyan"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:cyan_candle": {
         "name": "minecraft:cyan_candle",
@@ -5722,6 +5745,9 @@
     },
     "minecraft:cyan_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "cyan"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -5744,9 +5770,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "cyan"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:cyan_wool": [],
     "minecraft:damaged_anvil": {
@@ -7596,28 +7622,13 @@
     "minecraft:dragon_egg": [],
     "minecraft:dragon_head": {
         "name": "minecraft:skull",
-        "renames": {
-            "rotation": "facing_direction"
+        "additions": {
+            "type": "dragon",
+            "attachment": "floor",
+            "facing_direction": "1"
         },
-        "remaps": {
-            "facing_direction": {
-                "0": "1",
-                "10": "1",
-                "11": "1",
-                "12": "1",
-                "13": "1",
-                "14": "1",
-                "15": "1",
-                "1": "1",
-                "2": "1",
-                "3": "1",
-                "4": "1",
-                "5": "1",
-                "6": "1",
-                "7": "1",
-                "8": "1",
-                "9": "1"
-            }
+        "renames": {
+            "rotation": "rot"
         },
         "values": {
             "rotation": [
@@ -7642,13 +7653,18 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "type": "dragon",
-            "attachment": "floor"
-        }
+        "internal_tile": [
+            "type",
+            "attachment",
+            "rot"
+        ]
     },
     "minecraft:dragon_wall_head": {
         "name": "minecraft:skull",
+        "additions": {
+            "type": "dragon",
+            "attachment": "wall"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -7671,10 +7687,10 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "type": "dragon",
-            "attachment": "wall"
-        }
+        "internal_tile": [
+            "type",
+            "attachment"
+        ]
     },
     "minecraft:dried_kelp_block": [],
     "minecraft:dripstone_block": [],
@@ -8267,11 +8283,12 @@
     "minecraft:flower_pot": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "none"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:flowering_azalea": [],
     "minecraft:flowering_azalea_leaves": {
@@ -9133,6 +9150,9 @@
     "minecraft:gravel": [],
     "minecraft:gray_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "gray"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -9159,12 +9179,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "gray"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:gray_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "gray"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -9203,9 +9226,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "gray"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:gray_candle": {
         "name": "minecraft:gray_candle",
@@ -9374,6 +9397,9 @@
     },
     "minecraft:gray_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "gray"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -9396,13 +9422,16 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "gray"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:gray_wool": [],
     "minecraft:green_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "green"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -9429,12 +9458,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "green"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:green_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "green"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -9473,9 +9505,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "green"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:green_candle": {
         "name": "minecraft:green_candle",
@@ -9644,6 +9676,9 @@
     },
     "minecraft:green_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "green"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -9666,9 +9701,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "green"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:green_wool": [],
     "minecraft:grindstone": {
@@ -11198,6 +11233,9 @@
     },
     "minecraft:light_blue_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "light_blue"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -11224,12 +11262,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "light_blue"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:light_blue_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "light_blue"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -11268,9 +11309,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "light_blue"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:light_blue_candle": {
         "name": "minecraft:light_blue_candle",
@@ -11439,6 +11480,9 @@
     },
     "minecraft:light_blue_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "light_blue"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -11461,13 +11505,16 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "light_blue"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:light_blue_wool": [],
     "minecraft:light_gray_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "light_gray"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -11494,12 +11541,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "light_gray"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:light_gray_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "light_gray"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -11538,9 +11588,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "light_gray"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:light_gray_candle": {
         "name": "minecraft:light_gray_candle",
@@ -11709,6 +11759,9 @@
     },
     "minecraft:light_gray_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "light_gray"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -11731,9 +11784,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "light_gray"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:light_gray_wool": [],
     "minecraft:light_weighted_pressure_plate": {
@@ -11843,6 +11896,9 @@
     },
     "minecraft:lime_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "lime"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -11869,12 +11925,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "lime"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:lime_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "lime"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -11913,9 +11972,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "lime"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:lime_candle": {
         "name": "minecraft:lime_candle",
@@ -12084,6 +12143,9 @@
     },
     "minecraft:lime_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "lime"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -12106,9 +12168,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "lime"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:lime_wool": [],
     "minecraft:lodestone": [],
@@ -12139,6 +12201,9 @@
     },
     "minecraft:magenta_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "magenta"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -12165,12 +12230,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "magenta"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:magenta_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "magenta"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -12209,9 +12277,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "magenta"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:magenta_candle": {
         "name": "minecraft:magenta_candle",
@@ -12380,6 +12448,9 @@
     },
     "minecraft:magenta_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "magenta"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -12402,9 +12473,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "magenta"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:magenta_wool": [],
     "minecraft:magma_block": {
@@ -14706,6 +14777,9 @@
     },
     "minecraft:orange_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "orange"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -14732,12 +14806,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "orange"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:orange_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "orange"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -14776,9 +14853,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "orange"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:orange_candle": {
         "name": "minecraft:orange_candle",
@@ -14953,6 +15030,9 @@
     },
     "minecraft:orange_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "orange"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -14975,9 +15055,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "orange"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:orange_wool": [],
     "minecraft:oxeye_daisy": {
@@ -15175,28 +15255,13 @@
     },
     "minecraft:piglin_head": {
         "name": "minecraft:skull",
-        "renames": {
-            "rotation": "facing_direction"
+        "additions": {
+            "type": "piglin",
+            "attachment": "floor",
+            "facing_direction": "1"
         },
-        "remaps": {
-            "facing_direction": {
-                "0": "1",
-                "10": "1",
-                "11": "1",
-                "12": "1",
-                "13": "1",
-                "14": "1",
-                "15": "1",
-                "1": "1",
-                "2": "1",
-                "3": "1",
-                "4": "1",
-                "5": "1",
-                "6": "1",
-                "7": "1",
-                "8": "1",
-                "9": "1"
-            }
+        "renames": {
+            "rotation": "rot"
         },
         "values": {
             "rotation": [
@@ -15221,13 +15286,18 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "type": "piglin",
-            "attachment": "floor"
-        }
+        "internal_tile": [
+            "type",
+            "attachment",
+            "rot"
+        ]
     },
     "minecraft:piglin_wall_head": {
         "name": "minecraft:skull",
+        "additions": {
+            "type": "piglin",
+            "attachment": "wall"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -15250,13 +15320,16 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "type": "piglin",
-            "attachment": "wall"
-        }
+        "internal_tile": [
+            "type",
+            "attachment"
+        ]
     },
     "minecraft:pink_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "pink"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -15283,12 +15356,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "pink"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:pink_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "pink"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -15327,9 +15403,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "pink"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:pink_candle": {
         "name": "minecraft:pink_candle",
@@ -15504,6 +15580,9 @@
     },
     "minecraft:pink_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "pink"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -15526,9 +15605,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "pink"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:pink_wool": [],
     "minecraft:piston": {
@@ -15623,28 +15702,13 @@
     },
     "minecraft:player_head": {
         "name": "minecraft:skull",
-        "renames": {
-            "rotation": "facing_direction"
+        "additions": {
+            "type": "player",
+            "attachment": "floor",
+            "facing_direction": "1"
         },
-        "remaps": {
-            "facing_direction": {
-                "0": "1",
-                "10": "1",
-                "11": "1",
-                "12": "1",
-                "13": "1",
-                "14": "1",
-                "15": "1",
-                "1": "1",
-                "2": "1",
-                "3": "1",
-                "4": "1",
-                "5": "1",
-                "6": "1",
-                "7": "1",
-                "8": "1",
-                "9": "1"
-            }
+        "renames": {
+            "rotation": "rot"
         },
         "values": {
             "rotation": [
@@ -15669,13 +15733,18 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "type": "player",
-            "attachment": "floor"
-        }
+        "internal_tile": [
+            "type",
+            "attachment",
+            "rot"
+        ]
     },
     "minecraft:player_wall_head": {
         "name": "minecraft:skull",
+        "additions": {
+            "type": "player",
+            "attachment": "wall"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -15698,10 +15767,10 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "type": "player",
-            "attachment": "wall"
-        }
+        "internal_tile": [
+            "type",
+            "attachment"
+        ]
     },
     "minecraft:podzol": {
         "name": "minecraft:podzol",
@@ -16753,290 +16822,322 @@
     "minecraft:potted_acacia_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=acacia]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_allium": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=allium]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_azalea_bush": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:azalea"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_azure_bluet": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=houstonia]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_bamboo": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:bamboo[age_bit=false,bamboo_leaf_size=no_leaves,bamboo_stalk_thickness=thin]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_birch_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=birch]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_blue_orchid": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=orchid]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_brown_mushroom": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:brown_mushroom"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_cactus": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:cactus[age=0]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_cornflower": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=cornflower]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_crimson_fungus": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:crimson_fungus"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_crimson_roots": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:crimson_roots"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_dandelion": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:yellow_flower"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_dark_oak_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=dark_oak]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_dead_bush": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:deadbush"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_fern": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:tallgrass[tall_grass_type=fern]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_flowering_azalea_bush": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:flowering_azalea"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_jungle_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=jungle]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_lily_of_the_valley": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=lily_of_the_valley]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_mangrove_propagule": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:mangrove_propagule[hanging=false,propagule_stage=0]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_oak_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=oak]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_orange_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_orange]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_oxeye_daisy": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=oxeye]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_pink_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_pink]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_poppy": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=poppy]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_red_mushroom": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_mushroom"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_red_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_red]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_spruce_sapling": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=spruce]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_warped_fungus": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:warped_fungus"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_warped_roots": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:warped_roots"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_white_tulip": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_white]"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:potted_wither_rose": {
         "name": "minecraft:flower_pot",
         "additions": {
-            "update_bit": "false"
-        },
-        "internal_tile": {
+            "update_bit": "false",
             "type": "minecraft:wither_rose"
-        }
+        },
+        "internal_tile": [
+            "type"
+        ]
     },
     "minecraft:powder_snow": [],
     "minecraft:powder_snow_cauldron": {
@@ -17434,6 +17535,9 @@
     },
     "minecraft:purple_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "purple"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -17460,12 +17564,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "purple"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:purple_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "purple"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -17504,9 +17611,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "purple"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:purple_candle": {
         "name": "minecraft:purple_candle",
@@ -17675,6 +17782,9 @@
     },
     "minecraft:purple_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "purple"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -17697,9 +17807,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "purple"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:purple_wool": [],
     "minecraft:purpur_block": {
@@ -18003,6 +18113,9 @@
     "minecraft:raw_iron_block": [],
     "minecraft:red_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "red"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -18029,12 +18142,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "red"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:red_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "red"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -18073,9 +18189,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "red"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:red_candle": {
         "name": "minecraft:red_candle",
@@ -18776,6 +18892,9 @@
     },
     "minecraft:red_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "red"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -18798,9 +18917,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "red"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:red_wool": [],
     "minecraft:redstone_block": [],
@@ -20074,28 +20193,13 @@
     },
     "minecraft:skeleton_skull": {
         "name": "minecraft:skull",
-        "renames": {
-            "rotation": "facing_direction"
+        "additions": {
+            "type": "skeleton",
+            "attachment": "floor",
+            "facing_direction": "1"
         },
-        "remaps": {
-            "facing_direction": {
-                "0": "1",
-                "10": "1",
-                "11": "1",
-                "12": "1",
-                "13": "1",
-                "14": "1",
-                "15": "1",
-                "1": "1",
-                "2": "1",
-                "3": "1",
-                "4": "1",
-                "5": "1",
-                "6": "1",
-                "7": "1",
-                "8": "1",
-                "9": "1"
-            }
+        "renames": {
+            "rotation": "rot"
         },
         "values": {
             "rotation": [
@@ -20120,13 +20224,18 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "type": "skeleton",
-            "attachment": "floor"
-        }
+        "internal_tile": [
+            "type",
+            "attachment",
+            "rot"
+        ]
     },
     "minecraft:skeleton_wall_skull": {
         "name": "minecraft:skull",
+        "additions": {
+            "type": "skeleton",
+            "attachment": "wall"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -20149,10 +20258,10 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "type": "skeleton",
-            "attachment": "wall"
-        }
+        "internal_tile": [
+            "type",
+            "attachment"
+        ]
     },
     "minecraft:slime_block": {
         "name": "minecraft:slime"
@@ -23981,6 +24090,9 @@
     },
     "minecraft:white_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "white"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -24007,12 +24119,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "white"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:white_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "white"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -24051,9 +24166,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "white"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:white_candle": {
         "name": "minecraft:white_candle",
@@ -24228,6 +24343,9 @@
     },
     "minecraft:white_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "white"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -24250,36 +24368,21 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "white"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:white_wool": [],
     "minecraft:wither_rose": [],
     "minecraft:wither_skeleton_skull": {
         "name": "minecraft:skull",
-        "renames": {
-            "rotation": "facing_direction"
+        "additions": {
+            "type": "wither_skeleton",
+            "attachment": "floor",
+            "facing_direction": "1"
         },
-        "remaps": {
-            "facing_direction": {
-                "0": "1",
-                "10": "1",
-                "11": "1",
-                "12": "1",
-                "13": "1",
-                "14": "1",
-                "15": "1",
-                "1": "1",
-                "2": "1",
-                "3": "1",
-                "4": "1",
-                "5": "1",
-                "6": "1",
-                "7": "1",
-                "8": "1",
-                "9": "1"
-            }
+        "renames": {
+            "rotation": "rot"
         },
         "values": {
             "rotation": [
@@ -24304,13 +24407,18 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "type": "wither_skeleton",
-            "attachment": "floor"
-        }
+        "internal_tile": [
+            "type",
+            "attachment",
+            "rot"
+        ]
     },
     "minecraft:wither_skeleton_wall_skull": {
         "name": "minecraft:skull",
+        "additions": {
+            "type": "wither_skeleton",
+            "attachment": "wall"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -24333,13 +24441,16 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "type": "wither_skeleton",
-            "attachment": "wall"
-        }
+        "internal_tile": [
+            "type",
+            "attachment"
+        ]
     },
     "minecraft:yellow_banner": {
         "name": "minecraft:standing_banner",
+        "additions": {
+            "color": "yellow"
+        },
         "renames": {
             "rotation": "ground_sign_direction"
         },
@@ -24366,12 +24477,15 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "color": "yellow"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:yellow_bed": {
         "name": "minecraft:bed",
+        "additions": {
+            "color": "yellow"
+        },
         "renames": {
             "facing": "direction",
             "occupied": "occupied_bit",
@@ -24410,9 +24524,9 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
-            "color": "yellow"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:yellow_candle": {
         "name": "minecraft:yellow_candle",
@@ -24581,6 +24695,9 @@
     },
     "minecraft:yellow_wall_banner": {
         "name": "minecraft:wall_banner",
+        "additions": {
+            "color": "yellow"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -24603,35 +24720,20 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "color": "yellow"
-        }
+        "internal_tile": [
+            "color"
+        ]
     },
     "minecraft:yellow_wool": [],
     "minecraft:zombie_head": {
         "name": "minecraft:skull",
-        "renames": {
-            "rotation": "facing_direction"
+        "additions": {
+            "type": "zombie",
+            "attachment": "floor",
+            "facing_direction": "1"
         },
-        "remaps": {
-            "facing_direction": {
-                "0": "1",
-                "10": "1",
-                "11": "1",
-                "12": "1",
-                "13": "1",
-                "14": "1",
-                "15": "1",
-                "1": "1",
-                "2": "1",
-                "3": "1",
-                "4": "1",
-                "5": "1",
-                "6": "1",
-                "7": "1",
-                "8": "1",
-                "9": "1"
-            }
+        "renames": {
+            "rotation": "rot"
         },
         "values": {
             "rotation": [
@@ -24656,13 +24758,18 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
-            "type": "zombie",
-            "attachment": "floor"
-        }
+        "internal_tile": [
+            "type",
+            "attachment",
+            "rot"
+        ]
     },
     "minecraft:zombie_wall_head": {
         "name": "minecraft:skull",
+        "additions": {
+            "type": "zombie",
+            "attachment": "wall"
+        },
         "renames": {
             "facing": "facing_direction"
         },
@@ -24685,9 +24792,9 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
-            "type": "zombie",
-            "attachment": "wall"
-        }
+        "internal_tile": [
+            "type",
+            "attachment"
+        ]
     }
 }

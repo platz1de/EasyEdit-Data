@@ -74,12 +74,12 @@ foreach (scandir("patches") as $patch) {
 //Compatibility with old versions
 foreach ($javaToBedrock as $java => $bedrock) {
 	foreach ([
-		         "/minecraft:dirt_path(.*)/" => "minecraft:grass_path$1",
-		         "/minecraft:oak_sign(.*)/" => "minecraft:sign$1",
-		         "/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
-		         "/minecraft:water_cauldron\\[level=(.)]/" => "minecraft:cauldron[level=$1]",
-		         "/minecraft:cauldron/" => "minecraft:cauldron[level=0]",
-	         ] as $search => $replace) {
+				 "/minecraft:dirt_path(.*)/" => "minecraft:grass_path$1",
+				 "/minecraft:oak_sign(.*)/" => "minecraft:sign$1",
+				 "/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
+				 "/minecraft:water_cauldron\\[level=(.)]/" => "minecraft:cauldron[level=$1]",
+				 "/minecraft:cauldron/" => "minecraft:cauldron[level=0]",
+			 ] as $search => $replace) {
 		if (preg_match($search, $java)) {
 			$javaToBedrock[preg_replace($search, $replace, $java)] = $bedrock;
 		}
@@ -944,74 +944,86 @@ foreach ($groupsJtb as $group) {
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
 		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);
-		$obj["internal_tile"] = ["color" => $matches[1] ?? throw new Exception("Invalid banner name: " . $group["name"])];
-		if (str_ends_with($obj["internal_tile"]["color"], "_wall")) {
-			$obj["internal_tile"]["color"] = substr($obj["internal_tile"]["color"], 0, -5);
+		$obj["additions"]["color"] = $matches[1] ?? throw new Exception("Invalid banner name: " . $group["name"]);
+		if (str_ends_with($obj["additions"]["color"], "_wall")) {
+			$obj["additions"]["color"] = substr($obj["additions"]["color"], 0, -5);
 		}
+		$obj["internal_tile"] = ["color"];
 	}
 
 	if (str_ends_with($group["name"], "bed")) {
 		preg_match("/minecraft:([a-z_]*)_bed/", $group["name"], $matches);
-		$obj["internal_tile"] = ["color" => $matches[1] ?? throw new Exception("Invalid bed name: " . $group["name"])];
+		$obj["additions"]["color"] = $matches[1] ?? throw new Exception("Invalid bed name: " . $group["name"]);
+		$obj["internal_tile"] = ["color"];
 	}
 
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
-		$obj["internal_tile"] = [
-			"type" => [
-					"minecraft:skeleton_skull" => "skeleton",
-					"minecraft:skeleton_wall_skull" => "skeleton",
-					"minecraft:wither_skeleton_skull" => "wither_skeleton",
-					"minecraft:wither_skeleton_wall_skull" => "wither_skeleton",
-					"minecraft:zombie_head" => "zombie",
-					"minecraft:zombie_wall_head" => "zombie",
-					"minecraft:player_head" => "player",
-					"minecraft:player_wall_head" => "player",
-					"minecraft:creeper_head" => "creeper",
-					"minecraft:creeper_wall_head" => "creeper",
-					"minecraft:dragon_head" => "dragon",
-					"minecraft:dragon_wall_head" => "dragon",
-					"minecraft:piglin_head" => "piglin",
-					"minecraft:piglin_wall_head" => "piglin"
-				][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"]),
-			"attachment" => str_contains($group["name"], "wall") ? "wall" : "floor"
-		];
+		$obj["additions"]["type"] = [
+			"minecraft:skeleton_skull" => "skeleton",
+			"minecraft:skeleton_wall_skull" => "skeleton",
+			"minecraft:wither_skeleton_skull" => "wither_skeleton",
+			"minecraft:wither_skeleton_wall_skull" => "wither_skeleton",
+			"minecraft:zombie_head" => "zombie",
+			"minecraft:zombie_wall_head" => "zombie",
+			"minecraft:player_head" => "player",
+			"minecraft:player_wall_head" => "player",
+			"minecraft:creeper_head" => "creeper",
+			"minecraft:creeper_wall_head" => "creeper",
+			"minecraft:dragon_head" => "dragon",
+			"minecraft:dragon_wall_head" => "dragon",
+			"minecraft:piglin_head" => "piglin",
+			"minecraft:piglin_wall_head" => "piglin"
+		][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"]);
+		$obj["additions"]["attachment"] = str_contains($group["name"], "wall") ? "wall" : "floor";
+		$obj["internal_tile"] = ["type", "attachment"];
+		if (!str_contains($group["name"], "wall")) {
+			$obj["renames"]["rotation"] = "rot";
+			$obj["internal_tile"][] = "rot";
+			$obj["additions"]["facing_direction"] = "1";
+			unset($obj["remaps"]["facing_direction"]);
+			if ($obj["remaps"] !== []) {
+				throw new Exception("Unexpected remaps: " . json_encode($obj["remaps"]));
+			}
+			unset($obj["remaps"]);
+		}
 	}
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:flower_pot") {
-		$obj["internal_tile"] = ["type" => [
-				"minecraft:flower_pot" => "none",
-				"minecraft:potted_acacia_sapling" => "minecraft:acacia_sapling",
-				"minecraft:potted_allium" => "minecraft:allium",
-				"minecraft:potted_azalea_bush" => "minecraft:azalea",
-				"minecraft:potted_azure_bluet" => "minecraft:azure_bluet",
-				"minecraft:potted_bamboo" => "minecraft:bamboo",
-				"minecraft:potted_birch_sapling" => "minecraft:birch_sapling",
-				"minecraft:potted_blue_orchid" => "minecraft:blue_orchid",
-				"minecraft:potted_brown_mushroom" => "minecraft:brown_mushroom",
-				"minecraft:potted_cactus" => "minecraft:cactus",
-				"minecraft:potted_cornflower" => "minecraft:cornflower",
-				"minecraft:potted_crimson_fungus" => "minecraft:crimson_fungus",
-				"minecraft:potted_crimson_roots" => "minecraft:crimson_roots",
-				"minecraft:potted_dandelion" => "minecraft:dandelion",
-				"minecraft:potted_dark_oak_sapling" => "minecraft:dark_oak_sapling",
-				"minecraft:potted_dead_bush" => "minecraft:dead_bush",
-				"minecraft:potted_fern" => "minecraft:fern",
-				"minecraft:potted_flowering_azalea_bush" => "minecraft:flowering_azalea",
-				"minecraft:potted_jungle_sapling" => "minecraft:jungle_sapling",
-				"minecraft:potted_lily_of_the_valley" => "minecraft:lily_of_the_valley",
-				"minecraft:potted_mangrove_propagule" => "minecraft:mangrove_propagule",
-				"minecraft:potted_oak_sapling" => "minecraft:oak_sapling",
-				"minecraft:potted_orange_tulip" => "minecraft:orange_tulip",
-				"minecraft:potted_oxeye_daisy" => "minecraft:oxeye_daisy",
-				"minecraft:potted_pink_tulip" => "minecraft:pink_tulip",
-				"minecraft:potted_poppy" => "minecraft:poppy",
-				"minecraft:potted_red_mushroom" => "minecraft:red_mushroom",
-				"minecraft:potted_red_tulip" => "minecraft:red_tulip",
-				"minecraft:potted_spruce_sapling" => "minecraft:spruce_sapling",
-				"minecraft:potted_warped_fungus" => "minecraft:warped_fungus",
-				"minecraft:potted_warped_roots" => "minecraft:warped_roots",
-				"minecraft:potted_white_tulip" => "minecraft:white_tulip",
-				"minecraft:potted_wither_rose" => "minecraft:wither_rose"
-			][$group["name"]] ?? throw new Exception("Unknown flower pot type: " . $group["name"])];
+		$obj["additions"]["type"] = [
+			"minecraft:flower_pot" => "none",
+			"minecraft:potted_acacia_sapling" => "minecraft:acacia_sapling",
+			"minecraft:potted_allium" => "minecraft:allium",
+			"minecraft:potted_azalea_bush" => "minecraft:azalea",
+			"minecraft:potted_azure_bluet" => "minecraft:azure_bluet",
+			"minecraft:potted_bamboo" => "minecraft:bamboo",
+			"minecraft:potted_birch_sapling" => "minecraft:birch_sapling",
+			"minecraft:potted_blue_orchid" => "minecraft:blue_orchid",
+			"minecraft:potted_brown_mushroom" => "minecraft:brown_mushroom",
+			"minecraft:potted_cactus" => "minecraft:cactus",
+			"minecraft:potted_cornflower" => "minecraft:cornflower",
+			"minecraft:potted_crimson_fungus" => "minecraft:crimson_fungus",
+			"minecraft:potted_crimson_roots" => "minecraft:crimson_roots",
+			"minecraft:potted_dandelion" => "minecraft:dandelion",
+			"minecraft:potted_dark_oak_sapling" => "minecraft:dark_oak_sapling",
+			"minecraft:potted_dead_bush" => "minecraft:dead_bush",
+			"minecraft:potted_fern" => "minecraft:fern",
+			"minecraft:potted_flowering_azalea_bush" => "minecraft:flowering_azalea",
+			"minecraft:potted_jungle_sapling" => "minecraft:jungle_sapling",
+			"minecraft:potted_lily_of_the_valley" => "minecraft:lily_of_the_valley",
+			"minecraft:potted_mangrove_propagule" => "minecraft:mangrove_propagule",
+			"minecraft:potted_oak_sapling" => "minecraft:oak_sapling",
+			"minecraft:potted_orange_tulip" => "minecraft:orange_tulip",
+			"minecraft:potted_oxeye_daisy" => "minecraft:oxeye_daisy",
+			"minecraft:potted_pink_tulip" => "minecraft:pink_tulip",
+			"minecraft:potted_poppy" => "minecraft:poppy",
+			"minecraft:potted_red_mushroom" => "minecraft:red_mushroom",
+			"minecraft:potted_red_tulip" => "minecraft:red_tulip",
+			"minecraft:potted_spruce_sapling" => "minecraft:spruce_sapling",
+			"minecraft:potted_warped_fungus" => "minecraft:warped_fungus",
+			"minecraft:potted_warped_roots" => "minecraft:warped_roots",
+			"minecraft:potted_white_tulip" => "minecraft:white_tulip",
+			"minecraft:potted_wither_rose" => "minecraft:wither_rose"
+		][$group["name"]] ?? throw new Exception("Unknown flower pot type: " . $group["name"]);
+		$obj["internal_tile"] = ["type"];
 	}
 
 	if (!isset($obj["name"]) && !isset($obj["identifier"])) {
@@ -1034,8 +1046,8 @@ foreach ($groupsJtb as $group) {
 $oder = ["name", "additions", "removals", "renames", "remaps", "identifier", "mapping", "values", "defaults", "internal_tile"];
 
 foreach ($jtb as $name => $block) {
-	if (isset($block["name"]) && $block["name"] === "minecraft:flower_pot" && $block["internal_tile"]["type"] !== "none") {
-		$block["internal_tile"]["type"] = toBedrock($block["internal_tile"]["type"], $jtb);
+	if (isset($block["name"]) && $block["name"] === "minecraft:flower_pot" && $block["additions"]["type"] !== "none") {
+		$block["additions"]["type"] = toBedrock($block["additions"]["type"], $jtb);
 	}
 	if ($block["values"] === []) unset($block["values"]);
 	if ($block["defaults"] === []) unset($block["defaults"]);
@@ -1239,9 +1251,9 @@ function toBedrock(string $java, $jtb): string|null
 }
 
 /**
- * @param mixed  $data
+ * @param mixed $data
  * @param string $javaName
- * @param array  $states
+ * @param array $states
  * @return string
  */
 function processState(mixed $data, string $javaName, array $states): string
@@ -1270,6 +1282,9 @@ function processState(mixed $data, string $javaName, array $states): string
 	}
 	processStates($states, $data);
 	processStates($states, $d);
+	foreach ($data["internal_tile"] ?? [] as $key) {
+		unset($states[$key]);
+	}
 	return sortState(($d["name"] ?? $data["name"] ?? $javaName) . (count($states) === 0 ? "" : "[" . implode(",", array_map(static function (string $key, string $value) {
 				return "$key=$value";
 			}, array_keys($states), $states)) . "]"));
@@ -1292,7 +1307,7 @@ function processStates(&$states, $data)
 		}
 	}
 	/**
-	 * @var string   $state
+	 * @var string $state
 	 * @var string[] $values
 	 */
 	foreach ($data["remaps"] ?? [] as $state => $values) {
@@ -1574,6 +1589,7 @@ function merge(mixed $a, mixed $b, string $bedrock): mixed
 	} elseif (count($res["removals"] ?? []) === 1 && count($a["removals"] ?? []) === 0 && count($b["removals"] ?? []) === 0) {
 		$res["identifier"] = [array_key_first($res["removals"])];
 	} else {
+		echo json_encode($potValues) . PHP_EOL;
 		throw new Exception("Failed to find multi name for $bedrock ($nameA, $nameB)" . json_encode($res) . json_encode($a) . json_encode($b));
 	}
 	$mapping = [];
@@ -1611,7 +1627,7 @@ function merge(mixed $a, mixed $b, string $bedrock): mixed
 	$write($mapping, array_map(fn($a) => $potValues[$a][1], $res["identifier"]), $objB);
 	$res["mapping"] = $mapping;
 	if (isset($a["internal_tile"])) {
-		foreach (array_keys($a["internal_tile"]) as $key) {
+		foreach ($a["internal_tile"] as $key) {
 			$res["internal_tile"][$key] = $customData["btj_tile_default"][$bedrock][$key];
 		}
 	}
@@ -1624,9 +1640,6 @@ function flipStateTranslation(&$state, $bedrockData): void
 		$state["removals"] = array_merge($state["removals"] ?? [], $bedrockData["additions"]);
 	}
 	if (isset($bedrockData["internal_tile"])) {
-		foreach ($bedrockData["internal_tile"] as $key => $value) {
-			$state["removals"][$key] = $value;
-		}
 		$state["internal_tile"] = array_merge($state["internal_tile"] ?? [], $bedrockData["internal_tile"]);
 	}
 	if (isset($bedrockData["renames"])) {
@@ -1648,10 +1661,21 @@ function flipStateTranslation(&$state, $bedrockData): void
 
 $btj["minecraft:invisible_bedrock"] = ["name" => "minecraft:barrier"];
 
-foreach ($btj as $name => $block) {
-	if (isset($block["removals"])) {
-		$block["removals"] = array_keys($block["removals"]);
+function switchRemovals($a): mixed
+{
+	if (isset($a["removals"])) {
+		$a["removals"] = array_keys($a["removals"]);
 	}
+	foreach ($a as $key => $c) {
+		if (is_array($c)) {
+			$a[$key] = switchRemovals($c);
+		}
+	}
+	return $a;
+}
+
+foreach ($btj as $name => $block) {
+	$block = switchRemovals($block);
 	if (($block["defaults"] ?? []) === []) unset($block["defaults"]);
 	foreach ($block["renames"] ?? [] as $key => $value) {
 		if ($key === $value) unset($block["renames"][$key]);
