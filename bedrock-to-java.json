@@ -4118,8 +4118,7 @@
             }
         },
         "defaults": {
-            "facing": "north",
-            "rotation": "0"
+            "facing": "north"
         },
         "tile_extra": {
             "type": "skeleton",
