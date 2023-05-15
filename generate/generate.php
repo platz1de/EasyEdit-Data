@@ -1251,9 +1251,9 @@ function toBedrock(string $java, $jtb): string|null
 }
 
 /**
- * @param mixed $data
+ * @param mixed  $data
  * @param string $javaName
- * @param array $states
+ * @param array  $states
  * @return string
  */
 function processState(mixed $data, string $javaName, array $states): string
@@ -1307,7 +1307,7 @@ function processStates(&$states, $data)
 		}
 	}
 	/**
-	 * @var string $state
+	 * @var string   $state
 	 * @var string[] $values
 	 */
 	foreach ($data["remaps"] ?? [] as $state => $values) {
@@ -1662,8 +1662,11 @@ function flipStateTranslation(&$state, $bedrockData): void
 $btj["minecraft:invisible_bedrock"] = ["name" => "minecraft:barrier"];
 
 //TODO: Add defaults to mapped blocks
-unset($btj["minecraft:skull"]["defaults"], $btj["minecraft:skull"]["tile_extra"]["rot"]); //This shouldn't be added to different types
-//Note: We trust mapping users to only add the rot property to the correct blocks
+unset($btj["minecraft:skull"]["defaults"]); //This shouldn't be added to different types
+foreach ($btj["minecraft:skull"]["mapping"] as &$mapping) {
+	$mapping["wall"]["removals"]["rot"] = 0;
+}
+unset($mapping);
 
 function switchRemovals($a): mixed
 {
