@@ -4117,13 +4117,9 @@
                 }
             }
         },
-        "defaults": {
-            "facing": "north"
-        },
         "tile_extra": {
             "type": "skeleton",
-            "attachment": "floor",
-            "rot": "0"
+            "attachment": "floor"
         }
     },
     "minecraft:crimson_button": {

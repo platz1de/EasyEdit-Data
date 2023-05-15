@@ -1662,7 +1662,8 @@ function flipStateTranslation(&$state, $bedrockData): void
 $btj["minecraft:invisible_bedrock"] = ["name" => "minecraft:barrier"];
 
 //TODO: Add defaults to mapped blocks
-unset ($btj["minecraft:skull"]["defaults"]["rotation"]); //This shouldn't be added to wall types
+unset($btj["minecraft:skull"]["defaults"], $btj["minecraft:skull"]["tile_extra"]["rot"]); //This shouldn't be added to different types
+//Note: We trust mapping users to only add the rot property to the correct blocks
 
 function switchRemovals($a): mixed
 {

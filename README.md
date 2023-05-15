@@ -60,7 +60,7 @@ The following tile extra data is supported:
 | Beds       | color          | The color of the bed                                          |
 | Mob heads  | type           | The type of the mob head (id name of mob)                     |
 | Mob heads  | attachment     | The attachment of the mob head ("wall" / "floor")             |
-| Mob heads  | rot            | The rotation of the mob head (0-15), 0 if on wall             |
+| Mob heads  | rot            | The rotation of the mob head (0-15), ONLY if on floor         |
 | Flower pot | type           | Contents of flower pot (bedrock block state), "none" if empty |
 
 ## Manipulation format
