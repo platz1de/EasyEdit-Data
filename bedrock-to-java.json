@@ -1787,7 +1787,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": {
+        "tile_extra": {
             "color": "white"
         }
     },
@@ -1871,7 +1871,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": {
+        "tile_extra": {
             "color": "white"
         }
     },
@@ -2426,7 +2426,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": {
+        "tile_extra": {
             "color": "white"
         }
     },
@@ -4121,7 +4121,7 @@
             "facing": "north",
             "rotation": "0"
         },
-        "internal_tile": {
+        "tile_extra": {
             "type": "player",
             "attachment": "floor",
             "rot": "0"
@@ -5983,7 +5983,7 @@
                 "name": "minecraft:potted_wither_rose"
             }
         },
-        "internal_tile": {
+        "tile_extra": {
             "type": "empty"
         }
     },

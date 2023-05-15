@@ -948,13 +948,13 @@ foreach ($groupsJtb as $group) {
 		if (str_ends_with($obj["additions"]["color"], "_wall")) {
 			$obj["additions"]["color"] = substr($obj["additions"]["color"], 0, -5);
 		}
-		$obj["internal_tile"] = ["color"];
+		$obj["tile_extra"] = ["color"];
 	}
 
 	if (str_ends_with($group["name"], "bed")) {
 		preg_match("/minecraft:([a-z_]*)_bed/", $group["name"], $matches);
 		$obj["additions"]["color"] = $matches[1] ?? throw new Exception("Invalid bed name: " . $group["name"]);
-		$obj["internal_tile"] = ["color"];
+		$obj["tile_extra"] = ["color"];
 	}
 
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
@@ -975,10 +975,10 @@ foreach ($groupsJtb as $group) {
 			"minecraft:piglin_wall_head" => "piglin"
 		][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"]);
 		$obj["additions"]["attachment"] = str_contains($group["name"], "wall") ? "wall" : "floor";
-		$obj["internal_tile"] = ["type", "attachment"];
+		$obj["tile_extra"] = ["type", "attachment"];
 		if (!str_contains($group["name"], "wall")) {
 			$obj["renames"]["rotation"] = "rot";
-			$obj["internal_tile"][] = "rot";
+			$obj["tile_extra"][] = "rot";
 			$obj["additions"]["facing_direction"] = "1";
 			unset($obj["remaps"]["facing_direction"]);
 			if ($obj["remaps"] !== []) {
@@ -1023,7 +1023,7 @@ foreach ($groupsJtb as $group) {
 			"minecraft:potted_white_tulip" => "minecraft:white_tulip",
 			"minecraft:potted_wither_rose" => "minecraft:wither_rose"
 		][$group["name"]] ?? throw new Exception("Unknown flower pot type: " . $group["name"]);
-		$obj["internal_tile"] = ["type"];
+		$obj["tile_extra"] = ["type"];
 	}
 
 	if (!isset($obj["name"]) && !isset($obj["identifier"])) {
@@ -1043,7 +1043,7 @@ foreach ($groupsJtb as $group) {
 	$failed ? $failedJTB[$group["name"]] = $obj : $jtb[$group["name"]] = $obj;
 }
 
-$oder = ["name", "additions", "removals", "renames", "remaps", "identifier", "mapping", "values", "defaults", "internal_tile"];
+$oder = ["name", "additions", "removals", "renames", "remaps", "identifier", "mapping", "values", "defaults", "tile_extra"];
 
 foreach ($jtb as $name => $block) {
 	if (isset($block["name"]) && $block["name"] === "minecraft:flower_pot" && $block["additions"]["type"] !== "none") {
@@ -1282,7 +1282,7 @@ function processState(mixed $data, string $javaName, array $states): string
 	}
 	processStates($states, $data);
 	processStates($states, $d);
-	foreach ($data["internal_tile"] ?? [] as $key) {
+	foreach ($data["tile_extra"] ?? [] as $key) {
 		unset($states[$key]);
 	}
 	return sortState(($d["name"] ?? $data["name"] ?? $javaName) . (count($states) === 0 ? "" : "[" . implode(",", array_map(static function (string $key, string $value) {
@@ -1626,9 +1626,9 @@ function merge(mixed $a, mixed $b, string $bedrock): mixed
 	$write($mapping, array_map(fn($a) => $potValues[$a][0], $res["identifier"]), $objA);
 	$write($mapping, array_map(fn($a) => $potValues[$a][1], $res["identifier"]), $objB);
 	$res["mapping"] = $mapping;
-	if (isset($a["internal_tile"])) {
-		foreach ($a["internal_tile"] as $key) {
-			$res["internal_tile"][$key] = $customData["btj_tile_default"][$bedrock][$key];
+	if (isset($a["tile_extra"])) {
+		foreach ($a["tile_extra"] as $key) {
+			$res["tile_extra"][$key] = $customData["btj_tile_default"][$bedrock][$key];
 		}
 	}
 	return $res;
@@ -1639,8 +1639,8 @@ function flipStateTranslation(&$state, $bedrockData): void
 	if (isset($bedrockData["additions"])) {
 		$state["removals"] = array_merge($state["removals"] ?? [], $bedrockData["additions"]);
 	}
-	if (isset($bedrockData["internal_tile"])) {
-		$state["internal_tile"] = array_merge($state["internal_tile"] ?? [], $bedrockData["internal_tile"]);
+	if (isset($bedrockData["tile_extra"])) {
+		$state["tile_extra"] = array_merge($state["tile_extra"] ?? [], $bedrockData["tile_extra"]);
 	}
 	if (isset($bedrockData["renames"])) {
 		$state["renames"] = array_merge($state["renames"] ?? [], array_flip($bedrockData["renames"]));

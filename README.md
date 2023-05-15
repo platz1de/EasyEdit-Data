@@ -27,16 +27,16 @@ The [data repo file](dataRepo.json) contains a list of urls to the mappings for 
 
 Every entry deals with a single java state. The key is the java state, the value is a translation mapping:
 
-| Key           | Value                                 | Description                                              | Default (if not set) |
-|---------------|---------------------------------------|----------------------------------------------------------|----------------------|
-| name          | string                                | The bedrock state name                                   | java state name      |
-| additions     | object: bedrockState -> bedrockValue  | Adds additional bedrock states                           | no additions         |
-| removals      | array of javaStates                   | Removes java states                                      | no removals          |
-| renames       | object: javaState -> bedrockState     | Renames the java state                                   | no renames           |
-| remaps        | object: bedrockState -> value mapping | Remaps state values                                      | no remaps            |
-| values        | object: stateName -> array of values  | List of all possible state values                        | no state data        |
-| defaults      | object: stateName -> value            | The default java states                                  | empty state data     |
-| internal_tile | object                                | data saved in block entity ([details](#Tile-extra-data)) | no extra data        |
+| Key        | Value                                 | Description                                              | Default (if not set) |
+|------------|---------------------------------------|----------------------------------------------------------|----------------------|
+| name       | string                                | The bedrock state name                                   | java state name      |
+| additions  | object: bedrockState -> bedrockValue  | Adds additional bedrock states                           | no additions         |
+| removals   | array of javaStates                   | Removes java states                                      | no removals          |
+| renames    | object: javaState -> bedrockState     | Renames the java state                                   | no renames           |
+| remaps     | object: bedrockState -> value mapping | Remaps state values                                      | no remaps            |
+| values     | object: stateName -> array of values  | List of all possible state values                        | no state data        |
+| defaults   | object: stateName -> value            | The default java states                                  | empty state data     |
+| tile_extra | object                                | data saved in block entity ([details](#Tile-extra-data)) | no extra data        |
 
 If no 1:1 mapping is possible, the java state will be split as follows:
 
@@ -50,7 +50,7 @@ Multiple mappings with the same values may be bundled with the key "def", if no 
 
 ### Tile extra data
 
-Bedrock saves some extra data in block entities, which is contained in the block state in java. If a state requires this extra data, it specified in the `internal_tile` key and needs to be removed after conversion from java to bedrock or added before conversion from bedrock to java (if this information is unknown, specify the value of the `internal_tile` key).
+Bedrock saves some extra data in block entities, which is contained in the block state in java. If a state requires this extra data, it specified in the `tile_extra` key and needs to be removed after conversion from java to bedrock or added before conversion from bedrock to java (if this information is unknown, specify the value of the `tile_extra` key).
 
 The following tile extra data is supported:
 

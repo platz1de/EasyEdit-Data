@@ -2067,7 +2067,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -2114,7 +2114,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -2310,7 +2310,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -2567,7 +2567,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -2614,7 +2614,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -2817,7 +2817,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -3168,7 +3168,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -3215,7 +3215,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -3556,7 +3556,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -4758,7 +4758,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment",
             "rot"
@@ -4792,7 +4792,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment"
         ]
@@ -5527,7 +5527,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -5574,7 +5574,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -5770,7 +5770,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -7653,7 +7653,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment",
             "rot"
@@ -7687,7 +7687,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment"
         ]
@@ -8286,7 +8286,7 @@
             "update_bit": "false",
             "type": "none"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -9179,7 +9179,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -9226,7 +9226,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -9422,7 +9422,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -9458,7 +9458,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -9505,7 +9505,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -9701,7 +9701,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11262,7 +11262,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11309,7 +11309,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11505,7 +11505,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11541,7 +11541,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11588,7 +11588,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11784,7 +11784,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11925,7 +11925,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -11972,7 +11972,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -12168,7 +12168,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -12230,7 +12230,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -12277,7 +12277,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -12473,7 +12473,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -14806,7 +14806,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -14853,7 +14853,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -15055,7 +15055,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -15286,7 +15286,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment",
             "rot"
@@ -15320,7 +15320,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment"
         ]
@@ -15356,7 +15356,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -15403,7 +15403,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -15605,7 +15605,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -15733,7 +15733,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment",
             "rot"
@@ -15767,7 +15767,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment"
         ]
@@ -16825,7 +16825,7 @@
             "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=acacia]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16835,7 +16835,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=allium]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16845,7 +16845,7 @@
             "update_bit": "false",
             "type": "minecraft:azalea"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16855,7 +16855,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=houstonia]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16865,7 +16865,7 @@
             "update_bit": "false",
             "type": "minecraft:bamboo[age_bit=false,bamboo_leaf_size=no_leaves,bamboo_stalk_thickness=thin]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16875,7 +16875,7 @@
             "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=birch]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16885,7 +16885,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=orchid]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16895,7 +16895,7 @@
             "update_bit": "false",
             "type": "minecraft:brown_mushroom"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16905,7 +16905,7 @@
             "update_bit": "false",
             "type": "minecraft:cactus[age=0]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16915,7 +16915,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=cornflower]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16925,7 +16925,7 @@
             "update_bit": "false",
             "type": "minecraft:crimson_fungus"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16935,7 +16935,7 @@
             "update_bit": "false",
             "type": "minecraft:crimson_roots"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16945,7 +16945,7 @@
             "update_bit": "false",
             "type": "minecraft:yellow_flower"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16955,7 +16955,7 @@
             "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=dark_oak]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16965,7 +16965,7 @@
             "update_bit": "false",
             "type": "minecraft:deadbush"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16975,7 +16975,7 @@
             "update_bit": "false",
             "type": "minecraft:tallgrass[tall_grass_type=fern]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16985,7 +16985,7 @@
             "update_bit": "false",
             "type": "minecraft:flowering_azalea"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -16995,7 +16995,7 @@
             "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=jungle]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17005,7 +17005,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=lily_of_the_valley]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17015,7 +17015,7 @@
             "update_bit": "false",
             "type": "minecraft:mangrove_propagule[hanging=false,propagule_stage=0]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17025,7 +17025,7 @@
             "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=oak]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17035,7 +17035,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_orange]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17045,7 +17045,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=oxeye]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17055,7 +17055,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_pink]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17065,7 +17065,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=poppy]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17075,7 +17075,7 @@
             "update_bit": "false",
             "type": "minecraft:red_mushroom"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17085,7 +17085,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_red]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17095,7 +17095,7 @@
             "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=spruce]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17105,7 +17105,7 @@
             "update_bit": "false",
             "type": "minecraft:warped_fungus"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17115,7 +17115,7 @@
             "update_bit": "false",
             "type": "minecraft:warped_roots"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17125,7 +17125,7 @@
             "update_bit": "false",
             "type": "minecraft:red_flower[flower_type=tulip_white]"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17135,7 +17135,7 @@
             "update_bit": "false",
             "type": "minecraft:wither_rose"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type"
         ]
     },
@@ -17564,7 +17564,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -17611,7 +17611,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -17807,7 +17807,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -18142,7 +18142,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -18189,7 +18189,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -18917,7 +18917,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -20224,7 +20224,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment",
             "rot"
@@ -20258,7 +20258,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment"
         ]
@@ -24119,7 +24119,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -24166,7 +24166,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -24368,7 +24368,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -24407,7 +24407,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment",
             "rot"
@@ -24441,7 +24441,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment"
         ]
@@ -24477,7 +24477,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -24524,7 +24524,7 @@
             "occupied": "false",
             "part": "foot"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -24720,7 +24720,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "color"
         ]
     },
@@ -24758,7 +24758,7 @@
         "defaults": {
             "rotation": "0"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment",
             "rot"
@@ -24792,7 +24792,7 @@
         "defaults": {
             "facing": "north"
         },
-        "internal_tile": [
+        "tile_extra": [
             "type",
             "attachment"
         ]
