@@ -732,7 +732,7 @@
 	  "color": "white"
 	},
 	"minecraft:skull": {
-	  "type": "player",
+	  "type": "skeleton",
 	  "attachment": "floor",
 	  "rot": "0"
 	},

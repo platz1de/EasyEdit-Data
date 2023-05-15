@@ -4122,7 +4122,7 @@
             "rotation": "0"
         },
         "tile_extra": {
-            "type": "player",
+            "type": "skeleton",
             "attachment": "floor",
             "rot": "0"
         }
