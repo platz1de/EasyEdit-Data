@@ -1788,7 +1788,7 @@
             "rotation": "0"
         },
         "tile_extra": {
-            "color": "white"
+            "color": "black"
         }
     },
     "minecraft:bed": {
@@ -2427,7 +2427,7 @@
             "facing": "north"
         },
         "tile_extra": {
-            "color": "white"
+            "color": "black"
         }
     },
     "minecraft:black_wool": [],

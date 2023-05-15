@@ -723,10 +723,10 @@
   },
   "btj_tile_default": {
 	"minecraft:standing_banner": {
-	  "color": "white"
+	  "color": "black"
 	},
 	"minecraft:wall_banner": {
-	  "color": "white"
+	  "color": "black"
 	},
 	"minecraft:bed": {
 	  "color": "white"
