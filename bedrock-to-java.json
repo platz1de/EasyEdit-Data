@@ -12699,5 +12699,95 @@
     "minecraft:yellow_wool": [],
     "minecraft:invisible_bedrock": {
         "name": "minecraft:barrier"
+    },
+    "minecraft:underwater_torch": {
+        "additions": [],
+        "removals": [],
+        "remaps": [],
+        "identifier": [
+            "torch_facing_direction"
+        ],
+        "mapping": {
+            "top": {
+                "name": "minecraft:torch"
+            },
+            "def": {
+                "name": "minecraft:wall_torch",
+                "renames": {
+                    "torch_facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "west": "east",
+                        "south": "north",
+                        "north": "south",
+                        "east": "west"
+                    }
+                }
+            }
+        },
+        "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:colored_torch_rg": {
+        "additions": [],
+        "removals": [],
+        "remaps": [],
+        "identifier": [
+            "torch_facing_direction"
+        ],
+        "mapping": {
+            "top": {
+                "name": "minecraft:torch"
+            },
+            "def": {
+                "name": "minecraft:wall_torch",
+                "renames": {
+                    "torch_facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "west": "east",
+                        "south": "north",
+                        "north": "south",
+                        "east": "west"
+                    }
+                }
+            }
+        },
+        "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:colored_torch_bp": {
+        "additions": [],
+        "removals": [],
+        "remaps": [],
+        "identifier": [
+            "torch_facing_direction"
+        ],
+        "mapping": {
+            "top": {
+                "name": "minecraft:torch"
+            },
+            "def": {
+                "name": "minecraft:wall_torch",
+                "renames": {
+                    "torch_facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "west": "east",
+                        "south": "north",
+                        "north": "south",
+                        "east": "west"
+                    }
+                }
+            }
+        },
+        "defaults": {
+            "facing": "north"
+        }
     }
 }

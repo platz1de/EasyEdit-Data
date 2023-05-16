@@ -1224,6 +1224,13 @@ foreach ($bedrockDefaults as $name => $block) {
 		}
 	}
 }
+
+$bedrockDefaults["minecraft:underwater_torch"] = $bedrockDefaults["minecraft:torch"];
+$bedrockDefaults["minecraft:colored_torch_rg"] = $bedrockDefaults["minecraft:torch"];
+$bedrockDefaults["minecraft:colored_torch_rg"]["color_bit"] = "0";
+$bedrockDefaults["minecraft:colored_torch_bp"] = $bedrockDefaults["minecraft:torch"];
+$bedrockDefaults["minecraft:colored_torch_bp"]["color_bit"] = "1";
+
 file_put_contents("../bedrock-defaults.json", json_encode($bedrockDefaults, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
 
@@ -1669,6 +1676,9 @@ function flipStateTranslation(&$state, $bedrockData): void
 }
 
 $btj["minecraft:invisible_bedrock"] = ["name" => "minecraft:barrier"];
+$btj["minecraft:underwater_torch"] = $btj["minecraft:torch"];
+$btj["minecraft:colored_torch_rg"] = $btj["minecraft:torch"];
+$btj["minecraft:colored_torch_bp"] = $btj["minecraft:torch"];
 
 //TODO: Add defaults to mapped blocks
 unset($btj["minecraft:skull"]["defaults"]); //This shouldn't be added to different types

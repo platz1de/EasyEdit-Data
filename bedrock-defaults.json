@@ -1545,5 +1545,16 @@
     },
     "minecraft:yellow_glazed_terracotta": {
         "facing_direction": "2"
+    },
+    "minecraft:underwater_torch": {
+        "torch_facing_direction": "top"
+    },
+    "minecraft:colored_torch_rg": {
+        "torch_facing_direction": "top",
+        "color_bit": "0"
+    },
+    "minecraft:colored_torch_bp": {
+        "torch_facing_direction": "top",
+        "color_bit": "1"
     }
 }
