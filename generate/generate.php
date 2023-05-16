@@ -1920,3 +1920,105 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 		$missing["$id ($state)"] = $newState;
 	}
 }
+
+
+$tags = [];
+$versions = json_decode(getData("https://piston-meta.mojang.com/mc/game/version_manifest_v2.json"), true, 512, JSON_THROW_ON_ERROR);
+$latest = $versions["latest"]["release"];
+foreach ($versions["versions"] as $ver) {
+	if ($ver["id"] === $latest) {
+		$version = json_decode(getData($ver["url"]), true, 512, JSON_THROW_ON_ERROR);
+		break;
+	}
+}
+if (!isset($version)) {
+	throw new RuntimeException("Failed to find latest version");
+}
+echo "Downloading " . $version["id"] . PHP_EOL;
+$client = getData($version["downloads"]["client"]["url"]);
+file_put_contents("client.jar", $client);
+$zip = new ZipArchive();
+$zip->open("client.jar");
+for ($i = 0; $i < $zip->numFiles; $i++) {
+	$name = $zip->getNameIndex($i);
+	if (str_starts_with($name, "data/minecraft/tags/blocks")) {
+		$stream = $zip->getStream($name);
+		$data = json_decode(stream_get_contents($stream), true, 512, JSON_THROW_ON_ERROR);
+		fclose($stream);
+		if (array_keys($data) !== ["values"]) {
+			throw new RuntimeException("Invalid tag $name");
+		}
+		$name = str_replace(["data/minecraft/tags/blocks/", ".json"], ["", ""], $name);
+		$states = [];
+		foreach ($data["values"] as $state) {
+			if (str_starts_with($state, "#")) {
+				$states[] = $state;
+				continue;
+			}
+			//Get all bedrock names for this state
+			$bedrockNames = [];
+			if (!isset($jtb[$state])) {
+				echo "Missing $state" . PHP_EOL;
+				continue;
+			}
+			$data = $jtb[$state];
+			if (isset($data["name"])) {
+				$bedrockNames[] = $data["name"];
+			}
+			if (isset($data["mapping"])) {
+				findBedrockTypes($data["mapping"], $bedrockNames);
+			}
+			if (empty($bedrockNames)) {
+				$bedrockNames[] = $state;
+			}
+			foreach ($bedrockNames as $n) {
+				$states[] = $n;
+			}
+		}
+		$tags[$name] = $states;
+	}
+}
+function findBedrockTypes($a, &$b)
+{
+	foreach ($a as $v) {
+		if (is_array($v)) {
+			if (isset($v["name"])) {
+				$b[] = $v["name"];
+			}
+			findBedrockTypes($v, $b);
+		}
+	}
+}
+
+$zip->close();
+unlink("client.jar");
+
+foreach (scandir("tags") as $patch) {
+	if ($patch === "." || $patch === "..") {
+		continue;
+	}
+	$tagData = json_decode(file_get_contents("tags/$patch"), true, 512, JSON_THROW_ON_ERROR);
+	$patch = str_replace(".json", "", $patch);
+	$tags[$patch] = $tagData;
+}
+$changed = true;
+while ($changed) {
+	$changed = false;
+	foreach ($tags as $tag => $values) {
+		foreach ($values as $i => $value) {
+			if (str_starts_with($value, "#")) {
+				$changed = true;
+				$tags[$tag] = array_merge(array_slice($values, 0, $i), $tags[str_replace("minecraft:", "", substr($value, 1))], array_slice($values, $i + 1));
+				break;
+			}
+		}
+	}
+}
+
+foreach ($tags as $tag => $values) {
+	$tags[$tag] = array_values(array_unique($values));
+}
+ksort($tags);
+#echo implode("`\n- `", array_keys($tags));
+
+file_put_contents("../block-tags.json", json_encode($tags, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));

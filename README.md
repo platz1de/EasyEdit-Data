@@ -18,6 +18,8 @@ Data sources:
 | bedrock-to-java.json       | Bedrock state to java state                     | [see below](#State-conversion-format) |
 | manipulation-data.json     | Data for block manipulation                     | [see below](#Manipulation-format)     |
 | item-conversion-map.json   | Basic item conversion (e.g. for chest contents) | javaID -> bedrockID + damage value    |
+| bedrock-defaults.json      | Default values for bedrock states               | bedrockState -> values                |
+| block-tags.json            | A list of block tags (already fully flattened)  | tagName -> states                     |
 
 ### Versioning
 

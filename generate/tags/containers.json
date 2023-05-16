@@ -1,0 +1,10 @@
+[
+  "#minecraft:chests",
+  "#minecraft:furnaces",
+  "minecraft:barrel",
+  "minecraft:hopper",
+  "minecraft:dispenser",
+  "minecraft:dropper",
+  "minecraft:shulker_box",
+  "minecraft:brewing_stand"
+]
