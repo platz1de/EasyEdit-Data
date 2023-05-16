@@ -1227,9 +1227,9 @@ foreach ($bedrockDefaults as $name => $block) {
 
 $bedrockDefaults["minecraft:underwater_torch"] = $bedrockDefaults["minecraft:torch"];
 $bedrockDefaults["minecraft:colored_torch_rg"] = $bedrockDefaults["minecraft:torch"];
-$bedrockDefaults["minecraft:colored_torch_rg"]["color_bit"] = "0";
+$bedrockDefaults["minecraft:colored_torch_rg"]["color_bit"] = false;
 $bedrockDefaults["minecraft:colored_torch_bp"] = $bedrockDefaults["minecraft:torch"];
-$bedrockDefaults["minecraft:colored_torch_bp"]["color_bit"] = "1";
+$bedrockDefaults["minecraft:colored_torch_bp"]["color_bit"] = true;
 
 file_put_contents("../bedrock-defaults.json", json_encode($bedrockDefaults, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 
