@@ -738,6 +738,12 @@
 	},
 	"minecraft:flower_pot": {
 	  "type": "empty"
+	},
+	"minecraft:shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:undyed_shulker_box": {
+	  "facing": "north"
 	}
   }
 }

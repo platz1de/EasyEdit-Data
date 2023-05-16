@@ -957,6 +957,12 @@ foreach ($groupsJtb as $group) {
 		$obj["tile_extra"] = ["color"];
 	}
 
+	if (str_ends_with($group["name"], "shulker_box")) {
+		$obj["tile_extra"] = ["facing"];
+		unset($obj["removals"][array_search("facing", $obj["removals"])]);
+		$obj["removals"] = array_values($obj["removals"]);
+	}
+
 	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
 		$obj["additions"]["type"] = [
 			"minecraft:skeleton_skull" => "skeleton",
@@ -1631,7 +1637,7 @@ function merge(mixed $a, mixed $b, string $bedrock): mixed
 	$res["mapping"] = $mapping;
 	if (isset($a["tile_extra"])) {
 		foreach ($a["tile_extra"] as $key) {
-			$res["tile_extra"][$key] = $customData["btj_tile_default"][$bedrock][$key];
+			$res["tile_extra"][] = $key;
 		}
 	}
 	return $res;
@@ -1691,7 +1697,12 @@ foreach ($btj as $name => $block) {
 		if ($key === $value) unset($block["renames"][$key]);
 	}
 	if (($block["renames"] ?? []) === []) unset($block["renames"]);
-
+	if (isset($block["tile_extra"])) {
+		foreach ($block["tile_extra"] as $i => $key) {
+			$block["tile_extra"][$key] = $customData["btj_tile_default"][$name][$key];
+			unset($block["tile_extra"][$i]);
+		}
+	}
 	$ordered = [];
 	foreach ($oder as $key) {
 		if (isset($block[$key])) {

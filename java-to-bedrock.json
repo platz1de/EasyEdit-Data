@@ -2212,9 +2212,7 @@
         "additions": {
             "color": "black"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -2227,7 +2225,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:black_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -2719,9 +2720,7 @@
         "additions": {
             "color": "blue"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -2734,7 +2733,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:blue_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -3458,9 +3460,7 @@
         "additions": {
             "color": "brown"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -3473,7 +3473,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:brown_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -5672,9 +5675,7 @@
         "additions": {
             "color": "cyan"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -5687,7 +5688,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:cyan_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -9324,9 +9328,7 @@
         "additions": {
             "color": "gray"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -9339,7 +9341,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:gray_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -9603,9 +9608,7 @@
         "additions": {
             "color": "green"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -9618,7 +9621,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:green_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -11407,9 +11413,7 @@
         "additions": {
             "color": "light_blue"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -11422,7 +11426,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:light_blue_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -11686,9 +11693,7 @@
         "additions": {
             "color": "silver"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -11701,7 +11706,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:light_gray_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -12070,9 +12078,7 @@
         "additions": {
             "color": "lime"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -12085,7 +12091,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:lime_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -12375,9 +12384,7 @@
         "additions": {
             "color": "magenta"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -12390,7 +12397,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:magenta_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -14951,9 +14961,7 @@
         "additions": {
             "color": "orange"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -14966,7 +14974,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:orange_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -15501,9 +15512,7 @@
         "additions": {
             "color": "pink"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -15516,7 +15525,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:pink_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -17709,9 +17721,7 @@
         "additions": {
             "color": "purple"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -17724,7 +17734,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:purple_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -18813,9 +18826,7 @@
         "additions": {
             "color": "red"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -18828,7 +18839,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:red_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -20137,9 +20151,7 @@
     "minecraft:shroomlight": [],
     "minecraft:shulker_box": {
         "name": "minecraft:undyed_shulker_box",
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -20152,7 +20164,10 @@
         },
         "defaults": {
             "facing": "up"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:sign": {
         "name": "minecraft:standing_sign",
@@ -24264,9 +24279,7 @@
         "additions": {
             "color": "white"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -24279,7 +24292,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:white_stained_glass": {
         "name": "minecraft:stained_glass",
@@ -24622,9 +24638,7 @@
         "additions": {
             "color": "yellow"
         },
-        "removals": [
-            "facing"
-        ],
+        "removals": [],
         "values": {
             "facing": [
                 "down",
@@ -24637,7 +24651,10 @@
         },
         "defaults": {
             "facing": "north"
-        }
+        },
+        "tile_extra": [
+            "facing"
+        ]
     },
     "minecraft:yellow_stained_glass": {
         "name": "minecraft:stained_glass",

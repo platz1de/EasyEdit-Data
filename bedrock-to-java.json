@@ -2097,9 +2097,7 @@
         }
     },
     "minecraft:shulker_box": {
-        "additions": {
-            "facing": "north"
-        },
+        "additions": [],
         "removals": [
             "color"
         ],
@@ -2158,6 +2156,9 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -10712,11 +10713,12 @@
     "minecraft:shroomlight": [],
     "minecraft:undyed_shulker_box": {
         "name": "minecraft:shulker_box",
-        "additions": {
-            "facing": "up"
-        },
+        "additions": [],
         "defaults": {
             "facing": "up"
+        },
+        "tile_extra": {
+            "facing": "north"
         }
     },
     "minecraft:slime": {
