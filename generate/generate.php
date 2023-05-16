@@ -1978,7 +1978,7 @@ for ($i = 0; $i < $zip->numFiles; $i++) {
 			if (isset($data["mapping"])) {
 				findBedrockTypes($data["mapping"], $bedrockNames);
 			}
-			if (empty($bedrockNames)) {
+			if ($bedrockNames === []) {
 				$bedrockNames[] = $state;
 			}
 			foreach ($bedrockNames as $n) {
