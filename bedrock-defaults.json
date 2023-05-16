@@ -1551,10 +1551,10 @@
     },
     "minecraft:colored_torch_rg": {
         "torch_facing_direction": "top",
-        "color_bit": false
+        "color_bit": "false"
     },
     "minecraft:colored_torch_bp": {
         "torch_facing_direction": "top",
-        "color_bit": true
+        "color_bit": "true"
     }
 }
