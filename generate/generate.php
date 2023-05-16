@@ -1131,6 +1131,9 @@ foreach ($jtb as $name => $block) {
 			throw new Exception("Unknown default: " . $key);
 		}
 	}
+	foreach ($block["tile_extra"] ?? [] as $key) {
+		unset($def[$key]);
+	}
 
 	$all = [];
 	if (isset($block["identifier"])) {

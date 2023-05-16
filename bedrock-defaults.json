@@ -206,14 +206,12 @@
         "facing_direction": "2"
     },
     "minecraft:standing_banner": {
-        "ground_sign_direction": "0",
-        "color": "white"
+        "ground_sign_direction": "0"
     },
     "minecraft:bed": {
         "direction": "2",
         "occupied_bit": "false",
-        "head_piece_bit": "false",
-        "color": "white"
+        "head_piece_bit": "false"
     },
     "minecraft:black_candle": {
         "candles": "0",
@@ -247,8 +245,7 @@
         "color": "white"
     },
     "minecraft:wall_banner": {
-        "facing_direction": "2",
-        "color": "white"
+        "facing_direction": "2"
     },
     "minecraft:blackstone_slab": {
         "top_slot_bit": "false"
@@ -450,9 +447,6 @@
         "composter_fill_level": "0"
     },
     "minecraft:skull": {
-        "rot": "0",
-        "type": "skeleton",
-        "attachment": "floor",
         "facing_direction": "1"
     },
     "minecraft:crimson_button": {
@@ -681,8 +675,7 @@
         "age": "0"
     },
     "minecraft:flower_pot": {
-        "update_bit": "false",
-        "type": "none"
+        "update_bit": "false"
     },
     "minecraft:azalea_leaves_flowered": {
         "persistent_bit": "false",
