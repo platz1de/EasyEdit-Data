@@ -1536,7 +1536,7 @@
         "minecraft:soul_soil"
     ],
     "nether_ores": [
-        "minecraft:nether_quartz_ore",
+        "minecraft:quartz_ore",
         "minecraft:nether_gold_ore",
         "minecraft:ancient_debris"
     ],
@@ -1587,7 +1587,7 @@
         "minecraft:deepslate_emerald_ore",
         "minecraft:copper_ore",
         "minecraft:deepslate_copper_ore",
-        "minecraft:nether_quartz_ore",
+        "minecraft:quartz_ore",
         "minecraft:ancient_debris"
     ],
     "overworld_carver_replaceables": [
