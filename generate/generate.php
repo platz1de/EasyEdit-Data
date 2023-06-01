@@ -1694,6 +1694,19 @@ $btj["minecraft:quartz_block"]["mapping"]["smooth"]["removals"]["pillar_axis"] =
 
 $btj["minecraft:beetroot"]["remaps"]["age"] = ["0" => 0, "1" => 0, "2" => 1, "3" => 1, "4" => 2, "5" => 2, "6" => 2, "7" => 3];
 
+unset($btj["minecraft:torch"]["defaults"]["facing"]);
+$btj["minecraft:torch"]["mapping"]["def"]["defaults"]["facing"] = "north";
+$btj["minecraft:torch"]["mapping"]["top"]["removals"]["torch_facing_direction"] = 0;
+unset($btj["minecraft:unlit_redstone_torch"]["defaults"]["facing"]);
+$btj["minecraft:unlit_redstone_torch"]["mapping"]["def"]["defaults"]["facing"] = "north";
+$btj["minecraft:unlit_redstone_torch"]["mapping"]["top"]["removals"]["torch_facing_direction"] = 0;
+unset($btj["minecraft:redstone_torch"]["defaults"]["facing"]);
+$btj["minecraft:redstone_torch"]["mapping"]["def"]["defaults"]["facing"] = "north";
+$btj["minecraft:redstone_torch"]["mapping"]["top"]["removals"]["torch_facing_direction"] = 0;
+unset($btj["minecraft:soul_torch"]["defaults"]["facing"]);
+$btj["minecraft:soul_torch"]["mapping"]["def"]["defaults"]["facing"] = "north";
+$btj["minecraft:soul_torch"]["mapping"]["top"]["removals"]["torch_facing_direction"] = 0;
+
 function switchRemovals($a): mixed
 {
 	if (isset($a["removals"])) {

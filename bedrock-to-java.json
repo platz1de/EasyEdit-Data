@@ -9900,7 +9900,10 @@
         ],
         "mapping": {
             "top": {
-                "name": "minecraft:redstone_torch"
+                "name": "minecraft:redstone_torch",
+                "removals": [
+                    "torch_facing_direction"
+                ]
             },
             "def": {
                 "name": "minecraft:redstone_wall_torch",
@@ -9914,11 +9917,13 @@
                         "north": "south",
                         "east": "west"
                     }
+                },
+                "defaults": {
+                    "facing": "north"
                 }
             }
         },
         "defaults": {
-            "facing": "north",
             "lit": "true"
         }
     },
@@ -9933,7 +9938,10 @@
         ],
         "mapping": {
             "top": {
-                "name": "minecraft:redstone_torch"
+                "name": "minecraft:redstone_torch",
+                "removals": [
+                    "torch_facing_direction"
+                ]
             },
             "def": {
                 "name": "minecraft:redstone_wall_torch",
@@ -9947,11 +9955,13 @@
                         "north": "south",
                         "east": "west"
                     }
+                },
+                "defaults": {
+                    "facing": "north"
                 }
             }
         },
         "defaults": {
-            "facing": "north",
             "lit": "true"
         }
     },
@@ -11001,7 +11011,10 @@
         ],
         "mapping": {
             "top": {
-                "name": "minecraft:soul_torch"
+                "name": "minecraft:soul_torch",
+                "removals": [
+                    "torch_facing_direction"
+                ]
             },
             "def": {
                 "name": "minecraft:soul_wall_torch",
@@ -11015,11 +11028,11 @@
                         "north": "south",
                         "east": "west"
                     }
+                },
+                "defaults": {
+                    "facing": "north"
                 }
             }
-        },
-        "defaults": {
-            "facing": "north"
         }
     },
     "minecraft:mob_spawner": {
@@ -11640,7 +11653,10 @@
         ],
         "mapping": {
             "top": {
-                "name": "minecraft:torch"
+                "name": "minecraft:torch",
+                "removals": [
+                    "torch_facing_direction"
+                ]
             },
             "def": {
                 "name": "minecraft:wall_torch",
@@ -11654,11 +11670,11 @@
                         "north": "south",
                         "east": "west"
                     }
+                },
+                "defaults": {
+                    "facing": "north"
                 }
             }
-        },
-        "defaults": {
-            "facing": "north"
         }
     },
     "minecraft:trapped_chest": {
