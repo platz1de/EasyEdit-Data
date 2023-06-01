@@ -1687,6 +1687,13 @@ foreach ($btj["minecraft:skull"]["mapping"] as &$mapping) {
 }
 unset($mapping);
 
+unset($btj["minecraft:quartz_block"]["removals"]["pillar_axis"]);
+$btj["minecraft:quartz_block"]["mapping"]["chiseled"]["removals"]["pillar_axis"] = 0;
+$btj["minecraft:quartz_block"]["mapping"]["default"]["removals"]["pillar_axis"] = 0;
+$btj["minecraft:quartz_block"]["mapping"]["smooth"]["removals"]["pillar_axis"] = 0;
+
+$btj["minecraft:beetroot"]["remaps"]["age"] = ["0" => 0, "1" => 0, "2" => 1, "3" => 1, "4" => 2, "5" => 2, "6" => 2, "7" => 3];
+
 function switchRemovals($a): mixed
 {
 	if (isset($a["removals"])) {

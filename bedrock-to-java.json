@@ -1348,12 +1348,16 @@
             "growth": "age"
         },
         "remaps": {
-            "age": {
-                "0": 0,
-                "3": 1,
-                "4": 2,
-                "7": 3
-            }
+            "age": [
+                0,
+                0,
+                1,
+                1,
+                2,
+                2,
+                2,
+                3
+            ]
         },
         "defaults": {
             "age": "0"
@@ -3526,8 +3530,7 @@
     "minecraft:quartz_block": {
         "additions": [],
         "removals": [
-            "chisel_type",
-            "pillar_axis"
+            "chisel_type"
         ],
         "remaps": [],
         "identifier": [
@@ -3535,10 +3538,16 @@
         ],
         "mapping": {
             "chiseled": {
-                "name": "minecraft:chiseled_quartz_block"
+                "name": "minecraft:chiseled_quartz_block",
+                "removals": [
+                    "pillar_axis"
+                ]
             },
             "default": {
-                "name": "minecraft:quartz_block"
+                "name": "minecraft:quartz_block",
+                "removals": [
+                    "pillar_axis"
+                ]
             },
             "lines": {
                 "name": "minecraft:quartz_pillar",
@@ -3547,7 +3556,10 @@
                 }
             },
             "smooth": {
-                "name": "minecraft:smooth_quartz"
+                "name": "minecraft:smooth_quartz",
+                "removals": [
+                    "pillar_axis"
+                ]
             }
         },
         "defaults": {
@@ -6002,7 +6014,7 @@
             }
         },
         "tile_extra": {
-            "type": "empty"
+            "type": "none"
         }
     },
     "minecraft:flowering_azalea": [],

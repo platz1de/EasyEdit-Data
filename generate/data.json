@@ -737,7 +737,7 @@
 	  "rot": "0"
 	},
 	"minecraft:flower_pot": {
-	  "type": "empty"
+	  "type": "none"
 	},
 	"minecraft:shulker_box": {
 	  "facing": "north"
