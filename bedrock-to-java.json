@@ -3556,6 +3556,9 @@
                 "name": "minecraft:quartz_pillar",
                 "renames": {
                     "pillar_axis": "axis"
+                },
+                "defaults": {
+                    "axis": "y"
                 }
             },
             "smooth": {
@@ -3564,9 +3567,6 @@
                     "pillar_axis"
                 ]
             }
-        },
-        "defaults": {
-            "axis": "y"
         }
     },
     "minecraft:red_sandstone": {
@@ -9512,16 +9512,11 @@
                 "name": "minecraft:purpur_pillar",
                 "renames": {
                     "pillar_axis": "axis"
-                }
-            },
-            "pillar": {
+                },
                 "defaults": {
                     "axis": "y"
                 }
             }
-        },
-        "defaults": {
-            "axis": "y"
         }
     },
     "minecraft:purpur_stairs": {
@@ -12771,7 +12766,9 @@
     },
     "minecraft:colored_torch_rg": {
         "additions": [],
-        "removals": [],
+        "removals": [
+            "color_bit"
+        ],
         "remaps": [],
         "identifier": [
             "torch_facing_direction"
@@ -12804,7 +12801,9 @@
     },
     "minecraft:colored_torch_bp": {
         "additions": [],
-        "removals": [],
+        "removals": [
+            "color_bit"
+        ],
         "remaps": [],
         "identifier": [
             "torch_facing_direction"

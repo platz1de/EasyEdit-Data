@@ -1705,12 +1705,17 @@ $btj["minecraft:soul_torch"]["mapping"]["def"]["defaults"]["facing"] = "north";
 $btj["minecraft:soul_torch"]["mapping"]["top"]["removals"]["torch_facing_direction"] = 0;
 $btj["minecraft:underwater_torch"] = $btj["minecraft:torch"];
 $btj["minecraft:colored_torch_rg"] = $btj["minecraft:torch"];
+$btj["minecraft:colored_torch_rg"]["removals"] = ["color_bit" => 0];
 $btj["minecraft:colored_torch_bp"] = $btj["minecraft:torch"];
+$btj["minecraft:colored_torch_bp"]["removals"] = ["color_bit" => 0];
 
 $btj["minecraft:cauldron"]["remaps"]["level"] = ["0" => 0, "1"=> 0, "2" => 1, "3" => 1, "4" => 2, "5" => 2, "6" => 3];
 
-unset($btj["minecraft:carrots"]["defaults"]["axis"]);
-$btj["minecraft:purpur_block"]["mapping"]["pillar"]["defaults"]["axis"] = "y";
+unset($btj["minecraft:purpur_block"]["defaults"]["axis"]);
+$btj["minecraft:purpur_block"]["mapping"]["lines"]["defaults"]["axis"] = "y";
+
+unset($btj["minecraft:quartz_block"]["defaults"]["axis"]);
+$btj["minecraft:quartz_block"]["mapping"]["lines"]["defaults"]["axis"] = "y";
 
 function switchRemovals($a): mixed
 {
