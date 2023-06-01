@@ -3407,12 +3407,15 @@
             "fill_level": "level"
         },
         "remaps": {
-            "level": {
-                "0": 0,
-                "3": 1,
-                "4": 2,
-                "6": 3
-            }
+            "level": [
+                0,
+                0,
+                1,
+                1,
+                2,
+                2,
+                3
+            ]
         },
         "identifier": [
             "cauldron_liquid"
@@ -9510,6 +9513,11 @@
                 "renames": {
                     "pillar_axis": "axis"
                 }
+            },
+            "pillar": {
+                "defaults": {
+                    "axis": "y"
+                }
             }
         },
         "defaults": {
@@ -12737,7 +12745,10 @@
         ],
         "mapping": {
             "top": {
-                "name": "minecraft:torch"
+                "name": "minecraft:torch",
+                "removals": [
+                    "torch_facing_direction"
+                ]
             },
             "def": {
                 "name": "minecraft:wall_torch",
@@ -12751,11 +12762,11 @@
                         "north": "south",
                         "east": "west"
                     }
+                },
+                "defaults": {
+                    "facing": "north"
                 }
             }
-        },
-        "defaults": {
-            "facing": "north"
         }
     },
     "minecraft:colored_torch_rg": {
@@ -12767,7 +12778,10 @@
         ],
         "mapping": {
             "top": {
-                "name": "minecraft:torch"
+                "name": "minecraft:torch",
+                "removals": [
+                    "torch_facing_direction"
+                ]
             },
             "def": {
                 "name": "minecraft:wall_torch",
@@ -12781,11 +12795,11 @@
                         "north": "south",
                         "east": "west"
                     }
+                },
+                "defaults": {
+                    "facing": "north"
                 }
             }
-        },
-        "defaults": {
-            "facing": "north"
         }
     },
     "minecraft:colored_torch_bp": {
@@ -12797,7 +12811,10 @@
         ],
         "mapping": {
             "top": {
-                "name": "minecraft:torch"
+                "name": "minecraft:torch",
+                "removals": [
+                    "torch_facing_direction"
+                ]
             },
             "def": {
                 "name": "minecraft:wall_torch",
@@ -12811,11 +12828,11 @@
                         "north": "south",
                         "east": "west"
                     }
+                },
+                "defaults": {
+                    "facing": "north"
                 }
             }
-        },
-        "defaults": {
-            "facing": "north"
         }
     }
 }

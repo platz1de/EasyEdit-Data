@@ -1676,9 +1676,6 @@ function flipStateTranslation(&$state, $bedrockData): void
 }
 
 $btj["minecraft:invisible_bedrock"] = ["name" => "minecraft:barrier"];
-$btj["minecraft:underwater_torch"] = $btj["minecraft:torch"];
-$btj["minecraft:colored_torch_rg"] = $btj["minecraft:torch"];
-$btj["minecraft:colored_torch_bp"] = $btj["minecraft:torch"];
 
 //TODO: Add defaults to mapped blocks
 unset($btj["minecraft:skull"]["defaults"]); //This shouldn't be added to different types
@@ -1706,6 +1703,14 @@ $btj["minecraft:redstone_torch"]["mapping"]["top"]["removals"]["torch_facing_dir
 unset($btj["minecraft:soul_torch"]["defaults"]["facing"]);
 $btj["minecraft:soul_torch"]["mapping"]["def"]["defaults"]["facing"] = "north";
 $btj["minecraft:soul_torch"]["mapping"]["top"]["removals"]["torch_facing_direction"] = 0;
+$btj["minecraft:underwater_torch"] = $btj["minecraft:torch"];
+$btj["minecraft:colored_torch_rg"] = $btj["minecraft:torch"];
+$btj["minecraft:colored_torch_bp"] = $btj["minecraft:torch"];
+
+$btj["minecraft:cauldron"]["remaps"]["level"] = ["0" => 0, "1"=> 0, "2" => 1, "3" => 1, "4" => 2, "5" => 2, "6" => 3];
+
+unset($btj["minecraft:carrots"]["defaults"]["axis"]);
+$btj["minecraft:purpur_block"]["mapping"]["pillar"]["defaults"]["axis"] = "y";
 
 function switchRemovals($a): mixed
 {
