@@ -134,6 +134,153 @@
             "powered": "false"
         }
     },
+    "minecraft:acacia_hanging_sign": {
+        "name": "minecraft:acacia_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:acacia_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:acacia_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:acacia_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:acacia_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:leaves2": {
         "additions": {
             "waterlogged": "false",
@@ -1310,6 +1457,153 @@
             "powered": "false"
         }
     },
+    "minecraft:bamboo_hanging_sign": {
+        "name": "minecraft:bamboo_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:bamboo_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:bamboo_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:bamboo_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:bamboo_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:bamboo_mosaic": [],
     "minecraft:bamboo_mosaic_slab": {
         "name": "minecraft:bamboo_mosaic_slab",
@@ -1845,6 +2139,153 @@
             "in_wall": "false",
             "open": "false",
             "powered": "false"
+        }
+    },
+    "minecraft:birch_hanging_sign": {
+        "name": "minecraft:birch_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:birch_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:birch_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:birch_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:birch_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
         }
     },
     "minecraft:leaves": {
@@ -3862,6 +4303,153 @@
             "powered": "false"
         }
     },
+    "minecraft:cherry_hanging_sign": {
+        "name": "minecraft:cherry_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:cherry_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:cherry_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:cherry_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:cherry_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:cherry_leaves": {
         "name": "minecraft:cherry_leaves",
         "additions": {
@@ -5379,6 +5967,153 @@
         }
     },
     "minecraft:crimson_fungus": [],
+    "minecraft:crimson_hanging_sign": {
+        "name": "minecraft:crimson_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:crimson_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:crimson_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:crimson_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:crimson_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:crimson_hyphae": {
         "name": "minecraft:crimson_hyphae",
         "renames": {
@@ -5940,6 +6675,153 @@
             "in_wall": "false",
             "open": "false",
             "powered": "false"
+        }
+    },
+    "minecraft:dark_oak_hanging_sign": {
+        "name": "minecraft:dark_oak_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:dark_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:dark_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:dark_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:dark_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
         }
     },
     "minecraft:dark_oak_log": {
@@ -8275,6 +9157,153 @@
             "powered": "false"
         }
     },
+    "minecraft:jungle_hanging_sign": {
+        "name": "minecraft:jungle_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:jungle_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:jungle_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:jungle_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:jungle_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:jungle_log": {
         "name": "minecraft:jungle_log",
         "renames": {
@@ -8994,6 +10023,153 @@
             "powered": "false"
         }
     },
+    "minecraft:mangrove_hanging_sign": {
+        "name": "minecraft:mangrove_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:mangrove_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:mangrove_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:mangrove_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:mangrove_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:mangrove_leaves": {
         "name": "minecraft:mangrove_leaves",
         "additions": {
@@ -9666,6 +10842,153 @@
             "in_wall": "false",
             "open": "false",
             "powered": "false"
+        }
+    },
+    "minecraft:oak_hanging_sign": {
+        "name": "minecraft:oak_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
         }
     },
     "minecraft:oak_log": {
@@ -12539,6 +13862,153 @@
             "powered": "false"
         }
     },
+    "minecraft:spruce_hanging_sign": {
+        "name": "minecraft:spruce_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:spruce_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:spruce_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:spruce_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:spruce_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:spruce_log": {
         "name": "minecraft:spruce_log",
         "renames": {
@@ -13478,6 +14948,153 @@
         }
     },
     "minecraft:warped_fungus": [],
+    "minecraft:warped_hanging_sign": {
+        "name": "minecraft:warped_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": {
+                "0": {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                "1": {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                "10": {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                "11": {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                "12": {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                "13": {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                "14": {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                "15": {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                },
+                "2": {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                "3": {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                "4": {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                "5": {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                "6": {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                "7": {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                "8": {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                "9": {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                }
+            },
+            "false": {
+                "12": {
+                    "name": "minecraft:warped_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:warped_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:warped_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:warped_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
     "minecraft:warped_hyphae": {
         "name": "minecraft:warped_hyphae",
         "renames": {

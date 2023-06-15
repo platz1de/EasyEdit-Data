@@ -253,7 +253,18 @@
 	"minecraft:purpur_block": "chisel_type",
 	"minecraft:flower_pot": "type",
 	"minecraft:skull": ["type", "attachment"],
-	"minecraft:standing_banner": "color"
+	"minecraft:standing_banner": "color",
+	"minecraft:acacia_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:bamboo_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:birch_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:cherry_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:crimson_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:dark_oak_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:jungle_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:mangrove_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:oak_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:spruce_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:warped_hanging_sign": ["hanging", "ground_sign_direction"]
   },
   "btj_ignore": {
 	"minecraft:cave_vines": [
@@ -361,6 +372,9 @@
 	  },
 	  "/candle_cake$/": {
 		"lit": "false"
+	  },
+	  "/_hanging_sign$/": {
+		"attached": "false"
 	  }
 	},
 	"minecraft:bamboo": {
@@ -716,6 +730,9 @@
 	"big_dripleaf_head": "true",
 	"prismarine_block_type": "default",
 	"tall_grass_type": "tall",
+	"attached_bit": "false",
+	"hanging": "true",
+	"ground_sign_direction": "0",
 
 	"__comment": "Buttons should preferably look up",
 	"minecraft:acacia_button": {
@@ -775,6 +792,39 @@
 	},
 	"minecraft:chiseled_bookshelf": {
 	  "books_stored": "0"
+	},
+	"minecraft:acacia_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:bamboo_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:birch_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:cherry_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:crimson_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:dark_oak_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:jungle_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:mangrove_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:oak_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:spruce_hanging_sign": {
+	  "facing_direction": "2"
+	},
+	"minecraft:warped_hanging_sign": {
+	  "facing_direction": "2"
 	}
   },
   "btj_tile_default": {

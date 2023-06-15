@@ -4,7 +4,19 @@
         "minecraft:wood",
         "minecraft:stripped_acacia_log"
     ],
-    "all_hanging_signs": [],
+    "all_hanging_signs": [
+        "minecraft:oak_hanging_sign",
+        "minecraft:spruce_hanging_sign",
+        "minecraft:birch_hanging_sign",
+        "minecraft:acacia_hanging_sign",
+        "minecraft:cherry_hanging_sign",
+        "minecraft:jungle_hanging_sign",
+        "minecraft:dark_oak_hanging_sign",
+        "minecraft:crimson_hanging_sign",
+        "minecraft:warped_hanging_sign",
+        "minecraft:mangrove_hanging_sign",
+        "minecraft:bamboo_hanging_sign"
+    ],
     "all_signs": [
         "minecraft:standing_sign",
         "minecraft:spruce_standing_sign",
@@ -27,7 +39,18 @@
         "minecraft:warped_wall_sign",
         "minecraft:mangrove_wall_sign",
         "minecraft:bamboo_wall_sign",
-        "minecraft:cherry_wall_sign"
+        "minecraft:cherry_wall_sign",
+        "minecraft:oak_hanging_sign",
+        "minecraft:spruce_hanging_sign",
+        "minecraft:birch_hanging_sign",
+        "minecraft:acacia_hanging_sign",
+        "minecraft:cherry_hanging_sign",
+        "minecraft:jungle_hanging_sign",
+        "minecraft:dark_oak_hanging_sign",
+        "minecraft:crimson_hanging_sign",
+        "minecraft:warped_hanging_sign",
+        "minecraft:mangrove_hanging_sign",
+        "minecraft:bamboo_hanging_sign"
     ],
     "amethyst": [
         "minecraft:amethyst_cluster",
@@ -242,7 +265,19 @@
         "minecraft:cave_vines",
         "minecraft:cave_vines_head_with_berries"
     ],
-    "ceiling_hanging_signs": [],
+    "ceiling_hanging_signs": [
+        "minecraft:oak_hanging_sign",
+        "minecraft:spruce_hanging_sign",
+        "minecraft:birch_hanging_sign",
+        "minecraft:acacia_hanging_sign",
+        "minecraft:cherry_hanging_sign",
+        "minecraft:jungle_hanging_sign",
+        "minecraft:dark_oak_hanging_sign",
+        "minecraft:crimson_hanging_sign",
+        "minecraft:warped_hanging_sign",
+        "minecraft:mangrove_hanging_sign",
+        "minecraft:bamboo_hanging_sign"
+    ],
     "cherry_logs": [
         "minecraft:cherry_log",
         "minecraft:cherry_wood",
@@ -1263,6 +1298,17 @@
         "minecraft:bamboo_trapdoor",
         "minecraft:cherry_trapdoor",
         "minecraft:mangrove_roots",
+        "minecraft:oak_hanging_sign",
+        "minecraft:spruce_hanging_sign",
+        "minecraft:birch_hanging_sign",
+        "minecraft:acacia_hanging_sign",
+        "minecraft:cherry_hanging_sign",
+        "minecraft:jungle_hanging_sign",
+        "minecraft:dark_oak_hanging_sign",
+        "minecraft:crimson_hanging_sign",
+        "minecraft:warped_hanging_sign",
+        "minecraft:mangrove_hanging_sign",
+        "minecraft:bamboo_hanging_sign",
         "minecraft:bamboo_mosaic",
         "minecraft:bamboo_mosaic_slab",
         "minecraft:bamboo_mosaic_double_slab",
@@ -2404,7 +2450,19 @@
         "minecraft:coral_fan_hang2",
         "minecraft:coral_fan_hang3"
     ],
-    "wall_hanging_signs": [],
+    "wall_hanging_signs": [
+        "minecraft:oak_hanging_sign",
+        "minecraft:spruce_hanging_sign",
+        "minecraft:birch_hanging_sign",
+        "minecraft:acacia_hanging_sign",
+        "minecraft:cherry_hanging_sign",
+        "minecraft:jungle_hanging_sign",
+        "minecraft:dark_oak_hanging_sign",
+        "minecraft:crimson_hanging_sign",
+        "minecraft:warped_hanging_sign",
+        "minecraft:mangrove_hanging_sign",
+        "minecraft:bamboo_hanging_sign"
+    ],
     "wall_post_override": [
         "minecraft:torch",
         "minecraft:soul_torch",

@@ -14,6 +14,12 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:acacia_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
+    },
     "minecraft:leaves2": {
         "persistent_bit": "false",
         "update_bit": "false",
@@ -132,6 +138,12 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:bamboo_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
+    },
     "minecraft:bamboo_mosaic_slab": {
         "top_slot_bit": "false"
     },
@@ -215,6 +227,12 @@
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
+    },
+    "minecraft:birch_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
     },
     "minecraft:leaves": {
         "persistent_bit": "false",
@@ -431,6 +449,12 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:cherry_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
+    },
     "minecraft:cherry_leaves": {
         "persistent_bit": "false",
         "update_bit": "false"
@@ -555,6 +579,12 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:crimson_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
+    },
     "minecraft:crimson_hyphae": {
         "pillar_axis": "y"
     },
@@ -627,6 +657,12 @@
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
+    },
+    "minecraft:dark_oak_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
     },
     "minecraft:dark_oak_log": {
         "pillar_axis": "y"
@@ -861,6 +897,12 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:jungle_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
+    },
     "minecraft:jungle_log": {
         "pillar_axis": "y"
     },
@@ -979,6 +1021,12 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:mangrove_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
+    },
     "minecraft:mangrove_leaves": {
         "persistent_bit": "false",
         "update_bit": "false"
@@ -1073,6 +1121,12 @@
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
+    },
+    "minecraft:oak_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
     },
     "minecraft:oak_log": {
         "pillar_axis": "y"
@@ -1414,6 +1468,12 @@
         "in_wall_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:spruce_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
+    },
     "minecraft:spruce_log": {
         "pillar_axis": "y"
     },
@@ -1572,6 +1632,12 @@
         "direction": "2",
         "in_wall_bit": "false",
         "open_bit": "false"
+    },
+    "minecraft:warped_hanging_sign": {
+        "attached_bit": "false",
+        "hanging": "true",
+        "ground_sign_direction": "0",
+        "facing_direction": "2"
     },
     "minecraft:warped_hyphae": {
         "pillar_axis": "y"

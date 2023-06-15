@@ -216,6 +216,153 @@
             "powered": "false"
         }
     },
+    "minecraft:acacia_hanging_sign": {
+        "name": "minecraft:acacia_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:acacia_leaves": {
         "name": "minecraft:leaves2",
         "additions": {
@@ -509,6 +656,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:acacia_wall_hanging_sign": {
+        "name": "minecraft:acacia_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -1247,6 +1451,153 @@
             "powered": "false"
         }
     },
+    "minecraft:bamboo_hanging_sign": {
+        "name": "minecraft:bamboo_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:bamboo_mosaic": [],
     "minecraft:bamboo_mosaic_slab": {
         "removals": [
@@ -1558,6 +1909,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_wall_hanging_sign": {
+        "name": "minecraft:bamboo_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -2094,6 +2502,153 @@
             "powered": "false"
         }
     },
+    "minecraft:birch_hanging_sign": {
+        "name": "minecraft:birch_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:birch_leaves": {
         "name": "minecraft:leaves",
         "additions": {
@@ -2387,6 +2942,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:birch_wall_hanging_sign": {
+        "name": "minecraft:birch_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -4682,6 +5294,153 @@
             "powered": "false"
         }
     },
+    "minecraft:cherry_hanging_sign": {
+        "name": "minecraft:cherry_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:cherry_leaves": {
         "name": "minecraft:cherry_leaves",
         "additions": {
@@ -4963,6 +5722,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_wall_hanging_sign": {
+        "name": "minecraft:cherry_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -6528,6 +7344,153 @@
         }
     },
     "minecraft:crimson_fungus": [],
+    "minecraft:crimson_hanging_sign": {
+        "name": "minecraft:crimson_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:crimson_hyphae": {
         "name": "minecraft:crimson_hyphae",
         "renames": {
@@ -6769,6 +7732,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:crimson_wall_hanging_sign": {
+        "name": "minecraft:crimson_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -7532,6 +8552,153 @@
             "powered": "false"
         }
     },
+    "minecraft:dark_oak_hanging_sign": {
+        "name": "minecraft:dark_oak_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:dark_oak_leaves": {
         "name": "minecraft:leaves2",
         "additions": {
@@ -7825,6 +8992,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dark_oak_wall_hanging_sign": {
+        "name": "minecraft:dark_oak_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -11892,6 +13116,153 @@
             "powered": "false"
         }
     },
+    "minecraft:jungle_hanging_sign": {
+        "name": "minecraft:jungle_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:jungle_leaves": {
         "name": "minecraft:leaves",
         "additions": {
@@ -12185,6 +13556,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:jungle_wall_hanging_sign": {
+        "name": "minecraft:jungle_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -14186,6 +15614,153 @@
             "powered": "false"
         }
     },
+    "minecraft:mangrove_hanging_sign": {
+        "name": "minecraft:mangrove_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:mangrove_leaves": {
         "name": "minecraft:mangrove_leaves",
         "additions": {
@@ -14498,6 +16073,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:mangrove_wall_hanging_sign": {
+        "name": "minecraft:mangrove_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -15862,6 +17494,153 @@
             "powered": "false"
         }
     },
+    "minecraft:oak_hanging_sign": {
+        "name": "minecraft:oak_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:oak_leaves": {
         "name": "minecraft:leaves",
         "additions": {
@@ -16155,6 +17934,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:oak_wall_hanging_sign": {
+        "name": "minecraft:oak_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -22726,6 +24562,153 @@
             "powered": "false"
         }
     },
+    "minecraft:spruce_hanging_sign": {
+        "name": "minecraft:spruce_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:spruce_leaves": {
         "name": "minecraft:leaves",
         "additions": {
@@ -23019,6 +25002,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:spruce_wall_hanging_sign": {
+        "name": "minecraft:spruce_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -24884,6 +26924,153 @@
         }
     },
     "minecraft:warped_fungus": [],
+    "minecraft:warped_hanging_sign": {
+        "name": "minecraft:warped_hanging_sign",
+        "additions": {
+            "hanging": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "rotation"
+        ],
+        "renames": {
+            "attached": "attached_bit"
+        },
+        "identifier": [
+            "rotation"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "1",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "2",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "3",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "5",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "6",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "7",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "9",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "10",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "11",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "13",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "14",
+                    "facing_direction": "2"
+                }
+            },
+            {
+                "additions": {
+                    "ground_sign_direction": "15",
+                    "facing_direction": "2"
+                }
+            }
+        ],
+        "values": {
+            "attached": [
+                "false",
+                "true"
+            ],
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:warped_hyphae": {
         "name": "minecraft:warped_hyphae",
         "renames": {
@@ -25125,6 +27312,63 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:warped_wall_hanging_sign": {
+        "name": "minecraft:warped_hanging_sign",
+        "additions": {
+            "hanging": "false",
+            "attached_bit": "true"
+        },
+        "removals": [
+            "waterlogged",
+            "facing"
+        ],
+        "remaps": [],
+        "identifier": [
+            "facing"
+        ],
+        "mapping": {
+            "south": {
+                "additions": {
+                    "ground_sign_direction": "0",
+                    "facing_direction": "3"
+                }
+            },
+            "west": {
+                "additions": {
+                    "ground_sign_direction": "4",
+                    "facing_direction": "4"
+                }
+            },
+            "north": {
+                "additions": {
+                    "ground_sign_direction": "8",
+                    "facing_direction": "2"
+                }
+            },
+            "east": {
+                "additions": {
+                    "ground_sign_direction": "12",
+                    "facing_direction": "5"
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },

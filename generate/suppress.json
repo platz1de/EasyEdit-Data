@@ -1,6 +1,5 @@
 {
   "source": [
-	"/minecraft:jigsaw/",
-	"/minecraft:.+_hanging_sign\\[.*/"
+	"/minecraft:jigsaw/"
   ]
 }

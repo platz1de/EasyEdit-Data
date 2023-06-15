@@ -314,7 +314,7 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 	if (count($bedrockStates) === 1) {
-		if ($bedrockValues !== [] && $values === []) {
+		if ($bedrockValues !== [] && $values === [] && !str_ends_with($group["name"], "_hanging_sign")) { //hack for stupid hanging signs
 			foreach ($bedrockValues as $key => $value) {
 				$value = array_unique($value);
 				if (count($value) !== 1) {
@@ -1149,6 +1149,47 @@ foreach ($groupsJtb as $group) {
 		unset($values["slot_0_occupied"], $values["slot_1_occupied"], $values["slot_2_occupied"], $values["slot_3_occupied"], $values["slot_4_occupied"], $values["slot_5_occupied"], $bedrockValues["books_stored"]);
 	}
 
+	if (str_ends_with($group["name"], "_hanging_sign")) {
+		if (str_ends_with($group["name"], "_wall_hanging_sign")) {
+			unset($obj["renames"]["facing"], $obj["remaps"]["facing_direction"]);
+			$obj["identifier"] = ["facing"];
+			$obj["removals"][] = "facing";
+			$obj["additions"]["hanging"] = "false";
+			$obj["additions"]["attached_bit"] = "true";
+			$obj["mapping"] = [
+				"south" => ["additions" => ["ground_sign_direction" => "0", "facing_direction" => "3"]],
+				"west" => ["additions" => ["ground_sign_direction" => "4", "facing_direction" => "4"]],
+				"north" => ["additions" => ["ground_sign_direction" => "8", "facing_direction" => "2"]],
+				"east" => ["additions" => ["ground_sign_direction" => "12", "facing_direction" => "5"]],
+			];
+			unset($bedrockValues["ground_sign_direction"], $bedrockValues["facing_direction"], $bedrockValues["attached_bit"], $bedrockValues["hanging"]);
+		} else {
+			unset($obj["renames"]["rotation"]);
+			$obj["identifier"] = ["rotation"];
+			$obj["removals"][] = "rotation";
+			$obj["additions"]["hanging"] = "true";
+			$obj["mapping"] = [
+				"0" => ["additions" => ["ground_sign_direction" => "0", "facing_direction" => "3"]],
+				"1" => ["additions" => ["ground_sign_direction" => "1", "facing_direction" => "2"]],
+				"2" => ["additions" => ["ground_sign_direction" => "2", "facing_direction" => "2"]],
+				"3" => ["additions" => ["ground_sign_direction" => "3", "facing_direction" => "2"]],
+				"4" => ["additions" => ["ground_sign_direction" => "4", "facing_direction" => "4"]],
+				"5" => ["additions" => ["ground_sign_direction" => "5", "facing_direction" => "2"]],
+				"6" => ["additions" => ["ground_sign_direction" => "6", "facing_direction" => "2"]],
+				"7" => ["additions" => ["ground_sign_direction" => "7", "facing_direction" => "2"]],
+				"8" => ["additions" => ["ground_sign_direction" => "8", "facing_direction" => "2"]],
+				"9" => ["additions" => ["ground_sign_direction" => "9", "facing_direction" => "2"]],
+				"10" => ["additions" => ["ground_sign_direction" => "10", "facing_direction" => "2"]],
+				"11" => ["additions" => ["ground_sign_direction" => "11", "facing_direction" => "2"]],
+				"12" => ["additions" => ["ground_sign_direction" => "12", "facing_direction" => "5"]],
+				"13" => ["additions" => ["ground_sign_direction" => "13", "facing_direction" => "2"]],
+				"14" => ["additions" => ["ground_sign_direction" => "14", "facing_direction" => "2"]],
+				"15" => ["additions" => ["ground_sign_direction" => "15", "facing_direction" => "2"]]
+			];
+			unset($bedrockValues["facing_direction"], $bedrockValues["hanging"]);
+		}
+	}
+
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
 		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);
@@ -1919,7 +1960,7 @@ $btj["minecraft:colored_torch_rg"]["removals"] = ["color_bit" => 0];
 $btj["minecraft:colored_torch_bp"] = $btj["minecraft:torch"];
 $btj["minecraft:colored_torch_bp"]["removals"] = ["color_bit" => 0];
 
-$btj["minecraft:cauldron"]["remaps"]["level"] = ["0" => 0, "1"=> 0, "2" => 1, "3" => 1, "4" => 2, "5" => 2, "6" => 3];
+$btj["minecraft:cauldron"]["remaps"]["level"] = ["0" => 0, "1" => 0, "2" => 1, "3" => 1, "4" => 2, "5" => 2, "6" => 3];
 
 unset($btj["minecraft:purpur_block"]["defaults"]["axis"]);
 $btj["minecraft:purpur_block"]["mapping"]["lines"]["defaults"]["axis"] = "y";
