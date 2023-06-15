@@ -114,24 +114,61 @@
         "bamboo_leaf_size": "no_leaves",
         "age_bit": "false"
     },
-    "minecraft:wooden_door": {
+    "minecraft:bamboo_block": {
+        "pillar_axis": "y"
+    },
+    "minecraft:bamboo_button": {
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
+    },
+    "minecraft:bamboo_door": {
         "direction": "3",
         "upper_block_bit": "false",
         "door_hinge_bit": "false",
         "open_bit": "false"
     },
+    "minecraft:bamboo_fence_gate": {
+        "direction": "2",
+        "in_wall_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:bamboo_mosaic_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:bamboo_mosaic_double_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:bamboo_mosaic_stairs": {
+        "weirdo_direction": "3",
+        "upside_down_bit": "false"
+    },
+    "minecraft:bamboo_pressure_plate": {
+        "redstone_signal": "0"
+    },
     "minecraft:bamboo_sapling": {
         "sapling_type": "oak",
         "age_bit": "false"
     },
-    "minecraft:oak_stairs": {
+    "minecraft:bamboo_standing_sign": {
+        "ground_sign_direction": "0"
+    },
+    "minecraft:bamboo_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:bamboo_double_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:bamboo_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
-    "minecraft:trapdoor": {
+    "minecraft:bamboo_trapdoor": {
         "direction": "3",
         "upside_down_bit": "false",
         "open_bit": "false"
+    },
+    "minecraft:bamboo_wall_sign": {
+        "facing_direction": "2"
     },
     "minecraft:barrel": {
         "facing_direction": "2",
@@ -220,9 +257,6 @@
     "minecraft:black_candle_cake": {
         "lit": "false"
     },
-    "minecraft:carpet": {
-        "color": "white"
-    },
     "minecraft:concrete": {
         "color": "white"
     },
@@ -284,10 +318,6 @@
         "pillar_axis": "y",
         "deprecated": "0"
     },
-    "minecraft:coral": {
-        "coral_color": "blue",
-        "dead_bit": "false"
-    },
     "minecraft:coral_block": {
         "coral_color": "blue",
         "dead_bit": "false"
@@ -345,6 +375,10 @@
     "minecraft:cake": {
         "bite_counter": "0"
     },
+    "minecraft:calibrated_sculk_sensor": {
+        "sculk_sensor_phase": "2",
+        "direction": "2"
+    },
     "minecraft:campfire": {
         "direction": "2",
         "extinguished": "false"
@@ -360,7 +394,7 @@
         "growth": "0"
     },
     "minecraft:carved_pumpkin": {
-        "direction": "2"
+        "minecraft:cardinal_direction": "north"
     },
     "minecraft:cauldron": {
         "fill_level": "0",
@@ -382,8 +416,65 @@
         "conditional_bit": "false",
         "facing_direction": "2"
     },
+    "minecraft:cherry_button": {
+        "button_pressed_bit": "false",
+        "facing_direction": "1"
+    },
+    "minecraft:cherry_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:cherry_fence_gate": {
+        "direction": "2",
+        "in_wall_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:cherry_leaves": {
+        "persistent_bit": "false",
+        "update_bit": "false"
+    },
+    "minecraft:cherry_log": {
+        "pillar_axis": "y"
+    },
+    "minecraft:cherry_pressure_plate": {
+        "redstone_signal": "0"
+    },
+    "minecraft:cherry_sapling": {
+        "age_bit": "false"
+    },
+    "minecraft:cherry_standing_sign": {
+        "ground_sign_direction": "0"
+    },
+    "minecraft:cherry_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:cherry_double_slab": {
+        "top_slot_bit": "false"
+    },
+    "minecraft:cherry_stairs": {
+        "weirdo_direction": "3",
+        "upside_down_bit": "false"
+    },
+    "minecraft:cherry_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:cherry_wall_sign": {
+        "facing_direction": "2"
+    },
+    "minecraft:cherry_wood": {
+        "pillar_axis": "y",
+        "stripped_bit": "false"
+    },
     "minecraft:chest": {
         "facing_direction": "2"
+    },
+    "minecraft:chiseled_bookshelf": {
+        "direction": "2",
+        "books_stored": "0"
     },
     "minecraft:quartz_block": {
         "chisel_type": "default",
@@ -588,6 +679,9 @@
         "coral_hang_type_bit": "false",
         "dead_bit": "false"
     },
+    "minecraft:decorated_pot": {
+        "direction": "0"
+    },
     "minecraft:deepslate": {
         "pillar_axis": "y"
     },
@@ -750,7 +844,7 @@
         "open_bit": "false"
     },
     "minecraft:lit_pumpkin": {
-        "direction": "2"
+        "minecraft:cardinal_direction": "north"
     },
     "minecraft:jungle_button": {
         "button_pressed_bit": "false",
@@ -809,10 +903,6 @@
     },
     "minecraft:flowing_lava": {
         "liquid_depth": "0"
-    },
-    "minecraft:lava_cauldron": {
-        "cauldron_liquid": "lava",
-        "fill_level": "6"
     },
     "minecraft:lectern": {
         "direction": "2",
@@ -973,6 +1063,12 @@
         "button_pressed_bit": "false",
         "facing_direction": "1"
     },
+    "minecraft:wooden_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
     "minecraft:fence_gate": {
         "direction": "2",
         "in_wall_bit": "false",
@@ -986,6 +1082,15 @@
     },
     "minecraft:standing_sign": {
         "ground_sign_direction": "0"
+    },
+    "minecraft:oak_stairs": {
+        "weirdo_direction": "3",
+        "upside_down_bit": "false"
+    },
+    "minecraft:trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
     },
     "minecraft:wall_sign": {
         "facing_direction": "2"
@@ -1030,6 +1135,10 @@
     "minecraft:pink_glazed_terracotta": {
         "facing_direction": "2"
     },
+    "minecraft:pink_petals": {
+        "direction": "2",
+        "growth": "0"
+    },
     "minecraft:piston": {
         "facing_direction": "3"
     },
@@ -1038,6 +1147,13 @@
     },
     "minecraft:sticky_piston_arm_collision": {
         "facing_direction": "3"
+    },
+    "minecraft:pitcher_crop": {
+        "growth": "0",
+        "upper_block_bit": "false"
+    },
+    "minecraft:pitcher_plant": {
+        "upper_block_bit": "false"
     },
     "minecraft:pointed_dripstone": {
         "dripstone_thickness": "tip",
@@ -1132,7 +1248,7 @@
         "upside_down_bit": "false"
     },
     "minecraft:pumpkin": {
-        "direction": "0"
+        "minecraft:cardinal_direction": "north"
     },
     "minecraft:purple_candle": {
         "candles": "0",
@@ -1219,7 +1335,7 @@
         "bloom": "false"
     },
     "minecraft:sculk_sensor": {
-        "powered_bit": "false"
+        "sculk_sensor_phase": "2"
     },
     "minecraft:sculk_shrieker": {
         "can_summon": "false",
@@ -1259,6 +1375,9 @@
     "minecraft:smooth_sandstone_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
+    },
+    "minecraft:sniffer_egg": {
+        "cracked_state": "no_cracks"
     },
     "minecraft:snow_layer": {
         "height": "0",
@@ -1340,7 +1459,16 @@
     "minecraft:stripped_acacia_log": {
         "pillar_axis": "y"
     },
+    "minecraft:stripped_bamboo_block": {
+        "pillar_axis": "y"
+    },
     "minecraft:stripped_birch_log": {
+        "pillar_axis": "y"
+    },
+    "minecraft:stripped_cherry_log": {
+        "pillar_axis": "y"
+    },
+    "minecraft:stripped_cherry_wood": {
         "pillar_axis": "y"
     },
     "minecraft:stripped_crimson_hyphae": {
@@ -1382,6 +1510,14 @@
     "minecraft:reeds": {
         "age": "0"
     },
+    "minecraft:suspicious_gravel": {
+        "brushed_progress": "0",
+        "hanging": "false"
+    },
+    "minecraft:suspicious_sand": {
+        "brushed_progress": "0",
+        "hanging": "false"
+    },
     "minecraft:sweet_berry_bush": {
         "growth": "0"
     },
@@ -1391,6 +1527,9 @@
     },
     "minecraft:torch": {
         "torch_facing_direction": "top"
+    },
+    "minecraft:torchflower_crop": {
+        "growth": "0"
     },
     "minecraft:trapped_chest": {
         "facing_direction": "2"

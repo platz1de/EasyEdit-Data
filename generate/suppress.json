@@ -1,29 +1,6 @@
 {
   "source": [
 	"/minecraft:jigsaw/",
-	"/minecraft:.+_hanging_sign\\[.*/",
-	"/minecraft:chiseled_bookshelf/",
-	"/minecraft:bamboo_sign/",
-	"/minecraft:bamboo_wall_sign/",
-	"/minecraft:bamboo_button/",
-	"/minecraft:bamboo_slab/",
-	"/minecraft:bamboo_mosaic_slab/",
-	"/minecraft:bamboo_planks/",
-	"/minecraft:bamboo_block/",
-	"/minecraft:bamboo_mosaic/",
-	"/minecraft:bamboo_pressure_plate/",
-	"/minecraft:bamboo_fence.*/",
-    "/minecraft:cherry_fence.*/",
-	"/minecraft:stripped_bamboo_block/",
-	"/minecraft:pink_petals/",
-	"/minecraft:suspicious_sand/",
-	"/minecraft:cherry_.+/",
-	"/minecraft:stripped_cherry_log/",
-	"/minecraft:decorated_pot/",
-	"/minecraft:torchflower/",
-	"/minecraft:potted_cherry_sapling/",
-	"/minecraft:potted_cherry_sapling/",
-	"/minecraft:potted_torchflower/",
-	"/minecraft:stripped_cherry_wood/"
+	"/minecraft:.+_hanging_sign\\[.*/"
   ]
 }

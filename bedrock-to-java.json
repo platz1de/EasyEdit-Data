@@ -1166,8 +1166,75 @@
             "stage": "0"
         }
     },
-    "minecraft:wooden_door": {
-        "name": "minecraft:oak_door",
+    "minecraft:bamboo_block": {
+        "name": "minecraft:bamboo_block",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:bamboo_button": {
+        "name": "minecraft:bamboo_button",
+        "additions": {
+            "face": "ceiling"
+        },
+        "removals": [
+            "facing_direction"
+        ],
+        "renames": {
+            "button_pressed_bit": "powered"
+        },
+        "remaps": [],
+        "identifier": [
+            "facing_direction"
+        ],
+        "mapping": {
+            "0": {
+                "additions": {
+                    "facing": "east"
+                }
+            },
+            "1": {
+                "additions": {
+                    "face": "floor",
+                    "facing": "east"
+                }
+            },
+            "5": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "east"
+                }
+            },
+            "2": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "north"
+                }
+            },
+            "3": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "south"
+                }
+            },
+            "4": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "west"
+                }
+            }
+        },
+        "defaults": {
+            "face": "wall",
+            "facing": "north",
+            "powered": "false"
+        }
+    },
+    "minecraft:bamboo_door": {
+        "name": "minecraft:bamboo_door",
         "additions": {
             "powered": "false"
         },
@@ -1201,15 +1268,94 @@
             "powered": "false"
         }
     },
-    "minecraft:bamboo_sapling": {
-        "name": "minecraft:bamboo_sapling",
-        "removals": [
-            "sapling_type",
-            "age_bit"
-        ]
+    "minecraft:bamboo_fence": {
+        "name": "minecraft:bamboo_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
     },
-    "minecraft:oak_stairs": {
-        "name": "minecraft:oak_stairs",
+    "minecraft:bamboo_fence_gate": {
+        "name": "minecraft:bamboo_fence_gate",
+        "additions": {
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "in_wall_bit": "in_wall",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "3": "east",
+                "2": "north",
+                "0": "south",
+                "1": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "in_wall": "false",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:bamboo_mosaic": [],
+    "minecraft:bamboo_mosaic_slab": {
+        "name": "minecraft:bamboo_mosaic_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "top_slot_bit"
+        ],
+        "remaps": [],
+        "identifier": [
+            "top_slot_bit"
+        ],
+        "mapping": {
+            "false": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "true": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_mosaic_double_slab": {
+        "name": "minecraft:bamboo_mosaic_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "top_slot_bit"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_mosaic_stairs": {
+        "name": "minecraft:bamboo_mosaic_stairs",
         "additions": {
             "waterlogged": "false",
             "shape": "straight"
@@ -1237,8 +1383,116 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:trapdoor": {
-        "name": "minecraft:oak_trapdoor",
+    "minecraft:bamboo_planks": [],
+    "minecraft:bamboo_pressure_plate": {
+        "name": "minecraft:bamboo_pressure_plate",
+        "renames": {
+            "redstone_signal": "powered"
+        },
+        "remaps": {
+            "powered": {
+                "0": "false",
+                "15": "true"
+            }
+        },
+        "defaults": {
+            "powered": "false"
+        }
+    },
+    "minecraft:bamboo_sapling": {
+        "name": "minecraft:bamboo_sapling",
+        "removals": [
+            "sapling_type",
+            "age_bit"
+        ]
+    },
+    "minecraft:bamboo_standing_sign": {
+        "name": "minecraft:bamboo_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "ground_sign_direction": "rotation"
+        },
+        "defaults": {
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_slab": {
+        "name": "minecraft:bamboo_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "top_slot_bit"
+        ],
+        "remaps": [],
+        "identifier": [
+            "top_slot_bit"
+        ],
+        "mapping": {
+            "false": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "true": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_double_slab": {
+        "name": "minecraft:bamboo_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "top_slot_bit"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_stairs": {
+        "name": "minecraft:bamboo_stairs",
+        "additions": {
+            "waterlogged": "false",
+            "shape": "straight"
+        },
+        "renames": {
+            "weirdo_direction": "facing",
+            "upside_down_bit": "half"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_trapdoor": {
+        "name": "minecraft:bamboo_trapdoor",
         "additions": {
             "waterlogged": "false",
             "powered": "false"
@@ -1265,6 +1519,27 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_wall_sign": {
+        "name": "minecraft:bamboo_wall_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "facing_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "5": "east",
+                "2": "north",
+                "3": "south",
+                "4": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -1903,66 +2178,7 @@
             "lit": "false"
         }
     },
-    "minecraft:carpet": {
-        "additions": [],
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_carpet"
-            },
-            "blue": {
-                "name": "minecraft:blue_carpet"
-            },
-            "brown": {
-                "name": "minecraft:brown_carpet"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_carpet"
-            },
-            "gray": {
-                "name": "minecraft:gray_carpet"
-            },
-            "green": {
-                "name": "minecraft:green_carpet"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_carpet"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_carpet"
-            },
-            "lime": {
-                "name": "minecraft:lime_carpet"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_carpet"
-            },
-            "orange": {
-                "name": "minecraft:orange_carpet"
-            },
-            "pink": {
-                "name": "minecraft:pink_carpet"
-            },
-            "purple": {
-                "name": "minecraft:purple_carpet"
-            },
-            "red": {
-                "name": "minecraft:red_carpet"
-            },
-            "white": {
-                "name": "minecraft:white_carpet"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_carpet"
-            }
-        }
-    },
+    "minecraft:black_carpet": [],
     "minecraft:concrete": {
         "additions": [],
         "removals": [
@@ -2618,6 +2834,7 @@
             "lit": "false"
         }
     },
+    "minecraft:blue_carpet": [],
     "minecraft:blue_glazed_terracotta": {
         "name": "minecraft:blue_glazed_terracotta",
         "renames": {
@@ -2650,60 +2867,10 @@
         }
     },
     "minecraft:bookshelf": [],
-    "minecraft:coral": {
+    "minecraft:brain_coral": {
+        "name": "minecraft:brain_coral",
         "additions": {
             "waterlogged": "false"
-        },
-        "removals": [
-            "coral_color",
-            "dead_bit"
-        ],
-        "remaps": [],
-        "identifier": [
-            "coral_color",
-            "dead_bit"
-        ],
-        "mapping": {
-            "pink": {
-                "false": {
-                    "name": "minecraft:brain_coral"
-                },
-                "true": {
-                    "name": "minecraft:dead_brain_coral"
-                }
-            },
-            "purple": {
-                "false": {
-                    "name": "minecraft:bubble_coral"
-                },
-                "true": {
-                    "name": "minecraft:dead_bubble_coral"
-                }
-            },
-            "red": {
-                "true": {
-                    "name": "minecraft:dead_fire_coral"
-                },
-                "false": {
-                    "name": "minecraft:fire_coral"
-                }
-            },
-            "yellow": {
-                "true": {
-                    "name": "minecraft:dead_horn_coral"
-                },
-                "false": {
-                    "name": "minecraft:horn_coral"
-                }
-            },
-            "blue": {
-                "true": {
-                    "name": "minecraft:dead_tube_coral"
-                },
-                "false": {
-                    "name": "minecraft:tube_coral"
-                }
-            }
         },
         "defaults": {
             "waterlogged": "false"
@@ -3103,6 +3270,7 @@
             "lit": "false"
         }
     },
+    "minecraft:brown_carpet": [],
     "minecraft:brown_glazed_terracotta": {
         "name": "minecraft:brown_glazed_terracotta",
         "renames": {
@@ -3256,6 +3424,15 @@
             "drag": "true"
         }
     },
+    "minecraft:bubble_coral": {
+        "name": "minecraft:bubble_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:coral_fan_hang2": {
         "additions": {
             "waterlogged": "false"
@@ -3318,6 +3495,35 @@
         }
     },
     "minecraft:calcite": [],
+    "minecraft:calibrated_sculk_sensor": {
+        "name": "minecraft:calibrated_sculk_sensor",
+        "additions": {
+            "waterlogged": "false",
+            "power": "0"
+        },
+        "renames": {
+            "direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "3": "east",
+                "2": "north",
+                "0": "south",
+                "1": "west"
+            },
+            "sculk_sensor_phase": {
+                "1": "active",
+                "2": "cooldown",
+                "0": "inactive"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "power": "0",
+            "sculk_sensor_phase": "cooldown",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:campfire": {
         "name": "minecraft:campfire",
         "additions": {
@@ -3384,15 +3590,7 @@
     "minecraft:carved_pumpkin": {
         "name": "minecraft:carved_pumpkin",
         "renames": {
-            "direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north"
@@ -3403,9 +3601,6 @@
         "removals": [
             "cauldron_liquid"
         ],
-        "renames": {
-            "fill_level": "level"
-        },
         "remaps": {
             "level": [
                 0,
@@ -3422,10 +3617,38 @@
         ],
         "mapping": {
             "water": {
-                "name": "minecraft:cauldron"
+                "name": "minecraft:cauldron",
+                "renames": {
+                    "fill_level": "level"
+                },
+                "remaps": {
+                    "level": {
+                        "0": 0,
+                        "3": 1,
+                        "4": 2,
+                        "6": 3
+                    }
+                }
+            },
+            "lava": {
+                "name": "minecraft:lava_cauldron",
+                "removals": [
+                    "fill_level"
+                ]
             },
             "powder_snow": {
-                "name": "minecraft:powder_snow_cauldron"
+                "name": "minecraft:powder_snow_cauldron",
+                "renames": {
+                    "fill_level": "level"
+                },
+                "remaps": {
+                    "level": {
+                        "0": 0,
+                        "3": 1,
+                        "4": 2,
+                        "6": 3
+                    }
+                }
             }
         },
         "defaults": {
@@ -3504,6 +3727,348 @@
             "facing": "north"
         }
     },
+    "minecraft:cherry_button": {
+        "name": "minecraft:cherry_button",
+        "additions": {
+            "face": "ceiling"
+        },
+        "removals": [
+            "facing_direction"
+        ],
+        "renames": {
+            "button_pressed_bit": "powered"
+        },
+        "remaps": [],
+        "identifier": [
+            "facing_direction"
+        ],
+        "mapping": {
+            "0": {
+                "additions": {
+                    "facing": "east"
+                }
+            },
+            "1": {
+                "additions": {
+                    "face": "floor",
+                    "facing": "east"
+                }
+            },
+            "5": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "east"
+                }
+            },
+            "2": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "north"
+                }
+            },
+            "3": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "south"
+                }
+            },
+            "4": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "west"
+                }
+            }
+        },
+        "defaults": {
+            "face": "wall",
+            "facing": "north",
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_door": {
+        "name": "minecraft:cherry_door",
+        "additions": {
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "upper_block_bit": "half",
+            "door_hinge_bit": "hinge",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "1": "south",
+                "2": "west"
+            },
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            },
+            "hinge": {
+                "false": "left",
+                "true": "right"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "lower",
+            "hinge": "left",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_fence": {
+        "name": "minecraft:cherry_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:cherry_fence_gate": {
+        "name": "minecraft:cherry_fence_gate",
+        "additions": {
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "in_wall_bit": "in_wall",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "3": "east",
+                "2": "north",
+                "0": "south",
+                "1": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "in_wall": "false",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_leaves": {
+        "name": "minecraft:cherry_leaves",
+        "additions": {
+            "waterlogged": "false",
+            "distance": "7"
+        },
+        "removals": [
+            "update_bit"
+        ],
+        "renames": {
+            "persistent_bit": "persistent"
+        },
+        "defaults": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_log": {
+        "name": "minecraft:cherry_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:cherry_planks": [],
+    "minecraft:cherry_pressure_plate": {
+        "name": "minecraft:cherry_pressure_plate",
+        "renames": {
+            "redstone_signal": "powered"
+        },
+        "remaps": {
+            "powered": {
+                "0": "false",
+                "15": "true"
+            }
+        },
+        "defaults": {
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_sapling": {
+        "name": "minecraft:cherry_sapling",
+        "renames": {
+            "age_bit": "stage"
+        },
+        "remaps": {
+            "stage": {
+                "false": 0,
+                "true": 1
+            }
+        },
+        "defaults": {
+            "stage": "0"
+        }
+    },
+    "minecraft:cherry_standing_sign": {
+        "name": "minecraft:cherry_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "ground_sign_direction": "rotation"
+        },
+        "defaults": {
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_slab": {
+        "name": "minecraft:cherry_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "top_slot_bit"
+        ],
+        "remaps": [],
+        "identifier": [
+            "top_slot_bit"
+        ],
+        "mapping": {
+            "false": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "true": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_double_slab": {
+        "name": "minecraft:cherry_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "top_slot_bit"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_stairs": {
+        "name": "minecraft:cherry_stairs",
+        "additions": {
+            "waterlogged": "false",
+            "shape": "straight"
+        },
+        "renames": {
+            "weirdo_direction": "facing",
+            "upside_down_bit": "half"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_trapdoor": {
+        "name": "minecraft:cherry_trapdoor",
+        "additions": {
+            "waterlogged": "false",
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "upside_down_bit": "half",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "open": "false",
+            "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_wall_sign": {
+        "name": "minecraft:cherry_wall_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "facing_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "5": "east",
+                "2": "north",
+                "3": "south",
+                "4": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_wood": {
+        "name": "minecraft:cherry_wood",
+        "removals": [
+            "stripped_bit"
+        ],
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:chest": {
         "name": "minecraft:chest",
         "additions": {
@@ -3525,6 +4090,524 @@
             "facing": "north",
             "type": "single",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:chiseled_bookshelf": {
+        "name": "minecraft:chiseled_bookshelf",
+        "additions": {
+            "slot_5_occupied": "false",
+            "slot_4_occupied": "false",
+            "slot_3_occupied": "false",
+            "slot_2_occupied": "false",
+            "slot_1_occupied": "false"
+        },
+        "removals": [
+            "books_stored"
+        ],
+        "renames": {
+            "direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "3": "east",
+                "2": "north",
+                "0": "south",
+                "1": "west"
+            }
+        },
+        "identifier": [
+            "books_stored"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "false"
+                }
+            },
+            {
+                "additions": {
+                    "slot_5_occupied": "true",
+                    "slot_4_occupied": "true",
+                    "slot_3_occupied": "true",
+                    "slot_2_occupied": "true",
+                    "slot_1_occupied": "true",
+                    "slot_0_occupied": "true"
+                }
+            }
+        ],
+        "defaults": {
+            "facing": "north",
+            "slot_0_occupied": "false",
+            "slot_1_occupied": "false",
+            "slot_2_occupied": "false",
+            "slot_3_occupied": "false",
+            "slot_4_occupied": "false",
+            "slot_5_occupied": "false"
         }
     },
     "minecraft:chiseled_deepslate": [],
@@ -4702,6 +5785,7 @@
             "lit": "false"
         }
     },
+    "minecraft:cyan_carpet": [],
     "minecraft:cyan_glazed_terracotta": {
         "name": "minecraft:cyan_glazed_terracotta",
         "renames": {
@@ -5244,6 +6328,15 @@
             "power": "0"
         }
     },
+    "minecraft:dead_brain_coral": {
+        "name": "minecraft:dead_brain_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:coral_fan_dead": {
         "additions": {
             "waterlogged": "false"
@@ -5277,8 +6370,35 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_bubble_coral": {
+        "name": "minecraft:dead_bubble_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:deadbush": {
         "name": "minecraft:dead_bush"
+    },
+    "minecraft:dead_fire_coral": {
+        "name": "minecraft:dead_fire_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dead_horn_coral": {
+        "name": "minecraft:dead_horn_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
     },
     "minecraft:coral_fan_hang3": {
         "additions": {
@@ -5314,6 +6434,38 @@
             }
         },
         "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dead_tube_coral": {
+        "name": "minecraft:dead_tube_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:decorated_pot": {
+        "name": "minecraft:decorated_pot",
+        "additions": {
+            "waterlogged": "false",
+            "cracked": "false"
+        },
+        "renames": {
+            "direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "0": "north",
+                "2": "south",
+                "3": "west"
+            }
+        },
+        "defaults": {
+            "cracked": "false",
             "facing": "north",
             "waterlogged": "false"
         }
@@ -5904,6 +7056,15 @@
             "west": "false"
         }
     },
+    "minecraft:fire_coral": {
+        "name": "minecraft:fire_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:fletching_table": [],
     "minecraft:flower_pot": {
         "additions": [],
@@ -5945,6 +7106,9 @@
             },
             "minecraft:cactus[age=0]": {
                 "name": "minecraft:potted_cactus"
+            },
+            "minecraft:cherry_sapling[age_bit=false]": {
+                "name": "minecraft:potted_cherry_sapling"
             },
             "minecraft:red_flower[flower_type=cornflower]": {
                 "name": "minecraft:potted_cornflower"
@@ -6002,6 +7166,9 @@
             },
             "minecraft:sapling[age_bit=false,sapling_type=spruce]": {
                 "name": "minecraft:potted_spruce_sapling"
+            },
+            "minecraft:torchflower": {
+                "name": "minecraft:potted_torchflower"
             },
             "minecraft:warped_fungus": {
                 "name": "minecraft:potted_warped_fungus"
@@ -6683,6 +7850,7 @@
             "lit": "false"
         }
     },
+    "minecraft:gray_carpet": [],
     "minecraft:gray_glazed_terracotta": {
         "name": "minecraft:gray_glazed_terracotta",
         "renames": {
@@ -6725,6 +7893,7 @@
             "lit": "false"
         }
     },
+    "minecraft:green_carpet": [],
     "minecraft:green_glazed_terracotta": {
         "name": "minecraft:green_glazed_terracotta",
         "renames": {
@@ -6817,6 +7986,15 @@
         "defaults": {
             "enabled": "true",
             "facing": "north"
+        }
+    },
+    "minecraft:horn_coral": {
+        "name": "minecraft:horn_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
         }
     },
     "minecraft:ice": [],
@@ -6947,15 +8125,7 @@
     "minecraft:lit_pumpkin": {
         "name": "minecraft:jack_o_lantern",
         "renames": {
-            "direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north"
@@ -7350,13 +8520,6 @@
             "level": "0"
         }
     },
-    "minecraft:lava_cauldron": {
-        "name": "minecraft:lava_cauldron",
-        "removals": [
-            "cauldron_liquid",
-            "fill_level"
-        ]
-    },
     "minecraft:lectern": {
         "name": "minecraft:lectern",
         "additions": {
@@ -7490,6 +8653,7 @@
             "lit": "false"
         }
     },
+    "minecraft:light_blue_carpet": [],
     "minecraft:light_blue_glazed_terracotta": {
         "name": "minecraft:light_blue_glazed_terracotta",
         "renames": {
@@ -7532,6 +8696,7 @@
             "lit": "false"
         }
     },
+    "minecraft:light_gray_carpet": [],
     "minecraft:silver_glazed_terracotta": {
         "name": "minecraft:light_gray_glazed_terracotta",
         "renames": {
@@ -7611,6 +8776,7 @@
             "lit": "false"
         }
     },
+    "minecraft:lime_carpet": [],
     "minecraft:lime_glazed_terracotta": {
         "name": "minecraft:lime_glazed_terracotta",
         "renames": {
@@ -7671,6 +8837,7 @@
             "lit": "false"
         }
     },
+    "minecraft:magenta_carpet": [],
     "minecraft:magenta_glazed_terracotta": {
         "name": "minecraft:magenta_glazed_terracotta",
         "renames": {
@@ -8424,6 +9591,41 @@
             "powered": "false"
         }
     },
+    "minecraft:wooden_door": {
+        "name": "minecraft:oak_door",
+        "additions": {
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "upper_block_bit": "half",
+            "door_hinge_bit": "hinge",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "1": "south",
+                "2": "west"
+            },
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            },
+            "hinge": {
+                "false": "left",
+                "true": "right"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "lower",
+            "hinge": "left",
+            "open": "false",
+            "powered": "false"
+        }
+    },
     "minecraft:oak_fence": {
         "name": "minecraft:oak_fence",
         "additions": {
@@ -8503,6 +9705,66 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:oak_stairs": {
+        "name": "minecraft:oak_stairs",
+        "additions": {
+            "waterlogged": "false",
+            "shape": "straight"
+        },
+        "renames": {
+            "weirdo_direction": "facing",
+            "upside_down_bit": "half"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:trapdoor": {
+        "name": "minecraft:oak_trapdoor",
+        "additions": {
+            "waterlogged": "false",
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "upside_down_bit": "half",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "open": "false",
+            "powered": "false",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:wall_sign": {
         "name": "minecraft:oak_wall_sign",
         "additions": {
@@ -8579,6 +9841,7 @@
             "lit": "false"
         }
     },
+    "minecraft:orange_carpet": [],
     "minecraft:orange_glazed_terracotta": {
         "name": "minecraft:orange_glazed_terracotta",
         "renames": {
@@ -8706,6 +9969,7 @@
             "lit": "false"
         }
     },
+    "minecraft:pink_carpet": [],
     "minecraft:pink_glazed_terracotta": {
         "name": "minecraft:pink_glazed_terracotta",
         "renames": {
@@ -8721,6 +9985,31 @@
         },
         "defaults": {
             "facing": "north"
+        }
+    },
+    "minecraft:pink_petals": {
+        "name": "minecraft:pink_petals",
+        "renames": {
+            "direction": "facing",
+            "growth": "flower_amount"
+        },
+        "remaps": {
+            "facing": {
+                "3": "east",
+                "2": "north",
+                "0": "south",
+                "1": "west"
+            },
+            "flower_amount": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "flower_amount": "1"
         }
     },
     "minecraft:pink_wool": [],
@@ -8795,6 +10084,45 @@
             "facing": "north",
             "short": "false",
             "type": "normal"
+        }
+    },
+    "minecraft:pitcher_crop": {
+        "name": "minecraft:pitcher_crop",
+        "renames": {
+            "growth": "age",
+            "upper_block_bit": "half"
+        },
+        "remaps": {
+            "age": {
+                "0": 0,
+                "1": 1,
+                "3": 2,
+                "5": 3,
+                "7": 4
+            },
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            }
+        },
+        "defaults": {
+            "age": "0",
+            "half": "lower"
+        }
+    },
+    "minecraft:pitcher_plant": {
+        "name": "minecraft:pitcher_plant",
+        "renames": {
+            "upper_block_bit": "half"
+        },
+        "remaps": {
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            }
+        },
+        "defaults": {
+            "half": "lower"
         }
     },
     "minecraft:podzol": {
@@ -9447,7 +10775,7 @@
     "minecraft:pumpkin": {
         "name": "minecraft:pumpkin",
         "removals": [
-            "direction"
+            "minecraft:cardinal_direction"
         ]
     },
     "minecraft:purple_candle": {
@@ -9474,6 +10802,7 @@
             "lit": "false"
         }
     },
+    "minecraft:purple_carpet": [],
     "minecraft:purple_glazed_terracotta": {
         "name": "minecraft:purple_glazed_terracotta",
         "renames": {
@@ -9632,6 +10961,7 @@
             "lit": "false"
         }
     },
+    "minecraft:red_carpet": [],
     "minecraft:red_glazed_terracotta": {
         "name": "minecraft:red_glazed_terracotta",
         "renames": {
@@ -10143,15 +11473,13 @@
         "name": "minecraft:sculk_sensor",
         "additions": {
             "waterlogged": "false",
-            "sculk_sensor_phase": "cooldown"
-        },
-        "renames": {
-            "powered_bit": "power"
+            "power": "0"
         },
         "remaps": {
-            "power": {
-                "false": 0,
-                "true": 9
+            "sculk_sensor_phase": {
+                "1": "active",
+                "2": "cooldown",
+                "0": "inactive"
             }
         },
         "defaults": {
@@ -10931,6 +12259,22 @@
         }
     },
     "minecraft:smooth_stone": [],
+    "minecraft:sniffer_egg": {
+        "name": "minecraft:sniffer_egg",
+        "renames": {
+            "cracked_state": "hatch"
+        },
+        "remaps": {
+            "hatch": {
+                "no_cracks": 0,
+                "cracked": 1,
+                "max_cracked": 2
+            }
+        },
+        "defaults": {
+            "hatch": "0"
+        }
+    },
     "minecraft:snow_layer": {
         "name": "minecraft:snow",
         "removals": [
@@ -11493,8 +12837,35 @@
             "axis": "y"
         }
     },
+    "minecraft:stripped_bamboo_block": {
+        "name": "minecraft:stripped_bamboo_block",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:stripped_birch_log": {
         "name": "minecraft:stripped_birch_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_cherry_log": {
+        "name": "minecraft:stripped_cherry_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_cherry_wood": {
+        "name": "minecraft:stripped_cherry_wood",
         "renames": {
             "pillar_axis": "axis"
         },
@@ -11613,6 +12984,30 @@
             "age": "0"
         }
     },
+    "minecraft:suspicious_gravel": {
+        "name": "minecraft:suspicious_gravel",
+        "removals": [
+            "hanging"
+        ],
+        "renames": {
+            "brushed_progress": "dusted"
+        },
+        "defaults": {
+            "dusted": "0"
+        }
+    },
+    "minecraft:suspicious_sand": {
+        "name": "minecraft:suspicious_sand",
+        "removals": [
+            "hanging"
+        ],
+        "renames": {
+            "brushed_progress": "dusted"
+        },
+        "defaults": {
+            "dusted": "0"
+        }
+    },
     "minecraft:sweet_berry_bush": {
         "name": "minecraft:sweet_berry_bush",
         "renames": {
@@ -11678,6 +13073,22 @@
                     "facing": "north"
                 }
             }
+        }
+    },
+    "minecraft:torchflower": [],
+    "minecraft:torchflower_crop": {
+        "name": "minecraft:torchflower_crop",
+        "renames": {
+            "growth": "age"
+        },
+        "remaps": {
+            "age": {
+                "0": 0,
+                "4": 1
+            }
+        },
+        "defaults": {
+            "age": "0"
         }
     },
     "minecraft:trapped_chest": {
@@ -11748,6 +13159,15 @@
             "attached": "false",
             "facing": "north",
             "powered": "false"
+        }
+    },
+    "minecraft:tube_coral": {
+        "name": "minecraft:tube_coral",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
         }
     },
     "minecraft:tuff": [],
@@ -12667,6 +14087,7 @@
             "lit": "false"
         }
     },
+    "minecraft:white_carpet": [],
     "minecraft:white_glazed_terracotta": {
         "name": "minecraft:white_glazed_terracotta",
         "renames": {
@@ -12710,6 +14131,7 @@
             "lit": "false"
         }
     },
+    "minecraft:yellow_carpet": [],
     "minecraft:yellow_glazed_terracotta": {
         "name": "minecraft:yellow_glazed_terracotta",
         "renames": {

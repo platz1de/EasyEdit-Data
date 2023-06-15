@@ -19,9 +19,9 @@ $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW
 $repo["version"] = Uuid::uuid4();
 $repo["latest"]["state-version"] =
 	(1 << 24) | //major
-	(19 << 16) | //minor
-	(80 << 8) | //patch
-	(11); //revision
+	(29 << 16) | //minor
+	(0 << 8) | //patch
+	(33); //revision
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $suppress = json_decode(file_get_contents("suppress.json"), true, 512, JSON_THROW_ON_ERROR);
@@ -74,12 +74,12 @@ foreach (scandir("patches") as $patch) {
 //Compatibility with old versions
 foreach ($javaToBedrock as $java => $bedrock) {
 	foreach ([
-				 "/minecraft:dirt_path(.*)/" => "minecraft:grass_path$1",
-				 "/minecraft:oak_sign(.*)/" => "minecraft:sign$1",
-				 "/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
-				 "/minecraft:water_cauldron\\[level=(.)]/" => "minecraft:cauldron[level=$1]",
-				 "/minecraft:cauldron/" => "minecraft:cauldron[level=0]",
-			 ] as $search => $replace) {
+		         "/minecraft:dirt_path(.*)/" => "minecraft:grass_path$1",
+		         "/minecraft:oak_sign(.*)/" => "minecraft:sign$1",
+		         "/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
+		         "/minecraft:water_cauldron\\[level=(.)]/" => "minecraft:cauldron[level=$1]",
+		         "/minecraft:cauldron/" => "minecraft:cauldron[level=0]",
+	         ] as $search => $replace) {
 		if (preg_match($search, $java)) {
 			$javaToBedrock[preg_replace($search, $replace, $java)] = $bedrock;
 		}
@@ -277,7 +277,7 @@ foreach ($groupsJtb as $group) {
 			unset($values[$prev], $bedrockValues[$past]);
 			return true;
 		};
-		if (!($checkValues($key, $key) || $checkValues($key, $key . "_bit") || (isset($customData["jtb_states"]["global"][$key]) && $checkValues($key, $customData["jtb_states"]["global"][$key])) || (isset($customData["jtb_states"]["global"][$key . "_"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "_"])) || (isset($customData["jtb_states"][$group["name"]][$key]) && $checkValues($key, $customData["jtb_states"][$group["name"]][$key])))) {
+		if (!($checkValues($key, $key) || $checkValues($key, $key . "_bit") || (isset($customData["jtb_states"]["global"][$key]) && $checkValues($key, $customData["jtb_states"]["global"][$key])) || (isset($customData["jtb_states"]["global"][$key . "_"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "_"])) || (isset($customData["jtb_states"]["global"][$key . "__"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "__"])) || (isset($customData["jtb_states"][$group["name"]][$key]) && $checkValues($key, $customData["jtb_states"][$group["name"]][$key])))) {
 			foreach ($customData["jtb_states"]["regex"] as $regex => $replacements) {
 				if (isset($replacements[$key]) && preg_match($regex, $group["name"]) && $checkValues($key, $replacements[$key])) {
 					break;
@@ -941,6 +941,214 @@ foreach ($groupsJtb as $group) {
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $values["down"], $bedrockValues["multi_face_direction_bits"]);
 	}
 
+	if ($group["name"] === "minecraft:chiseled_bookshelf") {
+		$obj["identifier"] = [
+			"slot_5_occupied",
+			"slot_4_occupied",
+			"slot_3_occupied",
+			"slot_2_occupied",
+			"slot_1_occupied",
+			"slot_0_occupied"
+		];
+		$obj["removals"][] = "slot_5_occupied";
+		$obj["removals"][] = "slot_4_occupied";
+		$obj["removals"][] = "slot_3_occupied";
+		$obj["removals"][] = "slot_2_occupied";
+		$obj["removals"][] = "slot_1_occupied";
+		$obj["removals"][] = "slot_0_occupied";
+		$obj["mapping"] = [ //copilot go brrrrrrrrrrrrrrrr
+			"false" => [
+				"false" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "0"]],
+								"true" => ["additions" => ["books_stored" => "1"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "2"]],
+								"true" => ["additions" => ["books_stored" => "3"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "4"]],
+								"true" => ["additions" => ["books_stored" => "5"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "6"]],
+								"true" => ["additions" => ["books_stored" => "7"]]
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "8"]],
+								"true" => ["additions" => ["books_stored" => "9"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "10"]],
+								"true" => ["additions" => ["books_stored" => "11"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "12"]],
+								"true" => ["additions" => ["books_stored" => "13"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "14"]],
+								"true" => ["additions" => ["books_stored" => "15"]]
+							]
+						]
+					]
+				],
+				"true" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "16"]],
+								"true" => ["additions" => ["books_stored" => "17"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "18"]],
+								"true" => ["additions" => ["books_stored" => "19"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "20"]],
+								"true" => ["additions" => ["books_stored" => "21"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "22"]],
+								"true" => ["additions" => ["books_stored" => "23"]]
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "24"]],
+								"true" => ["additions" => ["books_stored" => "25"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "26"]],
+								"true" => ["additions" => ["books_stored" => "27"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "28"]],
+								"true" => ["additions" => ["books_stored" => "29"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "30"]],
+								"true" => ["additions" => ["books_stored" => "31"]]
+							]
+						]
+					]
+				]
+			],
+			"true" => [
+				"false" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "32"]],
+								"true" => ["additions" => ["books_stored" => "33"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "34"]],
+								"true" => ["additions" => ["books_stored" => "35"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "36"]],
+								"true" => ["additions" => ["books_stored" => "37"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "38"]],
+								"true" => ["additions" => ["books_stored" => "39"]]
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "40"]],
+								"true" => ["additions" => ["books_stored" => "41"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "42"]],
+								"true" => ["additions" => ["books_stored" => "43"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "44"]],
+								"true" => ["additions" => ["books_stored" => "45"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "46"]],
+								"true" => ["additions" => ["books_stored" => "47"]]
+							]
+						]
+					]
+				],
+				"true" => [
+					"false" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "48"]],
+								"true" => ["additions" => ["books_stored" => "49"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "50"]],
+								"true" => ["additions" => ["books_stored" => "51"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "52"]],
+								"true" => ["additions" => ["books_stored" => "53"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "54"]],
+								"true" => ["additions" => ["books_stored" => "55"]]
+							]
+						]
+					],
+					"true" => [
+						"false" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "56"]],
+								"true" => ["additions" => ["books_stored" => "57"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "58"]],
+								"true" => ["additions" => ["books_stored" => "59"]]
+							]
+						],
+						"true" => [
+							"false" => [
+								"false" => ["additions" => ["books_stored" => "60"]],
+								"true" => ["additions" => ["books_stored" => "61"]]
+							],
+							"true" => [
+								"false" => ["additions" => ["books_stored" => "62"]],
+								"true" => ["additions" => ["books_stored" => "63"]]
+							]
+						]
+					]
+				]
+			]
+		];
+		unset($values["slot_0_occupied"], $values["slot_1_occupied"], $values["slot_2_occupied"], $values["slot_3_occupied"], $values["slot_4_occupied"], $values["slot_5_occupied"], $bedrockValues["books_stored"]);
+	}
+
 	//internal tile states
 	if (str_ends_with($group["name"], "banner")) {
 		preg_match("/minecraft:([a-z_]*)_banner/", $group["name"], $matches);
@@ -1005,6 +1213,7 @@ foreach ($groupsJtb as $group) {
 			"minecraft:potted_blue_orchid" => "minecraft:blue_orchid",
 			"minecraft:potted_brown_mushroom" => "minecraft:brown_mushroom",
 			"minecraft:potted_cactus" => "minecraft:cactus",
+			"minecraft:potted_cherry_sapling" => "minecraft:cherry_sapling",
 			"minecraft:potted_cornflower" => "minecraft:cornflower",
 			"minecraft:potted_crimson_fungus" => "minecraft:crimson_fungus",
 			"minecraft:potted_crimson_roots" => "minecraft:crimson_roots",
@@ -1024,6 +1233,7 @@ foreach ($groupsJtb as $group) {
 			"minecraft:potted_red_mushroom" => "minecraft:red_mushroom",
 			"minecraft:potted_red_tulip" => "minecraft:red_tulip",
 			"minecraft:potted_spruce_sapling" => "minecraft:spruce_sapling",
+			"minecraft:potted_torchflower" => "minecraft:torchflower",
 			"minecraft:potted_warped_fungus" => "minecraft:warped_fungus",
 			"minecraft:potted_warped_roots" => "minecraft:warped_roots",
 			"minecraft:potted_white_tulip" => "minecraft:white_tulip",
@@ -1267,9 +1477,9 @@ function toBedrock(string $java, $jtb): string|null
 }
 
 /**
- * @param mixed  $data
+ * @param mixed $data
  * @param string $javaName
- * @param array  $states
+ * @param array $states
  * @return string
  */
 function processState(mixed $data, string $javaName, array $states): string
@@ -1323,7 +1533,7 @@ function processStates(&$states, $data)
 		}
 	}
 	/**
-	 * @var string   $state
+	 * @var string $state
 	 * @var string[] $values
 	 */
 	foreach ($data["remaps"] ?? [] as $state => $values) {

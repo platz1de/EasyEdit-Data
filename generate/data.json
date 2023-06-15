@@ -3,6 +3,7 @@
 	"global": {
 	  "facing": "direction",
 	  "facing_": "facing_direction",
+	  "facing__": "minecraft:cardinal_direction",
 	  "axis": "pillar_axis",
 	  "rotation": "ground_sign_direction",
 	  "rotation_": "facing_direction",
@@ -167,6 +168,18 @@
 	},
 	"minecraft:repeater": {
 	  "delay": "repeater_delay"
+	},
+	"minecraft:sniffer_egg": {
+	  "hatch": "cracked_state"
+	},
+	"minecraft:suspicious_sand": {
+	  "dusted": "brushed_progress"
+	},
+	"minecraft:suspicious_gravel": {
+	  "dusted": "brushed_progress"
+	},
+	"minecraft:pink_petals": {
+	  "flower_amount": "growth"
 	}
   },
   "jtb_additions": {
@@ -605,6 +618,38 @@
 	},
 	"minecraft:sculk_catalyst": {
 	  "bloom": "false"
+	},
+	"minecraft:calibrated_sculk_sensor": {
+	  "sculk_sensor_phase": "cooldown"
+	},
+	"minecraft:pitcher_crop": {
+	  "half": "lower"
+	},
+	"minecraft:pitcher_plant": {
+	  "half": "lower"
+	},
+	"minecraft:sniffer_egg": {
+	  "hatch": "0"
+	},
+	"minecraft:suspicious_sand": {
+	  "dusted": "0"
+	},
+	"minecraft:suspicious_gravel": {
+	  "dusted": "0"
+	},
+	"minecraft:chiseled_bookshelf": {
+	  "slot_0_occupied": "false",
+	  "slot_1_occupied": "false",
+	  "slot_2_occupied": "false",
+	  "slot_3_occupied": "false",
+	  "slot_4_occupied": "false",
+	  "slot_5_occupied": "false"
+	},
+	"minecraft:decorated_pot": {
+	  "cracked": "false"
+	},
+	"minecraft:pink_petals": {
+	  "flower_amount": "1"
 	}
   },
   "overrides": {
@@ -621,6 +666,8 @@
 	"minecraft:spruce_button": [0, 1],
 	"minecraft:stone_button": [0, 1],
 	"minecraft:warped_button": [0, 1],
+	"minecraft:bamboo_button": [0, 1],
+	"minecraft:cherry_button": [0, 1],
 	"minecraft:lever": ["down_north_south", "down_east_west", "up_north_south", "up_east_west", "east", "west", "north", "south"],
 
 	"__comment2": "mushroom blocks are heavily restricted in bedrock",
@@ -704,6 +751,12 @@
 	"minecraft:warped_button": {
 	  "facing_direction": "1"
 	},
+	"minecraft:bamboo_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:cherry_button": {
+	  "facing_direction": "1"
+	},
 	"minecraft:skull": {
 	  "facing_direction": "1",
 	  "type": "skeleton",
@@ -719,6 +772,9 @@
 	},
 	"minecraft:flower_pot": {
 	  "type": "none"
+	},
+	"minecraft:chiseled_bookshelf": {
+	  "books_stored": "0"
 	}
   },
   "btj_tile_default": {

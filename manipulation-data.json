@@ -353,7 +353,37 @@
             }
         }
     },
-    "minecraft:wooden_door": {
+    "minecraft:bamboo_block": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
+    "minecraft:bamboo_button": {
+        "rotate": {
+            "facing_direction": {
+                "5": "3",
+                "2": "5",
+                "3": "4",
+                "4": "2"
+            }
+        },
+        "flip-x": {
+            "facing_direction": {
+                "5": "4",
+                "4": "5"
+            }
+        },
+        "flip-y": {
+            "facing_direction": {
+                "2": "3",
+                "3": "2"
+            }
+        }
+    },
+    "minecraft:bamboo_door": {
         "rotate": {
             "direction": {
                 "0": "1",
@@ -381,7 +411,29 @@
             }
         }
     },
-    "minecraft:oak_stairs": {
+    "minecraft:bamboo_fence_gate": {
+        "rotate": {
+            "direction": {
+                "3": "0",
+                "2": "3",
+                "0": "1",
+                "1": "2"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "2": "0",
+                "0": "2"
+            }
+        }
+    },
+    "minecraft:bamboo_mosaic_stairs": {
         "rotate": {
             "weirdo_direction": {
                 "0": "2",
@@ -409,7 +461,93 @@
             }
         }
     },
-    "minecraft:trapdoor": {
+    "minecraft:bamboo_standing_sign": {
+        "rotate": {
+            "ground_sign_direction": {
+                "0": "4",
+                "1": "5",
+                "10": "14",
+                "11": "15",
+                "12": "0",
+                "13": "1",
+                "14": "2",
+                "15": "3",
+                "2": "6",
+                "3": "7",
+                "4": "8",
+                "5": "9",
+                "6": "10",
+                "7": "11",
+                "8": "12",
+                "9": "13"
+            }
+        },
+        "flip-y": {
+            "ground_sign_direction": {
+                "0": "8",
+                "1": "7",
+                "10": "14",
+                "11": "13",
+                "13": "11",
+                "14": "10",
+                "15": "9",
+                "2": "6",
+                "3": "5",
+                "5": "3",
+                "6": "2",
+                "7": "1",
+                "8": "0",
+                "9": "15"
+            }
+        },
+        "flip-x": {
+            "ground_sign_direction": {
+                "1": "15",
+                "10": "6",
+                "11": "5",
+                "12": "4",
+                "13": "3",
+                "14": "2",
+                "15": "1",
+                "2": "14",
+                "3": "13",
+                "4": "12",
+                "5": "11",
+                "6": "10",
+                "7": "9",
+                "9": "7"
+            }
+        }
+    },
+    "minecraft:bamboo_stairs": {
+        "rotate": {
+            "weirdo_direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "weirdo_direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-z": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-y": {
+            "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:bamboo_trapdoor": {
         "rotate": {
             "direction": {
                 "0": "2",
@@ -434,6 +572,28 @@
             "direction": {
                 "3": "2",
                 "2": "3"
+            }
+        }
+    },
+    "minecraft:bamboo_wall_sign": {
+        "rotate": {
+            "facing_direction": {
+                "5": "3",
+                "2": "5",
+                "3": "4",
+                "4": "2"
+            }
+        },
+        "flip-x": {
+            "facing_direction": {
+                "5": "4",
+                "4": "5"
+            }
+        },
+        "flip-y": {
+            "facing_direction": {
+                "2": "3",
+                "3": "2"
             }
         }
     },
@@ -1153,6 +1313,28 @@
             }
         }
     },
+    "minecraft:calibrated_sculk_sensor": {
+        "rotate": {
+            "direction": {
+                "3": "0",
+                "2": "3",
+                "0": "1",
+                "1": "2"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "2": "0",
+                "0": "2"
+            }
+        }
+    },
     "minecraft:campfire": {
         "rotate": {
             "direction": {
@@ -1177,23 +1359,23 @@
     },
     "minecraft:carved_pumpkin": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-y": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -1233,6 +1415,230 @@
             }
         }
     },
+    "minecraft:cherry_button": {
+        "rotate": {
+            "facing_direction": {
+                "5": "3",
+                "2": "5",
+                "3": "4",
+                "4": "2"
+            }
+        },
+        "flip-x": {
+            "facing_direction": {
+                "5": "4",
+                "4": "5"
+            }
+        },
+        "flip-y": {
+            "facing_direction": {
+                "2": "3",
+                "3": "2"
+            }
+        }
+    },
+    "minecraft:cherry_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-z": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:cherry_fence_gate": {
+        "rotate": {
+            "direction": {
+                "3": "0",
+                "2": "3",
+                "0": "1",
+                "1": "2"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "2": "0",
+                "0": "2"
+            }
+        }
+    },
+    "minecraft:cherry_log": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
+    "minecraft:cherry_standing_sign": {
+        "rotate": {
+            "ground_sign_direction": {
+                "0": "4",
+                "1": "5",
+                "10": "14",
+                "11": "15",
+                "12": "0",
+                "13": "1",
+                "14": "2",
+                "15": "3",
+                "2": "6",
+                "3": "7",
+                "4": "8",
+                "5": "9",
+                "6": "10",
+                "7": "11",
+                "8": "12",
+                "9": "13"
+            }
+        },
+        "flip-y": {
+            "ground_sign_direction": {
+                "0": "8",
+                "1": "7",
+                "10": "14",
+                "11": "13",
+                "13": "11",
+                "14": "10",
+                "15": "9",
+                "2": "6",
+                "3": "5",
+                "5": "3",
+                "6": "2",
+                "7": "1",
+                "8": "0",
+                "9": "15"
+            }
+        },
+        "flip-x": {
+            "ground_sign_direction": {
+                "1": "15",
+                "10": "6",
+                "11": "5",
+                "12": "4",
+                "13": "3",
+                "14": "2",
+                "15": "1",
+                "2": "14",
+                "3": "13",
+                "4": "12",
+                "5": "11",
+                "6": "10",
+                "7": "9",
+                "9": "7"
+            }
+        }
+    },
+    "minecraft:cherry_stairs": {
+        "rotate": {
+            "weirdo_direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "weirdo_direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-z": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-y": {
+            "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:cherry_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-z": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:cherry_wall_sign": {
+        "rotate": {
+            "facing_direction": {
+                "5": "3",
+                "2": "5",
+                "3": "4",
+                "4": "2"
+            }
+        },
+        "flip-x": {
+            "facing_direction": {
+                "5": "4",
+                "4": "5"
+            }
+        },
+        "flip-y": {
+            "facing_direction": {
+                "2": "3",
+                "3": "2"
+            }
+        }
+    },
+    "minecraft:cherry_wood": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
     "minecraft:chest": {
         "rotate": {
             "facing_direction": {
@@ -1252,6 +1658,28 @@
             "facing_direction": {
                 "2": "3",
                 "3": "2"
+            }
+        }
+    },
+    "minecraft:chiseled_bookshelf": {
+        "rotate": {
+            "direction": {
+                "3": "0",
+                "2": "3",
+                "0": "1",
+                "1": "2"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "2": "0",
+                "0": "2"
             }
         }
     },
@@ -1975,6 +2403,28 @@
             }
         }
     },
+    "minecraft:decorated_pot": {
+        "rotate": {
+            "direction": {
+                "1": "2",
+                "0": "1",
+                "2": "3",
+                "3": "0"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "1": "3",
+                "3": "1"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        }
+    },
     "minecraft:deepslate": {
         "rotate": {
             "pillar_axis": {
@@ -2671,23 +3121,23 @@
     },
     "minecraft:lit_pumpkin": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-y": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -3573,6 +4023,34 @@
             }
         }
     },
+    "minecraft:wooden_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-z": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
     "minecraft:fence_gate": {
         "rotate": {
             "direction": {
@@ -3658,6 +4136,62 @@
                 "6": "10",
                 "7": "9",
                 "9": "7"
+            }
+        }
+    },
+    "minecraft:oak_stairs": {
+        "rotate": {
+            "weirdo_direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "weirdo_direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-z": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-y": {
+            "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-z": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "3": "2",
+                "2": "3"
             }
         }
     },
@@ -3799,6 +4333,28 @@
             }
         }
     },
+    "minecraft:pink_petals": {
+        "rotate": {
+            "direction": {
+                "3": "0",
+                "2": "3",
+                "0": "1",
+                "1": "2"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        },
+        "flip-y": {
+            "direction": {
+                "2": "0",
+                "0": "2"
+            }
+        }
+    },
     "minecraft:piston": {
         "flip-z": {
             "facing_direction": [
@@ -3880,6 +4436,22 @@
             "facing_direction": {
                 "3": "2",
                 "2": "3"
+            }
+        }
+    },
+    "minecraft:pitcher_crop": {
+        "flip-z": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        }
+    },
+    "minecraft:pitcher_plant": {
+        "flip-z": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
             }
         }
     },
@@ -5275,7 +5847,31 @@
             }
         }
     },
+    "minecraft:stripped_bamboo_block": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
     "minecraft:stripped_birch_log": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
+    "minecraft:stripped_cherry_log": {
+        "rotate": {
+            "pillar_axis": {
+                "x": "z",
+                "z": "x"
+            }
+        }
+    },
+    "minecraft:stripped_cherry_wood": {
         "rotate": {
             "pillar_axis": {
                 "x": "z",

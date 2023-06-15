@@ -1014,8 +1014,98 @@
             "stage": "0"
         }
     },
+    "minecraft:bamboo_block": {
+        "name": "minecraft:bamboo_block",
+        "renames": {
+            "axis": "pillar_axis"
+        },
+        "values": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:bamboo_button": {
+        "name": "minecraft:bamboo_button",
+        "removals": [
+            "face",
+            "facing"
+        ],
+        "renames": {
+            "powered": "button_pressed_bit"
+        },
+        "identifier": [
+            "face",
+            "facing"
+        ],
+        "mapping": {
+            "ceiling": {
+                "def": {
+                    "additions": {
+                        "facing_direction": "0"
+                    }
+                }
+            },
+            "floor": {
+                "def": {
+                    "additions": {
+                        "facing_direction": "1"
+                    }
+                }
+            },
+            "wall": {
+                "east": {
+                    "additions": {
+                        "facing_direction": "5"
+                    }
+                },
+                "north": {
+                    "additions": {
+                        "facing_direction": "2"
+                    }
+                },
+                "south": {
+                    "additions": {
+                        "facing_direction": "3"
+                    }
+                },
+                "west": {
+                    "additions": {
+                        "facing_direction": "4"
+                    }
+                }
+            }
+        },
+        "values": {
+            "face": [
+                "ceiling",
+                "floor",
+                "wall"
+            ],
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "powered": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "face": "wall",
+            "facing": "north",
+            "powered": "false"
+        }
+    },
     "minecraft:bamboo_door": {
-        "name": "minecraft:wooden_door",
+        "name": "minecraft:bamboo_door",
         "removals": [
             "powered"
         ],
@@ -1073,6 +1163,209 @@
             "powered": "false"
         }
     },
+    "minecraft:bamboo_fence": {
+        "name": "minecraft:bamboo_fence",
+        "removals": [
+            "waterlogged",
+            "east",
+            "north",
+            "south",
+            "west"
+        ],
+        "values": {
+            "east": [
+                "false",
+                "true"
+            ],
+            "north": [
+                "false",
+                "true"
+            ],
+            "south": [
+                "false",
+                "true"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ],
+            "west": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:bamboo_fence_gate": {
+        "name": "minecraft:bamboo_fence_gate",
+        "removals": [
+            "powered"
+        ],
+        "renames": {
+            "facing": "direction",
+            "in_wall": "in_wall_bit",
+            "open": "open_bit"
+        },
+        "remaps": {
+            "direction": {
+                "east": "3",
+                "north": "2",
+                "south": "0",
+                "west": "1"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "in_wall": [
+                "false",
+                "true"
+            ],
+            "open": [
+                "false",
+                "true"
+            ],
+            "powered": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "in_wall": "false",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:bamboo_mosaic": [],
+    "minecraft:bamboo_mosaic_slab": {
+        "removals": [
+            "waterlogged",
+            "type"
+        ],
+        "identifier": [
+            "type"
+        ],
+        "mapping": {
+            "top": {
+                "name": "minecraft:bamboo_mosaic_slab",
+                "additions": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:bamboo_mosaic_slab",
+                "additions": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:bamboo_mosaic_double_slab",
+                "additions": {
+                    "top_slot_bit": "false"
+                }
+            }
+        },
+        "values": {
+            "type": [
+                "bottom",
+                "double",
+                "top"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_mosaic_stairs": {
+        "name": "minecraft:bamboo_mosaic_stairs",
+        "removals": [
+            "waterlogged",
+            "shape"
+        ],
+        "renames": {
+            "facing": "weirdo_direction",
+            "half": "upside_down_bit"
+        },
+        "remaps": {
+            "weirdo_direction": {
+                "east": "0",
+                "north": "3",
+                "south": "2",
+                "west": "1"
+            },
+            "upside_down_bit": {
+                "bottom": "false",
+                "top": "true"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "half": [
+                "bottom",
+                "top"
+            ],
+            "shape": [
+                "inner_left",
+                "inner_right",
+                "outer_left",
+                "outer_right",
+                "straight"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_planks": [],
+    "minecraft:bamboo_pressure_plate": {
+        "name": "minecraft:bamboo_pressure_plate",
+        "renames": {
+            "powered": "redstone_signal"
+        },
+        "remaps": {
+            "redstone_signal": {
+                "false": "0",
+                "true": "15"
+            }
+        },
+        "values": {
+            "powered": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "powered": "false"
+        }
+    },
     "minecraft:bamboo_sapling": {
         "name": "minecraft:bamboo_sapling",
         "additions": {
@@ -1080,8 +1373,89 @@
             "age_bit": "false"
         }
     },
+    "minecraft:bamboo_sign": {
+        "name": "minecraft:bamboo_standing_sign",
+        "removals": [
+            "waterlogged"
+        ],
+        "renames": {
+            "rotation": "ground_sign_direction"
+        },
+        "values": {
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_slab": {
+        "removals": [
+            "waterlogged",
+            "type"
+        ],
+        "identifier": [
+            "type"
+        ],
+        "mapping": {
+            "top": {
+                "name": "minecraft:bamboo_slab",
+                "additions": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:bamboo_slab",
+                "additions": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:bamboo_double_slab",
+                "additions": {
+                    "top_slot_bit": "false"
+                }
+            }
+        },
+        "values": {
+            "type": [
+                "bottom",
+                "double",
+                "top"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:bamboo_stairs": {
-        "name": "minecraft:oak_stairs",
+        "name": "minecraft:bamboo_stairs",
         "removals": [
             "waterlogged",
             "shape"
@@ -1133,7 +1507,7 @@
         }
     },
     "minecraft:bamboo_trapdoor": {
-        "name": "minecraft:trapdoor",
+        "name": "minecraft:bamboo_trapdoor",
         "removals": [
             "waterlogged",
             "powered"
@@ -1184,6 +1558,39 @@
             "half": "bottom",
             "open": "false",
             "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bamboo_wall_sign": {
+        "name": "minecraft:bamboo_wall_sign",
+        "removals": [
+            "waterlogged"
+        ],
+        "renames": {
+            "facing": "facing_direction"
+        },
+        "remaps": {
+            "facing_direction": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -2164,12 +2571,7 @@
             "lit": "false"
         }
     },
-    "minecraft:black_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "black"
-        }
-    },
+    "minecraft:black_carpet": [],
     "minecraft:black_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -2665,12 +3067,7 @@
             "lit": "false"
         }
     },
-    "minecraft:blue_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "blue"
-        }
-    },
+    "minecraft:blue_carpet": [],
     "minecraft:blue_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -2845,11 +3242,7 @@
     },
     "minecraft:bookshelf": [],
     "minecraft:brain_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "pink",
-            "dead_bit": "false"
-        },
+        "name": "minecraft:brain_coral",
         "removals": [
             "waterlogged"
         ],
@@ -3267,12 +3660,7 @@
             "lit": "false"
         }
     },
-    "minecraft:brown_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "brown"
-        }
-    },
+    "minecraft:brown_carpet": [],
     "minecraft:brown_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -3580,11 +3968,7 @@
         }
     },
     "minecraft:bubble_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "purple",
-            "dead_bit": "false"
-        },
+        "name": "minecraft:bubble_coral",
         "removals": [
             "waterlogged"
         ],
@@ -3708,6 +4092,70 @@
         }
     },
     "minecraft:calcite": [],
+    "minecraft:calibrated_sculk_sensor": {
+        "name": "minecraft:calibrated_sculk_sensor",
+        "removals": [
+            "waterlogged",
+            "power"
+        ],
+        "renames": {
+            "facing": "direction"
+        },
+        "remaps": {
+            "direction": {
+                "east": "3",
+                "north": "2",
+                "south": "0",
+                "west": "1"
+            },
+            "sculk_sensor_phase": {
+                "active": "1",
+                "cooldown": "2",
+                "inactive": "0"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "power": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "sculk_sensor_phase": [
+                "active",
+                "cooldown",
+                "inactive"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "power": "0",
+            "sculk_sensor_phase": "cooldown",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:campfire": {
         "name": "minecraft:campfire",
         "removals": [
@@ -3828,15 +4276,7 @@
     "minecraft:carved_pumpkin": {
         "name": "minecraft:carved_pumpkin",
         "renames": {
-            "facing": "direction"
-        },
-        "remaps": {
-            "direction": {
-                "east": "3",
-                "north": "2",
-                "south": "0",
-                "west": "1"
-            }
+            "facing": "minecraft:cardinal_direction"
         },
         "values": {
             "facing": [
@@ -4025,6 +4465,559 @@
             "facing": "north"
         }
     },
+    "minecraft:cherry_button": {
+        "name": "minecraft:cherry_button",
+        "removals": [
+            "face",
+            "facing"
+        ],
+        "renames": {
+            "powered": "button_pressed_bit"
+        },
+        "identifier": [
+            "face",
+            "facing"
+        ],
+        "mapping": {
+            "ceiling": {
+                "def": {
+                    "additions": {
+                        "facing_direction": "0"
+                    }
+                }
+            },
+            "floor": {
+                "def": {
+                    "additions": {
+                        "facing_direction": "1"
+                    }
+                }
+            },
+            "wall": {
+                "east": {
+                    "additions": {
+                        "facing_direction": "5"
+                    }
+                },
+                "north": {
+                    "additions": {
+                        "facing_direction": "2"
+                    }
+                },
+                "south": {
+                    "additions": {
+                        "facing_direction": "3"
+                    }
+                },
+                "west": {
+                    "additions": {
+                        "facing_direction": "4"
+                    }
+                }
+            }
+        },
+        "values": {
+            "face": [
+                "ceiling",
+                "floor",
+                "wall"
+            ],
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "powered": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "face": "wall",
+            "facing": "north",
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_door": {
+        "name": "minecraft:cherry_door",
+        "removals": [
+            "powered"
+        ],
+        "renames": {
+            "facing": "direction",
+            "half": "upper_block_bit",
+            "hinge": "door_hinge_bit",
+            "open": "open_bit"
+        },
+        "remaps": {
+            "direction": {
+                "east": "0",
+                "north": "3",
+                "south": "1",
+                "west": "2"
+            },
+            "upper_block_bit": {
+                "lower": "false",
+                "upper": "true"
+            },
+            "door_hinge_bit": {
+                "left": "false",
+                "right": "true"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "half": [
+                "lower",
+                "upper"
+            ],
+            "hinge": [
+                "left",
+                "right"
+            ],
+            "open": [
+                "false",
+                "true"
+            ],
+            "powered": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "lower",
+            "hinge": "left",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_fence": {
+        "name": "minecraft:cherry_fence",
+        "removals": [
+            "waterlogged",
+            "east",
+            "north",
+            "south",
+            "west"
+        ],
+        "values": {
+            "east": [
+                "false",
+                "true"
+            ],
+            "north": [
+                "false",
+                "true"
+            ],
+            "south": [
+                "false",
+                "true"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ],
+            "west": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:cherry_fence_gate": {
+        "name": "minecraft:cherry_fence_gate",
+        "removals": [
+            "powered"
+        ],
+        "renames": {
+            "facing": "direction",
+            "in_wall": "in_wall_bit",
+            "open": "open_bit"
+        },
+        "remaps": {
+            "direction": {
+                "east": "3",
+                "north": "2",
+                "south": "0",
+                "west": "1"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "in_wall": [
+                "false",
+                "true"
+            ],
+            "open": [
+                "false",
+                "true"
+            ],
+            "powered": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "in_wall": "false",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_leaves": {
+        "name": "minecraft:cherry_leaves",
+        "additions": {
+            "update_bit": "false"
+        },
+        "removals": [
+            "waterlogged",
+            "distance"
+        ],
+        "renames": {
+            "persistent": "persistent_bit"
+        },
+        "values": {
+            "distance": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7"
+            ],
+            "persistent": [
+                "false",
+                "true"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_log": {
+        "name": "minecraft:cherry_log",
+        "renames": {
+            "axis": "pillar_axis"
+        },
+        "values": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:cherry_planks": [],
+    "minecraft:cherry_pressure_plate": {
+        "name": "minecraft:cherry_pressure_plate",
+        "renames": {
+            "powered": "redstone_signal"
+        },
+        "remaps": {
+            "redstone_signal": {
+                "false": "0",
+                "true": "15"
+            }
+        },
+        "values": {
+            "powered": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "powered": "false"
+        }
+    },
+    "minecraft:cherry_sapling": {
+        "name": "minecraft:cherry_sapling",
+        "renames": {
+            "stage": "age_bit"
+        },
+        "remaps": {
+            "age_bit": [
+                "false",
+                "true"
+            ]
+        },
+        "values": {
+            "stage": [
+                "0",
+                "1"
+            ]
+        },
+        "defaults": {
+            "stage": "0"
+        }
+    },
+    "minecraft:cherry_sign": {
+        "name": "minecraft:cherry_standing_sign",
+        "removals": [
+            "waterlogged"
+        ],
+        "renames": {
+            "rotation": "ground_sign_direction"
+        },
+        "values": {
+            "rotation": [
+                "0",
+                "1",
+                "10",
+                "11",
+                "12",
+                "13",
+                "14",
+                "15",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_slab": {
+        "removals": [
+            "waterlogged",
+            "type"
+        ],
+        "identifier": [
+            "type"
+        ],
+        "mapping": {
+            "top": {
+                "name": "minecraft:cherry_slab",
+                "additions": {
+                    "top_slot_bit": "true"
+                }
+            },
+            "bottom": {
+                "name": "minecraft:cherry_slab",
+                "additions": {
+                    "top_slot_bit": "false"
+                }
+            },
+            "double": {
+                "name": "minecraft:cherry_double_slab",
+                "additions": {
+                    "top_slot_bit": "false"
+                }
+            }
+        },
+        "values": {
+            "type": [
+                "bottom",
+                "double",
+                "top"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_stairs": {
+        "name": "minecraft:cherry_stairs",
+        "removals": [
+            "waterlogged",
+            "shape"
+        ],
+        "renames": {
+            "facing": "weirdo_direction",
+            "half": "upside_down_bit"
+        },
+        "remaps": {
+            "weirdo_direction": {
+                "east": "0",
+                "north": "3",
+                "south": "2",
+                "west": "1"
+            },
+            "upside_down_bit": {
+                "bottom": "false",
+                "top": "true"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "half": [
+                "bottom",
+                "top"
+            ],
+            "shape": [
+                "inner_left",
+                "inner_right",
+                "outer_left",
+                "outer_right",
+                "straight"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_trapdoor": {
+        "name": "minecraft:cherry_trapdoor",
+        "removals": [
+            "waterlogged",
+            "powered"
+        ],
+        "renames": {
+            "facing": "direction",
+            "half": "upside_down_bit",
+            "open": "open_bit"
+        },
+        "remaps": {
+            "direction": {
+                "east": "0",
+                "north": "3",
+                "south": "2",
+                "west": "1"
+            },
+            "upside_down_bit": {
+                "bottom": "false",
+                "top": "true"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "half": [
+                "bottom",
+                "top"
+            ],
+            "open": [
+                "false",
+                "true"
+            ],
+            "powered": [
+                "false",
+                "true"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "open": "false",
+            "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_wall_sign": {
+        "name": "minecraft:cherry_wall_sign",
+        "removals": [
+            "waterlogged"
+        ],
+        "renames": {
+            "facing": "facing_direction"
+        },
+        "remaps": {
+            "facing_direction": {
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "west": "4"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cherry_wood": {
+        "name": "minecraft:cherry_wood",
+        "additions": {
+            "stripped_bit": "false"
+        },
+        "renames": {
+            "axis": "pillar_axis"
+        },
+        "values": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:chest": {
         "name": "minecraft:chest",
         "removals": [
@@ -4091,6 +5084,523 @@
         },
         "defaults": {
             "facing": "north"
+        }
+    },
+    "minecraft:chiseled_bookshelf": {
+        "name": "minecraft:chiseled_bookshelf",
+        "removals": [
+            "slot_5_occupied",
+            "slot_4_occupied",
+            "slot_3_occupied",
+            "slot_2_occupied",
+            "slot_1_occupied",
+            "slot_0_occupied"
+        ],
+        "renames": {
+            "facing": "direction"
+        },
+        "remaps": {
+            "direction": {
+                "east": "3",
+                "north": "2",
+                "south": "0",
+                "west": "1"
+            }
+        },
+        "identifier": [
+            "slot_5_occupied",
+            "slot_4_occupied",
+            "slot_3_occupied",
+            "slot_2_occupied",
+            "slot_1_occupied",
+            "slot_0_occupied"
+        ],
+        "mapping": {
+            "false": {
+                "false": {
+                    "false": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "0"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "1"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "2"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "3"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "4"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "5"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "6"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "7"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "true": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "8"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "9"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "10"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "11"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "12"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "13"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "14"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "15"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "true": {
+                    "false": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "16"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "17"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "18"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "19"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "20"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "21"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "22"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "23"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "true": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "24"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "25"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "26"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "27"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "28"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "29"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "30"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "31"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "true": {
+                "false": {
+                    "false": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "32"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "33"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "34"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "35"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "36"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "37"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "38"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "39"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "true": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "40"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "41"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "42"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "43"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "44"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "45"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "46"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "47"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "true": {
+                    "false": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "48"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "49"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "50"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "51"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "52"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "53"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "54"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "55"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "true": {
+                        "false": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "56"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "57"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "58"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "59"
+                                    }
+                                }
+                            }
+                        },
+                        "true": {
+                            "false": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "60"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "61"
+                                    }
+                                }
+                            },
+                            "true": {
+                                "false": {
+                                    "additions": {
+                                        "books_stored": "62"
+                                    }
+                                },
+                                "true": {
+                                    "additions": {
+                                        "books_stored": "63"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "slot_0_occupied": [
+                "false",
+                "true"
+            ],
+            "slot_1_occupied": [
+                "false",
+                "true"
+            ],
+            "slot_2_occupied": [
+                "false",
+                "true"
+            ],
+            "slot_3_occupied": [
+                "false",
+                "true"
+            ],
+            "slot_4_occupied": [
+                "false",
+                "true"
+            ],
+            "slot_5_occupied": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "slot_0_occupied": "false",
+            "slot_1_occupied": "false",
+            "slot_2_occupied": "false",
+            "slot_3_occupied": "false",
+            "slot_4_occupied": "false",
+            "slot_5_occupied": "false"
         }
     },
     "minecraft:chiseled_deepslate": [],
@@ -5627,12 +7137,7 @@
             "lit": "false"
         }
     },
-    "minecraft:cyan_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "cyan"
-        }
-    },
+    "minecraft:cyan_carpet": [],
     "minecraft:cyan_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -6529,11 +8034,7 @@
         }
     },
     "minecraft:dead_brain_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "pink",
-            "dead_bit": "true"
-        },
+        "name": "minecraft:dead_brain_coral",
         "removals": [
             "waterlogged"
         ],
@@ -6611,11 +8112,7 @@
         }
     },
     "minecraft:dead_bubble_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "purple",
-            "dead_bit": "true"
-        },
+        "name": "minecraft:dead_bubble_coral",
         "removals": [
             "waterlogged"
         ],
@@ -6696,11 +8193,7 @@
         "name": "minecraft:deadbush"
     },
     "minecraft:dead_fire_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "red",
-            "dead_bit": "true"
-        },
+        "name": "minecraft:dead_fire_coral",
         "removals": [
             "waterlogged"
         ],
@@ -6778,11 +8271,7 @@
         }
     },
     "minecraft:dead_horn_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "yellow",
-            "dead_bit": "true"
-        },
+        "name": "minecraft:dead_horn_coral",
         "removals": [
             "waterlogged"
         ],
@@ -6860,11 +8349,7 @@
         }
     },
     "minecraft:dead_tube_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "blue",
-            "dead_bit": "true"
-        },
+        "name": "minecraft:dead_tube_coral",
         "removals": [
             "waterlogged"
         ],
@@ -6937,6 +8422,45 @@
             ]
         },
         "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:decorated_pot": {
+        "name": "minecraft:decorated_pot",
+        "removals": [
+            "waterlogged",
+            "cracked"
+        ],
+        "renames": {
+            "facing": "direction"
+        },
+        "remaps": {
+            "direction": {
+                "east": "1",
+                "north": "0",
+                "south": "2",
+                "west": "3"
+            }
+        },
+        "values": {
+            "cracked": [
+                "false",
+                "true"
+            ],
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "waterlogged": [
+                "false",
+                "true"
+            ]
+        },
+        "defaults": {
+            "cracked": "false",
             "facing": "north",
             "waterlogged": "false"
         }
@@ -8202,11 +9726,7 @@
         }
     },
     "minecraft:fire_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "red",
-            "dead_bit": "false"
-        },
+        "name": "minecraft:fire_coral",
         "removals": [
             "waterlogged"
         ],
@@ -9280,12 +10800,7 @@
             "lit": "false"
         }
     },
-    "minecraft:gray_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "gray"
-        }
-    },
+    "minecraft:gray_carpet": [],
     "minecraft:gray_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -9560,12 +11075,7 @@
             "lit": "false"
         }
     },
-    "minecraft:green_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "green"
-        }
-    },
+    "minecraft:green_carpet": [],
     "minecraft:green_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -9848,11 +11358,7 @@
         }
     },
     "minecraft:horn_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "yellow",
-            "dead_bit": "false"
-        },
+        "name": "minecraft:horn_coral",
         "removals": [
             "waterlogged"
         ],
@@ -10140,15 +11646,7 @@
     "minecraft:jack_o_lantern": {
         "name": "minecraft:lit_pumpkin",
         "renames": {
-            "facing": "direction"
-        },
-        "remaps": {
-            "direction": {
-                "east": "3",
-                "north": "2",
-                "south": "0",
-                "west": "1"
-            }
+            "facing": "minecraft:cardinal_direction"
         },
         "values": {
             "facing": [
@@ -10944,7 +12442,7 @@
         }
     },
     "minecraft:lava_cauldron": {
-        "name": "minecraft:lava_cauldron",
+        "name": "minecraft:cauldron",
         "additions": {
             "cauldron_liquid": "lava",
             "fill_level": "6"
@@ -11365,12 +12863,7 @@
             "lit": "false"
         }
     },
-    "minecraft:light_blue_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "light_blue"
-        }
-    },
+    "minecraft:light_blue_carpet": [],
     "minecraft:light_blue_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -11645,12 +13138,7 @@
             "lit": "false"
         }
     },
-    "minecraft:light_gray_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "silver"
-        }
-    },
+    "minecraft:light_gray_carpet": [],
     "minecraft:light_gray_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -12030,12 +13518,7 @@
             "lit": "false"
         }
     },
-    "minecraft:lime_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "lime"
-        }
-    },
+    "minecraft:lime_carpet": [],
     "minecraft:lime_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -12336,12 +13819,7 @@
             "lit": "false"
         }
     },
-    "minecraft:magenta_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "magenta"
-        }
-    },
+    "minecraft:magenta_carpet": [],
     "minecraft:magenta_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -14913,12 +16391,7 @@
             "lit": "false"
         }
     },
-    "minecraft:orange_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "orange"
-        }
-    },
+    "minecraft:orange_carpet": [],
     "minecraft:orange_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -15464,12 +16937,7 @@
             "lit": "false"
         }
     },
-    "minecraft:pink_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "pink"
-        }
-    },
+    "minecraft:pink_carpet": [],
     "minecraft:pink_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -15505,6 +16973,45 @@
         },
         "defaults": {
             "facing": "north"
+        }
+    },
+    "minecraft:pink_petals": {
+        "name": "minecraft:pink_petals",
+        "renames": {
+            "facing": "direction",
+            "flower_amount": "growth"
+        },
+        "remaps": {
+            "direction": {
+                "east": "3",
+                "north": "2",
+                "south": "0",
+                "west": "1"
+            },
+            "growth": {
+                "1": "0",
+                "2": "1",
+                "3": "2",
+                "4": "3"
+            }
+        },
+        "values": {
+            "facing": [
+                "east",
+                "north",
+                "south",
+                "west"
+            ],
+            "flower_amount": [
+                "1",
+                "2",
+                "3",
+                "4"
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "flower_amount": "1"
         }
     },
     "minecraft:pink_shulker_box": {
@@ -15710,6 +17217,64 @@
             "facing": "north",
             "short": "false",
             "type": "normal"
+        }
+    },
+    "minecraft:pitcher_crop": {
+        "name": "minecraft:pitcher_crop",
+        "renames": {
+            "age": "growth",
+            "half": "upper_block_bit"
+        },
+        "remaps": {
+            "growth": [
+                "0",
+                "1",
+                "3",
+                "5",
+                "7"
+            ],
+            "upper_block_bit": {
+                "lower": "false",
+                "upper": "true"
+            }
+        },
+        "values": {
+            "age": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4"
+            ],
+            "half": [
+                "lower",
+                "upper"
+            ]
+        },
+        "defaults": {
+            "age": "0",
+            "half": "lower"
+        }
+    },
+    "minecraft:pitcher_plant": {
+        "name": "minecraft:pitcher_plant",
+        "renames": {
+            "half": "upper_block_bit"
+        },
+        "remaps": {
+            "upper_block_bit": {
+                "lower": "false",
+                "upper": "true"
+            }
+        },
+        "values": {
+            "half": [
+                "lower",
+                "upper"
+            ]
+        },
+        "defaults": {
+            "half": "lower"
         }
     },
     "minecraft:player_head": {
@@ -16921,6 +18486,16 @@
             "type"
         ]
     },
+    "minecraft:potted_cherry_sapling": {
+        "name": "minecraft:flower_pot",
+        "additions": {
+            "update_bit": "false",
+            "type": "minecraft:cherry_sapling[age_bit=false]"
+        },
+        "tile_extra": [
+            "type"
+        ]
+    },
     "minecraft:potted_cornflower": {
         "name": "minecraft:flower_pot",
         "additions": {
@@ -17106,6 +18681,16 @@
         "additions": {
             "update_bit": "false",
             "type": "minecraft:sapling[age_bit=false,sapling_type=spruce]"
+        },
+        "tile_extra": [
+            "type"
+        ]
+    },
+    "minecraft:potted_torchflower": {
+        "name": "minecraft:flower_pot",
+        "additions": {
+            "update_bit": "false",
+            "type": "minecraft:torchflower"
         },
         "tile_extra": [
             "type"
@@ -17518,7 +19103,7 @@
     "minecraft:pumpkin": {
         "name": "minecraft:pumpkin",
         "additions": {
-            "direction": "0"
+            "minecraft:cardinal_direction": "north"
         }
     },
     "minecraft:pumpkin_stem": {
@@ -17673,12 +19258,7 @@
             "lit": "false"
         }
     },
-    "minecraft:purple_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "purple"
-        }
-    },
+    "minecraft:purple_carpet": [],
     "minecraft:purple_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -18252,12 +19832,7 @@
             "lit": "false"
         }
     },
-    "minecraft:red_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "red"
-        }
-    },
+    "minecraft:red_carpet": [],
     "minecraft:red_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -19513,29 +21088,13 @@
         "name": "minecraft:sculk_sensor",
         "removals": [
             "waterlogged",
-            "sculk_sensor_phase"
+            "power"
         ],
-        "renames": {
-            "power": "powered_bit"
-        },
         "remaps": {
-            "powered_bit": {
-                "0": "false",
-                "1": "true",
-                "10": "true",
-                "11": "true",
-                "12": "true",
-                "13": "true",
-                "14": "true",
-                "15": "true",
-                "2": "true",
-                "3": "true",
-                "4": "true",
-                "5": "true",
-                "6": "true",
-                "7": "true",
-                "8": "true",
-                "9": "true"
+            "sculk_sensor_phase": {
+                "active": "1",
+                "cooldown": "2",
+                "inactive": "0"
             }
         },
         "values": {
@@ -20770,6 +22329,29 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:sniffer_egg": {
+        "name": "minecraft:sniffer_egg",
+        "renames": {
+            "hatch": "cracked_state"
+        },
+        "remaps": {
+            "cracked_state": [
+                "no_cracks",
+                "cracked",
+                "max_cracked"
+            ]
+        },
+        "values": {
+            "hatch": [
+                "0",
+                "1",
+                "2"
+            ]
+        },
+        "defaults": {
+            "hatch": "0"
+        }
+    },
     "minecraft:snow": {
         "name": "minecraft:snow_layer",
         "additions": {
@@ -21980,6 +23562,22 @@
             "axis": "y"
         }
     },
+    "minecraft:stripped_bamboo_block": {
+        "name": "minecraft:stripped_bamboo_block",
+        "renames": {
+            "axis": "pillar_axis"
+        },
+        "values": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:stripped_birch_log": {
         "name": "minecraft:stripped_birch_log",
         "renames": {
@@ -22002,6 +23600,38 @@
             "wood_type": "birch",
             "stripped_bit": "true"
         },
+        "renames": {
+            "axis": "pillar_axis"
+        },
+        "values": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_cherry_log": {
+        "name": "minecraft:stripped_cherry_log",
+        "renames": {
+            "axis": "pillar_axis"
+        },
+        "values": {
+            "axis": [
+                "x",
+                "y",
+                "z"
+            ]
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_cherry_wood": {
+        "name": "minecraft:stripped_cherry_wood",
         "renames": {
             "axis": "pillar_axis"
         },
@@ -22329,6 +23959,46 @@
             "half": "lower"
         }
     },
+    "minecraft:suspicious_gravel": {
+        "name": "minecraft:suspicious_gravel",
+        "additions": {
+            "hanging": "false"
+        },
+        "renames": {
+            "dusted": "brushed_progress"
+        },
+        "values": {
+            "dusted": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        "defaults": {
+            "dusted": "0"
+        }
+    },
+    "minecraft:suspicious_sand": {
+        "name": "minecraft:suspicious_sand",
+        "additions": {
+            "hanging": "false"
+        },
+        "renames": {
+            "dusted": "brushed_progress"
+        },
+        "values": {
+            "dusted": [
+                "0",
+                "1",
+                "2",
+                "3"
+            ]
+        },
+        "defaults": {
+            "dusted": "0"
+        }
+    },
     "minecraft:sweet_berry_bush": {
         "name": "minecraft:sweet_berry_bush",
         "renames": {
@@ -22446,6 +24116,28 @@
         "name": "minecraft:torch",
         "additions": {
             "torch_facing_direction": "top"
+        }
+    },
+    "minecraft:torchflower": [],
+    "minecraft:torchflower_crop": {
+        "name": "minecraft:torchflower_crop",
+        "renames": {
+            "age": "growth"
+        },
+        "remaps": {
+            "growth": [
+                "0",
+                "4"
+            ]
+        },
+        "values": {
+            "age": [
+                "0",
+                "1"
+            ]
+        },
+        "defaults": {
+            "age": "0"
         }
     },
     "minecraft:trapped_chest": {
@@ -22582,11 +24274,7 @@
         }
     },
     "minecraft:tube_coral": {
-        "name": "minecraft:coral",
-        "additions": {
-            "coral_color": "blue",
-            "dead_bit": "false"
-        },
+        "name": "minecraft:tube_coral",
         "removals": [
             "waterlogged"
         ],
@@ -24231,12 +25919,7 @@
             "lit": "false"
         }
     },
-    "minecraft:white_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "white"
-        }
-    },
+    "minecraft:white_carpet": [],
     "minecraft:white_concrete": {
         "name": "minecraft:concrete",
         "additions": {
@@ -24590,12 +26273,7 @@
             "lit": "false"
         }
     },
-    "minecraft:yellow_carpet": {
-        "name": "minecraft:carpet",
-        "additions": {
-            "color": "yellow"
-        }
-    },
+    "minecraft:yellow_carpet": [],
     "minecraft:yellow_concrete": {
         "name": "minecraft:concrete",
         "additions": {
