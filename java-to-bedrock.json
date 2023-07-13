@@ -3184,7 +3184,12 @@
         }
     },
     "minecraft:black_carpet": [],
-    "minecraft:black_concrete": [],
+    "minecraft:black_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "black"
+        }
+    },
     "minecraft:black_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -3217,7 +3222,10 @@
         }
     },
     "minecraft:black_shulker_box": {
-        "name": "minecraft:black_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "black"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -3672,7 +3680,12 @@
         }
     },
     "minecraft:blue_carpet": [],
-    "minecraft:blue_concrete": [],
+    "minecraft:blue_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "blue"
+        }
+    },
     "minecraft:blue_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -3712,7 +3725,10 @@
         }
     },
     "minecraft:blue_shulker_box": {
-        "name": "minecraft:blue_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "blue"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -4257,7 +4273,12 @@
         }
     },
     "minecraft:brown_carpet": [],
-    "minecraft:brown_concrete": [],
+    "minecraft:brown_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "brown"
+        }
+    },
     "minecraft:brown_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -4435,7 +4456,10 @@
         }
     },
     "minecraft:brown_shulker_box": {
-        "name": "minecraft:brown_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "brown"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -8134,7 +8158,12 @@
         }
     },
     "minecraft:cyan_carpet": [],
-    "minecraft:cyan_concrete": [],
+    "minecraft:cyan_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "cyan"
+        }
+    },
     "minecraft:cyan_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -8167,7 +8196,10 @@
         }
     },
     "minecraft:cyan_shulker_box": {
-        "name": "minecraft:cyan_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "cyan"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -11993,7 +12025,12 @@
         }
     },
     "minecraft:gray_carpet": [],
-    "minecraft:gray_concrete": [],
+    "minecraft:gray_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "gray"
+        }
+    },
     "minecraft:gray_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -12026,7 +12063,10 @@
         }
     },
     "minecraft:gray_shulker_box": {
-        "name": "minecraft:gray_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "gray"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -12260,7 +12300,12 @@
         }
     },
     "minecraft:green_carpet": [],
-    "minecraft:green_concrete": [],
+    "minecraft:green_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "green"
+        }
+    },
     "minecraft:green_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -12293,7 +12338,10 @@
         }
     },
     "minecraft:green_shulker_box": {
-        "name": "minecraft:green_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "green"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -14244,7 +14292,12 @@
         }
     },
     "minecraft:light_blue_carpet": [],
-    "minecraft:light_blue_concrete": [],
+    "minecraft:light_blue_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "light_blue"
+        }
+    },
     "minecraft:light_blue_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -14277,7 +14330,10 @@
         }
     },
     "minecraft:light_blue_shulker_box": {
-        "name": "minecraft:light_blue_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "light_blue"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -14511,7 +14567,12 @@
         }
     },
     "minecraft:light_gray_carpet": [],
-    "minecraft:light_gray_concrete": [],
+    "minecraft:light_gray_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "silver"
+        }
+    },
     "minecraft:light_gray_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -14544,7 +14605,10 @@
         }
     },
     "minecraft:light_gray_shulker_box": {
-        "name": "minecraft:light_gray_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "silver"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -14883,7 +14947,12 @@
         }
     },
     "minecraft:lime_carpet": [],
-    "minecraft:lime_concrete": [],
+    "minecraft:lime_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "lime"
+        }
+    },
     "minecraft:lime_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -14916,7 +14985,10 @@
         }
     },
     "minecraft:lime_shulker_box": {
-        "name": "minecraft:lime_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "lime"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -15176,7 +15248,12 @@
         }
     },
     "minecraft:magenta_carpet": [],
-    "minecraft:magenta_concrete": [],
+    "minecraft:magenta_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "magenta"
+        }
+    },
     "minecraft:magenta_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -15209,7 +15286,10 @@
         }
     },
     "minecraft:magenta_shulker_box": {
-        "name": "minecraft:magenta_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "magenta"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -17970,8 +18050,18 @@
     "minecraft:observer": {
         "name": "minecraft:observer",
         "renames": {
-            "facing": "minecraft:facing_direction",
+            "facing": "facing_direction",
             "powered": "powered_bit"
+        },
+        "remaps": {
+            "facing_direction": {
+                "down": "0",
+                "east": "5",
+                "north": "2",
+                "south": "3",
+                "up": "1",
+                "west": "4"
+            }
         },
         "values": {
             "facing": [
@@ -18138,7 +18228,12 @@
         }
     },
     "minecraft:orange_carpet": [],
-    "minecraft:orange_concrete": [],
+    "minecraft:orange_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "orange"
+        }
+    },
     "minecraft:orange_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -18171,7 +18266,10 @@
         }
     },
     "minecraft:orange_shulker_box": {
-        "name": "minecraft:orange_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "orange"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -18676,7 +18774,12 @@
         }
     },
     "minecraft:pink_carpet": [],
-    "minecraft:pink_concrete": [],
+    "minecraft:pink_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "pink"
+        }
+    },
     "minecraft:pink_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -18748,7 +18851,10 @@
         }
     },
     "minecraft:pink_shulker_box": {
-        "name": "minecraft:pink_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "pink"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -20989,7 +21095,12 @@
         }
     },
     "minecraft:purple_carpet": [],
-    "minecraft:purple_concrete": [],
+    "minecraft:purple_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "purple"
+        }
+    },
     "minecraft:purple_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -21022,7 +21133,10 @@
         }
     },
     "minecraft:purple_shulker_box": {
-        "name": "minecraft:purple_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "purple"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -21555,7 +21669,12 @@
         }
     },
     "minecraft:red_carpet": [],
-    "minecraft:red_concrete": [],
+    "minecraft:red_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "red"
+        }
+    },
     "minecraft:red_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -22114,7 +22233,10 @@
         }
     },
     "minecraft:red_shulker_box": {
-        "name": "minecraft:red_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "red"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -28042,7 +28164,12 @@
         }
     },
     "minecraft:white_carpet": [],
-    "minecraft:white_concrete": [],
+    "minecraft:white_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "white"
+        }
+    },
     "minecraft:white_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -28075,7 +28202,10 @@
         }
     },
     "minecraft:white_shulker_box": {
-        "name": "minecraft:white_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "white"
+        },
         "removals": [],
         "values": {
             "facing": [
@@ -28388,7 +28518,12 @@
         }
     },
     "minecraft:yellow_carpet": [],
-    "minecraft:yellow_concrete": [],
+    "minecraft:yellow_concrete": {
+        "name": "minecraft:concrete",
+        "additions": {
+            "color": "yellow"
+        }
+    },
     "minecraft:yellow_concrete_powder": {
         "name": "minecraft:concrete_powder",
         "additions": {
@@ -28421,7 +28556,10 @@
         }
     },
     "minecraft:yellow_shulker_box": {
-        "name": "minecraft:yellow_shulker_box",
+        "name": "minecraft:shulker_box",
+        "additions": {
+            "color": "yellow"
+        },
         "removals": [],
         "values": {
             "facing": [

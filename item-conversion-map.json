@@ -4253,7 +4253,7 @@
     },
     "minecraft:piglin_head": {
         "name": "minecraft:skull",
-        "damage": 6
+        "damage": 0
     },
     "minecraft:nether_star": {
         "name": "minecraft:nether_star",

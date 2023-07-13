@@ -275,11 +275,17 @@
     "minecraft:black_candle_cake": {
         "lit": "false"
     },
+    "minecraft:concrete": {
+        "color": "white"
+    },
     "minecraft:concrete_powder": {
         "color": "white"
     },
     "minecraft:black_glazed_terracotta": {
         "facing_direction": "2"
+    },
+    "minecraft:shulker_box": {
+        "color": "white"
     },
     "minecraft:stained_glass": {
         "color": "white"
@@ -1144,7 +1150,7 @@
         "facing_direction": "2"
     },
     "minecraft:observer": {
-        "minecraft:facing_direction": "north",
+        "facing_direction": "2",
         "powered_bit": "false"
     },
     "minecraft:ochre_froglight": {
