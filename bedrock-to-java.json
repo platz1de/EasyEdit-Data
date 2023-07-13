@@ -2620,66 +2620,7 @@
         }
     },
     "minecraft:black_carpet": [],
-    "minecraft:concrete": {
-        "additions": [],
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_concrete"
-            },
-            "blue": {
-                "name": "minecraft:blue_concrete"
-            },
-            "brown": {
-                "name": "minecraft:brown_concrete"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_concrete"
-            },
-            "gray": {
-                "name": "minecraft:gray_concrete"
-            },
-            "green": {
-                "name": "minecraft:green_concrete"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_concrete"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_concrete"
-            },
-            "lime": {
-                "name": "minecraft:lime_concrete"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_concrete"
-            },
-            "orange": {
-                "name": "minecraft:orange_concrete"
-            },
-            "pink": {
-                "name": "minecraft:pink_concrete"
-            },
-            "purple": {
-                "name": "minecraft:purple_concrete"
-            },
-            "red": {
-                "name": "minecraft:red_concrete"
-            },
-            "white": {
-                "name": "minecraft:white_concrete"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_concrete"
-            }
-        }
-    },
+    "minecraft:black_concrete": [],
     "minecraft:concrete_powder": {
         "additions": [],
         "removals": [
@@ -2757,65 +2698,9 @@
             "facing": "north"
         }
     },
-    "minecraft:shulker_box": {
+    "minecraft:black_shulker_box": {
+        "name": "minecraft:black_shulker_box",
         "additions": [],
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_shulker_box"
-            },
-            "blue": {
-                "name": "minecraft:blue_shulker_box"
-            },
-            "brown": {
-                "name": "minecraft:brown_shulker_box"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_shulker_box"
-            },
-            "gray": {
-                "name": "minecraft:gray_shulker_box"
-            },
-            "green": {
-                "name": "minecraft:green_shulker_box"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_shulker_box"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_shulker_box"
-            },
-            "lime": {
-                "name": "minecraft:lime_shulker_box"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_shulker_box"
-            },
-            "orange": {
-                "name": "minecraft:orange_shulker_box"
-            },
-            "pink": {
-                "name": "minecraft:pink_shulker_box"
-            },
-            "purple": {
-                "name": "minecraft:purple_shulker_box"
-            },
-            "red": {
-                "name": "minecraft:red_shulker_box"
-            },
-            "white": {
-                "name": "minecraft:white_shulker_box"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_shulker_box"
-            }
-        },
         "defaults": {
             "facing": "north"
         },
@@ -3276,6 +3161,7 @@
         }
     },
     "minecraft:blue_carpet": [],
+    "minecraft:blue_concrete": [],
     "minecraft:blue_glazed_terracotta": {
         "name": "minecraft:blue_glazed_terracotta",
         "renames": {
@@ -3294,6 +3180,16 @@
         }
     },
     "minecraft:blue_ice": [],
+    "minecraft:blue_shulker_box": {
+        "name": "minecraft:blue_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
+            "facing": "north"
+        }
+    },
     "minecraft:blue_wool": [],
     "minecraft:bone_block": {
         "name": "minecraft:bone_block",
@@ -3712,6 +3608,7 @@
         }
     },
     "minecraft:brown_carpet": [],
+    "minecraft:brown_concrete": [],
     "minecraft:brown_glazed_terracotta": {
         "name": "minecraft:brown_glazed_terracotta",
         "renames": {
@@ -3853,6 +3750,16 @@
             "south": "false",
             "up": "false",
             "west": "false"
+        }
+    },
+    "minecraft:brown_shulker_box": {
+        "name": "minecraft:brown_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
+            "facing": "north"
         }
     },
     "minecraft:brown_wool": [],
@@ -6521,6 +6428,7 @@
         }
     },
     "minecraft:cyan_carpet": [],
+    "minecraft:cyan_concrete": [],
     "minecraft:cyan_glazed_terracotta": {
         "name": "minecraft:cyan_glazed_terracotta",
         "renames": {
@@ -6535,6 +6443,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:cyan_shulker_box": {
+        "name": "minecraft:cyan_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -8733,6 +8651,7 @@
         }
     },
     "minecraft:gray_carpet": [],
+    "minecraft:gray_concrete": [],
     "minecraft:gray_glazed_terracotta": {
         "name": "minecraft:gray_glazed_terracotta",
         "renames": {
@@ -8747,6 +8666,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:gray_shulker_box": {
+        "name": "minecraft:gray_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -8776,6 +8705,7 @@
         }
     },
     "minecraft:green_carpet": [],
+    "minecraft:green_concrete": [],
     "minecraft:green_glazed_terracotta": {
         "name": "minecraft:green_glazed_terracotta",
         "renames": {
@@ -8790,6 +8720,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:green_shulker_box": {
+        "name": "minecraft:green_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -9683,6 +9623,7 @@
         }
     },
     "minecraft:light_blue_carpet": [],
+    "minecraft:light_blue_concrete": [],
     "minecraft:light_blue_glazed_terracotta": {
         "name": "minecraft:light_blue_glazed_terracotta",
         "renames": {
@@ -9697,6 +9638,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:light_blue_shulker_box": {
+        "name": "minecraft:light_blue_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -9726,6 +9677,7 @@
         }
     },
     "minecraft:light_gray_carpet": [],
+    "minecraft:light_gray_concrete": [],
     "minecraft:silver_glazed_terracotta": {
         "name": "minecraft:light_gray_glazed_terracotta",
         "renames": {
@@ -9740,6 +9692,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:light_gray_shulker_box": {
+        "name": "minecraft:light_gray_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -9806,6 +9768,7 @@
         }
     },
     "minecraft:lime_carpet": [],
+    "minecraft:lime_concrete": [],
     "minecraft:lime_glazed_terracotta": {
         "name": "minecraft:lime_glazed_terracotta",
         "renames": {
@@ -9820,6 +9783,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:lime_shulker_box": {
+        "name": "minecraft:lime_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -9867,6 +9840,7 @@
         }
     },
     "minecraft:magenta_carpet": [],
+    "minecraft:magenta_concrete": [],
     "minecraft:magenta_glazed_terracotta": {
         "name": "minecraft:magenta_glazed_terracotta",
         "renames": {
@@ -9881,6 +9855,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:magenta_shulker_box": {
+        "name": "minecraft:magenta_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -11112,18 +11096,8 @@
     "minecraft:observer": {
         "name": "minecraft:observer",
         "renames": {
-            "facing_direction": "facing",
+            "minecraft:facing_direction": "facing",
             "powered_bit": "powered"
-        },
-        "remaps": {
-            "facing": {
-                "0": "down",
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "1": "up",
-                "4": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -11165,6 +11139,7 @@
         }
     },
     "minecraft:orange_carpet": [],
+    "minecraft:orange_concrete": [],
     "minecraft:orange_glazed_terracotta": {
         "name": "minecraft:orange_glazed_terracotta",
         "renames": {
@@ -11179,6 +11154,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:orange_shulker_box": {
+        "name": "minecraft:orange_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -11293,6 +11278,7 @@
         }
     },
     "minecraft:pink_carpet": [],
+    "minecraft:pink_concrete": [],
     "minecraft:pink_glazed_terracotta": {
         "name": "minecraft:pink_glazed_terracotta",
         "renames": {
@@ -11333,6 +11319,16 @@
         "defaults": {
             "facing": "north",
             "flower_amount": "1"
+        }
+    },
+    "minecraft:pink_shulker_box": {
+        "name": "minecraft:pink_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
+            "facing": "north"
         }
     },
     "minecraft:pink_wool": [],
@@ -12126,6 +12122,7 @@
         }
     },
     "minecraft:purple_carpet": [],
+    "minecraft:purple_concrete": [],
     "minecraft:purple_glazed_terracotta": {
         "name": "minecraft:purple_glazed_terracotta",
         "renames": {
@@ -12140,6 +12137,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:purple_shulker_box": {
+        "name": "minecraft:purple_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -12285,6 +12292,7 @@
         }
     },
     "minecraft:red_carpet": [],
+    "minecraft:red_concrete": [],
     "minecraft:red_glazed_terracotta": {
         "name": "minecraft:red_glazed_terracotta",
         "renames": {
@@ -12505,6 +12513,16 @@
             "half": "bottom",
             "shape": "straight",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:red_shulker_box": {
+        "name": "minecraft:red_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
+            "facing": "north"
         }
     },
     "minecraft:red_wool": [],
@@ -15705,6 +15723,7 @@
         }
     },
     "minecraft:white_carpet": [],
+    "minecraft:white_concrete": [],
     "minecraft:white_glazed_terracotta": {
         "name": "minecraft:white_glazed_terracotta",
         "renames": {
@@ -15719,6 +15738,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:white_shulker_box": {
+        "name": "minecraft:white_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },
@@ -15749,6 +15778,7 @@
         }
     },
     "minecraft:yellow_carpet": [],
+    "minecraft:yellow_concrete": [],
     "minecraft:yellow_glazed_terracotta": {
         "name": "minecraft:yellow_glazed_terracotta",
         "renames": {
@@ -15763,6 +15793,16 @@
             }
         },
         "defaults": {
+            "facing": "north"
+        }
+    },
+    "minecraft:yellow_shulker_box": {
+        "name": "minecraft:yellow_shulker_box",
+        "additions": [],
+        "defaults": {
+            "facing": "north"
+        },
+        "tile_extra": {
             "facing": "north"
         }
     },

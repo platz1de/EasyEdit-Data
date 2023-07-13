@@ -4,6 +4,7 @@
 	  "facing": "direction",
 	  "facing_": "facing_direction",
 	  "facing__": "minecraft:cardinal_direction",
+	  "facing___": "minecraft:facing_direction",
 	  "axis": "pillar_axis",
 	  "rotation": "ground_sign_direction",
 	  "rotation_": "facing_direction",
@@ -845,10 +846,55 @@
 	"minecraft:flower_pot": {
 	  "type": "none"
 	},
-	"minecraft:shulker_box": {
+	"minecraft:undyed_shulker_box": {
 	  "facing": "north"
 	},
-	"minecraft:undyed_shulker_box": {
+	"minecraft:black_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:blue_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:brown_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:cyan_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:gray_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:green_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:light_blue_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:light_gray_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:lime_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:magenta_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:orange_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:pink_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:purple_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:red_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:white_shulker_box": {
+	  "facing": "north"
+	},
+	"minecraft:yellow_shulker_box": {
 	  "facing": "north"
 	}
   }

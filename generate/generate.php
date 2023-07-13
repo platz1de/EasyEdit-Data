@@ -19,9 +19,9 @@ $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW
 $repo["version"] = Uuid::uuid4();
 $repo["latest"]["state-version"] =
 	(1 << 24) | //major
-	(29 << 16) | //minor
-	(0 << 8) | //patch
-	(33); //revision
+	(20 << 16) | //minor
+	(10 << 8) | //patch
+	(32); //revision
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $suppress = json_decode(file_get_contents("suppress.json"), true, 512, JSON_THROW_ON_ERROR);
@@ -277,7 +277,7 @@ foreach ($groupsJtb as $group) {
 			unset($values[$prev], $bedrockValues[$past]);
 			return true;
 		};
-		if (!($checkValues($key, $key) || $checkValues($key, $key . "_bit") || (isset($customData["jtb_states"]["global"][$key]) && $checkValues($key, $customData["jtb_states"]["global"][$key])) || (isset($customData["jtb_states"]["global"][$key . "_"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "_"])) || (isset($customData["jtb_states"]["global"][$key . "__"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "__"])) || (isset($customData["jtb_states"][$group["name"]][$key]) && $checkValues($key, $customData["jtb_states"][$group["name"]][$key])))) {
+		if (!($checkValues($key, $key) || $checkValues($key, $key . "_bit") || (isset($customData["jtb_states"]["global"][$key]) && $checkValues($key, $customData["jtb_states"]["global"][$key])) || (isset($customData["jtb_states"]["global"][$key . "_"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "_"])) || (isset($customData["jtb_states"]["global"][$key . "__"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "__"])) || (isset($customData["jtb_states"]["global"][$key . "___"]) && $checkValues($key, $customData["jtb_states"]["global"][$key . "___"])) || (isset($customData["jtb_states"][$group["name"]][$key]) && $checkValues($key, $customData["jtb_states"][$group["name"]][$key])))) {
 			foreach ($customData["jtb_states"]["regex"] as $regex => $replacements) {
 				if (isset($replacements[$key]) && preg_match($regex, $group["name"]) && $checkValues($key, $replacements[$key])) {
 					break;

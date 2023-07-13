@@ -4867,29 +4867,29 @@
     },
     "minecraft:observer": {
         "flip-z": {
-            "facing_direction": [
-                "1",
-                "0"
-            ]
+            "minecraft:facing_direction": {
+                "down": "up",
+                "up": "down"
+            }
         },
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:facing_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:facing_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-y": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:facing_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
