@@ -2089,8 +2089,8 @@ foreach ($javaToBedrock as $state => $id) {
 	}
 	remapProperties($state, $id, $rotationData, $javaToBedrock, $rotations["rotate"], $missingRotations, $stateRotations, "rotate");
 	remapProperties($state, $id, $flipData["x"], $javaToBedrock, $rotations["xFlip"], $missingRotations, $stateRotations, "flip-x");
-	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $rotations["yFlip"], $missingRotations, $stateRotations, "flip-y");
-	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $rotations["zFlip"], $missingRotations, $stateRotations, "flip-z");
+	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $rotations["zFlip"], $missingRotations, $stateRotations, "flip-z");
+	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $rotations["yFlip"], $missingRotations, $stateRotations, "flip-y");
 }
 file_put_contents("debug/missing-rotations.json", json_encode($missingRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/rotation-data-all.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
