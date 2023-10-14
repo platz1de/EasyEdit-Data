@@ -426,34 +426,34 @@
         },
         "removals": [
             "wood_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "wood_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "acacia": {
-                "false": {
+                "bottom": {
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "additions": {
                         "type": "top"
                     }
                 }
             },
             "birch": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:birch_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:birch_slab",
                     "additions": {
                         "type": "top"
@@ -461,13 +461,13 @@
                 }
             },
             "dark_oak": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:dark_oak_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:dark_oak_slab",
                     "additions": {
                         "type": "top"
@@ -475,13 +475,13 @@
                 }
             },
             "jungle": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:jungle_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:jungle_slab",
                     "additions": {
                         "type": "top"
@@ -489,13 +489,13 @@
                 }
             },
             "oak": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:oak_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:oak_slab",
                     "additions": {
                         "type": "top"
@@ -503,13 +503,13 @@
                 }
             },
             "spruce": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:spruce_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:spruce_slab",
                     "additions": {
                         "type": "top"
@@ -529,41 +529,41 @@
         },
         "removals": [
             "wood_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "wood_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "acacia": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:acacia_slab"
                 }
             },
             "birch": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:birch_slab"
                 }
             },
             "dark_oak": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:dark_oak_slab"
                 }
             },
             "jungle": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:jungle_slab"
                 }
             },
             "oak": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:oak_slab"
                 }
             },
             "spruce": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:spruce_slab"
                 }
             }
@@ -800,17 +800,7 @@
             "waterlogged": "false"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "0": "down",
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "1": "up",
-                "4": "west"
-            }
+            "minecraft:block_face": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -856,34 +846,34 @@
         },
         "removals": [
             "stone_slab_type_3",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type_3",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "andesite": {
-                "false": {
+                "bottom": {
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "additions": {
                         "type": "top"
                     }
                 }
             },
             "diorite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:diorite_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:diorite_slab",
                     "additions": {
                         "type": "top"
@@ -891,13 +881,13 @@
                 }
             },
             "end_stone_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:end_stone_brick_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:end_stone_brick_slab",
                     "additions": {
                         "type": "top"
@@ -905,13 +895,13 @@
                 }
             },
             "granite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:granite_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:granite_slab",
                     "additions": {
                         "type": "top"
@@ -919,13 +909,13 @@
                 }
             },
             "polished_andesite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:polished_andesite_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:polished_andesite_slab",
                     "additions": {
                         "type": "top"
@@ -933,13 +923,13 @@
                 }
             },
             "polished_diorite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:polished_diorite_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:polished_diorite_slab",
                     "additions": {
                         "type": "top"
@@ -947,13 +937,13 @@
                 }
             },
             "polished_granite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:polished_granite_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:polished_granite_slab",
                     "additions": {
                         "type": "top"
@@ -961,13 +951,13 @@
                 }
             },
             "smooth_red_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_red_sandstone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:smooth_red_sandstone_slab",
                     "additions": {
                         "type": "top"
@@ -987,51 +977,51 @@
         },
         "removals": [
             "stone_slab_type_3",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type_3",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "andesite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:andesite_slab"
                 }
             },
             "diorite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:diorite_slab"
                 }
             },
             "end_stone_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:end_stone_brick_slab"
                 }
             },
             "granite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:granite_slab"
                 }
             },
             "polished_andesite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:polished_andesite_slab"
                 }
             },
             "polished_diorite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:polished_diorite_slab"
                 }
             },
             "polished_granite": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:polished_granite_slab"
                 }
             },
             "smooth_red_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_red_sandstone_slab"
                 }
             }
@@ -1166,16 +1156,9 @@
             "damage"
         ],
         "renames": {
-            "direction": "facing"
+            "minecraft:cardinal_direction": "facing"
         },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
-        },
+        "remaps": [],
         "identifier": [
             "damage"
         ],
@@ -1611,19 +1594,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -1641,7 +1624,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -1719,19 +1702,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -1749,7 +1732,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -1858,7 +1841,15 @@
             "open": "false"
         }
     },
-    "minecraft:barrier": [],
+    "minecraft:barrier": {
+        "name": "minecraft:barrier",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:basalt": {
         "name": "minecraft:basalt",
         "renames": {
@@ -1966,16 +1957,9 @@
             "big_dripleaf_head"
         ],
         "renames": {
-            "direction": "facing"
+            "minecraft:cardinal_direction": "facing"
         },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
-        },
+        "remaps": [],
         "identifier": [
             "big_dripleaf_head"
         ],
@@ -2621,66 +2605,7 @@
     },
     "minecraft:black_carpet": [],
     "minecraft:black_concrete": [],
-    "minecraft:concrete_powder": {
-        "additions": [],
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_concrete_powder"
-            },
-            "blue": {
-                "name": "minecraft:blue_concrete_powder"
-            },
-            "brown": {
-                "name": "minecraft:brown_concrete_powder"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_concrete_powder"
-            },
-            "gray": {
-                "name": "minecraft:gray_concrete_powder"
-            },
-            "green": {
-                "name": "minecraft:green_concrete_powder"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_concrete_powder"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_concrete_powder"
-            },
-            "lime": {
-                "name": "minecraft:lime_concrete_powder"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_concrete_powder"
-            },
-            "orange": {
-                "name": "minecraft:orange_concrete_powder"
-            },
-            "pink": {
-                "name": "minecraft:pink_concrete_powder"
-            },
-            "purple": {
-                "name": "minecraft:purple_concrete_powder"
-            },
-            "red": {
-                "name": "minecraft:red_concrete_powder"
-            },
-            "white": {
-                "name": "minecraft:white_concrete_powder"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_concrete_powder"
-            }
-        }
-    },
+    "minecraft:black_concrete_powder": [],
     "minecraft:black_glazed_terracotta": {
         "name": "minecraft:black_glazed_terracotta",
         "renames": {
@@ -2708,130 +2633,15 @@
             "facing": "north"
         }
     },
-    "minecraft:stained_glass": {
-        "additions": [],
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_stained_glass"
-            },
-            "blue": {
-                "name": "minecraft:blue_stained_glass"
-            },
-            "brown": {
-                "name": "minecraft:brown_stained_glass"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_stained_glass"
-            },
-            "gray": {
-                "name": "minecraft:gray_stained_glass"
-            },
-            "green": {
-                "name": "minecraft:green_stained_glass"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_stained_glass"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_stained_glass"
-            },
-            "lime": {
-                "name": "minecraft:lime_stained_glass"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_stained_glass"
-            },
-            "orange": {
-                "name": "minecraft:orange_stained_glass"
-            },
-            "pink": {
-                "name": "minecraft:pink_stained_glass"
-            },
-            "purple": {
-                "name": "minecraft:purple_stained_glass"
-            },
-            "red": {
-                "name": "minecraft:red_stained_glass"
-            },
-            "white": {
-                "name": "minecraft:white_stained_glass"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_stained_glass"
-            }
-        }
-    },
-    "minecraft:stained_glass_pane": {
+    "minecraft:black_stained_glass": [],
+    "minecraft:black_stained_glass_pane": {
+        "name": "minecraft:black_stained_glass_pane",
         "additions": {
             "waterlogged": "false",
             "east": "false",
             "north": "false",
             "south": "false",
             "west": "false"
-        },
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_stained_glass_pane"
-            },
-            "blue": {
-                "name": "minecraft:blue_stained_glass_pane"
-            },
-            "brown": {
-                "name": "minecraft:brown_stained_glass_pane"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_stained_glass_pane"
-            },
-            "gray": {
-                "name": "minecraft:gray_stained_glass_pane"
-            },
-            "green": {
-                "name": "minecraft:green_stained_glass_pane"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_stained_glass_pane"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_stained_glass_pane"
-            },
-            "lime": {
-                "name": "minecraft:lime_stained_glass_pane"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_stained_glass_pane"
-            },
-            "orange": {
-                "name": "minecraft:orange_stained_glass_pane"
-            },
-            "pink": {
-                "name": "minecraft:pink_stained_glass_pane"
-            },
-            "purple": {
-                "name": "minecraft:purple_stained_glass_pane"
-            },
-            "red": {
-                "name": "minecraft:red_stained_glass_pane"
-            },
-            "white": {
-                "name": "minecraft:white_stained_glass_pane"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_stained_glass_pane"
-            }
         },
         "defaults": {
             "east": "false",
@@ -2841,66 +2651,7 @@
             "west": "false"
         }
     },
-    "minecraft:stained_hardened_clay": {
-        "additions": [],
-        "removals": [
-            "color"
-        ],
-        "remaps": [],
-        "identifier": [
-            "color"
-        ],
-        "mapping": {
-            "black": {
-                "name": "minecraft:black_terracotta"
-            },
-            "blue": {
-                "name": "minecraft:blue_terracotta"
-            },
-            "brown": {
-                "name": "minecraft:brown_terracotta"
-            },
-            "cyan": {
-                "name": "minecraft:cyan_terracotta"
-            },
-            "gray": {
-                "name": "minecraft:gray_terracotta"
-            },
-            "green": {
-                "name": "minecraft:green_terracotta"
-            },
-            "light_blue": {
-                "name": "minecraft:light_blue_terracotta"
-            },
-            "silver": {
-                "name": "minecraft:light_gray_terracotta"
-            },
-            "lime": {
-                "name": "minecraft:lime_terracotta"
-            },
-            "magenta": {
-                "name": "minecraft:magenta_terracotta"
-            },
-            "orange": {
-                "name": "minecraft:orange_terracotta"
-            },
-            "pink": {
-                "name": "minecraft:pink_terracotta"
-            },
-            "purple": {
-                "name": "minecraft:purple_terracotta"
-            },
-            "red": {
-                "name": "minecraft:red_terracotta"
-            },
-            "white": {
-                "name": "minecraft:white_terracotta"
-            },
-            "yellow": {
-                "name": "minecraft:yellow_terracotta"
-            }
-        }
-    },
+    "minecraft:black_terracotta": [],
     "minecraft:wall_banner": {
         "additions": [],
         "removals": [
@@ -2985,19 +2736,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -3015,7 +2766,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -3100,15 +2851,7 @@
             "lit": "false"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "4": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -3121,15 +2864,7 @@
             "lit": "true"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "4": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -3162,6 +2897,7 @@
     },
     "minecraft:blue_carpet": [],
     "minecraft:blue_concrete": [],
+    "minecraft:blue_concrete_powder": [],
     "minecraft:blue_glazed_terracotta": {
         "name": "minecraft:blue_glazed_terracotta",
         "renames": {
@@ -3190,6 +2926,25 @@
             "facing": "north"
         }
     },
+    "minecraft:blue_stained_glass": [],
+    "minecraft:blue_stained_glass_pane": {
+        "name": "minecraft:blue_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:blue_terracotta": [],
     "minecraft:blue_wool": [],
     "minecraft:bone_block": {
         "name": "minecraft:bone_block",
@@ -3366,34 +3121,34 @@
         },
         "removals": [
             "stone_slab_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "brick": {
-                "false": {
+                "bottom": {
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "additions": {
                         "type": "top"
                     }
                 }
             },
             "cobblestone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:cobblestone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:cobblestone_slab",
                     "additions": {
                         "type": "top"
@@ -3401,13 +3156,13 @@
                 }
             },
             "nether_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:nether_brick_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:nether_brick_slab",
                     "additions": {
                         "type": "top"
@@ -3415,13 +3170,13 @@
                 }
             },
             "wood": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:petrified_oak_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:petrified_oak_slab",
                     "additions": {
                         "type": "top"
@@ -3429,13 +3184,13 @@
                 }
             },
             "quartz": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:quartz_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:quartz_slab",
                     "additions": {
                         "type": "top"
@@ -3443,13 +3198,13 @@
                 }
             },
             "sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:sandstone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:sandstone_slab",
                     "additions": {
                         "type": "top"
@@ -3457,13 +3212,13 @@
                 }
             },
             "smooth_stone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_stone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:smooth_stone_slab",
                     "additions": {
                         "type": "top"
@@ -3471,13 +3226,13 @@
                 }
             },
             "stone_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:stone_brick_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:stone_brick_slab",
                     "additions": {
                         "type": "top"
@@ -3497,51 +3252,51 @@
         },
         "removals": [
             "stone_slab_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:brick_slab"
                 }
             },
             "cobblestone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:cobblestone_slab"
                 }
             },
             "nether_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:nether_brick_slab"
                 }
             },
             "wood": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:petrified_oak_slab"
                 }
             },
             "quartz": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:quartz_slab"
                 }
             },
             "sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:sandstone_slab"
                 }
             },
             "smooth_stone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_stone_slab"
                 }
             },
             "stone_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:stone_brick_slab"
                 }
             }
@@ -3609,6 +3364,7 @@
     },
     "minecraft:brown_carpet": [],
     "minecraft:brown_concrete": [],
+    "minecraft:brown_concrete_powder": [],
     "minecraft:brown_glazed_terracotta": {
         "name": "minecraft:brown_glazed_terracotta",
         "renames": {
@@ -3762,6 +3518,25 @@
             "facing": "north"
         }
     },
+    "minecraft:brown_stained_glass": [],
+    "minecraft:brown_stained_glass_pane": {
+        "name": "minecraft:brown_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:brown_terracotta": [],
     "minecraft:brown_wool": [],
     "minecraft:bubble_column": {
         "name": "minecraft:bubble_column",
@@ -3850,15 +3625,9 @@
             "power": "0"
         },
         "renames": {
-            "direction": "facing"
+            "minecraft:cardinal_direction": "facing"
         },
         "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            },
             "sculk_sensor_phase": {
                 "1": "active",
                 "2": "cooldown",
@@ -3879,15 +3648,15 @@
             "signal_fire": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "extinguished": "lit"
         },
         "remaps": {
             "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
+                "west": "east",
+                "south": "north",
+                "north": "south",
+                "east": "west"
             },
             "lit": {
                 "true": "false",
@@ -4434,19 +4203,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -4464,7 +4233,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -5267,19 +5036,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -5297,7 +5066,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -5451,17 +5220,11 @@
     "minecraft:unpowered_comparator": {
         "name": "minecraft:comparator",
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "output_subtract_bit": "mode",
             "output_lit_bit": "powered"
         },
         "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            },
             "mode": {
                 "false": "compare",
                 "true": "subtract"
@@ -5476,17 +5239,11 @@
     "minecraft:powered_comparator": {
         "name": "minecraft:comparator",
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "output_subtract_bit": "mode",
             "output_lit_bit": "powered"
         },
         "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            },
             "mode": {
                 "false": "compare",
                 "true": "subtract"
@@ -5524,7 +5281,9 @@
     "minecraft:cracked_polished_blackstone_bricks": [],
     "minecraft:crafting_table": [],
     "minecraft:skull": {
-        "additions": [],
+        "additions": {
+            "powered": "false"
+        },
         "removals": [
             "type",
             "attachment"
@@ -6067,19 +5826,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -6097,7 +5856,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -6202,19 +5961,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -6232,7 +5991,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -6275,34 +6034,34 @@
         },
         "removals": [
             "stone_slab_type_4",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type_4",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "cut_red_sandstone": {
-                "false": {
+                "bottom": {
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "additions": {
                         "type": "top"
                     }
                 }
             },
             "cut_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:cut_sandstone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:cut_sandstone_slab",
                     "additions": {
                         "type": "top"
@@ -6310,13 +6069,13 @@
                 }
             },
             "mossy_stone_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:mossy_stone_brick_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:mossy_stone_brick_slab",
                     "additions": {
                         "type": "top"
@@ -6324,13 +6083,13 @@
                 }
             },
             "smooth_quartz": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_quartz_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:smooth_quartz_slab",
                     "additions": {
                         "type": "top"
@@ -6338,13 +6097,13 @@
                 }
             },
             "stone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:stone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:stone_slab",
                     "additions": {
                         "type": "top"
@@ -6364,36 +6123,36 @@
         },
         "removals": [
             "stone_slab_type_4",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type_4",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "cut_red_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:cut_red_sandstone_slab"
                 }
             },
             "cut_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:cut_sandstone_slab"
                 }
             },
             "mossy_stone_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:mossy_stone_brick_slab"
                 }
             },
             "smooth_quartz": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_quartz_slab"
                 }
             },
             "stone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:stone_slab"
                 }
             }
@@ -6429,6 +6188,7 @@
     },
     "minecraft:cyan_carpet": [],
     "minecraft:cyan_concrete": [],
+    "minecraft:cyan_concrete_powder": [],
     "minecraft:cyan_glazed_terracotta": {
         "name": "minecraft:cyan_glazed_terracotta",
         "renames": {
@@ -6456,6 +6216,25 @@
             "facing": "north"
         }
     },
+    "minecraft:cyan_stained_glass": [],
+    "minecraft:cyan_stained_glass_pane": {
+        "name": "minecraft:cyan_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:cyan_terracotta": [],
     "minecraft:cyan_wool": [],
     "minecraft:yellow_flower": {
         "name": "minecraft:dandelion"
@@ -6888,34 +6667,34 @@
         },
         "removals": [
             "stone_slab_type_2",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type_2",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "prismarine_dark": {
-                "false": {
+                "bottom": {
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "additions": {
                         "type": "top"
                     }
                 }
             },
             "mossy_cobblestone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:mossy_cobblestone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:mossy_cobblestone_slab",
                     "additions": {
                         "type": "top"
@@ -6923,13 +6702,13 @@
                 }
             },
             "prismarine_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:prismarine_brick_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:prismarine_brick_slab",
                     "additions": {
                         "type": "top"
@@ -6937,13 +6716,13 @@
                 }
             },
             "prismarine_rough": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:prismarine_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:prismarine_slab",
                     "additions": {
                         "type": "top"
@@ -6951,13 +6730,13 @@
                 }
             },
             "purpur": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:purpur_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:purpur_slab",
                     "additions": {
                         "type": "top"
@@ -6965,13 +6744,13 @@
                 }
             },
             "red_nether_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:red_nether_brick_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:red_nether_brick_slab",
                     "additions": {
                         "type": "top"
@@ -6979,13 +6758,13 @@
                 }
             },
             "red_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:red_sandstone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:red_sandstone_slab",
                     "additions": {
                         "type": "top"
@@ -6993,13 +6772,13 @@
                 }
             },
             "smooth_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_sandstone_slab",
                     "additions": {
                         "type": "bottom"
                     }
                 },
-                "true": {
+                "top": {
                     "name": "minecraft:smooth_sandstone_slab",
                     "additions": {
                         "type": "top"
@@ -7019,51 +6798,51 @@
         },
         "removals": [
             "stone_slab_type_2",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
             "stone_slab_type_2",
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
             "prismarine_dark": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:dark_prismarine_slab"
                 }
             },
             "mossy_cobblestone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:mossy_cobblestone_slab"
                 }
             },
             "prismarine_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:prismarine_brick_slab"
                 }
             },
             "prismarine_rough": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:prismarine_slab"
                 }
             },
             "purpur": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:purpur_slab"
                 }
             },
             "red_nether_brick": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:red_nether_brick_slab"
                 }
             },
             "red_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:red_sandstone_slab"
                 }
             },
             "smooth_sandstone": {
-                "false": {
+                "bottom": {
                     "name": "minecraft:smooth_sandstone_slab"
                 }
             }
@@ -7285,19 +7064,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -7315,7 +7094,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -7426,19 +7205,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -7456,7 +7235,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -7649,15 +7428,7 @@
         "name": "minecraft:end_portal_frame",
         "renames": {
             "end_portal_eye_bit": "eye",
-            "direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "eye": "false",
@@ -7745,19 +7516,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -7775,7 +7546,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -8020,15 +7791,7 @@
             "lit": "false"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "4": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -8041,15 +7804,7 @@
             "lit": "true"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "4": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -8652,6 +8407,7 @@
     },
     "minecraft:gray_carpet": [],
     "minecraft:gray_concrete": [],
+    "minecraft:gray_concrete_powder": [],
     "minecraft:gray_glazed_terracotta": {
         "name": "minecraft:gray_glazed_terracotta",
         "renames": {
@@ -8679,6 +8435,25 @@
             "facing": "north"
         }
     },
+    "minecraft:gray_stained_glass": [],
+    "minecraft:gray_stained_glass_pane": {
+        "name": "minecraft:gray_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:gray_terracotta": [],
     "minecraft:gray_wool": [],
     "minecraft:green_candle": {
         "name": "minecraft:green_candle",
@@ -8706,6 +8481,7 @@
     },
     "minecraft:green_carpet": [],
     "minecraft:green_concrete": [],
+    "minecraft:green_concrete_powder": [],
     "minecraft:green_glazed_terracotta": {
         "name": "minecraft:green_glazed_terracotta",
         "renames": {
@@ -8733,6 +8509,25 @@
             "facing": "north"
         }
     },
+    "minecraft:green_stained_glass": [],
+    "minecraft:green_stained_glass_pane": {
+        "name": "minecraft:green_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:green_terracotta": [],
     "minecraft:green_wool": [],
     "minecraft:grindstone": {
         "name": "minecraft:grindstone",
@@ -9410,17 +9205,7 @@
             "waterlogged": "false"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "0": "down",
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "1": "up",
-                "4": "west"
-            }
+            "minecraft:block_face": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -9495,16 +9280,8 @@
             "has_book": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "powered_bit": "powered"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -9624,6 +9401,7 @@
     },
     "minecraft:light_blue_carpet": [],
     "minecraft:light_blue_concrete": [],
+    "minecraft:light_blue_concrete_powder": [],
     "minecraft:light_blue_glazed_terracotta": {
         "name": "minecraft:light_blue_glazed_terracotta",
         "renames": {
@@ -9651,6 +9429,25 @@
             "facing": "north"
         }
     },
+    "minecraft:light_blue_stained_glass": [],
+    "minecraft:light_blue_stained_glass_pane": {
+        "name": "minecraft:light_blue_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:light_blue_terracotta": [],
     "minecraft:light_blue_wool": [],
     "minecraft:light_gray_candle": {
         "name": "minecraft:light_gray_candle",
@@ -9678,6 +9475,7 @@
     },
     "minecraft:light_gray_carpet": [],
     "minecraft:light_gray_concrete": [],
+    "minecraft:light_gray_concrete_powder": [],
     "minecraft:silver_glazed_terracotta": {
         "name": "minecraft:light_gray_glazed_terracotta",
         "renames": {
@@ -9705,6 +9503,25 @@
             "facing": "north"
         }
     },
+    "minecraft:light_gray_stained_glass": [],
+    "minecraft:light_gray_stained_glass_pane": {
+        "name": "minecraft:light_gray_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:light_gray_terracotta": [],
     "minecraft:light_gray_wool": [],
     "minecraft:light_weighted_pressure_plate": {
         "name": "minecraft:light_weighted_pressure_plate",
@@ -9769,6 +9586,7 @@
     },
     "minecraft:lime_carpet": [],
     "minecraft:lime_concrete": [],
+    "minecraft:lime_concrete_powder": [],
     "minecraft:lime_glazed_terracotta": {
         "name": "minecraft:lime_glazed_terracotta",
         "renames": {
@@ -9796,6 +9614,25 @@
             "facing": "north"
         }
     },
+    "minecraft:lime_stained_glass": [],
+    "minecraft:lime_stained_glass_pane": {
+        "name": "minecraft:lime_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:lime_terracotta": [],
     "minecraft:lime_wool": [],
     "minecraft:lodestone": [],
     "minecraft:loom": {
@@ -9841,6 +9678,7 @@
     },
     "minecraft:magenta_carpet": [],
     "minecraft:magenta_concrete": [],
+    "minecraft:magenta_concrete_powder": [],
     "minecraft:magenta_glazed_terracotta": {
         "name": "minecraft:magenta_glazed_terracotta",
         "renames": {
@@ -9868,6 +9706,25 @@
             "facing": "north"
         }
     },
+    "minecraft:magenta_stained_glass": [],
+    "minecraft:magenta_stained_glass_pane": {
+        "name": "minecraft:magenta_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:magenta_terracotta": [],
     "minecraft:magenta_wool": [],
     "minecraft:magma": {
         "name": "minecraft:magma_block"
@@ -10241,19 +10098,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -10271,7 +10128,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -10377,17 +10234,7 @@
             "waterlogged": "false"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "0": "down",
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "1": "up",
-                "4": "west"
-            }
+            "minecraft:block_face": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -10476,19 +10323,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -10506,7 +10353,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -11140,6 +10987,7 @@
     },
     "minecraft:orange_carpet": [],
     "minecraft:orange_concrete": [],
+    "minecraft:orange_concrete_powder": [],
     "minecraft:orange_glazed_terracotta": {
         "name": "minecraft:orange_glazed_terracotta",
         "renames": {
@@ -11167,6 +11015,25 @@
             "facing": "north"
         }
     },
+    "minecraft:orange_stained_glass": [],
+    "minecraft:orange_stained_glass_pane": {
+        "name": "minecraft:orange_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:orange_terracotta": [],
     "minecraft:orange_wool": [],
     "minecraft:oxidized_copper": [],
     "minecraft:oxidized_cut_copper": [],
@@ -11176,19 +11043,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -11206,7 +11073,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -11279,6 +11146,7 @@
     },
     "minecraft:pink_carpet": [],
     "minecraft:pink_concrete": [],
+    "minecraft:pink_concrete_powder": [],
     "minecraft:pink_glazed_terracotta": {
         "name": "minecraft:pink_glazed_terracotta",
         "renames": {
@@ -11299,16 +11167,10 @@
     "minecraft:pink_petals": {
         "name": "minecraft:pink_petals",
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "growth": "flower_amount"
         },
         "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            },
             "flower_amount": [
                 1,
                 2,
@@ -11331,6 +11193,25 @@
             "facing": "north"
         }
     },
+    "minecraft:pink_stained_glass": [],
+    "minecraft:pink_stained_glass_pane": {
+        "name": "minecraft:pink_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:pink_terracotta": [],
     "minecraft:pink_wool": [],
     "minecraft:piston": {
         "name": "minecraft:piston",
@@ -11526,19 +11407,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -11556,7 +11437,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -11715,19 +11596,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -11745,7 +11626,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -11831,19 +11712,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -11861,7 +11742,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -12123,6 +12004,7 @@
     },
     "minecraft:purple_carpet": [],
     "minecraft:purple_concrete": [],
+    "minecraft:purple_concrete_powder": [],
     "minecraft:purple_glazed_terracotta": {
         "name": "minecraft:purple_glazed_terracotta",
         "renames": {
@@ -12150,6 +12032,25 @@
             "facing": "north"
         }
     },
+    "minecraft:purple_stained_glass": [],
+    "minecraft:purple_stained_glass_pane": {
+        "name": "minecraft:purple_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:purple_terracotta": [],
     "minecraft:purple_wool": [],
     "minecraft:purpur_block": {
         "additions": [],
@@ -12293,6 +12194,7 @@
     },
     "minecraft:red_carpet": [],
     "minecraft:red_concrete": [],
+    "minecraft:red_concrete_powder": [],
     "minecraft:red_glazed_terracotta": {
         "name": "minecraft:red_glazed_terracotta",
         "renames": {
@@ -12525,6 +12427,25 @@
             "facing": "north"
         }
     },
+    "minecraft:red_stained_glass": [],
+    "minecraft:red_stained_glass_pane": {
+        "name": "minecraft:red_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:red_terracotta": [],
     "minecraft:red_wool": [],
     "minecraft:redstone_block": [],
     "minecraft:redstone_lamp": {
@@ -12667,7 +12588,7 @@
         },
         "renames": {
             "repeater_delay": "delay",
-            "direction": "facing"
+            "minecraft:cardinal_direction": "facing"
         },
         "remaps": {
             "delay": [
@@ -12675,13 +12596,7 @@
                 2,
                 3,
                 4
-            ],
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
+            ]
         },
         "defaults": {
             "delay": "1",
@@ -12698,7 +12613,7 @@
         },
         "renames": {
             "repeater_delay": "delay",
-            "direction": "facing"
+            "minecraft:cardinal_direction": "facing"
         },
         "remaps": {
             "delay": [
@@ -12706,13 +12621,7 @@
                 2,
                 3,
                 4
-            ],
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
+            ]
         },
         "defaults": {
             "delay": "1",
@@ -13424,17 +13333,7 @@
             "waterlogged": "false"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "0": "down",
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "1": "up",
-                "4": "west"
-            }
+            "minecraft:block_face": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -13447,15 +13346,15 @@
             "waterlogged": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half"
         },
         "remaps": {
             "facing": {
-                "2": "east",
-                "1": "north",
-                "3": "south",
-                "0": "west"
+                "north": "east",
+                "west": "north",
+                "east": "south",
+                "south": "west"
             },
             "half": {
                 "false": "lower",
@@ -13475,15 +13374,7 @@
             "lit": "false"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "4": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -13496,15 +13387,7 @@
             "lit": "true"
         },
         "renames": {
-            "facing_direction": "facing"
-        },
-        "remaps": {
-            "facing": {
-                "5": "east",
-                "2": "north",
-                "3": "south",
-                "4": "west"
-            }
+            "minecraft:cardinal_direction": "facing"
         },
         "defaults": {
             "facing": "north",
@@ -13650,15 +13533,15 @@
             "signal_fire": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "extinguished": "lit"
         },
         "remaps": {
             "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
+                "west": "east",
+                "south": "north",
+                "north": "south",
+                "east": "west"
             },
             "lit": {
                 "true": "false",
@@ -15159,19 +15042,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -15189,7 +15072,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -15318,19 +15201,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -15348,7 +15231,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -15392,19 +15275,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -15422,7 +15305,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -15466,19 +15349,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -15496,7 +15379,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -15540,19 +15423,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -15570,7 +15453,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -15614,19 +15497,19 @@
             "waterlogged": "false"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "false": {
+            "bottom": {
                 "additions": {
                     "type": "bottom"
                 }
             },
-            "true": {
+            "top": {
                 "additions": {
                     "type": "top"
                 }
@@ -15644,7 +15527,7 @@
             "type": "double"
         },
         "removals": [
-            "top_slot_bit"
+            "minecraft:vertical_half"
         ],
         "defaults": {
             "type": "bottom",
@@ -15724,6 +15607,7 @@
     },
     "minecraft:white_carpet": [],
     "minecraft:white_concrete": [],
+    "minecraft:white_concrete_powder": [],
     "minecraft:white_glazed_terracotta": {
         "name": "minecraft:white_glazed_terracotta",
         "renames": {
@@ -15751,6 +15635,25 @@
             "facing": "north"
         }
     },
+    "minecraft:white_stained_glass": [],
+    "minecraft:white_stained_glass_pane": {
+        "name": "minecraft:white_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:white_terracotta": [],
     "minecraft:white_wool": [],
     "minecraft:wither_rose": [],
     "minecraft:yellow_candle": {
@@ -15779,6 +15682,7 @@
     },
     "minecraft:yellow_carpet": [],
     "minecraft:yellow_concrete": [],
+    "minecraft:yellow_concrete_powder": [],
     "minecraft:yellow_glazed_terracotta": {
         "name": "minecraft:yellow_glazed_terracotta",
         "renames": {
@@ -15806,6 +15710,25 @@
             "facing": "north"
         }
     },
+    "minecraft:yellow_stained_glass": [],
+    "minecraft:yellow_stained_glass_pane": {
+        "name": "minecraft:yellow_stained_glass_pane",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:yellow_terracotta": [],
     "minecraft:yellow_wool": [],
     "minecraft:invisible_bedrock": {
         "name": "minecraft:barrier"

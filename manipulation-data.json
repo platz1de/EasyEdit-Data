@@ -297,29 +297,29 @@
     },
     "minecraft:amethyst_cluster": {
         "flip-y": {
-            "facing_direction": [
-                "1",
-                "0"
-            ]
+            "minecraft:block_face": {
+                "down": "up",
+                "up": "down"
+            }
         },
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:block_face": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:block_face": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:block_face": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -361,23 +361,23 @@
     },
     "minecraft:anvil": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -845,23 +845,23 @@
     },
     "minecraft:big_dripleaf": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -1315,45 +1315,45 @@
     },
     "minecraft:blast_furnace": {
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
     "minecraft:lit_blast_furnace": {
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -1531,45 +1531,45 @@
     },
     "minecraft:calibrated_sculk_sensor": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
     "minecraft:campfire": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "west": "north",
+                "south": "west",
+                "north": "east",
+                "east": "south"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "west": "east",
+                "east": "west"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "south": "north",
+                "north": "south"
             }
         }
     },
@@ -2087,45 +2087,45 @@
     },
     "minecraft:unpowered_comparator": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
     "minecraft:powered_comparator": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -3023,23 +3023,23 @@
     },
     "minecraft:end_portal_frame": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -3151,45 +3151,45 @@
     },
     "minecraft:furnace": {
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
     "minecraft:lit_furnace": {
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -3885,29 +3885,29 @@
     },
     "minecraft:large_amethyst_bud": {
         "flip-y": {
-            "facing_direction": [
-                "1",
-                "0"
-            ]
+            "minecraft:block_face": {
+                "down": "up",
+                "up": "down"
+            }
         },
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:block_face": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:block_face": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:block_face": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -3921,23 +3921,23 @@
     },
     "minecraft:lectern": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -4415,29 +4415,29 @@
     },
     "minecraft:medium_amethyst_bud": {
         "flip-y": {
-            "facing_direction": [
-                "1",
-                "0"
-            ]
+            "minecraft:block_face": {
+                "down": "up",
+                "up": "down"
+            }
         },
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:block_face": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:block_face": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:block_face": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -4983,23 +4983,23 @@
     },
     "minecraft:pink_petals": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -5647,45 +5647,45 @@
     },
     "minecraft:unpowered_repeater": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
     "minecraft:powered_repeater": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -5917,45 +5917,45 @@
     },
     "minecraft:small_amethyst_bud": {
         "flip-y": {
-            "facing_direction": [
-                "1",
-                "0"
-            ]
+            "minecraft:block_face": {
+                "down": "up",
+                "up": "down"
+            }
         },
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:block_face": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:block_face": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:block_face": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
     "minecraft:small_dripleaf_block": {
         "rotate": {
-            "direction": {
-                "2": "3",
-                "1": "2",
-                "3": "0",
-                "0": "1"
+            "minecraft:cardinal_direction": {
+                "north": "east",
+                "west": "north",
+                "east": "south",
+                "south": "west"
             }
         },
         "flip-x": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         },
         "flip-y": {
@@ -5965,53 +5965,53 @@
             }
         },
         "flip-z": {
-            "direction": {
-                "1": "3",
-                "3": "1"
+            "minecraft:cardinal_direction": {
+                "west": "east",
+                "east": "west"
             }
         }
     },
     "minecraft:smoker": {
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
     "minecraft:lit_smoker": {
         "rotate": {
-            "facing_direction": {
-                "5": "3",
-                "2": "5",
-                "3": "4",
-                "4": "2"
+            "minecraft:cardinal_direction": {
+                "east": "south",
+                "north": "east",
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
-            "facing_direction": {
-                "5": "4",
-                "4": "5"
+            "minecraft:cardinal_direction": {
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
-            "facing_direction": {
-                "2": "3",
-                "3": "2"
+            "minecraft:cardinal_direction": {
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -6101,23 +6101,23 @@
     },
     "minecraft:soul_campfire": {
         "rotate": {
-            "direction": {
-                "3": "0",
-                "2": "3",
-                "0": "1",
-                "1": "2"
+            "minecraft:cardinal_direction": {
+                "west": "north",
+                "south": "west",
+                "north": "east",
+                "east": "south"
             }
         },
         "flip-x": {
-            "direction": {
-                "3": "1",
-                "1": "3"
+            "minecraft:cardinal_direction": {
+                "west": "east",
+                "east": "west"
             }
         },
         "flip-z": {
-            "direction": {
-                "2": "0",
-                "0": "2"
+            "minecraft:cardinal_direction": {
+                "south": "north",
+                "north": "south"
             }
         }
     },
