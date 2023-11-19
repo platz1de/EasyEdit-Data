@@ -476,7 +476,7 @@
         "stripped_bit": "false"
     },
     "minecraft:chest": {
-        "facing_direction": "2"
+        "minecraft:cardinal_direction": "north"
     },
     "minecraft:chiseled_bookshelf": {
         "direction": "2",
@@ -765,7 +765,7 @@
         "upside_down_bit": "false"
     },
     "minecraft:ender_chest": {
-        "facing_direction": "2"
+        "minecraft:cardinal_direction": "north"
     },
     "minecraft:exposed_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"
@@ -1496,7 +1496,7 @@
         "upside_down_bit": "false"
     },
     "minecraft:stonecutter_block": {
-        "facing_direction": "2"
+        "minecraft:cardinal_direction": "north"
     },
     "minecraft:stripped_acacia_log": {
         "pillar_axis": "y"
@@ -1574,7 +1574,7 @@
         "growth": "0"
     },
     "minecraft:trapped_chest": {
-        "facing_direction": "2"
+        "minecraft:cardinal_direction": "north"
     },
     "minecraft:trip_wire": {
         "attached_bit": "false",

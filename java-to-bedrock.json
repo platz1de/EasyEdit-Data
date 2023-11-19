@@ -5731,15 +5731,7 @@
             "type"
         ],
         "renames": {
-            "facing": "facing_direction"
-        },
-        "remaps": {
-            "facing_direction": {
-                "east": "5",
-                "north": "2",
-                "south": "3",
-                "west": "4"
-            }
+            "facing": "minecraft:cardinal_direction"
         },
         "values": {
             "facing": [
@@ -10605,15 +10597,7 @@
             "waterlogged"
         ],
         "renames": {
-            "facing": "facing_direction"
-        },
-        "remaps": {
-            "facing_direction": {
-                "east": "5",
-                "north": "2",
-                "south": "3",
-                "west": "4"
-            }
+            "facing": "minecraft:cardinal_direction"
         },
         "values": {
             "facing": [
@@ -25122,15 +25106,7 @@
     "minecraft:stonecutter": {
         "name": "minecraft:stonecutter_block",
         "renames": {
-            "facing": "facing_direction"
-        },
-        "remaps": {
-            "facing_direction": {
-                "east": "5",
-                "north": "2",
-                "south": "3",
-                "west": "4"
-            }
+            "facing": "minecraft:cardinal_direction"
         },
         "values": {
             "facing": [
@@ -25765,15 +25741,7 @@
             "type"
         ],
         "renames": {
-            "facing": "facing_direction"
-        },
-        "remaps": {
-            "facing_direction": {
-                "east": "5",
-                "north": "2",
-                "south": "3",
-                "west": "4"
-            }
+            "facing": "minecraft:cardinal_direction"
         },
         "values": {
             "facing": [
