@@ -417,12 +417,7 @@
             "axis": "y"
         }
     },
-    "minecraft:acacia_planks": {
-        "name": "minecraft:planks",
-        "additions": {
-            "wood_type": "acacia"
-        }
-    },
+    "minecraft:acacia_planks": [],
     "minecraft:acacia_pressure_plate": {
         "name": "minecraft:acacia_pressure_plate",
         "renames": {
@@ -848,12 +843,7 @@
         }
     },
     "minecraft:ancient_debris": [],
-    "minecraft:andesite": {
-        "name": "minecraft:stone",
-        "additions": {
-            "stone_type": "andesite"
-        }
-    },
+    "minecraft:andesite": [],
     "minecraft:andesite_slab": {
         "additions": {
             "stone_slab_type_3": "andesite"
@@ -2685,12 +2675,7 @@
             "axis": "y"
         }
     },
-    "minecraft:birch_planks": {
-        "name": "minecraft:planks",
-        "additions": {
-            "wood_type": "birch"
-        }
-    },
+    "minecraft:birch_planks": [],
     "minecraft:birch_pressure_plate": {
         "name": "minecraft:birch_pressure_plate",
         "renames": {
@@ -8603,12 +8588,7 @@
             "axis": "y"
         }
     },
-    "minecraft:dark_oak_planks": {
-        "name": "minecraft:planks",
-        "additions": {
-            "wood_type": "dark_oak"
-        }
-    },
+    "minecraft:dark_oak_planks": [],
     "minecraft:dark_oak_pressure_plate": {
         "name": "minecraft:dark_oak_pressure_plate",
         "renames": {
@@ -9988,12 +9968,7 @@
     },
     "minecraft:diamond_block": [],
     "minecraft:diamond_ore": [],
-    "minecraft:diorite": {
-        "name": "minecraft:stone",
-        "additions": {
-            "stone_type": "diorite"
-        }
-    },
+    "minecraft:diorite": [],
     "minecraft:diorite_slab": {
         "additions": {
             "stone_slab_type_3": "diorite"
@@ -11526,12 +11501,7 @@
     "minecraft:glowstone": [],
     "minecraft:gold_block": [],
     "minecraft:gold_ore": [],
-    "minecraft:granite": {
-        "name": "minecraft:stone",
-        "additions": {
-            "stone_type": "granite"
-        }
-    },
+    "minecraft:granite": [],
     "minecraft:granite_slab": {
         "additions": {
             "stone_slab_type_3": "granite"
@@ -13107,12 +13077,7 @@
             "axis": "y"
         }
     },
-    "minecraft:jungle_planks": {
-        "name": "minecraft:planks",
-        "additions": {
-            "wood_type": "jungle"
-        }
-    },
+    "minecraft:jungle_planks": [],
     "minecraft:jungle_pressure_plate": {
         "name": "minecraft:jungle_pressure_plate",
         "renames": {
@@ -17353,12 +17318,7 @@
             "axis": "y"
         }
     },
-    "minecraft:oak_planks": {
-        "name": "minecraft:planks",
-        "additions": {
-            "wood_type": "oak"
-        }
-    },
+    "minecraft:oak_planks": [],
     "minecraft:oak_pressure_plate": {
         "name": "minecraft:wooden_pressure_plate",
         "renames": {
@@ -18867,12 +18827,7 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:polished_andesite": {
-        "name": "minecraft:stone",
-        "additions": {
-            "stone_type": "andesite_smooth"
-        }
-    },
+    "minecraft:polished_andesite": [],
     "minecraft:polished_andesite_slab": {
         "additions": {
             "stone_slab_type_3": "polished_andesite"
@@ -19617,12 +19572,7 @@
             "west": "false"
         }
     },
-    "minecraft:polished_diorite": {
-        "name": "minecraft:stone",
-        "additions": {
-            "stone_type": "diorite_smooth"
-        }
-    },
+    "minecraft:polished_diorite": [],
     "minecraft:polished_diorite_slab": {
         "additions": {
             "stone_slab_type_3": "polished_diorite"
@@ -19722,12 +19672,7 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:polished_granite": {
-        "name": "minecraft:stone",
-        "additions": {
-            "stone_type": "granite_smooth"
-        }
-    },
+    "minecraft:polished_granite": [],
     "minecraft:polished_granite_slab": {
         "additions": {
             "stone_slab_type_3": "polished_granite"
@@ -24325,12 +24270,7 @@
             "axis": "y"
         }
     },
-    "minecraft:spruce_planks": {
-        "name": "minecraft:planks",
-        "additions": {
-            "wood_type": "spruce"
-        }
-    },
+    "minecraft:spruce_planks": [],
     "minecraft:spruce_pressure_plate": {
         "name": "minecraft:spruce_pressure_plate",
         "renames": {
@@ -24714,12 +24654,7 @@
             "facing": "north"
         }
     },
-    "minecraft:stone": {
-        "name": "minecraft:stone",
-        "additions": {
-            "stone_type": "stone"
-        }
-    },
+    "minecraft:stone": [],
     "minecraft:stone_brick_slab": {
         "additions": {
             "stone_slab_type": "stone_brick"

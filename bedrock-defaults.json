@@ -28,9 +28,6 @@
     "minecraft:acacia_log": {
         "pillar_axis": "y"
     },
-    "minecraft:planks": {
-        "wood_type": "oak"
-    },
     "minecraft:acacia_pressure_plate": {
         "redstone_signal": "0"
     },
@@ -75,9 +72,6 @@
     },
     "minecraft:amethyst_cluster": {
         "minecraft:block_face": "north"
-    },
-    "minecraft:stone": {
-        "stone_type": "stone"
     },
     "minecraft:stone_block_slab3": {
         "stone_slab_type_3": "end_stone_brick",

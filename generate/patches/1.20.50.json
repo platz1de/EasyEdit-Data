@@ -1,0 +1,15 @@
+{
+  "minecraft:oak_planks": "minecraft:oak_planks",
+  "minecraft:spruce_planks": "minecraft:spruce_planks",
+  "minecraft:birch_planks": "minecraft:birch_planks",
+  "minecraft:jungle_planks": "minecraft:jungle_planks",
+  "minecraft:acacia_planks": "minecraft:acacia_planks",
+  "minecraft:dark_oak_planks": "minecraft:dark_oak_planks",
+  "minecraft:stone": "minecraft:stone",
+  "minecraft:granite": "minecraft:granite",
+  "minecraft:polished_granite": "minecraft:polished_granite",
+  "minecraft:diorite": "minecraft:diorite",
+  "minecraft:polished_diorite": "minecraft:polished_diorite",
+  "minecraft:andesite": "minecraft:andesite",
+  "minecraft:polished_andesite": "minecraft:polished_andesite"
+}
