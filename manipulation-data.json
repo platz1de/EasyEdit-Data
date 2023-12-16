@@ -1554,22 +1554,22 @@
     "minecraft:campfire": {
         "rotate": {
             "minecraft:cardinal_direction": {
-                "west": "north",
-                "south": "west",
+                "east": "south",
                 "north": "east",
-                "east": "south"
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
             "minecraft:cardinal_direction": {
-                "west": "east",
-                "east": "west"
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
             "minecraft:cardinal_direction": {
-                "south": "north",
-                "north": "south"
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -2126,6 +2126,62 @@
             "minecraft:cardinal_direction": {
                 "north": "south",
                 "south": "north"
+            }
+        }
+    },
+    "minecraft:copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "2",
+                "2": "3"
             }
         }
     },
@@ -3118,6 +3174,62 @@
             "minecraft:cardinal_direction": {
                 "north": "south",
                 "south": "north"
+            }
+        }
+    },
+    "minecraft:exposed_copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:exposed_copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "2",
+                "2": "3"
             }
         }
     },
@@ -4923,6 +5035,62 @@
             }
         }
     },
+    "minecraft:oxidized_copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:oxidized_copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
     "minecraft:oxidized_cut_copper_stairs": {
         "rotate": {
             "weirdo_direction": {
@@ -5322,6 +5490,42 @@
             "weirdo_direction": {
                 "3": "2",
                 "2": "3"
+            }
+        }
+    },
+    "minecraft:polished_tuff_stairs": {
+        "rotate": {
+            "weirdo_direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "weirdo_direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:polished_tuff_wall": {
+        "flip-y": {
+            "wall_post_bit": {
+                "false": "true",
+                "true": "false"
             }
         }
     },
@@ -6102,22 +6306,22 @@
     "minecraft:soul_campfire": {
         "rotate": {
             "minecraft:cardinal_direction": {
-                "west": "north",
-                "south": "west",
+                "east": "south",
                 "north": "east",
-                "east": "south"
+                "south": "west",
+                "west": "north"
             }
         },
         "flip-x": {
             "minecraft:cardinal_direction": {
-                "west": "east",
-                "east": "west"
+                "east": "west",
+                "west": "east"
             }
         },
         "flip-z": {
             "minecraft:cardinal_direction": {
-                "south": "north",
-                "north": "south"
+                "north": "south",
+                "south": "north"
             }
         }
     },
@@ -6731,6 +6935,78 @@
             }
         }
     },
+    "minecraft:tuff_brick_stairs": {
+        "rotate": {
+            "weirdo_direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "weirdo_direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:tuff_brick_wall": {
+        "flip-y": {
+            "wall_post_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        }
+    },
+    "minecraft:tuff_stairs": {
+        "rotate": {
+            "weirdo_direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "weirdo_direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:tuff_wall": {
+        "flip-y": {
+            "wall_post_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        }
+    },
     "minecraft:verdant_froglight": {
         "rotate": {
             "pillar_axis": {
@@ -7101,6 +7377,62 @@
             }
         }
     },
+    "minecraft:waxed_copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:waxed_copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
     "minecraft:waxed_cut_copper_stairs": {
         "rotate": {
             "weirdo_direction": {
@@ -7124,6 +7456,62 @@
         },
         "flip-z": {
             "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
                 "3": "2",
                 "2": "3"
             }
@@ -7157,6 +7545,62 @@
             }
         }
     },
+    "minecraft:waxed_oxidized_copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
     "minecraft:waxed_oxidized_cut_copper_stairs": {
         "rotate": {
             "weirdo_direction": {
@@ -7185,6 +7629,62 @@
             }
         }
     },
+    "minecraft:waxed_weathered_copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
     "minecraft:waxed_weathered_cut_copper_stairs": {
         "rotate": {
             "weirdo_direction": {
@@ -7208,6 +7708,62 @@
         },
         "flip-z": {
             "weirdo_direction": {
+                "3": "2",
+                "2": "3"
+            }
+        }
+    },
+    "minecraft:weathered_copper_door": {
+        "rotate": {
+            "direction": {
+                "0": "1",
+                "3": "0",
+                "1": "2",
+                "2": "3"
+            }
+        },
+        "flip-x": {
+            "direction": {
+                "0": "2",
+                "2": "0"
+            }
+        },
+        "flip-y": {
+            "upper_block_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
+                "3": "1",
+                "1": "3"
+            }
+        }
+    },
+    "minecraft:weathered_copper_trapdoor": {
+        "rotate": {
+            "direction": {
+                "0": "2",
+                "3": "0",
+                "2": "1",
+                "1": "3"
+            }
+        },
+        "flip-x": {
+            "direction": [
+                "1",
+                "0"
+            ]
+        },
+        "flip-y": {
+            "upside_down_bit": {
+                "false": "true",
+                "true": "false"
+            }
+        },
+        "flip-z": {
+            "direction": {
                 "3": "2",
                 "2": "3"
             }

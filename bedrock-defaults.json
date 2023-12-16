@@ -374,7 +374,7 @@
         "minecraft:cardinal_direction": "north"
     },
     "minecraft:campfire": {
-        "minecraft:cardinal_direction": "south",
+        "minecraft:cardinal_direction": "north",
         "extinguished": "false"
     },
     "minecraft:candle": {
@@ -536,6 +536,26 @@
     },
     "minecraft:composter": {
         "composter_fill_level": "0"
+    },
+    "minecraft:copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:crafter": {
+        "crafting": "false",
+        "orientation": "down_east",
+        "triggered_bit": "false"
     },
     "minecraft:skull": {
         "facing_direction": "1"
@@ -760,6 +780,21 @@
     },
     "minecraft:ender_chest": {
         "minecraft:cardinal_direction": "north"
+    },
+    "minecraft:exposed_copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:exposed_copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:exposed_copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
     },
     "minecraft:exposed_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"
@@ -1142,6 +1177,21 @@
     "minecraft:orange_glazed_terracotta": {
         "facing_direction": "2"
     },
+    "minecraft:oxidized_copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:oxidized_copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:oxidized_copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
+    },
     "minecraft:oxidized_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"
     },
@@ -1261,6 +1311,23 @@
     "minecraft:polished_granite_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
+    },
+    "minecraft:polished_tuff_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:polished_tuff_double_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:polished_tuff_stairs": {
+        "weirdo_direction": "3",
+        "upside_down_bit": "false"
+    },
+    "minecraft:polished_tuff_wall": {
+        "wall_connection_type_east": "none",
+        "wall_connection_type_north": "none",
+        "wall_connection_type_south": "none",
+        "wall_post_bit": "false",
+        "wall_connection_type_west": "none"
     },
     "minecraft:potatoes": {
         "growth": "0"
@@ -1414,7 +1481,7 @@
         "covered_bit": "false"
     },
     "minecraft:soul_campfire": {
-        "minecraft:cardinal_direction": "south",
+        "minecraft:cardinal_direction": "north",
         "extinguished": "false"
     },
     "minecraft:soul_fire": {
@@ -1581,6 +1648,40 @@
         "direction": "2",
         "powered_bit": "false"
     },
+    "minecraft:tuff_brick_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:tuff_brick_double_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:tuff_brick_stairs": {
+        "weirdo_direction": "3",
+        "upside_down_bit": "false"
+    },
+    "minecraft:tuff_brick_wall": {
+        "wall_connection_type_east": "none",
+        "wall_connection_type_north": "none",
+        "wall_connection_type_south": "none",
+        "wall_post_bit": "false",
+        "wall_connection_type_west": "none"
+    },
+    "minecraft:tuff_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:tuff_double_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:tuff_stairs": {
+        "weirdo_direction": "3",
+        "upside_down_bit": "false"
+    },
+    "minecraft:tuff_wall": {
+        "wall_connection_type_east": "none",
+        "wall_connection_type_north": "none",
+        "wall_connection_type_south": "none",
+        "wall_post_bit": "false",
+        "wall_connection_type_west": "none"
+    },
     "minecraft:turtle_egg": {
         "turtle_egg_count": "one_egg",
         "cracked_state": "no_cracks"
@@ -1651,6 +1752,21 @@
     "minecraft:flowing_water": {
         "liquid_depth": "0"
     },
+    "minecraft:waxed_copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:waxed_copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:waxed_copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
+    },
     "minecraft:waxed_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"
     },
@@ -1660,6 +1776,21 @@
     "minecraft:waxed_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:waxed_exposed_copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
     },
     "minecraft:waxed_exposed_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"
@@ -1671,6 +1802,21 @@
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
+    "minecraft:waxed_oxidized_copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:waxed_oxidized_copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
+    },
     "minecraft:waxed_oxidized_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"
     },
@@ -1681,6 +1827,21 @@
         "weirdo_direction": "3",
         "upside_down_bit": "false"
     },
+    "minecraft:waxed_weathered_copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:waxed_weathered_copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
+    },
     "minecraft:waxed_weathered_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"
     },
@@ -1690,6 +1851,21 @@
     "minecraft:waxed_weathered_cut_copper_stairs": {
         "weirdo_direction": "3",
         "upside_down_bit": "false"
+    },
+    "minecraft:weathered_copper_bulb": {
+        "lit": "false",
+        "powered_bit": "false"
+    },
+    "minecraft:weathered_copper_door": {
+        "direction": "3",
+        "upper_block_bit": "false",
+        "door_hinge_bit": "false",
+        "open_bit": "false"
+    },
+    "minecraft:weathered_copper_trapdoor": {
+        "direction": "3",
+        "upside_down_bit": "false",
+        "open_bit": "false"
     },
     "minecraft:weathered_cut_copper_slab": {
         "minecraft:vertical_half": "bottom"

@@ -79,6 +79,7 @@ foreach ($javaToBedrock as $java => $bedrock) {
 		         "/minecraft:oak_wall_sign(.*)/" => "minecraft:wall_sign$1",
 		         "/minecraft:water_cauldron\\[level=(.)]/" => "minecraft:cauldron[level=$1]",
 		         "/minecraft:cauldron/" => "minecraft:cauldron[level=0]",
+		         "/minecraft:short_grass/" => "minecraft:grass",
 	         ] as $search => $replace) {
 		if (preg_match($search, $java)) {
 			$javaToBedrock[preg_replace($search, $replace, $java)] = $bedrock;

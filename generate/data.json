@@ -669,7 +669,7 @@
 	}
   },
   "overrides": {
-	"__allow": ["minecraft:brown_mushroom_block", "minecraft:red_mushroom_block"],
+	"__allow": ["minecraft:brown_mushroom_block", "minecraft:red_mushroom_block", "minecraft:tallgrass"],
 	"__comment1": "buttons and leavers can only be placed in two orientations on floors and ceilings in bedrock, vs the 4 in java",
 	"minecraft:acacia_button": [0, 1],
 	"minecraft:birch_button": [0, 1],
@@ -691,7 +691,10 @@
 	"minecraft:red_mushroom_block": [14, 15],
 
 	"__comment3": "in earlier versions plain cauldron blocks contained water as well, we use this one, as it will probably be converted by java to the correct one",
-	"minecraft:cauldron": ["water"]
+	"minecraft:cauldron": ["water"],
+
+    "__comment4": "support for legacy tall grass",
+    "minecraft:tallgrass": ["tall"]
   },
   "beDefaults": {
 	"wood_type": "oak",

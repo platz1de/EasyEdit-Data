@@ -8,27 +8,27 @@
         "damage": 0
     },
     "minecraft:granite": {
-        "name": "minecraft:stone",
+        "name": "minecraft:granite",
         "damage": 1
     },
     "minecraft:polished_granite": {
-        "name": "minecraft:stone",
+        "name": "minecraft:polished_granite",
         "damage": 2
     },
     "minecraft:diorite": {
-        "name": "minecraft:stone",
+        "name": "minecraft:diorite",
         "damage": 3
     },
     "minecraft:polished_diorite": {
-        "name": "minecraft:stone",
+        "name": "minecraft:polished_diorite",
         "damage": 4
     },
     "minecraft:andesite": {
-        "name": "minecraft:stone",
+        "name": "minecraft:andesite",
         "damage": 5
     },
     "minecraft:polished_andesite": {
-        "name": "minecraft:stone",
+        "name": "minecraft:polished_andesite",
         "damage": 6
     },
     "minecraft:deepslate": {
@@ -49,6 +49,58 @@
     },
     "minecraft:tuff": {
         "name": "minecraft:tuff",
+        "damage": 0
+    },
+    "minecraft:tuff_slab": {
+        "name": "minecraft:tuff_slab",
+        "damage": 0
+    },
+    "minecraft:tuff_stairs": {
+        "name": "minecraft:tuff_stairs",
+        "damage": 0
+    },
+    "minecraft:tuff_wall": {
+        "name": "minecraft:tuff_wall",
+        "damage": 0
+    },
+    "minecraft:chiseled_tuff": {
+        "name": "minecraft:chiseled_tuff",
+        "damage": 0
+    },
+    "minecraft:polished_tuff": {
+        "name": "minecraft:polished_tuff",
+        "damage": 0
+    },
+    "minecraft:polished_tuff_slab": {
+        "name": "minecraft:polished_tuff_slab",
+        "damage": 0
+    },
+    "minecraft:polished_tuff_stairs": {
+        "name": "minecraft:polished_tuff_stairs",
+        "damage": 0
+    },
+    "minecraft:polished_tuff_wall": {
+        "name": "minecraft:polished_tuff_wall",
+        "damage": 0
+    },
+    "minecraft:tuff_bricks": {
+        "name": "minecraft:tuff_bricks",
+        "damage": 0
+    },
+    "minecraft:tuff_brick_slab": {
+        "name": "minecraft:tuff_brick_slab",
+        "damage": 0
+    },
+    "minecraft:tuff_brick_stairs": {
+        "name": "minecraft:tuff_brick_stairs",
+        "damage": 0
+    },
+    "minecraft:tuff_brick_wall": {
+        "name": "minecraft:tuff_brick_wall",
+        "damage": 0
+    },
+    "minecraft:chiseled_tuff_bricks": {
+        "name": "minecraft:chiseled_tuff_bricks",
         "damage": 0
     },
     "minecraft:dripstone_block": {
@@ -92,23 +144,23 @@
         "damage": 0
     },
     "minecraft:oak_planks": {
-        "name": "minecraft:planks",
+        "name": "minecraft:oak_planks",
         "damage": 0
     },
     "minecraft:spruce_planks": {
-        "name": "minecraft:planks",
+        "name": "minecraft:spruce_planks",
         "damage": 1
     },
     "minecraft:birch_planks": {
-        "name": "minecraft:planks",
+        "name": "minecraft:birch_planks",
         "damage": 2
     },
     "minecraft:jungle_planks": {
-        "name": "minecraft:planks",
+        "name": "minecraft:jungle_planks",
         "damage": 3
     },
     "minecraft:acacia_planks": {
-        "name": "minecraft:planks",
+        "name": "minecraft:acacia_planks",
         "damage": 4
     },
     "minecraft:cherry_planks": {
@@ -116,7 +168,7 @@
         "damage": 0
     },
     "minecraft:dark_oak_planks": {
-        "name": "minecraft:planks",
+        "name": "minecraft:dark_oak_planks",
         "damage": 5
     },
     "minecraft:mangrove_planks": {
@@ -327,6 +379,22 @@
         "name": "minecraft:oxidized_copper",
         "damage": 0
     },
+    "minecraft:chiseled_copper": {
+        "name": "minecraft:chiseled_copper",
+        "damage": 0
+    },
+    "minecraft:exposed_chiseled_copper": {
+        "name": "minecraft:exposed_chiseled_copper",
+        "damage": 0
+    },
+    "minecraft:weathered_chiseled_copper": {
+        "name": "minecraft:weathered_chiseled_copper",
+        "damage": 0
+    },
+    "minecraft:oxidized_chiseled_copper": {
+        "name": "minecraft:oxidized_chiseled_copper",
+        "damage": 0
+    },
     "minecraft:cut_copper": {
         "name": "minecraft:cut_copper",
         "damage": 0
@@ -389,6 +457,22 @@
     },
     "minecraft:waxed_oxidized_copper": {
         "name": "minecraft:waxed_oxidized_copper",
+        "damage": 0
+    },
+    "minecraft:waxed_chiseled_copper": {
+        "name": "minecraft:waxed_chiseled_copper",
+        "damage": 0
+    },
+    "minecraft:waxed_exposed_chiseled_copper": {
+        "name": "minecraft:waxed_exposed_chiseled_copper",
+        "damage": 0
+    },
+    "minecraft:waxed_weathered_chiseled_copper": {
+        "name": "minecraft:waxed_weathered_chiseled_copper",
+        "damage": 0
+    },
+    "minecraft:waxed_oxidized_chiseled_copper": {
+        "name": "minecraft:waxed_oxidized_chiseled_copper",
         "damage": 0
     },
     "minecraft:waxed_cut_copper": {
@@ -691,7 +775,7 @@
         "name": "minecraft:web",
         "damage": 0
     },
-    "minecraft:grass": {
+    "minecraft:short_grass": {
         "name": "minecraft:tallgrass",
         "damage": 1
     },
@@ -1620,67 +1704,67 @@
         "damage": 0
     },
     "minecraft:white_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:white_terracotta",
         "damage": 0
     },
     "minecraft:orange_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:orange_terracotta",
         "damage": 1
     },
     "minecraft:magenta_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:magenta_terracotta",
         "damage": 2
     },
     "minecraft:light_blue_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:light_blue_terracotta",
         "damage": 3
     },
     "minecraft:yellow_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:yellow_terracotta",
         "damage": 4
     },
     "minecraft:lime_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:lime_terracotta",
         "damage": 5
     },
     "minecraft:pink_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:pink_terracotta",
         "damage": 6
     },
     "minecraft:gray_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:gray_terracotta",
         "damage": 7
     },
     "minecraft:light_gray_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:light_gray_terracotta",
         "damage": 8
     },
     "minecraft:cyan_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:cyan_terracotta",
         "damage": 9
     },
     "minecraft:purple_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:purple_terracotta",
         "damage": 10
     },
     "minecraft:blue_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:blue_terracotta",
         "damage": 11
     },
     "minecraft:brown_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:brown_terracotta",
         "damage": 12
     },
     "minecraft:green_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:green_terracotta",
         "damage": 13
     },
     "minecraft:red_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:red_terracotta",
         "damage": 14
     },
     "minecraft:black_terracotta": {
-        "name": "minecraft:stained_hardened_clay",
+        "name": "minecraft:black_terracotta",
         "damage": 15
     },
     "minecraft:barrier": {
@@ -1796,131 +1880,131 @@
         "damage": 3
     },
     "minecraft:white_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:white_stained_glass",
         "damage": 0
     },
     "minecraft:orange_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:orange_stained_glass",
         "damage": 1
     },
     "minecraft:magenta_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:magenta_stained_glass",
         "damage": 2
     },
     "minecraft:light_blue_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:light_blue_stained_glass",
         "damage": 3
     },
     "minecraft:yellow_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:yellow_stained_glass",
         "damage": 4
     },
     "minecraft:lime_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:lime_stained_glass",
         "damage": 5
     },
     "minecraft:pink_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:pink_stained_glass",
         "damage": 6
     },
     "minecraft:gray_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:gray_stained_glass",
         "damage": 7
     },
     "minecraft:light_gray_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:light_gray_stained_glass",
         "damage": 8
     },
     "minecraft:cyan_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:cyan_stained_glass",
         "damage": 9
     },
     "minecraft:purple_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:purple_stained_glass",
         "damage": 10
     },
     "minecraft:blue_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:blue_stained_glass",
         "damage": 11
     },
     "minecraft:brown_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:brown_stained_glass",
         "damage": 12
     },
     "minecraft:green_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:green_stained_glass",
         "damage": 13
     },
     "minecraft:red_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:red_stained_glass",
         "damage": 14
     },
     "minecraft:black_stained_glass": {
-        "name": "minecraft:stained_glass",
+        "name": "minecraft:black_stained_glass",
         "damage": 15
     },
     "minecraft:white_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:white_stained_glass_pane",
         "damage": 0
     },
     "minecraft:orange_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:orange_stained_glass_pane",
         "damage": 1
     },
     "minecraft:magenta_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:magenta_stained_glass_pane",
         "damage": 2
     },
     "minecraft:light_blue_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:light_blue_stained_glass_pane",
         "damage": 3
     },
     "minecraft:yellow_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:yellow_stained_glass_pane",
         "damage": 4
     },
     "minecraft:lime_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:lime_stained_glass_pane",
         "damage": 5
     },
     "minecraft:pink_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:pink_stained_glass_pane",
         "damage": 6
     },
     "minecraft:gray_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:gray_stained_glass_pane",
         "damage": 7
     },
     "minecraft:light_gray_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:light_gray_stained_glass_pane",
         "damage": 8
     },
     "minecraft:cyan_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:cyan_stained_glass_pane",
         "damage": 9
     },
     "minecraft:purple_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:purple_stained_glass_pane",
         "damage": 10
     },
     "minecraft:blue_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:blue_stained_glass_pane",
         "damage": 11
     },
     "minecraft:brown_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:brown_stained_glass_pane",
         "damage": 12
     },
     "minecraft:green_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:green_stained_glass_pane",
         "damage": 13
     },
     "minecraft:red_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:red_stained_glass_pane",
         "damage": 14
     },
     "minecraft:black_stained_glass_pane": {
-        "name": "minecraft:stained_glass_pane",
+        "name": "minecraft:black_stained_glass_pane",
         "damage": 15
     },
     "minecraft:prismarine": {
@@ -2004,67 +2088,67 @@
         "damage": 0
     },
     "minecraft:white_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:white_shulker_box",
         "damage": 0
     },
     "minecraft:orange_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:orange_shulker_box",
         "damage": 1
     },
     "minecraft:magenta_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:magenta_shulker_box",
         "damage": 2
     },
     "minecraft:light_blue_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:light_blue_shulker_box",
         "damage": 3
     },
     "minecraft:yellow_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:yellow_shulker_box",
         "damage": 4
     },
     "minecraft:lime_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:lime_shulker_box",
         "damage": 5
     },
     "minecraft:pink_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:pink_shulker_box",
         "damage": 6
     },
     "minecraft:gray_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:gray_shulker_box",
         "damage": 7
     },
     "minecraft:light_gray_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:light_gray_shulker_box",
         "damage": 8
     },
     "minecraft:cyan_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:cyan_shulker_box",
         "damage": 9
     },
     "minecraft:purple_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:purple_shulker_box",
         "damage": 10
     },
     "minecraft:blue_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:blue_shulker_box",
         "damage": 11
     },
     "minecraft:brown_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:brown_shulker_box",
         "damage": 12
     },
     "minecraft:green_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:green_shulker_box",
         "damage": 13
     },
     "minecraft:red_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:red_shulker_box",
         "damage": 14
     },
     "minecraft:black_shulker_box": {
-        "name": "minecraft:shulker_box",
+        "name": "minecraft:black_shulker_box",
         "damage": 15
     },
     "minecraft:white_glazed_terracotta": {
@@ -2132,131 +2216,131 @@
         "damage": 0
     },
     "minecraft:white_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:white_concrete",
         "damage": 0
     },
     "minecraft:orange_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:orange_concrete",
         "damage": 1
     },
     "minecraft:magenta_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:magenta_concrete",
         "damage": 2
     },
     "minecraft:light_blue_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:light_blue_concrete",
         "damage": 3
     },
     "minecraft:yellow_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:yellow_concrete",
         "damage": 4
     },
     "minecraft:lime_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:lime_concrete",
         "damage": 5
     },
     "minecraft:pink_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:pink_concrete",
         "damage": 6
     },
     "minecraft:gray_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:gray_concrete",
         "damage": 7
     },
     "minecraft:light_gray_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:light_gray_concrete",
         "damage": 8
     },
     "minecraft:cyan_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:cyan_concrete",
         "damage": 9
     },
     "minecraft:purple_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:purple_concrete",
         "damage": 10
     },
     "minecraft:blue_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:blue_concrete",
         "damage": 11
     },
     "minecraft:brown_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:brown_concrete",
         "damage": 12
     },
     "minecraft:green_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:green_concrete",
         "damage": 13
     },
     "minecraft:red_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:red_concrete",
         "damage": 14
     },
     "minecraft:black_concrete": {
-        "name": "minecraft:concrete",
+        "name": "minecraft:black_concrete",
         "damage": 15
     },
     "minecraft:white_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:white_concrete_powder",
         "damage": 0
     },
     "minecraft:orange_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:orange_concrete_powder",
         "damage": 1
     },
     "minecraft:magenta_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:magenta_concrete_powder",
         "damage": 2
     },
     "minecraft:light_blue_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:light_blue_concrete_powder",
         "damage": 3
     },
     "minecraft:yellow_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:yellow_concrete_powder",
         "damage": 4
     },
     "minecraft:lime_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:lime_concrete_powder",
         "damage": 5
     },
     "minecraft:pink_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:pink_concrete_powder",
         "damage": 6
     },
     "minecraft:gray_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:gray_concrete_powder",
         "damage": 7
     },
     "minecraft:light_gray_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:light_gray_concrete_powder",
         "damage": 8
     },
     "minecraft:cyan_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:cyan_concrete_powder",
         "damage": 9
     },
     "minecraft:purple_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:purple_concrete_powder",
         "damage": 10
     },
     "minecraft:blue_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:blue_concrete_powder",
         "damage": 11
     },
     "minecraft:brown_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:brown_concrete_powder",
         "damage": 12
     },
     "minecraft:green_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:green_concrete_powder",
         "damage": 13
     },
     "minecraft:red_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:red_concrete_powder",
         "damage": 14
     },
     "minecraft:black_concrete_powder": {
-        "name": "minecraft:concrete_powder",
+        "name": "minecraft:black_concrete_powder",
         "damage": 15
     },
     "minecraft:turtle_egg": {
@@ -2799,6 +2883,38 @@
         "name": "minecraft:warped_door",
         "damage": 0
     },
+    "minecraft:copper_door": {
+        "name": "minecraft:copper_door",
+        "damage": 0
+    },
+    "minecraft:exposed_copper_door": {
+        "name": "minecraft:exposed_copper_door",
+        "damage": 0
+    },
+    "minecraft:weathered_copper_door": {
+        "name": "minecraft:weathered_copper_door",
+        "damage": 0
+    },
+    "minecraft:oxidized_copper_door": {
+        "name": "minecraft:oxidized_copper_door",
+        "damage": 0
+    },
+    "minecraft:waxed_copper_door": {
+        "name": "minecraft:waxed_copper_door",
+        "damage": 0
+    },
+    "minecraft:waxed_exposed_copper_door": {
+        "name": "minecraft:waxed_exposed_copper_door",
+        "damage": 0
+    },
+    "minecraft:waxed_weathered_copper_door": {
+        "name": "minecraft:waxed_weathered_copper_door",
+        "damage": 0
+    },
+    "minecraft:waxed_oxidized_copper_door": {
+        "name": "minecraft:waxed_oxidized_copper_door",
+        "damage": 0
+    },
     "minecraft:iron_trapdoor": {
         "name": "minecraft:iron_trapdoor",
         "damage": 0
@@ -2845,6 +2961,38 @@
     },
     "minecraft:warped_trapdoor": {
         "name": "minecraft:warped_trapdoor",
+        "damage": 0
+    },
+    "minecraft:copper_trapdoor": {
+        "name": "minecraft:copper_trapdoor",
+        "damage": 0
+    },
+    "minecraft:exposed_copper_trapdoor": {
+        "name": "minecraft:exposed_copper_trapdoor",
+        "damage": 0
+    },
+    "minecraft:weathered_copper_trapdoor": {
+        "name": "minecraft:weathered_copper_trapdoor",
+        "damage": 0
+    },
+    "minecraft:oxidized_copper_trapdoor": {
+        "name": "minecraft:oxidized_copper_trapdoor",
+        "damage": 0
+    },
+    "minecraft:waxed_copper_trapdoor": {
+        "name": "minecraft:waxed_copper_trapdoor",
+        "damage": 0
+    },
+    "minecraft:waxed_exposed_copper_trapdoor": {
+        "name": "minecraft:waxed_exposed_copper_trapdoor",
+        "damage": 0
+    },
+    "minecraft:waxed_weathered_copper_trapdoor": {
+        "name": "minecraft:waxed_weathered_copper_trapdoor",
+        "damage": 0
+    },
+    "minecraft:waxed_oxidized_copper_trapdoor": {
+        "name": "minecraft:waxed_oxidized_copper_trapdoor",
         "damage": 0
     },
     "minecraft:oak_fence_gate": {
@@ -3763,6 +3911,10 @@
         "name": "minecraft:cookie",
         "damage": 0
     },
+    "minecraft:crafter": {
+        "name": "minecraft:crafter",
+        "damage": 0
+    },
     "minecraft:filled_map": {
         "name": "minecraft:filled_map",
         "damage": 0
@@ -3884,6 +4036,10 @@
         "damage": 0
     },
     "minecraft:blaze_spawn_egg": {
+        "name": "minecraft:blaze_spawn_egg",
+        "damage": 0
+    },
+    "minecraft:breeze_spawn_egg": {
         "name": "minecraft:blaze_spawn_egg",
         "damage": 0
     },
@@ -5017,6 +5173,78 @@
     },
     "minecraft:snort_pottery_sherd": {
         "name": "minecraft:snort_pottery_sherd",
+        "damage": 0
+    },
+    "minecraft:copper_grate": {
+        "name": "minecraft:copper_grate",
+        "damage": 0
+    },
+    "minecraft:exposed_copper_grate": {
+        "name": "minecraft:exposed_copper_grate",
+        "damage": 0
+    },
+    "minecraft:weathered_copper_grate": {
+        "name": "minecraft:weathered_copper_grate",
+        "damage": 0
+    },
+    "minecraft:oxidized_copper_grate": {
+        "name": "minecraft:oxidized_copper_grate",
+        "damage": 0
+    },
+    "minecraft:waxed_copper_grate": {
+        "name": "minecraft:waxed_copper_grate",
+        "damage": 0
+    },
+    "minecraft:waxed_exposed_copper_grate": {
+        "name": "minecraft:waxed_exposed_copper_grate",
+        "damage": 0
+    },
+    "minecraft:waxed_weathered_copper_grate": {
+        "name": "minecraft:waxed_weathered_copper_grate",
+        "damage": 0
+    },
+    "minecraft:waxed_oxidized_copper_grate": {
+        "name": "minecraft:waxed_oxidized_copper_grate",
+        "damage": 0
+    },
+    "minecraft:copper_bulb": {
+        "name": "minecraft:copper_bulb",
+        "damage": 0
+    },
+    "minecraft:exposed_copper_bulb": {
+        "name": "minecraft:exposed_copper_bulb",
+        "damage": 0
+    },
+    "minecraft:weathered_copper_bulb": {
+        "name": "minecraft:weathered_copper_bulb",
+        "damage": 0
+    },
+    "minecraft:oxidized_copper_bulb": {
+        "name": "minecraft:oxidized_copper_bulb",
+        "damage": 0
+    },
+    "minecraft:waxed_copper_bulb": {
+        "name": "minecraft:waxed_copper_bulb",
+        "damage": 0
+    },
+    "minecraft:waxed_exposed_copper_bulb": {
+        "name": "minecraft:waxed_exposed_copper_bulb",
+        "damage": 0
+    },
+    "minecraft:waxed_weathered_copper_bulb": {
+        "name": "minecraft:waxed_weathered_copper_bulb",
+        "damage": 0
+    },
+    "minecraft:waxed_oxidized_copper_bulb": {
+        "name": "minecraft:waxed_oxidized_copper_bulb",
+        "damage": 0
+    },
+    "minecraft:trial_spawner": {
+        "name": "minecraft:mob_spawner",
+        "damage": 0
+    },
+    "minecraft:trial_key": {
+        "name": "minecraft:echo_shard",
         "damage": 0
     }
 }
