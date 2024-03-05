@@ -153,88 +153,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:acacia_wall_hanging_sign",
@@ -1400,88 +1400,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:bamboo_wall_hanging_sign",
@@ -2085,88 +2085,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:birch_wall_hanging_sign",
@@ -3934,88 +3934,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:cherry_wall_hanging_sign",
@@ -5679,88 +5679,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:crimson_wall_hanging_sign",
@@ -6420,88 +6420,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:dark_oak_wall_hanging_sign",
@@ -9019,88 +9019,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:jungle_wall_hanging_sign",
@@ -9992,88 +9992,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:mangrove_wall_hanging_sign",
@@ -10803,88 +10803,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:oak_wall_hanging_sign",
@@ -14091,88 +14091,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:spruce_wall_hanging_sign",
@@ -15394,88 +15394,88 @@
             "ground_sign_direction"
         ],
         "mapping": {
-            "true": {
-                "0": {
+            "true": [
+                {
                     "additions": {
                         "rotation": "0"
                     }
                 },
-                "1": {
+                {
                     "additions": {
                         "rotation": "1"
                     }
                 },
-                "10": {
-                    "additions": {
-                        "rotation": "10"
-                    }
-                },
-                "11": {
-                    "additions": {
-                        "rotation": "11"
-                    }
-                },
-                "12": {
-                    "additions": {
-                        "rotation": "12"
-                    }
-                },
-                "13": {
-                    "additions": {
-                        "rotation": "13"
-                    }
-                },
-                "14": {
-                    "additions": {
-                        "rotation": "14"
-                    }
-                },
-                "15": {
-                    "additions": {
-                        "rotation": "15"
-                    }
-                },
-                "2": {
+                {
                     "additions": {
                         "rotation": "2"
                     }
                 },
-                "3": {
+                {
                     "additions": {
                         "rotation": "3"
                     }
                 },
-                "4": {
+                {
                     "additions": {
                         "rotation": "4"
                     }
                 },
-                "5": {
+                {
                     "additions": {
                         "rotation": "5"
                     }
                 },
-                "6": {
+                {
                     "additions": {
                         "rotation": "6"
                     }
                 },
-                "7": {
+                {
                     "additions": {
                         "rotation": "7"
                     }
                 },
-                "8": {
+                {
                     "additions": {
                         "rotation": "8"
                     }
                 },
-                "9": {
+                {
                     "additions": {
                         "rotation": "9"
                     }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
                 }
-            },
+            ],
             "false": {
                 "12": {
                     "name": "minecraft:warped_wall_hanging_sign",

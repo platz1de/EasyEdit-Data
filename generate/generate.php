@@ -172,6 +172,10 @@ foreach ($groupsJtb as $group) {
 		}
 	}
 
+	$possible = array_map(function ($value) {
+		sort($value);
+		return $value;
+	}, $possible);
 	$obj = ["values" => $possible, "defaults" => $defaults];
 	$failed = false;
 	if (!$hasChanges) {
