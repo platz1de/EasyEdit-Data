@@ -1,7 +1,16 @@
 {
-    "version": "1a862c9a-4aee-4173-a472-be7baaa40be4",
+    "version": "804c88e7-f854-43dd-b6fd-b768c08c5f5e",
     "latest": {
-        "state-version": 18100737,
+        "state-version": 18103297,
+        "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/legacy-conversion-map.json",
+        "java-to-bedrock": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/java-to-bedrock.json",
+        "bedrock-to-java": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/bedrock-to-java.json",
+        "manipulation-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/manipulation-data.json",
+        "item-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/item-conversion-map.json",
+        "bedrock-defaults": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/bedrock-defaults.json",
+        "block-tags": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/block-tags.json"
+    },
+    "1.20.60.1": {
         "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/legacy-conversion-map.json",
         "java-to-bedrock": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/java-to-bedrock.json",
         "bedrock-to-java": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/bedrock-to-java.json",
@@ -11,13 +20,13 @@
         "block-tags": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/block-tags.json"
     },
     "1.20.50.1": {
-        "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/legacy-conversion-map.json",
-        "java-to-bedrock": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/java-to-bedrock.json",
-        "bedrock-to-java": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/bedrock-to-java.json",
-        "manipulation-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/manipulation-data.json",
-        "item-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/item-conversion-map.json",
-        "bedrock-defaults": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/bedrock-defaults.json",
-        "block-tags": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/format-v3.1/block-tags.json"
+        "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.50.1/legacy-conversion-map.json",
+        "java-to-bedrock": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.50.1/java-to-bedrock.json",
+        "bedrock-to-java": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.50.1/bedrock-to-java.json",
+        "manipulation-data": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.50.1/manipulation-data.json",
+        "item-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.50.1/item-conversion-map.json",
+        "bedrock-defaults": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.50.1/bedrock-defaults.json",
+        "block-tags": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.50.1/block-tags.json"
     },
     "1.20.40.3": {
         "legacy-conversion-map": "https://raw.githubusercontent.com/platz1de/EasyEdit-Data/1.20.40.3/legacy-conversion-map.json",

@@ -20,7 +20,7 @@ $repo["version"] = Uuid::uuid4();
 $repo["latest"]["state-version"] =
 	(1 << 24) | //major
 	(20 << 16) | //minor
-	(50 << 8) | //patch
+	(60 << 8) | //patch
 	(1); //revision
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
