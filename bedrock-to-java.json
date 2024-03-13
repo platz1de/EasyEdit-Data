@@ -281,29 +281,17 @@
             "facing": "north"
         }
     },
-    "minecraft:leaves2": {
+    "minecraft:acacia_leaves": {
+        "name": "minecraft:acacia_leaves",
         "additions": {
             "waterlogged": "false",
             "distance": "7"
         },
         "removals": [
-            "update_bit",
-            "new_leaf_type"
+            "update_bit"
         ],
         "renames": {
             "persistent_bit": "persistent"
-        },
-        "remaps": [],
-        "identifier": [
-            "new_leaf_type"
-        ],
-        "mapping": {
-            "acacia": {
-                "name": "minecraft:acacia_leaves"
-            },
-            "dark_oak": {
-                "name": "minecraft:dark_oak_leaves"
-            }
         },
         "defaults": {
             "distance": "7",
@@ -390,101 +378,27 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:wooden_slab": {
+    "minecraft:acacia_slab": {
         "name": "minecraft:acacia_slab",
         "additions": {
             "waterlogged": "false"
         },
         "removals": [
-            "wood_type",
             "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "wood_type",
             "minecraft:vertical_half"
         ],
         "mapping": {
-            "acacia": {
-                "bottom": {
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "additions": {
-                        "type": "top"
-                    }
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
                 }
             },
-            "birch": {
-                "bottom": {
-                    "name": "minecraft:birch_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:birch_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "dark_oak": {
-                "bottom": {
-                    "name": "minecraft:dark_oak_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:dark_oak_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "jungle": {
-                "bottom": {
-                    "name": "minecraft:jungle_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:jungle_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "oak": {
-                "bottom": {
-                    "name": "minecraft:oak_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:oak_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "spruce": {
-                "bottom": {
-                    "name": "minecraft:spruce_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:spruce_slab",
-                    "additions": {
-                        "type": "top"
-                    }
+            "top": {
+                "additions": {
+                    "type": "top"
                 }
             }
         },
@@ -493,52 +407,15 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:double_wooden_slab": {
+    "minecraft:acacia_double_slab": {
+        "name": "minecraft:acacia_slab",
         "additions": {
             "waterlogged": "false",
             "type": "double"
         },
         "removals": [
-            "wood_type",
             "minecraft:vertical_half"
         ],
-        "remaps": [],
-        "identifier": [
-            "wood_type",
-            "minecraft:vertical_half"
-        ],
-        "mapping": {
-            "acacia": {
-                "bottom": {
-                    "name": "minecraft:acacia_slab"
-                }
-            },
-            "birch": {
-                "bottom": {
-                    "name": "minecraft:birch_slab"
-                }
-            },
-            "dark_oak": {
-                "bottom": {
-                    "name": "minecraft:dark_oak_slab"
-                }
-            },
-            "jungle": {
-                "bottom": {
-                    "name": "minecraft:jungle_slab"
-                }
-            },
-            "oak": {
-                "bottom": {
-                    "name": "minecraft:oak_slab"
-                }
-            },
-            "spruce": {
-                "bottom": {
-                    "name": "minecraft:spruce_slab"
-                }
-            }
-        },
         "defaults": {
             "type": "bottom",
             "waterlogged": "false"
@@ -625,69 +502,10 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:wood": {
-        "additions": [],
-        "removals": [
-            "wood_type",
-            "stripped_bit"
-        ],
+    "minecraft:acacia_wood": {
+        "name": "minecraft:acacia_wood",
         "renames": {
             "pillar_axis": "axis"
-        },
-        "remaps": [],
-        "identifier": [
-            "wood_type",
-            "stripped_bit"
-        ],
-        "mapping": {
-            "acacia": {
-                "false": {
-                    "name": "minecraft:acacia_wood"
-                },
-                "true": {
-                    "name": "minecraft:stripped_acacia_wood"
-                }
-            },
-            "birch": {
-                "false": {
-                    "name": "minecraft:birch_wood"
-                },
-                "true": {
-                    "name": "minecraft:stripped_birch_wood"
-                }
-            },
-            "dark_oak": {
-                "false": {
-                    "name": "minecraft:dark_oak_wood"
-                },
-                "true": {
-                    "name": "minecraft:stripped_dark_oak_wood"
-                }
-            },
-            "jungle": {
-                "false": {
-                    "name": "minecraft:jungle_wood"
-                },
-                "true": {
-                    "name": "minecraft:stripped_jungle_wood"
-                }
-            },
-            "oak": {
-                "false": {
-                    "name": "minecraft:oak_wood"
-                },
-                "true": {
-                    "name": "minecraft:stripped_oak_wood"
-                }
-            },
-            "spruce": {
-                "false": {
-                    "name": "minecraft:spruce_wood"
-                },
-                "true": {
-                    "name": "minecraft:stripped_spruce_wood"
-                }
-            }
         },
         "defaults": {
             "axis": "y"
@@ -2213,35 +2031,17 @@
             "facing": "north"
         }
     },
-    "minecraft:leaves": {
+    "minecraft:birch_leaves": {
+        "name": "minecraft:birch_leaves",
         "additions": {
             "waterlogged": "false",
             "distance": "7"
         },
         "removals": [
-            "update_bit",
-            "old_leaf_type"
+            "update_bit"
         ],
         "renames": {
             "persistent_bit": "persistent"
-        },
-        "remaps": [],
-        "identifier": [
-            "old_leaf_type"
-        ],
-        "mapping": {
-            "birch": {
-                "name": "minecraft:birch_leaves"
-            },
-            "jungle": {
-                "name": "minecraft:jungle_leaves"
-            },
-            "oak": {
-                "name": "minecraft:oak_leaves"
-            },
-            "spruce": {
-                "name": "minecraft:spruce_leaves"
-            }
         },
         "defaults": {
             "distance": "7",
@@ -2284,6 +2084,49 @@
         },
         "defaults": {
             "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:birch_slab": {
+        "name": "minecraft:birch_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:birch_double_slab": {
+        "name": "minecraft:birch_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -2366,6 +2209,15 @@
         "defaults": {
             "facing": "north",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:birch_wood": {
+        "name": "minecraft:birch_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:standing_banner": {
@@ -6548,6 +6400,24 @@
             "facing": "north"
         }
     },
+    "minecraft:dark_oak_leaves": {
+        "name": "minecraft:dark_oak_leaves",
+        "additions": {
+            "waterlogged": "false",
+            "distance": "7"
+        },
+        "removals": [
+            "update_bit"
+        ],
+        "renames": {
+            "persistent_bit": "persistent"
+        },
+        "defaults": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:dark_oak_log": {
         "name": "minecraft:dark_oak_log",
         "renames": {
@@ -6583,6 +6453,49 @@
         },
         "defaults": {
             "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dark_oak_slab": {
+        "name": "minecraft:dark_oak_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dark_oak_double_slab": {
+        "name": "minecraft:dark_oak_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -6665,6 +6578,15 @@
         "defaults": {
             "facing": "north",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:dark_oak_wood": {
+        "name": "minecraft:dark_oak_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:prismarine": {
@@ -8479,7 +8401,7 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:grass": {
+    "minecraft:grass_block": {
         "name": "minecraft:grass_block",
         "additions": {
             "snowy": "false"
@@ -9147,6 +9069,24 @@
             "facing": "north"
         }
     },
+    "minecraft:jungle_leaves": {
+        "name": "minecraft:jungle_leaves",
+        "additions": {
+            "waterlogged": "false",
+            "distance": "7"
+        },
+        "removals": [
+            "update_bit"
+        ],
+        "renames": {
+            "persistent_bit": "persistent"
+        },
+        "defaults": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:jungle_log": {
         "name": "minecraft:jungle_log",
         "renames": {
@@ -9182,6 +9122,49 @@
         },
         "defaults": {
             "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:jungle_slab": {
+        "name": "minecraft:jungle_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:jungle_double_slab": {
+        "name": "minecraft:jungle_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -9264,6 +9247,15 @@
         "defaults": {
             "facing": "north",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:jungle_wood": {
+        "name": "minecraft:jungle_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:kelp": {
@@ -10931,6 +10923,24 @@
             "facing": "north"
         }
     },
+    "minecraft:oak_leaves": {
+        "name": "minecraft:oak_leaves",
+        "additions": {
+            "waterlogged": "false",
+            "distance": "7"
+        },
+        "removals": [
+            "update_bit"
+        ],
+        "renames": {
+            "persistent_bit": "persistent"
+        },
+        "defaults": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:oak_log": {
         "name": "minecraft:oak_log",
         "renames": {
@@ -10966,6 +10976,49 @@
         },
         "defaults": {
             "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:oak_slab": {
+        "name": "minecraft:oak_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:oak_double_slab": {
+        "name": "minecraft:oak_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -11048,6 +11101,15 @@
         "defaults": {
             "facing": "north",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:oak_wood": {
+        "name": "minecraft:oak_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:observer": {
@@ -14219,6 +14281,24 @@
             "facing": "north"
         }
     },
+    "minecraft:spruce_leaves": {
+        "name": "minecraft:spruce_leaves",
+        "additions": {
+            "waterlogged": "false",
+            "distance": "7"
+        },
+        "removals": [
+            "update_bit"
+        ],
+        "renames": {
+            "persistent_bit": "persistent"
+        },
+        "defaults": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:spruce_log": {
         "name": "minecraft:spruce_log",
         "renames": {
@@ -14254,6 +14334,49 @@
         },
         "defaults": {
             "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:spruce_slab": {
+        "name": "minecraft:spruce_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:spruce_double_slab": {
+        "name": "minecraft:spruce_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -14336,6 +14459,15 @@
         "defaults": {
             "facing": "north",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:spruce_wood": {
+        "name": "minecraft:spruce_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
         }
     },
     "minecraft:sticky_piston": {
@@ -14511,6 +14643,15 @@
             "axis": "y"
         }
     },
+    "minecraft:stripped_acacia_wood": {
+        "name": "minecraft:stripped_acacia_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:stripped_bamboo_block": {
         "name": "minecraft:stripped_bamboo_block",
         "renames": {
@@ -14522,6 +14663,15 @@
     },
     "minecraft:stripped_birch_log": {
         "name": "minecraft:stripped_birch_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_birch_wood": {
+        "name": "minecraft:stripped_birch_wood",
         "renames": {
             "pillar_axis": "axis"
         },
@@ -14574,8 +14724,26 @@
             "axis": "y"
         }
     },
+    "minecraft:stripped_dark_oak_wood": {
+        "name": "minecraft:stripped_dark_oak_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:stripped_jungle_log": {
         "name": "minecraft:stripped_jungle_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_jungle_wood": {
+        "name": "minecraft:stripped_jungle_wood",
         "renames": {
             "pillar_axis": "axis"
         },
@@ -14610,8 +14778,26 @@
             "axis": "y"
         }
     },
+    "minecraft:stripped_oak_wood": {
+        "name": "minecraft:stripped_oak_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:stripped_spruce_log": {
         "name": "minecraft:stripped_spruce_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_spruce_wood": {
+        "name": "minecraft:stripped_spruce_wood",
         "renames": {
             "pillar_axis": "axis"
         },

@@ -108,7 +108,7 @@
         "damage": 0
     },
     "minecraft:grass_block": {
-        "name": "minecraft:grass",
+        "name": "minecraft:grass_block",
         "damage": 0
     },
     "minecraft:dirt": {
@@ -616,23 +616,23 @@
         "damage": 0
     },
     "minecraft:stripped_oak_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:stripped_oak_wood",
         "damage": 8
     },
     "minecraft:stripped_spruce_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:stripped_spruce_wood",
         "damage": 9
     },
     "minecraft:stripped_birch_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:stripped_birch_wood",
         "damage": 10
     },
     "minecraft:stripped_jungle_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:stripped_jungle_wood",
         "damage": 11
     },
     "minecraft:stripped_acacia_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:stripped_acacia_wood",
         "damage": 12
     },
     "minecraft:stripped_cherry_wood": {
@@ -640,7 +640,7 @@
         "damage": 0
     },
     "minecraft:stripped_dark_oak_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:stripped_dark_oak_wood",
         "damage": 13
     },
     "minecraft:stripped_mangrove_wood": {
@@ -660,23 +660,23 @@
         "damage": 0
     },
     "minecraft:oak_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:oak_wood",
         "damage": 0
     },
     "minecraft:spruce_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:spruce_wood",
         "damage": 1
     },
     "minecraft:birch_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:birch_wood",
         "damage": 2
     },
     "minecraft:jungle_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:jungle_wood",
         "damage": 3
     },
     "minecraft:acacia_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:acacia_wood",
         "damage": 4
     },
     "minecraft:cherry_wood": {
@@ -684,7 +684,7 @@
         "damage": 0
     },
     "minecraft:dark_oak_wood": {
-        "name": "minecraft:wood",
+        "name": "minecraft:dark_oak_wood",
         "damage": 5
     },
     "minecraft:mangrove_wood": {
@@ -700,23 +700,23 @@
         "damage": 0
     },
     "minecraft:oak_leaves": {
-        "name": "minecraft:leaves",
+        "name": "minecraft:oak_leaves",
         "damage": 0
     },
     "minecraft:spruce_leaves": {
-        "name": "minecraft:leaves",
+        "name": "minecraft:spruce_leaves",
         "damage": 1
     },
     "minecraft:birch_leaves": {
-        "name": "minecraft:leaves",
+        "name": "minecraft:birch_leaves",
         "damage": 2
     },
     "minecraft:jungle_leaves": {
-        "name": "minecraft:leaves",
+        "name": "minecraft:jungle_leaves",
         "damage": 3
     },
     "minecraft:acacia_leaves": {
-        "name": "minecraft:leaves2",
+        "name": "minecraft:acacia_leaves",
         "damage": 0
     },
     "minecraft:cherry_leaves": {
@@ -724,7 +724,7 @@
         "damage": 0
     },
     "minecraft:dark_oak_leaves": {
-        "name": "minecraft:leaves2",
+        "name": "minecraft:dark_oak_leaves",
         "damage": 1
     },
     "minecraft:mangrove_leaves": {
@@ -1004,32 +1004,32 @@
         "damage": 0
     },
     "minecraft:oak_slab": {
-        "name": "minecraft:wooden_slab",
+        "name": "minecraft:oak_slab",
         "damage": 0
     },
     "minecraft:spruce_slab": {
-        "name": "minecraft:wooden_slab",
-        "damage": 1
+        "name": "minecraft:spruce_slab",
+        "damage": 0
     },
     "minecraft:birch_slab": {
-        "name": "minecraft:wooden_slab",
-        "damage": 2
+        "name": "minecraft:birch_slab",
+        "damage": 0
     },
     "minecraft:jungle_slab": {
-        "name": "minecraft:wooden_slab",
-        "damage": 3
+        "name": "minecraft:jungle_slab",
+        "damage": 0
     },
     "minecraft:acacia_slab": {
-        "name": "minecraft:wooden_slab",
-        "damage": 4
+        "name": "minecraft:acacia_slab",
+        "damage": 0
     },
     "minecraft:cherry_slab": {
         "name": "minecraft:cherry_slab",
         "damage": 0
     },
     "minecraft:dark_oak_slab": {
-        "name": "minecraft:wooden_slab",
-        "damage": 5
+        "name": "minecraft:dark_oak_slab",
+        "damage": 0
     },
     "minecraft:mangrove_slab": {
         "name": "minecraft:mangrove_slab",
@@ -3176,7 +3176,7 @@
         "damage": 0
     },
     "minecraft:scute": {
-        "name": "minecraft:scute",
+        "name": "minecraft:turtle_scute",
         "damage": 0
     },
     "minecraft:flint_and_steel": {
@@ -5240,11 +5240,11 @@
         "damage": 0
     },
     "minecraft:trial_spawner": {
-        "name": "minecraft:mob_spawner",
+        "name": "minecraft:trial_spawner",
         "damage": 0
     },
     "minecraft:trial_key": {
-        "name": "minecraft:echo_shard",
+        "name": "minecraft:trial_key",
         "damage": 0
     }
 }

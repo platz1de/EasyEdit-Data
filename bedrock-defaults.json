@@ -20,10 +20,9 @@
         "ground_sign_direction": "0",
         "facing_direction": "2"
     },
-    "minecraft:leaves2": {
+    "minecraft:acacia_leaves": {
         "persistent_bit": "false",
-        "update_bit": "false",
-        "new_leaf_type": "acacia"
+        "update_bit": "false"
     },
     "minecraft:acacia_log": {
         "pillar_axis": "y"
@@ -38,12 +37,10 @@
     "minecraft:acacia_standing_sign": {
         "ground_sign_direction": "0"
     },
-    "minecraft:wooden_slab": {
-        "wood_type": "oak",
+    "minecraft:acacia_slab": {
         "minecraft:vertical_half": "bottom"
     },
-    "minecraft:double_wooden_slab": {
-        "wood_type": "oak",
+    "minecraft:acacia_double_slab": {
         "minecraft:vertical_half": "bottom"
     },
     "minecraft:acacia_stairs": {
@@ -58,10 +55,8 @@
     "minecraft:acacia_wall_sign": {
         "facing_direction": "2"
     },
-    "minecraft:wood": {
-        "pillar_axis": "y",
-        "wood_type": "oak",
-        "stripped_bit": "false"
+    "minecraft:acacia_wood": {
+        "pillar_axis": "y"
     },
     "minecraft:activator_rail": {
         "rail_data_bit": "false",
@@ -228,10 +223,9 @@
         "ground_sign_direction": "0",
         "facing_direction": "2"
     },
-    "minecraft:leaves": {
+    "minecraft:birch_leaves": {
         "persistent_bit": "false",
-        "update_bit": "false",
-        "old_leaf_type": "oak"
+        "update_bit": "false"
     },
     "minecraft:birch_log": {
         "pillar_axis": "y"
@@ -241,6 +235,12 @@
     },
     "minecraft:birch_standing_sign": {
         "ground_sign_direction": "0"
+    },
+    "minecraft:birch_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:birch_double_slab": {
+        "minecraft:vertical_half": "bottom"
     },
     "minecraft:birch_stairs": {
         "weirdo_direction": "3",
@@ -253,6 +253,9 @@
     },
     "minecraft:birch_wall_sign": {
         "facing_direction": "2"
+    },
+    "minecraft:birch_wood": {
+        "pillar_axis": "y"
     },
     "minecraft:standing_banner": {
         "ground_sign_direction": "0"
@@ -660,6 +663,10 @@
         "ground_sign_direction": "0",
         "facing_direction": "2"
     },
+    "minecraft:dark_oak_leaves": {
+        "persistent_bit": "false",
+        "update_bit": "false"
+    },
     "minecraft:dark_oak_log": {
         "pillar_axis": "y"
     },
@@ -668,6 +675,12 @@
     },
     "minecraft:darkoak_standing_sign": {
         "ground_sign_direction": "0"
+    },
+    "minecraft:dark_oak_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:dark_oak_double_slab": {
+        "minecraft:vertical_half": "bottom"
     },
     "minecraft:dark_oak_stairs": {
         "weirdo_direction": "3",
@@ -680,6 +693,9 @@
     },
     "minecraft:darkoak_wall_sign": {
         "facing_direction": "2"
+    },
+    "minecraft:dark_oak_wood": {
+        "pillar_axis": "y"
     },
     "minecraft:prismarine": {
         "prismarine_block_type": "default"
@@ -914,6 +930,10 @@
         "ground_sign_direction": "0",
         "facing_direction": "2"
     },
+    "minecraft:jungle_leaves": {
+        "persistent_bit": "false",
+        "update_bit": "false"
+    },
     "minecraft:jungle_log": {
         "pillar_axis": "y"
     },
@@ -922,6 +942,12 @@
     },
     "minecraft:jungle_standing_sign": {
         "ground_sign_direction": "0"
+    },
+    "minecraft:jungle_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:jungle_double_slab": {
+        "minecraft:vertical_half": "bottom"
     },
     "minecraft:jungle_stairs": {
         "weirdo_direction": "3",
@@ -934,6 +960,9 @@
     },
     "minecraft:jungle_wall_sign": {
         "facing_direction": "2"
+    },
+    "minecraft:jungle_wood": {
+        "pillar_axis": "y"
     },
     "minecraft:kelp": {
         "kelp_age": "0"
@@ -1139,6 +1168,10 @@
         "ground_sign_direction": "0",
         "facing_direction": "2"
     },
+    "minecraft:oak_leaves": {
+        "persistent_bit": "false",
+        "update_bit": "false"
+    },
     "minecraft:oak_log": {
         "pillar_axis": "y"
     },
@@ -1147,6 +1180,12 @@
     },
     "minecraft:standing_sign": {
         "ground_sign_direction": "0"
+    },
+    "minecraft:oak_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:oak_double_slab": {
+        "minecraft:vertical_half": "bottom"
     },
     "minecraft:oak_stairs": {
         "weirdo_direction": "3",
@@ -1159,6 +1198,9 @@
     },
     "minecraft:wall_sign": {
         "facing_direction": "2"
+    },
+    "minecraft:oak_wood": {
+        "pillar_axis": "y"
     },
     "minecraft:observer": {
         "minecraft:facing_direction": "north",
@@ -1517,6 +1559,10 @@
         "ground_sign_direction": "0",
         "facing_direction": "2"
     },
+    "minecraft:spruce_leaves": {
+        "persistent_bit": "false",
+        "update_bit": "false"
+    },
     "minecraft:spruce_log": {
         "pillar_axis": "y"
     },
@@ -1525,6 +1571,12 @@
     },
     "minecraft:spruce_standing_sign": {
         "ground_sign_direction": "0"
+    },
+    "minecraft:spruce_slab": {
+        "minecraft:vertical_half": "bottom"
+    },
+    "minecraft:spruce_double_slab": {
+        "minecraft:vertical_half": "bottom"
     },
     "minecraft:spruce_stairs": {
         "weirdo_direction": "3",
@@ -1537,6 +1589,9 @@
     },
     "minecraft:spruce_wall_sign": {
         "facing_direction": "2"
+    },
+    "minecraft:spruce_wood": {
+        "pillar_axis": "y"
     },
     "minecraft:sticky_piston": {
         "facing_direction": "3"
@@ -1562,10 +1617,16 @@
     "minecraft:stripped_acacia_log": {
         "pillar_axis": "y"
     },
+    "minecraft:stripped_acacia_wood": {
+        "pillar_axis": "y"
+    },
     "minecraft:stripped_bamboo_block": {
         "pillar_axis": "y"
     },
     "minecraft:stripped_birch_log": {
+        "pillar_axis": "y"
+    },
+    "minecraft:stripped_birch_wood": {
         "pillar_axis": "y"
     },
     "minecraft:stripped_cherry_log": {
@@ -1583,7 +1644,13 @@
     "minecraft:stripped_dark_oak_log": {
         "pillar_axis": "y"
     },
+    "minecraft:stripped_dark_oak_wood": {
+        "pillar_axis": "y"
+    },
     "minecraft:stripped_jungle_log": {
+        "pillar_axis": "y"
+    },
+    "minecraft:stripped_jungle_wood": {
         "pillar_axis": "y"
     },
     "minecraft:stripped_mangrove_log": {
@@ -1595,7 +1662,13 @@
     "minecraft:stripped_oak_log": {
         "pillar_axis": "y"
     },
+    "minecraft:stripped_oak_wood": {
+        "pillar_axis": "y"
+    },
     "minecraft:stripped_spruce_log": {
+        "pillar_axis": "y"
+    },
+    "minecraft:stripped_spruce_wood": {
         "pillar_axis": "y"
     },
     "minecraft:stripped_warped_hyphae": {
