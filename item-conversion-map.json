@@ -192,32 +192,32 @@
         "damage": 0
     },
     "minecraft:oak_sapling": {
-        "name": "minecraft:sapling",
+        "name": "minecraft:oak_sapling",
         "damage": 0
     },
     "minecraft:spruce_sapling": {
-        "name": "minecraft:sapling",
-        "damage": 1
+        "name": "minecraft:spruce_sapling",
+        "damage": 0
     },
     "minecraft:birch_sapling": {
-        "name": "minecraft:sapling",
-        "damage": 2
+        "name": "minecraft:birch_sapling",
+        "damage": 0
     },
     "minecraft:jungle_sapling": {
-        "name": "minecraft:sapling",
-        "damage": 3
+        "name": "minecraft:jungle_sapling",
+        "damage": 0
     },
     "minecraft:acacia_sapling": {
-        "name": "minecraft:sapling",
-        "damage": 4
+        "name": "minecraft:acacia_sapling",
+        "damage": 0
     },
     "minecraft:cherry_sapling": {
         "name": "minecraft:cherry_sapling",
         "damage": 0
     },
     "minecraft:dark_oak_sapling": {
-        "name": "minecraft:sapling",
-        "damage": 5
+        "name": "minecraft:dark_oak_sapling",
+        "damage": 0
     },
     "minecraft:mangrove_propagule": {
         "name": "minecraft:mangrove_propagule",
@@ -872,48 +872,48 @@
         "damage": 0
     },
     "minecraft:poppy": {
-        "name": "minecraft:red_flower",
+        "name": "minecraft:poppy",
         "damage": 0
     },
     "minecraft:blue_orchid": {
-        "name": "minecraft:red_flower",
-        "damage": 1
+        "name": "minecraft:blue_orchid",
+        "damage": 0
     },
     "minecraft:allium": {
-        "name": "minecraft:red_flower",
-        "damage": 2
+        "name": "minecraft:allium",
+        "damage": 0
     },
     "minecraft:azure_bluet": {
-        "name": "minecraft:red_flower",
-        "damage": 3
+        "name": "minecraft:azure_bluet",
+        "damage": 0
     },
     "minecraft:red_tulip": {
-        "name": "minecraft:red_flower",
-        "damage": 4
+        "name": "minecraft:red_tulip",
+        "damage": 0
     },
     "minecraft:orange_tulip": {
-        "name": "minecraft:red_flower",
-        "damage": 5
+        "name": "minecraft:orange_tulip",
+        "damage": 0
     },
     "minecraft:white_tulip": {
-        "name": "minecraft:red_flower",
-        "damage": 6
+        "name": "minecraft:white_tulip",
+        "damage": 0
     },
     "minecraft:pink_tulip": {
-        "name": "minecraft:red_flower",
-        "damage": 7
+        "name": "minecraft:pink_tulip",
+        "damage": 0
     },
     "minecraft:oxeye_daisy": {
-        "name": "minecraft:red_flower",
-        "damage": 8
+        "name": "minecraft:oxeye_daisy",
+        "damage": 0
     },
     "minecraft:cornflower": {
-        "name": "minecraft:red_flower",
-        "damage": 9
+        "name": "minecraft:cornflower",
+        "damage": 0
     },
     "minecraft:lily_of_the_valley": {
-        "name": "minecraft:red_flower",
-        "damage": 10
+        "name": "minecraft:lily_of_the_valley",
+        "damage": 0
     },
     "minecraft:wither_rose": {
         "name": "minecraft:wither_rose",
@@ -2432,44 +2432,44 @@
         "damage": 8
     },
     "minecraft:tube_coral_fan": {
-        "name": "minecraft:coral_fan",
+        "name": "minecraft:tube_coral_fan",
         "damage": 0
     },
     "minecraft:brain_coral_fan": {
-        "name": "minecraft:coral_fan",
-        "damage": 1
+        "name": "minecraft:brain_coral_fan",
+        "damage": 0
     },
     "minecraft:bubble_coral_fan": {
-        "name": "minecraft:coral_fan",
-        "damage": 2
+        "name": "minecraft:bubble_coral_fan",
+        "damage": 0
     },
     "minecraft:fire_coral_fan": {
-        "name": "minecraft:coral_fan",
-        "damage": 3
+        "name": "minecraft:fire_coral_fan",
+        "damage": 0
     },
     "minecraft:horn_coral_fan": {
-        "name": "minecraft:coral_fan",
-        "damage": 4
+        "name": "minecraft:horn_coral_fan",
+        "damage": 0
     },
     "minecraft:dead_tube_coral_fan": {
-        "name": "minecraft:coral_fan_dead",
+        "name": "minecraft:dead_tube_coral_fan",
         "damage": 0
     },
     "minecraft:dead_brain_coral_fan": {
-        "name": "minecraft:coral_fan_dead",
-        "damage": 1
+        "name": "minecraft:dead_brain_coral_fan",
+        "damage": 0
     },
     "minecraft:dead_bubble_coral_fan": {
-        "name": "minecraft:coral_fan_dead",
-        "damage": 2
+        "name": "minecraft:dead_bubble_coral_fan",
+        "damage": 0
     },
     "minecraft:dead_fire_coral_fan": {
-        "name": "minecraft:coral_fan_dead",
-        "damage": 3
+        "name": "minecraft:dead_fire_coral_fan",
+        "damage": 0
     },
     "minecraft:dead_horn_coral_fan": {
-        "name": "minecraft:coral_fan_dead",
-        "damage": 4
+        "name": "minecraft:dead_horn_coral_fan",
+        "damage": 0
     },
     "minecraft:blue_ice": {
         "name": "minecraft:blue_ice",

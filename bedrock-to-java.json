@@ -324,11 +324,8 @@
             "powered": "false"
         }
     },
-    "minecraft:sapling": {
-        "additions": [],
-        "removals": [
-            "sapling_type"
-        ],
+    "minecraft:acacia_sapling": {
+        "name": "minecraft:acacia_sapling",
         "renames": {
             "age_bit": "stage"
         },
@@ -336,29 +333,6 @@
             "stage": {
                 "false": 0,
                 "true": 1
-            }
-        },
-        "identifier": [
-            "sapling_type"
-        ],
-        "mapping": {
-            "acacia": {
-                "name": "minecraft:acacia_sapling"
-            },
-            "birch": {
-                "name": "minecraft:birch_sapling"
-            },
-            "dark_oak": {
-                "name": "minecraft:dark_oak_sapling"
-            },
-            "jungle": {
-                "name": "minecraft:jungle_sapling"
-            },
-            "oak": {
-                "name": "minecraft:oak_sapling"
-            },
-            "spruce": {
-                "name": "minecraft:spruce_sapling"
             }
         },
         "defaults": {
@@ -537,51 +511,7 @@
         }
     },
     "minecraft:air": [],
-    "minecraft:red_flower": {
-        "additions": [],
-        "removals": [
-            "flower_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "flower_type"
-        ],
-        "mapping": {
-            "allium": {
-                "name": "minecraft:allium"
-            },
-            "houstonia": {
-                "name": "minecraft:azure_bluet"
-            },
-            "orchid": {
-                "name": "minecraft:blue_orchid"
-            },
-            "cornflower": {
-                "name": "minecraft:cornflower"
-            },
-            "lily_of_the_valley": {
-                "name": "minecraft:lily_of_the_valley"
-            },
-            "tulip_orange": {
-                "name": "minecraft:orange_tulip"
-            },
-            "oxeye": {
-                "name": "minecraft:oxeye_daisy"
-            },
-            "tulip_pink": {
-                "name": "minecraft:pink_tulip"
-            },
-            "poppy": {
-                "name": "minecraft:poppy"
-            },
-            "tulip_red": {
-                "name": "minecraft:red_tulip"
-            },
-            "tulip_white": {
-                "name": "minecraft:white_tulip"
-            }
-        }
-    },
+    "minecraft:allium": [],
     "minecraft:amethyst_block": [],
     "minecraft:amethyst_cluster": {
         "name": "minecraft:amethyst_cluster",
@@ -1027,6 +957,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:azure_bluet": [],
     "minecraft:bamboo": {
         "name": "minecraft:bamboo",
         "renames": {
@@ -1438,7 +1369,6 @@
     "minecraft:bamboo_sapling": {
         "name": "minecraft:bamboo_sapling",
         "removals": [
-            "sapling_type",
             "age_bit"
         ]
     },
@@ -2072,6 +2002,21 @@
         },
         "defaults": {
             "powered": "false"
+        }
+    },
+    "minecraft:birch_sapling": {
+        "name": "minecraft:birch_sapling",
+        "renames": {
+            "age_bit": "stage"
+        },
+        "remaps": {
+            "stage": {
+                "false": 0,
+                "true": 1
+            }
+        },
+        "defaults": {
+            "stage": "0"
         }
     },
     "minecraft:birch_standing_sign": {
@@ -2710,6 +2655,7 @@
         }
     },
     "minecraft:blue_ice": [],
+    "minecraft:blue_orchid": [],
     "minecraft:blue_shulker_box": {
         "name": "minecraft:blue_shulker_box",
         "additions": [],
@@ -2816,35 +2762,14 @@
             }
         }
     },
-    "minecraft:coral_fan": {
+    "minecraft:brain_coral_fan": {
+        "name": "minecraft:brain_coral_fan",
         "additions": {
             "waterlogged": "false"
         },
         "removals": [
-            "coral_color",
             "coral_fan_direction"
         ],
-        "remaps": [],
-        "identifier": [
-            "coral_color"
-        ],
-        "mapping": {
-            "pink": {
-                "name": "minecraft:brain_coral_fan"
-            },
-            "purple": {
-                "name": "minecraft:bubble_coral_fan"
-            },
-            "red": {
-                "name": "minecraft:fire_coral_fan"
-            },
-            "yellow": {
-                "name": "minecraft:horn_coral_fan"
-            },
-            "blue": {
-                "name": "minecraft:tube_coral_fan"
-            }
-        },
         "defaults": {
             "waterlogged": "false"
         }
@@ -3346,6 +3271,18 @@
         "additions": {
             "waterlogged": "false"
         },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:bubble_coral_fan": {
+        "name": "minecraft:bubble_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
         "defaults": {
             "waterlogged": "false"
         }
@@ -5143,6 +5080,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:cornflower": [],
     "minecraft:cracked_deepslate_bricks": [],
     "minecraft:cracked_deepslate_tiles": [],
     "minecraft:cracked_nether_bricks": [],
@@ -6443,6 +6381,21 @@
             "powered": "false"
         }
     },
+    "minecraft:dark_oak_sapling": {
+        "name": "minecraft:dark_oak_sapling",
+        "renames": {
+            "age_bit": "stage"
+        },
+        "remaps": {
+            "stage": {
+                "false": 0,
+                "true": 1
+            }
+        },
+        "defaults": {
+            "stage": "0"
+        }
+    },
     "minecraft:darkoak_standing_sign": {
         "name": "minecraft:dark_oak_sign",
         "additions": {
@@ -6866,35 +6819,14 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:coral_fan_dead": {
+    "minecraft:dead_brain_coral_fan": {
+        "name": "minecraft:dead_brain_coral_fan",
         "additions": {
             "waterlogged": "false"
         },
         "removals": [
-            "coral_color",
             "coral_fan_direction"
         ],
-        "remaps": [],
-        "identifier": [
-            "coral_color"
-        ],
-        "mapping": {
-            "pink": {
-                "name": "minecraft:dead_brain_coral_fan"
-            },
-            "purple": {
-                "name": "minecraft:dead_bubble_coral_fan"
-            },
-            "red": {
-                "name": "minecraft:dead_fire_coral_fan"
-            },
-            "yellow": {
-                "name": "minecraft:dead_horn_coral_fan"
-            },
-            "blue": {
-                "name": "minecraft:dead_tube_coral_fan"
-            }
-        },
         "defaults": {
             "waterlogged": "false"
         }
@@ -6904,6 +6836,18 @@
         "additions": {
             "waterlogged": "false"
         },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dead_bubble_coral_fan": {
+        "name": "minecraft:dead_bubble_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
         "defaults": {
             "waterlogged": "false"
         }
@@ -6920,11 +6864,35 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_fire_coral_fan": {
+        "name": "minecraft:dead_fire_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:dead_horn_coral": {
         "name": "minecraft:dead_horn_coral",
         "additions": {
             "waterlogged": "false"
         },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dead_horn_coral_fan": {
+        "name": "minecraft:dead_horn_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
         "defaults": {
             "waterlogged": "false"
         }
@@ -6972,6 +6940,18 @@
         "additions": {
             "waterlogged": "false"
         },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dead_tube_coral_fan": {
+        "name": "minecraft:dead_tube_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
         "defaults": {
             "waterlogged": "false"
         }
@@ -7665,6 +7645,18 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:fire_coral_fan": {
+        "name": "minecraft:fire_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:fletching_table": [],
     "minecraft:flower_pot": {
         "additions": [],
@@ -7680,25 +7672,25 @@
             "none": {
                 "name": "minecraft:flower_pot"
             },
-            "minecraft:sapling[age_bit=false,sapling_type=acacia]": {
+            "minecraft:acacia_sapling[age_bit=false]": {
                 "name": "minecraft:potted_acacia_sapling"
             },
-            "minecraft:red_flower[flower_type=allium]": {
+            "minecraft:allium": {
                 "name": "minecraft:potted_allium"
             },
             "minecraft:azalea": {
                 "name": "minecraft:potted_azalea_bush"
             },
-            "minecraft:red_flower[flower_type=houstonia]": {
+            "minecraft:azure_bluet": {
                 "name": "minecraft:potted_azure_bluet"
             },
             "minecraft:bamboo[age_bit=false,bamboo_leaf_size=no_leaves,bamboo_stalk_thickness=thin]": {
                 "name": "minecraft:potted_bamboo"
             },
-            "minecraft:sapling[age_bit=false,sapling_type=birch]": {
+            "minecraft:birch_sapling[age_bit=false]": {
                 "name": "minecraft:potted_birch_sapling"
             },
-            "minecraft:red_flower[flower_type=orchid]": {
+            "minecraft:blue_orchid": {
                 "name": "minecraft:potted_blue_orchid"
             },
             "minecraft:brown_mushroom": {
@@ -7710,7 +7702,7 @@
             "minecraft:cherry_sapling[age_bit=false]": {
                 "name": "minecraft:potted_cherry_sapling"
             },
-            "minecraft:red_flower[flower_type=cornflower]": {
+            "minecraft:cornflower": {
                 "name": "minecraft:potted_cornflower"
             },
             "minecraft:crimson_fungus": {
@@ -7722,7 +7714,7 @@
             "minecraft:yellow_flower": {
                 "name": "minecraft:potted_dandelion"
             },
-            "minecraft:sapling[age_bit=false,sapling_type=dark_oak]": {
+            "minecraft:dark_oak_sapling[age_bit=false]": {
                 "name": "minecraft:potted_dark_oak_sapling"
             },
             "minecraft:deadbush": {
@@ -7734,37 +7726,37 @@
             "minecraft:flowering_azalea": {
                 "name": "minecraft:potted_flowering_azalea_bush"
             },
-            "minecraft:sapling[age_bit=false,sapling_type=jungle]": {
+            "minecraft:jungle_sapling[age_bit=false]": {
                 "name": "minecraft:potted_jungle_sapling"
             },
-            "minecraft:red_flower[flower_type=lily_of_the_valley]": {
+            "minecraft:lily_of_the_valley": {
                 "name": "minecraft:potted_lily_of_the_valley"
             },
             "minecraft:mangrove_propagule[hanging=false,propagule_stage=0]": {
                 "name": "minecraft:potted_mangrove_propagule"
             },
-            "minecraft:sapling[age_bit=false,sapling_type=oak]": {
+            "minecraft:oak_sapling[age_bit=false]": {
                 "name": "minecraft:potted_oak_sapling"
             },
-            "minecraft:red_flower[flower_type=tulip_orange]": {
+            "minecraft:orange_tulip": {
                 "name": "minecraft:potted_orange_tulip"
             },
-            "minecraft:red_flower[flower_type=oxeye]": {
+            "minecraft:oxeye_daisy": {
                 "name": "minecraft:potted_oxeye_daisy"
             },
-            "minecraft:red_flower[flower_type=tulip_pink]": {
+            "minecraft:pink_tulip": {
                 "name": "minecraft:potted_pink_tulip"
             },
-            "minecraft:red_flower[flower_type=poppy]": {
+            "minecraft:poppy": {
                 "name": "minecraft:potted_poppy"
             },
             "minecraft:red_mushroom": {
                 "name": "minecraft:potted_red_mushroom"
             },
-            "minecraft:red_flower[flower_type=tulip_red]": {
+            "minecraft:red_tulip": {
                 "name": "minecraft:potted_red_tulip"
             },
-            "minecraft:sapling[age_bit=false,sapling_type=spruce]": {
+            "minecraft:spruce_sapling[age_bit=false]": {
                 "name": "minecraft:potted_spruce_sapling"
             },
             "minecraft:torchflower": {
@@ -7776,7 +7768,7 @@
             "minecraft:warped_roots": {
                 "name": "minecraft:potted_warped_roots"
             },
-            "minecraft:red_flower[flower_type=tulip_white]": {
+            "minecraft:white_tulip": {
                 "name": "minecraft:potted_white_tulip"
             },
             "minecraft:wither_rose": {
@@ -8644,6 +8636,18 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:horn_coral_fan": {
+        "name": "minecraft:horn_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:ice": [],
     "minecraft:monster_egg": {
         "additions": [],
@@ -9110,6 +9114,21 @@
         },
         "defaults": {
             "powered": "false"
+        }
+    },
+    "minecraft:jungle_sapling": {
+        "name": "minecraft:jungle_sapling",
+        "renames": {
+            "age_bit": "stage"
+        },
+        "remaps": {
+            "stage": {
+                "false": 0,
+                "true": 1
+            }
+        },
+        "defaults": {
+            "stage": "0"
         }
     },
     "minecraft:jungle_standing_sign": {
@@ -9658,6 +9677,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:lily_of_the_valley": [],
     "minecraft:waterlily": {
         "name": "minecraft:lily_pad"
     },
@@ -10966,6 +10986,21 @@
             "powered": "false"
         }
     },
+    "minecraft:oak_sapling": {
+        "name": "minecraft:oak_sapling",
+        "renames": {
+            "age_bit": "stage"
+        },
+        "remaps": {
+            "stage": {
+                "false": 0,
+                "true": 1
+            }
+        },
+        "defaults": {
+            "stage": "0"
+        }
+    },
     "minecraft:standing_sign": {
         "name": "minecraft:oak_sign",
         "additions": {
@@ -11206,7 +11241,9 @@
         }
     },
     "minecraft:orange_terracotta": [],
+    "minecraft:orange_tulip": [],
     "minecraft:orange_wool": [],
+    "minecraft:oxeye_daisy": [],
     "minecraft:oxidized_chiseled_copper": [],
     "minecraft:oxidized_copper": [],
     "minecraft:oxidized_copper_bulb": {
@@ -11470,6 +11507,7 @@
         }
     },
     "minecraft:pink_terracotta": [],
+    "minecraft:pink_tulip": [],
     "minecraft:pink_wool": [],
     "minecraft:piston": {
         "name": "minecraft:piston",
@@ -12256,6 +12294,7 @@
             "west": "false"
         }
     },
+    "minecraft:poppy": [],
     "minecraft:potatoes": {
         "name": "minecraft:potatoes",
         "renames": {
@@ -12823,6 +12862,7 @@
         }
     },
     "minecraft:red_terracotta": [],
+    "minecraft:red_tulip": [],
     "minecraft:red_wool": [],
     "minecraft:redstone_block": [],
     "minecraft:redstone_lamp": {
@@ -14324,6 +14364,21 @@
             "powered": "false"
         }
     },
+    "minecraft:spruce_sapling": {
+        "name": "minecraft:spruce_sapling",
+        "renames": {
+            "age_bit": "stage"
+        },
+        "remaps": {
+            "stage": {
+                "false": 0,
+                "true": 1
+            }
+        },
+        "defaults": {
+            "stage": "0"
+        }
+    },
     "minecraft:spruce_standing_sign": {
         "name": "minecraft:spruce_sign",
         "additions": {
@@ -15018,6 +15073,18 @@
         "additions": {
             "waterlogged": "false"
         },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:tube_coral_fan": {
+        "name": "minecraft:tube_coral_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "coral_fan_direction"
+        ],
         "defaults": {
             "waterlogged": "false"
         }
@@ -16796,6 +16863,7 @@
         }
     },
     "minecraft:white_terracotta": [],
+    "minecraft:white_tulip": [],
     "minecraft:white_wool": [],
     "minecraft:wither_rose": [],
     "minecraft:yellow_candle": {

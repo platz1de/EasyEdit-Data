@@ -30,9 +30,8 @@
     "minecraft:acacia_pressure_plate": {
         "redstone_signal": "0"
     },
-    "minecraft:sapling": {
-        "age_bit": "false",
-        "sapling_type": "oak"
+    "minecraft:acacia_sapling": {
+        "age_bit": "false"
     },
     "minecraft:acacia_standing_sign": {
         "ground_sign_direction": "0"
@@ -61,9 +60,6 @@
     "minecraft:activator_rail": {
         "rail_data_bit": "false",
         "rail_direction": "0"
-    },
-    "minecraft:red_flower": {
-        "flower_type": "poppy"
     },
     "minecraft:amethyst_cluster": {
         "minecraft:block_face": "north"
@@ -147,7 +143,6 @@
         "redstone_signal": "0"
     },
     "minecraft:bamboo_sapling": {
-        "sapling_type": "oak",
         "age_bit": "false"
     },
     "minecraft:bamboo_standing_sign": {
@@ -232,6 +227,9 @@
     },
     "minecraft:birch_pressure_plate": {
         "redstone_signal": "0"
+    },
+    "minecraft:birch_sapling": {
+        "age_bit": "false"
     },
     "minecraft:birch_standing_sign": {
         "ground_sign_direction": "0"
@@ -319,8 +317,7 @@
         "coral_color": "blue",
         "dead_bit": "false"
     },
-    "minecraft:coral_fan": {
-        "coral_color": "blue",
+    "minecraft:brain_coral_fan": {
         "coral_fan_direction": "0"
     },
     "minecraft:coral_fan_hang": {
@@ -360,6 +357,9 @@
     },
     "minecraft:bubble_column": {
         "drag_down": "true"
+    },
+    "minecraft:bubble_coral_fan": {
+        "coral_fan_direction": "0"
     },
     "minecraft:coral_fan_hang2": {
         "coral_direction": "2",
@@ -673,6 +673,9 @@
     "minecraft:dark_oak_pressure_plate": {
         "redstone_signal": "0"
     },
+    "minecraft:dark_oak_sapling": {
+        "age_bit": "false"
+    },
     "minecraft:darkoak_standing_sign": {
         "ground_sign_direction": "0"
     },
@@ -718,14 +721,25 @@
     "minecraft:daylight_detector_inverted": {
         "redstone_signal": "0"
     },
-    "minecraft:coral_fan_dead": {
-        "coral_color": "blue",
+    "minecraft:dead_brain_coral_fan": {
+        "coral_fan_direction": "0"
+    },
+    "minecraft:dead_bubble_coral_fan": {
+        "coral_fan_direction": "0"
+    },
+    "minecraft:dead_fire_coral_fan": {
+        "coral_fan_direction": "0"
+    },
+    "minecraft:dead_horn_coral_fan": {
         "coral_fan_direction": "0"
     },
     "minecraft:coral_fan_hang3": {
         "coral_direction": "2",
         "coral_hang_type_bit": "false",
         "dead_bit": "false"
+    },
+    "minecraft:dead_tube_coral_fan": {
+        "coral_fan_direction": "0"
     },
     "minecraft:decorated_pot": {
         "direction": "0"
@@ -831,6 +845,9 @@
     "minecraft:fire": {
         "age": "0"
     },
+    "minecraft:fire_coral_fan": {
+        "coral_fan_direction": "0"
+    },
     "minecraft:flower_pot": {
         "update_bit": "false"
     },
@@ -889,6 +906,9 @@
         "toggle_bit": "true",
         "facing_direction": "2"
     },
+    "minecraft:horn_coral_fan": {
+        "coral_fan_direction": "0"
+    },
     "minecraft:monster_egg": {
         "monster_egg_stone_type": "stone"
     },
@@ -939,6 +959,9 @@
     },
     "minecraft:jungle_pressure_plate": {
         "redstone_signal": "0"
+    },
+    "minecraft:jungle_sapling": {
+        "age_bit": "false"
     },
     "minecraft:jungle_standing_sign": {
         "ground_sign_direction": "0"
@@ -1177,6 +1200,9 @@
     },
     "minecraft:wooden_pressure_plate": {
         "redstone_signal": "0"
+    },
+    "minecraft:oak_sapling": {
+        "age_bit": "false"
     },
     "minecraft:standing_sign": {
         "ground_sign_direction": "0"
@@ -1569,6 +1595,9 @@
     "minecraft:spruce_pressure_plate": {
         "redstone_signal": "0"
     },
+    "minecraft:spruce_sapling": {
+        "age_bit": "false"
+    },
     "minecraft:spruce_standing_sign": {
         "ground_sign_direction": "0"
     },
@@ -1720,6 +1749,9 @@
         "attached_bit": "false",
         "direction": "2",
         "powered_bit": "false"
+    },
+    "minecraft:tube_coral_fan": {
+        "coral_fan_direction": "0"
     },
     "minecraft:tuff_brick_slab": {
         "minecraft:vertical_half": "bottom"
