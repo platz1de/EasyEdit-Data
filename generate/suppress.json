@@ -1,6 +1,6 @@
 {
   "source": [
 	"/minecraft:jigsaw/",
-    "/minecraft:trial_spawner/"
+    "/minecraft:test_block/"
   ]
 }

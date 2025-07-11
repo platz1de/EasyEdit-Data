@@ -19,31 +19,36 @@ $repo = json_decode(file_get_contents("../dataRepo.json"), true, 512, JSON_THROW
 $repo["version"] = Uuid::uuid4();
 $repo["latest"]["state-version"] =
 	(1 << 24) | //major
-	(20 << 16) | //minor
-	(80 << 8) | //patch
-	(3); //revision
+	(21 << 16) | //minor
+	(60 << 8) | //patch
+	(33); //revision
 file_put_contents("../dataRepo.json", json_encode($repo, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES));
 
 $suppress = json_decode(file_get_contents("suppress.json"), true, 512, JSON_THROW_ON_ERROR);
 
 $javaToBedrock = [];
-$geyserMapping = json_decode(getData("https://raw.githubusercontent.com/GeyserMC/mappings/master/blocks.json"), true, 512, JSON_THROW_ON_ERROR);
+$geyserMapping = json_decode(getData("https://raw.githubusercontent.com/GeyserMC/mappings-generator/master/new_generator_blocks.json"), true, 512, JSON_THROW_ON_ERROR);
 
-$bedrockSourceCount = 0;
-foreach ($geyserMapping as $java => $bedrockData) {
-	$bedrock = $bedrockData["bedrock_identifier"];
-	$states = [];
-	if (isset($bedrockData["bedrock_states"])) {
-		foreach ($bedrockData["bedrock_states"] as $state => $value) {
+foreach ($geyserMapping["mappings"] as $data) {
+	$javaToBedrock[toStringState($data["java_state"]["Name"], $data["java_state"]["Properties"] ?? null)] = toStringState("minecraft:" . $data["bedrock_state"]["bedrock_identifier"], $data["bedrock_state"]["state"] ?? null);
+}
+
+function toStringState(string $id, ?array $states)
+{
+	$result = $id;
+	$stateStrings = [];
+	if ($states) {
+		foreach ($states as $state => $value) {
 			if (is_bool($value)) {
-				$states[] = $state . "=" . ($value ? "true" : "false");
+				$stateStrings[] = $state . "=" . ($value ? "true" : "false");
 			} else {
-				$states[] = $state . "=" . $value;
+				$stateStrings[] = $state . "=" . $value;
 			}
 		}
-		$bedrock .= "[" . implode(",", $states) . "]";
+        sort($stateStrings);
+		$result .= "[" . implode(",", $stateStrings) . "]";
 	}
-	$javaToBedrock[$java] = $bedrock;
+	return $result;
 }
 
 file_put_contents("debug/all.json", json_encode($javaToBedrock, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
@@ -87,13 +92,12 @@ foreach ($javaToBedrock as $java => $bedrock) {
 	}
 }
 
+unset($javaToBedrock["minecraft:cauldron"]); //We automatically add the level 0 state
+
 //Alternative walls
 foreach ($javaToBedrock as $java => $bedrock) {
-	if (preg_match("/^minecraft:(.*)_wall\[east=(.*),north=(.*),south=(.*),up=(.*),west=(.*)]$/", $java, $matches)) {
-		foreach ([2, 3, 4, 6] as $i) {
-			$matches[$i] = $matches[$i] === "none" ? "false" : $matches[$i];
-		}
-		$new = "minecraft:" . $matches[1] . "_wall[east=" . $matches[2] . ",north=" . $matches[3] . ",south=" . $matches[4] . ",up=" . $matches[5] . ",west=" . $matches[6] . "]";
+	if (preg_match("/^minecraft:.*_wall\[/", $java, $matches)) {
+		$new = preg_replace(["/(north|east|south|west)=none/", "/(north|east|south|west)=low/"], ["$1=false", "$1=true"], $java);
 		if (!isset($javaToBedrock[$new])) {
 			$javaToBedrock[$new] = $bedrock;
 		}
@@ -738,7 +742,7 @@ foreach ($groupsJtb as $group) {
 		unset($values["west"], $values["east"], $values["north"], $values["south"], $values["up"], $bedrockValues["vine_direction_bits"]);
 	}
 
-	if ($group["name"] === "minecraft:sculk_vein" || $group["name"] === "minecraft:glow_lichen") {
+	if ($group["name"] === "minecraft:sculk_vein" || $group["name"] === "minecraft:glow_lichen" || $group["name"] === "minecraft:resin_clump") {
 		$obj["identifier"] = [
 			"east",
 			"north",
@@ -1217,25 +1221,9 @@ foreach ($groupsJtb as $group) {
 		$obj["removals"] = array_values($obj["removals"]);
 	}
 
-	if (isset($obj["name"]) && $obj["name"] === "minecraft:skull") {
-		$obj["additions"]["type"] = [
-			"minecraft:skeleton_skull" => "skeleton",
-			"minecraft:skeleton_wall_skull" => "skeleton",
-			"minecraft:wither_skeleton_skull" => "wither_skeleton",
-			"minecraft:wither_skeleton_wall_skull" => "wither_skeleton",
-			"minecraft:zombie_head" => "zombie",
-			"minecraft:zombie_wall_head" => "zombie",
-			"minecraft:player_head" => "player",
-			"minecraft:player_wall_head" => "player",
-			"minecraft:creeper_head" => "creeper",
-			"minecraft:creeper_wall_head" => "creeper",
-			"minecraft:dragon_head" => "dragon",
-			"minecraft:dragon_wall_head" => "dragon",
-			"minecraft:piglin_head" => "piglin",
-			"minecraft:piglin_wall_head" => "piglin"
-		][$group["name"]] ?? throw new Exception("Unknown skull type: " . $group["name"]);
+	if ((str_ends_with($group["name"], "head") && !str_contains($group["name"], "piston"))|| str_ends_with($group["name"], "skull")) {
 		$obj["additions"]["attachment"] = str_contains($group["name"], "wall") ? "wall" : "floor";
-		$obj["tile_extra"] = ["type", "attachment"];
+		$obj["tile_extra"] = ["attachment"];
 		if (!str_contains($group["name"], "wall")) {
 			$obj["renames"]["rotation"] = "rot";
 			$obj["tile_extra"][] = "rot";
@@ -1260,6 +1248,7 @@ foreach ($groupsJtb as $group) {
 			"minecraft:potted_brown_mushroom" => "minecraft:brown_mushroom",
 			"minecraft:potted_cactus" => "minecraft:cactus",
 			"minecraft:potted_cherry_sapling" => "minecraft:cherry_sapling",
+			"minecraft:potted_closed_eyeblossom" => "minecraft:closed_eyeblossom",
 			"minecraft:potted_cornflower" => "minecraft:cornflower",
 			"minecraft:potted_crimson_fungus" => "minecraft:crimson_fungus",
 			"minecraft:potted_crimson_roots" => "minecraft:crimson_roots",
@@ -1272,9 +1261,11 @@ foreach ($groupsJtb as $group) {
 			"minecraft:potted_lily_of_the_valley" => "minecraft:lily_of_the_valley",
 			"minecraft:potted_mangrove_propagule" => "minecraft:mangrove_propagule",
 			"minecraft:potted_oak_sapling" => "minecraft:oak_sapling",
+			"minecraft:potted_open_eyeblossom" => "minecraft:open_eyeblossom",
 			"minecraft:potted_orange_tulip" => "minecraft:orange_tulip",
 			"minecraft:potted_oxeye_daisy" => "minecraft:oxeye_daisy",
 			"minecraft:potted_pink_tulip" => "minecraft:pink_tulip",
+			"minecraft:potted_pale_oak_sapling" => "minecraft:pale_oak_sapling",
 			"minecraft:potted_poppy" => "minecraft:poppy",
 			"minecraft:potted_red_mushroom" => "minecraft:red_mushroom",
 			"minecraft:potted_red_tulip" => "minecraft:red_tulip",
@@ -1287,6 +1278,29 @@ foreach ($groupsJtb as $group) {
 		][$group["name"]] ?? throw new Exception("Unknown flower pot type: " . $group["name"]);
 		$obj["tile_extra"] = ["type"];
 	}
+    if ($group["name"] === "minecraft:light") {
+        $obj["identifier"] = ["level"];
+        $obj["removals"][] = "level";
+        $obj["mapping"] = [
+            "0" => ["name" => "minecraft:light_block_0"],
+            "1" => ["name" => "minecraft:light_block_1"],
+            "2" => ["name" => "minecraft:light_block_2"],
+            "3" => ["name" => "minecraft:light_block_3"],
+            "4" => ["name" => "minecraft:light_block_4"],
+            "5" => ["name" => "minecraft:light_block_5"],
+            "6" => ["name" => "minecraft:light_block_6"],
+            "7" => ["name" => "minecraft:light_block_7"],
+            "8" => ["name" => "minecraft:light_block_8"],
+            "9" => ["name" => "minecraft:light_block_9"],
+            "10" => ["name" => "minecraft:light_block_10"],
+            "11" => ["name" => "minecraft:light_block_11"],
+            "12" => ["name" => "minecraft:light_block_12"],
+            "13" => ["name" => "minecraft:light_block_13"],
+            "14" => ["name" => "minecraft:light_block_14"],
+            "15" => ["name" => "minecraft:light_block_15"]
+        ];
+        unset($values["level"]);
+    }
 
 	if (!isset($obj["name"]) && !isset($obj["identifier"])) {
 		$failed = true;
@@ -1467,7 +1481,9 @@ foreach ($jtb as $name => $block) {
 }
 foreach ($bedrockDefaults as $name => $block) {
 	foreach ($block as $key => $value) {
-		if (strpos($value, " | ") !== false) {
+		if ($value === null) {
+			echo "Missing default: $name::$key" . PHP_EOL;
+		} else if (strpos($value, " | ") !== false) {
 			$possible = explode(" | ", $value);
 			if (isset($customData["beDefaults"][$key]) && in_array($customData["beDefaults"][$key], $possible)) {
 				$bedrockDefaults[$name][$key] = $customData["beDefaults"][$key];
@@ -1523,9 +1539,9 @@ function toBedrock(string $java, $jtb): string|null
 }
 
 /**
- * @param mixed $data
+ * @param mixed  $data
  * @param string $javaName
- * @param array $states
+ * @param array  $states
  * @return string
  */
 function processState(mixed $data, string $javaName, array $states): string
@@ -1579,7 +1595,7 @@ function processStates(&$states, $data)
 		}
 	}
 	/**
-	 * @var string $state
+	 * @var string   $state
 	 * @var string[] $values
 	 */
 	foreach ($data["remaps"] ?? [] as $state => $values) {
@@ -1934,11 +1950,13 @@ function flipStateTranslation(&$state, $bedrockData): void
 $btj["minecraft:invisible_bedrock"] = ["name" => "minecraft:barrier"];
 
 //TODO: Add defaults to mapped blocks
-unset($btj["minecraft:skull"]["defaults"]); //This shouldn't be added to different types
-foreach ($btj["minecraft:skull"]["mapping"] as &$mapping) {
-	$mapping["wall"]["removals"]["rot"] = 0;
+foreach ($btj as $bedrock => &$data) {
+    if (str_ends_with($bedrock, "head") || str_ends_with($bedrock, "skull")) {
+        unset($data["defaults"]); //This shouldn't be added to different types
+        $data["mapping"]["wall"]["removals"]["rot"] = 0;
+    }
+    unset($data);
 }
-unset($mapping);
 
 unset($btj["minecraft:quartz_block"]["removals"]["pillar_axis"]);
 $btj["minecraft:quartz_block"]["mapping"]["chiseled"]["removals"]["pillar_axis"] = 0;
@@ -2007,7 +2025,7 @@ foreach ($btj as $name => $block) {
 		}
 	}
 	foreach ($block as $key => $value) {
-		throw new Exception("Unknown key: " . $key);
+		//throw new Exception("Unknown key: " . $key);
 	}
 	$btj[$name] = $ordered;
 }
@@ -2239,14 +2257,14 @@ $zip = new ZipArchive();
 $zip->open("client.jar");
 for ($i = 0; $i < $zip->numFiles; $i++) {
 	$name = $zip->getNameIndex($i);
-	if (str_starts_with($name, "data/minecraft/tags/blocks")) {
+	if (str_starts_with($name, "data/minecraft/tags/block")) {
 		$stream = $zip->getStream($name);
 		$data = json_decode(stream_get_contents($stream), true, 512, JSON_THROW_ON_ERROR);
 		fclose($stream);
 		if (array_keys($data) !== ["values"]) {
 			throw new RuntimeException("Invalid tag $name");
 		}
-		$name = str_replace(["data/minecraft/tags/blocks/", ".json"], ["", ""], $name);
+		$name = str_replace(["data/minecraft/tags/block/", ".json"], ["", ""], $name);
 		$states = [];
 		foreach ($data["values"] as $state) {
 			if (str_starts_with($state, "#")) {

@@ -63,17 +63,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -115,17 +115,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -528,129 +520,27 @@
     },
     "minecraft:ancient_debris": [],
     "minecraft:andesite": [],
-    "minecraft:stone_block_slab3": {
+    "minecraft:andesite_slab": {
         "name": "minecraft:andesite_slab",
         "additions": {
             "waterlogged": "false"
         },
         "removals": [
-            "stone_slab_type_3",
             "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "stone_slab_type_3",
             "minecraft:vertical_half"
         ],
         "mapping": {
-            "andesite": {
-                "bottom": {
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "additions": {
-                        "type": "top"
-                    }
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
                 }
             },
-            "diorite": {
-                "bottom": {
-                    "name": "minecraft:diorite_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:diorite_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "end_stone_brick": {
-                "bottom": {
-                    "name": "minecraft:end_stone_brick_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:end_stone_brick_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "granite": {
-                "bottom": {
-                    "name": "minecraft:granite_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:granite_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "polished_andesite": {
-                "bottom": {
-                    "name": "minecraft:polished_andesite_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:polished_andesite_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "polished_diorite": {
-                "bottom": {
-                    "name": "minecraft:polished_diorite_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:polished_diorite_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "polished_granite": {
-                "bottom": {
-                    "name": "minecraft:polished_granite_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:polished_granite_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "smooth_red_sandstone": {
-                "bottom": {
-                    "name": "minecraft:smooth_red_sandstone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:smooth_red_sandstone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
+            "top": {
+                "additions": {
+                    "type": "top"
                 }
             }
         },
@@ -659,62 +549,15 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:double_stone_block_slab3": {
+    "minecraft:andesite_double_slab": {
+        "name": "minecraft:andesite_slab",
         "additions": {
             "waterlogged": "false",
             "type": "double"
         },
         "removals": [
-            "stone_slab_type_3",
             "minecraft:vertical_half"
         ],
-        "remaps": [],
-        "identifier": [
-            "stone_slab_type_3",
-            "minecraft:vertical_half"
-        ],
-        "mapping": {
-            "andesite": {
-                "bottom": {
-                    "name": "minecraft:andesite_slab"
-                }
-            },
-            "diorite": {
-                "bottom": {
-                    "name": "minecraft:diorite_slab"
-                }
-            },
-            "end_stone_brick": {
-                "bottom": {
-                    "name": "minecraft:end_stone_brick_slab"
-                }
-            },
-            "granite": {
-                "bottom": {
-                    "name": "minecraft:granite_slab"
-                }
-            },
-            "polished_andesite": {
-                "bottom": {
-                    "name": "minecraft:polished_andesite_slab"
-                }
-            },
-            "polished_diorite": {
-                "bottom": {
-                    "name": "minecraft:polished_diorite_slab"
-                }
-            },
-            "polished_granite": {
-                "bottom": {
-                    "name": "minecraft:polished_granite_slab"
-                }
-            },
-            "smooth_red_sandstone": {
-                "bottom": {
-                    "name": "minecraft:smooth_red_sandstone_slab"
-                }
-            }
-        },
         "defaults": {
             "type": "bottom",
             "waterlogged": "false"
@@ -749,13 +592,11 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:cobblestone_wall": {
+    "minecraft:andesite_wall": {
+        "name": "minecraft:andesite_wall",
         "additions": {
             "waterlogged": "false"
         },
-        "removals": [
-            "wall_block_type"
-        ],
         "renames": {
             "wall_connection_type_east": "east",
             "wall_connection_type_north": "north",
@@ -766,68 +607,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
-            }
-        },
-        "identifier": [
-            "wall_block_type"
-        ],
-        "mapping": {
-            "andesite": {
-                "name": "minecraft:andesite_wall"
-            },
-            "brick": {
-                "name": "minecraft:brick_wall"
-            },
-            "cobblestone": [],
-            "diorite": {
-                "name": "minecraft:diorite_wall"
-            },
-            "end_brick": {
-                "name": "minecraft:end_stone_brick_wall"
-            },
-            "granite": {
-                "name": "minecraft:granite_wall"
-            },
-            "mossy_cobblestone": {
-                "name": "minecraft:mossy_cobblestone_wall"
-            },
-            "mossy_stone_brick": {
-                "name": "minecraft:mossy_stone_brick_wall"
-            },
-            "nether_brick": {
-                "name": "minecraft:nether_brick_wall"
-            },
-            "prismarine": {
-                "name": "minecraft:prismarine_wall"
-            },
-            "red_nether_brick": {
-                "name": "minecraft:red_nether_brick_wall"
-            },
-            "red_sandstone": {
-                "name": "minecraft:red_sandstone_wall"
-            },
-            "sandstone": {
-                "name": "minecraft:sandstone_wall"
-            },
-            "stone_brick": {
-                "name": "minecraft:stone_brick_wall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -840,27 +636,9 @@
         }
     },
     "minecraft:anvil": {
-        "additions": [],
-        "removals": [
-            "damage"
-        ],
+        "name": "minecraft:anvil",
         "renames": {
             "minecraft:cardinal_direction": "facing"
-        },
-        "remaps": [],
-        "identifier": [
-            "damage"
-        ],
-        "mapping": {
-            "undamaged": {
-                "name": "minecraft:anvil"
-            },
-            "slightly_damaged": {
-                "name": "minecraft:chipped_anvil"
-            },
-            "very_damaged": {
-                "name": "minecraft:damaged_anvil"
-            }
         },
         "defaults": {
             "facing": "north"
@@ -1059,17 +837,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -1111,17 +889,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -1743,17 +1513,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -1795,17 +1565,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -2556,23 +2318,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -2708,60 +2470,7 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:coral_block": {
-        "additions": [],
-        "removals": [
-            "coral_color",
-            "dead_bit"
-        ],
-        "remaps": [],
-        "identifier": [
-            "coral_color",
-            "dead_bit"
-        ],
-        "mapping": {
-            "pink": {
-                "false": {
-                    "name": "minecraft:brain_coral_block"
-                },
-                "true": {
-                    "name": "minecraft:dead_brain_coral_block"
-                }
-            },
-            "purple": {
-                "false": {
-                    "name": "minecraft:bubble_coral_block"
-                },
-                "true": {
-                    "name": "minecraft:dead_bubble_coral_block"
-                }
-            },
-            "red": {
-                "true": {
-                    "name": "minecraft:dead_fire_coral_block"
-                },
-                "false": {
-                    "name": "minecraft:fire_coral_block"
-                }
-            },
-            "yellow": {
-                "true": {
-                    "name": "minecraft:dead_horn_coral_block"
-                },
-                "false": {
-                    "name": "minecraft:horn_coral_block"
-                }
-            },
-            "blue": {
-                "true": {
-                    "name": "minecraft:dead_tube_coral_block"
-                },
-                "false": {
-                    "name": "minecraft:tube_coral_block"
-                }
-            }
-        }
-    },
+    "minecraft:brain_coral_block": [],
     "minecraft:brain_coral_fan": {
         "name": "minecraft:brain_coral_fan",
         "additions": {
@@ -2774,14 +2483,11 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:coral_fan_hang": {
+    "minecraft:brain_coral_wall_fan": {
+        "name": "minecraft:brain_coral_wall_fan",
         "additions": {
             "waterlogged": "false"
         },
-        "removals": [
-            "coral_hang_type_bit",
-            "dead_bit"
-        ],
         "renames": {
             "coral_direction": "facing"
         },
@@ -2791,28 +2497,6 @@
                 "2": "north",
                 "3": "south",
                 "0": "west"
-            }
-        },
-        "identifier": [
-            "coral_hang_type_bit",
-            "dead_bit"
-        ],
-        "mapping": {
-            "true": {
-                "false": {
-                    "name": "minecraft:brain_coral_wall_fan"
-                },
-                "true": {
-                    "name": "minecraft:dead_brain_coral_wall_fan"
-                }
-            },
-            "false": {
-                "true": {
-                    "name": "minecraft:dead_tube_coral_wall_fan"
-                },
-                "false": {
-                    "name": "minecraft:tube_coral_wall_fan"
-                }
             }
         },
         "defaults": {
@@ -2833,129 +2517,27 @@
             "has_bottle_2": "false"
         }
     },
-    "minecraft:stone_block_slab": {
+    "minecraft:brick_slab": {
         "name": "minecraft:brick_slab",
         "additions": {
             "waterlogged": "false"
         },
         "removals": [
-            "stone_slab_type",
             "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "stone_slab_type",
             "minecraft:vertical_half"
         ],
         "mapping": {
-            "brick": {
-                "bottom": {
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "additions": {
-                        "type": "top"
-                    }
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
                 }
             },
-            "cobblestone": {
-                "bottom": {
-                    "name": "minecraft:cobblestone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:cobblestone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "nether_brick": {
-                "bottom": {
-                    "name": "minecraft:nether_brick_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:nether_brick_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "wood": {
-                "bottom": {
-                    "name": "minecraft:petrified_oak_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:petrified_oak_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "quartz": {
-                "bottom": {
-                    "name": "minecraft:quartz_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:quartz_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "sandstone": {
-                "bottom": {
-                    "name": "minecraft:sandstone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:sandstone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "smooth_stone": {
-                "bottom": {
-                    "name": "minecraft:smooth_stone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:smooth_stone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "stone_brick": {
-                "bottom": {
-                    "name": "minecraft:stone_brick_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:stone_brick_slab",
-                    "additions": {
-                        "type": "top"
-                    }
+            "top": {
+                "additions": {
+                    "type": "top"
                 }
             }
         },
@@ -2964,62 +2546,15 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:double_stone_block_slab": {
+    "minecraft:brick_double_slab": {
+        "name": "minecraft:brick_slab",
         "additions": {
             "waterlogged": "false",
             "type": "double"
         },
         "removals": [
-            "stone_slab_type",
             "minecraft:vertical_half"
         ],
-        "remaps": [],
-        "identifier": [
-            "stone_slab_type",
-            "minecraft:vertical_half"
-        ],
-        "mapping": {
-            "brick": {
-                "bottom": {
-                    "name": "minecraft:brick_slab"
-                }
-            },
-            "cobblestone": {
-                "bottom": {
-                    "name": "minecraft:cobblestone_slab"
-                }
-            },
-            "nether_brick": {
-                "bottom": {
-                    "name": "minecraft:nether_brick_slab"
-                }
-            },
-            "wood": {
-                "bottom": {
-                    "name": "minecraft:petrified_oak_slab"
-                }
-            },
-            "quartz": {
-                "bottom": {
-                    "name": "minecraft:quartz_slab"
-                }
-            },
-            "sandstone": {
-                "bottom": {
-                    "name": "minecraft:sandstone_slab"
-                }
-            },
-            "smooth_stone": {
-                "bottom": {
-                    "name": "minecraft:smooth_stone_slab"
-                }
-            },
-            "stone_brick": {
-                "bottom": {
-                    "name": "minecraft:stone_brick_slab"
-                }
-            }
-        },
         "defaults": {
             "type": "bottom",
             "waterlogged": "false"
@@ -3052,6 +2587,49 @@
             "half": "bottom",
             "shape": "straight",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:brick_wall": {
+        "name": "minecraft:brick_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
         }
     },
     "minecraft:brick_block": {
@@ -3275,6 +2853,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:bubble_coral_block": [],
     "minecraft:bubble_coral_fan": {
         "name": "minecraft:bubble_coral_fan",
         "additions": {
@@ -3287,14 +2866,11 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:coral_fan_hang2": {
+    "minecraft:bubble_coral_wall_fan": {
+        "name": "minecraft:bubble_coral_wall_fan",
         "additions": {
             "waterlogged": "false"
         },
-        "removals": [
-            "coral_hang_type_bit",
-            "dead_bit"
-        ],
         "renames": {
             "coral_direction": "facing"
         },
@@ -3306,39 +2882,19 @@
                 "0": "west"
             }
         },
-        "identifier": [
-            "coral_hang_type_bit",
-            "dead_bit"
-        ],
-        "mapping": {
-            "false": {
-                "false": {
-                    "name": "minecraft:bubble_coral_wall_fan"
-                },
-                "true": {
-                    "name": "minecraft:dead_bubble_coral_wall_fan"
-                }
-            },
-            "true": {
-                "true": {
-                    "name": "minecraft:dead_fire_coral_wall_fan"
-                },
-                "false": {
-                    "name": "minecraft:fire_coral_wall_fan"
-                }
-            }
-        },
         "defaults": {
             "facing": "north",
             "waterlogged": "false"
         }
     },
     "minecraft:budding_amethyst": [],
+    "minecraft:bush": [],
     "minecraft:cactus": {
         "defaults": {
             "age": "0"
         }
     },
+    "minecraft:cactus_flower": [],
     "minecraft:cake": {
         "name": "minecraft:cake",
         "renames": {
@@ -3633,17 +3189,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -3685,17 +3241,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -4048,9 +3596,6 @@
     },
     "minecraft:cherry_wood": {
         "name": "minecraft:cherry_wood",
-        "removals": [
-            "stripped_bit"
-        ],
         "renames": {
             "pillar_axis": "axis"
         },
@@ -4071,6 +3616,15 @@
             "facing": "north",
             "type": "single",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:chipped_anvil": {
+        "name": "minecraft:chipped_anvil",
+        "renames": {
+            "minecraft:cardinal_direction": "facing"
+        },
+        "defaults": {
+            "facing": "north"
         }
     },
     "minecraft:chiseled_bookshelf": {
@@ -4595,113 +4149,16 @@
     "minecraft:chiseled_deepslate": [],
     "minecraft:chiseled_nether_bricks": [],
     "minecraft:chiseled_polished_blackstone": [],
-    "minecraft:quartz_block": {
-        "additions": [],
+    "minecraft:chiseled_quartz_block": {
+        "name": "minecraft:chiseled_quartz_block",
         "removals": [
-            "chisel_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "chisel_type"
-        ],
-        "mapping": {
-            "chiseled": {
-                "name": "minecraft:chiseled_quartz_block",
-                "removals": [
-                    "pillar_axis"
-                ]
-            },
-            "default": {
-                "name": "minecraft:quartz_block",
-                "removals": [
-                    "pillar_axis"
-                ]
-            },
-            "lines": {
-                "name": "minecraft:quartz_pillar",
-                "renames": {
-                    "pillar_axis": "axis"
-                },
-                "defaults": {
-                    "axis": "y"
-                }
-            },
-            "smooth": {
-                "name": "minecraft:smooth_quartz",
-                "removals": [
-                    "pillar_axis"
-                ]
-            }
-        }
+            "pillar_axis"
+        ]
     },
-    "minecraft:red_sandstone": {
-        "additions": [],
-        "removals": [
-            "sand_stone_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "sand_stone_type"
-        ],
-        "mapping": {
-            "heiroglyphs": {
-                "name": "minecraft:chiseled_red_sandstone"
-            },
-            "cut": {
-                "name": "minecraft:cut_red_sandstone"
-            },
-            "default": [],
-            "smooth": {
-                "name": "minecraft:smooth_red_sandstone"
-            }
-        }
-    },
-    "minecraft:sandstone": {
-        "additions": [],
-        "removals": [
-            "sand_stone_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "sand_stone_type"
-        ],
-        "mapping": {
-            "heiroglyphs": {
-                "name": "minecraft:chiseled_sandstone"
-            },
-            "cut": {
-                "name": "minecraft:cut_sandstone"
-            },
-            "default": [],
-            "smooth": {
-                "name": "minecraft:smooth_sandstone"
-            }
-        }
-    },
-    "minecraft:stonebrick": {
-        "additions": [],
-        "removals": [
-            "stone_brick_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "stone_brick_type"
-        ],
-        "mapping": {
-            "chiseled": {
-                "name": "minecraft:chiseled_stone_bricks"
-            },
-            "cracked": {
-                "name": "minecraft:cracked_stone_bricks"
-            },
-            "mossy": {
-                "name": "minecraft:mossy_stone_bricks"
-            },
-            "default": {
-                "name": "minecraft:stone_bricks"
-            }
-        }
-    },
+    "minecraft:chiseled_red_sandstone": [],
+    "minecraft:chiseled_resin_bricks": [],
+    "minecraft:chiseled_sandstone": [],
+    "minecraft:chiseled_stone_bricks": [],
     "minecraft:chiseled_tuff": [],
     "minecraft:chiseled_tuff_bricks": [],
     "minecraft:chorus_flower": {
@@ -4729,26 +4186,10 @@
         }
     },
     "minecraft:clay": [],
+    "minecraft:closed_eyeblossom": [],
     "minecraft:coal_block": [],
     "minecraft:coal_ore": [],
-    "minecraft:dirt": {
-        "additions": [],
-        "removals": [
-            "dirt_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "dirt_type"
-        ],
-        "mapping": {
-            "coarse": {
-                "name": "minecraft:coarse_dirt"
-            },
-            "normal": {
-                "name": "minecraft:dirt"
-            }
-        }
-    },
+    "minecraft:coarse_dirt": [],
     "minecraft:cobbled_deepslate": [],
     "minecraft:cobbled_deepslate_slab": {
         "name": "minecraft:cobbled_deepslate_slab",
@@ -4837,23 +4278,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -4866,6 +4307,49 @@
         }
     },
     "minecraft:cobblestone": [],
+    "minecraft:cobblestone_slab": {
+        "name": "minecraft:cobblestone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cobblestone_double_slab": {
+        "name": "minecraft:cobblestone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:stone_stairs": {
         "name": "minecraft:cobblestone_stairs",
         "additions": {
@@ -4893,6 +4377,49 @@
             "half": "bottom",
             "shape": "straight",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:cobblestone_wall": {
+        "name": "minecraft:cobblestone_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
         }
     },
     "minecraft:web": {
@@ -5010,17 +4537,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -5085,6 +4612,7 @@
     "minecraft:cracked_deepslate_tiles": [],
     "minecraft:cracked_nether_bricks": [],
     "minecraft:cracked_polished_blackstone_bricks": [],
+    "minecraft:cracked_stone_bricks": [],
     "minecraft:crafter": {
         "name": "minecraft:crafter",
         "renames": {
@@ -5092,224 +4620,62 @@
         },
         "defaults": {
             "crafting": "false",
-            "orientation": "down_east",
+            "orientation": "north_up",
             "triggered": "false"
         }
     },
     "minecraft:crafting_table": [],
-    "minecraft:skull": {
+    "minecraft:creaking_heart": {
+        "name": "minecraft:creaking_heart",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y",
+            "creaking_heart_state": "uprooted",
+            "natural": "false"
+        }
+    },
+    "minecraft:creeper_head": {
         "additions": {
             "powered": "false"
         },
         "removals": [
-            "type",
             "attachment"
         ],
         "remaps": [],
         "identifier": [
-            "type",
             "attachment"
         ],
         "mapping": {
-            "creeper": {
-                "floor": {
-                    "name": "minecraft:creeper_head",
-                    "removals": [
-                        "facing_direction"
-                    ],
-                    "renames": {
-                        "rot": "rotation"
+            "floor": {
+                "name": "minecraft:creeper_head",
+                "removals": [
+                    "facing_direction"
+                ],
+                "renames": {
+                    "rot": "rotation"
+                }
+            },
+            "wall": {
+                "name": "minecraft:creeper_wall_head",
+                "renames": {
+                    "facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "5": "east",
+                        "2": "north",
+                        "3": "south",
+                        "4": "west"
                     }
                 },
-                "wall": {
-                    "name": "minecraft:creeper_wall_head",
-                    "renames": {
-                        "facing_direction": "facing"
-                    },
-                    "remaps": {
-                        "facing": {
-                            "5": "east",
-                            "2": "north",
-                            "3": "south",
-                            "4": "west"
-                        }
-                    },
-                    "removals": [
-                        "rot"
-                    ]
-                }
-            },
-            "dragon": {
-                "floor": {
-                    "name": "minecraft:dragon_head",
-                    "renames": {
-                        "rot": "rotation"
-                    },
-                    "removals": [
-                        "facing_direction"
-                    ]
-                },
-                "wall": {
-                    "name": "minecraft:dragon_wall_head",
-                    "renames": {
-                        "facing_direction": "facing"
-                    },
-                    "remaps": {
-                        "facing": {
-                            "5": "east",
-                            "2": "north",
-                            "3": "south",
-                            "4": "west"
-                        }
-                    },
-                    "removals": [
-                        "rot"
-                    ]
-                }
-            },
-            "piglin": {
-                "floor": {
-                    "name": "minecraft:piglin_head",
-                    "renames": {
-                        "rot": "rotation"
-                    },
-                    "removals": [
-                        "facing_direction"
-                    ]
-                },
-                "wall": {
-                    "name": "minecraft:piglin_wall_head",
-                    "renames": {
-                        "facing_direction": "facing"
-                    },
-                    "remaps": {
-                        "facing": {
-                            "5": "east",
-                            "2": "north",
-                            "3": "south",
-                            "4": "west"
-                        }
-                    },
-                    "removals": [
-                        "rot"
-                    ]
-                }
-            },
-            "player": {
-                "floor": {
-                    "name": "minecraft:player_head",
-                    "renames": {
-                        "rot": "rotation"
-                    },
-                    "removals": [
-                        "facing_direction"
-                    ]
-                },
-                "wall": {
-                    "name": "minecraft:player_wall_head",
-                    "renames": {
-                        "facing_direction": "facing"
-                    },
-                    "remaps": {
-                        "facing": {
-                            "5": "east",
-                            "2": "north",
-                            "3": "south",
-                            "4": "west"
-                        }
-                    },
-                    "removals": [
-                        "rot"
-                    ]
-                }
-            },
-            "skeleton": {
-                "floor": {
-                    "name": "minecraft:skeleton_skull",
-                    "renames": {
-                        "rot": "rotation"
-                    },
-                    "removals": [
-                        "facing_direction"
-                    ]
-                },
-                "wall": {
-                    "name": "minecraft:skeleton_wall_skull",
-                    "renames": {
-                        "facing_direction": "facing"
-                    },
-                    "remaps": {
-                        "facing": {
-                            "5": "east",
-                            "2": "north",
-                            "3": "south",
-                            "4": "west"
-                        }
-                    },
-                    "removals": [
-                        "rot"
-                    ]
-                }
-            },
-            "wither_skeleton": {
-                "floor": {
-                    "name": "minecraft:wither_skeleton_skull",
-                    "renames": {
-                        "rot": "rotation"
-                    },
-                    "removals": [
-                        "facing_direction"
-                    ]
-                },
-                "wall": {
-                    "name": "minecraft:wither_skeleton_wall_skull",
-                    "renames": {
-                        "facing_direction": "facing"
-                    },
-                    "remaps": {
-                        "facing": {
-                            "5": "east",
-                            "2": "north",
-                            "3": "south",
-                            "4": "west"
-                        }
-                    },
-                    "removals": [
-                        "rot"
-                    ]
-                }
-            },
-            "zombie": {
-                "floor": {
-                    "name": "minecraft:zombie_head",
-                    "renames": {
-                        "rot": "rotation"
-                    },
-                    "removals": [
-                        "facing_direction"
-                    ]
-                },
-                "wall": {
-                    "name": "minecraft:zombie_wall_head",
-                    "renames": {
-                        "facing_direction": "facing"
-                    },
-                    "remaps": {
-                        "facing": {
-                            "5": "east",
-                            "2": "north",
-                            "3": "south",
-                            "4": "west"
-                        }
-                    },
-                    "removals": [
-                        "rot"
-                    ]
-                }
+                "removals": [
+                    "rot"
+                ]
             }
         },
         "tile_extra": {
-            "type": "skeleton",
             "attachment": "floor",
             "rot": "0"
         }
@@ -5378,17 +4744,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -5430,17 +4796,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -5844,87 +5202,28 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:stone_block_slab4": {
+    "minecraft:cut_red_sandstone": [],
+    "minecraft:cut_red_sandstone_slab": {
         "name": "minecraft:cut_red_sandstone_slab",
         "additions": {
             "waterlogged": "false"
         },
         "removals": [
-            "stone_slab_type_4",
             "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "stone_slab_type_4",
             "minecraft:vertical_half"
         ],
         "mapping": {
-            "cut_red_sandstone": {
-                "bottom": {
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "additions": {
-                        "type": "top"
-                    }
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
                 }
             },
-            "cut_sandstone": {
-                "bottom": {
-                    "name": "minecraft:cut_sandstone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:cut_sandstone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "mossy_stone_brick": {
-                "bottom": {
-                    "name": "minecraft:mossy_stone_brick_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:mossy_stone_brick_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "smooth_quartz": {
-                "bottom": {
-                    "name": "minecraft:smooth_quartz_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:smooth_quartz_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "stone": {
-                "bottom": {
-                    "name": "minecraft:stone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:stone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
+            "top": {
+                "additions": {
+                    "type": "top"
                 }
             }
         },
@@ -5933,47 +5232,59 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:double_stone_block_slab4": {
+    "minecraft:cut_red_sandstone_double_slab": {
+        "name": "minecraft:cut_red_sandstone_slab",
         "additions": {
             "waterlogged": "false",
             "type": "double"
         },
         "removals": [
-            "stone_slab_type_4",
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cut_sandstone": [],
+    "minecraft:cut_sandstone_slab": {
+        "name": "minecraft:cut_sandstone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
             "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "stone_slab_type_4",
             "minecraft:vertical_half"
         ],
         "mapping": {
-            "cut_red_sandstone": {
-                "bottom": {
-                    "name": "minecraft:cut_red_sandstone_slab"
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
                 }
             },
-            "cut_sandstone": {
-                "bottom": {
-                    "name": "minecraft:cut_sandstone_slab"
-                }
-            },
-            "mossy_stone_brick": {
-                "bottom": {
-                    "name": "minecraft:mossy_stone_brick_slab"
-                }
-            },
-            "smooth_quartz": {
-                "bottom": {
-                    "name": "minecraft:smooth_quartz_slab"
-                }
-            },
-            "stone": {
-                "bottom": {
-                    "name": "minecraft:stone_slab"
+            "top": {
+                "additions": {
+                    "type": "top"
                 }
             }
         },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:cut_sandstone_double_slab": {
+        "name": "minecraft:cut_sandstone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
         "defaults": {
             "type": "bottom",
             "waterlogged": "false"
@@ -6053,9 +5364,16 @@
     },
     "minecraft:cyan_terracotta": [],
     "minecraft:cyan_wool": [],
-    "minecraft:yellow_flower": {
-        "name": "minecraft:dandelion"
+    "minecraft:damaged_anvil": {
+        "name": "minecraft:damaged_anvil",
+        "renames": {
+            "minecraft:cardinal_direction": "facing"
+        },
+        "defaults": {
+            "facing": "north"
+        }
     },
+    "minecraft:dandelion": [],
     "minecraft:dark_oak_button": {
         "name": "minecraft:dark_oak_button",
         "additions": {
@@ -6120,17 +5438,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -6172,17 +5490,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -6542,150 +5852,28 @@
             "axis": "y"
         }
     },
-    "minecraft:prismarine": {
-        "additions": [],
-        "removals": [
-            "prismarine_block_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "prismarine_block_type"
-        ],
-        "mapping": {
-            "dark": {
-                "name": "minecraft:dark_prismarine"
-            },
-            "default": {
-                "name": "minecraft:prismarine"
-            },
-            "bricks": {
-                "name": "minecraft:prismarine_bricks"
-            }
-        }
-    },
-    "minecraft:stone_block_slab2": {
+    "minecraft:dark_prismarine": [],
+    "minecraft:dark_prismarine_slab": {
         "name": "minecraft:dark_prismarine_slab",
         "additions": {
             "waterlogged": "false"
         },
         "removals": [
-            "stone_slab_type_2",
             "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "stone_slab_type_2",
             "minecraft:vertical_half"
         ],
         "mapping": {
-            "prismarine_dark": {
-                "bottom": {
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "additions": {
-                        "type": "top"
-                    }
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
                 }
             },
-            "mossy_cobblestone": {
-                "bottom": {
-                    "name": "minecraft:mossy_cobblestone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:mossy_cobblestone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "prismarine_brick": {
-                "bottom": {
-                    "name": "minecraft:prismarine_brick_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:prismarine_brick_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "prismarine_rough": {
-                "bottom": {
-                    "name": "minecraft:prismarine_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:prismarine_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "purpur": {
-                "bottom": {
-                    "name": "minecraft:purpur_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:purpur_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "red_nether_brick": {
-                "bottom": {
-                    "name": "minecraft:red_nether_brick_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:red_nether_brick_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "red_sandstone": {
-                "bottom": {
-                    "name": "minecraft:red_sandstone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:red_sandstone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
-                }
-            },
-            "smooth_sandstone": {
-                "bottom": {
-                    "name": "minecraft:smooth_sandstone_slab",
-                    "additions": {
-                        "type": "bottom"
-                    }
-                },
-                "top": {
-                    "name": "minecraft:smooth_sandstone_slab",
-                    "additions": {
-                        "type": "top"
-                    }
+            "top": {
+                "additions": {
+                    "type": "top"
                 }
             }
         },
@@ -6694,62 +5882,15 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:double_stone_block_slab2": {
+    "minecraft:dark_prismarine_double_slab": {
+        "name": "minecraft:dark_prismarine_slab",
         "additions": {
             "waterlogged": "false",
             "type": "double"
         },
         "removals": [
-            "stone_slab_type_2",
             "minecraft:vertical_half"
         ],
-        "remaps": [],
-        "identifier": [
-            "stone_slab_type_2",
-            "minecraft:vertical_half"
-        ],
-        "mapping": {
-            "prismarine_dark": {
-                "bottom": {
-                    "name": "minecraft:dark_prismarine_slab"
-                }
-            },
-            "mossy_cobblestone": {
-                "bottom": {
-                    "name": "minecraft:mossy_cobblestone_slab"
-                }
-            },
-            "prismarine_brick": {
-                "bottom": {
-                    "name": "minecraft:prismarine_brick_slab"
-                }
-            },
-            "prismarine_rough": {
-                "bottom": {
-                    "name": "minecraft:prismarine_slab"
-                }
-            },
-            "purpur": {
-                "bottom": {
-                    "name": "minecraft:purpur_slab"
-                }
-            },
-            "red_nether_brick": {
-                "bottom": {
-                    "name": "minecraft:red_nether_brick_slab"
-                }
-            },
-            "red_sandstone": {
-                "bottom": {
-                    "name": "minecraft:red_sandstone_slab"
-                }
-            },
-            "smooth_sandstone": {
-                "bottom": {
-                    "name": "minecraft:smooth_sandstone_slab"
-                }
-            }
-        },
         "defaults": {
             "type": "bottom",
             "waterlogged": "false"
@@ -6819,6 +5960,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_brain_coral_block": [],
     "minecraft:dead_brain_coral_fan": {
         "name": "minecraft:dead_brain_coral_fan",
         "additions": {
@@ -6831,6 +5973,27 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_brain_coral_wall_fan": {
+        "name": "minecraft:dead_brain_coral_wall_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "coral_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "2": "north",
+                "3": "south",
+                "0": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:dead_bubble_coral": {
         "name": "minecraft:dead_bubble_coral",
         "additions": {
@@ -6840,6 +6003,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_bubble_coral_block": [],
     "minecraft:dead_bubble_coral_fan": {
         "name": "minecraft:dead_bubble_coral_fan",
         "additions": {
@@ -6849,6 +6013,27 @@
             "coral_fan_direction"
         ],
         "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dead_bubble_coral_wall_fan": {
+        "name": "minecraft:dead_bubble_coral_wall_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "coral_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "2": "north",
+                "3": "south",
+                "0": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -6864,6 +6049,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_fire_coral_block": [],
     "minecraft:dead_fire_coral_fan": {
         "name": "minecraft:dead_fire_coral_fan",
         "additions": {
@@ -6876,6 +6062,27 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_fire_coral_wall_fan": {
+        "name": "minecraft:dead_fire_coral_wall_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "coral_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "2": "north",
+                "3": "south",
+                "0": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:dead_horn_coral": {
         "name": "minecraft:dead_horn_coral",
         "additions": {
@@ -6885,6 +6092,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_horn_coral_block": [],
     "minecraft:dead_horn_coral_fan": {
         "name": "minecraft:dead_horn_coral_fan",
         "additions": {
@@ -6897,14 +6105,11 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:coral_fan_hang3": {
+    "minecraft:dead_horn_coral_wall_fan": {
+        "name": "minecraft:dead_horn_coral_wall_fan",
         "additions": {
             "waterlogged": "false"
         },
-        "removals": [
-            "coral_hang_type_bit",
-            "dead_bit"
-        ],
         "renames": {
             "coral_direction": "facing"
         },
@@ -6914,20 +6119,6 @@
                 "2": "north",
                 "3": "south",
                 "0": "west"
-            }
-        },
-        "identifier": [
-            "coral_hang_type_bit",
-            "dead_bit"
-        ],
-        "mapping": {
-            "false": {
-                "true": {
-                    "name": "minecraft:dead_horn_coral_wall_fan"
-                },
-                "false": {
-                    "name": "minecraft:horn_coral_wall_fan"
-                }
             }
         },
         "defaults": {
@@ -6944,6 +6135,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:dead_tube_coral_block": [],
     "minecraft:dead_tube_coral_fan": {
         "name": "minecraft:dead_tube_coral_fan",
         "additions": {
@@ -6953,6 +6145,27 @@
             "coral_fan_direction"
         ],
         "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:dead_tube_coral_wall_fan": {
+        "name": "minecraft:dead_tube_coral_wall_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "coral_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "2": "north",
+                "3": "south",
+                "0": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -7075,23 +6288,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -7216,23 +6429,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -7273,6 +6486,49 @@
     "minecraft:diamond_block": [],
     "minecraft:diamond_ore": [],
     "minecraft:diorite": [],
+    "minecraft:diorite_slab": {
+        "name": "minecraft:diorite_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:diorite_double_slab": {
+        "name": "minecraft:diorite_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:diorite_stairs": {
         "name": "minecraft:diorite_stairs",
         "additions": {
@@ -7302,6 +6558,50 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:diorite_wall": {
+        "name": "minecraft:diorite_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:dirt": [],
     "minecraft:grass_path": {
         "name": "minecraft:dirt_path"
     },
@@ -7327,6 +6627,65 @@
         }
     },
     "minecraft:dragon_egg": [],
+    "minecraft:dragon_head": {
+        "additions": {
+            "powered": "false"
+        },
+        "removals": [
+            "attachment"
+        ],
+        "remaps": [],
+        "identifier": [
+            "attachment"
+        ],
+        "mapping": {
+            "floor": {
+                "name": "minecraft:dragon_head",
+                "removals": [
+                    "facing_direction"
+                ],
+                "renames": {
+                    "rot": "rotation"
+                }
+            },
+            "wall": {
+                "name": "minecraft:dragon_wall_head",
+                "renames": {
+                    "facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "5": "east",
+                        "2": "north",
+                        "3": "south",
+                        "4": "west"
+                    }
+                },
+                "removals": [
+                    "rot"
+                ]
+            }
+        },
+        "tile_extra": {
+            "attachment": "floor",
+            "rot": "0"
+        }
+    },
+    "minecraft:dried_ghast": {
+        "name": "minecraft:dried_ghast",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "minecraft:cardinal_direction": "facing",
+            "rehydration_level": "hydration"
+        },
+        "defaults": {
+            "facing": "north",
+            "hydration": "0",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:dried_kelp_block": [],
     "minecraft:dripstone_block": [],
     "minecraft:dropper": {
@@ -7386,6 +6745,49 @@
         }
     },
     "minecraft:end_stone": [],
+    "minecraft:end_stone_brick_slab": {
+        "name": "minecraft:end_stone_brick_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:end_stone_brick_double_slab": {
+        "name": "minecraft:end_stone_brick_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:end_brick_stairs": {
         "name": "minecraft:end_stone_brick_stairs",
         "additions": {
@@ -7413,6 +6815,49 @@
             "half": "bottom",
             "shape": "straight",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:end_stone_brick_wall": {
+        "name": "minecraft:end_stone_brick_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
         }
     },
     "minecraft:end_bricks": {
@@ -7449,17 +6894,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -7600,24 +7045,7 @@
             "moisture": "0"
         }
     },
-    "minecraft:tallgrass": {
-        "additions": [],
-        "removals": [
-            "tall_grass_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "tall_grass_type"
-        ],
-        "mapping": {
-            "fern": {
-                "name": "minecraft:fern"
-            },
-            "tall": {
-                "name": "minecraft:short_grass"
-            }
-        }
-    },
+    "minecraft:fern": [],
     "minecraft:fire": {
         "name": "minecraft:fire",
         "additions": {
@@ -7645,6 +7073,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:fire_coral_block": [],
     "minecraft:fire_coral_fan": {
         "name": "minecraft:fire_coral_fan",
         "additions": {
@@ -7657,6 +7086,28 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:fire_coral_wall_fan": {
+        "name": "minecraft:fire_coral_wall_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "coral_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "2": "north",
+                "3": "south",
+                "0": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:firefly_bush": [],
     "minecraft:fletching_table": [],
     "minecraft:flower_pot": {
         "additions": [],
@@ -7702,6 +7153,9 @@
             "minecraft:cherry_sapling[age_bit=false]": {
                 "name": "minecraft:potted_cherry_sapling"
             },
+            "minecraft:closed_eyeblossom": {
+                "name": "minecraft:potted_closed_eyeblossom"
+            },
             "minecraft:cornflower": {
                 "name": "minecraft:potted_cornflower"
             },
@@ -7711,7 +7165,7 @@
             "minecraft:crimson_roots": {
                 "name": "minecraft:potted_crimson_roots"
             },
-            "minecraft:yellow_flower": {
+            "minecraft:dandelion": {
                 "name": "minecraft:potted_dandelion"
             },
             "minecraft:dark_oak_sapling[age_bit=false]": {
@@ -7720,7 +7174,7 @@
             "minecraft:deadbush": {
                 "name": "minecraft:potted_dead_bush"
             },
-            "minecraft:tallgrass[tall_grass_type=fern]": {
+            "minecraft:fern": {
                 "name": "minecraft:potted_fern"
             },
             "minecraft:flowering_azalea": {
@@ -7738,11 +7192,17 @@
             "minecraft:oak_sapling[age_bit=false]": {
                 "name": "minecraft:potted_oak_sapling"
             },
+            "minecraft:open_eyeblossom": {
+                "name": "minecraft:potted_open_eyeblossom"
+            },
             "minecraft:orange_tulip": {
                 "name": "minecraft:potted_orange_tulip"
             },
             "minecraft:oxeye_daisy": {
                 "name": "minecraft:potted_oxeye_daisy"
+            },
+            "minecraft:pale_oak_sapling[age_bit=false]": {
+                "name": "minecraft:potted_pale_oak_sapling"
             },
             "minecraft:pink_tulip": {
                 "name": "minecraft:potted_pink_tulip"
@@ -8364,6 +7824,49 @@
     "minecraft:gold_block": [],
     "minecraft:gold_ore": [],
     "minecraft:granite": [],
+    "minecraft:granite_slab": {
+        "name": "minecraft:granite_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:granite_double_slab": {
+        "name": "minecraft:granite_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:granite_stairs": {
         "name": "minecraft:granite_stairs",
         "additions": {
@@ -8393,6 +7896,50 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:granite_wall": {
+        "name": "minecraft:granite_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:short_grass": [],
     "minecraft:grass_block": {
         "name": "minecraft:grass_block",
         "additions": {
@@ -8596,6 +8143,15 @@
             "axis": "y"
         }
     },
+    "minecraft:heavy_core": {
+        "name": "minecraft:heavy_core",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "defaults": {
+            "waterlogged": "false"
+        }
+    },
     "minecraft:heavy_weighted_pressure_plate": {
         "name": "minecraft:heavy_weighted_pressure_plate",
         "renames": {
@@ -8636,6 +8192,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:horn_coral_block": [],
     "minecraft:horn_coral_fan": {
         "name": "minecraft:horn_coral_fan",
         "additions": {
@@ -8648,37 +8205,31 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:ice": [],
-    "minecraft:monster_egg": {
-        "additions": [],
-        "removals": [
-            "monster_egg_stone_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "monster_egg_stone_type"
-        ],
-        "mapping": {
-            "chiseled_stone_brick": {
-                "name": "minecraft:infested_chiseled_stone_bricks"
-            },
-            "cobblestone": {
-                "name": "minecraft:infested_cobblestone"
-            },
-            "cracked_stone_brick": {
-                "name": "minecraft:infested_cracked_stone_bricks"
-            },
-            "mossy_stone_brick": {
-                "name": "minecraft:infested_mossy_stone_bricks"
-            },
-            "stone": {
-                "name": "minecraft:infested_stone"
-            },
-            "stone_brick": {
-                "name": "minecraft:infested_stone_bricks"
+    "minecraft:horn_coral_wall_fan": {
+        "name": "minecraft:horn_coral_wall_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "coral_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "2": "north",
+                "3": "south",
+                "0": "west"
             }
+        },
+        "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
         }
     },
+    "minecraft:ice": [],
+    "minecraft:infested_chiseled_stone_bricks": [],
+    "minecraft:infested_cobblestone": [],
+    "minecraft:infested_cracked_stone_bricks": [],
     "minecraft:infested_deepslate": {
         "name": "minecraft:infested_deepslate",
         "renames": {
@@ -8688,6 +8239,9 @@
             "axis": "y"
         }
     },
+    "minecraft:infested_mossy_stone_bricks": [],
+    "minecraft:infested_stone": [],
+    "minecraft:infested_stone_bricks": [],
     "minecraft:iron_bars": {
         "name": "minecraft:iron_bars",
         "additions": {
@@ -8712,17 +8266,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -8855,17 +8409,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -8907,17 +8461,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -9332,11 +8878,8 @@
             "waterlogged": "false"
         }
     },
-    "minecraft:double_plant": {
-        "additions": [],
-        "removals": [
-            "double_plant_type"
-        ],
+    "minecraft:large_fern": {
+        "name": "minecraft:large_fern",
         "renames": {
             "upper_block_bit": "half"
         },
@@ -9344,29 +8887,6 @@
             "half": {
                 "false": "lower",
                 "true": "upper"
-            }
-        },
-        "identifier": [
-            "double_plant_type"
-        ],
-        "mapping": {
-            "fern": {
-                "name": "minecraft:large_fern"
-            },
-            "syringa": {
-                "name": "minecraft:lilac"
-            },
-            "paeonia": {
-                "name": "minecraft:peony"
-            },
-            "rose": {
-                "name": "minecraft:rose_bush"
-            },
-            "sunflower": {
-                "name": "minecraft:sunflower"
-            },
-            "grass": {
-                "name": "minecraft:tall_grass"
             }
         },
         "defaults": {
@@ -9392,6 +8912,25 @@
         "remaps": [],
         "defaults": {
             "level": "0"
+        }
+    },
+    "minecraft:leaf_litter": {
+        "name": "minecraft:leaf_litter",
+        "renames": {
+            "minecraft:cardinal_direction": "facing",
+            "growth": "segment_amount"
+        },
+        "remaps": {
+            "segment_amount": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "segment_amount": "1"
         }
     },
     "minecraft:lectern": {
@@ -9482,13 +9021,176 @@
             "powered": "false"
         }
     },
-    "minecraft:light_block": {
+    "minecraft:light_block_0": {
         "name": "minecraft:light",
         "additions": {
-            "waterlogged": "false"
+            "waterlogged": "false",
+            "level": "0"
         },
-        "renames": {
-            "block_light_level": "level"
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_1": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "1"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_2": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "2"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_3": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "3"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_4": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "4"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_5": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "5"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_6": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "6"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_7": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "7"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_8": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "8"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_9": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "9"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_10": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "10"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_11": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "11"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_12": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "12"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_13": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "13"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_14": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "14"
+        },
+        "defaults": {
+            "level": "15",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:light_block_15": {
+        "name": "minecraft:light",
+        "additions": {
+            "waterlogged": "false",
+            "level": "15"
         },
         "defaults": {
             "level": "15",
@@ -9675,6 +9377,21 @@
             "facing": "north",
             "powered": "false",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:lilac": {
+        "name": "minecraft:lilac",
+        "renames": {
+            "upper_block_bit": "half"
+        },
+        "remaps": {
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            }
+        },
+        "defaults": {
+            "half": "lower"
         }
     },
     "minecraft:lily_of_the_valley": [],
@@ -9914,17 +9631,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -9966,17 +9683,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -10179,10 +9888,10 @@
         "name": "minecraft:mangrove_propagule",
         "additions": {
             "waterlogged": "false",
-            "age": "0"
+            "stage": "0"
         },
         "renames": {
-            "propagule_stage": "stage"
+            "propagule_stage": "age"
         },
         "defaults": {
             "age": "0",
@@ -10339,9 +10048,6 @@
     },
     "minecraft:mangrove_wood": {
         "name": "minecraft:mangrove_wood",
-        "removals": [
-            "stripped_bit"
-        ],
         "renames": {
             "pillar_axis": "axis"
         },
@@ -10368,6 +10074,49 @@
     "minecraft:moss_block": [],
     "minecraft:moss_carpet": [],
     "minecraft:mossy_cobblestone": [],
+    "minecraft:mossy_cobblestone_slab": {
+        "name": "minecraft:mossy_cobblestone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:mossy_cobblestone_double_slab": {
+        "name": "minecraft:mossy_cobblestone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:mossy_cobblestone_stairs": {
         "name": "minecraft:mossy_cobblestone_stairs",
         "additions": {
@@ -10394,6 +10143,92 @@
             "facing": "north",
             "half": "bottom",
             "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:mossy_cobblestone_wall": {
+        "name": "minecraft:mossy_cobblestone_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:mossy_stone_brick_slab": {
+        "name": "minecraft:mossy_stone_brick_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:mossy_stone_brick_double_slab": {
+        "name": "minecraft:mossy_stone_brick_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -10426,6 +10261,50 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:mossy_stone_brick_wall": {
+        "name": "minecraft:mossy_stone_brick_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:mossy_stone_bricks": [],
     "minecraft:moving_block": {
         "name": "minecraft:moving_piston",
         "additions": {
@@ -10525,23 +10404,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -10589,6 +10468,49 @@
             "west": "false"
         }
     },
+    "minecraft:nether_brick_slab": {
+        "name": "minecraft:nether_brick_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:nether_brick_double_slab": {
+        "name": "minecraft:nether_brick_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:nether_brick_stairs": {
         "name": "minecraft:nether_brick_stairs",
         "additions": {
@@ -10616,6 +10538,49 @@
             "half": "bottom",
             "shape": "straight",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:nether_brick_wall": {
+        "name": "minecraft:nether_brick_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
         }
     },
     "minecraft:nether_brick": {
@@ -10725,17 +10690,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -10777,17 +10742,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -11168,6 +11125,7 @@
             "axis": "y"
         }
     },
+    "minecraft:open_eyeblossom": [],
     "minecraft:orange_candle": {
         "name": "minecraft:orange_candle",
         "additions": {
@@ -11262,17 +11220,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -11406,6 +11364,533 @@
     },
     "minecraft:packed_ice": [],
     "minecraft:packed_mud": [],
+    "minecraft:pale_hanging_moss": {
+        "defaults": {
+            "tip": "false"
+        }
+    },
+    "minecraft:pale_moss_block": [],
+    "minecraft:pale_moss_carpet": {
+        "name": "minecraft:pale_moss_carpet",
+        "renames": {
+            "upper_block_bit": "bottom",
+            "pale_moss_carpet_side_east": "east",
+            "pale_moss_carpet_side_north": "north",
+            "pale_moss_carpet_side_south": "south",
+            "pale_moss_carpet_side_west": "west"
+        },
+        "remaps": {
+            "bottom": {
+                "true": "false",
+                "false": "true"
+            },
+            "east": {
+                "short": "low",
+                "none": "none",
+                "tall": "tall"
+            },
+            "north": {
+                "short": "low",
+                "none": "none",
+                "tall": "tall"
+            },
+            "south": {
+                "short": "low",
+                "none": "none",
+                "tall": "tall"
+            },
+            "west": {
+                "short": "low",
+                "none": "none",
+                "tall": "tall"
+            }
+        },
+        "defaults": {
+            "bottom": "true",
+            "east": "none",
+            "north": "none",
+            "south": "none",
+            "west": "none"
+        }
+    },
+    "minecraft:pale_oak_button": {
+        "name": "minecraft:pale_oak_button",
+        "additions": {
+            "face": "ceiling"
+        },
+        "removals": [
+            "facing_direction"
+        ],
+        "renames": {
+            "button_pressed_bit": "powered"
+        },
+        "remaps": [],
+        "identifier": [
+            "facing_direction"
+        ],
+        "mapping": {
+            "0": {
+                "additions": {
+                    "facing": "east"
+                }
+            },
+            "1": {
+                "additions": {
+                    "face": "floor",
+                    "facing": "east"
+                }
+            },
+            "5": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "east"
+                }
+            },
+            "2": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "north"
+                }
+            },
+            "3": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "south"
+                }
+            },
+            "4": {
+                "additions": {
+                    "face": "wall",
+                    "facing": "west"
+                }
+            }
+        },
+        "defaults": {
+            "face": "wall",
+            "facing": "north",
+            "powered": "false"
+        }
+    },
+    "minecraft:pale_oak_door": {
+        "name": "minecraft:pale_oak_door",
+        "additions": {
+            "powered": "false"
+        },
+        "renames": {
+            "minecraft:cardinal_direction": "facing",
+            "upper_block_bit": "half",
+            "door_hinge_bit": "hinge",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
+            },
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            },
+            "hinge": {
+                "false": "left",
+                "true": "right"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "lower",
+            "hinge": "left",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:pale_oak_fence": {
+        "name": "minecraft:pale_oak_fence",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "west": "false"
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:pale_oak_fence_gate": {
+        "name": "minecraft:pale_oak_fence_gate",
+        "additions": {
+            "powered": "false"
+        },
+        "renames": {
+            "minecraft:cardinal_direction": "facing",
+            "in_wall_bit": "in_wall",
+            "open_bit": "open"
+        },
+        "defaults": {
+            "facing": "north",
+            "in_wall": "false",
+            "open": "false",
+            "powered": "false"
+        }
+    },
+    "minecraft:pale_oak_hanging_sign": {
+        "name": "minecraft:pale_oak_hanging_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "hanging",
+            "ground_sign_direction",
+            "facing_direction"
+        ],
+        "renames": {
+            "attached_bit": "attached"
+        },
+        "remaps": [],
+        "identifier": [
+            "hanging",
+            "ground_sign_direction"
+        ],
+        "mapping": {
+            "true": [
+                {
+                    "additions": {
+                        "rotation": "0"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "1"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "2"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "3"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "4"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "5"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "6"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "7"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "8"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "9"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "10"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "11"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "12"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "13"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "14"
+                    }
+                },
+                {
+                    "additions": {
+                        "rotation": "15"
+                    }
+                }
+            ],
+            "false": {
+                "12": {
+                    "name": "minecraft:pale_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "east"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "8": {
+                    "name": "minecraft:pale_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "north"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "0": {
+                    "name": "minecraft:pale_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "south"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                },
+                "4": {
+                    "name": "minecraft:pale_oak_wall_hanging_sign",
+                    "additions": {
+                        "facing": "west"
+                    },
+                    "removals": [
+                        "attached_bit"
+                    ]
+                }
+            }
+        },
+        "defaults": {
+            "attached": "false",
+            "rotation": "0",
+            "waterlogged": "false",
+            "facing": "north"
+        }
+    },
+    "minecraft:pale_oak_leaves": {
+        "name": "minecraft:pale_oak_leaves",
+        "additions": {
+            "waterlogged": "false",
+            "distance": "7"
+        },
+        "removals": [
+            "update_bit"
+        ],
+        "renames": {
+            "persistent_bit": "persistent"
+        },
+        "defaults": {
+            "distance": "7",
+            "persistent": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:pale_oak_log": {
+        "name": "minecraft:pale_oak_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:pale_oak_planks": [],
+    "minecraft:pale_oak_pressure_plate": {
+        "name": "minecraft:pale_oak_pressure_plate",
+        "renames": {
+            "redstone_signal": "powered"
+        },
+        "remaps": {
+            "powered": {
+                "0": "false",
+                "15": "true"
+            }
+        },
+        "defaults": {
+            "powered": "false"
+        }
+    },
+    "minecraft:pale_oak_sapling": {
+        "name": "minecraft:pale_oak_sapling",
+        "renames": {
+            "age_bit": "stage"
+        },
+        "remaps": {
+            "stage": {
+                "false": 0,
+                "true": 1
+            }
+        },
+        "defaults": {
+            "stage": "0"
+        }
+    },
+    "minecraft:pale_oak_standing_sign": {
+        "name": "minecraft:pale_oak_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "ground_sign_direction": "rotation"
+        },
+        "defaults": {
+            "rotation": "0",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:pale_oak_slab": {
+        "name": "minecraft:pale_oak_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:pale_oak_double_slab": {
+        "name": "minecraft:pale_oak_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:pale_oak_stairs": {
+        "name": "minecraft:pale_oak_stairs",
+        "additions": {
+            "waterlogged": "false",
+            "shape": "straight"
+        },
+        "renames": {
+            "weirdo_direction": "facing",
+            "upside_down_bit": "half"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:pale_oak_trapdoor": {
+        "name": "minecraft:pale_oak_trapdoor",
+        "additions": {
+            "waterlogged": "false",
+            "powered": "false"
+        },
+        "renames": {
+            "direction": "facing",
+            "upside_down_bit": "half",
+            "open_bit": "open"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "open": "false",
+            "powered": "false",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:pale_oak_wall_sign": {
+        "name": "minecraft:pale_oak_wall_sign",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "facing_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "5": "east",
+                "2": "north",
+                "3": "south",
+                "4": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:pale_oak_wood": {
+        "name": "minecraft:pale_oak_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:pearlescent_froglight": {
         "name": "minecraft:pearlescent_froglight",
         "renames": {
@@ -11413,6 +11898,108 @@
         },
         "defaults": {
             "axis": "y"
+        }
+    },
+    "minecraft:peony": {
+        "name": "minecraft:peony",
+        "renames": {
+            "upper_block_bit": "half"
+        },
+        "remaps": {
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            }
+        },
+        "defaults": {
+            "half": "lower"
+        }
+    },
+    "minecraft:petrified_oak_slab": {
+        "name": "minecraft:petrified_oak_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:petrified_oak_double_slab": {
+        "name": "minecraft:petrified_oak_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:piglin_head": {
+        "additions": {
+            "powered": "false"
+        },
+        "removals": [
+            "attachment"
+        ],
+        "remaps": [],
+        "identifier": [
+            "attachment"
+        ],
+        "mapping": {
+            "floor": {
+                "name": "minecraft:piglin_head",
+                "removals": [
+                    "facing_direction"
+                ],
+                "renames": {
+                    "rot": "rotation"
+                }
+            },
+            "wall": {
+                "name": "minecraft:piglin_wall_head",
+                "renames": {
+                    "facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "5": "east",
+                        "2": "north",
+                        "3": "south",
+                        "4": "west"
+                    }
+                },
+                "removals": [
+                    "rot"
+                ]
+            }
+        },
+        "tile_extra": {
+            "attachment": "floor",
+            "rot": "0"
         }
     },
     "minecraft:pink_candle": {
@@ -11621,6 +12208,50 @@
             "half": "lower"
         }
     },
+    "minecraft:player_head": {
+        "additions": {
+            "powered": "false"
+        },
+        "removals": [
+            "attachment"
+        ],
+        "remaps": [],
+        "identifier": [
+            "attachment"
+        ],
+        "mapping": {
+            "floor": {
+                "name": "minecraft:player_head",
+                "removals": [
+                    "facing_direction"
+                ],
+                "renames": {
+                    "rot": "rotation"
+                }
+            },
+            "wall": {
+                "name": "minecraft:player_wall_head",
+                "renames": {
+                    "facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "5": "east",
+                        "2": "north",
+                        "3": "south",
+                        "4": "west"
+                    }
+                },
+                "removals": [
+                    "rot"
+                ]
+            }
+        },
+        "tile_extra": {
+            "attachment": "floor",
+            "rot": "0"
+        }
+    },
     "minecraft:podzol": {
         "name": "minecraft:podzol",
         "additions": {
@@ -11659,6 +12290,49 @@
         }
     },
     "minecraft:polished_andesite": [],
+    "minecraft:polished_andesite_slab": {
+        "name": "minecraft:polished_andesite_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:polished_andesite_double_slab": {
+        "name": "minecraft:polished_andesite_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:polished_andesite_stairs": {
         "name": "minecraft:polished_andesite_stairs",
         "additions": {
@@ -11785,23 +12459,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -11974,23 +12648,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -12090,23 +12764,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -12119,6 +12793,49 @@
         }
     },
     "minecraft:polished_diorite": [],
+    "minecraft:polished_diorite_slab": {
+        "name": "minecraft:polished_diorite_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:polished_diorite_double_slab": {
+        "name": "minecraft:polished_diorite_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:polished_diorite_stairs": {
         "name": "minecraft:polished_diorite_stairs",
         "additions": {
@@ -12149,6 +12866,49 @@
         }
     },
     "minecraft:polished_granite": [],
+    "minecraft:polished_granite_slab": {
+        "name": "minecraft:polished_granite_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:polished_granite_double_slab": {
+        "name": "minecraft:polished_granite_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:polished_granite_stairs": {
         "name": "minecraft:polished_granite_stairs",
         "additions": {
@@ -12266,23 +13026,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -12330,6 +13090,50 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:prismarine": [],
+    "minecraft:prismarine_brick_slab": {
+        "name": "minecraft:prismarine_brick_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:prismarine_brick_double_slab": {
+        "name": "minecraft:prismarine_brick_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:prismarine_bricks_stairs": {
         "name": "minecraft:prismarine_brick_stairs",
         "additions": {
@@ -12356,6 +13160,50 @@
             "facing": "north",
             "half": "bottom",
             "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:prismarine_bricks": [],
+    "minecraft:prismarine_slab": {
+        "name": "minecraft:prismarine_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:prismarine_double_slab": {
+        "name": "minecraft:prismarine_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -12386,6 +13234,49 @@
             "half": "bottom",
             "shape": "straight",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:prismarine_wall": {
+        "name": "minecraft:prismarine_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
         }
     },
     "minecraft:pumpkin": {
@@ -12469,30 +13360,68 @@
     "minecraft:purple_terracotta": [],
     "minecraft:purple_wool": [],
     "minecraft:purpur_block": {
-        "additions": [],
+        "name": "minecraft:purpur_block",
         "removals": [
-            "chisel_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "chisel_type"
+            "pillar_axis"
         ],
         "mapping": {
-            "default": {
-                "name": "minecraft:purpur_block",
-                "removals": [
-                    "pillar_axis"
-                ]
-            },
             "lines": {
-                "name": "minecraft:purpur_pillar",
-                "renames": {
-                    "pillar_axis": "axis"
-                },
                 "defaults": {
                     "axis": "y"
                 }
             }
+        }
+    },
+    "minecraft:purpur_pillar": {
+        "name": "minecraft:purpur_pillar",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:purpur_slab": {
+        "name": "minecraft:purpur_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:purpur_double_slab": {
+        "name": "minecraft:purpur_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
         }
     },
     "minecraft:purpur_stairs": {
@@ -12524,7 +13453,85 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:quartz_block": {
+        "name": "minecraft:quartz_block",
+        "removals": [],
+        "mapping": {
+            "chiseled": {
+                "removals": [
+                    "pillar_axis"
+                ]
+            },
+            "default": {
+                "removals": [
+                    "pillar_axis"
+                ]
+            },
+            "smooth": {
+                "removals": [
+                    "pillar_axis"
+                ]
+            },
+            "lines": {
+                "defaults": {
+                    "axis": "y"
+                }
+            }
+        }
+    },
     "minecraft:quartz_bricks": [],
+    "minecraft:quartz_pillar": {
+        "name": "minecraft:quartz_pillar",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:quartz_slab": {
+        "name": "minecraft:quartz_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:quartz_double_slab": {
+        "name": "minecraft:quartz_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:quartz_stairs": {
         "name": "minecraft:quartz_stairs",
         "additions": {
@@ -12754,6 +13761,49 @@
             "west": "false"
         }
     },
+    "minecraft:red_nether_brick_slab": {
+        "name": "minecraft:red_nether_brick_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:red_nether_brick_double_slab": {
+        "name": "minecraft:red_nether_brick_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:red_nether_brick_stairs": {
         "name": "minecraft:red_nether_brick_stairs",
         "additions": {
@@ -12783,25 +13833,95 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:red_nether_brick_wall": {
+        "name": "minecraft:red_nether_brick_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:red_nether_brick": {
         "name": "minecraft:red_nether_bricks"
     },
-    "minecraft:sand": {
-        "additions": [],
+    "minecraft:red_sand": [],
+    "minecraft:red_sandstone": [],
+    "minecraft:red_sandstone_slab": {
+        "name": "minecraft:red_sandstone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
         "removals": [
-            "sand_type"
+            "minecraft:vertical_half"
         ],
         "remaps": [],
         "identifier": [
-            "sand_type"
+            "minecraft:vertical_half"
         ],
         "mapping": {
-            "red": {
-                "name": "minecraft:red_sand"
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
             },
-            "normal": {
-                "name": "minecraft:sand"
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
             }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:red_sandstone_double_slab": {
+        "name": "minecraft:red_sandstone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
         }
     },
     "minecraft:red_sandstone_stairs": {
@@ -12831,6 +13951,49 @@
             "half": "bottom",
             "shape": "straight",
             "waterlogged": "false"
+        }
+    },
+    "minecraft:red_sandstone_wall": {
+        "name": "minecraft:red_sandstone_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
         }
     },
     "minecraft:red_shulker_box": {
@@ -13068,6 +14231,632 @@
             "facing": "north"
         }
     },
+    "minecraft:resin_block": [],
+    "minecraft:resin_brick_slab": {
+        "name": "minecraft:resin_brick_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:resin_brick_double_slab": {
+        "name": "minecraft:resin_brick_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:resin_brick_stairs": {
+        "name": "minecraft:resin_brick_stairs",
+        "additions": {
+            "waterlogged": "false",
+            "shape": "straight"
+        },
+        "renames": {
+            "weirdo_direction": "facing",
+            "upside_down_bit": "half"
+        },
+        "remaps": {
+            "facing": {
+                "0": "east",
+                "3": "north",
+                "2": "south",
+                "1": "west"
+            },
+            "half": {
+                "false": "bottom",
+                "true": "top"
+            }
+        },
+        "defaults": {
+            "facing": "north",
+            "half": "bottom",
+            "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:resin_brick_wall": {
+        "name": "minecraft:resin_brick_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:resin_bricks": [],
+    "minecraft:resin_clump": {
+        "name": "minecraft:resin_clump",
+        "additions": {
+            "waterlogged": "false",
+            "east": "false",
+            "north": "false",
+            "west": "false",
+            "south": "false",
+            "up": "false"
+        },
+        "removals": [
+            "multi_face_direction_bits"
+        ],
+        "remaps": [],
+        "identifier": [
+            "multi_face_direction_bits"
+        ],
+        "mapping": [
+            {
+                "additions": {
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "down": "true"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "false"
+                }
+            },
+            {
+                "additions": {
+                    "east": "true",
+                    "north": "true",
+                    "west": "true",
+                    "south": "true",
+                    "up": "true",
+                    "down": "true"
+                }
+            }
+        ],
+        "defaults": {
+            "down": "false",
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:respawn_anchor": {
         "name": "minecraft:respawn_anchor",
         "renames": {
@@ -13079,6 +14868,66 @@
     },
     "minecraft:dirt_with_roots": {
         "name": "minecraft:rooted_dirt"
+    },
+    "minecraft:rose_bush": {
+        "name": "minecraft:rose_bush",
+        "renames": {
+            "upper_block_bit": "half"
+        },
+        "remaps": {
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            }
+        },
+        "defaults": {
+            "half": "lower"
+        }
+    },
+    "minecraft:sand": [],
+    "minecraft:sandstone": [],
+    "minecraft:sandstone_slab": {
+        "name": "minecraft:sandstone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:sandstone_double_slab": {
+        "name": "minecraft:sandstone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
     },
     "minecraft:sandstone_stairs": {
         "name": "minecraft:sandstone_stairs",
@@ -13109,6 +14958,49 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:sandstone_wall": {
+        "name": "minecraft:sandstone_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
     "minecraft:scaffolding": {
         "name": "minecraft:scaffolding",
         "additions": {
@@ -13120,8 +15012,7 @@
         },
         "remaps": {
             "bottom": {
-                "true": "false",
-                "false": "true"
+                "true": "true"
             }
         },
         "defaults": {
@@ -13730,6 +15621,7 @@
             "half": "lower"
         }
     },
+    "minecraft:short_dry_grass": [],
     "minecraft:shroomlight": [],
     "minecraft:undyed_shulker_box": {
         "name": "minecraft:shulker_box",
@@ -13739,6 +15631,50 @@
         },
         "tile_extra": {
             "facing": "north"
+        }
+    },
+    "minecraft:skeleton_skull": {
+        "additions": {
+            "powered": "false"
+        },
+        "removals": [
+            "attachment"
+        ],
+        "remaps": [],
+        "identifier": [
+            "attachment"
+        ],
+        "mapping": {
+            "floor": {
+                "name": "minecraft:skeleton_skull",
+                "removals": [
+                    "facing_direction"
+                ],
+                "renames": {
+                    "rot": "rotation"
+                }
+            },
+            "wall": {
+                "name": "minecraft:skeleton_wall_skull",
+                "renames": {
+                    "facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "5": "east",
+                        "2": "north",
+                        "3": "south",
+                        "4": "west"
+                    }
+                },
+                "removals": [
+                    "rot"
+                ]
+            }
+        },
+        "tile_extra": {
+            "attachment": "floor",
+            "rot": "0"
         }
     },
     "minecraft:slime": {
@@ -13812,6 +15748,55 @@
         }
     },
     "minecraft:smooth_basalt": [],
+    "minecraft:smooth_quartz": {
+        "name": "minecraft:smooth_quartz",
+        "removals": [
+            "pillar_axis"
+        ]
+    },
+    "minecraft:smooth_quartz_slab": {
+        "name": "minecraft:smooth_quartz_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:smooth_quartz_double_slab": {
+        "name": "minecraft:smooth_quartz_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:smooth_quartz_stairs": {
         "name": "minecraft:smooth_quartz_stairs",
         "additions": {
@@ -13841,6 +15826,50 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:smooth_red_sandstone": [],
+    "minecraft:smooth_red_sandstone_slab": {
+        "name": "minecraft:smooth_red_sandstone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:smooth_red_sandstone_double_slab": {
+        "name": "minecraft:smooth_red_sandstone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:smooth_red_sandstone_stairs": {
         "name": "minecraft:smooth_red_sandstone_stairs",
         "additions": {
@@ -13867,6 +15896,50 @@
             "facing": "north",
             "half": "bottom",
             "shape": "straight",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:smooth_sandstone": [],
+    "minecraft:smooth_sandstone_slab": {
+        "name": "minecraft:smooth_sandstone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:smooth_sandstone_double_slab": {
+        "name": "minecraft:smooth_sandstone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
             "waterlogged": "false"
         }
     },
@@ -13900,6 +15973,49 @@
         }
     },
     "minecraft:smooth_stone": [],
+    "minecraft:smooth_stone_slab": {
+        "name": "minecraft:smooth_stone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:smooth_stone_double_slab": {
+        "name": "minecraft:smooth_stone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:sniffer_egg": {
         "name": "minecraft:sniffer_egg",
         "renames": {
@@ -14020,24 +16136,7 @@
     "minecraft:mob_spawner": {
         "name": "minecraft:spawner"
     },
-    "minecraft:sponge": {
-        "additions": [],
-        "removals": [
-            "sponge_type"
-        ],
-        "remaps": [],
-        "identifier": [
-            "sponge_type"
-        ],
-        "mapping": {
-            "dry": {
-                "name": "minecraft:sponge"
-            },
-            "wet": {
-                "name": "minecraft:wet_sponge"
-            }
-        }
-    },
+    "minecraft:sponge": [],
     "minecraft:spore_blossom": [],
     "minecraft:spruce_button": {
         "name": "minecraft:spruce_button",
@@ -14103,17 +16202,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -14155,17 +16254,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -14549,6 +16640,49 @@
         }
     },
     "minecraft:stone": [],
+    "minecraft:stone_brick_slab": {
+        "name": "minecraft:stone_brick_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:stone_brick_double_slab": {
+        "name": "minecraft:stone_brick_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
     "minecraft:stone_brick_stairs": {
         "name": "minecraft:stone_brick_stairs",
         "additions": {
@@ -14578,6 +16712,50 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:stone_brick_wall": {
+        "name": "minecraft:stone_brick_wall",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "wall_connection_type_east": "east",
+            "wall_connection_type_north": "north",
+            "wall_connection_type_south": "south",
+            "wall_post_bit": "up",
+            "wall_connection_type_west": "west"
+        },
+        "remaps": {
+            "east": {
+                "none": "none",
+                "short": "true",
+                "tall": "tall"
+            },
+            "north": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "south": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            },
+            "west": {
+                "none": "none",
+                "tall": "tall",
+                "short": "low"
+            }
+        },
+        "defaults": {
+            "east": "false",
+            "north": "false",
+            "south": "false",
+            "up": "false",
+            "waterlogged": "false",
+            "west": "false"
+        }
+    },
+    "minecraft:stone_bricks": [],
     "minecraft:stone_button": {
         "name": "minecraft:stone_button",
         "additions": {
@@ -14649,6 +16827,49 @@
         },
         "defaults": {
             "powered": "false"
+        }
+    },
+    "minecraft:normal_stone_slab": {
+        "name": "minecraft:stone_slab",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "remaps": [],
+        "identifier": [
+            "minecraft:vertical_half"
+        ],
+        "mapping": {
+            "bottom": {
+                "additions": {
+                    "type": "bottom"
+                }
+            },
+            "top": {
+                "additions": {
+                    "type": "top"
+                }
+            }
+        },
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:normal_stone_double_slab": {
+        "name": "minecraft:stone_slab",
+        "additions": {
+            "waterlogged": "false",
+            "type": "double"
+        },
+        "removals": [
+            "minecraft:vertical_half"
+        ],
+        "defaults": {
+            "type": "bottom",
+            "waterlogged": "false"
         }
     },
     "minecraft:normal_stone_stairs": {
@@ -14842,6 +17063,24 @@
             "axis": "y"
         }
     },
+    "minecraft:stripped_pale_oak_log": {
+        "name": "minecraft:stripped_pale_oak_log",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
+    "minecraft:stripped_pale_oak_wood": {
+        "name": "minecraft:stripped_pale_oak_wood",
+        "renames": {
+            "pillar_axis": "axis"
+        },
+        "defaults": {
+            "axis": "y"
+        }
+    },
     "minecraft:stripped_spruce_log": {
         "name": "minecraft:stripped_spruce_log",
         "renames": {
@@ -14887,16 +17126,26 @@
             "mode": "data"
         }
     },
-    "minecraft:structure_void": {
-        "name": "minecraft:structure_void",
-        "removals": [
-            "structure_void_type"
-        ]
-    },
+    "minecraft:structure_void": [],
     "minecraft:reeds": {
         "name": "minecraft:sugar_cane",
         "defaults": {
             "age": "0"
+        }
+    },
+    "minecraft:sunflower": {
+        "name": "minecraft:sunflower",
+        "renames": {
+            "upper_block_bit": "half"
+        },
+        "remaps": {
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            }
+        },
+        "defaults": {
+            "half": "lower"
         }
     },
     "minecraft:suspicious_gravel": {
@@ -14932,6 +17181,22 @@
             "age": "0"
         }
     },
+    "minecraft:tall_dry_grass": [],
+    "minecraft:tall_grass": {
+        "name": "minecraft:tall_grass",
+        "renames": {
+            "upper_block_bit": "half"
+        },
+        "remaps": {
+            "half": {
+                "false": "lower",
+                "true": "upper"
+            }
+        },
+        "defaults": {
+            "half": "lower"
+        }
+    },
     "minecraft:target": {
         "name": "minecraft:target",
         "additions": {
@@ -14943,6 +17208,9 @@
     },
     "minecraft:hardened_clay": {
         "name": "minecraft:terracotta"
+    },
+    "minecraft:unknown": {
+        "name": "minecraft:test_instance_block"
     },
     "minecraft:tinted_glass": [],
     "minecraft:tnt": {
@@ -15021,6 +17289,23 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:trial_spawner": {
+        "name": "minecraft:trial_spawner",
+        "remaps": {
+            "trial_spawner_state": {
+                "2": "active",
+                "5": "cooldown",
+                "4": "ejecting_reward",
+                "0": "inactive",
+                "1": "waiting_for_players",
+                "3": "waiting_for_reward_ejection"
+            }
+        },
+        "defaults": {
+            "ominous": "false",
+            "trial_spawner_state": "inactive"
+        }
+    },
     "minecraft:trip_wire": {
         "name": "minecraft:tripwire",
         "additions": {
@@ -15077,6 +17362,7 @@
             "waterlogged": "false"
         }
     },
+    "minecraft:tube_coral_block": [],
     "minecraft:tube_coral_fan": {
         "name": "minecraft:tube_coral_fan",
         "additions": {
@@ -15086,6 +17372,27 @@
             "coral_fan_direction"
         ],
         "defaults": {
+            "waterlogged": "false"
+        }
+    },
+    "minecraft:tube_coral_wall_fan": {
+        "name": "minecraft:tube_coral_wall_fan",
+        "additions": {
+            "waterlogged": "false"
+        },
+        "renames": {
+            "coral_direction": "facing"
+        },
+        "remaps": {
+            "facing": {
+                "1": "east",
+                "2": "north",
+                "3": "south",
+                "0": "west"
+            }
+        },
+        "defaults": {
+            "facing": "north",
             "waterlogged": "false"
         }
     },
@@ -15177,23 +17484,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -15293,23 +17600,23 @@
         "remaps": {
             "east": {
                 "none": "none",
-                "short": "low",
+                "short": "true",
                 "tall": "tall"
             },
             "north": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "south": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             },
             "west": {
                 "none": "none",
-                "short": "low",
-                "tall": "tall"
+                "tall": "tall",
+                "short": "low"
             }
         },
         "defaults": {
@@ -15352,6 +17659,17 @@
         },
         "defaults": {
             "age": "0"
+        }
+    },
+    "minecraft:vault": {
+        "name": "minecraft:vault",
+        "renames": {
+            "minecraft:cardinal_direction": "facing"
+        },
+        "defaults": {
+            "facing": "north",
+            "ominous": "false",
+            "vault_state": "inactive"
         }
     },
     "minecraft:verdant_froglight": {
@@ -15556,17 +17874,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -15608,17 +17926,9 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "in_wall_bit": "in_wall",
             "open_bit": "open"
-        },
-        "remaps": {
-            "facing": {
-                "3": "east",
-                "2": "north",
-                "0": "south",
-                "1": "west"
-            }
         },
         "defaults": {
             "facing": "north",
@@ -15990,17 +18300,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -16150,17 +18460,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -16310,17 +18620,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -16470,17 +18780,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -16630,17 +18940,17 @@
             "powered": "false"
         },
         "renames": {
-            "direction": "facing",
+            "minecraft:cardinal_direction": "facing",
             "upper_block_bit": "half",
             "door_hinge_bit": "hinge",
             "open_bit": "open"
         },
         "remaps": {
             "facing": {
-                "0": "east",
-                "3": "north",
-                "1": "south",
-                "2": "west"
+                "south": "east",
+                "east": "north",
+                "west": "south",
+                "north": "west"
             },
             "half": {
                 "false": "lower",
@@ -16781,6 +19091,7 @@
             "age": "0"
         }
     },
+    "minecraft:wet_sponge": [],
     "minecraft:wheat": {
         "name": "minecraft:wheat",
         "renames": {
@@ -16865,7 +19176,70 @@
     "minecraft:white_terracotta": [],
     "minecraft:white_tulip": [],
     "minecraft:white_wool": [],
+    "minecraft:wildflowers": {
+        "name": "minecraft:wildflowers",
+        "renames": {
+            "minecraft:cardinal_direction": "facing",
+            "growth": "flower_amount"
+        },
+        "remaps": {
+            "flower_amount": [
+                1,
+                2,
+                3,
+                4
+            ]
+        },
+        "defaults": {
+            "facing": "north",
+            "flower_amount": "1"
+        }
+    },
     "minecraft:wither_rose": [],
+    "minecraft:wither_skeleton_skull": {
+        "additions": {
+            "powered": "false"
+        },
+        "removals": [
+            "attachment"
+        ],
+        "remaps": [],
+        "identifier": [
+            "attachment"
+        ],
+        "mapping": {
+            "floor": {
+                "name": "minecraft:wither_skeleton_skull",
+                "removals": [
+                    "facing_direction"
+                ],
+                "renames": {
+                    "rot": "rotation"
+                }
+            },
+            "wall": {
+                "name": "minecraft:wither_skeleton_wall_skull",
+                "renames": {
+                    "facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "5": "east",
+                        "2": "north",
+                        "3": "south",
+                        "4": "west"
+                    }
+                },
+                "removals": [
+                    "rot"
+                ]
+            }
+        },
+        "tile_extra": {
+            "attachment": "floor",
+            "rot": "0"
+        }
+    },
     "minecraft:yellow_candle": {
         "name": "minecraft:yellow_candle",
         "additions": {
@@ -16940,6 +19314,50 @@
     },
     "minecraft:yellow_terracotta": [],
     "minecraft:yellow_wool": [],
+    "minecraft:zombie_head": {
+        "additions": {
+            "powered": "false"
+        },
+        "removals": [
+            "attachment"
+        ],
+        "remaps": [],
+        "identifier": [
+            "attachment"
+        ],
+        "mapping": {
+            "floor": {
+                "name": "minecraft:zombie_head",
+                "removals": [
+                    "facing_direction"
+                ],
+                "renames": {
+                    "rot": "rotation"
+                }
+            },
+            "wall": {
+                "name": "minecraft:zombie_wall_head",
+                "renames": {
+                    "facing_direction": "facing"
+                },
+                "remaps": {
+                    "facing": {
+                        "5": "east",
+                        "2": "north",
+                        "3": "south",
+                        "4": "west"
+                    }
+                },
+                "removals": [
+                    "rot"
+                ]
+            }
+        },
+        "tile_extra": {
+            "attachment": "floor",
+            "rot": "0"
+        }
+    },
     "minecraft:invisible_bedrock": {
         "name": "minecraft:barrier"
     },

@@ -12,7 +12,8 @@
 	  "age": "growth",
 	  "power": "redstone_signal",
 	  "level": "fill_level",
-	  "half": "upper_block_bit"
+	  "half": "upper_block_bit",
+	  "flower_amount": "growth"
 	},
 	"regex": {
 	  "/_wall$/": {
@@ -90,6 +91,9 @@
 	"minecraft:composter": {
 	  "level": "composter_fill_level"
 	},
+	"minecraft:dried_ghast": {
+	  "hydration": "rehydration_level"
+	},
 	"minecraft:end_portal_frame": {
 	  "eye": "end_portal_eye_bit"
 	},
@@ -108,11 +112,18 @@
 	"minecraft:kelp": {
 	  "age": "kelp_age"
 	},
-	"minecraft:light": {
-	  "level": "block_light_level"
+	"minecraft:leaf_litter": {
+	  "segment_amount": "growth"
 	},
 	"minecraft:mangrove_propagule": {
-	  "stage": "propagule_stage"
+	  "age": "propagule_stage"
+	},
+	"minecraft:pale_moss_carpet": {
+	  "east": "pale_moss_carpet_side_east",
+	  "north": "pale_moss_carpet_side_north",
+	  "south": "pale_moss_carpet_side_south",
+	  "west": "pale_moss_carpet_side_west",
+	  "bottom": "upper_block_bit"
 	},
 	"minecraft:respawn_anchor": {
 	  "charges": "respawn_anchor_charge"
@@ -179,9 +190,6 @@
 	},
 	"minecraft:suspicious_gravel": {
 	  "dusted": "brushed_progress"
-	},
-	"minecraft:pink_petals": {
-	  "flower_amount": "growth"
 	}
   },
   "jtb_additions": {
@@ -254,7 +262,13 @@
 	"minecraft:lever": "lever_direction",
 	"minecraft:purpur_block": "chisel_type",
 	"minecraft:flower_pot": "type",
-	"minecraft:skull": ["type", "attachment"],
+	"minecraft:creeper_head": "attachment",
+	"minecraft:dragon_head": "attachment",
+	"minecraft:piglin_head": "attachment",
+	"minecraft:player_head": "attachment",
+	"minecraft:skeleton_skull": "attachment",
+	"minecraft:wither_skeleton_skull": "attachment",
+	"minecraft:zombie_head": "attachment",
 	"minecraft:standing_banner": "color",
 	"minecraft:acacia_hanging_sign": ["hanging", "ground_sign_direction"],
 	"minecraft:bamboo_hanging_sign": ["hanging", "ground_sign_direction"],
@@ -265,6 +279,7 @@
 	"minecraft:jungle_hanging_sign": ["hanging", "ground_sign_direction"],
 	"minecraft:mangrove_hanging_sign": ["hanging", "ground_sign_direction"],
 	"minecraft:oak_hanging_sign": ["hanging", "ground_sign_direction"],
+	"minecraft:pale_oak_hanging_sign": ["hanging", "ground_sign_direction"],
 	"minecraft:spruce_hanging_sign": ["hanging", "ground_sign_direction"],
 	"minecraft:warped_hanging_sign": ["hanging", "ground_sign_direction"]
   },
@@ -305,6 +320,9 @@
 	],
 	"minecraft:grass_path": [
 	  "minecraft:grass_path"
+	],
+	"minecraft:short_grass": [
+	  "minecraft:grass"
 	]
   },
   "defaults": {
@@ -365,6 +383,9 @@
 	  },
 	  "/command_block$/": {
 		"conditional": "false"
+	  },
+	  "/copper_bulb$/": {
+		"lit": "false"
 	  },
 	  "/_coral$/": {
 		"waterlogged": "true"
@@ -433,11 +454,23 @@
 	"minecraft:comparator": {
 	  "mode": "compare"
 	},
+	"minecraft:crafter": {
+	  "triggered": "false",
+	  "orientation": "north_up",
+	  "crafting": "false"
+	},
+	"minecraft:creaking_heart": {
+	  "natural": "false",
+	  "creaking_heart_state": "uprooted"
+	},
 	"minecraft:daylight_detector": {
 	  "inverted": "false"
 	},
 	"minecraft:dispenser": {
 	  "triggered": "false"
+	},
+	"minecraft:dried_ghast": {
+	  "hydration": "0"
 	},
 	"minecraft:dropper": {
 	  "triggered": "false"
@@ -478,6 +511,9 @@
 	"minecraft:large_fern": {
 	  "half": "lower"
 	},
+	"minecraft:leaf_litter": {
+	  "segment_amount": "1"
+	},
 	"minecraft:lever": {
 	  "face": "wall"
 	},
@@ -486,6 +522,16 @@
 	},
 	"minecraft:moving_piston": {
 	  "type": "normal"
+	},
+	"minecraft:pale_hanging_moss": {
+	  "tip": "false"
+	},
+	"minecraft:pale_moss_carpet": {
+	  "east": "none",
+	  "north": "none",
+	  "south": "none",
+	  "west": "none",
+	  "bottom": "true"
 	},
 	"minecraft:pointed_dripstone": {
 	  "thickness": "tip",
@@ -618,6 +664,10 @@
 	"minecraft:tnt": {
 	  "unstable": "false"
 	},
+	"minecraft:trial_spawner": {
+	  "trial_spawner_state": "inactive",
+	  "ominous": "false"
+	},
 	"minecraft:trapped_chest": {
 	  "type": "single"
 	},
@@ -666,6 +716,13 @@
 	},
 	"minecraft:pink_petals": {
 	  "flower_amount": "1"
+	},
+	"minecraft:vault": {
+	  "vault_state": "inactive",
+	  "ominous": "false"
+	},
+	"minecraft:wildflowers": {
+	  "flower_amount": "1"
 	}
   },
   "overrides": {
@@ -684,6 +741,7 @@
 	"minecraft:warped_button": [0, 1],
 	"minecraft:bamboo_button": [0, 1],
 	"minecraft:cherry_button": [0, 1],
+	"minecraft:pale_oak_button": [0, 1],
 	"minecraft:lever": ["down_north_south", "down_east_west", "up_north_south", "up_east_west", "east", "west", "north", "south"],
 
 	"__comment2": "mushroom blocks are heavily restricted in bedrock",
@@ -693,8 +751,8 @@
 	"__comment3": "in earlier versions plain cauldron blocks contained water as well, we use this one, as it will probably be converted by java to the correct one",
 	"minecraft:cauldron": ["water"],
 
-    "__comment4": "support for legacy tall grass",
-    "minecraft:tallgrass": ["tall"]
+	"__comment4": "support for legacy tall grass",
+	"minecraft:tallgrass": ["tall"]
   },
   "beDefaults": {
 	"wood_type": "oak",
@@ -779,9 +837,35 @@
 	"minecraft:cherry_button": {
 	  "facing_direction": "1"
 	},
-	"minecraft:skull": {
+	"minecraft:pale_oak_button": {
+	  "facing_direction": "1"
+	},
+	"minecraft:creeper_head": {
 	  "facing_direction": "1",
-	  "type": "skeleton",
+	  "attachment": "floor"
+	},
+	"minecraft:dragon_head": {
+	  "facing_direction": "1",
+	  "attachment": "floor"
+	},
+	"minecraft:piglin_head": {
+	  "facing_direction": "1",
+	  "attachment": "floor"
+	},
+	"minecraft:player_head": {
+	  "facing_direction": "1",
+	  "attachment": "floor"
+	},
+	"minecraft:skeleton_skull": {
+	  "facing_direction": "1",
+	  "attachment": "floor"
+	},
+	"minecraft:wither_skeleton_skull": {
+	  "facing_direction": "1",
+	  "attachment": "floor"
+	},
+	"minecraft:zombie_head": {
+	  "facing_direction": "1",
 	  "attachment": "floor"
 	},
 	"minecraft:melon_stem": {
@@ -830,6 +914,9 @@
 	},
 	"minecraft:warped_hanging_sign": {
 	  "facing_direction": "2"
+	},
+	"minecraft:pale_oak_hanging_sign": {
+	  "facing_direction": "2"
 	}
   },
   "btj_tile_default": {
@@ -842,8 +929,31 @@
 	"minecraft:bed": {
 	  "color": "white"
 	},
-	"minecraft:skull": {
-	  "type": "skeleton",
+	"minecraft:creeper_head": {
+	  "attachment": "floor",
+	  "rot": "0"
+	},
+	"minecraft:dragon_head": {
+	  "attachment": "floor",
+	  "rot": "0"
+	},
+	"minecraft:piglin_head": {
+	  "attachment": "floor",
+	  "rot": "0"
+	},
+	"minecraft:player_head": {
+	  "attachment": "floor",
+	  "rot": "0"
+	},
+	"minecraft:skeleton_skull": {
+	  "attachment": "floor",
+	  "rot": "0"
+	},
+	"minecraft:wither_skeleton_skull": {
+	  "attachment": "floor",
+	  "rot": "0"
+	},
+	"minecraft:zombie_head": {
 	  "attachment": "floor",
 	  "rot": "0"
 	},
