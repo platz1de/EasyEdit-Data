@@ -2083,6 +2083,9 @@ $rotationData = [
 	"axis=z" => "axis=x", "axis=x" => "axis=z",
 	"rotation=0" => "rotation=4", "rotation=1" => "rotation=5", "rotation=2" => "rotation=6", "rotation=3" => "rotation=7", "rotation=4" => "rotation=8", "rotation=5" => "rotation=9", "rotation=6" => "rotation=10", "rotation=7" => "rotation=11", "rotation=8" => "rotation=12", "rotation=9" => "rotation=13", "rotation=10" => "rotation=14", "rotation=11" => "rotation=15", "rotation=12" => "rotation=0", "rotation=13" => "rotation=1", "rotation=14" => "rotation=2", "rotation=15" => "rotation=3"
 ];
+$rotationRenames = [
+    ["wall_connection_type_north", "wall_connection_type_east", "wall_connection_type_south", "wall_connection_type_west"]
+];
 $flipData = [
 	"x" => [
 		"east=true" => "west=true", "west=true" => "east=true", "east=false" => "west=false", "west=false" => "east=false",
@@ -2103,6 +2106,17 @@ $flipData = [
 		"half=bottom" => "half=top", "half=top" => "half=bottom", //stairs, why 2 different names mojang???
 	],
 ];
+$flipRenames = [
+    "x" => [
+        ["wall_connection_type_east", "wall_connection_type_west"]
+    ],
+    "z" => [
+        ["wall_connection_type_north", "wall_connection_type_south"]
+    ],
+    "y" => [
+        ["wall_connection_type_up", "wall_connection_type_down"]
+    ]
+];
 
 $rotations = ["rotate" => [], "xFlip" => [], "yFlip" => [], "zFlip" => []];
 $stateRotations = [];
@@ -2112,10 +2126,10 @@ foreach ($javaToBedrock as $state => $id) {
 	if (!str_ends_with($state, "]")) {
 		continue; //no properties
 	}
-	remapProperties($state, $id, $rotationData, $javaToBedrock, $rotations["rotate"], $missingRotations, $stateRotations, "rotate");
-	remapProperties($state, $id, $flipData["x"], $javaToBedrock, $rotations["xFlip"], $missingRotations, $stateRotations, "flip-x");
-	remapProperties($state, $id, $flipData["y"], $javaToBedrock, $rotations["yFlip"], $missingRotations, $stateRotations, "flip-y");
-	remapProperties($state, $id, $flipData["z"], $javaToBedrock, $rotations["zFlip"], $missingRotations, $stateRotations, "flip-z");
+	remapProperties($state, $id, $rotationData, $rotationRenames,$javaToBedrock, $rotations["rotate"], $missingRotations, $stateRotations, "rotate");
+	remapProperties($state, $id, $flipData["x"], $flipRenames["x"], $javaToBedrock, $rotations["xFlip"], $missingRotations, $stateRotations, "flip-x");
+	remapProperties($state, $id, $flipData["y"], $flipRenames["y"], $javaToBedrock, $rotations["yFlip"], $missingRotations, $stateRotations, "flip-y");
+	remapProperties($state, $id, $flipData["z"], $flipRenames["z"], $javaToBedrock, $rotations["zFlip"], $missingRotations, $stateRotations, "flip-z");
 }
 file_put_contents("debug/missing-rotations.json", json_encode($missingRotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
 file_put_contents("debug/rotation-data-all.json", json_encode($rotations, JSON_THROW_ON_ERROR | JSON_PRETTY_PRINT));
@@ -2187,7 +2201,7 @@ function getData(string $url)
 	return $data;
 }
 
-function remapProperties(string $state, string $id, array $remaps, array $bedrockMapping, array &$save, array &$missing, array &$stateSave, string $key)
+function remapProperties(string $state, string $id, array $remaps, array $renames, array $bedrockMapping, array &$save, array &$missing, array &$stateSave, string $key)
 {
 	if (isset($save[$id])) {
 		return;
@@ -2228,6 +2242,16 @@ function remapProperties(string $state, string $id, array $remaps, array $bedroc
 				$post[$data[0]] = $data[1];
 			}
 			$diff = array_diff_assoc($post, $pre);
+            foreach ($renames as $rename) {
+                if (!array_diff($rename, array_keys($post))) {
+                    $rotated = $rename;
+                    $rotated[] = array_shift($rotated);
+                    $stateSave[$matches[1]][$key]["__rename"] = array_combine($rename, $rotated);
+                    foreach ($rename as $k) {
+                        unset($diff[$k]);
+                    }
+                }
+            }
 			foreach ($diff as $k => $v) {
 				$stateSave[$matches[1]][$key][$k][$pre[$k]] = $post[$k];
 			}
